@@ -5219,7 +5219,7 @@
       {
         "name": "Groups",
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])VECTOR|BiTOR|DepraveD|SasukeducK|tarunk9c|jennaortegaUHD\\b",
+        "pattern": "(?<=^|[\\s.-])VECTOR|BiTOR|DepraveD|SasukeducK|tarunk9c|jennaortegaUHD|VisionXpert\\b",
         "required": true,
         "type": "release_title"
       }
