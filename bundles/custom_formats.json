@@ -2943,7 +2943,7 @@
   },
   {
     "name": "B&W",
-    "description": "Matches the 'B&W' Regex Pattern",
+    "description": "Matches the 'B&W' and 'Colour' Regex Pattern",
     "tags": [
       "Unwanted",
       "Colour Grade",
@@ -2953,12 +2953,45 @@
       {
         "name": "B&W",
         "negate": false,
-        "pattern": "(?i)\\bblack\\s*[.-]?\\s*(?:and|&)\\s*[.-]?\\s*white\\b",
+        "pattern": "\\d{4}.*?\\bblack\\b[\\s.]*(?:and|\\&|-|\\/)?[\\s.]*\\bwhite\\b|\\bb\\&?w\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Colour",
+        "negate": true,
+        "pattern": "\\bcolou?r(i[sz]ed?|ed)?\\b",
         "required": true,
         "type": "release_title"
       }
     ],
-    "tests": [],
+    "tests": [
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "B&W",
+            "negate": false,
+            "pattern": "B&W",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": true,
+            "name": "Colour",
+            "negate": true,
+            "pattern": "Colour",
+            "required": true,
+            "type": "release_title"
+          }
+        ],
+        "expected": false,
+        "id": 1,
+        "input": "Dracula (1931) B&W (Colourized Version)",
+        "lastRun": "2025-02-13T13:14:54.830866",
+        "passes": true
+      }
+    ],
     "_id": "B&W"
   },
   {
