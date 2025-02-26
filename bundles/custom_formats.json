@@ -5252,7 +5252,7 @@
       {
         "name": "Groups",
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])VECTOR|BiTOR|DepraveD|SasukeducK|tarunk9c|jennaortegaUHD|VisionXpert\\b",
+        "pattern": "(?<=^|[\\s.-])VECTOR|BiTOR|DepraveD|SasukeducK|tarunk9c|jennaortegaUHD|VisionXpert|Flights\\b",
         "required": true,
         "type": "release_title"
       }
@@ -6277,6 +6277,714 @@
     ],
     "tests": [],
     "_id": "Scene"
+  },
+  {
+    "name": "Special Edition (Unwanted)",
+    "description": "Matches Special Edition only for specific movies where the theatrical edition is preferred.\n\n- **Note:** This custom format doesn't work because release titles only match after the parsed movie title: https://github.com/Radarr/Radarr/issues/4859",
+    "tags": [
+      "Edition",
+      "Unwanted"
+    ],
+    "conditions": [
+      {
+        "name": "Special Edition",
+        "negate": false,
+        "pattern": "(?<!^|{)\\b(extended|uncut|directors|special|unrated|uncensored|cut|version|edition)(\\b|\\d)",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not IMAX",
+        "negate": true,
+        "pattern": "\\b((?<!NON.?)IMAX)\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not Open Matte",
+        "negate": true,
+        "pattern": "\\b(open.?matte)\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not Theatrical Edition",
+        "negate": true,
+        "pattern": "^(.*?)(\\d{4})(.*?)\\b(theatrical)\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not Extended Clip",
+        "negate": true,
+        "pattern": "\\b(extended.?clip)\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not Sing Along",
+        "negate": true,
+        "pattern": "(?<=\\b[12]\\d{3}\\b).*\\b(Sing[-_. ]Along)\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Better Theatricals",
+        "negate": false,
+        "pattern": "^\\b(terminator.?2|alien[^s].*?1979|star.wars.*?(4k|19)(77)|.*?\\bempire.strikes.back|.*?\\breturn.of.the.jedi|apocalypse.now|the.exorcist.*?1973|donnie.darko|amadeus|payback.*?1999|payback.straight.up.*?2006|almost.famous)\\b",
+        "required": true,
+        "type": "release_title"
+      }
+    ],
+    "tests": [
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "Special Edition",
+            "negate": false,
+            "pattern": "Special Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not IMAX",
+            "negate": true,
+            "pattern": "IMAX",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Open Matte",
+            "negate": true,
+            "pattern": "Open Matte",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Edition",
+            "negate": true,
+            "pattern": "Theatrical Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Extended Clip",
+            "negate": true,
+            "pattern": "Extended Clip",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Sing Along",
+            "negate": true,
+            "pattern": "Sing Along",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Better Theatricals",
+            "negate": false,
+            "pattern": "Better Theatricals",
+            "required": true,
+            "type": "release_title"
+          }
+        ],
+        "expected": false,
+        "id": 1,
+        "input": "Aliens.1986.Special.Edition.UHD.BluRay.2160p.TrueHD.Atmos.7.1.DV.HEVC.REMUX-FraMeSToR.mkv",
+        "lastRun": "2025-02-26T05:09:24.304288",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "Special Edition",
+            "negate": false,
+            "pattern": "Special Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not IMAX",
+            "negate": true,
+            "pattern": "IMAX",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Open Matte",
+            "negate": true,
+            "pattern": "Open Matte",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Edition",
+            "negate": true,
+            "pattern": "Theatrical Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Extended Clip",
+            "negate": true,
+            "pattern": "Extended Clip",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Sing Along",
+            "negate": true,
+            "pattern": "Sing Along",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": true,
+            "name": "Better Theatricals",
+            "negate": false,
+            "pattern": "Better Theatricals",
+            "required": true,
+            "type": "release_title"
+          }
+        ],
+        "expected": true,
+        "id": 2,
+        "input": "Alien.1979.Directors.Cut.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX-FraMeSToR.mkv",
+        "lastRun": "2025-02-26T05:09:24.304288",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "Special Edition",
+            "negate": false,
+            "pattern": "Special Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not IMAX",
+            "negate": true,
+            "pattern": "IMAX",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Open Matte",
+            "negate": true,
+            "pattern": "Open Matte",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Edition",
+            "negate": true,
+            "pattern": "Theatrical Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Extended Clip",
+            "negate": true,
+            "pattern": "Extended Clip",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Sing Along",
+            "negate": true,
+            "pattern": "Sing Along",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": true,
+            "name": "Better Theatricals",
+            "negate": false,
+            "pattern": "Better Theatricals",
+            "required": true,
+            "type": "release_title"
+          }
+        ],
+        "expected": true,
+        "id": 3,
+        "input": "Donnie.Darko.2001.Director's.Cut.UHD.BluRay.2160p.DTS-HD.MA.5.1.DV.HEVC.REMUX-FraMeSToR.mkv",
+        "lastRun": "2025-02-26T05:09:24.304288",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": false,
+            "name": "Special Edition",
+            "negate": false,
+            "pattern": "Special Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not IMAX",
+            "negate": true,
+            "pattern": "IMAX",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Open Matte",
+            "negate": true,
+            "pattern": "Open Matte",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Edition",
+            "negate": true,
+            "pattern": "Theatrical Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Extended Clip",
+            "negate": true,
+            "pattern": "Extended Clip",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Sing Along",
+            "negate": true,
+            "pattern": "Sing Along",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": true,
+            "name": "Better Theatricals",
+            "negate": false,
+            "pattern": "Better Theatricals",
+            "required": true,
+            "type": "release_title"
+          }
+        ],
+        "expected": false,
+        "id": 4,
+        "input": "Donnie.Darko.2001.2160p.UHD.Blu-ray.Remux.HEVC.HDR.DoVi.DTS-HD.MA.5.1-ARROW4KDV.mkv",
+        "lastRun": "2025-02-26T05:09:24.304288",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": false,
+            "name": "Special Edition",
+            "negate": false,
+            "pattern": "Special Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not IMAX",
+            "negate": true,
+            "pattern": "IMAX",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Open Matte",
+            "negate": true,
+            "pattern": "Open Matte",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Edition",
+            "negate": true,
+            "pattern": "Theatrical Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Extended Clip",
+            "negate": true,
+            "pattern": "Extended Clip",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Sing Along",
+            "negate": true,
+            "pattern": "Sing Along",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Better Theatricals",
+            "negate": false,
+            "pattern": "Better Theatricals",
+            "required": true,
+            "type": "release_title"
+          }
+        ],
+        "expected": false,
+        "id": 5,
+        "input": " Star.Wars.4K77.2160p.UHD.No-DNR.35mm.x265-v1.4.mkv",
+        "lastRun": "2025-02-26T05:09:24.304288",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "Special Edition",
+            "negate": false,
+            "pattern": "Special Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not IMAX",
+            "negate": true,
+            "pattern": "IMAX",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Open Matte",
+            "negate": true,
+            "pattern": "Open Matte",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Edition",
+            "negate": true,
+            "pattern": "Theatrical Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Extended Clip",
+            "negate": true,
+            "pattern": "Extended Clip",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Sing Along",
+            "negate": true,
+            "pattern": "Sing Along",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": true,
+            "name": "Better Theatricals",
+            "negate": false,
+            "pattern": "Better Theatricals",
+            "required": true,
+            "type": "release_title"
+          }
+        ],
+        "expected": true,
+        "id": 6,
+        "input": "Alien 1979 Directors Cut HYBRID 2160p BluRay REMUX HEVC DV-HDR10Plus DTS-HD MA 5 1-Flights",
+        "lastRun": "2025-02-26T05:09:24.304288",
+        "passes": true
+      }
+    ],
+    "_id": "Special Edition (Unwanted)"
+  },
+  {
+    "name": "Special Edition",
+    "description": "Special editions are modified versions of movies released after the original theatrical version.\n\n\u2022 They exist because filmmakers want to present their `true vision`, `fix problems`, or because studios want to make more money\n\u2022 You'll see them with names like `Director's Cut`, `Extended Edition`, or creative marketing labels like `Ultimate Cut`\n\u2022 A single film can have `multiple special editions` as technology improves or different creative perspectives emerge",
+    "tags": [
+      "Edition"
+    ],
+    "conditions": [
+      {
+        "name": "Special Edition",
+        "negate": false,
+        "pattern": "(?<!^|{)\\b(extended|uncut|directors|special|unrated|uncensored|cut|version|edition)(\\b|\\d)",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not IMAX",
+        "negate": true,
+        "pattern": "\\b((?<!NON.?)IMAX)\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not Open Matte",
+        "negate": true,
+        "pattern": "\\b(open.?matte)\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not Theatrical Edition",
+        "negate": true,
+        "pattern": "^(.*?)(\\d{4})(.*?)\\b(theatrical)\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not Extended Clip",
+        "negate": true,
+        "pattern": "\\b(extended.?clip)\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not Sing Along",
+        "negate": true,
+        "pattern": "(?<=\\b[12]\\d{3}\\b).*\\b(Sing[-_. ]Along)\\b",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "Not Theatrical Preferred",
+        "negate": true,
+        "pattern": "^\\b(terminator.?2|alien[^s].*?1979|star.wars.*?(4k|19)(77)|.*?\\bempire.strikes.back|.*?\\breturn.of.the.jedi|apocalypse.now|the.exorcist.*?1973|donnie.darko|amadeus|payback.*?1999|payback.straight.up.*?2006|almost.famous)\\b",
+        "required": true,
+        "type": "release_title"
+      }
+    ],
+    "tests": [
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "Special Edition",
+            "negate": false,
+            "pattern": "Special Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not IMAX",
+            "negate": true,
+            "pattern": "IMAX",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Open Matte",
+            "negate": true,
+            "pattern": "Open Matte",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Edition",
+            "negate": true,
+            "pattern": "Theatrical Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Extended Clip",
+            "negate": true,
+            "pattern": "Extended Clip",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Sing Along",
+            "negate": true,
+            "pattern": "Sing Along",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Preferred",
+            "negate": true,
+            "pattern": "Better Theatricals",
+            "required": true,
+            "type": "release_title"
+          }
+        ],
+        "expected": true,
+        "id": 1,
+        "input": "Blade.Runner.The.Final.Cut.1982.BluRay.CEE.1080p.VC-1.TrueHD.5.1-Gazdi",
+        "lastRun": "2025-02-26T05:09:12.646645",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "Special Edition",
+            "negate": false,
+            "pattern": "Special Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not IMAX",
+            "negate": true,
+            "pattern": "IMAX",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Open Matte",
+            "negate": true,
+            "pattern": "Open Matte",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Edition",
+            "negate": true,
+            "pattern": "Theatrical Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Extended Clip",
+            "negate": true,
+            "pattern": "Extended Clip",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": true,
+            "name": "Not Sing Along",
+            "negate": true,
+            "pattern": "Sing Along",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Preferred",
+            "negate": true,
+            "pattern": "Better Theatricals",
+            "required": true,
+            "type": "release_title"
+          }
+        ],
+        "expected": false,
+        "id": 2,
+        "input": "Wicked 2024 Sing-Along Version 720p MA WEB-DL DDP 5.1 H.264-FLUX",
+        "lastRun": "2025-02-26T05:09:12.646645",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "Special Edition",
+            "negate": false,
+            "pattern": "Special Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not IMAX",
+            "negate": true,
+            "pattern": "IMAX",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Open Matte",
+            "negate": true,
+            "pattern": "Open Matte",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Theatrical Edition",
+            "negate": true,
+            "pattern": "Theatrical Edition",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Extended Clip",
+            "negate": true,
+            "pattern": "Extended Clip",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": false,
+            "name": "Not Sing Along",
+            "negate": true,
+            "pattern": "Sing Along",
+            "required": true,
+            "type": "release_title"
+          },
+          {
+            "matches": true,
+            "name": "Not Theatrical Preferred",
+            "negate": true,
+            "pattern": "Better Theatricals",
+            "required": true,
+            "type": "release_title"
+          }
+        ],
+        "expected": false,
+        "id": 3,
+        "input": "Alien 1979 Directors Cut HYBRID 2160p BluRay REMUX HEVC DV-HDR10Plus DTS-HD MA 5 1-Flights",
+        "lastRun": "2025-02-26T05:09:12.646645",
+        "passes": true
+      }
+    ],
+    "_id": "Special Edition"
   },
   {
     "name": "TrueHD (Missing)",

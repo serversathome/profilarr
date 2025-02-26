@@ -138,6 +138,10 @@
         "score": 10
       },
       {
+        "name": "Special Edition",
+        "score": 10
+      },
+      {
         "name": "WEBRip",
         "score": 10
       },
@@ -486,6 +490,10 @@
         "score": 10
       },
       {
+        "name": "Special Edition",
+        "score": 10
+      },
+      {
         "name": "WEBRip",
         "score": 10
       },
@@ -773,6 +781,10 @@
         "score": 10
       },
       {
+        "name": "Special Edition",
+        "score": 10
+      },
+      {
         "name": "WEBRip",
         "score": 10
       },
@@ -1044,6 +1056,10 @@
         "score": 10
       },
       {
+        "name": "Special Edition",
+        "score": 10
+      },
+      {
         "name": "Repack3",
         "score": 7
       },
@@ -1195,13 +1211,6 @@
       "description": "1080p Blu-ray disc content remuxed into a playable file format"
     },
     "language": "must_original",
-    "tweaks": {
-      "preferFreeleech": false,
-      "allowLosslessAudio": true,
-      "allowDVNoFallback": false,
-      "allowBleedingEdgeCodecs": false,
-      "allowPrereleases": false
-    },
     "_id": "1080p Remux"
   },
   {
@@ -1290,6 +1299,10 @@
       },
       {
         "name": "1080p Quality Tier 2",
+        "score": 50
+      },
+      {
+        "name": "Special Edition",
         "score": 50
       },
       {
@@ -1722,6 +1735,10 @@
         "score": 50
       },
       {
+        "name": "Special Edition",
+        "score": 50
+      },
+      {
         "name": "1080p Quality Tier 3",
         "score": 40
       },
@@ -2085,6 +2102,10 @@
         "score": 50
       },
       {
+        "name": "Special Edition",
+        "score": 50
+      },
+      {
         "name": "TrueHD",
         "score": 50
       },
@@ -2320,13 +2341,6 @@
       "description": "4K Ultra HD Blu-ray disc content remuxed into a playable file format"
     },
     "language": "must_original",
-    "tweaks": {
-      "preferFreeleech": true,
-      "allowLosslessAudio": true,
-      "allowDVNoFallback": false,
-      "allowBleedingEdgeCodecs": false,
-      "allowPrereleases": false
-    },
     "_id": "2160p Remux"
   }
 ]
