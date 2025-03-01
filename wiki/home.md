@@ -10,8 +10,6 @@ tags: [home, wiki]
 
 Welcome to Dictionarry! This project aims to wiki-fy and **simplify media automation** in Radarr / Sonarr through extensive, data driven documentation, custom formats and quality profiles.
 
----
-
 ## 💡 Motivation
 
 Navigating the world of media automation and coming across quality terms like "Remux", or "HEVC" or "Dolby Vision" can be quite daunting when all you want to do is setup a media server to watch some content. It often **feels like you need a masters in audio / video just to grab the latest blockbuster.** Dictionarry aims not to explain these concepts in detail, but **abstract them into more approachable ideas** that don't require extensive knowledge or experience.
@@ -40,8 +38,6 @@ Think of Dictionarry as your personal car-buying expert: Instead of researching 
 ![Profile Preview](https://i.imgur.com/nZQzN9I.png)
 
 Dictionarry's database of tested profiles and formats handles the technical decisions for you.
-
----
 
 ## ⚙️ Profilarr
 
