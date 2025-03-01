@@ -4,6 +4,7 @@ slug: profilarr-setup
 author: santiagosayshey
 created: 2025-03-01
 tags: [home, wiki, setup, install]
+blurb: Comprehensive setup and usage guide for Profilarr.
 ---
 
 Profilarr is a **custom format / quality profile management tool** that acts as a middleman between a configuration database and your radarr/sonarr installations. It automatically:
@@ -22,24 +23,24 @@ Profilarr follows the GitFlow workflow for development:
 - For early access to new features, use `santiagosayshey/profilarr:beta`
 - For stable use, use `santiagosayshey/profilarr:latest`
 
-Once installed, you can visit the web UI at `http://[address]:6868` and begin the setup process. 
+Once installed, you can visit the web UI at `http://[address]:6868` and begin the setup process.
 
 ### Docker Compose (recommended)
 
 ```yaml
 services:
-    profilarr:
-        image: santiagosayshey/profilarr:latest # or :beta
-        container_name: profilarr
-        ports:
-            - 6868:6868
-        volumes:
-            - /path/to/your/data:/config
-        environment:
-            - TZ=UTC # Set your timezone
-        env_file:
-            - .env # Optional: Only needed if contributing to a database
-        restart: unless-stopped
+  profilarr:
+    image: santiagosayshey/profilarr:latest # or :beta
+    container_name: profilarr
+    ports:
+      - 6868:6868
+    volumes:
+      - /path/to/your/data:/config
+    environment:
+      - TZ=UTC # Set your timezone
+    env_file:
+      - .env # Optional: Only needed if contributing to a database
+    restart: unless-stopped
 ```
 
 ### Docker CLI
@@ -59,34 +60,33 @@ docker run -d \
 
 When configuring the volume mount (`/path/to/your/data:/config`):
 
-* Replace `/path/to/your/data` with the actual path on your host system
-* **Windows users:** The database is case-sensitive. Use a docker volume or the WSL file system directly to avoid issues
-	* Docker volume example: `profilarr_data:/config`
-	* WSL filesystem example: `/home/username/docker/profilarr:/config`
+- Replace `/path/to/your/data` with the actual path on your host system
+- **Windows users:** The database is case-sensitive. Use a docker volume or the WSL file system directly to avoid issues
+  - Docker volume example: `profilarr_data:/config`
+  - WSL filesystem example: `/home/username/docker/profilarr:/config`
 
 ### Development
 
-In addition to being a 'sync' tool for end users, Profilarr also acts as a development platform for people to work on, and contribute to, a remote database. Read [here](https://dictionarry.dev/wiki/development) to learn more on how to setup Profilarr for development. 
+In addition to being a 'sync' tool for end users, Profilarr also acts as a development platform for people to work on, and contribute to, a remote database. Read [here](https://dictionarry.dev/wiki/development) to learn more on how to setup Profilarr for development.
 
 ## Usage
 
 ### Credentials Setup
 
-The first time you visit the web UI at `http://[address]:6868`, you'll be prompted to setup login credentials. 
+The first time you visit the web UI at `http://[address]:6868`, you'll be prompted to setup login credentials.
+
 - Make sure you keep note of these credentials, as you won't be able to reset the password if you forget it later on (unless you have access to the filesystem and can interact with the docker container.)
 
 ![](https://i.imgur.com/uhZWeHe.png)
-
-
 
 ### Configuration Workflows
 
 Once you've setup your user credentials you can start working on your media configurations. You have the choice to either:
 
-1. Connect to an external database, make changes, receive updates and handle change conflicts. 
-	- This is what most people will be using if they don't want to build configurations from scratch. 
-2. Use Profilarr completely locally, without a database. 
-	- This option is left for people who want the advantages of Profilarr's compilation system (single definition profiles, tweaks, better management, etc), but don't want to be tied to any one database. Skip ahead to [Making Changes](#making-changes)
+1. Connect to an external database, make changes, receive updates and handle change conflicts.
+   - This is what most people will be using if they don't want to build configurations from scratch.
+2. Use Profilarr completely locally, without a database.
+   - This option is left for people who want the advantages of Profilarr's compilation system (single definition profiles, tweaks, better management, etc), but don't want to be tied to any one database. Skip ahead to [Making Changes](#making-changes)
 
 #### Connecting to a Database
 
@@ -103,10 +103,11 @@ Profilarr leverages Git to create an open-source configuration sharing system. T
 | 5   | Current Branch       | - Databases may choose to maintain stable / beta versions of their configurations via branches<br>- You would choose your preferred configuration path here (must will just use stable)                                                                                                                                    |
 | 6   | Auto Sync            | - Option to let Profilarr automatically pull in new updates without consulting you first.<br>- Useful if you want to connect to a database, receive updates and forget about it after<br>- If a pull causes a merge conflict, Profilarr will pause mid merge and let your resolve the conflicts manually before continuing |
 
-**NOTE**: The database must adhere to the Profilarr standard format to work correctly with Profilarr (ie configurations must be made / edited inside profilarr and not externally). 
+**NOTE**: The database must adhere to the Profilarr standard format to work correctly with Profilarr (ie configurations must be made / edited inside profilarr and not externally).
+
 - Profilarr does not ensure that every public database will adhere to this format, nor work properly with them (only our own - the Dictionarry database).
 
-The following sections will use the [Dictionarry Database](https://github.com/Dictionarry-Hub/database) for demonstration purposes. 
+The following sections will use the [Dictionarry Database](https://github.com/Dictionarry-Hub/database) for demonstration purposes.
 
 #### Getting Updates
 
@@ -117,42 +118,45 @@ When updates are available, Profilarr will display them in the Status Container 
 ![](https://imgur.com/gimLQU7.png)
 
 1. **Incoming Changes**: Shows all changes that have been pushed to the remote database but haven't yet been applied to your local installation
-    - Each change will show a single file each
-    - Changes will usually be marked as tweaks, additions, removals, renames, etc. 
-    - You can the 'View Changes' button, which will open a modal that shows the associated commit + message, and the exact fields that have changed 
+   - Each change will show a single file each
+   - Changes will usually be marked as tweaks, additions, removals, renames, etc.
+   - You can the 'View Changes' button, which will open a modal that shows the associated commit + message, and the exact fields that have changed
 
 ![](https://i.imgur.com/qjfqMfQ.png)
 
 2. **Update Process**:
-    - Click the "Pull Changes" button to apply all incoming changes to your local database
-    - Profilarr will automatically merge these changes with your local setup
-    - If you've enabled Auto Sync in settings, these updates will be applied automatically
-    - Once pulled, your database will go back to being in sync
-    - It is currently not possible to pick and choose updates yet, but this feature will be looked at in future
+
+   - Click the "Pull Changes" button to apply all incoming changes to your local database
+   - Profilarr will automatically merge these changes with your local setup
+   - If you've enabled Auto Sync in settings, these updates will be applied automatically
+   - Once pulled, your database will go back to being in sync
+   - It is currently not possible to pick and choose updates yet, but this feature will be looked at in future
 
 3. **Update History**:
-    - All successfully applied updates are logged in the Commit/Change Log section
-    - This provides a complete history of changes applied to your database
-    - You can use this log to track when specific features were added or modified
-    - While technically feasibly, Profilarr does NOT allow you to go back to a certain commit for interoperability reasons. 
+   - All successfully applied updates are logged in the Commit/Change Log section
+   - This provides a complete history of changes applied to your database
+   - You can use this log to track when specific features were added or modified
+   - While technically feasibly, Profilarr does NOT allow you to go back to a certain commit for interoperability reasons.
 
 #### Making Changes
 
 Databases are meant to act as 'starting points' for your setup:
+
 - Some may be broad and have a variety of profiles to use
 - Others might be incredibly niche and focus on small but important philosophies.
-- Even Dictionarry's database, that aims to be both broad and niche at the same time is also just a starting point. 
+- Even Dictionarry's database, that aims to be both broad and niche at the same time is also just a starting point.
 
- You have the power to make changes to *whatever* you want, and still receive updates from  a database. To make changes, you simply interact with the configs you want to change and save them - just as you would in Radarr / Sonarr. 
-- You can change file names, regex patterns, descriptions, format scores, quality groups - whatever you want. 
+You have the power to make changes to _whatever_ you want, and still receive updates from a database. To make changes, you simply interact with the configs you want to change and save them - just as you would in Radarr / Sonarr.
+
+- You can change file names, regex patterns, descriptions, format scores, quality groups - whatever you want.
 - You can view these changes in the database tab just as you would see incoming changes.
-
 
 ![](https://i.imgur.com/m0t5u3C.png)
 
 From this point, you have a few choices. You can either:
-- **Revert changes.** Have you ever made changes to your quality profiles and wanted to change it back but couldnt because you couldn't remember what it used to be? Well since we operate within Git, you can revert a file back to it's previous 'stable' state using `git revert`. It's as simple as pressing a button now. 
-- **Commit Changes**. When you're satisfied with your modifications and want to preserve them, you need to stage and commit them to your local Git repository. This creates a permanent record of your customizations that Profilarr can reference when pulling updates from the remote database. 
+
+- **Revert changes.** Have you ever made changes to your quality profiles and wanted to change it back but couldnt because you couldn't remember what it used to be? Well since we operate within Git, you can revert a file back to it's previous 'stable' state using `git revert`. It's as simple as pressing a button now.
+- **Commit Changes**. When you're satisfied with your modifications and want to preserve them, you need to stage and commit them to your local Git repository. This creates a permanent record of your customizations that Profilarr can reference when pulling updates from the remote database.
 
 ![](https://i.imgur.com/H9udx12.png)
 
@@ -176,7 +180,6 @@ While Profilarr could theoretically automate the staging and committing process,
 
 While the extra step might seem clunky at first, it's the mechanism that enables Profilarr's unique ability to let you personalize configurations while still receiving ongoing improvements. The alternative would be returning to the "use our configs exactly as provided or you're on your own" approach of other tools.
 
-
 #### Handling Merge Conflicts
 
 Even with Git's intelligent merging, sometimes you'll encounter situations where both you and the remote database have modified the same parts of the same files. When this happens, Profilarr needs your help to determine which changes to keep.
@@ -193,9 +196,10 @@ When incoming changes affect files you've modified, Profilarr will mark them wit
 
 ![](https://i.imgur.com/JS8gfn4.png)
 
-When you attempt to pull these changes, the database will enter a "Merge Conflict" state. 
-- At any point, you can choose to abort the merge and go back to your previous database state. 
-- You will not however, be able to pull in any new updates until the merge conflict has been resolved. 
+When you attempt to pull these changes, the database will enter a "Merge Conflict" state.
+
+- At any point, you can choose to abort the merge and go back to your previous database state.
+- You will not however, be able to pull in any new updates until the merge conflict has been resolved.
 
 ![](https://i.imgur.com/miuLkzw.png)
 
@@ -235,14 +239,13 @@ Profilarr has made some changes to the way custom formats and quality profiles a
 
 | Feature                   | Description                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reusable Regex Patterns   | - Regex patterns are now separate from custom formats and referenced by name<br>- This allows reusing the same pattern in multiple places<br>- Changes to a pattern automatically apply everywhere it's used<br>- At compile time, pattern names are resolved to their actual regex expressions for the *arr apps                                               |
+| Reusable Regex Patterns   | - Regex patterns are now separate from custom formats and referenced by name<br>- This allows reusing the same pattern in multiple places<br>- Changes to a pattern automatically apply everywhere it's used<br>- At compile time, pattern names are resolved to their actual regex expressions for the \*arr apps                                              |
 | Conditional Format Import | - Custom formats with a score of 0 are not included in profiles (unless specifically added in selective mode)<br>- This helps keep your profiles cleaner by excluding unused formats                                                                                                                                                                            |
 | Enhanced Sorting          | - Additional methods for sorting, scoring, and searching files                                                                                                                                                                                                                                                                                                  |
 | Language Handling         | - Complete overhaul of language management<br>- All profiles set language to "Any" and use language custom formats based on preferences<br>- Options include:<br> • "Any" - No language filtering<br> • "Must Include" - Ensures releases contain at least your preferred language<br> • "Must Only Be" - Ensures releases contain ONLY your preferred language |
 | Documentation-Focused     | - Tags and descriptions are stored in Profilarr but removed during compilation<br>- These elements are purely for documentation and organization                                                                                                                                                                                                                |
 | Integrated Testing        | - Regex patterns and custom formats include testing functionality<br>- Used in continuous integration to ensure changes don't break existing functionality<br>- Helps maintain compatibility as configurations evolve                                                                                                                                           |
 | Single Definition         | - Profiles and custom formats are defined once in Profilarr<br>- Automatically converted to appropriate Radarr/Sonarr syntax at compile time<br>- Eliminates need to maintain separate definitions unless different logic is required                                                                                                                           |
-
 
 #### Git Gud
 
@@ -259,7 +262,7 @@ Profilarr attempts to make Git accessible to all users. However, there are some 
 
 ### Importing
 
-Once you've setup your media configuration workflow you can setup external apps which Profilarr will attempt to sync with. You need to setup: 
+Once you've setup your media configuration workflow you can setup external apps which Profilarr will attempt to sync with. You need to setup:
 
 ![](https://i.imgur.com/2ZqjGKg.png)
 
@@ -280,9 +283,9 @@ There can sometimes be API changes that break Profilarr's import functionality, 
 
 In future updates (hopefully soon), Profilarr will handle a quick setup sync (changing media management, quality slider settings, etc), but for now you need to change these things manually.
 
-|Setting|Recommendation|Explanation|
-|---|---|---|
-|Propers and Repacks|Set to "Do Not Prefer"|Other options will override custom formats and make Radarr/Sonarr grab things we don't want|
-|Quality Sliders|Set min/max for everything|Custom formats will do 99% of the ranking and using any other settings just gets in the way usually|
+| Setting             | Recommendation             | Explanation                                                                                         |
+| ------------------- | -------------------------- | --------------------------------------------------------------------------------------------------- |
+| Propers and Repacks | Set to "Do Not Prefer"     | Other options will override custom formats and make Radarr/Sonarr grab things we don't want         |
+| Quality Sliders     | Set min/max for everything | Custom formats will do 99% of the ranking and using any other settings just gets in the way usually |
 
 ![](https://i.imgur.com/IyJLvfR.png) ![](https://i.imgur.com/zws00bj.png)
