@@ -158,7 +158,7 @@ From this point, you have a few choices. You can either:
 - **Revert changes.** Have you ever made changes to your quality profiles and wanted to change it back but couldnt because you couldn't remember what it used to be? Well since we operate within Git, you can revert a file back to it's previous 'stable' state using `git revert`. It's as simple as pressing a button now.
 - **Commit Changes**. When you're satisfied with your modifications and want to preserve them, you need to stage and commit them to your local Git repository. This creates a permanent record of your customizations that Profilarr can reference when pulling updates from the remote database.
 
-![](https://i.imgur.com/H9udx12.png)
+![](https://i.imgur.com/RTvo2Ud.png)
 
 | #   | Action  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | --- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
