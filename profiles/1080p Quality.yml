@@ -9,7 +9,7 @@ tags:
 - x264
 - Lossy Audio
 - Quality Focused
-upgradesAllowed: false
+upgradesAllowed: true
 minCustomFormatScore: 0
 upgradeUntilScore: 320
 minScoreIncrement: 10
