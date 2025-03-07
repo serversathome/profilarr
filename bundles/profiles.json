@@ -151,15 +151,15 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
-        "score": 6
+        "score": 7
       },
       {
         "name": "Repack1",
-        "score": 5
+        "score": 6
       },
       {
         "name": "2160p",
@@ -503,15 +503,15 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
-        "score": 6
+        "score": 7
       },
       {
         "name": "Repack1",
-        "score": 5
+        "score": 6
       },
       {
         "name": "x265",
@@ -794,15 +794,15 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
-        "score": 6
+        "score": 7
       },
       {
         "name": "Repack1",
-        "score": 5
+        "score": 6
       },
       {
         "name": "2160p",
@@ -1061,15 +1061,15 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
-        "score": 6
+        "score": 7
       },
       {
         "name": "Repack1",
-        "score": 5
+        "score": 6
       },
       {
         "name": "Unknown Lossless Audio",
@@ -1427,10 +1427,14 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
+        "score": 7
+      },
+      {
+        "name": "Repack1",
         "score": 6
       },
       {
@@ -1450,12 +1454,60 @@
         "score": 5
       },
       {
-        "name": "Repack1",
+        "name": "Unknown Lossless Audio",
         "score": 5
       },
       {
-        "name": "Unknown Lossless Audio",
-        "score": 5
+        "name": "Amazon Prime",
+        "score": 0
+      },
+      {
+        "name": "Apple TV+",
+        "score": 0
+      },
+      {
+        "name": "Criterion Channel",
+        "score": 0
+      },
+      {
+        "name": "Disney+",
+        "score": 0
+      },
+      {
+        "name": "HBO Max",
+        "score": 0
+      },
+      {
+        "name": "Hulu",
+        "score": 0
+      },
+      {
+        "name": "iTunes",
+        "score": 0
+      },
+      {
+        "name": "Max",
+        "score": 0
+      },
+      {
+        "name": "Movies Anywhere",
+        "score": 0
+      },
+      {
+        "name": "Netflix",
+        "score": 0
+      },
+      {
+        "name": "Paramount+",
+        "score": 0
+      },
+      {
+        "name": "Peacock",
+        "score": 0
+      },
+      {
+        "name": "Roku",
+        "score": 0
       },
       {
         "name": "SDR",
@@ -1860,10 +1912,14 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
+        "score": 7
+      },
+      {
+        "name": "Repack1",
         "score": 6
       },
       {
@@ -1883,12 +1939,60 @@
         "score": 5
       },
       {
-        "name": "Repack1",
+        "name": "Unknown Lossless Audio",
         "score": 5
       },
       {
-        "name": "Unknown Lossless Audio",
-        "score": 5
+        "name": "Amazon Prime",
+        "score": 0
+      },
+      {
+        "name": "Apple TV+",
+        "score": 0
+      },
+      {
+        "name": "Criterion Channel",
+        "score": 0
+      },
+      {
+        "name": "Disney+",
+        "score": 0
+      },
+      {
+        "name": "HBO Max",
+        "score": 0
+      },
+      {
+        "name": "Hulu",
+        "score": 0
+      },
+      {
+        "name": "iTunes",
+        "score": 0
+      },
+      {
+        "name": "Max",
+        "score": 0
+      },
+      {
+        "name": "Movies Anywhere",
+        "score": 0
+      },
+      {
+        "name": "Netflix",
+        "score": 0
+      },
+      {
+        "name": "Paramount+",
+        "score": 0
+      },
+      {
+        "name": "Peacock",
+        "score": 0
+      },
+      {
+        "name": "Roku",
+        "score": 0
       },
       {
         "name": "SDR",
@@ -2203,15 +2307,15 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
-        "score": 6
+        "score": 7
       },
       {
         "name": "Repack1",
-        "score": 5
+        "score": 6
       },
       {
         "name": "Unknown Lossless Audio",
