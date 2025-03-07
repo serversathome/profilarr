@@ -17,7 +17,7 @@ tags:
 upgradesAllowed: true
 minCustomFormatScore: 0
 upgradeUntilScore: 320
-minScoreIncrement: 10
+minScoreIncrement: 1
 custom_formats:
 - name: UHD Bluray
   score: 350

@@ -20,7 +20,7 @@ tags:
 upgradesAllowed: true
 minCustomFormatScore: 0
 upgradeUntilScore: 350
-minScoreIncrement: 10
+minScoreIncrement: 1
 custom_formats:
 - name: 2160p
   score: 120

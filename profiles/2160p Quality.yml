@@ -17,7 +17,7 @@ tags:
 upgradesAllowed: true
 minCustomFormatScore: 0
 upgradeUntilScore: 600
-minScoreIncrement: 5
+minScoreIncrement: 1
 custom_formats:
 - name: 2160p Quality Tier 1
   score: 370
