@@ -24,7 +24,7 @@ custom_formats:
   score: 250
 - name: 2160p Balanced Tier 2
   score: 240
-- name: Amazon Prime [UHD]
+- name: Amazon Prime [2160p]
   score: 160
 - name: Disney+ [2160p]
   score: 160
