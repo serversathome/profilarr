@@ -11,7 +11,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 320,
-    "minScoreIncrement": 10,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "1080p",
@@ -335,7 +335,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 320,
-    "minScoreIncrement": 10,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "UHD Bluray",
@@ -654,7 +654,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 320,
-    "minScoreIncrement": 10,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "1080p Golden Popcorn",
@@ -953,7 +953,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 350,
-    "minScoreIncrement": 10,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "1080p",
@@ -1227,7 +1227,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 600,
-    "minScoreIncrement": 5,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "2160p",
@@ -1688,7 +1688,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 600,
-    "minScoreIncrement": 5,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "2160p Quality Tier 1",
@@ -2179,7 +2179,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 350,
-    "minScoreIncrement": 10,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "2160p",
