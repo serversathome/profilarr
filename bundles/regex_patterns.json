@@ -310,14 +310,6 @@
     "_id": "Apple TV+"
   },
   {
-    "name": "TrueHD + Atmos",
-    "pattern": "True[ .-]?HD|\\bATMOS(\\b|\\d)",
-    "description": "",
-    "tags": [],
-    "tests": [],
-    "_id": "Atmos (BTN)"
-  },
-  {
     "name": "Atmos",
     "pattern": "\\bATMOS(\\b|\\d)",
     "description": "",

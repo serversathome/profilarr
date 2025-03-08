@@ -4725,9 +4725,9 @@
         "type": "release_title"
       },
       {
-        "name": "TrueHD + Atmos",
+        "name": "TrueHD",
         "negate": false,
-        "pattern": "TrueHD + Atmos",
+        "pattern": "True[ .-]?HD[ .-]?",
         "required": false,
         "type": "release_title"
       }
