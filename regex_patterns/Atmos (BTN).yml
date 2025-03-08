@@ -1,5 +1,0 @@
-name: TrueHD + Atmos
-pattern: True[ .-]?HD|\bATMOS(\b|\d)
-description: ''
-tags: []
-tests: []

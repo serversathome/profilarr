@@ -23,9 +23,9 @@ conditions:
   pattern: PCM
   required: false
   type: release_title
-- name: TrueHD + Atmos
+- name: TrueHD
   negate: false
-  pattern: TrueHD + Atmos
+  pattern: TrueHD
   required: false
   type: release_title
 tests: []
