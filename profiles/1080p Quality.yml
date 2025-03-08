@@ -9,10 +9,10 @@ tags:
 - x264
 - Lossy Audio
 - Quality Focused
-upgradesAllowed: false
+upgradesAllowed: true
 minCustomFormatScore: 0
 upgradeUntilScore: 320
-minScoreIncrement: 10
+minScoreIncrement: 1
 custom_formats:
 - name: 1080p Golden Popcorn
   score: 160
@@ -83,11 +83,11 @@ custom_formats:
 - name: x264
   score: 10
 - name: Repack3
-  score: 7
+  score: 8
 - name: Repack2
-  score: 6
+  score: 7
 - name: Repack1
-  score: 5
+  score: 6
 - name: 2160p
   score: -9999
 - name: 3D

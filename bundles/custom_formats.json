@@ -2306,7 +2306,7 @@
     "_id": "Amazon Prime (1080p)"
   },
   {
-    "name": "Amazon Prime [UHD]",
+    "name": "Amazon Prime [2160p]",
     "description": "Matches 4k 'Amazon Prime' WEB-DLs, unique to the 2160p Quality profile",
     "tags": [
       "Streaming Service",
@@ -2315,10 +2315,10 @@
     "conditions": [
       {
         "name": "2160p",
-        "type": "resolution",
-        "required": true,
         "negate": false,
-        "resolution": "2160p"
+        "required": true,
+        "resolution": "2160p",
+        "type": "resolution"
       },
       {
         "name": "AMZN Regex",
@@ -2394,7 +2394,7 @@
         "passes": true
       }
     ],
-    "_id": "Amazon Prime (UHD)"
+    "_id": "Amazon Prime (2160p)"
   },
   {
     "name": "Amazon Prime",
@@ -4725,9 +4725,9 @@
         "type": "release_title"
       },
       {
-        "name": "TrueHD + Atmos",
+        "name": "TrueHD",
         "negate": false,
-        "pattern": "TrueHD + Atmos",
+        "pattern": "True[ .-]?HD[ .-]?",
         "required": false,
         "type": "release_title"
       }

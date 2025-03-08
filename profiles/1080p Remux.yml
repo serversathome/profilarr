@@ -16,7 +16,7 @@ tags:
 upgradesAllowed: true
 minCustomFormatScore: 0
 upgradeUntilScore: 350
-minScoreIncrement: 10
+minScoreIncrement: 1
 custom_formats:
 - name: 1080p
   score: 60
@@ -71,11 +71,11 @@ custom_formats:
 - name: Special Edition
   score: 10
 - name: Repack3
-  score: 7
+  score: 8
 - name: Repack2
-  score: 6
+  score: 7
 - name: Repack1
-  score: 5
+  score: 6
 - name: Unknown Lossless Audio
   score: 5
 - name: 2160p

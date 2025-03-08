@@ -11,7 +11,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 320,
-    "minScoreIncrement": 10,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "1080p",
@@ -151,15 +151,15 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
-        "score": 6
+        "score": 7
       },
       {
         "name": "Repack1",
-        "score": 5
+        "score": 6
       },
       {
         "name": "2160p",
@@ -335,7 +335,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 320,
-    "minScoreIncrement": 10,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "UHD Bluray",
@@ -503,15 +503,15 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
-        "score": 6
+        "score": 7
       },
       {
         "name": "Repack1",
-        "score": 5
+        "score": 6
       },
       {
         "name": "x265",
@@ -651,10 +651,10 @@
       "Lossy Audio",
       "Quality Focused"
     ],
-    "upgradesAllowed": false,
+    "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 320,
-    "minScoreIncrement": 10,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "1080p Golden Popcorn",
@@ -794,15 +794,15 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
-        "score": 6
+        "score": 7
       },
       {
         "name": "Repack1",
-        "score": 5
+        "score": 6
       },
       {
         "name": "2160p",
@@ -953,7 +953,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 350,
-    "minScoreIncrement": 10,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "1080p",
@@ -1061,15 +1061,15 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
-        "score": 6
+        "score": 7
       },
       {
         "name": "Repack1",
-        "score": 5
+        "score": 6
       },
       {
         "name": "Unknown Lossless Audio",
@@ -1227,7 +1227,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 600,
-    "minScoreIncrement": 5,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "2160p",
@@ -1242,7 +1242,7 @@
         "score": 240
       },
       {
-        "name": "Amazon Prime [UHD]",
+        "name": "Amazon Prime [2160p]",
         "score": 160
       },
       {
@@ -1427,10 +1427,14 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
+        "score": 7
+      },
+      {
+        "name": "Repack1",
         "score": 6
       },
       {
@@ -1450,12 +1454,60 @@
         "score": 5
       },
       {
-        "name": "Repack1",
+        "name": "Unknown Lossless Audio",
         "score": 5
       },
       {
-        "name": "Unknown Lossless Audio",
-        "score": 5
+        "name": "Amazon Prime",
+        "score": 0
+      },
+      {
+        "name": "Apple TV+",
+        "score": 0
+      },
+      {
+        "name": "Criterion Channel",
+        "score": 0
+      },
+      {
+        "name": "Disney+",
+        "score": 0
+      },
+      {
+        "name": "HBO Max",
+        "score": 0
+      },
+      {
+        "name": "Hulu",
+        "score": 0
+      },
+      {
+        "name": "iTunes",
+        "score": 0
+      },
+      {
+        "name": "Max",
+        "score": 0
+      },
+      {
+        "name": "Movies Anywhere",
+        "score": 0
+      },
+      {
+        "name": "Netflix",
+        "score": 0
+      },
+      {
+        "name": "Paramount+",
+        "score": 0
+      },
+      {
+        "name": "Peacock",
+        "score": 0
+      },
+      {
+        "name": "Roku",
+        "score": 0
       },
       {
         "name": "SDR",
@@ -1636,7 +1688,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 600,
-    "minScoreIncrement": 5,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "2160p Quality Tier 1",
@@ -1675,7 +1727,7 @@
         "score": 230
       },
       {
-        "name": "Amazon Prime [UHD]",
+        "name": "Amazon Prime [2160p]",
         "score": 160
       },
       {
@@ -1860,10 +1912,14 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
+        "score": 7
+      },
+      {
+        "name": "Repack1",
         "score": 6
       },
       {
@@ -1883,12 +1939,60 @@
         "score": 5
       },
       {
-        "name": "Repack1",
+        "name": "Unknown Lossless Audio",
         "score": 5
       },
       {
-        "name": "Unknown Lossless Audio",
-        "score": 5
+        "name": "Amazon Prime",
+        "score": 0
+      },
+      {
+        "name": "Apple TV+",
+        "score": 0
+      },
+      {
+        "name": "Criterion Channel",
+        "score": 0
+      },
+      {
+        "name": "Disney+",
+        "score": 0
+      },
+      {
+        "name": "HBO Max",
+        "score": 0
+      },
+      {
+        "name": "Hulu",
+        "score": 0
+      },
+      {
+        "name": "iTunes",
+        "score": 0
+      },
+      {
+        "name": "Max",
+        "score": 0
+      },
+      {
+        "name": "Movies Anywhere",
+        "score": 0
+      },
+      {
+        "name": "Netflix",
+        "score": 0
+      },
+      {
+        "name": "Paramount+",
+        "score": 0
+      },
+      {
+        "name": "Peacock",
+        "score": 0
+      },
+      {
+        "name": "Roku",
+        "score": 0
       },
       {
         "name": "SDR",
@@ -2075,7 +2179,7 @@
     "upgradesAllowed": true,
     "minCustomFormatScore": 0,
     "upgradeUntilScore": 350,
-    "minScoreIncrement": 10,
+    "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "2160p",
@@ -2203,15 +2307,15 @@
       },
       {
         "name": "Repack3",
-        "score": 7
+        "score": 8
       },
       {
         "name": "Repack2",
-        "score": 6
+        "score": 7
       },
       {
         "name": "Repack1",
-        "score": 5
+        "score": 6
       },
       {
         "name": "Unknown Lossless Audio",
