@@ -7,17 +7,15 @@ tags: [wiki, casaos, installation, profilarr, docker, containers]
 blurb: A simple guide to install Profilarr in Casa OS as a custom app.
 ---
 
-# Casa OS - Profilarr Installation Guide
-
 This guide will walk you through the process of installing Profilarr as a custom app in Casa OS.
 
-# Prerequisites
+## Prerequisites
 
 - A working Casa OS installation (this guide uses v0.4.15).
 - Basic knowledge of using the Casa OS interface.
 - Access to [https://github.com/Dictionarry-Hub/Profilarr](https://github.com/Dictionarry-Hub/Profilarr) for install file.
 
-# Step-by-Step Installation
+## Step-by-Step Installation
 
 1. **Add a Custom App to Casa OS:**
    - Open your web browser and navigate to your Casa OS dashboard.
@@ -38,10 +36,10 @@ This guide will walk you through the process of installing Profilarr as a custom
    - You can leave most settings as default unless you have a specific reason to change them, like customizing to your network/system (Network, Port, Volumes, etc..) otherwise just change your Time Zone in Environmental Variables
    - **Name:** “Profilarr” - but you can change it if you want
    - **Icon:** (Optional) You can upload an icon for the app.
-   - **Web UI: **Should be your host device IP address
-   - **Network: **Should be bridge
-   - **Port: **Should be 6868 TCP
-   - **Volumes: **Leave this as default unless you want to change the host path to a specific location
+   - **Web UI:** Should be your host device IP address
+   - **Network:** Should be bridge
+   - **Port:** Should be 6868 TCP
+   - **Volumes:** Leave this as default unless you want to change the host path to a specific location
    - **Environment Variables:** (Only TZ is required, the others are optional)
      - TZ = Your Timezone (e.g., America/New_York)
      - GIT_USER_NAME = GitHub username for contributing
