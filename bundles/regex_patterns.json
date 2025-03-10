@@ -1298,16 +1298,6 @@
     "_id": "BlzT"
   },
   {
-    "name": "Blzt",
-    "pattern": "(?<=^|[\\s.-])Blzt\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "Blzt"
-  },
-  {
     "name": "Bracketed Year",
     "pattern": "\\[\\d{4}\\]",
     "description": "Match a year moniker inside square brackets",
@@ -1464,9 +1454,9 @@
     "_id": "Chotab"
   },
   {
-    "name": "Colour",
+    "name": "Colourisation",
     "pattern": "\\bcolou?r(i[sz]ed?|ed)?\\b",
-    "description": "- Matches `colour`, `coloured`, `colourize`, `colourized`.\n- Handles both American (\"color\") and British (\"colour\") spellings.",
+    "description": "Colourisation (or colorization in American English) is the process of adding colour to black-and-white, sepia, or other monochrome images. Matches variations of `color` in both American and British spellings, including:\n\n- **Base forms:** `color`, `colour`\n- **Past tense/adjective forms:** `colored`, `coloured`\n- **Verb forms:** `colorize`, `colourize`, `colorise`, `colourise`\n- **Past participles:** `colorized`, `coloured`, `colourized`, `colourised`",
     "tags": [
       "Colour Grade",
       "Enhancement"
@@ -1476,7 +1466,7 @@
         "expected": true,
         "id": 1,
         "input": "colour",
-        "lastRun": "2025-02-13T13:29:13.301346",
+        "lastRun": "2025-02-22T19:10:06.067266",
         "matchSpan": {
           "end": 6,
           "start": 0
@@ -1491,7 +1481,7 @@
         "expected": true,
         "id": 3,
         "input": "coloured",
-        "lastRun": "2025-02-13T13:29:13.301346",
+        "lastRun": "2025-02-22T19:10:06.067266",
         "matchSpan": {
           "end": 8,
           "start": 0
@@ -1505,30 +1495,30 @@
       {
         "expected": true,
         "id": 4,
-        "input": "colourize",
-        "lastRun": "2025-02-13T13:29:13.301346",
+        "input": "colourise",
+        "lastRun": "2025-02-22T19:10:06.067266",
         "matchSpan": {
           "end": 9,
           "start": 0
         },
-        "matchedContent": "colourize",
+        "matchedContent": "colourise",
         "matchedGroups": [
-          "ize"
+          "ise"
         ],
         "passes": true
       },
       {
         "expected": true,
         "id": 7,
-        "input": "colourized",
-        "lastRun": "2025-02-13T13:29:13.301346",
+        "input": "colourised",
+        "lastRun": "2025-02-22T19:10:06.067266",
         "matchSpan": {
           "end": 10,
           "start": 0
         },
-        "matchedContent": "colourized",
+        "matchedContent": "colourised",
         "matchedGroups": [
-          "ized"
+          "ised"
         ],
         "passes": true
       },
@@ -1536,7 +1526,7 @@
         "expected": true,
         "id": 8,
         "input": "colored",
-        "lastRun": "2025-02-13T13:29:13.301346",
+        "lastRun": "2025-02-22T19:10:06.067266",
         "matchSpan": {
           "end": 7,
           "start": 0
@@ -1551,14 +1541,14 @@
         "expected": false,
         "id": 9,
         "input": "discolor",
-        "lastRun": "2025-02-13T13:29:13.301346",
+        "lastRun": "2025-02-22T19:10:06.067266",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
         "passes": true
       }
     ],
-    "_id": "Colour"
+    "_id": "Colourisation"
   },
   {
     "name": "Criterion Channel",
@@ -5303,7 +5293,7 @@
   },
   {
     "name": "SM737",
-    "pattern": "SM737",
+    "pattern": "(?<=^|[\\s.-])SM737\\b",
     "description": "",
     "tags": [
       "Release Group"
@@ -5985,7 +5975,7 @@
     "tags": [
       "Release Group"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "THREESOME"
   },
   {
@@ -6578,7 +6568,7 @@
     "tags": [
       "Release Group"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "WhiteRhino"
   },
   {
@@ -6669,16 +6659,6 @@
     "_id": "ZoroSenpai"
   },
   {
-    "name": "aviator",
-    "pattern": "(?<=^|[\\s.-])aviator\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "aviator"
-  },
-  {
     "name": "b0mbardiers",
     "pattern": "(?<=^|[\\s.-])b0mbardiers\\b",
     "description": "",
@@ -6707,16 +6687,6 @@
     ],
     "tests": null,
     "_id": "c0kE"
-  },
-  {
-    "name": "c0ke",
-    "pattern": "(?<=^|[\\s.-])c0ke\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": [],
-    "_id": "c0ke"
   },
   {
     "name": "d3g-d3g",
@@ -6787,16 +6757,6 @@
     ],
     "tests": null,
     "_id": "edge2020"
-  },
-  {
-    "name": "guhzer",
-    "pattern": "(?<=^|[\\s.-])guhzer\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "guhzer"
   },
   {
     "name": "h265 WEB Groups",
@@ -7105,16 +7065,6 @@
     "_id": "iTunes"
   },
   {
-    "name": "invandraren",
-    "pattern": "(?<=^|[\\s.-])invandraren\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "invandraren"
-  },
-  {
     "name": "k00kie",
     "pattern": "(?<=^|[\\s.-])k00kie\\b",
     "description": "",
@@ -7230,36 +7180,6 @@
     ],
     "tests": [],
     "_id": "rttr"
-  },
-  {
-    "name": "spectacle",
-    "pattern": "(?<=^|[\\s.-])spectacle\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "spectacle"
-  },
-  {
-    "name": "threesome",
-    "pattern": "(?<=^|[\\s.-])threesome\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "threesome"
-  },
-  {
-    "name": "whiterhino",
-    "pattern": "(?<=^|[\\s.-])whiterhino\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "whiterhino"
   },
   {
     "name": "x264",
