@@ -3692,6 +3692,17 @@
     "_id": "KASHMiR"
   },
   {
+    "name": "KCW",
+    "pattern": "\\b(KCW|Kocowa)\\b",
+    "description": "Kocowa is an American over-the-top streaming service headquartered in Los Angeles as a joint venture between the top three Korean broadcast networks to provide Korean entertainment including K-dramas, K-reality, K-variety, and K-pop to the Americas and all with multi-language subtitles.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL",
+      "WEBRip"
+    ],
+    "_id": "KCW"
+  },
+  {
     "name": "KNiVES",
     "pattern": "(?<=^|[\\s.-])KNiVES\\b",
     "description": "",
@@ -5998,6 +6009,17 @@
     "_id": "TUSAHD"
   },
   {
+    "name": "TVING",
+    "pattern": "\\b(TVING)\\b",
+    "description": "TVING is a South Korean subscription video on-demand over-the-top streaming service operated by TVING Corporation, a joint venture made of CJ ENM Entertainment Division, Naver and JTBC by its JTBC Studios, now called SLL.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL",
+      "WEBRip"
+    ],
+    "_id": "TVING"
+  },
+  {
     "name": "TayTo",
     "pattern": "(?<=^|[\\s.-])TayTo\\b",
     "description": "",
@@ -6466,6 +6488,28 @@
     "_id": "VietHD"
   },
   {
+    "name": "Viki",
+    "pattern": "\\b(Viki)\\b",
+    "description": "Rakuten Viki is an American over-the-top subscription video on-demand streaming service. It streams videos similar to other services, but also allows users to subtitle content available in 200 languages as well as providing original programming.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL",
+      "WEBRip"
+    ],
+    "_id": "Viki"
+  },
+  {
+    "name": "Viu",
+    "pattern": "\\b(Viu)\\b",
+    "description": "Viu is a Hong Kong-based over-the-top video on demand streaming service from PCCW Media Group's Viu International Ltd. Viu delivers content in different genres from Asia's top content providers with local language subtitles",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL",
+      "WEBRip"
+    ],
+    "_id": "Viu"
+  },
+  {
     "name": "W4NK3R",
     "pattern": "(?<=^|[\\s.-])W4NK3R\\b",
     "description": "",
@@ -6504,6 +6548,28 @@
     ],
     "tests": null,
     "_id": "WOU"
+  },
+  {
+    "name": "Wavve",
+    "pattern": "\\b(Wavve)\\b",
+    "description": "Wavve is an online streaming platform, that was first launched on September 18, 2019. The company was founded as a joint venture between SK Telecom and South Korea's three terrestrial broadcasters KBS, MBC, SBS.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL",
+      "WEBRip"
+    ],
+    "_id": "Wavve"
+  },
+  {
+    "name": "WeTV",
+    "pattern": "\\b(WeTV)\\b",
+    "description": "Tencent Video also called WeTV outside of China, is a Chinese video streaming website owned by Tencent. The website was launched in April 2011, and is one of China's largest online video platforms",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL",
+      "WEBRip"
+    ],
+    "_id": "WeTV"
   },
   {
     "name": "WhiteRhino",
@@ -6945,6 +7011,17 @@
       }
     ],
     "_id": "iPT Internals"
+  },
+  {
+    "name": "iQIYI",
+    "pattern": "\\b(iQIYI)\\b",
+    "description": "iQIYI is a Chinese subscription video on-demand over-the-top streaming service owned by Baidu. Headquartered in Beijing, iQIYI primarily produces and distributes films and television series.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL",
+      "WEBRip"
+    ],
+    "_id": "iQIYI"
   },
   {
     "name": "iTunes",
