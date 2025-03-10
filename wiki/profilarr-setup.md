@@ -69,7 +69,7 @@ When configuring the volume mount (`/path/to/your/data:/config`):
 
 ### CasaOS
 
-View lawgics CasaOS setup guide [here](https://dictionarry.dev/wiki/profilarr-casaos)
+View lawgics' CasaOS setup guide [here:](https://dictionarry.dev/wiki/profilarr-casaos)
 
 ### Development
 
