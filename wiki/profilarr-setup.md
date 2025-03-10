@@ -25,7 +25,9 @@ Profilarr follows the GitFlow workflow for development:
 
 Once installed, you can visit the web UI at `http://[address]:6868` and begin the setup process.
 
-### Docker Compose (recommended)
+### Docker
+
+#### Docker Compose (recommended)
 
 ```yaml
 services:
@@ -43,7 +45,7 @@ services:
     restart: unless-stopped
 ```
 
-### Docker CLI
+#### Docker CLI
 
 ```bash
 docker run -d \
@@ -56,7 +58,7 @@ docker run -d \
   santiagosayshey/profilarr:latest  # or :beta
 ```
 
-### Volumes
+#### Volumes
 
 When configuring the volume mount (`/path/to/your/data:/config`):
 
@@ -64,6 +66,10 @@ When configuring the volume mount (`/path/to/your/data:/config`):
 - **Windows users:** The database is case-sensitive. Use a docker volume or the WSL file system directly to avoid issues
   - Docker volume example: `profilarr_data:/config`
   - WSL filesystem example: `/home/username/docker/profilarr:/config`
+
+### CasaOS
+
+View lawgics CasaOS setup guide [here](https://dictionarry.dev/wiki/profilarr-casaos)
 
 ### Development
 
