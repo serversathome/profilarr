@@ -9,125 +9,127 @@ description: "2160p Quality utilizes the [**Encode Efficiency Index**](https://d
   \ will fall back to the 1080p Quality Profile. "
 tags:
 - 2160p
-- HDR
-- x265
-- Encode
-- Lossless Audio
 - Quality Focused
+- HDR
+- Lossless Audio
+- x265
+- h265
 upgradesAllowed: true
-minCustomFormatScore: 0
-upgradeUntilScore: 600
+minCustomFormatScore: 100
+upgradeUntilScore: 1600
 minScoreIncrement: 1
 custom_formats:
+- name: 2160p WEB-DL
+  score: 1400
+- name: 2160p Bluray
+  score: 1100
+- name: 1080p WEB-DL
+  score: 900
+- name: 1080p Bluray
+  score: 710
+- name: 1080p WEBRip
+  score: 700
+- name: 720p WEB-DL
+  score: 500
 - name: 2160p Quality Tier 1
-  score: 370
+  score: 410
+- name: 720p Bluray
+  score: 410
 - name: 2160p Quality Tier 2
-  score: 360
+  score: 400
+- name: 720p WEBRip
+  score: 400
 - name: 2160p Quality Tier 3
-  score: 350
+  score: 390
 - name: 2160p Quality Tier 4
-  score: 340
-- name: 2160p
-  score: 300
-- name: 2160p Balanced Tier 1
-  score: 300
-- name: 2160p Balanced Tier 2
-  score: 290
+  score: 380
 - name: 2160p Quality Tier 5
-  score: 240
+  score: 370
 - name: 2160p Quality Tier 6
-  score: 230
-- name: Amazon Prime [2160p]
-  score: 160
-- name: Disney+ [2160p]
-  score: 160
-- name: HBO Max [2160p]
-  score: 160
-- name: Movies Anywhere [2160p]
-  score: 160
-- name: Apple TV+ [2160p]
-  score: 150
-- name: Hulu [2160p]
-  score: 150
-- name: iTunes [2160p]
-  score: 150
-- name: Max [2160p]
-  score: 150
-- name: Netflix [2160p]
-  score: 150
-- name: Paramount+ [2160p]
-  score: 150
-- name: Peacock [2160p]
-  score: 150
-- name: Roku [2160p]
-  score: 150
-- name: 1080p
-  score: 60
+  score: 360
+- name: 2160p Balanced Tier 1
+  score: 330
+- name: 2160p Balanced Tier 2
+  score: 320
 - name: 1080p Quality Tier 1
-  score: 60
+  score: 300
 - name: 1080p Quality Tier 2
-  score: 50
-- name: Special Edition
-  score: 50
+  score: 290
 - name: 1080p Quality Tier 3
-  score: 40
-- name: DVD Remux
-  score: 40
+  score: 280
 - name: 1080p Quality Tier 4
+  score: 270
+- name: 1080p Quality Tier 5
+  score: 260
+- name: 1080p Balanced Tier 1
+  score: 220
+- name: 1080p Balanced Tier 2
+  score: 210
+- name: 480p WEB-DL
+  score: 200
+- name: 720p Quality Tier 1
+  score: 200
+- name: 720p Quality Tier 2
+  score: 190
+- name: 720p Quality Tier 3
+  score: 180
+- name: 720p Quality Tier 4
+  score: 170
+- name: 720p Quality Tier 5
+  score: 160
+- name: DVD Remux
+  score: 130
+- name: DVD
+  score: 120
+- name: 480p WEBRip
+  score: 100
+- name: MA
+  score: 50
+- name: AMZN
+  score: 40
+- name: DSNP
+  score: 40
+- name: HMAX
+  score: 40
+- name: ATVP
   score: 30
-- name: Amazon Prime [1080p]
-  score: 30
-- name: Apple TV+ [1080p]
-  score: 30
-- name: Disney+ [1080p]
+- name: CRIT
   score: 30
 - name: Dolby Vision
   score: 30
-- name: Movies Anywhere [1080p]
+- name: MAX
+  score: 30
+- name: NF
+  score: 30
+- name: PCOK
+  score: 30
+- name: PMTP
   score: 30
 - name: SD Quality Tier 1
   score: 30
-- name: 1080p Balanced Tier 1
-  score: 20
-- name: 1080p Quality Tier 5
-  score: 20
-- name: HBO Max [1080p]
-  score: 20
+- name: STAN
+  score: 30
 - name: HDR10+
   score: 20
-- name: Max [1080p]
+- name: HULU
   score: 20
-- name: Netflix [1080p]
+- name: iT
+  score: 20
+- name: ROKU
   score: 20
 - name: SD Quality Tier 2
   score: 20
 - name: DTS-X
   score: 15
-- name: 1080p Balanced Tier 2
-  score: 10
-- name: Blu-ray
-  score: 10
 - name: HDR10
   score: 10
 - name: HDR10 (Missing)
   score: 10
-- name: Hulu [1080p]
-  score: 10
-- name: iTunes [1080p]
-  score: 10
-- name: Paramount+ [1080p]
-  score: 10
-- name: Peacock [1080p]
-  score: 10
-- name: Roku [1080p]
+- name: Special Edition
   score: 10
 - name: TrueHD
   score: 10
 - name: TrueHD (Missing)
-  score: 10
-- name: WEBRip
-  score: 10
-- name: x264
   score: 10
 - name: Repack3
   score: 8
@@ -145,47 +147,11 @@ custom_formats:
   score: 5
 - name: Unknown Lossless Audio
   score: 5
-- name: Amazon Prime
-  score: 0
-- name: Apple TV+
-  score: 0
-- name: Criterion Channel
-  score: 0
-- name: Disney+
-  score: 0
-- name: HBO Max
-  score: 0
-- name: Hulu
-  score: 0
-- name: iTunes
-  score: 0
-- name: Max
-  score: 0
-- name: Movies Anywhere
-  score: 0
-- name: Netflix
-  score: 0
-- name: Paramount+
-  score: 0
-- name: Peacock
-  score: 0
-- name: Roku
-  score: 0
-- name: SDR
-  score: -80
-- name: x265
-  score: -150
-- name: x265 (Missing 2160p)
-  score: -150
 - name: 3D
-  score: -9999
-- name: 720p
   score: -9999
 - name: AV1
   score: -9999
 - name: B&W
-  score: -9999
-- name: Blu-ray Remux
   score: -9999
 - name: Dolby Vision (Without Fallback)
   score: -9999
@@ -207,7 +173,7 @@ custom_formats:
   score: -9999
 - name: Remux
   score: -9999
-- name: SD Bluray Encodes
+- name: Remux (Quality Match)
   score: -9999
 - name: UHDBits
   score: -9999
@@ -224,26 +190,36 @@ custom_formats:
 - name: x265 (Missing)
   score: -9999
 qualities:
-- id: -2
+- id: -1
   name: 2160p Transparent
   description: Indistinguishable from source
   qualities:
-  - id: 5
-    name: WEBDL-2160p
   - id: 4
     name: Bluray-2160p
-- id: -3
+  - id: 5
+    name: WEBDL-2160p
+- id: -2
   name: 1080p Transparent
   description: Indistinguishable from source
   qualities:
   - id: 10
     name: Bluray-1080p
-  - id: 11
-    name: WEBRip-1080p
   - id: 9
     name: WEBDL-1080p
-- id: -1
-  name: SD
+  - id: 11
+    name: WEBRip-1080p
+- id: -3
+  name: 720p Fallback
+  description: Fallback to 720p when 1080p cannot be found.
+  qualities:
+  - id: 13
+    name: Bluray-720p
+  - id: 14
+    name: WEBDL-720p
+  - id: 15
+    name: WEBRip-720p
+- id: -4
+  name: SD Fallback
   description: Standard Definition Fallbacks
   qualities:
   - id: 22
@@ -252,10 +228,8 @@ qualities:
     name: WEBDL-480p
   - id: 20
     name: WEBRip-480p
-  - id: 24
-    name: SDTV
 upgrade_until:
-  id: -2
+  id: -1
   name: 2160p Transparent
   description: Indistinguishable from source
 language: must_original

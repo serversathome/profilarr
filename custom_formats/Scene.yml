@@ -8,9 +8,9 @@ conditions:
   pattern: Scene
   required: true
   type: release_title
-- name: WEB-DL
+- name: Not WEB-DL
   negate: true
-  required: false
+  required: true
   source: web_dl
   type: source
 tests: []
