@@ -168,9 +168,9 @@ custom_formats:
   score: -9999
 - name: VVC
   score: -9999
-- name: x264 (2160p)
+- name: WEB-DL (x265)
   score: -9999
-- name: x265
+- name: x264 (2160p)
   score: -9999
 - name: x265 (1080p)
   score: -9999
