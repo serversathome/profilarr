@@ -10,39 +10,14 @@ conditions:
   required: true
   resolution: 2160p
   type: resolution
-- name: Not WEB-DL
-  negate: true
+- name: Bluray
+  negate: false
   required: true
-  source: web_dl
+  source: bluray
   type: source
-- name: JustWatch
-  negate: false
-  pattern: JustWatch
-  required: false
-  type: release_group
-- name: DEFLATE
-  negate: false
-  pattern: DEFLATE
-  required: false
-  type: release_group
-- name: REBORN
-  negate: false
-  pattern: REBORN
-  required: false
-  type: release_group
-- name: SURCODE
-  negate: false
-  pattern: SURCODE
-  required: false
-  type: release_group
 - name: Chotab
   negate: false
   pattern: Chotab
-  required: false
-  type: release_group
-- name: SPHD
-  negate: false
-  pattern: SPHD
   required: false
   type: release_group
 - name: Kitsune
@@ -50,9 +25,14 @@ conditions:
   pattern: Kitsune
   required: false
   type: release_group
-- name: TnP
+- name: REBORN
   negate: false
-  pattern: TnP
+  pattern: REBORN
+  required: false
+  type: release_group
+- name: W4NK3R
+  negate: false
+  pattern: W4NK3R
   required: false
   type: release_group
 tests: []

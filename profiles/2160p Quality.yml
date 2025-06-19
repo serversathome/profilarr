@@ -15,123 +15,151 @@ tags:
 - x265
 - h265
 upgradesAllowed: true
-minCustomFormatScore: 100
-upgradeUntilScore: 1600
+minCustomFormatScore: 2000
+upgradeUntilScore: 22000
 minScoreIncrement: 1
 custom_formats:
-- name: 2160p WEB-DL
-  score: 1400
-- name: 2160p Bluray
-  score: 1100
-- name: 1080p WEB-DL
-  score: 900
-- name: 1080p Bluray
-  score: 710
-- name: 1080p WEBRip
-  score: 700
-- name: 720p WEB-DL
-  score: 500
 - name: 2160p Quality Tier 1
-  score: 410
-- name: 720p Bluray
-  score: 410
+  score: 20200
 - name: 2160p Quality Tier 2
-  score: 400
-- name: 720p WEBRip
-  score: 400
+  score: 20100
 - name: 2160p Quality Tier 3
-  score: 390
+  score: 20000
 - name: 2160p Quality Tier 4
-  score: 380
+  score: 19900
 - name: 2160p Quality Tier 5
-  score: 370
-- name: 2160p Quality Tier 6
-  score: 360
+  score: 19800
 - name: 2160p Balanced Tier 1
-  score: 330
+  score: 14400
 - name: 2160p Balanced Tier 2
-  score: 320
+  score: 14200
+- name: 2160p WEB-DL
+  score: 14000
+- name: 2160p Quality Tier 6
+  score: 13100
+- name: 2160p Quality Tier 7
+  score: 13000
+- name: 1080p WEB-DL
+  score: 11000
+- name: 1080p Bluray
+  score: 8000
+- name: 1080p WEBRip
+  score: 8000
+- name: 720p WEB-DL
+  score: 6000
+- name: 720p Bluray
+  score: 5000
+- name: 720p WEBRip
+  score: 5000
 - name: 1080p Quality Tier 1
-  score: 300
+  score: 4100
 - name: 1080p Quality Tier 2
-  score: 290
+  score: 4000
 - name: 1080p Quality Tier 3
-  score: 280
+  score: 3900
 - name: 1080p Quality Tier 4
-  score: 270
+  score: 3800
 - name: 1080p Quality Tier 5
-  score: 260
+  score: 3700
 - name: 1080p Balanced Tier 1
-  score: 220
+  score: 3300
 - name: 1080p Balanced Tier 2
-  score: 210
+  score: 3200
 - name: 480p WEB-DL
-  score: 200
+  score: 3000
 - name: 720p Quality Tier 1
-  score: 200
+  score: 2100
 - name: 720p Quality Tier 2
-  score: 190
-- name: 720p Quality Tier 3
-  score: 180
-- name: 720p Quality Tier 4
-  score: 170
-- name: 720p Quality Tier 5
-  score: 160
-- name: DVD Remux
-  score: 130
+  score: 2000
 - name: DVD
-  score: 120
-- name: 480p WEBRip
-  score: 100
+  score: 2000
+- name: DVD Remux
+  score: 2000
+- name: 720p Quality Tier 3
+  score: 1900
+- name: 720p Quality Tier 4
+  score: 1800
+- name: 720p Quality Tier 5
+  score: 1700
 - name: MA
-  score: 50
+  score: 500
 - name: AMZN
-  score: 40
-- name: DSNP
-  score: 40
-- name: HMAX
-  score: 40
+  score: 400
 - name: ATVP
-  score: 30
-- name: CRIT
-  score: 30
-- name: Dolby Vision
-  score: 30
-- name: MAX
-  score: 30
-- name: NF
-  score: 30
-- name: PCOK
-  score: 30
-- name: PMTP
-  score: 30
-- name: SD Quality Tier 1
-  score: 30
-- name: STAN
-  score: 30
-- name: HDR10+
-  score: 20
-- name: HULU
-  score: 20
+  score: 400
+- name: DSNP
+  score: 400
 - name: iT
-  score: 20
+  score: 400
+- name: CRIT
+  score: 300
+- name: Dolby Vision
+  score: 300
+- name: HMAX
+  score: 300
+- name: MAX
+  score: 300
+- name: NF
+  score: 300
+- name: NOW
+  score: 300
+- name: PCOK
+  score: 300
+- name: SD Quality Tier 1
+  score: 300
+- name: HDR10+
+  score: 200
+- name: HTSR
+  score: 200
+- name: HULU
+  score: 200
+- name: PMTP
+  score: 200
 - name: ROKU
-  score: 20
+  score: 200
 - name: SD Quality Tier 2
-  score: 20
+  score: 200
+- name: SHO
+  score: 200
+- name: STAN
+  score: 200
 - name: DTS-X
-  score: 15
+  score: 150
 - name: HDR
-  score: 10
+  score: 100
 - name: HDR10
-  score: 10
+  score: 100
 - name: HDR10 (Missing)
-  score: 10
+  score: 100
+- name: HLG
+  score: 100
+- name: PQ
+  score: 100
 - name: Special Edition
-  score: 10
+  score: 100
 - name: TrueHD
-  score: 10
+  score: 100
 - name: TrueHD (Missing)
+  score: 100
+- name: WEB-DL Tier 1
+  score: 80
+- name: WEB-DL Tier 2
+  score: 60
+- name: Atmos
+  score: 50
+- name: Atmos (Missing)
+  score: 50
+- name: DTS-HD MA
+  score: 50
+- name: FLAC
+  score: 50
+- name: Unknown Lossless Audio
+  score: 50
+- name: WEB-DL Tier 3
+  score: 40
+- name: WEB-DL Tier 4
+  score: 20
+- name: Season Pack
   score: 10
 - name: Repack3
   score: 8
@@ -139,58 +167,46 @@ custom_formats:
   score: 7
 - name: Repack1
   score: 6
-- name: Atmos
-  score: 5
-- name: Atmos (Missing)
-  score: 5
-- name: DTS-HD MA
-  score: 5
-- name: FLAC
-  score: 5
-- name: Unknown Lossless Audio
-  score: 5
 - name: 3D
-  score: -9999
+  score: -99999
 - name: AV1
-  score: -9999
+  score: -99999
 - name: B&W
-  score: -9999
+  score: -99999
 - name: Dolby Vision (Without Fallback)
-  score: -9999
+  score: -99999
 - name: Extras
-  score: -9999
+  score: -99999
 - name: Full Disc
-  score: -9999
+  score: -99999
 - name: Full Disc (Quality Match)
-  score: -9999
+  score: -99999
 - name: h265
-  score: -9999
-- name: h265 (Missing)
-  score: -9999
-- name: HDR10 (Missing) (1080p)
-  score: -9999
+  score: -99999
 - name: Lossless Audio (1080p)
-  score: -9999
-- name: Non Retail HDR
-  score: -9999
+  score: -99999
 - name: Remux
-  score: -9999
+  score: -99999
 - name: UHDBits
-  score: -9999
-- name: Unwanted x265 Groups
-  score: -9999
+  score: -99999
+- name: UnWanted Release Groups
+  score: -99999
+- name: UnWanted WEBRip Groups
+  score: -99999
 - name: Upscaled
-  score: -9999
+  score: -99999
+- name: VP9
+  score: -99999
 - name: VVC
-  score: -9999
-- name: WEB-DL (x265)
-  score: -9999
+  score: -99999
 - name: x264 (2160p)
-  score: -9999
-- name: x265 (1080p)
-  score: -9999
+  score: -99999
+- name: x265
+  score: -99999
 - name: x265 (Missing)
-  score: -9999
+  score: -99999
+- name: x265 (WEB-DL)
+  score: -99999
 qualities:
 - id: -1
   name: 2160p Transparent
@@ -224,12 +240,14 @@ qualities:
   name: SD Fallback
   description: Standard Definition Fallbacks
   qualities:
-  - id: 22
-    name: DVD
+  - id: 18
+    name: Bluray-480p
   - id: 19
     name: WEBDL-480p
   - id: 20
     name: WEBRip-480p
+  - id: 22
+    name: DVD
 upgrade_until:
   id: -1
   name: 2160p Transparent

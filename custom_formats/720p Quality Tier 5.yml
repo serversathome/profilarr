@@ -16,29 +16,74 @@ conditions:
   required: true
   source: web_dl
   type: source
-- name: NTb
+- name: Chotab
   negate: false
-  pattern: NTb
+  pattern: Chotab
   required: false
   type: release_group
-- name: Dariush
+- name: EDPH
   negate: false
-  pattern: Dariush
+  pattern: EDPH
   required: false
   type: release_group
-- name: FoRM
+- name: E.N.D
   negate: false
-  pattern: FoRM
+  pattern: E.N.D
   required: false
   type: release_group
-- name: D-Z0N3
+- name: ESiR
   negate: false
-  pattern: D-Z0N3
+  pattern: ESiR
   required: false
   type: release_group
-- name: PTer
+- name: HDMaNiAcS
   negate: false
-  pattern: PTer
+  pattern: HDMaNiAcS
+  required: false
+  type: release_group
+- name: iFT
+  negate: false
+  pattern: iFT
+  required: false
+  type: release_group
+- name: KASHMiR
+  negate: false
+  pattern: KASHMiR
+  required: false
+  type: release_group
+- name: MTeam
+  negate: false
+  pattern: MTeam
+  required: false
+  type: release_group
+- name: nmd
+  negate: false
+  pattern: nmd
+  required: false
+  type: release_group
+- name: NyHD
+  type: release_group
+  required: false
+  negate: false
+  pattern: NyHD
+- name: ORiGEN
+  negate: false
+  pattern: ORiGEN
+  required: false
+  type: release_group
+- name: playHD
+  negate: false
+  pattern: playHD
+  required: false
+  type: release_group
+- name: SA89
+  negate: false
+  pattern: SA89
+  required: false
+  type: release_group
+- name: SaNcTi
+  negate: false
+  pattern: SaNcTi
   required: false
   type: release_group
 tests: []
