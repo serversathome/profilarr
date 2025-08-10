@@ -4,149 +4,186 @@
     "description": "1080p Balanced targets consistent & immutable 1080p **WEB-DLs** with fallback to transparent x264 encodes, prioritised using the **Golden Popcorn Performance Index**.\n\n- Special considerations are given to **Balanced** groups who prioritize **streaming optimisation** over quality, falling somewhere around a tier 2 WEB-DL. This includes groups like **BHDStudio** and **hallowed**.\n- If no 1080p release can be found, the profile will fall back to SD releases - DVD remuxes  / encodes. ",
     "tags": [
       "1080p",
-      "x264",
+      "Balanced Focused",
       "Lossy Audio",
-      "Balanced Focused"
+      "x264",
+      "h264"
     ],
     "upgradesAllowed": true,
-    "minCustomFormatScore": 0,
-    "upgradeUntilScore": 320,
+    "minCustomFormatScore": 20000,
+    "upgradeUntilScore": 400000,
     "minScoreIncrement": 1,
     "custom_formats": [
       {
-        "name": "1080p",
-        "score": 220
-      },
-      {
-        "name": "Disney+",
-        "score": 220
-      },
-      {
-        "name": "Movies Anywhere",
-        "score": 220
-      },
-      {
-        "name": "Amazon Prime",
-        "score": 210
-      },
-      {
-        "name": "Apple TV+",
-        "score": 210
-      },
-      {
-        "name": "Criterion Channel",
-        "score": 210
-      },
-      {
-        "name": "HBO Max",
-        "score": 210
-      },
-      {
-        "name": "Max",
-        "score": 210
-      },
-      {
-        "name": "Netflix",
-        "score": 210
-      },
-      {
-        "name": "Paramount+",
-        "score": 210
-      },
-      {
-        "name": "Peacock",
-        "score": 210
-      },
-      {
-        "name": "iTunes (Missing)",
-        "score": 200
-      },
-      {
         "name": "1080p Balanced Tier 1",
-        "score": 170
+        "score": 141000
       },
       {
         "name": "1080p Balanced Tier 2",
-        "score": 160
+        "score": 140000
       },
       {
-        "name": "1080p Quality Tier 1",
-        "score": 90
+        "name": "1080p WEB-DL",
+        "score": 140000
       },
       {
-        "name": "Hulu",
-        "score": 90
+        "name": "720p WEB-DL",
+        "score": 100000
       },
       {
-        "name": "iTunes",
-        "score": 90
+        "name": "720p Bluray",
+        "score": 80000
       },
       {
-        "name": "Roku",
-        "score": 90
+        "name": "720p WEBRip",
+        "score": 80000
       },
       {
-        "name": "1080p Quality Tier 2",
-        "score": 80
+        "name": "480p WEB-DL",
+        "score": 60000
       },
       {
-        "name": "1080p Quality Tier 3",
-        "score": 70
+        "name": "720p Quality Tier 1",
+        "score": 44000
       },
       {
-        "name": "1080p Golden Popcorn",
-        "score": 60
+        "name": "720p Quality Tier 2",
+        "score": 43000
       },
       {
-        "name": "1080p Quality Tier 4",
-        "score": 60
+        "name": "720p Quality Tier 3",
+        "score": 42000
       },
       {
-        "name": "1080p Quality Tier 5",
-        "score": 50
+        "name": "720p Quality Tier 4",
+        "score": 41000
+      },
+      {
+        "name": "720p Quality Tier 5",
+        "score": 40000
+      },
+      {
+        "name": "DVD",
+        "score": 20000
       },
       {
         "name": "DVD Remux",
-        "score": 40
-      },
-      {
-        "name": "SD Golden Popcorn",
-        "score": 30
+        "score": 20000
       },
       {
         "name": "SD Quality Tier 1",
-        "score": 30
-      },
-      {
-        "name": "Scene",
-        "score": 20
+        "score": 11000
       },
       {
         "name": "SD Quality Tier 2",
-        "score": 20
+        "score": 10000
       },
       {
-        "name": "Atmos",
-        "score": 10
+        "name": "720p Golden Popcorn",
+        "score": 6000
       },
       {
-        "name": "Atmos (Missing)",
-        "score": 10
+        "name": "MA",
+        "score": 4000
       },
       {
-        "name": "Blu-ray",
-        "score": 10
+        "name": "SD Golden Popcorn",
+        "score": 4000
+      },
+      {
+        "name": "AMZN",
+        "score": 2000
+      },
+      {
+        "name": "ATVP",
+        "score": 2000
+      },
+      {
+        "name": "DSNP",
+        "score": 2000
+      },
+      {
+        "name": "ATV",
+        "score": 1000
+      },
+      {
+        "name": "CRIT",
+        "score": 1000
+      },
+      {
+        "name": "HMAX",
+        "score": 1000
+      },
+      {
+        "name": "iT",
+        "score": 1000
+      },
+      {
+        "name": "MAX",
+        "score": 1000
+      },
+      {
+        "name": "NF",
+        "score": 1000
+      },
+      {
+        "name": "NOW",
+        "score": 1000
+      },
+      {
+        "name": "PCOK",
+        "score": 1000
       },
       {
         "name": "Special Edition",
-        "score": 10
+        "score": 1000
       },
       {
-        "name": "WEBRip",
-        "score": 10
+        "name": "DTS-HD HRA",
+        "score": 800
       },
       {
-        "name": "x264",
+        "name": "Opus",
+        "score": 800
+      },
+      {
+        "name": "Dolby Digital +",
+        "score": 600
+      },
+      {
+        "name": "Dolby Atmos",
+        "score": 400
+      },
+      {
+        "name": "DTS-ES",
+        "score": 400
+      },
+      {
+        "name": "DTS",
+        "score": 200
+      },
+      {
+        "name": "Dolby Digital",
+        "score": 100
+      },
+      {
+        "name": "WEB-DL Tier 1",
+        "score": 80
+      },
+      {
+        "name": "WEB-DL Tier 2",
+        "score": 60
+      },
+      {
+        "name": "WEB-DL Tier 3",
+        "score": 40
+      },
+      {
+        "name": "WEB-DL Tier 4",
+        "score": 20
+      },
+      {
+        "name": "Season Pack",
         "score": 10
       },
       {
@@ -162,111 +199,131 @@
         "score": 6
       },
       {
-        "name": "2160p",
-        "score": -9999
+        "name": "AAC",
+        "score": 0
+      },
+      {
+        "name": "HTSR",
+        "score": 0
+      },
+      {
+        "name": "HULU",
+        "score": 0
+      },
+      {
+        "name": "PMTP",
+        "score": 0
+      },
+      {
+        "name": "ROKU",
+        "score": 0
+      },
+      {
+        "name": "SHO",
+        "score": 0
+      },
+      {
+        "name": "STAN",
+        "score": 0
       },
       {
         "name": "3D",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "720p",
-        "score": -9999
-      },
-      {
-        "name": "720p Golden Popcorn",
-        "score": -9999
+        "name": "AV1",
+        "score": -999999
       },
       {
         "name": "B&W",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "BeyondHD",
-        "score": -9999
+        "name": "Banned Groups",
+        "score": -999999
       },
       {
-        "name": "Blu-ray Remux",
-        "score": -9999
+        "name": "Banned Groups (Title)",
+        "score": -999999
+      },
+      {
+        "name": "Banned WEBRip",
+        "score": -999999
       },
       {
         "name": "Dolby Vision",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Extras",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc (Quality Match)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "h265",
-        "score": -9999
-      },
-      {
-        "name": "h265 (Missing)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "HDR",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "HDR10",
-        "score": -9999
-      },
-      {
-        "name": "HDR10 (Missing)",
-        "score": -9999
-      },
-      {
-        "name": "HDR10 (Missing) (1080p)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "HDR10+",
-        "score": -9999
+        "score": -999999
+      },
+      {
+        "name": "HLG",
+        "score": -999999
+      },
+      {
+        "name": "PQ",
+        "score": -999999
       },
       {
         "name": "Remux",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "SD Bluray Encodes",
-        "score": -9999
+        "name": "Sing Along",
+        "score": -999999
       },
       {
         "name": "Upscaled",
-        "score": -9999
+        "score": -999999
+      },
+      {
+        "name": "VP9",
+        "score": -999999
+      },
+      {
+        "name": "VVC",
+        "score": -999999
       },
       {
         "name": "x265",
-        "score": -9999
-      },
-      {
-        "name": "x265 (Missing)",
-        "score": -9999
+        "score": -999999
       }
     ],
     "qualities": [
       {
         "id": -1,
-        "name": "Balanced capable",
-        "description": "Balanced capable releases. Typically WEB-DL would be the overwhelming majority of releases, but there are occasional streaming optimised encodes that should be preferred.",
+        "name": "Balanced Capable",
+        "description": "Balanced Capable releases. Typically WEB-DL would be the overwhelming majority of releases, but there are occasional streaming optimised encodes that should be preferred.",
         "qualities": [
           {
             "id": 10,
             "name": "Bluray-1080p"
-          },
-          {
-            "id": 11,
-            "name": "WEBRip-1080p"
           },
           {
             "id": 9,
@@ -276,9 +333,32 @@
       },
       {
         "id": -2,
-        "name": "SD",
-        "description": "SD Fallbacks",
+        "name": "720p Fallback",
+        "description": "Fallback to 720p when 1080p cannot be found.",
         "qualities": [
+          {
+            "id": 13,
+            "name": "Bluray-720p"
+          },
+          {
+            "id": 14,
+            "name": "WEBDL-720p"
+          },
+          {
+            "id": 15,
+            "name": "WEBRip-720p"
+          }
+        ]
+      },
+      {
+        "id": -3,
+        "name": "SD Fallback",
+        "description": "Standard Definition Fallbacks",
+        "qualities": [
+          {
+            "id": 18,
+            "name": "Bluray-480p"
+          },
           {
             "id": 19,
             "name": "WEBDL-480p"
@@ -290,223 +370,287 @@
           {
             "id": 22,
             "name": "DVD"
-          },
-          {
-            "id": 24,
-            "name": "SDTV"
-          }
-        ]
-      },
-      {
-        "id": -3,
-        "name": "Prereleases",
-        "description": "Low quality releases that come out before physical discs / streaming / VODs. Needs to be enabled for tweak to work. ",
-        "qualities": [
-          {
-            "id": 29,
-            "name": "CAM"
-          },
-          {
-            "id": 26,
-            "name": "Telesync"
-          },
-          {
-            "id": 25,
-            "name": "Telecine"
-          },
-          {
-            "id": 23,
-            "name": "DVDSCR"
           }
         ]
       }
     ],
     "upgrade_until": {
       "id": -1,
-      "name": "Balanced capable",
-      "description": "Balanced capable releases. Typically WEB-DL would be the overwhelming majority of releases, but there are occasional streaming optimised encodes that should be preferred."
+      "name": "Balanced Capable",
+      "description": "Balanced Capable releases. Typically WEB-DL would be the overwhelming majority of releases, but there are occasional streaming optimised encodes that should be preferred."
     },
     "language": "must_original",
     "_id": "1080p Balanced"
   },
   {
-    "name": "1080p Quality (HDR)",
-    "description": "1080p Quality (HDR) utilizes the [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/GPPi) to target **transparent x265 HDR** 1080p encodes. \n- 5 Quality tiers prioritise encodes with high 1080p GPPi scores, with fallback to the regular 1080p Quality profile (non HDR), then 1080p WEB-DLs and streaming optimised encodes (**BHDStudio & hallowed**).\n- **x265 is negated** but allowed, if and only if a reputable GPPi group has encoded it from a UHD Bluray source.\n- Non HDR x265 encodes are strictly forbidden in this profile\n- If no 1080p release can be found, the profile will fall back to SD releases - **DVD remuxes  / encodes**",
+    "name": "1080p Efficient",
+    "description": "Efficient Profile Beta Testing Radarr Only",
     "tags": [
       "1080p",
-      "x264",
-      "x265",
-      "HDR",
+      "Efficient Focused",
       "Lossy Audio",
-      "Quality Focused"
+      "h265",
+      "x265"
     ],
     "upgradesAllowed": true,
-    "minCustomFormatScore": 0,
-    "upgradeUntilScore": 320,
+    "minCustomFormatScore": 20000,
+    "upgradeUntilScore": 400000,
     "minScoreIncrement": 1,
     "custom_formats": [
       {
-        "name": "UHD Bluray",
-        "score": 350
+        "name": "1080p Efficient Bluray Tier 0 (Radarr)",
+        "score": 240000
       },
       {
-        "name": "UHD Bluray (Missing)",
-        "score": 350
+        "name": "1080p Efficient WEB-DL Tier 1",
+        "score": 220000
       },
       {
-        "name": "1080p Golden Popcorn",
-        "score": 120
+        "name": "1080p Efficient WEB-DL Tier 2",
+        "score": 200000
       },
       {
-        "name": "1080p Quality Tier 1",
-        "score": 120
+        "name": "1080p Efficient Bluray Tier 1 (Radarr)",
+        "score": 184000
       },
       {
-        "name": "1080p Quality Tier 2",
-        "score": 110
+        "name": "1080p Efficient Bluray Tier 2 (Radarr)",
+        "score": 183000
       },
       {
-        "name": "1080p Quality Tier 3",
-        "score": 100
+        "name": "1080p Efficient Bluray Tier 3 (Radarr)",
+        "score": 182000
       },
       {
-        "name": "1080p Quality Tier 4",
-        "score": 90
+        "name": "1080p Efficient Bluray Tier 4 (Radarr)",
+        "score": 181000
       },
       {
-        "name": "1080p Quality Tier 5",
-        "score": 80
+        "name": "1080p Efficient Bluray Tier 5 (Radarr)",
+        "score": 180000
       },
       {
-        "name": "1080p",
-        "score": 60
+        "name": "1080p Efficient WEB-DL Tier 3",
+        "score": 170000
       },
       {
-        "name": "Amazon Prime",
-        "score": 60
+        "name": "1080p Efficient WEB Tier 1 (Radarr)",
+        "score": 164000
       },
       {
-        "name": "Apple TV+",
-        "score": 60
+        "name": "1080p Efficient WEB Tier 2 (Radarr)",
+        "score": 163000
       },
       {
-        "name": "Disney+",
-        "score": 60
+        "name": "1080p Efficient WEB Tier 3 (Radarr)",
+        "score": 162000
       },
       {
-        "name": "Movies Anywhere",
-        "score": 60
+        "name": "1080p Efficient WEB Tier 4 (Radarr)",
+        "score": 161000
+      },
+      {
+        "name": "1080p Efficient WEB Tier 5 (Radarr)",
+        "score": 160000
       },
       {
         "name": "1080p Balanced Tier 1",
-        "score": 50
-      },
-      {
-        "name": "Criterion Channel",
-        "score": 50
-      },
-      {
-        "name": "HBO Max",
-        "score": 50
-      },
-      {
-        "name": "Max",
-        "score": 50
-      },
-      {
-        "name": "Netflix",
-        "score": 50
-      },
-      {
-        "name": "Paramount+",
-        "score": 50
-      },
-      {
-        "name": "Peacock",
-        "score": 50
+        "score": 141000
       },
       {
         "name": "1080p Balanced Tier 2",
-        "score": 40
+        "score": 140000
+      },
+      {
+        "name": "1080p WEB-DL (h264)",
+        "score": 140000
+      },
+      {
+        "name": "720p WEB-DL",
+        "score": 100000
+      },
+      {
+        "name": "720p Bluray",
+        "score": 80000
+      },
+      {
+        "name": "720p WEBRip",
+        "score": 80000
+      },
+      {
+        "name": "480p WEB-DL",
+        "score": 60000
+      },
+      {
+        "name": "720p Quality Tier 1",
+        "score": 44000
+      },
+      {
+        "name": "720p Quality Tier 2",
+        "score": 43000
+      },
+      {
+        "name": "720p Quality Tier 3",
+        "score": 42000
+      },
+      {
+        "name": "720p Quality Tier 4",
+        "score": 41000
+      },
+      {
+        "name": "720p Quality Tier 5",
+        "score": 40000
+      },
+      {
+        "name": "DVD",
+        "score": 20000
       },
       {
         "name": "DVD Remux",
-        "score": 40
-      },
-      {
-        "name": "Hulu",
-        "score": 40
-      },
-      {
-        "name": "iTunes",
-        "score": 40
-      },
-      {
-        "name": "iTunes (Missing)",
-        "score": 40
-      },
-      {
-        "name": "Roku",
-        "score": 40
-      },
-      {
-        "name": "Dolby Vision",
-        "score": 30
-      },
-      {
-        "name": "SD Golden Popcorn",
-        "score": 30
+        "score": 20000
       },
       {
         "name": "SD Quality Tier 1",
-        "score": 30
-      },
-      {
-        "name": "HDR10+",
-        "score": 20
-      },
-      {
-        "name": "Scene",
-        "score": 20
+        "score": 11000
       },
       {
         "name": "SD Quality Tier 2",
-        "score": 20
+        "score": 10000
       },
       {
-        "name": "Atmos",
-        "score": 10
+        "name": "720p Golden Popcorn",
+        "score": 6000
       },
       {
-        "name": "Atmos (Missing)",
-        "score": 10
+        "name": "MA",
+        "score": 4000
       },
       {
-        "name": "Blu-ray",
-        "score": 10
+        "name": "SD Golden Popcorn",
+        "score": 4000
+      },
+      {
+        "name": "Dolby Vision",
+        "score": 3000
+      },
+      {
+        "name": "AMZN",
+        "score": 2000
+      },
+      {
+        "name": "ATVP",
+        "score": 2000
+      },
+      {
+        "name": "DSNP",
+        "score": 2000
+      },
+      {
+        "name": "HDR10+",
+        "score": 2000
+      },
+      {
+        "name": "ATV",
+        "score": 1000
+      },
+      {
+        "name": "CRIT",
+        "score": 1000
+      },
+      {
+        "name": "DS4K",
+        "score": 1000
       },
       {
         "name": "HDR",
-        "score": 10
+        "score": 1000
       },
       {
         "name": "HDR10",
-        "score": 10
+        "score": 1000
       },
       {
-        "name": "HDR10 (Missing) (1080p)",
-        "score": 10
+        "name": "HLG",
+        "score": 1000
+      },
+      {
+        "name": "HMAX",
+        "score": 1000
+      },
+      {
+        "name": "iT",
+        "score": 1000
+      },
+      {
+        "name": "MAX",
+        "score": 1000
+      },
+      {
+        "name": "NF",
+        "score": 1000
+      },
+      {
+        "name": "NOW",
+        "score": 1000
+      },
+      {
+        "name": "PCOK",
+        "score": 1000
+      },
+      {
+        "name": "PQ",
+        "score": 1000
       },
       {
         "name": "Special Edition",
-        "score": 10
+        "score": 1000
       },
       {
-        "name": "WEBRip",
-        "score": 10
+        "name": "DTS-HD HRA",
+        "score": 800
       },
       {
-        "name": "x264",
+        "name": "Opus",
+        "score": 800
+      },
+      {
+        "name": "Dolby Digital +",
+        "score": 600
+      },
+      {
+        "name": "Dolby Atmos",
+        "score": 400
+      },
+      {
+        "name": "DTS-ES",
+        "score": 400
+      },
+      {
+        "name": "DTS",
+        "score": 200
+      },
+      {
+        "name": "Dolby Digital",
+        "score": 100
+      },
+      {
+        "name": "WEB-DL Tier 1",
+        "score": 80
+      },
+      {
+        "name": "WEB-DL Tier 2",
+        "score": 60
+      },
+      {
+        "name": "WEB-DL Tier 3",
+        "score": 40
+      },
+      {
+        "name": "WEB-DL Tier 4",
+        "score": 20
+      },
+      {
+        "name": "Season Pack",
         "score": 10
       },
       {
@@ -522,90 +666,554 @@
         "score": 6
       },
       {
-        "name": "x265",
-        "score": -90
+        "name": "AAC",
+        "score": 0
       },
       {
-        "name": "2160p",
-        "score": -9999
+        "name": "HTSR",
+        "score": 0
+      },
+      {
+        "name": "HULU",
+        "score": 0
+      },
+      {
+        "name": "PMTP",
+        "score": 0
+      },
+      {
+        "name": "ROKU",
+        "score": 0
+      },
+      {
+        "name": "SHO",
+        "score": 0
+      },
+      {
+        "name": "STAN",
+        "score": 0
       },
       {
         "name": "3D",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "720p",
-        "score": -9999
-      },
-      {
-        "name": "720p Golden Popcorn",
-        "score": -9999
+        "name": "AV1",
+        "score": -999999
       },
       {
         "name": "B&W",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "BeyondHD",
-        "score": -9999
+        "name": "Banned Groups",
+        "score": -999999
       },
       {
-        "name": "Blu-ray Remux",
-        "score": -9999
+        "name": "Banned Groups (Title)",
+        "score": -999999
+      },
+      {
+        "name": "Banned WEBRip",
+        "score": -999999
       },
       {
         "name": "Dolby Vision (Without Fallback)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Extras",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc (Quality Match)",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "h265",
-        "score": -9999
+        "name": "h265 (Efficient)",
+        "score": -999999
       },
       {
-        "name": "h265 (Missing)",
-        "score": -9999
-      },
-      {
-        "name": "Non Retail HDR",
-        "score": -9999
+        "name": "Lossless Audio",
+        "score": -999999
       },
       {
         "name": "Remux",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "SD Bluray Encodes",
-        "score": -9999
+        "name": "Sing Along",
+        "score": -999999
       },
       {
-        "name": "Unwanted x265 Groups",
-        "score": -9999
+        "name": "UHD Bluray",
+        "score": -999999
+      },
+      {
+        "name": "UHD Bluray (Missing)",
+        "score": -999999
       },
       {
         "name": "Upscaled",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "x265 (Missing)",
-        "score": -9999
+        "name": "VP9",
+        "score": -999999
+      },
+      {
+        "name": "VVC",
+        "score": -999999
+      },
+      {
+        "name": "x265 (Efficient)",
+        "score": -999999
       }
     ],
     "qualities": [
       {
         "id": -1,
-        "name": "Transparent capable",
+        "name": "Efficient Capable",
+        "description": "Balanced Capable releases. Typically WEB-DL would be the overwhelming majority of releases, but there are occasional streaming optimised encodes that should be preferred.",
+        "qualities": [
+          {
+            "id": 10,
+            "name": "Bluray-1080p"
+          },
+          {
+            "id": 9,
+            "name": "WEBDL-1080p"
+          }
+        ]
+      },
+      {
+        "id": -2,
+        "name": "720p Fallback",
+        "description": "Fallback to 720p when 1080p cannot be found.",
+        "qualities": [
+          {
+            "id": 13,
+            "name": "Bluray-720p"
+          },
+          {
+            "id": 14,
+            "name": "WEBDL-720p"
+          },
+          {
+            "id": 15,
+            "name": "WEBRip-720p"
+          }
+        ]
+      },
+      {
+        "id": -3,
+        "name": "SD Fallback",
+        "description": "Standard Definition Fallbacks",
+        "qualities": [
+          {
+            "id": 18,
+            "name": "Bluray-480p"
+          },
+          {
+            "id": 19,
+            "name": "WEBDL-480p"
+          },
+          {
+            "id": 20,
+            "name": "WEBRip-480p"
+          },
+          {
+            "id": 22,
+            "name": "DVD"
+          }
+        ]
+      }
+    ],
+    "upgrade_until": {
+      "id": -1,
+      "name": "Efficient Capable",
+      "description": "Balanced Capable releases. Typically WEB-DL would be the overwhelming majority of releases, but there are occasional streaming optimised encodes that should be preferred."
+    },
+    "language": "must_original",
+    "_id": "1080p Efficient"
+  },
+  {
+    "name": "1080p Quality (HDR)",
+    "description": "1080p Quality (HDR) utilizes the [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/GPPi) to target **transparent x265 HDR** 1080p encodes. \n- 5 Quality tiers prioritise encodes with high 1080p GPPi scores, with fallback to the regular 1080p Quality profile (non HDR), then 1080p WEB-DLs and streaming optimised encodes (**BHDStudio & hallowed**).\n- **x265 is negated** but allowed, if and only if a reputable GPPi group has encoded it from a UHD Bluray source.\n- Non HDR x265 encodes are strictly forbidden in this profile\n- If no 1080p release can be found, the profile will fall back to SD releases - **DVD remuxes  / encodes**",
+    "tags": [
+      "1080p",
+      "Quality Focused",
+      "HDR",
+      "Lossy Audio",
+      "x264",
+      "x265"
+    ],
+    "upgradesAllowed": true,
+    "minCustomFormatScore": 20000,
+    "upgradeUntilScore": 400000,
+    "minScoreIncrement": 1,
+    "custom_formats": [
+      {
+        "name": "UHD Bluray",
+        "score": 240000
+      },
+      {
+        "name": "UHD Bluray (Missing)",
+        "score": 240000
+      },
+      {
+        "name": "1080p WEB-DL",
+        "score": 200000
+      },
+      {
+        "name": "1080p Bluray",
+        "score": 140000
+      },
+      {
+        "name": "1080p WEBRip",
+        "score": 140000
+      },
+      {
+        "name": "720p WEB-DL",
+        "score": 100000
+      },
+      {
+        "name": "1080p Quality Tier 1",
+        "score": 84000
+      },
+      {
+        "name": "1080p Quality Tier 2",
+        "score": 83000
+      },
+      {
+        "name": "1080p Quality Tier 3",
+        "score": 82000
+      },
+      {
+        "name": "1080p Quality Tier 4",
+        "score": 81000
+      },
+      {
+        "name": "1080p Quality Tier 5",
+        "score": 80000
+      },
+      {
+        "name": "720p Bluray",
+        "score": 80000
+      },
+      {
+        "name": "720p WEBRip",
+        "score": 80000
+      },
+      {
+        "name": "1080p Balanced Tier 1",
+        "score": 61000
+      },
+      {
+        "name": "1080p Balanced Tier 2",
+        "score": 60000
+      },
+      {
+        "name": "480p WEB-DL",
+        "score": 60000
+      },
+      {
+        "name": "720p Quality Tier 1",
+        "score": 44000
+      },
+      {
+        "name": "720p Quality Tier 2",
+        "score": 43000
+      },
+      {
+        "name": "720p Quality Tier 3",
+        "score": 42000
+      },
+      {
+        "name": "720p Quality Tier 4",
+        "score": 41000
+      },
+      {
+        "name": "720p Quality Tier 5",
+        "score": 40000
+      },
+      {
+        "name": "DVD",
+        "score": 20000
+      },
+      {
+        "name": "DVD Remux",
+        "score": 20000
+      },
+      {
+        "name": "SD Quality Tier 1",
+        "score": 11000
+      },
+      {
+        "name": "SD Quality Tier 2",
+        "score": 10000
+      },
+      {
+        "name": "1080p Golden Popcorn",
+        "score": 8000
+      },
+      {
+        "name": "720p Golden Popcorn",
+        "score": 6000
+      },
+      {
+        "name": "MA",
+        "score": 4000
+      },
+      {
+        "name": "SD Golden Popcorn",
+        "score": 4000
+      },
+      {
+        "name": "Dolby Vision",
+        "score": 3000
+      },
+      {
+        "name": "AMZN",
+        "score": 2000
+      },
+      {
+        "name": "ATVP",
+        "score": 2000
+      },
+      {
+        "name": "DSNP",
+        "score": 2000
+      },
+      {
+        "name": "HDR10+",
+        "score": 2000
+      },
+      {
+        "name": "ATV",
+        "score": 1000
+      },
+      {
+        "name": "CRIT",
+        "score": 1000
+      },
+      {
+        "name": "HDR",
+        "score": 1000
+      },
+      {
+        "name": "HDR10",
+        "score": 1000
+      },
+      {
+        "name": "HDR10 (Missing) (1080p)",
+        "score": 1000
+      },
+      {
+        "name": "HLG",
+        "score": 1000
+      },
+      {
+        "name": "HMAX",
+        "score": 1000
+      },
+      {
+        "name": "iT",
+        "score": 1000
+      },
+      {
+        "name": "MAX",
+        "score": 1000
+      },
+      {
+        "name": "NF",
+        "score": 1000
+      },
+      {
+        "name": "NOW",
+        "score": 1000
+      },
+      {
+        "name": "PCOK",
+        "score": 1000
+      },
+      {
+        "name": "PQ",
+        "score": 1000
+      },
+      {
+        "name": "Special Edition",
+        "score": 1000
+      },
+      {
+        "name": "DTS-HD HRA",
+        "score": 800
+      },
+      {
+        "name": "Opus",
+        "score": 800
+      },
+      {
+        "name": "Dolby Digital +",
+        "score": 600
+      },
+      {
+        "name": "Dolby Atmos",
+        "score": 400
+      },
+      {
+        "name": "DTS-ES",
+        "score": 400
+      },
+      {
+        "name": "DTS",
+        "score": 200
+      },
+      {
+        "name": "Dolby Digital",
+        "score": 100
+      },
+      {
+        "name": "WEB-DL Tier 1",
+        "score": 80
+      },
+      {
+        "name": "WEB-DL Tier 2",
+        "score": 60
+      },
+      {
+        "name": "WEB-DL Tier 3",
+        "score": 40
+      },
+      {
+        "name": "WEB-DL Tier 4",
+        "score": 20
+      },
+      {
+        "name": "Season Pack",
+        "score": 10
+      },
+      {
+        "name": "Repack3",
+        "score": 8
+      },
+      {
+        "name": "Repack2",
+        "score": 7
+      },
+      {
+        "name": "Repack1",
+        "score": 6
+      },
+      {
+        "name": "AAC",
+        "score": 0
+      },
+      {
+        "name": "HTSR",
+        "score": 0
+      },
+      {
+        "name": "HULU",
+        "score": 0
+      },
+      {
+        "name": "PMTP",
+        "score": 0
+      },
+      {
+        "name": "ROKU",
+        "score": 0
+      },
+      {
+        "name": "SHO",
+        "score": 0
+      },
+      {
+        "name": "STAN",
+        "score": 0
+      },
+      {
+        "name": "x265 (Bluray)",
+        "score": -220000
+      },
+      {
+        "name": "3D",
+        "score": -999999
+      },
+      {
+        "name": "AV1",
+        "score": -999999
+      },
+      {
+        "name": "B&W",
+        "score": -999999
+      },
+      {
+        "name": "Banned Groups",
+        "score": -999999
+      },
+      {
+        "name": "Banned Groups (Title)",
+        "score": -999999
+      },
+      {
+        "name": "Banned WEBRip",
+        "score": -999999
+      },
+      {
+        "name": "Dolby Vision (Without Fallback)",
+        "score": -999999
+      },
+      {
+        "name": "Extras",
+        "score": -999999
+      },
+      {
+        "name": "Full Disc",
+        "score": -999999
+      },
+      {
+        "name": "Full Disc (Quality Match)",
+        "score": -999999
+      },
+      {
+        "name": "h265",
+        "score": -999999
+      },
+      {
+        "name": "Remux",
+        "score": -999999
+      },
+      {
+        "name": "Sing Along",
+        "score": -999999
+      },
+      {
+        "name": "Upscaled",
+        "score": -999999
+      },
+      {
+        "name": "VP9",
+        "score": -999999
+      },
+      {
+        "name": "VVC",
+        "score": -999999
+      },
+      {
+        "name": "x265 (WEB)",
+        "score": -999999
+      }
+    ],
+    "qualities": [
+      {
+        "id": -1,
+        "name": "Transparent Capable",
         "description": "All capable of being indistinguishable from source. WEB-DL included to not allow unknown encode to trump known WEB-DL.",
         "qualities": [
           {
@@ -624,9 +1232,32 @@
       },
       {
         "id": -2,
-        "name": "SD",
-        "description": "SD Fallbacks",
+        "name": "720p Fallback",
+        "description": "Fallback to 720p when 1080p cannot be found.",
         "qualities": [
+          {
+            "id": 13,
+            "name": "Bluray-720p"
+          },
+          {
+            "id": 14,
+            "name": "WEBDL-720p"
+          },
+          {
+            "id": 15,
+            "name": "WEBRip-720p"
+          }
+        ]
+      },
+      {
+        "id": -3,
+        "name": "SD Fallback",
+        "description": "Standard Definition Fallbacks",
+        "qualities": [
+          {
+            "id": 18,
+            "name": "Bluray-480p"
+          },
           {
             "id": 19,
             "name": "WEBDL-480p"
@@ -638,17 +1269,13 @@
           {
             "id": 22,
             "name": "DVD"
-          },
-          {
-            "id": 24,
-            "name": "SDTV"
           }
         ]
       }
     ],
     "upgrade_until": {
       "id": -1,
-      "name": "Transparent capable",
+      "name": "Transparent Capable",
       "description": "All capable of being indistinguishable from source. WEB-DL included to not allow unknown encode to trump known WEB-DL."
     },
     "language": "must_original",
@@ -659,149 +1286,218 @@
     "description": "1080p Quality utilizes the [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/GPPi) to target **transparent** x264 1080p encodes. \n- 5 Quality tiers prioritise encodes with high 1080p GPPi scores, with fallback to 1080p WEB-DLs and streaming optimised encodes (**BHDStudio & hallowed**).\n- If no 1080p release can be found, the profile will fall back to SD releases - **DVD remuxes  / encodes**",
     "tags": [
       "1080p",
-      "x264",
+      "Quality Focused",
       "Lossy Audio",
-      "Quality Focused"
+      "x264",
+      "h264"
     ],
     "upgradesAllowed": true,
-    "minCustomFormatScore": 0,
-    "upgradeUntilScore": 320,
+    "minCustomFormatScore": 20000,
+    "upgradeUntilScore": 400000,
     "minScoreIncrement": 1,
     "custom_formats": [
       {
-        "name": "1080p Golden Popcorn",
-        "score": 160
+        "name": "1080p WEB-DL",
+        "score": 200000
+      },
+      {
+        "name": "1080p Bluray",
+        "score": 140000
+      },
+      {
+        "name": "1080p WEBRip",
+        "score": 140000
+      },
+      {
+        "name": "720p WEB-DL",
+        "score": 100000
       },
       {
         "name": "1080p Quality Tier 1",
-        "score": 80
+        "score": 84000
       },
       {
         "name": "1080p Quality Tier 2",
-        "score": 70
-      },
-      {
-        "name": "1080p",
-        "score": 60
+        "score": 83000
       },
       {
         "name": "1080p Quality Tier 3",
-        "score": 60
+        "score": 82000
       },
       {
         "name": "1080p Quality Tier 4",
-        "score": 50
+        "score": 81000
       },
       {
         "name": "1080p Quality Tier 5",
-        "score": 40
+        "score": 80000
       },
       {
-        "name": "Amazon Prime",
-        "score": 40
+        "name": "720p Bluray",
+        "score": 80000
       },
       {
-        "name": "Apple TV+",
-        "score": 40
-      },
-      {
-        "name": "Disney+",
-        "score": 40
-      },
-      {
-        "name": "DVD Remux",
-        "score": 40
-      },
-      {
-        "name": "Movies Anywhere",
-        "score": 40
-      },
-      {
-        "name": "Criterion Channel",
-        "score": 30
-      },
-      {
-        "name": "HBO Max",
-        "score": 30
-      },
-      {
-        "name": "Max",
-        "score": 30
-      },
-      {
-        "name": "Netflix",
-        "score": 30
-      },
-      {
-        "name": "Paramount+",
-        "score": 30
-      },
-      {
-        "name": "Peacock",
-        "score": 30
-      },
-      {
-        "name": "SD Golden Popcorn",
-        "score": 30
-      },
-      {
-        "name": "SD Quality Tier 1",
-        "score": 30
-      },
-      {
-        "name": "Hulu",
-        "score": 20
-      },
-      {
-        "name": "iTunes",
-        "score": 20
-      },
-      {
-        "name": "iTunes (Missing)",
-        "score": 20
-      },
-      {
-        "name": "Roku",
-        "score": 20
-      },
-      {
-        "name": "Scene",
-        "score": 20
-      },
-      {
-        "name": "SD Quality Tier 2",
-        "score": 20
+        "name": "720p WEBRip",
+        "score": 80000
       },
       {
         "name": "1080p Balanced Tier 1",
-        "score": 10
+        "score": 61000
       },
       {
         "name": "1080p Balanced Tier 2",
-        "score": 10
+        "score": 60000
       },
       {
-        "name": "Atmos",
-        "score": 10
+        "name": "480p WEB-DL",
+        "score": 60000
       },
       {
-        "name": "Atmos (Missing)",
-        "score": 10
+        "name": "720p Quality Tier 1",
+        "score": 44000
       },
       {
-        "name": "Blu-ray",
-        "score": 10
+        "name": "720p Quality Tier 2",
+        "score": 43000
+      },
+      {
+        "name": "720p Quality Tier 3",
+        "score": 42000
+      },
+      {
+        "name": "720p Quality Tier 4",
+        "score": 41000
+      },
+      {
+        "name": "720p Quality Tier 5",
+        "score": 40000
+      },
+      {
+        "name": "DVD",
+        "score": 20000
+      },
+      {
+        "name": "DVD Remux",
+        "score": 20000
+      },
+      {
+        "name": "SD Quality Tier 1",
+        "score": 11000
+      },
+      {
+        "name": "SD Quality Tier 2",
+        "score": 10000
+      },
+      {
+        "name": "1080p Golden Popcorn",
+        "score": 8000
+      },
+      {
+        "name": "720p Golden Popcorn",
+        "score": 6000
+      },
+      {
+        "name": "MA",
+        "score": 4000
+      },
+      {
+        "name": "SD Golden Popcorn",
+        "score": 4000
+      },
+      {
+        "name": "AMZN",
+        "score": 2000
+      },
+      {
+        "name": "ATVP",
+        "score": 2000
+      },
+      {
+        "name": "DSNP",
+        "score": 2000
+      },
+      {
+        "name": "ATV",
+        "score": 1000
+      },
+      {
+        "name": "CRIT",
+        "score": 1000
+      },
+      {
+        "name": "HMAX",
+        "score": 1000
+      },
+      {
+        "name": "iT",
+        "score": 1000
+      },
+      {
+        "name": "MAX",
+        "score": 1000
+      },
+      {
+        "name": "NF",
+        "score": 1000
+      },
+      {
+        "name": "NOW",
+        "score": 1000
+      },
+      {
+        "name": "PCOK",
+        "score": 1000
       },
       {
         "name": "Special Edition",
-        "score": 10
+        "score": 1000
       },
       {
-        "name": "WEBRip",
-        "score": 10
+        "name": "DTS-HD HRA",
+        "score": 800
       },
       {
-        "name": "x264",
+        "name": "Opus",
+        "score": 800
+      },
+      {
+        "name": "Dolby Digital +",
+        "score": 600
+      },
+      {
+        "name": "Dolby Atmos",
+        "score": 400
+      },
+      {
+        "name": "DTS-ES",
+        "score": 400
+      },
+      {
+        "name": "DTS",
+        "score": 200
+      },
+      {
+        "name": "Dolby Digital",
+        "score": 100
+      },
+      {
+        "name": "WEB-DL Tier 1",
+        "score": 80
+      },
+      {
+        "name": "WEB-DL Tier 2",
+        "score": 60
+      },
+      {
+        "name": "WEB-DL Tier 3",
+        "score": 40
+      },
+      {
+        "name": "WEB-DL Tier 4",
+        "score": 20
+      },
+      {
+        "name": "Season Pack",
         "score": 10
       },
       {
@@ -817,102 +1513,126 @@
         "score": 6
       },
       {
-        "name": "2160p",
-        "score": -9999
+        "name": "AAC",
+        "score": 0
+      },
+      {
+        "name": "HTSR",
+        "score": 0
+      },
+      {
+        "name": "HULU",
+        "score": 0
+      },
+      {
+        "name": "PMTP",
+        "score": 0
+      },
+      {
+        "name": "ROKU",
+        "score": 0
+      },
+      {
+        "name": "SHO",
+        "score": 0
+      },
+      {
+        "name": "STAN",
+        "score": 0
       },
       {
         "name": "3D",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "720p",
-        "score": -9999
-      },
-      {
-        "name": "720p Golden Popcorn",
-        "score": -9999
+        "name": "AV1",
+        "score": -999999
       },
       {
         "name": "B&W",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "BeyondHD",
-        "score": -9999
+        "name": "Banned Groups",
+        "score": -999999
       },
       {
-        "name": "Blu-ray Remux",
-        "score": -9999
+        "name": "Banned Groups (Title)",
+        "score": -999999
+      },
+      {
+        "name": "Banned WEBRip",
+        "score": -999999
       },
       {
         "name": "Dolby Vision",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Extras",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc (Quality Match)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "h265",
-        "score": -9999
-      },
-      {
-        "name": "h265 (Missing)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "HDR",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "HDR10",
-        "score": -9999
-      },
-      {
-        "name": "HDR10 (Missing)",
-        "score": -9999
-      },
-      {
-        "name": "HDR10 (Missing) (1080p)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "HDR10+",
-        "score": -9999
+        "score": -999999
+      },
+      {
+        "name": "HLG",
+        "score": -999999
+      },
+      {
+        "name": "PQ",
+        "score": -999999
       },
       {
         "name": "Remux",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "SD Bluray Encodes",
-        "score": -9999
+        "name": "Sing Along",
+        "score": -999999
       },
       {
         "name": "Upscaled",
-        "score": -9999
+        "score": -999999
+      },
+      {
+        "name": "VP9",
+        "score": -999999
+      },
+      {
+        "name": "VVC",
+        "score": -999999
       },
       {
         "name": "x265",
-        "score": -9999
-      },
-      {
-        "name": "x265 (Missing)",
-        "score": -9999
+        "score": -999999
       }
     ],
     "qualities": [
       {
         "id": -1,
-        "name": "Transparent capable",
+        "name": "Transparent Capable",
         "description": "All capable of being indistinguishable from source. WEB-DL included to not allow unknown encode to trump known WEB-DL.",
         "qualities": [
           {
@@ -931,9 +1651,32 @@
       },
       {
         "id": -2,
-        "name": "SD",
-        "description": "SD Fallbacks",
+        "name": "720p Fallback",
+        "description": "Fallback to 720p when 1080p cannot be found.",
         "qualities": [
+          {
+            "id": 13,
+            "name": "Bluray-720p"
+          },
+          {
+            "id": 14,
+            "name": "WEBDL-720p"
+          },
+          {
+            "id": 15,
+            "name": "WEBRip-720p"
+          }
+        ]
+      },
+      {
+        "id": -3,
+        "name": "SD Fallback",
+        "description": "Standard Definition Fallbacks",
+        "qualities": [
+          {
+            "id": 18,
+            "name": "Bluray-480p"
+          },
           {
             "id": 19,
             "name": "WEBDL-480p"
@@ -945,17 +1688,13 @@
           {
             "id": 22,
             "name": "DVD"
-          },
-          {
-            "id": 24,
-            "name": "SDTV"
           }
         ]
       }
     ],
     "upgrade_until": {
       "id": -1,
-      "name": "Transparent capable",
+      "name": "Transparent Capable",
       "description": "All capable of being indistinguishable from source. WEB-DL included to not allow unknown encode to trump known WEB-DL."
     },
     "language": "must_original",
@@ -971,112 +1710,184 @@
       "h264"
     ],
     "upgradesAllowed": true,
-    "minCustomFormatScore": 0,
-    "upgradeUntilScore": 350,
+    "minCustomFormatScore": 20000,
+    "upgradeUntilScore": 400000,
     "minScoreIncrement": 1,
     "custom_formats": [
       {
-        "name": "1080p",
-        "score": 60
+        "name": "1080p Remux",
+        "score": 120000
       },
       {
-        "name": "Blu-ray Remux",
-        "score": 60
+        "name": "1080p WEB-DL",
+        "score": 100000
       },
       {
-        "name": "DTS-X",
-        "score": 60
+        "name": "720p WEB-DL",
+        "score": 80000
       },
       {
-        "name": "Remux",
-        "score": 60
+        "name": "480p WEB-DL",
+        "score": 60000
       },
       {
-        "name": "DTS-HD MA",
-        "score": 50
-      },
-      {
-        "name": "TrueHD",
-        "score": 50
-      },
-      {
-        "name": "TrueHD (Missing)",
-        "score": 50
+        "name": "DVD",
+        "score": 20000
       },
       {
         "name": "DVD Remux",
-        "score": 40
+        "score": 20000
       },
       {
-        "name": "Amazon Prime",
-        "score": 30
+        "name": "SD Quality Tier 1",
+        "score": 11000
       },
       {
-        "name": "Apple TV+",
-        "score": 30
+        "name": "DTS-X",
+        "score": 10000
       },
       {
-        "name": "Disney+",
-        "score": 30
+        "name": "SD Quality Tier 2",
+        "score": 10000
+      },
+      {
+        "name": "DTS-HD MA",
+        "score": 8000
+      },
+      {
+        "name": "TrueHD",
+        "score": 8000
+      },
+      {
+        "name": "TrueHD (Missing)",
+        "score": 8000
       },
       {
         "name": "FLAC",
-        "score": 30
+        "score": 7000
       },
       {
-        "name": "Movies Anywhere",
-        "score": 30
+        "name": "PCM",
+        "score": 7000
       },
       {
-        "name": "Criterion Channel",
-        "score": 20
+        "name": "DTS-HD HRA",
+        "score": 5000
       },
       {
-        "name": "HBO Max",
-        "score": 20
+        "name": "Opus",
+        "score": 5000
       },
       {
-        "name": "Max",
-        "score": 20
+        "name": "Dolby Digital +",
+        "score": 4000
       },
       {
-        "name": "Netflix",
-        "score": 20
+        "name": "MA",
+        "score": 4000
       },
       {
-        "name": "Paramount+",
-        "score": 20
+        "name": "DTS-ES",
+        "score": 3000
       },
       {
-        "name": "Peacock",
-        "score": 20
+        "name": "AMZN",
+        "score": 2000
       },
       {
         "name": "Atmos",
-        "score": 10
+        "score": 2000
       },
       {
         "name": "Atmos (Missing)",
-        "score": 10
+        "score": 2000
       },
       {
-        "name": "Hulu",
-        "score": 10
+        "name": "ATVP",
+        "score": 2000
       },
       {
-        "name": "iTunes",
-        "score": 10
+        "name": "DSNP",
+        "score": 2000
       },
       {
-        "name": "iTunes (Missing)",
-        "score": 10
+        "name": "DTS",
+        "score": 2000
       },
       {
-        "name": "Roku",
-        "score": 10
+        "name": "ATV",
+        "score": 1000
+      },
+      {
+        "name": "CRIT",
+        "score": 1000
+      },
+      {
+        "name": "Dolby Digital",
+        "score": 1000
+      },
+      {
+        "name": "HMAX",
+        "score": 1000
+      },
+      {
+        "name": "iT",
+        "score": 1000
+      },
+      {
+        "name": "MAX",
+        "score": 1000
+      },
+      {
+        "name": "NF",
+        "score": 1000
+      },
+      {
+        "name": "NOW",
+        "score": 1000
+      },
+      {
+        "name": "PCOK",
+        "score": 1000
       },
       {
         "name": "Special Edition",
+        "score": 1000
+      },
+      {
+        "name": "Remux Tier 1",
+        "score": 80
+      },
+      {
+        "name": "WEB-DL Tier 1",
+        "score": 80
+      },
+      {
+        "name": "Remux Tier 2",
+        "score": 60
+      },
+      {
+        "name": "WEB-DL Tier 2",
+        "score": 60
+      },
+      {
+        "name": "Remux Tier 3",
+        "score": 40
+      },
+      {
+        "name": "WEB-DL Tier 3",
+        "score": 40
+      },
+      {
+        "name": "Remux Tier 4",
+        "score": 20
+      },
+      {
+        "name": "WEB-DL Tier 4",
+        "score": 20
+      },
+      {
+        "name": "Season Pack",
         "score": 10
       },
       {
@@ -1092,108 +1903,124 @@
         "score": 6
       },
       {
-        "name": "Unknown Lossless Audio",
-        "score": 5
+        "name": "AAC",
+        "score": 0
       },
       {
-        "name": "2160p",
-        "score": -9999
+        "name": "HTSR",
+        "score": 0
+      },
+      {
+        "name": "HULU",
+        "score": 0
+      },
+      {
+        "name": "PMTP",
+        "score": 0
+      },
+      {
+        "name": "ROKU",
+        "score": 0
+      },
+      {
+        "name": "SHO",
+        "score": 0
+      },
+      {
+        "name": "STAN",
+        "score": 0
       },
       {
         "name": "3D",
-        "score": -9999
-      },
-      {
-        "name": "720p",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "AV1",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "B&W",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "Blu-ray",
-        "score": -9999
+        "name": "Banned Groups",
+        "score": -999999
+      },
+      {
+        "name": "Banned Groups (Title)",
+        "score": -999999
+      },
+      {
+        "name": "Banned Remux",
+        "score": -999999
       },
       {
         "name": "Dolby Vision",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Dolby Vision (Without Fallback)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Extras",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc (Quality Match)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "h265",
-        "score": -9999
-      },
-      {
-        "name": "h265 (Missing)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "HDR",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "HDR10",
-        "score": -9999
-      },
-      {
-        "name": "HDR10 (Missing)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "HDR10+",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "Non Retail HDR",
-        "score": -9999
+        "name": "HLG",
+        "score": -999999
+      },
+      {
+        "name": "PQ",
+        "score": -999999
+      },
+      {
+        "name": "Sing Along",
+        "score": -999999
       },
       {
         "name": "UHDBits",
-        "score": -9999
-      },
-      {
-        "name": "Unwanted Remux Groups",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Upscaled",
-        "score": -9999
+        "score": -999999
+      },
+      {
+        "name": "VP9",
+        "score": -999999
       },
       {
         "name": "VVC",
-        "score": -9999
-      },
-      {
-        "name": "WEBRip",
-        "score": -9999
-      },
-      {
-        "name": "x264",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "x265",
-        "score": -9999
+        "score": -999999
       }
     ],
     "qualities": [
@@ -1206,8 +2033,12 @@
         "name": "WEBDL-1080p"
       },
       {
+        "id": 14,
+        "name": "WEBDL-720p"
+      },
+      {
         "id": -1,
-        "name": "SD",
+        "name": "SD Fallback",
         "description": "Standard Definition Fallbacks",
         "qualities": [
           {
@@ -1217,14 +2048,6 @@
           {
             "id": 19,
             "name": "WEBDL-480p"
-          },
-          {
-            "id": 20,
-            "name": "WEBRip-480p"
-          },
-          {
-            "id": 24,
-            "name": "SDTV"
           }
         ]
       }
@@ -1242,215 +2065,267 @@
     "description": "2160p Balanced targets consistent & immutable 2160p **HDR WEB-DLs w/ Lossy Audio**. \n- Special considerations are given to **Balanced** groups who prioritize **streaming optimisation** over quality, falling somewhere around a tier 2 WEB-DL. This includes groups like **BHDStudio**, **HONE** and **hallowed**.\n- If no 2160p WEB-DL can be found, the profile will fall back to the 1080p Quality Profile.\n- Transparent 2160p Encodes (\u00e0 la  2160p Quality) are not allowed as fallback since they are comparatively much larger than 2160p WEB-DLs",
     "tags": [
       "2160p",
+      "Balanced Focused",
       "HDR",
-      "x264",
-      "h265",
       "Lossy Audio",
-      "Balanced Focused"
+      "x264",
+      "h265"
     ],
     "upgradesAllowed": true,
-    "minCustomFormatScore": 0,
-    "upgradeUntilScore": 600,
+    "minCustomFormatScore": 20000,
+    "upgradeUntilScore": 400000,
     "minScoreIncrement": 1,
     "custom_formats": [
       {
-        "name": "2160p",
-        "score": 300
-      },
-      {
         "name": "2160p Balanced Tier 1",
-        "score": 250
+        "score": 283000
       },
       {
         "name": "2160p Balanced Tier 2",
-        "score": 240
+        "score": 280000
       },
       {
-        "name": "Amazon Prime [2160p]",
-        "score": 160
+        "name": "2160p WEB-DL",
+        "score": 280000
       },
       {
-        "name": "Disney+ [2160p]",
-        "score": 160
+        "name": "UHD Bluray",
+        "score": 240000
       },
       {
-        "name": "HBO Max [2160p]",
-        "score": 160
+        "name": "UHD Bluray (Missing)",
+        "score": 240000
       },
       {
-        "name": "Movies Anywhere [2160p]",
-        "score": 160
+        "name": "1080p WEB-DL",
+        "score": 200000
       },
       {
-        "name": "Apple TV+ [2160p]",
-        "score": 150
+        "name": "1080p Bluray",
+        "score": 140000
       },
       {
-        "name": "Hulu [2160p]",
-        "score": 150
+        "name": "1080p WEBRip",
+        "score": 140000
       },
       {
-        "name": "iTunes [2160p]",
-        "score": 150
-      },
-      {
-        "name": "Max [2160p]",
-        "score": 150
-      },
-      {
-        "name": "Netflix [2160p]",
-        "score": 150
-      },
-      {
-        "name": "Paramount+ [2160p]",
-        "score": 150
-      },
-      {
-        "name": "Peacock [2160p]",
-        "score": 150
-      },
-      {
-        "name": "Roku [2160p]",
-        "score": 150
-      },
-      {
-        "name": "1080p",
-        "score": 60
+        "name": "720p WEB-DL",
+        "score": 100000
       },
       {
         "name": "1080p Quality Tier 1",
-        "score": 60
+        "score": 84000
       },
       {
         "name": "1080p Quality Tier 2",
-        "score": 50
-      },
-      {
-        "name": "Special Edition",
-        "score": 50
+        "score": 83000
       },
       {
         "name": "1080p Quality Tier 3",
-        "score": 40
-      },
-      {
-        "name": "DVD Remux",
-        "score": 40
+        "score": 82000
       },
       {
         "name": "1080p Quality Tier 4",
-        "score": 30
-      },
-      {
-        "name": "Amazon Prime [1080p]",
-        "score": 30
-      },
-      {
-        "name": "Apple TV+ [1080p]",
-        "score": 30
-      },
-      {
-        "name": "Disney+ [1080p]",
-        "score": 30
-      },
-      {
-        "name": "Dolby Vision",
-        "score": 30
-      },
-      {
-        "name": "Movies Anywhere [1080p]",
-        "score": 30
-      },
-      {
-        "name": "SD Quality Tier 1",
-        "score": 30
-      },
-      {
-        "name": "1080p Balanced Tier 1",
-        "score": 20
+        "score": 81000
       },
       {
         "name": "1080p Quality Tier 5",
-        "score": 20
+        "score": 80000
       },
       {
-        "name": "HBO Max [1080p]",
-        "score": 20
+        "name": "720p Bluray",
+        "score": 80000
       },
       {
-        "name": "HDR10+",
-        "score": 20
+        "name": "720p WEBRip",
+        "score": 80000
       },
       {
-        "name": "Max [1080p]",
-        "score": 20
-      },
-      {
-        "name": "Netflix [1080p]",
-        "score": 20
-      },
-      {
-        "name": "SD Quality Tier 2",
-        "score": 20
-      },
-      {
-        "name": "DTS-X",
-        "score": 15
+        "name": "1080p Balanced Tier 1",
+        "score": 61000
       },
       {
         "name": "1080p Balanced Tier 2",
-        "score": 10
+        "score": 60000
       },
       {
-        "name": "Blu-ray",
-        "score": 10
+        "name": "480p WEB-DL",
+        "score": 60000
+      },
+      {
+        "name": "720p Quality Tier 1",
+        "score": 44000
+      },
+      {
+        "name": "720p Quality Tier 2",
+        "score": 43000
+      },
+      {
+        "name": "720p Quality Tier 3",
+        "score": 42000
+      },
+      {
+        "name": "720p Quality Tier 4",
+        "score": 41000
+      },
+      {
+        "name": "720p Quality Tier 5",
+        "score": 40000
+      },
+      {
+        "name": "DVD",
+        "score": 20000
+      },
+      {
+        "name": "DVD Remux",
+        "score": 20000
+      },
+      {
+        "name": "SD Quality Tier 1",
+        "score": 11000
+      },
+      {
+        "name": "SD Quality Tier 2",
+        "score": 10000
+      },
+      {
+        "name": "1080p Golden Popcorn",
+        "score": 8000
+      },
+      {
+        "name": "720p Golden Popcorn",
+        "score": 6000
+      },
+      {
+        "name": "MA",
+        "score": 4000
+      },
+      {
+        "name": "SD Golden Popcorn",
+        "score": 4000
+      },
+      {
+        "name": "Dolby Vision",
+        "score": 3000
+      },
+      {
+        "name": "AMZN",
+        "score": 2000
+      },
+      {
+        "name": "ATVP",
+        "score": 2000
+      },
+      {
+        "name": "DSNP",
+        "score": 2000
+      },
+      {
+        "name": "HDR10+",
+        "score": 2000
+      },
+      {
+        "name": "iT",
+        "score": 2000
+      },
+      {
+        "name": "ATV",
+        "score": 1000
+      },
+      {
+        "name": "CRIT",
+        "score": 1000
       },
       {
         "name": "HDR",
-        "score": 10
+        "score": 1000
       },
       {
         "name": "HDR10",
-        "score": 10
+        "score": 1000
       },
       {
         "name": "HDR10 (Missing)",
-        "score": 10
+        "score": 1000
       },
       {
-        "name": "Hulu [1080p]",
-        "score": 10
+        "name": "HLG",
+        "score": 1000
       },
       {
-        "name": "iTunes [1080p]",
-        "score": 10
+        "name": "HMAX",
+        "score": 1000
       },
       {
-        "name": "Paramount+ [1080p]",
-        "score": 10
+        "name": "MAX",
+        "score": 1000
       },
       {
-        "name": "Peacock [1080p]",
-        "score": 10
+        "name": "NF",
+        "score": 1000
       },
       {
-        "name": "Roku [1080p]",
-        "score": 10
+        "name": "NOW",
+        "score": 1000
       },
       {
-        "name": "TrueHD",
-        "score": 10
+        "name": "PCOK",
+        "score": 1000
       },
       {
-        "name": "TrueHD (Missing)",
-        "score": 10
+        "name": "PQ",
+        "score": 1000
       },
       {
-        "name": "WEBRip",
-        "score": 10
+        "name": "Special Edition",
+        "score": 1000
       },
       {
-        "name": "x264",
+        "name": "DTS-HD HRA",
+        "score": 800
+      },
+      {
+        "name": "Opus",
+        "score": 800
+      },
+      {
+        "name": "Dolby Digital +",
+        "score": 600
+      },
+      {
+        "name": "Dolby Atmos",
+        "score": 400
+      },
+      {
+        "name": "DTS-ES",
+        "score": 400
+      },
+      {
+        "name": "DTS",
+        "score": 200
+      },
+      {
+        "name": "Dolby Digital",
+        "score": 100
+      },
+      {
+        "name": "WEB-DL Tier 1",
+        "score": 80
+      },
+      {
+        "name": "WEB-DL Tier 2",
+        "score": 60
+      },
+      {
+        "name": "WEB-DL Tier 3",
+        "score": 40
+      },
+      {
+        "name": "WEB-DL Tier 4",
+        "score": 20
+      },
+      {
+        "name": "Season Pack",
         "score": 10
       },
       {
@@ -1466,141 +2341,136 @@
         "score": 6
       },
       {
-        "name": "Atmos",
-        "score": 5
+        "name": "AAC",
+        "score": 0
       },
       {
-        "name": "Atmos (Missing)",
-        "score": 5
+        "name": "HTSR",
+        "score": 0
       },
       {
-        "name": "DTS-HD MA",
-        "score": 5
+        "name": "HULU",
+        "score": 0
       },
       {
-        "name": "FLAC",
-        "score": 5
+        "name": "PMTP",
+        "score": 0
       },
       {
-        "name": "Unknown Lossless Audio",
-        "score": 5
+        "name": "ROKU",
+        "score": 0
       },
       {
-        "name": "SDR",
-        "score": -80
+        "name": "SHO",
+        "score": 0
       },
       {
-        "name": "2160p Blu-ray Encode",
-        "score": -9999
+        "name": "STAN",
+        "score": 0
+      },
+      {
+        "name": "x265 (Bluray)",
+        "score": -220000
       },
       {
         "name": "3D",
-        "score": -9999
-      },
-      {
-        "name": "720p",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "AV1",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "B&W",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "Blu-ray Remux",
-        "score": -9999
+        "name": "Banned Groups",
+        "score": -999999
+      },
+      {
+        "name": "Banned Groups (Title)",
+        "score": -999999
+      },
+      {
+        "name": "Banned WEB-DL (x265)",
+        "score": -999999
+      },
+      {
+        "name": "Banned WEBRip",
+        "score": -999999
       },
       {
         "name": "Dolby Vision (Without Fallback)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Extras",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc (Quality Match)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "h265",
-        "score": -9999
-      },
-      {
-        "name": "h265 (Missing)",
-        "score": -9999
-      },
-      {
-        "name": "HDR10 (Missing) (1080p)",
-        "score": -9999
-      },
-      {
-        "name": "Lossless Audio (1080p)",
-        "score": -9999
-      },
-      {
-        "name": "Non Retail HDR",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Remux",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "SD Bluray Encodes",
-        "score": -9999
+        "name": "Sing Along",
+        "score": -999999
       },
       {
         "name": "UHDBits",
-        "score": -9999
-      },
-      {
-        "name": "Unwanted x265 Groups",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Upscaled",
-        "score": -9999
+        "score": -999999
+      },
+      {
+        "name": "VP9",
+        "score": -999999
       },
       {
         "name": "VVC",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "x264 (2160p)",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "x265",
-        "score": -9999
-      },
-      {
-        "name": "x265 (1080p)",
-        "score": -9999
-      },
-      {
-        "name": "x265 (Missing 2160p)",
-        "score": -9999
-      },
-      {
-        "name": "x265 (Missing)",
-        "score": -9999
+        "name": "x265 (WEB)",
+        "score": -999999
       }
     ],
     "qualities": [
       {
-        "id": 5,
-        "name": "WEBDL-2160p"
+        "id": -1,
+        "name": "2160p Balanced",
+        "description": "Balanced capable releases. Typically WEB-DL would be the overwhelming majority of releases, but there are occasional streaming optimised encodes that should be preferred.",
+        "qualities": [
+          {
+            "id": 4,
+            "name": "Bluray-2160p"
+          },
+          {
+            "id": 5,
+            "name": "WEBDL-2160p"
+          }
+        ]
       },
       {
-        "id": -3,
+        "id": -2,
         "name": "1080p Transparent",
         "description": "Indistinguishable from source",
         "qualities": [
@@ -1609,23 +2479,42 @@
             "name": "Bluray-1080p"
           },
           {
-            "id": 11,
-            "name": "WEBRip-1080p"
-          },
-          {
             "id": 9,
             "name": "WEBDL-1080p"
+          },
+          {
+            "id": 11,
+            "name": "WEBRip-1080p"
           }
         ]
       },
       {
-        "id": -1,
-        "name": "SD",
+        "id": -3,
+        "name": "720p Fallback",
+        "description": "Fallback to 720p when 1080p cannot be found.",
+        "qualities": [
+          {
+            "id": 13,
+            "name": "Bluray-720p"
+          },
+          {
+            "id": 14,
+            "name": "WEBDL-720p"
+          },
+          {
+            "id": 15,
+            "name": "WEBRip-720p"
+          }
+        ]
+      },
+      {
+        "id": -4,
+        "name": "SD Fallback",
         "description": "Standard Definition Fallbacks",
         "qualities": [
           {
-            "id": 22,
-            "name": "DVD"
+            "id": 18,
+            "name": "Bluray-480p"
           },
           {
             "id": 19,
@@ -1636,16 +2525,16 @@
             "name": "WEBRip-480p"
           },
           {
-            "id": 24,
-            "name": "SDTV"
+            "id": 22,
+            "name": "DVD"
           }
         ]
       }
     ],
     "upgrade_until": {
-      "id": 5,
-      "name": "WEBDL-2160p",
-      "description": "4K web download, untouched as released by the streaming service"
+      "id": -1,
+      "name": "2160p Balanced",
+      "description": "Balanced capable releases. Typically WEB-DL would be the overwhelming majority of releases, but there are occasional streaming optimised encodes that should be preferred."
     },
     "language": "must_original",
     "_id": "2160p Balanced"
@@ -1655,239 +2544,319 @@
     "description": "2160p Quality utilizes the [**Encode Efficiency Index**](https://dictionarry.dev/wiki/EEi) metric at a 55% target ratio to prioritize **transparent** x265 4k encodes. \n\n- 4 quality tiers prioritize encodes from reputable groups, with fallback to high-quality WEB-DLs and balanced tier groups. 2 additional quality tiers are placed below for further fallback. \n- Special considerations for both **HDR** and **Lossless Audio** formats help to push lower tiered encodes over higher tier ones in cases where better sources are used.\n- If no 2160p release can be found, the profile will fall back to the 1080p Quality Profile. ",
     "tags": [
       "2160p",
+      "Quality Focused",
       "HDR",
-      "x265",
-      "Encode",
       "Lossless Audio",
-      "Quality Focused"
+      "x265",
+      "h265"
     ],
     "upgradesAllowed": true,
-    "minCustomFormatScore": 0,
-    "upgradeUntilScore": 600,
+    "minCustomFormatScore": 20000,
+    "upgradeUntilScore": 400000,
     "minScoreIncrement": 1,
     "custom_formats": [
       {
         "name": "2160p Quality Tier 1",
-        "score": 370
+        "score": 304000
       },
       {
         "name": "2160p Quality Tier 2",
-        "score": 360
+        "score": 303000
       },
       {
         "name": "2160p Quality Tier 3",
-        "score": 350
+        "score": 302000
       },
       {
         "name": "2160p Quality Tier 4",
-        "score": 340
-      },
-      {
-        "name": "2160p",
-        "score": 300
-      },
-      {
-        "name": "2160p Balanced Tier 1",
-        "score": 300
-      },
-      {
-        "name": "2160p Balanced Tier 2",
-        "score": 290
+        "score": 301000
       },
       {
         "name": "2160p Quality Tier 5",
-        "score": 240
+        "score": 300000
+      },
+      {
+        "name": "2160p Balanced Tier 1",
+        "score": 283000
+      },
+      {
+        "name": "2160p Balanced Tier 2",
+        "score": 280000
+      },
+      {
+        "name": "2160p WEB-DL",
+        "score": 280000
       },
       {
         "name": "2160p Quality Tier 6",
-        "score": 230
+        "score": 261000
       },
       {
-        "name": "Amazon Prime [2160p]",
-        "score": 160
+        "name": "2160p Quality Tier 7",
+        "score": 260000
       },
       {
-        "name": "Disney+ [2160p]",
-        "score": 160
+        "name": "UHD Bluray",
+        "score": 240000
       },
       {
-        "name": "HBO Max [2160p]",
-        "score": 160
+        "name": "UHD Bluray (Missing)",
+        "score": 240000
       },
       {
-        "name": "Movies Anywhere [2160p]",
-        "score": 160
+        "name": "1080p WEB-DL",
+        "score": 200000
       },
       {
-        "name": "Apple TV+ [2160p]",
-        "score": 150
+        "name": "1080p Bluray",
+        "score": 140000
       },
       {
-        "name": "Hulu [2160p]",
-        "score": 150
+        "name": "1080p WEBRip",
+        "score": 140000
       },
       {
-        "name": "iTunes [2160p]",
-        "score": 150
-      },
-      {
-        "name": "Max [2160p]",
-        "score": 150
-      },
-      {
-        "name": "Netflix [2160p]",
-        "score": 150
-      },
-      {
-        "name": "Paramount+ [2160p]",
-        "score": 150
-      },
-      {
-        "name": "Peacock [2160p]",
-        "score": 150
-      },
-      {
-        "name": "Roku [2160p]",
-        "score": 150
-      },
-      {
-        "name": "1080p",
-        "score": 60
+        "name": "720p WEB-DL",
+        "score": 100000
       },
       {
         "name": "1080p Quality Tier 1",
-        "score": 60
+        "score": 84000
       },
       {
         "name": "1080p Quality Tier 2",
-        "score": 50
-      },
-      {
-        "name": "Special Edition",
-        "score": 50
+        "score": 83000
       },
       {
         "name": "1080p Quality Tier 3",
-        "score": 40
-      },
-      {
-        "name": "DVD Remux",
-        "score": 40
+        "score": 82000
       },
       {
         "name": "1080p Quality Tier 4",
-        "score": 30
-      },
-      {
-        "name": "Amazon Prime [1080p]",
-        "score": 30
-      },
-      {
-        "name": "Apple TV+ [1080p]",
-        "score": 30
-      },
-      {
-        "name": "Disney+ [1080p]",
-        "score": 30
-      },
-      {
-        "name": "Dolby Vision",
-        "score": 30
-      },
-      {
-        "name": "Movies Anywhere [1080p]",
-        "score": 30
-      },
-      {
-        "name": "SD Quality Tier 1",
-        "score": 30
-      },
-      {
-        "name": "1080p Balanced Tier 1",
-        "score": 20
+        "score": 81000
       },
       {
         "name": "1080p Quality Tier 5",
-        "score": 20
+        "score": 80000
       },
       {
-        "name": "HBO Max [1080p]",
-        "score": 20
+        "name": "720p Bluray",
+        "score": 80000
       },
       {
-        "name": "HDR10+",
-        "score": 20
+        "name": "720p WEBRip",
+        "score": 80000
       },
       {
-        "name": "Max [1080p]",
-        "score": 20
-      },
-      {
-        "name": "Netflix [1080p]",
-        "score": 20
-      },
-      {
-        "name": "SD Quality Tier 2",
-        "score": 20
-      },
-      {
-        "name": "DTS-X",
-        "score": 15
+        "name": "1080p Balanced Tier 1",
+        "score": 61000
       },
       {
         "name": "1080p Balanced Tier 2",
-        "score": 10
+        "score": 60000
       },
       {
-        "name": "Blu-ray",
-        "score": 10
+        "name": "480p WEB-DL",
+        "score": 60000
+      },
+      {
+        "name": "720p Quality Tier 1",
+        "score": 44000
+      },
+      {
+        "name": "720p Quality Tier 2",
+        "score": 43000
+      },
+      {
+        "name": "720p Quality Tier 3",
+        "score": 42000
+      },
+      {
+        "name": "720p Quality Tier 4",
+        "score": 41000
+      },
+      {
+        "name": "720p Quality Tier 5",
+        "score": 40000
+      },
+      {
+        "name": "DVD",
+        "score": 20000
+      },
+      {
+        "name": "DVD Remux",
+        "score": 20000
+      },
+      {
+        "name": "SD Quality Tier 1",
+        "score": 11000
+      },
+      {
+        "name": "SD Quality Tier 2",
+        "score": 10000
+      },
+      {
+        "name": "1080p Golden Popcorn",
+        "score": 8000
+      },
+      {
+        "name": "720p Golden Popcorn",
+        "score": 6000
+      },
+      {
+        "name": "MA",
+        "score": 4000
+      },
+      {
+        "name": "SD Golden Popcorn",
+        "score": 4000
+      },
+      {
+        "name": "Dolby Vision",
+        "score": 3000
+      },
+      {
+        "name": "AMZN",
+        "score": 2000
+      },
+      {
+        "name": "ATVP",
+        "score": 2000
+      },
+      {
+        "name": "DSNP",
+        "score": 2000
+      },
+      {
+        "name": "HDR10+",
+        "score": 2000
+      },
+      {
+        "name": "iT",
+        "score": 2000
+      },
+      {
+        "name": "ATV",
+        "score": 1000
+      },
+      {
+        "name": "CRIT",
+        "score": 1000
+      },
+      {
+        "name": "DTS-X",
+        "score": 1000
       },
       {
         "name": "HDR",
-        "score": 10
+        "score": 1000
       },
       {
         "name": "HDR10",
-        "score": 10
+        "score": 1000
       },
       {
         "name": "HDR10 (Missing)",
-        "score": 10
+        "score": 1000
       },
       {
-        "name": "Hulu [1080p]",
-        "score": 10
+        "name": "HLG",
+        "score": 1000
       },
       {
-        "name": "iTunes [1080p]",
-        "score": 10
+        "name": "HMAX",
+        "score": 1000
       },
       {
-        "name": "Paramount+ [1080p]",
-        "score": 10
+        "name": "MAX",
+        "score": 1000
       },
       {
-        "name": "Peacock [1080p]",
-        "score": 10
+        "name": "NF",
+        "score": 1000
       },
       {
-        "name": "Roku [1080p]",
-        "score": 10
+        "name": "NOW",
+        "score": 1000
+      },
+      {
+        "name": "PCOK",
+        "score": 1000
+      },
+      {
+        "name": "PQ",
+        "score": 1000
+      },
+      {
+        "name": "Special Edition",
+        "score": 1000
+      },
+      {
+        "name": "DTS-HD MA",
+        "score": 800
       },
       {
         "name": "TrueHD",
-        "score": 10
+        "score": 800
       },
       {
-        "name": "TrueHD (Missing)",
-        "score": 10
+        "name": "FLAC",
+        "score": 700
       },
       {
-        "name": "WEBRip",
-        "score": 10
+        "name": "PCM",
+        "score": 700
       },
       {
-        "name": "x264",
+        "name": "DTS-HD HRA",
+        "score": 500
+      },
+      {
+        "name": "Opus",
+        "score": 500
+      },
+      {
+        "name": "Dolby Digital +",
+        "score": 400
+      },
+      {
+        "name": "DTS-ES",
+        "score": 300
+      },
+      {
+        "name": "Atmos",
+        "score": 200
+      },
+      {
+        "name": "Atmos (Missing)",
+        "score": 200
+      },
+      {
+        "name": "DTS",
+        "score": 200
+      },
+      {
+        "name": "Dolby Digital",
+        "score": 100
+      },
+      {
+        "name": "WEB-DL Tier 1",
+        "score": 80
+      },
+      {
+        "name": "WEB-DL Tier 2",
+        "score": 60
+      },
+      {
+        "name": "WEB-DL Tier 3",
+        "score": 40
+      },
+      {
+        "name": "WEB-DL Tier 4",
+        "score": 20
+      },
+      {
+        "name": "Season Pack",
         "score": 10
       },
       {
@@ -1903,148 +2872,140 @@
         "score": 6
       },
       {
-        "name": "Atmos",
-        "score": 5
+        "name": "AAC",
+        "score": 0
       },
       {
-        "name": "Atmos (Missing)",
-        "score": 5
+        "name": "HTSR",
+        "score": 0
       },
       {
-        "name": "DTS-HD MA",
-        "score": 5
+        "name": "HULU",
+        "score": 0
       },
       {
-        "name": "FLAC",
-        "score": 5
+        "name": "PMTP",
+        "score": 0
       },
       {
-        "name": "Unknown Lossless Audio",
-        "score": 5
+        "name": "ROKU",
+        "score": 0
       },
       {
-        "name": "SDR",
-        "score": -80
+        "name": "SHO",
+        "score": 0
       },
       {
-        "name": "x265",
-        "score": -150
+        "name": "STAN",
+        "score": 0
       },
       {
-        "name": "x265 (Missing 2160p)",
-        "score": -150
+        "name": "x265 (Bluray)",
+        "score": -220000
       },
       {
         "name": "3D",
-        "score": -9999
-      },
-      {
-        "name": "720p",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "AV1",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "B&W",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "Blu-ray Remux",
-        "score": -9999
+        "name": "Banned Groups",
+        "score": -999999
+      },
+      {
+        "name": "Banned Groups (Title)",
+        "score": -999999
+      },
+      {
+        "name": "Banned WEB-DL (x265)",
+        "score": -999999
+      },
+      {
+        "name": "Banned WEBRip",
+        "score": -999999
       },
       {
         "name": "Dolby Vision (Without Fallback)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Extras",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc (Quality Match)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "h265",
-        "score": -9999
-      },
-      {
-        "name": "h265 (Missing)",
-        "score": -9999
-      },
-      {
-        "name": "HDR10 (Missing) (1080p)",
-        "score": -9999
-      },
-      {
-        "name": "Lossless Audio (1080p)",
-        "score": -9999
-      },
-      {
-        "name": "Non Retail HDR",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Remux",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "SD Bluray Encodes",
-        "score": -9999
+        "name": "Sing Along",
+        "score": -999999
       },
       {
         "name": "UHDBits",
-        "score": -9999
-      },
-      {
-        "name": "Unwanted x265 Groups",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Upscaled",
-        "score": -9999
+        "score": -999999
+      },
+      {
+        "name": "VP9",
+        "score": -999999
       },
       {
         "name": "VVC",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "x264 (2160p)",
-        "score": -9999
-      },
-      {
-        "name": "x265 (1080p)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "x265 (Missing)",
-        "score": -9999
+        "score": -999999
+      },
+      {
+        "name": "x265 (WEB)",
+        "score": -999999
       }
     ],
     "qualities": [
       {
-        "id": -2,
+        "id": -1,
         "name": "2160p Transparent",
         "description": "Indistinguishable from source",
         "qualities": [
           {
-            "id": 5,
-            "name": "WEBDL-2160p"
-          },
-          {
             "id": 4,
             "name": "Bluray-2160p"
+          },
+          {
+            "id": 5,
+            "name": "WEBDL-2160p"
           }
         ]
       },
       {
-        "id": -3,
+        "id": -2,
         "name": "1080p Transparent",
         "description": "Indistinguishable from source",
         "qualities": [
@@ -2053,23 +3014,42 @@
             "name": "Bluray-1080p"
           },
           {
-            "id": 11,
-            "name": "WEBRip-1080p"
-          },
-          {
             "id": 9,
             "name": "WEBDL-1080p"
+          },
+          {
+            "id": 11,
+            "name": "WEBRip-1080p"
           }
         ]
       },
       {
-        "id": -1,
-        "name": "SD",
+        "id": -3,
+        "name": "720p Fallback",
+        "description": "Fallback to 720p when 1080p cannot be found.",
+        "qualities": [
+          {
+            "id": 13,
+            "name": "Bluray-720p"
+          },
+          {
+            "id": 14,
+            "name": "WEBDL-720p"
+          },
+          {
+            "id": 15,
+            "name": "WEBRip-720p"
+          }
+        ]
+      },
+      {
+        "id": -4,
+        "name": "SD Fallback",
         "description": "Standard Definition Fallbacks",
         "qualities": [
           {
-            "id": 22,
-            "name": "DVD"
+            "id": 18,
+            "name": "Bluray-480p"
           },
           {
             "id": 19,
@@ -2080,14 +3060,14 @@
             "name": "WEBRip-480p"
           },
           {
-            "id": 24,
-            "name": "SDTV"
+            "id": 22,
+            "name": "DVD"
           }
         ]
       }
     ],
     "upgrade_until": {
-      "id": -2,
+      "id": -1,
       "name": "2160p Transparent",
       "description": "Indistinguishable from source"
     },
@@ -2105,136 +3085,220 @@
       "h265"
     ],
     "upgradesAllowed": true,
-    "minCustomFormatScore": 0,
-    "upgradeUntilScore": 350,
+    "minCustomFormatScore": 20000,
+    "upgradeUntilScore": 400000,
     "minScoreIncrement": 1,
     "custom_formats": [
       {
-        "name": "2160p",
-        "score": 120
+        "name": "2160p Remux",
+        "score": 160000
       },
       {
-        "name": "1080p",
-        "score": 60
+        "name": "2160p WEB-DL",
+        "score": 140000
       },
       {
-        "name": "Blu-ray Remux",
-        "score": 60
+        "name": "1080p Remux",
+        "score": 120000
       },
       {
-        "name": "DTS-X",
-        "score": 60
+        "name": "1080p WEB-DL",
+        "score": 100000
       },
       {
-        "name": "Remux",
-        "score": 60
+        "name": "720p WEB-DL",
+        "score": 80000
       },
       {
-        "name": "DTS-HD MA",
-        "score": 50
+        "name": "480p WEB-DL",
+        "score": 60000
       },
       {
-        "name": "Special Edition",
-        "score": 50
-      },
-      {
-        "name": "TrueHD",
-        "score": 50
-      },
-      {
-        "name": "TrueHD (Missing)",
-        "score": 50
+        "name": "DVD",
+        "score": 20000
       },
       {
         "name": "DVD Remux",
-        "score": 40
+        "score": 20000
       },
       {
-        "name": "Amazon Prime",
-        "score": 30
+        "name": "SD Quality Tier 1",
+        "score": 11000
       },
       {
-        "name": "Apple TV+",
-        "score": 30
+        "name": "DTS-X",
+        "score": 10000
       },
       {
-        "name": "Disney+",
-        "score": 30
+        "name": "SD Quality Tier 2",
+        "score": 10000
       },
       {
-        "name": "Dolby Vision",
-        "score": 30
+        "name": "DTS-HD MA",
+        "score": 8000
+      },
+      {
+        "name": "TrueHD",
+        "score": 8000
+      },
+      {
+        "name": "TrueHD (Missing)",
+        "score": 8000
       },
       {
         "name": "FLAC",
-        "score": 30
+        "score": 7000
       },
       {
-        "name": "Movies Anywhere",
-        "score": 30
+        "name": "PCM",
+        "score": 7000
       },
       {
-        "name": "Criterion Channel",
-        "score": 20
+        "name": "DTS-HD HRA",
+        "score": 5000
       },
       {
-        "name": "HBO Max",
-        "score": 20
+        "name": "Opus",
+        "score": 5000
       },
       {
-        "name": "HDR10+",
-        "score": 20
+        "name": "Dolby Digital +",
+        "score": 4000
       },
       {
-        "name": "Max",
-        "score": 20
+        "name": "MA",
+        "score": 4000
       },
       {
-        "name": "Netflix",
-        "score": 20
+        "name": "Dolby Vision",
+        "score": 3000
       },
       {
-        "name": "Paramount+",
-        "score": 20
+        "name": "DTS-ES",
+        "score": 3000
       },
       {
-        "name": "Peacock",
-        "score": 20
+        "name": "AMZN",
+        "score": 2000
       },
       {
         "name": "Atmos",
-        "score": 10
+        "score": 2000
       },
       {
         "name": "Atmos (Missing)",
-        "score": 10
+        "score": 2000
+      },
+      {
+        "name": "ATVP",
+        "score": 2000
+      },
+      {
+        "name": "DSNP",
+        "score": 2000
+      },
+      {
+        "name": "DTS",
+        "score": 2000
+      },
+      {
+        "name": "HDR10+",
+        "score": 2000
+      },
+      {
+        "name": "iT",
+        "score": 2000
+      },
+      {
+        "name": "ATV",
+        "score": 1000
+      },
+      {
+        "name": "CRIT",
+        "score": 1000
+      },
+      {
+        "name": "Dolby Digital",
+        "score": 1000
       },
       {
         "name": "HDR",
-        "score": 10
+        "score": 1000
       },
       {
         "name": "HDR10",
-        "score": 10
+        "score": 1000
       },
       {
         "name": "HDR10 (Missing)",
-        "score": 10
+        "score": 1000
       },
       {
-        "name": "Hulu",
-        "score": 10
+        "name": "HLG",
+        "score": 1000
       },
       {
-        "name": "iTunes",
-        "score": 10
+        "name": "HMAX",
+        "score": 1000
       },
       {
-        "name": "iTunes (Missing)",
-        "score": 10
+        "name": "MAX",
+        "score": 1000
       },
       {
-        "name": "Roku",
+        "name": "NF",
+        "score": 1000
+      },
+      {
+        "name": "NOW",
+        "score": 1000
+      },
+      {
+        "name": "PCOK",
+        "score": 1000
+      },
+      {
+        "name": "PQ",
+        "score": 1000
+      },
+      {
+        "name": "Special Edition",
+        "score": 1000
+      },
+      {
+        "name": "Remux Tier 1",
+        "score": 80
+      },
+      {
+        "name": "WEB-DL Tier 1",
+        "score": 80
+      },
+      {
+        "name": "Remux Tier 2",
+        "score": 60
+      },
+      {
+        "name": "WEB-DL Tier 2",
+        "score": 60
+      },
+      {
+        "name": "Remux Tier 3",
+        "score": 40
+      },
+      {
+        "name": "WEB-DL Tier 3",
+        "score": 40
+      },
+      {
+        "name": "Remux Tier 4",
+        "score": 20
+      },
+      {
+        "name": "WEB-DL Tier 4",
+        "score": 20
+      },
+      {
+        "name": "Season Pack",
         "score": 10
       },
       {
@@ -2250,88 +3314,108 @@
         "score": 6
       },
       {
-        "name": "Unknown Lossless Audio",
-        "score": 5
+        "name": "AAC",
+        "score": 0
+      },
+      {
+        "name": "HTSR",
+        "score": 0
+      },
+      {
+        "name": "HULU",
+        "score": 0
+      },
+      {
+        "name": "PMTP",
+        "score": 0
+      },
+      {
+        "name": "ROKU",
+        "score": 0
+      },
+      {
+        "name": "SHO",
+        "score": 0
+      },
+      {
+        "name": "STAN",
+        "score": 0
       },
       {
         "name": "3D",
-        "score": -9999
-      },
-      {
-        "name": "720p",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "AV1",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "B&W",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "Blu-ray",
-        "score": -9999
+        "name": "Banned Groups",
+        "score": -999999
+      },
+      {
+        "name": "Banned Groups (Title)",
+        "score": -999999
+      },
+      {
+        "name": "Banned Remux",
+        "score": -999999
+      },
+      {
+        "name": "Banned WEB-DL (x265)",
+        "score": -999999
       },
       {
         "name": "Dolby Vision (Without Fallback)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Extras",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Full Disc (Quality Match)",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "h265",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "h265 (Missing)",
-        "score": -9999
-      },
-      {
-        "name": "HDR10 (Missing) (1080p)",
-        "score": -9999
-      },
-      {
-        "name": "Non Retail HDR",
-        "score": -9999
+        "name": "Sing Along",
+        "score": -999999
       },
       {
         "name": "UHDBits",
-        "score": -9999
-      },
-      {
-        "name": "Unwanted Remux Groups",
-        "score": -9999
+        "score": -999999
       },
       {
         "name": "Upscaled",
-        "score": -9999
+        "score": -999999
+      },
+      {
+        "name": "VP9",
+        "score": -999999
       },
       {
         "name": "VVC",
-        "score": -9999
+        "score": -999999
       },
       {
-        "name": "WEBRip",
-        "score": -9999
-      },
-      {
-        "name": "x264",
-        "score": -9999
+        "name": "x264 (2160p)",
+        "score": -999999
       },
       {
         "name": "x265",
-        "score": -9999
+        "score": -999999
       }
     ],
     "qualities": [
@@ -2352,8 +3436,12 @@
         "name": "WEBDL-1080p"
       },
       {
+        "id": 14,
+        "name": "WEBDL-720p"
+      },
+      {
         "id": -1,
-        "name": "SD",
+        "name": "SD Fallback",
         "description": "Standard Definition Fallbacks",
         "qualities": [
           {
@@ -2363,14 +3451,6 @@
           {
             "id": 19,
             "name": "WEBDL-480p"
-          },
-          {
-            "id": 20,
-            "name": "WEBRip-480p"
-          },
-          {
-            "id": 24,
-            "name": "SDTV"
           }
         ]
       }
@@ -2382,5 +3462,361 @@
     },
     "language": "must_original",
     "_id": "2160p Remux"
+  },
+  {
+    "name": "720p Quality",
+    "description": "720p Quality utilizes the [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/GPPi) to target **transparent** x264 720p encodes. \n- 5 Quality tiers prioritise encodes with high 720p GPPi scores, with fallback to 720p WEB-DLs\n- If no 720p release can be found, the profile will fall back to SD releases - **DVD remuxes  / encodes**",
+    "tags": [
+      "720p",
+      "Quality Focused",
+      "Lossy Audio",
+      "x264",
+      "h264"
+    ],
+    "upgradesAllowed": true,
+    "minCustomFormatScore": 20000,
+    "upgradeUntilScore": 400000,
+    "minScoreIncrement": 1,
+    "custom_formats": [
+      {
+        "name": "720p WEB-DL",
+        "score": 100000
+      },
+      {
+        "name": "720p Bluray",
+        "score": 80000
+      },
+      {
+        "name": "720p WEBRip",
+        "score": 80000
+      },
+      {
+        "name": "480p WEB-DL",
+        "score": 60000
+      },
+      {
+        "name": "720p Quality Tier 1",
+        "score": 44000
+      },
+      {
+        "name": "720p Quality Tier 2",
+        "score": 43000
+      },
+      {
+        "name": "720p Quality Tier 3",
+        "score": 42000
+      },
+      {
+        "name": "720p Quality Tier 4",
+        "score": 41000
+      },
+      {
+        "name": "720p Quality Tier 5",
+        "score": 40000
+      },
+      {
+        "name": "DVD",
+        "score": 20000
+      },
+      {
+        "name": "DVD Remux",
+        "score": 20000
+      },
+      {
+        "name": "SD Quality Tier 1",
+        "score": 11000
+      },
+      {
+        "name": "SD Quality Tier 2",
+        "score": 10000
+      },
+      {
+        "name": "720p Golden Popcorn",
+        "score": 6000
+      },
+      {
+        "name": "MA",
+        "score": 4000
+      },
+      {
+        "name": "SD Golden Popcorn",
+        "score": 4000
+      },
+      {
+        "name": "AMZN",
+        "score": 2000
+      },
+      {
+        "name": "ATVP",
+        "score": 2000
+      },
+      {
+        "name": "DSNP",
+        "score": 2000
+      },
+      {
+        "name": "ATV",
+        "score": 1000
+      },
+      {
+        "name": "CRIT",
+        "score": 1000
+      },
+      {
+        "name": "HMAX",
+        "score": 1000
+      },
+      {
+        "name": "iT",
+        "score": 1000
+      },
+      {
+        "name": "MAX",
+        "score": 1000
+      },
+      {
+        "name": "NF",
+        "score": 1000
+      },
+      {
+        "name": "NOW",
+        "score": 1000
+      },
+      {
+        "name": "PCOK",
+        "score": 1000
+      },
+      {
+        "name": "Special Edition",
+        "score": 1000
+      },
+      {
+        "name": "DTS-HD HRA",
+        "score": 800
+      },
+      {
+        "name": "Opus",
+        "score": 800
+      },
+      {
+        "name": "Dolby Digital +",
+        "score": 600
+      },
+      {
+        "name": "Dolby Atmos",
+        "score": 400
+      },
+      {
+        "name": "DTS-ES",
+        "score": 400
+      },
+      {
+        "name": "DTS",
+        "score": 200
+      },
+      {
+        "name": "Dolby Digital",
+        "score": 100
+      },
+      {
+        "name": "WEB-DL Tier 1",
+        "score": 80
+      },
+      {
+        "name": "WEB-DL Tier 2",
+        "score": 60
+      },
+      {
+        "name": "WEB-DL Tier 3",
+        "score": 40
+      },
+      {
+        "name": "WEB-DL Tier 4",
+        "score": 20
+      },
+      {
+        "name": "Season Pack",
+        "score": 10
+      },
+      {
+        "name": "Repack3",
+        "score": 8
+      },
+      {
+        "name": "Repack2",
+        "score": 7
+      },
+      {
+        "name": "Repack1",
+        "score": 6
+      },
+      {
+        "name": "AAC",
+        "score": 0
+      },
+      {
+        "name": "HTSR",
+        "score": 0
+      },
+      {
+        "name": "HULU",
+        "score": 0
+      },
+      {
+        "name": "PMTP",
+        "score": 0
+      },
+      {
+        "name": "ROKU",
+        "score": 0
+      },
+      {
+        "name": "SHO",
+        "score": 0
+      },
+      {
+        "name": "STAN",
+        "score": 0
+      },
+      {
+        "name": "3D",
+        "score": -999999
+      },
+      {
+        "name": "AV1",
+        "score": -999999
+      },
+      {
+        "name": "B&W",
+        "score": -999999
+      },
+      {
+        "name": "Banned Groups",
+        "score": -999999
+      },
+      {
+        "name": "Banned Groups (Title)",
+        "score": -999999
+      },
+      {
+        "name": "Banned WEBRip",
+        "score": -999999
+      },
+      {
+        "name": "Dolby Vision",
+        "score": -999999
+      },
+      {
+        "name": "Extras",
+        "score": -999999
+      },
+      {
+        "name": "Full Disc",
+        "score": -999999
+      },
+      {
+        "name": "Full Disc (Quality Match)",
+        "score": -999999
+      },
+      {
+        "name": "h265",
+        "score": -999999
+      },
+      {
+        "name": "HDR",
+        "score": -999999
+      },
+      {
+        "name": "HDR10",
+        "score": -999999
+      },
+      {
+        "name": "HDR10+",
+        "score": -999999
+      },
+      {
+        "name": "HLG",
+        "score": -999999
+      },
+      {
+        "name": "PQ",
+        "score": -999999
+      },
+      {
+        "name": "Remux",
+        "score": -999999
+      },
+      {
+        "name": "Sing Along",
+        "score": -999999
+      },
+      {
+        "name": "Upscaled",
+        "score": -999999
+      },
+      {
+        "name": "VP9",
+        "score": -999999
+      },
+      {
+        "name": "VVC",
+        "score": -999999
+      },
+      {
+        "name": "x265",
+        "score": -999999
+      }
+    ],
+    "qualities": [
+      {
+        "id": -1,
+        "name": "Transparent Capable",
+        "description": "All capable of being indistinguishable from source. WEB-DL included to not allow unknown encode to trump known WEB-DL.",
+        "qualities": [
+          {
+            "id": 13,
+            "name": "Bluray-720p"
+          },
+          {
+            "id": 14,
+            "name": "WEBDL-720p"
+          },
+          {
+            "id": 15,
+            "name": "WEBRip-720p"
+          }
+        ]
+      },
+      {
+        "id": -2,
+        "name": "SD Fallback",
+        "description": "Standard Definition Fallbacks",
+        "qualities": [
+          {
+            "id": 18,
+            "name": "Bluray-480p"
+          },
+          {
+            "id": 19,
+            "name": "WEBDL-480p"
+          },
+          {
+            "id": 20,
+            "name": "WEBRip-480p"
+          },
+          {
+            "id": 22,
+            "name": "DVD"
+          }
+        ]
+      }
+    ],
+    "upgrade_until": {
+      "id": -1,
+      "name": "Transparent Capable",
+      "description": "All capable of being indistinguishable from source. WEB-DL included to not allow unknown encode to trump known WEB-DL."
+    },
+    "language": "must_original",
+    "_id": "720p Quality"
   }
 ]

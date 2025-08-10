@@ -1,28 +1,18 @@
 [
   {
-    "name": "10bit-HDS",
-    "pattern": "(?<=^|[\\s.-])10bit-HDS\\b",
-    "description": "Matches the release group `10bit-HDS` only if it is:\n\n- Preceded by the start of the string (`^`), a whitespace character (`\\s`), a period (`.`), or a hyphen (`-`).\n- Followed by a word boundary (`\\b`), ensuring it ends cleanly without being part of a longer word. ",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": [],
-    "_id": "10bit-HDS"
-  },
-  {
     "name": "3D",
-    "pattern": "\\b((bluray|bd)?3d|sbs|half[ .-]ou|half[ .-]sbs)\\b",
+    "pattern": "(?<=\\b[12]\\d{3}\\b).*\\b((bluray|bd)?3d|sbs|half[ .-]ou|half[ .-]sbs)\\b",
     "description": "Matches terms related to 3D video formats:\n- `bluray3d` or `bd3d` (optional `bluray` or `bd` followed by `3d`).\n- `sbs` (side-by-side).\n- `half ou` or `half sbs` with space (` `), dot (`.`), or hyphen (`-`) as separators.",
     "tags": [
       "Enhancement",
-      "Unwanted"
+      "Banned"
     ],
     "tests": [
       {
         "expected": true,
         "id": 1,
         "input": "Universal.Soldier.Day.of.Reckoning.2012.1080p.BluRay.3D.H-SBS.DTS.x264-BluRay3D",
-        "lastRun": "2024-12-13T06:50:15.135830",
+        "lastRun": "2025-04-25T14:15:46.876957",
         "matchSpan": {
           "end": 55,
           "start": 53
@@ -38,7 +28,7 @@
         "expected": true,
         "id": 2,
         "input": "Justin.And.The.Knights.Of.Valour.3D.2013.1080p.BluRay.Half-SBS.x264-BluRay3D",
-        "lastRun": "2024-12-13T06:50:15.135830",
+        "lastRun": "2025-04-25T14:15:46.876957",
         "matchSpan": {
           "end": 35,
           "start": 33
@@ -49,16 +39,44 @@
           null
         ],
         "passes": true
+      },
+      {
+        "expected": false,
+        "id": 3,
+        "input": "Step Up 3D 2010 1080p BluRay DTS-ES 6.1 x264-xander",
+        "lastRun": "2025-04-25T14:15:46.876957",
+        "matchSpan": {
+          "end": 10,
+          "start": 8
+        },
+        "matchedContent": "3D",
+        "matchedGroups": [
+          "3D",
+          null
+        ],
+        "passes": false
       }
     ],
     "_id": "3D"
+  },
+  {
+    "name": "3L",
+    "pattern": "(?<=^|[\\s.-])3L\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux"
+    ],
+    "tests": [],
+    "_id": "3L"
   },
   {
     "name": "4K4U",
     "pattern": "(?<=^|[\\s.-])4K4U\\b",
     "description": "Matches the release group `4K4U` only if it is:\n\n- Preceded by the start of the string (`^`), a whitespace character (`\\s`), a period (`.`), or a hyphen (`-`).\n- Followed by a word boundary (`\\b`), ensuring it ends cleanly without being part of a longer word. ",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Remux"
     ],
     "tests": [],
     "_id": "4K4U"
@@ -68,9 +86,10 @@
     "pattern": "(?<=^|[\\s.-])4KDVS\\b",
     "description": "Matches \"4KDVS\" when preceded by whitespace, a hyphen or dot",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "4KDVS"
   },
   {
@@ -85,20 +104,34 @@
     "_id": "7.1 Surround"
   },
   {
+    "name": "9volt",
+    "pattern": "(?<=^|[\\s.-])9volt\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "9volt"
+  },
+  {
     "name": "AAAUHD",
     "pattern": "(?<=^|[\\s.-])AAAUHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "AAAUHD"
   },
   {
     "name": "AAC",
     "pattern": "\\bAAC(\\b|\\d)",
     "description": "",
-    "tags": [],
+    "tags": [
+      "Audio"
+    ],
     "tests": [],
     "_id": "AAC"
   },
@@ -107,19 +140,32 @@
     "pattern": "(?<=^|[\\s.-])ABBIE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "ABBIE"
+  },
+  {
+    "name": "AC",
+    "pattern": "(?<=^|[\\s.-])AC\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "AC"
   },
   {
     "name": "ADE",
     "pattern": "(?<=^|[\\s.-])ADE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "ADE"
   },
   {
@@ -127,24 +173,81 @@
     "pattern": "(?<=^|[\\s.-])AJP69\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "AJP69"
+  },
+  {
+    "name": "ANE",
+    "pattern": "(?<=^|[\\s.-])ANE\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "ANE"
+  },
+  {
+    "name": "AOC",
+    "pattern": "(?<=^|[\\s.-])AOC\\b",
+    "description": "Banned for Excessive Audio Streams",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "AOC"
+  },
+  {
+    "name": "AOmundson",
+    "pattern": "(?<=^|[\\s.-])AOmundson\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "AOmundson"
   },
   {
     "name": "APEX",
     "pattern": "(?<=^|[\\s.-])APEX\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "APEX"
   },
   {
+    "name": "ARCADE",
+    "pattern": "(?<=^|[\\s.-])ARCADE\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "ARCADE"
+  },
+  {
+    "name": "AROMA",
+    "pattern": "(?<=^|[\\s.-])AROMA\\b",
+    "description": "Banned for Retagging",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "AROMA"
+  },
+  {
     "name": "AV1",
-    "pattern": "\\bAV1\\b",
+    "pattern": "\\b(AV1)\\b",
     "description": "AV1, or AOMedia Video 1, is a video coding format that compresses video files and streams while maintaining high quality.",
     "tags": [
       "Codec"
@@ -154,39 +257,121 @@
         "expected": true,
         "id": 1,
         "input": "Arcane S01 2160p UHD BluRay DD 5.1 DV HDR AV1-TiZU",
-        "lastRun": "2024-12-13T07:04:08.442964",
+        "lastRun": "2025-04-15T14:50:05.552676",
         "matchSpan": {
           "end": 45,
           "start": 42
         },
         "matchedContent": "AV1",
-        "matchedGroups": [],
+        "matchedGroups": [
+          "AV1"
+        ],
         "passes": true
       },
       {
         "expected": true,
         "id": 2,
         "input": "Up.2009.2160p.Bluray.AC3.HDR.DV.AV1-TiZU.mkv",
-        "lastRun": "2024-12-13T07:04:08.442964",
+        "lastRun": "2025-04-15T14:50:05.552676",
         "matchSpan": {
           "end": 35,
           "start": 32
         },
         "matchedContent": "AV1",
-        "matchedGroups": [],
+        "matchedGroups": [
+          "AV1"
+        ],
         "passes": true
       }
     ],
     "_id": "AV1"
   },
   {
+    "name": "AVC",
+    "pattern": "[xh][ ._-]?264|\\bAVC(\\b|\\d)",
+    "description": "An open source encoder that produces AVC videos. ",
+    "tags": [
+      "Encoder",
+      "Codec"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Ballerina 2025 2160p iT WEB-DL DD+ 5.1 Atmos DV HDR10+ H.265-BYNDR",
+        "lastRun": "2025-07-24T17:37:44.747485",
+        "matchSpan": {
+          "end": 60,
+          "start": 55
+        },
+        "matchedContent": "H.265",
+        "matchedGroups": [
+          null
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 2,
+        "input": "The Lord Of The Rings: The Two Towers 2002 Extended Edition 2160p UHD BluRay TrueHD 7.1 DV HDR x265-DON",
+        "lastRun": "2025-07-24T17:37:44.747485",
+        "matchSpan": {
+          "end": 99,
+          "start": 95
+        },
+        "matchedContent": "x265",
+        "matchedGroups": [
+          null
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 3,
+        "input": "Suspiria 2018 2160p UHD BluRay REMUX HDR HEVC TrueHD 7.1 Atmos-BLURANiUM",
+        "lastRun": "2025-07-24T17:37:44.747485",
+        "matchSpan": {
+          "end": 45,
+          "start": 41
+        },
+        "matchedContent": "HEVC",
+        "matchedGroups": [
+          ""
+        ],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 4,
+        "input": "Ballerina 2025 1080p AMZN WEB-DL DD+ 5.1 Atmos H.264-BYNDR",
+        "lastRun": "2025-07-24T17:37:44.747485",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 5,
+        "input": "Thunderbolts* 2025 Hybrid 1080p BluRay DD+ 7.1 x264-ZoroSenpai",
+        "lastRun": "2025-07-24T17:37:44.747485",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      }
+    ],
+    "_id": "AVC"
+  },
+  {
     "name": "AViATOR",
     "pattern": "(?<=^|[\\s.-])AViATOR\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "AViATOR"
   },
   {
@@ -194,10 +379,22 @@
     "pattern": "(?<=^|[\\s.-])Absinth\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "Absinth"
+  },
+  {
+    "name": "AjA",
+    "pattern": "(?<=^|[\\s.-])AjA\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "AjA"
   },
   {
     "name": "Amazon Prime",
@@ -205,8 +402,7 @@
     "description": "Amazon Prime Video, or simply Prime Video, is an American subscription video on-demand over-the-top streaming and rental service of Amazon offered both as a stand-alone service and as part of Amazon's Prime subscription.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -274,8 +470,7 @@
     "description": "Apple TV+ is an American subscription OTT streaming service owned and operated by Apple Inc. Launched on November 1, 2019, it offers a selection of original production film and television series called Apple Originals.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -308,6 +503,39 @@
       }
     ],
     "_id": "Apple TV+"
+  },
+  {
+    "name": "Apple TV",
+    "pattern": "\\b(ATV)\\b",
+    "description": "Apple TV channels offer a curated selection of content from various streaming services and providers, allowing users to subscribe and access content directly within the Apple TV app. These channels provide a centralized platform for accessing a wide range of movies, TV shows, live sports, and more. ",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Apple TV"
+  },
+  {
+    "name": "Arid",
+    "pattern": "(?<=^|[\\s.-])Arid\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Arid"
+  },
+  {
+    "name": "Asakura",
+    "pattern": "(?<=^|[\\s.-])Asakura\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Asakura"
   },
   {
     "name": "Atmos",
@@ -377,8 +605,8 @@
     "description": "Black and White colour grading. This regex matches a 4-digit number (optionally surrounded by parentheses), followed by any amount of text, and then detects references to \"black and white\" in various formats. It supports `blackwhite` (no spaces), `black and white`, `black-white`, \"`black & white`, `black/white`, as well as shorthand `BW` and `B&W`, while excluding invalid variations like `b w`, `b-w`, or `b/w`",
     "tags": [
       "Enhancement",
-      "Unwanted",
-      "Colour Grade"
+      "Colour Grade",
+      "Banned"
     ],
     "tests": [
       {
@@ -490,11 +718,23 @@
     "_id": "B&W"
   },
   {
+    "name": "BEN THE MEN",
+    "pattern": "\\b(BEN[ ._-]THE[ ._-]MEN)\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "BEN THE MEN"
+  },
+  {
     "name": "BHDStudio",
     "pattern": "(?<=^|[\\s.-])BHDStudio\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "BHDStudio"
@@ -504,17 +744,30 @@
     "pattern": "(?<=^|[\\s.-])BLUEBIRD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "BLUEBIRD"
+  },
+  {
+    "name": "BLURANiUM",
+    "pattern": "(?<=^|[\\s.-])BLURANiUM\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux"
+    ],
+    "tests": [],
+    "_id": "BLURANiUM"
   },
   {
     "name": "BLUTONiUM",
     "pattern": "(?<=^|[\\s.-])BLUTONiUM\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "BLUTONiUM"
@@ -524,19 +777,33 @@
     "pattern": "(?<=^|[\\s.-])BMF\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Remux",
+      "Bluray"
     ],
     "tests": [],
     "_id": "BMF"
+  },
+  {
+    "name": "BOLS",
+    "pattern": "(?<=^|[\\s.-])BOLS\\b",
+    "description": "Banned for Retagging",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "BOLS"
   },
   {
     "name": "BOREDOR",
     "pattern": "(?<=^|[\\s.-])BOREDOR\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "BOREDOR"
   },
   {
@@ -544,16 +811,30 @@
     "pattern": "(?<=^|[\\s.-])BSTD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "BSTD"
+  },
+  {
+    "name": "BTM",
+    "pattern": "(?<=^|[\\s.-])BTM\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "BTM"
   },
   {
     "name": "BTN Atmos",
     "pattern": "\\bTrue[ .-]?HDA[ .-]?[57]\\.1|DDPA[57]\\.1\\b",
     "description": "Matches BroadcastTheNet Atmos naming convention",
-    "tags": [],
+    "tags": [
+      "Audio"
+    ],
     "tests": [
       {
         "expected": true,
@@ -622,7 +903,8 @@
     "pattern": "(?<=^|[\\s.-])BTN\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "BTN"
@@ -632,7 +914,8 @@
     "pattern": "(?<=^|[\\s.-])BV\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "BV"
@@ -642,7 +925,8 @@
     "pattern": "(?<=^|[\\s.-])BYNDR\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "BYNDR"
@@ -789,23 +1073,14 @@
     "_id": "Basic HDR Formats"
   },
   {
-    "name": "BeiTa",
-    "pattern": "(?<=^|[\\s.-])BeiTa\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "BeiTa"
-  },
-  {
     "name": "BeiTai",
     "pattern": "(?<=^|[\\s.-])BeiTai\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "BeiTai"
   },
   {
@@ -1215,9 +1490,10 @@
   {
     "name": "BeyondHD",
     "pattern": "(?<=^|[\\s.-])BeyondHD\\b",
-    "description": "",
+    "description": "Banned Due to only doing Full Discs",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Banned"
     ],
     "tests": [
       {
@@ -1239,62 +1515,45 @@
   {
     "name": "BiTOR",
     "pattern": "(?<=^|[\\s.-])BiTOR\\b",
-    "description": "",
+    "description": "Banned for Fake DV/HDR Layer",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Banned"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "BiTOR"
   },
   {
-    "name": "Bloated Remux Groups",
-    "pattern": "\\b(LEGi0N|FGT|RARBG)\\b",
-    "description": "Matches groups that add multiple audio tracks to remuxes",
+    "name": "BiZKiT",
+    "pattern": "(?<=^|[\\s.-])BiZKiT\\b",
+    "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Remux"
     ],
-    "tests": [
-      {
-        "expected": true,
-        "id": 3,
-        "input": "Blade Runner 2049 2017 1080p BluRay REMUX AVC DTS-HD MA TrueHD 7 1 Atmos-FGT",
-        "lastRun": "2025-01-19T17:27:12.895135",
-        "matchSpan": {
-          "end": 76,
-          "start": 73
-        },
-        "matchedContent": "FGT",
-        "matchedGroups": [
-          "FGT"
-        ],
-        "passes": true
-      },
-      {
-        "expected": true,
-        "id": 4,
-        "input": "Blade Runner 2049 2017 REMUX 1080p Blu-ray AVC DTS-HD MA 7 1-LEGi0N",
-        "lastRun": "2025-01-19T17:27:12.895135",
-        "matchSpan": {
-          "end": 67,
-          "start": 61
-        },
-        "matchedContent": "LEGi0N",
-        "matchedGroups": [
-          "LEGi0N"
-        ],
-        "passes": true
-      }
+    "tests": [],
+    "_id": "BiZKiT"
+  },
+  {
+    "name": "BlurayDesuYo",
+    "pattern": "(?<=^|[\\s.-])BlurayDesuYo\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
     ],
-    "_id": "Bloated Remux Groups"
+    "tests": [],
+    "_id": "BlurayDesuYo"
   },
   {
     "name": "BlzT",
     "pattern": "(?<=^|[\\s.-])BlzT\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "BlzT"
   },
   {
@@ -1320,13 +1579,47 @@
     "_id": "Bracketed Year"
   },
   {
+    "name": "Bravia Core",
+    "pattern": "\\b(BCORE)\\b",
+    "description": "Sony Pictures Core (formerly known as Bravia Core) is a video on demand service from Sony for its televisions and smartphones, launched in April 2021. The service offers the streaming of movies at up to 4K resolution provided by Sony Pictures Entertainment. CORE stands for Centre of Real Entertainment.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Bravia Core"
+  },
+  {
+    "name": "Bunny-Apocalypse",
+    "pattern": "(?<=^|[\\s.-])Bunny-Apocalypse\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Bunny-Apocalypse"
+  },
+  {
+    "name": "CBT",
+    "pattern": "(?<=^|[\\s.-])CBT\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "CBT"
+  },
+  {
     "name": "CHAOS",
     "pattern": "(?<=^|[\\s.-])CHAOS\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "CHAOS"
   },
   {
@@ -1334,9 +1627,10 @@
     "pattern": "(?<=^|[\\s.-])CHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "CHD"
   },
   {
@@ -1344,19 +1638,32 @@
     "pattern": "(?<=^|[\\s.-])CJ\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "CJ"
+  },
+  {
+    "name": "CLASSiCALHD",
+    "pattern": "(?<=^|[\\s.-])CLASSiCALHD\\b",
+    "description": "Banned for LQ Non English / RaR",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "CLASSiCALHD"
   },
   {
     "name": "CMCT",
     "pattern": "(?<=^|[\\s.-])CMCT\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Anime"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "CMCT"
   },
   {
@@ -1365,7 +1672,7 @@
     "description": "Prolific WEB-DL group. ",
     "tags": [
       "Release Group",
-      "iPT"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -1404,11 +1711,23 @@
     "_id": "CMRG"
   },
   {
+    "name": "CREATiVE24",
+    "pattern": "(?<=^|[\\s.-])CREATiVE24\\b",
+    "description": "Banned for Bloated Garbage",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "CREATiVE24"
+  },
+  {
     "name": "CRFW",
     "pattern": "(?<=^|[\\s.-])CRFW\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "CRFW"
@@ -1418,7 +1737,8 @@
     "pattern": "(?<=^|[\\s.-])CRX\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "CRX"
@@ -1428,30 +1748,99 @@
     "pattern": "(?<=^|[\\s.-])CRiSC\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "CRiSC"
   },
   {
-    "name": "ChopperHitler",
-    "pattern": "(?<=^|[\\s.-])ChopperHitler\\b",
+    "name": "CTR",
+    "pattern": "(?<=^|[\\s.-])CTR\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Anime"
     ],
-    "tests": null,
-    "_id": "ChopperHitler"
+    "tests": [],
+    "_id": "CTR"
+  },
+  {
+    "name": "Cait-Sidhe",
+    "pattern": "(?<=^|[\\s.-])Cait-Sidhe\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Cait-Sidhe"
+  },
+  {
+    "name": "Chihiro",
+    "pattern": "(?<=^|[\\s.-])Chihiro\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Chihiro"
+  },
+  {
+    "name": "Chivaman",
+    "pattern": "(?<=^|[\\s.-])Chivaman\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "Chivaman"
   },
   {
     "name": "Chotab",
     "pattern": "(?<=^|[\\s.-])Chotab\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "Chotab"
+  },
+  {
+    "name": "CiNEPHiLES",
+    "pattern": "(?<=^|[\\s.-])CiNEPHiLES\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux"
+    ],
+    "tests": [],
+    "_id": "CiNEPHiLES"
+  },
+  {
+    "name": "Cinefeel",
+    "pattern": "(?<=^|[\\s.-])Cinefeel\\b",
+    "description": "Matches \"Cinefeel\" when preceded by whitespace, a hyphen or dot",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Cinefeel"
+  },
+  {
+    "name": "CoalGirls",
+    "pattern": "(?<=^|[\\s.-])CoalGirls\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "CoalGirls"
   },
   {
     "name": "Colourisation",
@@ -1551,20 +1940,30 @@
     "_id": "Colourisation"
   },
   {
+    "name": "Commie",
+    "pattern": "(?<=^|[\\s.-])Commie\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Commie"
+  },
+  {
     "name": "Criterion Channel",
-    "pattern": "\\bCRiT\\b",
+    "pattern": "\\b(CRiT)\\b",
     "description": "The Criterion Channel is a subscription-based streaming service launched on April 8, 2019, by The Criterion Collection. Available in the United States and Canada, it features a rich library of films, including Criterion Collection releases with special features, curated playlists, temporarily licensed titles, and original content such as academic overviews and introductions. The Channel also showcases Janus-owned titles not yet available on physical media and maintains a collaborative relationship with Warner Bros. Discovery's Max platform. Perfect for cinephiles, the service brings a curated cinematic experience to the digital space.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
         "expected": true,
         "id": 1,
         "input": "Wild 90 1968 480p CRiT WEB-DL AAC2 0 x264-AT3N",
-        "lastRun": "2024-12-06T05:17:39.382994",
+        "lastRun": "2025-03-29T13:35:14.519621",
         "matchSpan": {
           "end": 22,
           "start": 18
@@ -1577,7 +1976,7 @@
         "expected": true,
         "id": 2,
         "input": "Night Mother 1986 1080p CRiT WEB-DL AAC2 0 x264-AT3N",
-        "lastRun": "2024-12-06T05:17:39.382994",
+        "lastRun": "2025-03-29T13:35:14.519621",
         "matchSpan": {
           "end": 28,
           "start": 24
@@ -1590,7 +1989,7 @@
         "expected": true,
         "id": 3,
         "input": "Please Speak Continuously and Describe Your Experiences as They Come to You 2019 1080p CRIT WEB-DL AAC2 0 x264-SiGLA",
-        "lastRun": "2024-12-06T05:17:39.382994",
+        "lastRun": "2025-03-29T13:35:14.519621",
         "matchSpan": {
           "end": 91,
           "start": 87
@@ -1603,7 +2002,7 @@
         "expected": false,
         "id": 4,
         "input": "John Malkovich in The Music Critic 2021 720p WEB H264-LiQUiD",
-        "lastRun": "2024-12-06T05:17:39.382994",
+        "lastRun": "2025-03-29T13:35:14.519621",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -1617,7 +2016,8 @@
     "pattern": "(?<=^|[\\s.-])CtrlHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "CtrlHD"
@@ -1627,7 +2027,8 @@
     "pattern": "(?<=^|[\\s.-])D-Z0N3\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "D-Z0N3"
@@ -1637,9 +2038,10 @@
     "pattern": "(?<=^|[\\s.-])DEFLATE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "DEFLATE"
   },
   {
@@ -1647,44 +2049,127 @@
     "pattern": "(?<=^|[\\s.-])DEPTH\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "DEPTH"
-  },
-  {
-    "name": "DESPACiTO",
-    "pattern": "(?<=^|[\\s.-])DESPACiTO\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "DESPACiTO"
   },
   {
     "name": "DON",
     "pattern": "(?<=^|[\\s.-])DON\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "DON"
   },
   {
+    "name": "DS4K",
+    "pattern": "\\b(DS4K)\\b",
+    "description": "",
+    "tags": [
+      "Enhancements"
+    ],
+    "tests": [
+      {
+        "expected": false,
+        "id": 1,
+        "input": "Aqua Teen Hunger Force (2000) S00E13 (480p DVD x265 SDR AAC 2.0 English - r00t QxR)",
+        "lastRun": "2024-12-17T18:05:24.558038",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 2,
+        "input": "Planet Earth II S01 REPACK UHD BluRay 2160p DD5.1 HDR x265-BHDStudio",
+        "lastRun": "2024-12-17T18:05:24.558038",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 3,
+        "input": "The Batman (2022) (1080p HMAX WEB-DL H265 SDR DDP Atmos 5.1 English - HONE)",
+        "lastRun": "2024-12-17T18:05:24.558038",
+        "matchSpan": {
+          "end": 41,
+          "start": 37
+        },
+        "matchedContent": "H265",
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 4,
+        "input": "\t The Batman (2022) 1080p AMZN WEB-DL H265 SDR DDP 5.1 English-DarQ",
+        "lastRun": "2024-12-17T18:05:24.558038",
+        "matchSpan": {
+          "end": 42,
+          "start": 38
+        },
+        "matchedContent": "H265",
+        "matchedGroups": [],
+        "passes": true
+      }
+    ],
+    "_id": "DS4K"
+  },
+  {
+    "name": "DTS Basic",
+    "pattern": "DTS[ .]?[1-9]",
+    "description": "",
+    "tags": [
+      "Audio"
+    ],
+    "tests": [],
+    "_id": "DTS Basic"
+  },
+  {
+    "name": "DTS-ES",
+    "pattern": "dts[-. ]?es\\b",
+    "description": "",
+    "tags": [
+      "Audio"
+    ],
+    "tests": [],
+    "_id": "DTS-ES"
+  },
+  {
     "name": "DTS-HD HRA ES",
     "pattern": "dts[-. ]?(es|(hd[. ]?)?(hr|hi))",
     "description": "",
-    "tags": [],
+    "tags": [
+      "Audio"
+    ],
     "tests": [],
     "_id": "DTS-HD HRA ES"
+  },
+  {
+    "name": "DTS-HD HRA",
+    "pattern": "dts[-. ]?(hd[. ]?)?(hra?|hi\\b",
+    "description": "",
+    "tags": [
+      "Audio"
+    ],
+    "tests": [],
+    "_id": "DTS-HD HRA"
   },
   {
     "name": "DTS-HD MA",
     "pattern": "\\b(dts[-_. ]?(ma|hd([-_. ]?ma)?|xll))(\\b|\\d)",
     "description": "",
-    "tags": [],
+    "tags": [
+      "Audio"
+    ],
     "tests": [],
     "_id": "DTS-HD MA"
   },
@@ -1692,7 +2177,9 @@
     "name": "DTS-HD",
     "pattern": "\\b(dts[-_. ]?(ma|hd([-_. ]?ma)?|xll))\\b",
     "description": "",
-    "tags": [],
+    "tags": [
+      "Audio"
+    ],
     "tests": [],
     "_id": "DTS-HD"
   },
@@ -1700,7 +2187,9 @@
     "name": "DTS-X",
     "pattern": "\\b(dts[-_. :]?x)\\b(?!\\d)",
     "description": "",
-    "tags": [],
+    "tags": [
+      "Audio"
+    ],
     "tests": [
       {
         "expected": true,
@@ -1739,29 +2228,55 @@
     "name": "DTS",
     "pattern": "\\bDTS(\\b|\\d)",
     "description": "",
-    "tags": [],
+    "tags": [
+      "Audio"
+    ],
     "tests": [],
     "_id": "DTS"
+  },
+  {
+    "name": "DarQ",
+    "pattern": "(?<=^|[\\s.-])DarQ\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "HEVC"
+    ],
+    "tests": [],
+    "_id": "DarQ"
   },
   {
     "name": "Dariush",
     "pattern": "(?<=^|[\\s.-])Dariush\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "Dariush"
   },
   {
-    "name": "DiNAMiC",
-    "pattern": "(?<=^|[\\s.-])DiNAMiC\\b",
+    "name": "Dekinai",
+    "pattern": "(?<=^|[\\s.-])Dekinai\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Anime"
     ],
-    "tests": null,
-    "_id": "DiNAMiC"
+    "tests": [],
+    "_id": "Dekinai"
+  },
+  {
+    "name": "DepraveD",
+    "pattern": "(?<=^|[\\s.-])DepraveD\\b",
+    "description": "Banned for Fake DV/HDR Layer",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "DepraveD"
   },
   {
     "name": "Disney+",
@@ -1769,8 +2284,7 @@
     "description": "Disney+ is an American subscription video on-demand over-the-top streaming media service that primarily distributes films and television shows produced by Walt Disney Studios and Disney Television Studios, with dedicated content hubs for Disney's flagship brands; Disney, Pixar, Marvel, Star Wars, National Geographic, ESPN, Hulu and Star.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -1819,19 +2333,84 @@
     "_id": "Disney+"
   },
   {
+    "name": "Doki",
+    "pattern": "(?<=^|[\\s.-])Doki\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Doki"
+  },
+  {
     "name": "Dolby Digital +",
     "pattern": "\\bDD[P+]|\\b(e[-_. ]?ac3)\\b",
     "description": "",
-    "tags": [],
-    "tests": [],
+    "tags": [
+      "Audio"
+    ],
+    "tests": [
+      {
+        "expected": false,
+        "id": 1,
+        "input": "Un-Ex You 2025 1080p NF WEB-DL DD 5.1 H.264-FLUX",
+        "lastRun": "2025-07-13T14:55:44.265163",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 2,
+        "input": "Un-Ex You 2025 1080p NF WEB-DL DD+ 5.1 H.264-FLUX",
+        "lastRun": "2025-07-13T14:55:44.265163",
+        "matchSpan": {
+          "end": 34,
+          "start": 31
+        },
+        "matchedContent": "DD+",
+        "matchedGroups": [
+          null
+        ],
+        "passes": true
+      }
+    ],
     "_id": "Dolby Digital +"
   },
   {
     "name": "Dolby Digital",
     "pattern": "\\bDD[^a-z+]|(?<!e)ac3",
     "description": "",
-    "tags": [],
-    "tests": [],
+    "tags": [
+      "Audio"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Un-Ex You 2025 1080p NF WEB-DL DD 5.1 H.264-FLUX",
+        "lastRun": "2025-07-13T14:55:08.599617",
+        "matchSpan": {
+          "end": 34,
+          "start": 31
+        },
+        "matchedContent": "DD ",
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 2,
+        "input": "Un-Ex You 2025 1080p NF WEB-DL DD+ 5.1 H.264-FLUX",
+        "lastRun": "2025-07-13T14:55:08.599617",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      }
+    ],
     "_id": "Dolby Digital"
   },
   {
@@ -1848,7 +2427,7 @@
         "expected": false,
         "id": 1,
         "input": "Barbie.2023.2160p.MA.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265-FLUX",
-        "lastRun": "2024-12-13T09:54:37.318637",
+        "lastRun": "2025-06-18T11:54:10.281095",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -1858,7 +2437,7 @@
         "expected": false,
         "id": 2,
         "input": "\t Barbie (2023) (2160p AMZN WEB-DL Hybrid H265 DV HDR10+ DDP Atmos 5.1 English - HONE)",
-        "lastRun": "2024-12-13T09:54:37.318637",
+        "lastRun": "2025-06-18T11:54:10.281095",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -1868,7 +2447,7 @@
         "expected": true,
         "id": 3,
         "input": "Barbie.2023.2160p.MA.WEB-DL.DDP5.1.Atmos.DV.H.265-FLUX",
-        "lastRun": "2024-12-13T09:54:37.318637",
+        "lastRun": "2025-06-18T11:54:10.281095",
         "matchSpan": {
           "end": 43,
           "start": 41
@@ -1885,7 +2464,7 @@
         "expected": true,
         "id": 4,
         "input": "Barbie.2023.2160p.MA.WEB-DL.DDP5.1.Atmos.DV.H.265-FLUX.mkv",
-        "lastRun": "2024-12-13T09:54:37.318637",
+        "lastRun": "2025-06-18T11:54:10.281095",
         "matchSpan": {
           "end": 43,
           "start": 41
@@ -1896,6 +2475,16 @@
           "DV",
           null
         ],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 5,
+        "input": "Killers of the Flower Moon (2023) {tmdb-466420} [iT][WEBDL-2160p][DV HDR10Plus][EAC3 Atmos 5.1][h265]-FLUX.mkv",
+        "lastRun": "2025-06-18T11:54:10.281095",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
         "passes": true
       }
     ],
@@ -1915,7 +2504,7 @@
         "expected": true,
         "id": 1,
         "input": "MovieName.2023.4K.DV.HDR.mkv",
-        "lastRun": "2024-12-13T09:06:01.845546",
+        "lastRun": "2025-06-18T11:54:00.452053",
         "matchSpan": {
           "end": 20,
           "start": 18
@@ -1931,7 +2520,7 @@
         "expected": true,
         "id": 2,
         "input": "MovieName.2023.4K.Dovi.HDR10+.mkv",
-        "lastRun": "2024-12-13T09:06:01.845546",
+        "lastRun": "2025-06-18T11:54:00.452053",
         "matchSpan": {
           "end": 22,
           "start": 18
@@ -1947,7 +2536,7 @@
         "expected": true,
         "id": 3,
         "input": "MovieName.2023.4K.Dolby.Vision.HDR.mkv",
-        "lastRun": "2024-12-13T09:06:01.845546",
+        "lastRun": "2025-06-18T11:54:00.452053",
         "matchSpan": {
           "end": 30,
           "start": 18
@@ -1963,7 +2552,7 @@
         "expected": true,
         "id": 4,
         "input": "MovieName.2023.4K.DolbyVision.HDR10+.mkv",
-        "lastRun": "2024-12-13T09:06:01.845546",
+        "lastRun": "2025-06-18T11:54:00.452053",
         "matchSpan": {
           "end": 29,
           "start": 18
@@ -1979,7 +2568,7 @@
         "expected": true,
         "id": 5,
         "input": "MovieName.1080p.DV.mkv",
-        "lastRun": "2024-12-13T09:06:01.845546",
+        "lastRun": "2025-06-18T11:54:00.452053",
         "matchSpan": {
           "end": 18,
           "start": 16
@@ -1995,7 +2584,7 @@
         "expected": true,
         "id": 6,
         "input": "MovieName.4K.Dolby Vision.IMAX.mkv",
-        "lastRun": "2024-12-13T09:06:01.845546",
+        "lastRun": "2025-06-18T11:54:00.452053",
         "matchSpan": {
           "end": 25,
           "start": 13
@@ -2011,7 +2600,7 @@
         "expected": false,
         "id": 7,
         "input": "MovieName.2023.4K.DV.HLG.mkv",
-        "lastRun": "2024-12-13T09:06:01.845546",
+        "lastRun": "2025-06-18T11:54:00.452053",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -2021,7 +2610,7 @@
         "expected": false,
         "id": 8,
         "input": "MovieName.2023.4K.DV.SDR.mkv",
-        "lastRun": "2024-12-13T09:06:01.845546",
+        "lastRun": "2025-06-18T11:54:00.452053",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -2031,7 +2620,7 @@
         "expected": true,
         "id": 9,
         "input": "MovieName.4K.DV.SDR.Dovi.mkv",
-        "lastRun": "2024-12-13T09:06:01.845546",
+        "lastRun": "2025-06-18T11:54:00.452053",
         "matchSpan": {
           "end": 24,
           "start": 20
@@ -2042,9 +2631,36 @@
           null
         ],
         "passes": true
+      },
+      {
+        "expected": true,
+        "id": 10,
+        "input": "Killers of the Flower Moon (2023) {tmdb-466420} [iT][WEBDL-2160p][DV HDR10Plus][EAC3 Atmos 5.1][h265]-FLUX.mkv",
+        "lastRun": "2025-06-18T11:54:00.452053",
+        "matchSpan": {
+          "end": 68,
+          "start": 66
+        },
+        "matchedContent": "DV",
+        "matchedGroups": [
+          "DV",
+          null
+        ],
+        "passes": true
       }
     ],
     "_id": "Dolby Vision"
+  },
+  {
+    "name": "Drag",
+    "pattern": "(?<=^|[\\s.-])Drag\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Drag"
   },
   {
     "name": "Dual Audio",
@@ -2198,7 +2814,8 @@
     "pattern": "(?<=^|[\\s.-])E.N.D\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "E.N.D"
@@ -2208,7 +2825,8 @@
     "pattern": "(?<=^|[\\s.-])E1\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "E1"
@@ -2218,7 +2836,8 @@
     "pattern": "(?<=^|[\\s.-])EA\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "EA"
@@ -2228,7 +2847,8 @@
     "pattern": "(?<=^|[\\s.-])EDPH\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "EDPH"
@@ -2238,27 +2858,30 @@
     "pattern": "(?<=^|[\\s.-])EMERALD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "EMERALD"
   },
   {
-    "name": "ENDSTATiON",
-    "pattern": "(?<=^|[\\s.-])ENDSTATiON\\b",
+    "name": "EPSiLON",
+    "pattern": "(?<=^|[\\s.-])EPSiLON\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Remux"
     ],
-    "tests": null,
-    "_id": "ENDSTATiON"
+    "tests": [],
+    "_id": "EPSiLON"
   },
   {
     "name": "ESiR",
     "pattern": "(?<=^|[\\s.-])ESiR\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "ESiR"
@@ -2269,8 +2892,7 @@
     "description": "iPT Internal known for releasing pre-releases before anyone else. Also releases encodes of varying quality. ",
     "tags": [
       "Release Group",
-      "iPT",
-      "Disbanded"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -2303,34 +2925,59 @@
     "_id": "EVO"
   },
   {
-    "name": "EX-R",
-    "pattern": "(?<=^|[\\s.-])EX-R\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "EX-R"
-  },
-  {
     "name": "EXCiSION",
     "pattern": "(?<=^|[\\s.-])EXCiSION\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "EXCiSION"
+  },
+  {
+    "name": "EXP",
+    "pattern": "(?<=^|[\\s.-])EXP\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "EXP"
   },
   {
     "name": "EbP",
     "pattern": "(?<=^|[\\s.-])EbP\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "EbP"
+  },
+  {
+    "name": "Erai-Raws",
+    "pattern": "(?<=^|[\\s.-])Erai-Raws\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Erai-Raws"
+  },
+  {
+    "name": "Exiled-Destiny",
+    "pattern": "(?<=^|[\\s.-])Exiled-Destiny\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Exiled-Destiny"
   },
   {
     "name": "Extended Clip",
@@ -2338,7 +2985,7 @@
     "description": "Matches preview releases labelled as `Extended Clip`",
     "tags": [
       "Preview",
-      "Unwanted"
+      "Banned"
     ],
     "tests": [
       {
@@ -2379,8 +3026,7 @@
     "pattern": "(?i)(?<=\\b[12]\\d{3}\\b).*(\\b|\\.)\\b(Extras?|Bonus|Extended[ ._-]Clip|Special Feature[s]?)\\b",
     "description": "Extras, Special Features, Featurettes, etc",
     "tags": [
-      "Unwanted",
-      "Extras"
+      "Banned"
     ],
     "tests": [
       {
@@ -2397,10 +3043,34 @@
     "_id": "Extras"
   },
   {
+    "name": "FFF",
+    "pattern": "(?<=^|[\\s.-])FFF\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "FFF"
+  },
+  {
+    "name": "FGT",
+    "pattern": "(?<=^|[\\s.-])FGT\\b",
+    "description": "Banned for Retagging",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "FGT"
+  },
+  {
     "name": "FLAC",
     "pattern": "\\bFLAC(\\b|\\d)",
     "description": "",
-    "tags": [],
+    "tags": [
+      "Audio"
+    ],
     "tests": [],
     "_id": "FLAC"
   },
@@ -2409,9 +3079,10 @@
     "pattern": "(?<=^|[\\s.-])FLAME\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "FLAME"
   },
   {
@@ -2419,7 +3090,8 @@
     "pattern": "(?<=^|[\\s.-])FLUX\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "FLUX"
@@ -2429,9 +3101,10 @@
     "pattern": "(?<=^|[\\s.-])FRDS\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "FRDS"
   },
   {
@@ -2439,37 +3112,63 @@
     "pattern": "(?<=^|[\\s.-])FTW-HD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "FTW-HD"
-  },
-  {
-    "name": "FZHD",
-    "pattern": "(?<=^|[\\s.-])FZHD\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "FZHD"
   },
   {
     "name": "FilmHD",
     "pattern": "(?<=^|[\\s.-])FilmHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "FilmHD"
+  },
+  {
+    "name": "Final8",
+    "pattern": "(?<=^|[\\s.-])Final8\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Final8"
+  },
+  {
+    "name": "Flights",
+    "pattern": "(?<=^|[\\s.-])Flights\\b",
+    "description": "Banned for Fake DV/HDR Layer",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "Flights"
+  },
+  {
+    "name": "Flugel",
+    "pattern": "(?<=^|[\\s.-])Flugel\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Flugel"
   },
   {
     "name": "FoRM",
     "pattern": "(?<=^|[\\s.-])FoRM\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "FoRM"
@@ -2479,7 +3178,8 @@
     "pattern": "(?<=^|[\\s.-])FraMeSToR\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Remux"
     ],
     "tests": [],
     "_id": "FraMeSToR"
@@ -2698,17 +3398,52 @@
     "pattern": "(?<=^|[\\s.-])GALAXY\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "GALAXY"
+  },
+  {
+    "name": "GNOME",
+    "pattern": "(?<=^|[\\s.-])GNOME\\b",
+    "description": "Matches \"GNOME\" when preceded by whitespace, a hyphen or dot",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "GNOME"
+  },
+  {
+    "name": "GNOMiSSiON",
+    "pattern": "(?<=^|[\\s.-])GNOMiSSiON\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "GNOMiSSiON"
+  },
+  {
+    "name": "GRiMM",
+    "pattern": "(?<=^|[\\s.-])GRiMM\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "HEVC"
+    ],
+    "tests": [],
+    "_id": "GRiMM"
   },
   {
     "name": "GS88",
     "pattern": "(?<=^|[\\s.-])GS88\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "GS88"
@@ -2718,9 +3453,10 @@
     "pattern": "(?<=^|[\\s.-])GUHZER\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "GUHZER"
   },
   {
@@ -2728,7 +3464,8 @@
     "pattern": "(?<=^|[\\s.-])Geek\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "Geek"
@@ -2738,10 +3475,108 @@
     "pattern": "(?<=^|[\\s.-])HANDJOB\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray",
+      "DVD"
     ],
     "tests": [],
     "_id": "HANDJOB"
+  },
+  {
+    "name": "HBO Max Rename",
+    "pattern": "\\[(HMAX)\\b|\\b(HMAX)\\]",
+    "description": "HBO Max is an American subscription video-on-demand streaming service that offers a range of original programming and content from WarnerMedia's vast library, encompassing brands such as Warner Bros., CNN, Cartoon Network, TBS, and Turner Classic Movies. In mid-to-late 2023, HBO Max underwent a rebranding to \"Max\".",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "The Many Saints of Newark 2021 1080p HBOMAX WEBRiP x264 WAV-CREATiVE24",
+        "lastRun": "2024-12-06T04:48:56.790473",
+        "matchSpan": {
+          "end": 43,
+          "start": 37
+        },
+        "matchedContent": "HBOMAX",
+        "matchedGroups": [
+          "HBOMAX",
+          "RiP"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 2,
+        "input": "Looney Tunes Cartoons S04 1080p HBOM WEB-DL DD5.1 H.264-NTb",
+        "lastRun": "2024-12-06T04:48:56.790473",
+        "matchSpan": {
+          "end": 36,
+          "start": 32
+        },
+        "matchedContent": "HBOM",
+        "matchedGroups": [
+          "HBOM",
+          "DL"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 3,
+        "input": "12 oz Mouse S01 1080p HBOMax WEB-DL DDP2 x264-Mr Lahey",
+        "lastRun": "2024-12-06T04:48:56.790473",
+        "matchSpan": {
+          "end": 28,
+          "start": 22
+        },
+        "matchedContent": "HBOMax",
+        "matchedGroups": [
+          "HBOMax",
+          "DL"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 4,
+        "input": "Silicon Valley S01 1080p HMAX WEB-DL DD5 1 H 264-PHOENiX",
+        "lastRun": "2024-12-06T04:48:56.790473",
+        "matchSpan": {
+          "end": 29,
+          "start": 25
+        },
+        "matchedContent": "HMAX",
+        "matchedGroups": [
+          "HMAX",
+          "DL"
+        ],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 5,
+        "input": "A Discovery of Witches S03 1080p HBO WEB-DL AAC 2.0 H.264",
+        "lastRun": "2024-12-06T04:48:56.790473",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 6,
+        "input": "The Yin Yang Master Zero 2024 1080p BluRay REMUX AVC DTS-HD MA 7 1-HBO",
+        "lastRun": "2024-12-06T04:48:56.790473",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      }
+    ],
+    "_id": "HBO Max Rename"
   },
   {
     "name": "HBO Max",
@@ -2749,8 +3584,7 @@
     "description": "HBO Max is an American subscription video-on-demand streaming service that offers a range of original programming and content from WarnerMedia's vast library, encompassing brands such as Warner Bros., CNN, Cartoon Network, TBS, and Turner Classic Movies. In mid-to-late 2023, HBO Max underwent a rebranding to \"Max\".",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -2845,47 +3679,30 @@
     "pattern": "(?<=^|[\\s.-])HD77\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "HD77"
-  },
-  {
-    "name": "HDC",
-    "pattern": "(?<=^|[\\s.-])HDC\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "HDC"
   },
   {
     "name": "HDChina",
     "pattern": "(?<=^|[\\s.-])HDChina\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "HDChina"
-  },
-  {
-    "name": "HDH",
-    "pattern": "(?<=^|[\\s.-])HDH\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "HDH"
   },
   {
     "name": "HDMaNiAcS",
     "pattern": "(?<=^|[\\s.-])HDMaNiAcS\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "HDMaNiAcS"
@@ -3010,7 +3827,7 @@
   },
   {
     "name": "HDR10 (Missing Groups)",
-    "pattern": "\\b(FraMeSToR|HQMUX|SiCFoI|playBD|RYU|ElNeekster|CiNEPHiLES|3L|EDV|Kenobi|TRiToN|HDH|NTb|Flights|TekMUX|HDS|Aisha(@RFX)?|STRiKES|c0kE|mimic)\\b",
+    "pattern": "\\b(3L|CiNEPHiLES|c0kE|EDV|ElNeekster|FraMeSToR|HDH|HQMUX|Kenobi|mimic|NTb|playBD|RYU|SiCFoI|STRiKES|TekMUX|TRiToN|W4NK3R)\\b",
     "description": "Matches groups who mislabel HDR10",
     "tags": [
       "Release Group",
@@ -3082,7 +3899,7 @@
         "expected": false,
         "id": 1,
         "input": "HDR",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -3092,7 +3909,7 @@
         "expected": false,
         "id": 2,
         "input": "HDR+",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -3102,7 +3919,7 @@
         "expected": false,
         "id": 3,
         "input": "HDR10",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -3112,7 +3929,7 @@
         "expected": true,
         "id": 4,
         "input": "HDR10+",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": {
           "end": 6,
           "start": 0
@@ -3128,7 +3945,7 @@
         "expected": false,
         "id": 5,
         "input": "HLG HDR",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -3138,7 +3955,7 @@
         "expected": false,
         "id": 6,
         "input": "SDR HDR",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -3148,7 +3965,7 @@
         "expected": false,
         "id": 7,
         "input": "PQ HDR",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -3158,7 +3975,7 @@
         "expected": true,
         "id": 8,
         "input": "HDR10P",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": {
           "end": 6,
           "start": 0
@@ -3174,7 +3991,7 @@
         "expected": true,
         "id": 9,
         "input": "HDR10Plus",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": {
           "end": 9,
           "start": 0
@@ -3190,7 +4007,7 @@
         "expected": true,
         "id": 10,
         "input": "Schindler's List (1993) 2160p UHD BluRay Hybrid REMUX HEVC DV HDR10+ TrueHD Atmos 7.1 English-WiLDCAT",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": {
           "end": 68,
           "start": 62
@@ -3206,7 +4023,7 @@
         "expected": true,
         "id": 11,
         "input": "La Maison S01 REPACK 2160p ATVP WEB-DL Dual-Audio DD+ 5.1 Atmos DV HDR10+ H.265-Kitsune",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": {
           "end": 73,
           "start": 67
@@ -3222,7 +4039,7 @@
         "expected": false,
         "id": 12,
         "input": "Liu lang di qiu 2 AKA The Wandering Earth II 2023 2160p CHN UHD Blu-ray DoVi HDR10 HEVC TrueHD 7.1 Atmos-ANKO",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -3232,12 +4049,28 @@
         "expected": true,
         "id": 13,
         "input": "Schindler's List (1993) 2160p UHD BluRay Hybrid REMUX HEVC DV HDR10 Plus TrueHD Atmos 7.1 English-WiLDCAT",
-        "lastRun": "2025-04-05T09:25:21.372205",
+        "lastRun": "2025-06-18T11:53:45.281996",
         "matchSpan": {
           "end": 72,
           "start": 62
         },
         "matchedContent": "HDR10 Plus",
+        "matchedGroups": [
+          "Plus",
+          "lus"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 14,
+        "input": "Killers of the Flower Moon (2023) {tmdb-466420} [iT][WEBDL-2160p][DV HDR10Plus][EAC3 Atmos 5.1][h265]-FLUX.mkv",
+        "lastRun": "2025-06-18T11:53:45.281996",
+        "matchSpan": {
+          "end": 78,
+          "start": 69
+        },
+        "matchedContent": "HDR10Plus",
         "matchedGroups": [
           "Plus",
           "lus"
@@ -3394,9 +4227,10 @@
     "pattern": "(?<=^|[\\s.-])HDS\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "HDS"
   },
   {
@@ -3404,39 +4238,121 @@
     "pattern": "(?<=^|[\\s.-])HDmux\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "HDmux"
+  },
+  {
+    "name": "HEVC",
+    "pattern": "[xh][ ._-]?265|\\bHEVC(\\b|\\d)",
+    "description": "An open source encoder that produces HEVC videos. ",
+    "tags": [
+      "Encoder",
+      "Codec"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Ballerina 2025 2160p iT WEB-DL DD+ 5.1 Atmos DV HDR10+ H.265-BYNDR",
+        "lastRun": "2025-07-24T17:37:44.747485",
+        "matchSpan": {
+          "end": 60,
+          "start": 55
+        },
+        "matchedContent": "H.265",
+        "matchedGroups": [
+          null
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 2,
+        "input": "The Lord Of The Rings: The Two Towers 2002 Extended Edition 2160p UHD BluRay TrueHD 7.1 DV HDR x265-DON",
+        "lastRun": "2025-07-24T17:37:44.747485",
+        "matchSpan": {
+          "end": 99,
+          "start": 95
+        },
+        "matchedContent": "x265",
+        "matchedGroups": [
+          null
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 3,
+        "input": "Suspiria 2018 2160p UHD BluRay REMUX HDR HEVC TrueHD 7.1 Atmos-BLURANiUM",
+        "lastRun": "2025-07-24T17:37:44.747485",
+        "matchSpan": {
+          "end": 45,
+          "start": 41
+        },
+        "matchedContent": "HEVC",
+        "matchedGroups": [
+          ""
+        ],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 4,
+        "input": "Ballerina 2025 1080p AMZN WEB-DL DD+ 5.1 Atmos H.264-BYNDR",
+        "lastRun": "2025-07-24T17:37:44.747485",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 5,
+        "input": "Thunderbolts* 2025 Hybrid 1080p BluRay DD+ 7.1 x264-ZoroSenpai",
+        "lastRun": "2025-07-24T17:37:44.747485",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      }
+    ],
+    "_id": "HEVC"
   },
   {
     "name": "HHWEB",
     "pattern": "(?<=^|[\\s.-])HHWEB\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "HHWEB"
   },
   {
-    "name": "HOA",
-    "pattern": "(?<=^|[\\s.-])HOA\\b",
-    "description": "",
+    "name": "HLG",
+    "pattern": "\\b(HLG)\\b",
+    "description": "This regex matches a `HLG` generalisation. This is a basic HDR Format.",
     "tags": [
-      "Release Group"
+      "Enhancement",
+      "Colour Grade",
+      "HDR"
     ],
-    "tests": null,
-    "_id": "HOA"
+    "tests": [],
+    "_id": "HLG"
   },
   {
     "name": "HONE",
     "pattern": "(?<=^|[\\s.-])HONE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "HONE"
   },
   {
@@ -3444,9 +4360,10 @@
     "pattern": "(?<=^|[\\s.-])HQMUX\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "HQMUX"
   },
   {
@@ -3454,9 +4371,10 @@
     "pattern": "(?<=^|[\\s.-])HUNTJR\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "HUNTJR"
   },
   {
@@ -3464,9 +4382,10 @@
     "pattern": "(?<=^|[\\s.-])Hares\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "Hares"
   },
   {
@@ -3474,7 +4393,8 @@
     "pattern": "(?<=^|[\\s.-])HiDt\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "HiDt"
@@ -3484,7 +4404,8 @@
     "pattern": "(?<=^|[\\s.-])HiFi\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "HiFi"
@@ -3494,19 +4415,52 @@
     "pattern": "(?<=^|[\\s.-])HiP\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "HiP"
   },
   {
+    "name": "Honeyvera",
+    "pattern": "(?<=^|[\\s.-])Honeyvera\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "Honeyvera"
+  },
+  {
+    "name": "HorribleSubs",
+    "pattern": "(?<=^|[\\s.-])HorribleSubs\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "HorribleSubs"
+  },
+  {
+    "name": "Hotstar",
+    "pattern": "\\b(HTSR)\\b",
+    "description": "Disney+ Hotstar, also known as JioHotstar or simply Hotstar, is an Indian subscription video-on-demand over-the-top streaming service owned by Disney Star. The brand was introduced as Hotstar for a streaming service carrying content from Disney Star's (formerly Star India) local networks, including films, television series, live sports, and original programming, as well as featuring content licensed from third parties such as Showtime among others.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Hotstar"
+  },
+  {
     "name": "Hulu",
-    "pattern": "\\b(hulu)\\b",
+    "pattern": "\\b(Hulu)\\b",
     "description": "Hulu, an American subscription streaming service owned by Disney, offers recent TV episodes, full seasons of shows, original content, and live TV channels. As of December 2023, Hulu content is being integrated into Disney+, making its library accessible to Disney+ subscribers.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -3547,9 +4501,10 @@
     "pattern": "(?<=^|[\\s.-])HypStu\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "HypStu"
   },
   {
@@ -3557,9 +4512,10 @@
     "pattern": "(?<=^|[\\s.-])IAMABLE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "IAMABLE"
   },
   {
@@ -3567,10 +4523,22 @@
     "pattern": "(?<=^|[\\s.-])IDE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "IDE"
+  },
+  {
+    "name": "IK",
+    "pattern": "(?<=^|[\\s.-])IK\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "IK"
   },
   {
     "name": "IMAX Enhanced",
@@ -3725,13 +4693,25 @@
     "_id": "IMAX"
   },
   {
+    "name": "Iznjie Biznjie",
+    "pattern": "(?<=^|[\\s.-])Iznjie Biznjie\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Iznjie Biznjie"
+  },
+  {
     "name": "JustWatch",
     "pattern": "(?<=^|[\\s.-])JustWatch\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "JustWatch"
   },
   {
@@ -3739,9 +4719,10 @@
     "pattern": "(?<=^|[\\s.-])KAN3D2M\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "KAN3D2M"
   },
   {
@@ -3749,10 +4730,22 @@
     "pattern": "(?<=^|[\\s.-])KASHMiR\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "KASHMiR"
+  },
+  {
+    "name": "KC",
+    "pattern": "(?<=^|[\\s.-])KC\\b",
+    "description": "Banned for AI Upscales",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "KC"
   },
   {
     "name": "KCW",
@@ -3760,27 +4753,73 @@
     "description": "Kocowa is an American over-the-top streaming service headquartered in Los Angeles as a joint venture between the top three Korean broadcast networks to provide Korean entertainment including K-dramas, K-reality, K-variety, and K-pop to the Americas and all with multi-language subtitles.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
+    "tests": [],
     "_id": "KCW"
+  },
+  {
+    "name": "KH",
+    "pattern": "(?<=^|[\\s.-])KH\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "KH"
   },
   {
     "name": "KNiVES",
     "pattern": "(?<=^|[\\s.-])KNiVES\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "KNiVES"
+  },
+  {
+    "name": "KRaLiMaRKo",
+    "pattern": "(?<=^|[\\s.-])KRaLiMaRKo\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux"
+    ],
+    "tests": [],
+    "_id": "KRaLiMaRKo"
+  },
+  {
+    "name": "Kaleido",
+    "pattern": "(?<=^|[\\s.-])Kaleido\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Kaleido"
+  },
+  {
+    "name": "Kametsu",
+    "pattern": "(?<=^|[\\s.-])Kametsu\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Kametsu"
   },
   {
     "name": "KiNGS",
     "pattern": "(?<=^|[\\s.-])KiNGS\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "KiNGS"
@@ -3790,19 +4829,32 @@
     "pattern": "(?<=^|[\\s.-])Kitsune\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "Kitsune"
+  },
+  {
+    "name": "Koten_Gars",
+    "pattern": "(?<=^|[\\s.-])Koten_Gars\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Koten_Gars"
   },
   {
     "name": "LAMA",
     "pattern": "(?<=^|[\\s.-])LAMA\\b",
-    "description": "",
+    "description": "Banned for Retagging",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Banned"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "LAMA"
   },
   {
@@ -3810,47 +4862,85 @@
     "pattern": "(?<=^|[\\s.-])LAZARUS\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "LAZARUS"
+  },
+  {
+    "name": "LAZY",
+    "pattern": "(?<=^|[\\s.-])LAZY\\b",
+    "description": "Matches \"LAZY\" when preceded by whitespace, a hyphen or dot",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "LAZY"
   },
   {
     "name": "LEGi0N",
     "pattern": "(?<=^|[\\s.-])LEGi0N\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "LEGi0N"
+  },
+  {
+    "name": "LM",
+    "pattern": "(?<=^|[\\s.-])LM\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux"
+    ],
+    "tests": [],
+    "_id": "LM"
   },
   {
     "name": "LSt",
     "pattern": "(?<=^|[\\s.-])LSt\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "HEVC"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "LSt"
   },
   {
-    "name": "LYS",
-    "pattern": "(?<=^|[\\s.-])LYS\\b",
+    "name": "LYS1TH3A",
+    "pattern": "(?<=^|[\\s.-])LYS1TH3A\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Anime"
     ],
-    "tests": null,
-    "_id": "LYS"
+    "tests": [],
+    "_id": "LYS1TH3A"
+  },
+  {
+    "name": "LazyRemux",
+    "pattern": "(?<=^|[\\s.-])LazyRemux\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "LazyRemux"
   },
   {
     "name": "LiNG",
     "pattern": "(?<=^|[\\s.-])LiNG\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "LiNG"
@@ -3860,9 +4950,10 @@
     "pattern": "(?<=^|[\\s.-])LittleBakas\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "LittleBakas"
   },
   {
@@ -3870,7 +4961,8 @@
     "pattern": "(?<=^|[\\s.-])LoRD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "LoRD"
@@ -3880,7 +4972,8 @@
     "pattern": "(?<=^|[\\s.-])LolHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "LolHD"
@@ -3890,10 +4983,22 @@
     "pattern": "(?<=^|[\\s.-])Lucifer\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "Lucifer"
+  },
+  {
+    "name": "Lulu",
+    "pattern": "(?<=^|[\\s.-])Lulu\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Lulu"
   },
   {
     "name": "MALUS",
@@ -3902,15 +5007,38 @@
     "tags": [
       "Release Group"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "MALUS"
+  },
+  {
+    "name": "MNHD",
+    "pattern": "(?<=^|[\\s.-])MNHD\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "MNHD"
+  },
+  {
+    "name": "MTBB",
+    "pattern": "(?<=^|[\\s.-])MTBB\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "MTBB"
   },
   {
     "name": "MTeam",
     "pattern": "(?<=^|[\\s.-])MTeam\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "MTeam"
@@ -3920,7 +5048,8 @@
     "pattern": "(?<=^|[\\s.-])MZABI\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "MZABI"
@@ -3930,10 +5059,85 @@
     "pattern": "(?<=^|[\\s.-])MainFrame\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "MainFrame"
+  },
+  {
+    "name": "Max Rename",
+    "pattern": "\\[(MAX)\\b|\\b(MAX)\\]",
+    "description": "Max, formerly (and in some regions still) known as HBO Max, is an American subscription video on-demand over-the-top streaming service. The platform offers content from the libraries of Warner Bros., Discovery, HBO, CNN, Cartoon Network, Adult Swim, Animal Planet, TBS, TNT, Eurosport, and their related brands.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Dune Prophecy S01E02 Two Wolves 1080p MAX WEB-DL DDP5 1 Atmos H 264-FLUX",
+        "lastRun": "2024-12-06T02:54:31.077207",
+        "matchSpan": {
+          "end": 41,
+          "start": 38
+        },
+        "matchedContent": "MAX",
+        "matchedGroups": [
+          "MAX",
+          "DL"
+        ],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 2,
+        "input": "Guardians of the Galaxy Vol. 3 (2023) IMAX (2160p MA WEB-DL Hybrid H265 DV HDR DDP Atmos 5.1 English - HONE)",
+        "lastRun": "2024-12-06T02:54:31.077207",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 3,
+        "input": "Max.Verstappen.Anatomy.of.a.Champion.S01E01.1080p.WEB.h264-B2B",
+        "lastRun": "2024-12-06T02:54:31.077207",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 4,
+        "input": "Silicon Valley S06 1080p HMAX WEB-DL DD5 1 H 264-PHOENiX",
+        "lastRun": "2024-12-06T02:54:31.077207",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 5,
+        "input": "Dune Prophecy S01E01 The Hidden Hand 2160p MAX WEB-DL DDP 5.1 Atmos DV HDR H.265-FLUX",
+        "lastRun": "2024-12-06T02:54:31.077207",
+        "matchSpan": {
+          "end": 46,
+          "start": 43
+        },
+        "matchedContent": "MAX",
+        "matchedGroups": [
+          "MAX",
+          "DL"
+        ],
+        "passes": true
+      }
+    ],
+    "_id": "Max Rename"
   },
   {
     "name": "Max",
@@ -3941,8 +5145,7 @@
     "description": "Max, formerly (and in some regions still) known as HBO Max, is an American subscription video on-demand over-the-top streaming service. The platform offers content from the libraries of Warner Bros., Discovery, HBO, CNN, Cartoon Network, Adult Swim, Animal Planet, TBS, TNT, Eurosport, and their related brands.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -4011,13 +5214,25 @@
     "_id": "Max"
   },
   {
+    "name": "MgB",
+    "pattern": "(?<=^|[\\s.-])MgB\\b",
+    "description": "Banned for Mislabeled 2160p WEBRips",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "MgB"
+  },
+  {
     "name": "MiMiC",
     "pattern": "(?<=^|[\\s.-])MiMiC\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "MiMiC"
   },
   {
@@ -4050,8 +5265,7 @@
     "description": "Movies Anywhere (MA) is a cloud-based digital rights locker and over-the-top streaming platform that allows users to stream and download purchased films, including digital copies redeemed from codes found in home video releases as well as digital purchases from participating services",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -4163,11 +5377,46 @@
     "_id": "Movies Anywhere"
   },
   {
+    "name": "Mysteria",
+    "pattern": "(?<=^|[\\s.-])Mysteria\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Mysteria"
+  },
+  {
+    "name": "NAHOM",
+    "pattern": "(?<=^|[\\s.-])NAHOM\\b",
+    "description": "Banned for Poor Quality Multi",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "NAHOM"
+  },
+  {
+    "name": "NAN0",
+    "pattern": "(?<=^|[\\s.-])NAN0\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "NAN0"
+  },
+  {
     "name": "NCmt",
     "pattern": "(?<=^|[\\s.-])NCmt\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Remux",
+      "Bluray"
     ],
     "tests": [],
     "_id": "NCmt"
@@ -4177,7 +5426,8 @@
     "pattern": "(?<=^|[\\s.-])NOSiViD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "NOSiViD"
@@ -4187,7 +5437,8 @@
     "pattern": "(?<=^|[\\s.-])NTG\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "NTG"
@@ -4197,7 +5448,8 @@
     "pattern": "(?<=^|[\\s.-])NTb\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -4230,13 +5482,23 @@
     "_id": "NTb"
   },
   {
+    "name": "Netaro",
+    "pattern": "(?<=^|[\\s.-])Netaro\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Netaro"
+  },
+  {
     "name": "Netflix",
-    "pattern": "\\b(nf|netflix)\\b",
+    "pattern": "\\b(NF|Netflix)\\b",
     "description": "Netflix is an American subscription video on-demand over-the-top streaming service. The service primarily distributes original and acquired films and television shows from various genres, and it is available internationally in multiple languages.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -4296,6 +5558,28 @@
       }
     ],
     "_id": "Netflix"
+  },
+  {
+    "name": "NhaNc3",
+    "pattern": "(?<=^|[\\s.-])NhaNc3\\b",
+    "description": "Banned for Low Mixed Quality Releases",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "NhaNc3"
+  },
+  {
+    "name": "NoGroup",
+    "pattern": "(?<=^|[\\s.-])NoGr(ou)?p\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "NoGroup"
   },
   {
     "name": "Non Retail HDR Formats",
@@ -4417,7 +5701,7 @@
     "tags": [
       "Release Group",
       "HDR",
-      "Unwanted"
+      "Banned"
     ],
     "tests": [
       {
@@ -4450,34 +5734,92 @@
     "_id": "Non Retail HDR Groups"
   },
   {
-    "name": "NorTekst",
-    "pattern": "(?<=^|[\\s.-])NorTekst\\b",
-    "description": "",
+    "name": "Now Rename",
+    "pattern": "\\[(NOW)\\b|\\b(NOW)\\]",
+    "description": "Now (formerly Now TV and often stylised as NOW) is a subscription over-the-top streaming television service launched in the United Kingdom in 2012. It is operated by Sky Group in Europe, and Xfinity in the US; both owned by the American media conglomerate Comcast.",
     "tags": [
-      "Release Group"
+      "Streaming Service",
+      "WEB-DL"
     ],
-    "tests": null,
-    "_id": "NorTekst"
+    "tests": [],
+    "_id": "Now Rename"
+  },
+  {
+    "name": "Now",
+    "pattern": "\\b(now)\\b[ ._-]web[ ._-]?(dl|rip)?\\b",
+    "description": "Now (formerly Now TV and often stylised as NOW) is a subscription over-the-top streaming television service launched in the United Kingdom in 2012. It is operated by Sky Group in Europe, and Xfinity in the US; both owned by the American media conglomerate Comcast.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Now"
   },
   {
     "name": "NyHD",
     "pattern": "(?<=^|[\\s.-])NyHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "NyHD"
+  },
+  {
+    "name": "OEPlus",
+    "pattern": "(?<=^|[\\s.-])OEPlus\\b",
+    "description": "Banned for Automated Encodes",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "OEPlus"
   },
   {
     "name": "ORiGEN",
     "pattern": "(?<=^|[\\s.-])ORiGEN\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "ORiGEN"
+  },
+  {
+    "name": "OZR",
+    "pattern": "(?<=^|[\\s.-])OZR\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "OZR"
+  },
+  {
+    "name": "Okay-Subs",
+    "pattern": "(?<=^|[\\s.-])Okay-Subs\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Okay-Subs"
+  },
+  {
+    "name": "OnlyWeb",
+    "pattern": "(?<=^|[\\s.-])OnlyWeb\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "HEVC"
+    ],
+    "tests": [],
+    "_id": "OnlyWeb"
   },
   {
     "name": "Open Matte",
@@ -4537,11 +5879,76 @@
     "_id": "Open Matte"
   },
   {
+    "name": "Opus (Negation)",
+    "pattern": "(?<=^|[\\s.-])OPUS\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Opus (Negation)"
+  },
+  {
+    "name": "Opus",
+    "pattern": "\\bOPUS(\\b|\\d)(?!.*[ ._-](\\d{3,4}p))",
+    "description": "",
+    "tags": [
+      "Audio"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Sakura Trick S01 1080p BluRay Opus 2.0 x265-smol",
+        "lastRun": "2025-07-14T01:46:59.723098",
+        "matchSpan": {
+          "end": 34,
+          "start": 30
+        },
+        "matchedContent": "Opus",
+        "matchedGroups": [
+          "",
+          null
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 3,
+        "input": "Arion 1986 1080p BluRay Opus 2.0 x265-Kitsune",
+        "lastRun": "2025-07-14T01:46:59.723098",
+        "matchSpan": {
+          "end": 28,
+          "start": 24
+        },
+        "matchedContent": "Opus",
+        "matchedGroups": [
+          "",
+          null
+        ],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 4,
+        "input": "Opus 2025 1080p AMZN WEB-DL DD+ 5.1 Atmos H.264-BYNDR",
+        "lastRun": "2025-07-14T01:46:59.723098",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      }
+    ],
+    "_id": "Opus"
+  },
+  {
     "name": "P0W4HD",
     "pattern": "(?<=^|[\\s.-])P0W4HD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "P0W4HD"
@@ -4550,7 +5957,9 @@
     "name": "PCM",
     "pattern": "\\b(l?)PCM(\\b|\\d)",
     "description": "",
-    "tags": [],
+    "tags": [
+      "Audio"
+    ],
     "tests": [],
     "_id": "PCM"
   },
@@ -4559,37 +5968,74 @@
     "pattern": "(?<=^|[\\s.-])PHOCiS\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "HEVC"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "PHOCiS"
   },
   {
-    "name": "PRiSTiNE",
-    "pattern": "(?<=^|[\\s.-])PRiSTiNE\\b",
-    "description": "",
+    "name": "PHOENiX",
+    "pattern": "(?<=^|[\\s.-])PHOENiX\\b",
+    "description": "Matches \"PHOENiX\" when preceded by whitespace, a hyphen or dot",
     "tags": [
       "Release Group"
     ],
-    "tests": null,
-    "_id": "PRiSTiNE"
+    "tests": [],
+    "_id": "PHOENiX"
+  },
+  {
+    "name": "PP",
+    "pattern": "(?<=^|[\\s.-])PP\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux"
+    ],
+    "tests": [],
+    "_id": "PP"
+  },
+  {
+    "name": "PQ",
+    "pattern": "\\b(PQ|PQ10)\\b",
+    "description": "This regex matches a `PQ` generalisation. This is a basic HDR Format.",
+    "tags": [
+      "Enhancement",
+      "Colour Grade",
+      "HDR"
+    ],
+    "tests": [],
+    "_id": "PQ"
   },
   {
     "name": "PTH",
     "pattern": "(?<=^|[\\s.-])PTH\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "PTH"
+  },
+  {
+    "name": "PTP",
+    "pattern": "(?<=^|[\\s.-])PTP\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux"
+    ],
+    "tests": [],
+    "_id": "PTP"
   },
   {
     "name": "PTer",
     "pattern": "(?<=^|[\\s.-])PTer\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [
       {
@@ -4623,7 +6069,8 @@
     "pattern": "(?<=^|[\\s.-])PTerWEB\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -4654,12 +6101,11 @@
   },
   {
     "name": "Paramount+",
-    "pattern": "\\b(pmtp|Paramount Plus)\\b",
+    "pattern": "\\b(PMTP|Paramount Plus)\\b",
     "description": "Paramount+ is an American subscription video on-demand over-the-top streaming service owned that offers content primarily from the libraries of CBS Media Ventures, CBS Studios, Paramount Media Networks and Paramount Pictures, while also including original series and films, live streaming sports coverage, and in the United States, live streaming of local CBS broadcast stations. ",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -4706,20 +6152,19 @@
     "_id": "Paramount+"
   },
   {
-    "name": "Peacock TV",
-    "pattern": "\\b(?:(?:1080|2160|720)p\\s+PCOK|(?:Peacock\\s+Web-?DL|Web-?DL\\s+Peacock))\\b",
+    "name": "Peacock TV Rename",
+    "pattern": "\\[(PCOK)\\b|\\b(PCOK)\\]",
     "description": "Peacock is an American over-the-top subscription streaming service owned and operated by Peacock TV, LLC, a subsidiary of NBCUniversal Media Group. The service primarily features series and film content from NBCUniversal studios and other third-party content providers (such as WWE and Hallmark Channel).",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
         "expected": true,
         "id": 1,
         "input": "The Day of the Jackal S01E05 1080p PCOK WEB-DL DDP5 1 H 264-STC",
-        "lastRun": "2024-12-06T01:57:36.984387",
+        "lastRun": "2025-03-25T16:16:33.336288",
         "matchSpan": {
           "end": 39,
           "start": 29
@@ -4732,7 +6177,7 @@
         "expected": true,
         "id": 2,
         "input": "Fight Night - The Million Dollar Heist (2024) S01E01 (2160p PCOK WEB-DL H265 SDR DDP 5.1 English - HONE)",
-        "lastRun": "2024-12-06T01:57:36.984387",
+        "lastRun": "2025-03-25T16:16:33.336288",
         "matchSpan": {
           "end": 64,
           "start": 54
@@ -4745,7 +6190,7 @@
         "expected": true,
         "id": 3,
         "input": "Halloween Kills 2021 1080p Peacock WebDL H264 AC3 Will1869",
-        "lastRun": "2024-12-06T01:57:36.984387",
+        "lastRun": "2025-03-25T16:16:33.336288",
         "matchSpan": {
           "end": 40,
           "start": 27
@@ -4758,7 +6203,7 @@
         "expected": false,
         "id": 4,
         "input": "Peacock.S01.1080p.AMZN.WEB-DL.DDP2.0.H.264-Cinefeel",
-        "lastRun": "2024-12-06T01:57:36.984387",
+        "lastRun": "2025-03-25T16:16:33.336288",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -4768,7 +6213,7 @@
         "expected": false,
         "id": 5,
         "input": "Peacock.S02.1080p.iP.WEB-DL.AAC2.0.H.264-RNG",
-        "lastRun": "2024-12-06T01:57:36.984387",
+        "lastRun": "2025-03-25T16:16:33.336288",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -4778,9 +6223,142 @@
         "expected": false,
         "id": 6,
         "input": "Banana Fish S01E16 Lo The Poor Peacock WEB h264-PLUTONiUM",
-        "lastRun": "2024-12-06T01:57:36.984387",
+        "lastRun": "2025-03-25T16:16:33.336288",
         "matchSpan": null,
         "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 7,
+        "input": "Kingsman The Secret Service 2014 1080p PCOK WEB-DL DDP 5 1 H 264-PiRaTeS",
+        "lastRun": "2025-03-25T16:16:33.336288",
+        "matchSpan": {
+          "end": 43,
+          "start": 33
+        },
+        "matchedContent": "1080p PCOK",
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 8,
+        "input": "Kingsman.The.Secret.Service.2014.1080p.PCOK.WEB-DL.DDP.5.1.H.264-PiRaTeS",
+        "lastRun": "2025-03-25T16:16:33.336288",
+        "matchSpan": {
+          "end": 43,
+          "start": 33
+        },
+        "matchedContent": "1080p.PCOK",
+        "matchedGroups": [],
+        "passes": true
+      }
+    ],
+    "_id": "Peacock TV Rename"
+  },
+  {
+    "name": "Peacock TV",
+    "pattern": "\\b(?:(?:1080|2160|720)p(?:[ .]+)PCOK|(?:Peacock(?:[ .]+)Web-?DL|Web-?DL(?:[ .]+)Peacock))\\b",
+    "description": "Peacock is an American over-the-top subscription streaming service owned and operated by Peacock TV, LLC, a subsidiary of NBCUniversal Media Group. The service primarily features series and film content from NBCUniversal studios and other third-party content providers (such as WWE and Hallmark Channel).",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "The Day of the Jackal S01E05 1080p PCOK WEB-DL DDP5 1 H 264-STC",
+        "lastRun": "2025-03-25T16:16:33.336288",
+        "matchSpan": {
+          "end": 39,
+          "start": 29
+        },
+        "matchedContent": "1080p PCOK",
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 2,
+        "input": "Fight Night - The Million Dollar Heist (2024) S01E01 (2160p PCOK WEB-DL H265 SDR DDP 5.1 English - HONE)",
+        "lastRun": "2025-03-25T16:16:33.336288",
+        "matchSpan": {
+          "end": 64,
+          "start": 54
+        },
+        "matchedContent": "2160p PCOK",
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 3,
+        "input": "Halloween Kills 2021 1080p Peacock WebDL H264 AC3 Will1869",
+        "lastRun": "2025-03-25T16:16:33.336288",
+        "matchSpan": {
+          "end": 40,
+          "start": 27
+        },
+        "matchedContent": "Peacock WebDL",
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 4,
+        "input": "Peacock.S01.1080p.AMZN.WEB-DL.DDP2.0.H.264-Cinefeel",
+        "lastRun": "2025-03-25T16:16:33.336288",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 5,
+        "input": "Peacock.S02.1080p.iP.WEB-DL.AAC2.0.H.264-RNG",
+        "lastRun": "2025-03-25T16:16:33.336288",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 6,
+        "input": "Banana Fish S01E16 Lo The Poor Peacock WEB h264-PLUTONiUM",
+        "lastRun": "2025-03-25T16:16:33.336288",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 7,
+        "input": "Kingsman The Secret Service 2014 1080p PCOK WEB-DL DDP 5 1 H 264-PiRaTeS",
+        "lastRun": "2025-03-25T16:16:33.336288",
+        "matchSpan": {
+          "end": 43,
+          "start": 33
+        },
+        "matchedContent": "1080p PCOK",
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 8,
+        "input": "Kingsman.The.Secret.Service.2014.1080p.PCOK.WEB-DL.DDP.5.1.H.264-PiRaTeS",
+        "lastRun": "2025-03-25T16:16:33.336288",
+        "matchSpan": {
+          "end": 43,
+          "start": 33
+        },
+        "matchedContent": "1080p.PCOK",
         "matchedGroups": [],
         "passes": true
       }
@@ -4792,17 +6370,52 @@
     "pattern": "(?<=^|[\\s.-])Penumbra\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "Penumbra"
+  },
+  {
+    "name": "PiRaTeS",
+    "pattern": "(?<=^|[\\s.-])PiRaTeS\\b",
+    "description": "Banned for Mislabeling WEB-DLs as WEBRips",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "PiRaTeS"
+  },
+  {
+    "name": "PmP",
+    "pattern": "(?<=^|[\\s.-])PmP\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux"
+    ],
+    "tests": [],
+    "_id": "PmP"
+  },
+  {
+    "name": "Pookie",
+    "pattern": "(?<=^|[\\s.-])Pookie\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Pookie"
   },
   {
     "name": "Positive",
     "pattern": "(?<=^|[\\s.-])Positive\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "Positive"
@@ -4812,49 +6425,132 @@
     "pattern": "(?<=^|[\\s.-])PussyFoot\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "PussyFoot"
   },
   {
-    "name": "R",
-    "pattern": "(?<=^|[\\s.-])R\\b",
+    "name": "QOQ",
+    "pattern": "(?<=^|[\\s.-])QOQ\\b",
+    "description": "Matches \"QOQ\" when preceded by whitespace, a hyphen or dot",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "QOQ"
+  },
+  {
+    "name": "Quetzal",
+    "pattern": "(?<=^|[\\s.-])Quetzal\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Anime"
     ],
-    "tests": null,
-    "_id": "R"
+    "tests": [],
+    "_id": "Quetzal"
+  },
+  {
+    "name": "QxR",
+    "pattern": "(?<=^|[\\s.-])(QxR|afm72|Bandi|FreetheFish|Garshasp|Ghost|Ime|Kappa|Langbard|LION|Panda|MONOLITH|Natty|r00t|RCVR|RZeroX|SAMPA|Silence|t3nzin|Tigole|YOGI)\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "HEVC"
+    ],
+    "tests": [],
+    "_id": "QxR"
+  },
+  {
+    "name": "R1GY3B",
+    "pattern": "(?<=^|[\\s.-])R1GY3B\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "R1GY3B"
+  },
+  {
+    "name": "RARGB",
+    "pattern": "(?<=^|[\\s.-])RARGB\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "RARGB"
   },
   {
     "name": "REBORN",
     "pattern": "(?<=^|[\\s.-])REBORN\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "REBORN"
   },
   {
-    "name": "RandH",
-    "pattern": "(?<=^|[\\s.-])RandH\\b",
+    "name": "ROCCaT",
+    "pattern": "(?<=^|[\\s.-])ROCCaT\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
-    "tests": null,
-    "_id": "RandH"
+    "tests": [],
+    "_id": "ROCCaT"
+  },
+  {
+    "name": "Raizel",
+    "pattern": "(?<=^|[\\s.-])Raizel\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Raizel"
+  },
+  {
+    "name": "Ralphy",
+    "pattern": "(?<=^|[\\s.-])Ralphy\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Ralphy"
+  },
+  {
+    "name": "Rasetsu",
+    "pattern": "(?<=^|[\\s.-])Rasetsu\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Rasetsu"
   },
   {
     "name": "ReQuEsT",
     "pattern": "(?<=^|[\\s.-])ReQuEsT\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "ReQuEsT"
   },
   {
@@ -4862,14 +6558,26 @@
     "pattern": "(?<=^|[\\s.-])ReaLHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "ReaLHD"
   },
   {
+    "name": "Release Group (Missing)",
+    "pattern": ".",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "Release Group (Missing)"
+  },
+  {
     "name": "Remux",
-    "pattern": "remux",
+    "pattern": "Remux",
     "description": "A remux is a digital video file that maintains the exact quality of the original source (like a Blu-ray or DVD) by copying the video and audio streams without re-encoding them, essentially creating a perfect 1:1 copy. Think of it like carefully transferring the contents of a Blu-ray disc into a more convenient container file format (typically MKV), similar to pouring fine wine from its bottle into a decanter without changing the wine itself.",
     "tags": [
       "Codec",
@@ -4882,7 +6590,7 @@
         "expected": true,
         "id": 1,
         "input": "1917 (2019) 2160p UHD BluRay REMUX HEVC DV HDR10+ TrueHD Atmos 7.1 English-FraMeSToR",
-        "lastRun": "2024-12-07T00:09:00.820662",
+        "lastRun": "2025-06-16T08:17:22.781547",
         "matchSpan": {
           "end": 34,
           "start": 29
@@ -4896,7 +6604,7 @@
   },
   {
     "name": "Repack1",
-    "pattern": "(?<=.*?\\d{4}.*?)\\b(re(pack|rip)|proper)\\b",
+    "pattern": "\\b(re(pack|rip)|proper)\\b",
     "description": "Matches 'PROPER' or 'REPACK' or 'RERIP' only when they appear after a year (4 digits) but not before one.\n\n* `(?<=.*?\\d{4}.*?)` - look for a 4-digit number before\n* `\\b(re(pack|rip)|proper)\\b` - match proper/repack/rerip",
     "tags": [
       "Repack",
@@ -4907,7 +6615,7 @@
         "expected": true,
         "id": 1,
         "input": "The Zone of Interest 2023 PROPER 2160p UHD BluRay TrueHD 7.1 Atmos HDR x265-MainFrame",
-        "lastRun": "2025-02-06T06:58:16.693168",
+        "lastRun": "2025-06-17T18:42:29.675411",
         "matchSpan": {
           "end": 32,
           "start": 26
@@ -4923,24 +6631,30 @@
         "expected": false,
         "id": 2,
         "input": "Proper.Pronouns.2020.720p.WEB-DL.AAC2.0.x264-ZTR.mkv",
-        "lastRun": "2025-02-06T06:58:16.693168",
-        "matchSpan": null,
-        "matchedContent": null,
-        "matchedGroups": [],
-        "passes": true
+        "lastRun": "2025-06-17T18:42:29.675411",
+        "matchSpan": {
+          "end": 6,
+          "start": 0
+        },
+        "matchedContent": "Proper",
+        "matchedGroups": [
+          "Proper",
+          null
+        ],
+        "passes": false
       },
       {
         "expected": true,
         "id": 3,
         "input": "Proper.Pronouns.2020.720p.PROPER.WEB-DL.AAC2.0.x264-ZTR.mkv",
-        "lastRun": "2025-02-06T06:58:16.693168",
+        "lastRun": "2025-06-17T18:42:29.675411",
         "matchSpan": {
-          "end": 32,
-          "start": 26
+          "end": 6,
+          "start": 0
         },
-        "matchedContent": "PROPER",
+        "matchedContent": "Proper",
         "matchedGroups": [
-          "PROPER",
+          "Proper",
           null
         ],
         "passes": true
@@ -4949,7 +6663,7 @@
         "expected": true,
         "id": 4,
         "input": "Sonic.the.Hedgehog.3.2024.REPACK.2160p.WEB-DL.DDP5.1.Atmos.DoVi.HDR.H.265-FLUX",
-        "lastRun": "2025-02-06T06:58:16.693168",
+        "lastRun": "2025-06-17T18:42:29.675411",
         "matchSpan": {
           "end": 32,
           "start": 26
@@ -4965,7 +6679,7 @@
         "expected": true,
         "id": 5,
         "input": "roommate.wanted.2015.rerip.720p.bluray.x264-rusted.mkv",
-        "lastRun": "2025-02-06T06:58:16.693168",
+        "lastRun": "2025-06-17T18:42:29.675411",
         "matchSpan": {
           "end": 26,
           "start": 21
@@ -4974,6 +6688,22 @@
         "matchedGroups": [
           "rerip",
           "rip"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 6,
+        "input": "Game of Thrones S01 REPACK 2160p MAX WEB-DL TrueHD 7.1 Atmos DV HDR H.265-Kitsune",
+        "lastRun": "2025-06-17T18:42:29.675411",
+        "matchSpan": {
+          "end": 26,
+          "start": 20
+        },
+        "matchedContent": "REPACK",
+        "matchedGroups": [
+          "REPACK",
+          "PACK"
         ],
         "passes": true
       }
@@ -4993,7 +6723,7 @@
         "expected": true,
         "id": 1,
         "input": "The Zone of Interest 2023 PROPER2 2160p UHD BluRay TrueHD 7.1 Atmos HDR x265-MainFrame",
-        "lastRun": "2025-02-06T07:10:05.298113",
+        "lastRun": "2025-06-17T18:46:34.789609",
         "matchSpan": {
           "end": 33,
           "start": 26
@@ -5012,7 +6742,7 @@
         "expected": false,
         "id": 2,
         "input": "Proper.Pronouns.2020.720p.WEB-DL.AAC2.0.x264-ZTR.mkv",
-        "lastRun": "2025-02-06T07:10:05.298113",
+        "lastRun": "2025-06-17T18:46:34.789609",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -5022,7 +6752,7 @@
         "expected": true,
         "id": 3,
         "input": "Proper.Pronouns.2020.720p.PROPER2.WEB-DL.AAC2.0.x264-ZTR.mkv",
-        "lastRun": "2025-02-06T07:10:05.298113",
+        "lastRun": "2025-06-17T18:46:34.789609",
         "matchSpan": {
           "end": 33,
           "start": 26
@@ -5041,7 +6771,7 @@
         "expected": true,
         "id": 4,
         "input": "Sonic.the.Hedgehog.3.2024.REPACK2.2160p.WEB-DL.DDP5.1.Atmos.DoVi.HDR.H.265-FLUX",
-        "lastRun": "2025-02-06T07:10:05.298113",
+        "lastRun": "2025-06-17T18:46:34.789609",
         "matchSpan": {
           "end": 33,
           "start": 26
@@ -5060,7 +6790,7 @@
         "expected": true,
         "id": 5,
         "input": "roommate.wanted.2015.rerip2.720p.bluray.x264-rusted.mkv",
-        "lastRun": "2025-02-06T07:10:05.298113",
+        "lastRun": "2025-06-17T18:46:34.789609",
         "matchSpan": {
           "end": 27,
           "start": 21
@@ -5079,7 +6809,7 @@
         "expected": false,
         "id": 6,
         "input": "The Zone of Interest 2023 PROPER 2160p UHD BluRay TrueHD 7.1 Atmos HDR x265-MainFrame",
-        "lastRun": "2025-02-06T07:10:05.298113",
+        "lastRun": "2025-06-17T18:46:34.789609",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -5089,7 +6819,7 @@
         "expected": false,
         "id": 7,
         "input": "Sonic.the.Hedgehog.3.2024.REPACK.2160p.WEB-DL.DDP5.1.Atmos.DoVi.HDR.H.265-FLUX",
-        "lastRun": "2025-02-06T07:10:05.298113",
+        "lastRun": "2025-06-17T18:46:34.789609",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -5099,7 +6829,7 @@
         "expected": true,
         "id": 8,
         "input": "Yo-Kai Watch S02E17 DUBBED REAL REPACK HDTV x264-W4F",
-        "lastRun": "2025-02-06T07:10:05.298113",
+        "lastRun": "2025-06-17T18:46:34.789609",
         "matchSpan": {
           "end": 38,
           "start": 27
@@ -5111,6 +6841,25 @@
           "PACK",
           null,
           null
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 9,
+        "input": "Game of Thrones S01 REPACK2 2160p MAX WEB-DL TrueHD 7.1 Atmos DV HDR H.265-Kitsune",
+        "lastRun": "2025-06-17T18:46:34.789609",
+        "matchSpan": {
+          "end": 27,
+          "start": 20
+        },
+        "matchedContent": "REPACK2",
+        "matchedGroups": [
+          "REPACK2",
+          null,
+          null,
+          "REPACK",
+          "PACK"
         ],
         "passes": true
       }
@@ -5130,7 +6879,7 @@
         "expected": true,
         "id": 1,
         "input": "The Zone of Interest 2023 PROPER3 2160p UHD BluRay TrueHD 7.1 Atmos HDR x265-MainFrame",
-        "lastRun": "2025-02-06T07:11:35.323972",
+        "lastRun": "2025-06-17T18:46:43.670504",
         "matchSpan": {
           "end": 33,
           "start": 26
@@ -5149,7 +6898,7 @@
         "expected": false,
         "id": 2,
         "input": "Proper.Pronouns.2020.720p.WEB-DL.AAC2.0.x264-ZTR.mkv",
-        "lastRun": "2025-02-06T07:11:35.323972",
+        "lastRun": "2025-06-17T18:46:43.670504",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -5159,7 +6908,7 @@
         "expected": true,
         "id": 3,
         "input": "Proper.Pronouns.2020.720p.PROPER3.WEB-DL.AAC2.0.x264-ZTR.mkv",
-        "lastRun": "2025-02-06T07:11:35.323972",
+        "lastRun": "2025-06-17T18:46:43.670504",
         "matchSpan": {
           "end": 33,
           "start": 26
@@ -5178,7 +6927,7 @@
         "expected": true,
         "id": 4,
         "input": "Sonic.the.Hedgehog.3.2024.REPACK3.2160p.WEB-DL.DDP5.1.Atmos.DoVi.HDR.H.265-FLUX",
-        "lastRun": "2025-02-06T07:11:35.323972",
+        "lastRun": "2025-06-17T18:46:43.670504",
         "matchSpan": {
           "end": 33,
           "start": 26
@@ -5197,7 +6946,7 @@
         "expected": true,
         "id": 5,
         "input": "roommate.wanted.2015.rerip3.720p.bluray.x264-rusted.mkv",
-        "lastRun": "2025-02-06T07:11:35.323972",
+        "lastRun": "2025-06-17T18:46:43.670504",
         "matchSpan": {
           "end": 27,
           "start": 21
@@ -5216,7 +6965,7 @@
         "expected": false,
         "id": 6,
         "input": "The Zone of Interest 2023 PROPER 2160p UHD BluRay TrueHD 7.1 Atmos HDR x265-MainFrame",
-        "lastRun": "2025-02-06T07:11:35.323972",
+        "lastRun": "2025-06-17T18:46:43.670504",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -5226,7 +6975,7 @@
         "expected": false,
         "id": 7,
         "input": "Sonic.the.Hedgehog.3.2024.REPACK.2160p.WEB-DL.DDP5.1.Atmos.DoVi.HDR.H.265-FLUX",
-        "lastRun": "2025-02-06T07:11:35.323972",
+        "lastRun": "2025-06-17T18:46:43.670504",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
@@ -5236,7 +6985,7 @@
         "expected": true,
         "id": 8,
         "input": "Yo-Kai Watch S02E17 DUBBED REAL REAL REPACK HDTV x264-W4F",
-        "lastRun": "2025-02-06T07:11:35.323972",
+        "lastRun": "2025-06-17T18:46:43.670504",
         "matchSpan": {
           "end": 43,
           "start": 27
@@ -5250,32 +6999,50 @@
           null
         ],
         "passes": true
+      },
+      {
+        "expected": true,
+        "id": 9,
+        "input": "Game of Thrones S01 REPACK3 2160p MAX WEB-DL TrueHD 7.1 Atmos DV HDR H.265-Kitsune",
+        "lastRun": "2025-06-17T18:46:43.670504",
+        "matchSpan": {
+          "end": 27,
+          "start": 20
+        },
+        "matchedContent": "REPACK3",
+        "matchedGroups": [
+          "REPACK3",
+          null,
+          null,
+          "REPACK",
+          "PACK"
+        ],
+        "passes": true
       }
     ],
     "_id": "Repack3"
   },
   {
     "name": "Roku",
-    "pattern": "\\b(1080p[ .\\-_]ROKU|ROKU[ .\\-_]1080p)\\b",
+    "pattern": "(?<=\\b[12]\\d{3}\\b).*\\b(ROKU)\\b",
     "description": "The Roku Channel is an over-the-top video streaming service available in the U.S., Canada, Mexico and the U.K. Launched in September 2017. The Roku Channel offers over 400 free live linear TV channels, more than 80,000 free movies and shows, and access to paid content.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
         "expected": true,
         "id": 1,
         "input": "10 Minutes Gone 2019 1080p ROKU WEB-DL DD 5 1 H 264-PiRaTeS",
-        "lastRun": "2024-12-06T05:35:49.092439",
+        "lastRun": "2025-06-16T08:12:32.176786",
         "matchSpan": {
           "end": 31,
-          "start": 21
+          "start": 20
         },
-        "matchedContent": "1080p ROKU",
+        "matchedContent": " 1080p ROKU",
         "matchedGroups": [
-          "1080p ROKU"
+          "ROKU"
         ],
         "passes": true
       },
@@ -5283,25 +7050,35 @@
         "expected": false,
         "id": 2,
         "input": "Natsume's Book of Friends S06 AKA Natsume Yuujinchou Roku 1080p BluRay FLAC 2.0 Hi10P x264-CyC",
-        "lastRun": "2024-12-06T05:35:49.092439",
-        "matchSpan": {
-          "end": 63,
-          "start": 53
-        },
-        "matchedContent": "Roku 1080p",
-        "matchedGroups": [
-          "Roku 1080p"
-        ],
-        "passes": false
+        "lastRun": "2025-06-16T08:12:32.176786",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
       },
       {
         "expected": false,
         "id": 3,
         "input": "Natsume's Book of Friends AKA Natsume Yuujinchou Roku S06 1080p CR WEB-DL Dubbed AAC 2.0 H.264-Yameii",
-        "lastRun": "2024-12-06T05:35:49.092439",
+        "lastRun": "2025-06-16T08:12:32.176786",
         "matchSpan": null,
         "matchedContent": null,
         "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 4,
+        "input": "Flower & Garnet 2002 480p ROKU WEB-DL AAC 2.0 H.264-vase",
+        "lastRun": "2025-06-16T08:12:32.176786",
+        "matchSpan": {
+          "end": 30,
+          "start": 20
+        },
+        "matchedContent": " 480p ROKU",
+        "matchedGroups": [
+          "ROKU"
+        ],
         "passes": true
       }
     ],
@@ -5312,14 +7089,37 @@
     "pattern": "(?<=^|[\\s.-])SA89\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "SA89"
   },
   {
+    "name": "SARTRE",
+    "pattern": "(?<=^|[\\s.-])SARTRE\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "SARTRE"
+  },
+  {
+    "name": "SCY",
+    "pattern": "(?<=^|[\\s.-])SCY\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "SCY"
+  },
+  {
     "name": "SDR",
-    "pattern": "\\bSDR\\b",
+    "pattern": "\\b(SDR)\\b",
     "description": "Explicitly matches labelled Standard Dynamic Range, i.e. \"SDR\" ",
     "tags": [
       "HDR"
@@ -5329,40 +7129,45 @@
         "expected": true,
         "id": 1,
         "input": "Yojimbo.1961.REPACK.2160p.UHD.Blu-ray.Remux.SDR.HEVC.FLAC.1.0-CiNEPHiLES.mkv",
-        "lastRun": "2025-01-11T22:58:34.197378",
+        "lastRun": "2025-04-15T14:47:06.326256",
         "matchSpan": {
           "end": 47,
           "start": 44
         },
         "matchedContent": "SDR",
-        "matchedGroups": [],
+        "matchedGroups": [
+          "SDR"
+        ],
         "passes": true
       },
       {
         "expected": true,
         "id": 2,
         "input": "For a Few Dollars More aka Per qualche dollaro in pi\u00f9 1965 UHD BluRay 2160p DTS-HD MA 5.1 SDR HEVC REMUX-FraMeSToR",
-        "lastRun": "2025-01-11T22:58:34.197378",
+        "lastRun": "2025-04-15T14:47:06.326256",
         "matchSpan": {
           "end": 93,
           "start": 90
         },
         "matchedContent": "SDR",
-        "matchedGroups": [],
+        "matchedGroups": [
+          "SDR"
+        ],
         "passes": true
       }
     ],
     "_id": "SDR"
   },
   {
-    "name": "SESKAPiLE",
-    "pattern": "(?<=^|[\\s.-])SESKAPiLE\\b",
-    "description": "",
+    "name": "SHD",
+    "pattern": "(?<=^|[\\s.-])SHD\\b",
+    "description": "Banned for Retagging",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
-    "tests": null,
-    "_id": "SESKAPiLE"
+    "tests": [],
+    "_id": "SHD"
   },
   {
     "name": "SM737",
@@ -5393,9 +7198,10 @@
     "pattern": "(?<=^|[\\s.-])SMAHAWUG\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "SMAHAWUG"
   },
   {
@@ -5403,7 +7209,8 @@
     "pattern": "(?<=^|[\\s.-])SMURF\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "SMURF"
@@ -5413,7 +7220,8 @@
     "pattern": "(?<=^|[\\s.-])SOP\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [
       {
@@ -5433,23 +7241,14 @@
     "_id": "SOP"
   },
   {
-    "name": "SP4K",
-    "pattern": "(?<=^|[\\s.-])SP4K\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "SP4K"
-  },
-  {
     "name": "SPECTACLE",
     "pattern": "(?<=^|[\\s.-])SPECTACLE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "SPECTACLE"
   },
   {
@@ -5457,29 +7256,54 @@
     "pattern": "(?<=^|[\\s.-])SPHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "SPHD"
+  },
+  {
+    "name": "SQS",
+    "pattern": "(?<=^|[\\s.-])SQS\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "SQS"
   },
   {
     "name": "STRiKES",
     "pattern": "(?<=^|[\\s.-])STRiKES\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "STRiKES"
+  },
+  {
+    "name": "STUTTERSHIT",
+    "pattern": "(?<=^|[\\s.-])STUTTERSHIT\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "STUTTERSHIT"
   },
   {
     "name": "SURCODE",
     "pattern": "(?<=^|[\\s.-])SURCODE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "SURCODE"
   },
   {
@@ -5487,9 +7311,10 @@
     "pattern": "(?<=^|[\\s.-])SWAGGERUHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "SWAGGERUHD"
   },
   {
@@ -5497,9 +7322,10 @@
     "pattern": "(?<=^|[\\s.-])SWTYBLZ\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "SWTYBLZ"
   },
   {
@@ -5507,17 +7333,52 @@
     "pattern": "(?<=^|[\\s.-])SaNcTi\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "SaNcTi"
+  },
+  {
+    "name": "Saizen",
+    "pattern": "(?<=^|[\\s.-])Saizen\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Saizen"
+  },
+  {
+    "name": "SallySubs",
+    "pattern": "(?<=^|[\\s.-])SallySubs\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "SallySubs"
+  },
+  {
+    "name": "SasukeducK",
+    "pattern": "(?<=^|[\\s.-])SasukeducK\\b",
+    "description": "Banned for Fake DV/HDR Layer",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "SasukeducK"
   },
   {
     "name": "SbR",
     "pattern": "(?<=^|[\\s.-])SbR\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "SbR"
@@ -5531,21 +7392,78 @@
     "_id": "Scene"
   },
   {
+    "name": "Senjou",
+    "pattern": "(?<=^|[\\s.-])Senjou\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Senjou"
+  },
+  {
+    "name": "ShieldBearer",
+    "pattern": "(?<=^|[\\s.-])ShieldBearer\\b",
+    "description": "Banned For AI Upscale",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "ShieldBearer"
+  },
+  {
+    "name": "Showtime Rename",
+    "pattern": "\\[(SHO)\\b|\\b(SHO)\\]",
+    "description": "Showtime (also known as Paramount+ with Showtime) is an American premium television network and the flagship property of Showtime Networks, a sub-division of the Paramount Media Networks division of Paramount Global. Showtime's programming includes original television series produced exclusively for the linear network and developed for the co-owned Paramount+ streaming service, theatrically released and independent motion pictures, documentaries, and occasional stand-up comedy specials, made-for-TV movies, and softcore adult programming.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Showtime Rename"
+  },
+  {
+    "name": "Showtime",
+    "pattern": "\\b(sho|showtime)\\b[ ._-]web[ ._-]?(dl|rip)?\\b",
+    "description": "Showtime (also known as Paramount+ with Showtime) is an American premium television network and the flagship property of Showtime Networks, a sub-division of the Paramount Media Networks division of Paramount Global. Showtime's programming includes original television series produced exclusively for the linear network and developed for the co-owned Paramount+ streaming service, theatrically released and independent motion pictures, documentaries, and occasional stand-up comedy specials, made-for-TV movies, and softcore adult programming.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Showtime"
+  },
+  {
     "name": "SiC",
     "pattern": "(?<=^|[\\s.-])SiC\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "SiC"
+  },
+  {
+    "name": "SiCFoI",
+    "pattern": "(?<=^|[\\s.-])SiCFoI\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux"
+    ],
+    "tests": [],
+    "_id": "SiCFoI"
   },
   {
     "name": "SiGLA",
     "pattern": "(?<=^|[\\s.-])SiGLA\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -5569,7 +7487,8 @@
     "pattern": "(?<=^|[\\s.-])SiGMA\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "SiGMA"
@@ -5579,7 +7498,8 @@
     "pattern": "(?<=^|[\\s.-])SiMPLE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "SiMPLE"
@@ -5615,9 +7535,10 @@
     "pattern": "(?<=^|[\\s.-])SoLaR\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "SoLaR"
   },
   {
@@ -5992,21 +7913,78 @@
     "_id": "Special Edition"
   },
   {
+    "name": "Stan Rename",
+    "pattern": "\\[(STAN)\\b|\\b(STAN)\\]",
+    "description": "Stan is an Australian over-the-top streaming service. The service offers a broad range of film and television content from both local and foreign productions, particularly from the United States and United Kingdom.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Stan Rename"
+  },
+  {
+    "name": "Stan",
+    "pattern": "\\b(stan)\\b[ ._-]web[ ._-]?(dl|rip)?\\b",
+    "description": "Stan is an Australian over-the-top streaming service. The service offers a broad range of film and television content from both local and foreign productions, particularly from the United States and United Kingdom.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Stan"
+  },
+  {
+    "name": "SubsPlease",
+    "pattern": "(?<=^|[\\s.-])SubsPlease\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "SubsPlease"
+  },
+  {
+    "name": "SubsPlus+",
+    "pattern": "(?<=^|[\\s.-])SubsPlus+\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "SubsPlus+"
+  },
+  {
     "name": "SumVision",
     "pattern": "(?<=^|[\\s.-])SumVision\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Remux"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "SumVision"
+  },
+  {
+    "name": "TAoE",
+    "pattern": "(?<=^|[\\s.-])(TAoE|Ainz|AJJMIN|ANONAZ|ArcX|bccornfo|DNU|DrainedDay|DUHIT|Erie|Frys|Goki|HxD|jb2049|JBENT|Nostradamus|r0b0t|Species180|TheSickle|xtrem3x|WEM)\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "HEVC"
+    ],
+    "tests": [],
+    "_id": "TAoE"
   },
   {
     "name": "TBB",
     "pattern": "(?<=^|[\\s.-])TBB\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "TBB"
@@ -6016,17 +7994,30 @@
     "pattern": "(?<=^|[\\s.-])TDD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "TDD"
+  },
+  {
+    "name": "TEKNO3D",
+    "pattern": "(?<=^|[\\s.-])TEKNO3D\\b",
+    "description": "Banned for Fake DV/HDR Layer",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "TEKNO3D"
   },
   {
     "name": "TEPES",
     "pattern": "(?<=^|[\\s.-])TEPES\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "TEPES"
@@ -6036,17 +8027,30 @@
     "pattern": "(?<=^|[\\s.-])TERMiNAL\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "TERMiNAL"
+  },
+  {
+    "name": "THORA",
+    "pattern": "(?<=^|[\\s.-])THORA\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "THORA"
   },
   {
     "name": "THREESOME",
     "pattern": "(?<=^|[\\s.-])THREESOME\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "THREESOME"
@@ -6056,20 +8060,44 @@
     "pattern": "(?<=^|[\\s.-])TOMBCRUISE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "TOMBCRUISE"
   },
   {
-    "name": "TUSAHD",
-    "pattern": "(?<=^|[\\s.-])TUSAHD\\b",
+    "name": "TOMMY",
+    "pattern": "(?<=^|[\\s.-])TOMMY\\b",
+    "description": "Matches \"TOMMY\" when preceded by whitespace, a hyphen or dot",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "TOMMY"
+  },
+  {
+    "name": "TRiToN",
+    "pattern": "(?<=^|[\\s.-])TRiToN\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Remux"
     ],
-    "tests": null,
-    "_id": "TUSAHD"
+    "tests": [],
+    "_id": "TRiToN"
+  },
+  {
+    "name": "TTGA",
+    "pattern": "(?<=^|[\\s.-])TTGA\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "TTGA"
   },
   {
     "name": "TVING",
@@ -6077,9 +8105,9 @@
     "description": "TVING is a South Korean subscription video on-demand over-the-top streaming service operated by TVING Corporation, a joint venture made of CJ ENM Entertainment Division, Naver and JTBC by its JTBC Studios, now called SLL.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
+    "tests": [],
     "_id": "TVING"
   },
   {
@@ -6087,20 +8115,22 @@
     "pattern": "(?<=^|[\\s.-])TayTo\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "TayTo"
   },
   {
-    "name": "ThD",
-    "pattern": "(?<=^|[\\s.-])ThD\\b",
-    "description": "",
+    "name": "Telly",
+    "pattern": "(?<=^|[\\s.-])Telly\\b",
+    "description": "Banned for Retagging",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Banned"
     ],
     "tests": [],
-    "_id": "ThD"
+    "_id": "Telly"
   },
   {
     "name": "Theatrical Edition",
@@ -6160,33 +8190,47 @@
     "_id": "Theatrical Edition"
   },
   {
-    "name": "Tigole",
-    "pattern": "(?<=^|[\\s.-])Tigole\\b",
+    "name": "TimeDistortion",
+    "pattern": "(?<=^|[\\s.-])TimeDistortion\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
-    "tests": null,
-    "_id": "Tigole"
+    "tests": [],
+    "_id": "TimeDistortion"
   },
   {
     "name": "TnP",
     "pattern": "(?<=^|[\\s.-])TnP\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "TnP"
+  },
+  {
+    "name": "ToNaTo",
+    "pattern": "(?<=^|[\\s.-])ToNaTo\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "ToNaTo"
   },
   {
     "name": "Tron",
     "pattern": "(?<=^|[\\s.-])Tron\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "Tron"
   },
   {
@@ -6194,7 +8238,7 @@
     "pattern": "(?<=^|[\\s.-])TRiToN|EPSiLON|NoGroup|PmP\\b",
     "description": "Matches groups who mislabel TrueHD",
     "tags": [
-      "Release Group"
+      "Audio"
     ],
     "tests": [],
     "_id": "TrueHD (Missing Groups)"
@@ -6211,26 +8255,15 @@
     "_id": "TrueHD"
   },
   {
-    "name": "UHD Blu-ray",
-    "pattern": "\\bUHD[-_.\\s]?Blu[-]?Ray\\b",
-    "description": "Matches \"UHD Bluray\" or \"UHD Blu-Ray\" with a hyphen, space, dot or underscore between them",
-    "tags": [],
-    "tests": [
-      {
-        "expected": true,
-        "id": 1,
-        "input": "Avatar: The Way of Water 2022 1080p UHD BluRay DDP 7.1 HDR10 x265-GALAXY",
-        "lastRun": "2025-01-13T06:32:22.686039",
-        "matchSpan": {
-          "end": 46,
-          "start": 36
-        },
-        "matchedContent": "UHD BluRay",
-        "matchedGroups": [],
-        "passes": true
-      }
+    "name": "Tsundere",
+    "pattern": "(?<=^|[\\s.-])Tsundere\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
     ],
-    "_id": "UHD Blu-ray"
+    "tests": [],
+    "_id": "Tsundere"
   },
   {
     "name": "UHD Bluray (Missing Groups)",
@@ -6255,13 +8288,58 @@
     "_id": "UHD Bluray (Missing Groups)"
   },
   {
+    "name": "UHD Bluray (Negation)",
+    "pattern": "(?<=^|[\\s.-])D0ct0rLew|MALUS|MovieMan|SM737|SQS|WOU\\b",
+    "description": "Match release groups who should not be categorized as UHD Bluray",
+    "tags": [],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Training Day 2001 1080p BluRay DDP 7 1 HDR x265-LEGi0N",
+        "lastRun": "2025-01-14T09:31:15.526804",
+        "matchSpan": {
+          "end": 54,
+          "start": 48
+        },
+        "matchedContent": "LEGi0N",
+        "matchedGroups": [],
+        "passes": true
+      }
+    ],
+    "_id": "UHD Bluray (Negation)"
+  },
+  {
+    "name": "UHD Bluray",
+    "pattern": "\\bUHD[-_.\\s]?Blu[-]?Ray\\b",
+    "description": "Matches \"UHD Bluray\" or \"UHD Blu-Ray\" with a hyphen, space, dot or underscore between them",
+    "tags": [],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Avatar: The Way of Water 2022 1080p UHD BluRay DDP 7.1 HDR10 x265-GALAXY",
+        "lastRun": "2025-01-13T06:32:22.686039",
+        "matchSpan": {
+          "end": 46,
+          "start": 36
+        },
+        "matchedContent": "UHD BluRay",
+        "matchedGroups": [],
+        "passes": true
+      }
+    ],
+    "_id": "UHD Bluray"
+  },
+  {
     "name": "UHDCLUBREMUX",
     "pattern": "(?<=^|[\\s.-])UHDCLUBREMUX\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "UHDCLUBREMUX"
   },
   {
@@ -6269,20 +8347,11 @@
     "pattern": "(?<=^|[\\s.-])ULTRAHDCLUB\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "ULTRAHDCLUB"
-  },
-  {
-    "name": "UNK",
-    "pattern": "(?<=^|[\\s.-])UNK\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "UNK"
   },
   {
     "name": "Upscaled",
@@ -6290,7 +8359,7 @@
     "description": "Matches upscales, regrades, AI Enhancements, etc. ",
     "tags": [
       "Enhancement",
-      "Unwanted"
+      "Banned"
     ],
     "tests": [
       {
@@ -6491,20 +8560,96 @@
     "pattern": "(?<=^|[\\s.-])VALiS\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "VALiS"
+  },
+  {
+    "name": "VARYG",
+    "pattern": "(?<=^|[\\s.-])VARYG\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "VARYG"
+  },
+  {
+    "name": "VD0N",
+    "pattern": "(?<=^|[\\s.-])VD0N\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "VD0N"
+  },
+  {
+    "name": "VECTOR",
+    "pattern": "(?<=^|[\\s.-])VECTOR\\b",
+    "description": "Banned for Fake DV/HDR Layer.",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "VECTOR"
   },
   {
     "name": "VLAD",
     "pattern": "(?<=^|[\\s.-])VLAD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "VLAD"
+  },
+  {
+    "name": "VP9",
+    "pattern": "\\b(VP9)\\b",
+    "description": "VP9 is an open and royalty-free video coding format developed by Google",
+    "tags": [
+      "Codec"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Kedi 2016 REPACK 2160p WEB-DL DD+ 5.1 VP9-WiLDCAT",
+        "lastRun": "2025-04-15T14:48:20.729485",
+        "matchSpan": {
+          "end": 41,
+          "start": 38
+        },
+        "matchedContent": "VP9",
+        "matchedGroups": [
+          "VP9"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 2,
+        "input": "Kedi.2016.Repack.2160p.WEB-DL.DDP.5.1.VP9-WiLDCAT.mkv",
+        "lastRun": "2025-04-15T14:48:20.729485",
+        "matchSpan": {
+          "end": 41,
+          "start": 38
+        },
+        "matchedContent": "VP9",
+        "matchedGroups": [
+          "VP9"
+        ],
+        "passes": true
+      }
+    ],
+    "_id": "VP9"
   },
   {
     "name": "VVC",
@@ -6531,21 +8676,12 @@
     "_id": "VVC"
   },
   {
-    "name": "Verus",
-    "pattern": "(?<=^|[\\s.-])Verus\\b",
-    "description": "",
-    "tags": [
-      "Release Group"
-    ],
-    "tests": null,
-    "_id": "Verus"
-  },
-  {
     "name": "VietHD",
     "pattern": "(?<=^|[\\s.-])VietHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "VietHD"
@@ -6556,10 +8692,47 @@
     "description": "Rakuten Viki is an American over-the-top subscription video on-demand streaming service. It streams videos similar to other services, but also allows users to subtitle content available in 200 languages as well as providing original programming.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Make Up with Mud 2024 S01E01 1080p VIKI WEB-DL AAC 2.0 H.264-DUSKLiGHT",
+        "lastRun": "2025-06-01T17:53:57.847362",
+        "matchSpan": {
+          "end": 39,
+          "start": 21
+        },
+        "matchedContent": " S01E01 1080p VIKI",
+        "matchedGroups": [
+          "VIKI"
+        ],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 2,
+        "input": "Vikings S06 Part 1 1080p Blu-ray AVC DTS-HD MA 5.1-SLIPSTREAM",
+        "lastRun": "2025-06-01T17:53:57.847362",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      }
     ],
     "_id": "Viki"
+  },
+  {
+    "name": "VisionXpert",
+    "pattern": "(?<=^|[\\s.-])VisionXpert\\b",
+    "description": "Banned for Fake DV/HDR Layer",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "VisionXpert"
   },
   {
     "name": "Viu",
@@ -6567,17 +8740,51 @@
     "description": "Viu is a Hong Kong-based over-the-top video on demand streaming service from PCCW Media Group's Viu International Ltd. Viu delivers content in different genres from Asia's top content providers with local language subtitles",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
+    "tests": [],
     "_id": "Viu"
+  },
+  {
+    "name": "VoX",
+    "pattern": "(?<=^|[\\s.-])VoX\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "VoX"
+  },
+  {
+    "name": "Vodes",
+    "pattern": "(?<=^|[\\s.-])Vodes\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Vodes"
+  },
+  {
+    "name": "Vyndros",
+    "pattern": "(?<=^|[\\s.-])Vyndros\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "HEVC"
+    ],
+    "tests": [],
+    "_id": "Vyndros"
   },
   {
     "name": "W4NK3R",
     "pattern": "(?<=^|[\\s.-])W4NK3R\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "W4NK3R"
@@ -6587,17 +8794,41 @@
     "pattern": "(?<=^|[\\s.-])WATCHABLE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "WATCHABLE"
+  },
+  {
+    "name": "WBDP",
+    "pattern": "(?<=^|[\\s.-])WBDP\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "WBDP"
+  },
+  {
+    "name": "WELP",
+    "pattern": "(?<=^|[\\s.-])WELP\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "WELP"
   },
   {
     "name": "WMING",
     "pattern": "(?<=^|[\\s.-])WMING\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "WMING"
@@ -6607,9 +8838,10 @@
     "pattern": "(?<=^|[\\s.-])WOU\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Banned"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "WOU"
   },
   {
@@ -6618,9 +8850,9 @@
     "description": "Wavve is an online streaming platform, that was first launched on September 18, 2019. The company was founded as a joint venture between SK Telecom and South Korea's three terrestrial broadcasters KBS, MBC, SBS.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
+    "tests": [],
     "_id": "Wavve"
   },
   {
@@ -6629,9 +8861,9 @@
     "description": "Tencent Video also called WeTV outside of China, is a Chinese video streaming website owned by Tencent. The website was launched in April 2011, and is one of China's largest online video platforms",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
+    "tests": [],
     "_id": "WeTV"
   },
   {
@@ -6639,7 +8871,8 @@
     "pattern": "(?<=^|[\\s.-])WhiteRhino\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "WhiteRhino"
@@ -6647,19 +8880,32 @@
   {
     "name": "WiKi",
     "pattern": "(?<=^|[\\s.-])WiKi\\b",
+    "description": "Banned for Upscale",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "WiKi"
+  },
+  {
+    "name": "WiLDCAT",
+    "pattern": "(?<=^|[\\s.-])WiLDCAT\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Remux"
     ],
-    "tests": null,
-    "_id": "WiKi"
+    "tests": [],
+    "_id": "WiLDCAT"
   },
   {
     "name": "XEBEC",
     "pattern": "(?<=^|[\\s.-])XEBEC\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "XEBEC"
@@ -6702,11 +8948,89 @@
     "_id": "Xvid"
   },
   {
+    "name": "YAWNiX",
+    "pattern": "(?<=^|[\\s.-])YAWNiX\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "HEVC"
+    ],
+    "tests": [],
+    "_id": "YAWNiX"
+  },
+  {
+    "name": "YELLO",
+    "pattern": "(?<=^|[\\s.-])YELLO\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "HEVC"
+    ],
+    "tests": [],
+    "_id": "YELLO"
+  },
+  {
+    "name": "YIFY",
+    "pattern": "(?<=^|[\\s.-])YIFY\\b",
+    "description": "Matches \"YIFY\" when preceded by whitespace, a hyphen or dot",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "YIFY"
+  },
+  {
+    "name": "YTS",
+    "pattern": "(?<=^|[\\s.-])YTS(.(MX|LT|AG))?\\b",
+    "description": "Matches \"YTS\" when preceded by whitespace, a hyphen or dot",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "YTS"
+  },
+  {
+    "name": "YURI",
+    "pattern": "(?<=^|[\\s.-])YURI\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "YURI"
+  },
+  {
+    "name": "Yoyo",
+    "pattern": "(?<=^|[\\s.-])Yoyo\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Yoyo"
+  },
+  {
+    "name": "Yuki",
+    "pattern": "(?<=^|[\\s.-])Yuki\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Yuki"
+  },
+  {
     "name": "ZIMBO",
     "pattern": "(?<=^|[\\s.-])ZIMBO\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "ZIMBO"
@@ -6716,29 +9040,55 @@
     "pattern": "(?<=^|[\\s.-])ZQ\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Remux",
+      "Bluray"
     ],
     "tests": [],
     "_id": "ZQ"
+  },
+  {
+    "name": "ZR",
+    "pattern": "(?<=^|[\\s.-])ZR\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "ZR"
   },
   {
     "name": "ZoroSenpai",
     "pattern": "(?<=^|[\\s.-])ZoroSenpai\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "ZoroSenpai"
+  },
+  {
+    "name": "Zurako",
+    "pattern": "(?<=^|[\\s.-])Zurako\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "Zurako"
   },
   {
     "name": "b0mbardiers",
     "pattern": "(?<=^|[\\s.-])b0mbardiers\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "b0mbardiers"
   },
   {
@@ -6746,39 +9096,54 @@
     "pattern": "(?<=^|[\\s.-])beAst\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "beAst"
+  },
+  {
+    "name": "bluespots",
+    "pattern": "(?<=^|[\\s.-])bluespots\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "bluespots"
   },
   {
     "name": "c0kE",
     "pattern": "(?<=^|[\\s.-])c0kE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "c0kE"
   },
   {
-    "name": "d3g-d3g",
-    "pattern": "(?<=^|[\\s.-])d3g-d3g\\b",
+    "name": "cXcY",
+    "pattern": "(?<=^|[\\s.-])cXcY\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
-    "_id": "d3g-d3g"
+    "tests": [],
+    "_id": "cXcY"
   },
   {
     "name": "d3g",
     "pattern": "(?<=^|[\\s.-])d3g\\b",
-    "description": "",
+    "description": "Banned for LQ and various Encode Issues.",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Banned"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "d3g"
   },
   {
@@ -6786,7 +9151,8 @@
     "pattern": "(?<=^|[\\s.-])dB\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "dB"
@@ -6796,17 +9162,30 @@
     "pattern": "(?<=^|[\\s.-])de[42]\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "de(42)"
+  },
+  {
+    "name": "deanzel",
+    "pattern": "(?<=^|[\\s.-])deanzel\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "deanzel"
   },
   {
     "name": "decibeL",
     "pattern": "(?<=^|[\\s.-])decibeL\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "decibeL"
@@ -6816,9 +9195,10 @@
     "pattern": "(?<=^|[\\s.-])dkore\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "dkore"
   },
   {
@@ -6828,32 +9208,92 @@
     "tags": [
       "Release Group"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "edge2020"
   },
   {
-    "name": "h265 WEB Groups",
-    "pattern": "(?<=^|[\\s.-])SiGLA\\b",
-    "description": "Attempts to match groups who label their h265 WEB-DLs as HEVC.",
+    "name": "h264",
+    "pattern": "(?i)h\\s*\\.?\\s*264",
+    "description": "An open source encoder that produces H.264 videos. ",
     "tags": [
-      "Release Group"
+      "Codec"
     ],
     "tests": [
       {
-        "expected": true,
+        "expected": false,
         "id": 1,
-        "input": "Full.Metal.Jacket.1987.1080p.HMAX.WEB-DL.DD5.1.HEVC-SiGLA.mkv",
-        "lastRun": "2024-12-12T06:05:25.670476",
+        "input": "Dan Da Dan AKA Dandadan S01E10 1080p CR WEB-DL AAC 2.0 x264-SubsPlease",
+        "lastRun": "2025-07-09T19:19:57.966625",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 2,
+        "input": "Life of Pi 2012 1080p BluRay x264-SPARKS",
+        "lastRun": "2025-07-09T19:19:57.966625",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 3,
+        "input": "Scrubs (2001) S04 REPACK (1080p AIUS DVDRip x265 10bit AC3 5 1 English - JBENT)[TAoE]",
+        "lastRun": "2025-07-09T19:19:57.966625",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 4,
+        "input": "Wallander UK S01-S04 DVDRip XviD BDRip x264-Scene (2008-2016)",
+        "lastRun": "2025-07-09T19:19:57.966625",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 5,
+        "input": "Rugrats S05 480p DVDRip Opus 2.0 AV1-Jenkins",
+        "lastRun": "2025-07-09T19:19:57.966625",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 6,
+        "input": "_Summer S00 JAPANESE 480p DVDRip DD 2.0 x264-Tsundere",
+        "lastRun": "2025-07-09T19:19:57.966625",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 7,
+        "input": "Sinners (2025) (1080p MA WEB-DL H264 SDR DDP Atmos 5.1 English - PiracyIsASin)",
+        "lastRun": "2025-07-09T19:19:57.966625",
         "matchSpan": {
-          "end": 57,
-          "start": 52
+          "end": 36,
+          "start": 32
         },
-        "matchedContent": "SiGLA",
+        "matchedContent": "H264",
         "matchedGroups": [],
         "passes": true
       }
     ],
-    "_id": "h265 WEB Groups"
+    "_id": "h264"
   },
   {
     "name": "h265",
@@ -6917,7 +9357,8 @@
     "pattern": "(?<=^|[\\s.-])hallowed\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [
       {
@@ -6937,11 +9378,23 @@
     "_id": "hallowed"
   },
   {
+    "name": "hchcsen",
+    "pattern": "(?<=^|[\\s.-])hchcsen\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "hchcsen"
+  },
+  {
     "name": "hdalx",
     "pattern": "(?<=^|[\\s.-])hdalx\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "hdalx"
@@ -6951,9 +9404,10 @@
     "pattern": "(?<=^|[\\s.-])iCandy\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "iCandy"
   },
   {
@@ -6961,7 +9415,8 @@
     "pattern": "(?<=^|[\\s.-])iFT\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "iFT"
@@ -6971,9 +9426,10 @@
     "pattern": "(?<=^|[\\s.-])iNVANDRAREN\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "iNVANDRAREN"
   },
   {
@@ -6981,7 +9437,8 @@
     "pattern": "(?<=^|[\\s.-])iON\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "iON"
@@ -7047,14 +9504,94 @@
   },
   {
     "name": "iQIYI",
-    "pattern": "\\b(iQIYI)\\b",
+    "pattern": "\\b(IQIYI|IQ)\\b",
     "description": "iQIYI is a Chinese subscription video on-demand over-the-top streaming service owned by Baidu. Headquartered in Beijing, iQIYI primarily produces and distributes films and television series.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
+    "tests": [],
     "_id": "iQIYI"
+  },
+  {
+    "name": "iTunes Rename",
+    "pattern": "\\[(iT)\\b|\\b(iT)\\]",
+    "description": "iTunes began offering video content in October 2005 with the release of iTunes 6. At launch, the iTunes Store provided popular TV shows from ABC, Disney Channel, and other networks. Users could purchase and view video content, such as episodes of Desperate Housewives, Lost, That's So Raven, and The Suite Life of Zack & Cody.\n\nIn 2008, Apple introduced \"iTunes Digital Copy,\" a feature on select DVDs and Blu-ray discs that allowed users to obtain a digital copy of the video content in iTunes and associated media players.\n\nOver time, iTunes expanded its video offerings and became a significant platform for purchasing, organizing, and viewing movies and TV shows.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [
+      {
+        "expected": false,
+        "id": 1,
+        "input": "The 1975-iTunes Music Festival London (2013)-CONVERT-1080p-x264-2013-SRPx",
+        "lastRun": "2024-12-06T05:44:57.921957",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 2,
+        "input": "Armour of God 1987 iTunes WEB-DL 4k HEVC HDR AAC-AREY",
+        "lastRun": "2024-12-06T05:44:57.921957",
+        "matchSpan": {
+          "end": 25,
+          "start": 19
+        },
+        "matchedContent": "iTunes",
+        "matchedGroups": [
+          "iTunes",
+          "DL"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 3,
+        "input": "The Celluloid Closet 1995 1080p iTunes WEB-DL H 264 AAC",
+        "lastRun": "2024-12-06T05:44:57.921957",
+        "matchSpan": {
+          "end": 38,
+          "start": 32
+        },
+        "matchedContent": "iTunes",
+        "matchedGroups": [
+          "iTunes",
+          "DL"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 4,
+        "input": "752.is.Not.A.Number.2022.2160p.iT.WEB-DL.DD5.1.HEVC-NTb.mkv",
+        "lastRun": "2024-12-06T05:44:57.921957",
+        "matchSpan": {
+          "end": 33,
+          "start": 31
+        },
+        "matchedContent": "iT",
+        "matchedGroups": [
+          "iT",
+          "DL"
+        ],
+        "passes": true
+      },
+      {
+        "expected": false,
+        "id": 5,
+        "input": "Bring It On All or Nothing 2006 1080p BluRay DDP 5 1 x265-edge2020",
+        "lastRun": "2024-12-06T05:44:57.921957",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
+      }
+    ],
+    "_id": "iTunes Rename"
   },
   {
     "name": "iTunes",
@@ -7062,8 +9599,7 @@
     "description": "iTunes began offering video content in October 2005 with the release of iTunes 6. At launch, the iTunes Store provided popular TV shows from ABC, Disney Channel, and other networks. Users could purchase and view video content, such as episodes of Desperate Housewives, Lost, That's So Raven, and The Suite Life of Zack & Cody.\n\nIn 2008, Apple introduced \"iTunes Digital Copy,\" a feature on select DVDs and Blu-ray discs that allowed users to obtain a digital copy of the video content in iTunes and associated media players.\n\nOver time, iTunes expanded its video offerings and became a significant platform for purchasing, organizing, and viewing movies and TV shows.",
     "tags": [
       "Streaming Service",
-      "WEB-DL",
-      "WEBRip"
+      "WEB-DL"
     ],
     "tests": [
       {
@@ -7138,21 +9674,67 @@
     "_id": "iTunes"
   },
   {
+    "name": "iVy",
+    "pattern": "(?<=^|[\\s.-])iVy\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "iVy"
+  },
+  {
+    "name": "jennaortegaUHD",
+    "pattern": "(?<=^|[\\s.-])jennaortega(UHD)?\\b",
+    "description": "Banned for Fake DV/HDR Layer",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "jennaortegaUHD"
+  },
+  {
     "name": "k00kie",
     "pattern": "(?<=^|[\\s.-])k00kie\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "k00kie"
+  },
+  {
+    "name": "kmplx",
+    "pattern": "(?<=^|[\\s.-])kmplx\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "kmplx"
+  },
+  {
+    "name": "kuchikirukia",
+    "pattern": "(?<=^|[\\s.-])kuchikirukia\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "kuchikirukia"
   },
   {
     "name": "luvBB",
     "pattern": "(?<=^|[\\s.-])luvBB\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "luvBB"
@@ -7162,9 +9744,10 @@
     "pattern": "(?<=^|[\\s.-])micius\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
-    "tests": null,
+    "tests": [],
     "_id": "micius"
   },
   {
@@ -7205,21 +9788,45 @@
     "_id": "mkv"
   },
   {
+    "name": "monkee",
+    "pattern": "(?<=^|[\\s.-])monkee\\b",
+    "description": "Matches \"monkee\" when preceded by whitespace, a hyphen or dot",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "monkee"
+  },
+  {
     "name": "nmd",
     "pattern": "(?<=^|[\\s.-])nmd\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "nmd"
+  },
+  {
+    "name": "playBD",
+    "pattern": "(?<=^|[\\s.-])playBD\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Remux"
+    ],
+    "tests": [],
+    "_id": "playBD"
   },
   {
     "name": "playHD",
     "pattern": "(?<=^|[\\s.-])playHD\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "playHD"
@@ -7229,17 +9836,30 @@
     "pattern": "(?<=^|[\\s.-])playWEB\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "WEB-DL"
     ],
     "tests": [],
     "_id": "playWEB"
+  },
+  {
+    "name": "pog42",
+    "pattern": "(?<=^|[\\s.-])pog42\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "pog42"
   },
   {
     "name": "rightSIZE",
     "pattern": "(?<=^|[\\s.-])rightSIZE\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "rightSIZE"
@@ -7249,10 +9869,44 @@
     "pattern": "(?<=^|[\\s.-])rttr\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "rttr"
+  },
+  {
+    "name": "sam",
+    "pattern": "(?<=^|[\\s.-])sam\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "sam"
+  },
+  {
+    "name": "smol",
+    "pattern": "(?<=^|[\\s.-])smol\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Anime"
+    ],
+    "tests": [],
+    "_id": "smol"
+  },
+  {
+    "name": "tarunk9c",
+    "pattern": "(?<=^|[\\s.-])tarunk9c\\b",
+    "description": "Banned for Fake DV/HDR Layer",
+    "tags": [
+      "Release Group",
+      "Banned"
+    ],
+    "tests": [],
+    "_id": "tarunk9c"
   },
   {
     "name": "x264",
@@ -7363,6 +10017,82 @@
     "_id": "x264"
   },
   {
+    "name": "x265 (Efficient)",
+    "pattern": "^(?!.*(?i:remux))(?=.*([xh]\\s?(\\.?265)\\b|HEVC|\\bDS4K\\b)).*$",
+    "description": "An open source encoder that produces H.265 videos. ",
+    "tags": [
+      "Encoder",
+      "Codec"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Aqua Teen Hunger Force (2000) S00E13 (480p DVD x265 SDR AAC 2.0 English - r00t QxR)",
+        "lastRun": "2025-07-08T23:41:58.745204",
+        "matchSpan": {
+          "end": 83,
+          "start": 0
+        },
+        "matchedContent": "Aqua Teen Hunger Force (2000) S00E13 (480p DVD x265 SDR AAC 2.0 English - r00t QxR)",
+        "matchedGroups": [
+          "x265",
+          "265"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 2,
+        "input": "Planet Earth II S01 REPACK UHD BluRay 2160p DD5.1 HDR x265-BHDStudio",
+        "lastRun": "2025-07-08T23:41:58.745204",
+        "matchSpan": {
+          "end": 68,
+          "start": 0
+        },
+        "matchedContent": "Planet Earth II S01 REPACK UHD BluRay 2160p DD5.1 HDR x265-BHDStudio",
+        "matchedGroups": [
+          "x265",
+          "265"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 3,
+        "input": "Spider-Man Across the Spider-Verse 2023 1080p UHD BluRay DDP7 1 DoVi HDR10x265-c0kE",
+        "lastRun": "2025-07-08T23:41:58.745204",
+        "matchSpan": {
+          "end": 83,
+          "start": 0
+        },
+        "matchedContent": "Spider-Man Across the Spider-Verse 2023 1080p UHD BluRay DDP7 1 DoVi HDR10x265-c0kE",
+        "matchedGroups": [
+          "x265",
+          "265"
+        ],
+        "passes": true
+      },
+      {
+        "expected": true,
+        "id": 4,
+        "input": "The Batman (2022) (1080p HMAX WEB-DL H265 SDR DDP Atmos 5.1 English - HONE)",
+        "lastRun": "2025-07-08T23:41:58.745204",
+        "matchSpan": {
+          "end": 75,
+          "start": 0
+        },
+        "matchedContent": "The Batman (2022) (1080p HMAX WEB-DL H265 SDR DDP Atmos 5.1 English - HONE)",
+        "matchedGroups": [
+          "H265",
+          "265"
+        ],
+        "passes": true
+      }
+    ],
+    "_id": "x265 (Efficient)"
+  },
+  {
     "name": "x265",
     "pattern": "^(?!.*(?i:remux))(?=.*([x]\\s?(\\.?265)\\b|HEVC|\\bDS4K\\b)).*$",
     "description": "An open source encoder that produces H.265 videos. ",
@@ -7427,7 +10157,8 @@
     "pattern": "(?<=^|[\\s.-])xander\\b",
     "description": "",
     "tags": [
-      "Release Group"
+      "Release Group",
+      "Bluray"
     ],
     "tests": [],
     "_id": "xander"
