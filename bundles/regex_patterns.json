@@ -12,15 +12,15 @@
         "expected": true,
         "id": 1,
         "input": "Universal.Soldier.Day.of.Reckoning.2012.1080p.BluRay.3D.H-SBS.DTS.x264-BluRay3D",
-        "lastRun": "2025-04-25T14:15:46.876957",
+        "lastRun": "2025-08-18T23:32:02.252678",
         "matchSpan": {
-          "end": 55,
-          "start": 53
+          "end": 79,
+          "start": 39
         },
-        "matchedContent": "3D",
+        "matchedContent": ".1080p.BluRay.3D.H-SBS.DTS.x264-BluRay3D",
         "matchedGroups": [
-          "3D",
-          null
+          "BluRay3D",
+          "BluRay"
         ],
         "passes": true
       },
@@ -28,15 +28,15 @@
         "expected": true,
         "id": 2,
         "input": "Justin.And.The.Knights.Of.Valour.3D.2013.1080p.BluRay.Half-SBS.x264-BluRay3D",
-        "lastRun": "2025-04-25T14:15:46.876957",
+        "lastRun": "2025-08-18T23:32:02.252678",
         "matchSpan": {
-          "end": 35,
-          "start": 33
+          "end": 76,
+          "start": 40
         },
-        "matchedContent": "3D",
+        "matchedContent": ".1080p.BluRay.Half-SBS.x264-BluRay3D",
         "matchedGroups": [
-          "3D",
-          null
+          "BluRay3D",
+          "BluRay"
         ],
         "passes": true
       },
@@ -44,17 +44,11 @@
         "expected": false,
         "id": 3,
         "input": "Step Up 3D 2010 1080p BluRay DTS-ES 6.1 x264-xander",
-        "lastRun": "2025-04-25T14:15:46.876957",
-        "matchSpan": {
-          "end": 10,
-          "start": 8
-        },
-        "matchedContent": "3D",
-        "matchedGroups": [
-          "3D",
-          null
-        ],
-        "passes": false
+        "lastRun": "2025-08-18T23:32:02.252678",
+        "matchSpan": null,
+        "matchedContent": null,
+        "matchedGroups": [],
+        "passes": true
       }
     ],
     "_id": "3D"
@@ -134,17 +128,6 @@
     ],
     "tests": [],
     "_id": "AAC"
-  },
-  {
-    "name": "ABBIE",
-    "pattern": "(?<=^|[\\s.-])ABBIE\\b",
-    "description": "",
-    "tags": [
-      "Release Group",
-      "WEB-DL"
-    ],
-    "tests": [],
-    "_id": "ABBIE"
   },
   {
     "name": "AC",
@@ -910,6 +893,17 @@
     "_id": "BTN"
   },
   {
+    "name": "BTW",
+    "pattern": "(?<=^|[\\s.-])BTW\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "BTW"
+  },
+  {
     "name": "BV",
     "pattern": "(?<=^|[\\s.-])BV\\b",
     "description": "",
@@ -1579,8 +1573,19 @@
     "_id": "Bracketed Year"
   },
   {
+    "name": "Bravia Core Rename",
+    "pattern": "\\[(BCORE)\\b|\\b(BCORE)\\]",
+    "description": "Sony Pictures Core (formerly known as Bravia Core) is a video on demand service from Sony for its televisions and smartphones, launched in April 2021. The service offers the streaming of movies at up to 4K resolution provided by Sony Pictures Entertainment. CORE stands for Centre of Real Entertainment.",
+    "tags": [
+      "Streaming Service",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "Bravia Core Rename"
+  },
+  {
     "name": "Bravia Core",
-    "pattern": "\\b(BCORE)\\b",
+    "pattern": "\\b(BCORE|CORE)\\b(?=[ ._-]web[ ._-]?(dl|rip)\\b)",
     "description": "Sony Pictures Core (formerly known as Bravia Core) is a video on demand service from Sony for its televisions and smartphones, launched in April 2021. The service offers the streaming of movies at up to 4K resolution provided by Sony Pictures Entertainment. CORE stands for Centre of Real Entertainment.",
     "tags": [
       "Streaming Service",
@@ -1733,6 +1738,17 @@
     "_id": "CRFW"
   },
   {
+    "name": "CRUD",
+    "pattern": "(?<=^|[\\s.-])CRUD\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "CRUD"
+  },
+  {
     "name": "CRX",
     "pattern": "(?<=^|[\\s.-])CRX\\b",
     "description": "",
@@ -1775,6 +1791,17 @@
     ],
     "tests": [],
     "_id": "Cait-Sidhe"
+  },
+  {
+    "name": "CasStudio",
+    "pattern": "(?<=^|[\\s.-])CasStudio\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "CasStudio"
   },
   {
     "name": "Chihiro",
@@ -2155,7 +2182,7 @@
   },
   {
     "name": "DTS-HD HRA",
-    "pattern": "dts[-. ]?(hd[. ]?)?(hra?|hi\\b",
+    "pattern": "dts[-. ]?(hd[. ]?)?(hra?|hi\\b)",
     "description": "",
     "tags": [
       "Audio"
@@ -4770,6 +4797,17 @@
     "_id": "KH"
   },
   {
+    "name": "KHN",
+    "pattern": "(?<=^|[\\s.-])KHN\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "KHN"
+  },
+  {
     "name": "KNiVES",
     "pattern": "(?<=^|[\\s.-])KNiVES\\b",
     "description": "",
@@ -4779,6 +4817,17 @@
     ],
     "tests": [],
     "_id": "KNiVES"
+  },
+  {
+    "name": "KONTRAST",
+    "pattern": "(?<=^|[\\s.-])KONTRAST\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "KONTRAST"
   },
   {
     "name": "KRaLiMaRKo",
@@ -5214,6 +5263,17 @@
     "_id": "Max"
   },
   {
+    "name": "MeGusta",
+    "pattern": "(?<=^|[\\s.-])MeGusta\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "MeGusta"
+  },
+  {
     "name": "MgB",
     "pattern": "(?<=^|[\\s.-])MgB\\b",
     "description": "Banned for Mislabeled 2160p WEBRips",
@@ -5422,6 +5482,17 @@
     "_id": "NCmt"
   },
   {
+    "name": "NINJACENTRAL",
+    "pattern": "(?<=^|[\\s.-])NINJACENTRAL\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "NINJACENTRAL"
+  },
+  {
     "name": "NOSiViD",
     "pattern": "(?<=^|[\\s.-])NOSiViD\\b",
     "description": "",
@@ -5431,6 +5502,17 @@
     ],
     "tests": [],
     "_id": "NOSiViD"
+  },
+  {
+    "name": "NPMS",
+    "pattern": "(?<=^|[\\s.-])NPMS\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "NPMS"
   },
   {
     "name": "NTG",
@@ -6008,6 +6090,17 @@
     "_id": "PQ"
   },
   {
+    "name": "PSA",
+    "pattern": "(?<=^|[\\s.-])PSA\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "PSA"
+  },
+  {
     "name": "PTH",
     "pattern": "(?<=^|[\\s.-])PTH\\b",
     "description": "",
@@ -6478,7 +6571,7 @@
   {
     "name": "RARGB",
     "pattern": "(?<=^|[\\s.-])RARGB\\b",
-    "description": "",
+    "description": "Banned for Low Quality",
     "tags": [
       "Release Group",
       "Remux",
@@ -6486,6 +6579,17 @@
     ],
     "tests": [],
     "_id": "RARGB"
+  },
+  {
+    "name": "RAWR",
+    "pattern": "(?<=^|[\\s.-])RAWR\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "RAWR"
   },
   {
     "name": "REBORN",
@@ -6508,6 +6612,17 @@
     ],
     "tests": [],
     "_id": "ROCCaT"
+  },
+  {
+    "name": "RTN",
+    "pattern": "(?<=^|[\\s.-])RTN\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "RTN"
   },
   {
     "name": "Raizel",
@@ -7024,7 +7139,7 @@
   },
   {
     "name": "Roku",
-    "pattern": "(?<=\\b[12]\\d{3}\\b).*\\b(ROKU)\\b",
+    "pattern": "\\b(ROKU)\\b",
     "description": "The Roku Channel is an over-the-top video streaming service available in the U.S., Canada, Mexico and the U.K. Launched in September 2017. The Roku Channel offers over 400 free live linear TV channels, more than 80,000 free movies and shows, and access to paid content.",
     "tags": [
       "Streaming Service",
@@ -7261,6 +7376,17 @@
     ],
     "tests": [],
     "_id": "SPHD"
+  },
+  {
+    "name": "SPiRiT",
+    "pattern": "(?<=^|[\\s.-])SPiRiT\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "SPiRiT"
   },
   {
     "name": "SQS",
@@ -7968,6 +8094,17 @@
     "_id": "SumVision"
   },
   {
+    "name": "SwAgLaNdEr",
+    "pattern": "(?<=^|[\\s.-])SwAgLaNdEr\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "SwAgLaNdEr"
+  },
+  {
     "name": "TAoE",
     "pattern": "(?<=^|[\\s.-])(TAoE|Ainz|AJJMIN|ANONAZ|ArcX|bccornfo|DNU|DrainedDay|DUHIT|Erie|Frys|Goki|HxD|jb2049|JBENT|Nostradamus|r0b0t|Species180|TheSickle|xtrem3x|WEM)\\b",
     "description": "",
@@ -8100,6 +8237,32 @@
     "_id": "TTGA"
   },
   {
+    "name": "TV Extras",
+    "pattern": "(?<=\\bS\\d+\\b).*\\b(Extras|Bonus|Extended[ ._-]Clip)\\b",
+    "description": "Extras, Special Features, Featurettes, etc",
+    "tags": [
+      "Banned"
+    ],
+    "tests": [
+      {
+        "expected": true,
+        "id": 1,
+        "input": "Game of Thrones S08 Extras The Game Revealed 1080p AMZN WEB-DL DD+ 2.0 H.264-NTG",
+        "lastRun": "2025-08-18T20:43:40.568644",
+        "matchSpan": {
+          "end": 26,
+          "start": 19
+        },
+        "matchedContent": " Extras",
+        "matchedGroups": [
+          "Extras"
+        ],
+        "passes": true
+      }
+    ],
+    "_id": "TV Extras"
+  },
+  {
     "name": "TVING",
     "pattern": "\\b(TVING)\\b",
     "description": "TVING is a South Korean subscription video on-demand over-the-top streaming service operated by TVING Corporation, a joint venture made of CJ ENM Entertainment Division, Naver and JTBC by its JTBC Studios, now called SLL.",
@@ -8109,6 +8272,17 @@
     ],
     "tests": [],
     "_id": "TVING"
+  },
+  {
+    "name": "TVSmash",
+    "pattern": "(?<=^|[\\s.-])TVSmash\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "TVSmash"
   },
   {
     "name": "TayTo",
@@ -8264,6 +8438,17 @@
     ],
     "tests": [],
     "_id": "Tsundere"
+  },
+  {
+    "name": "TvR",
+    "pattern": "(?<=^|[\\s.-])TvR\\b",
+    "description": "Banned for Mislabeling WEB-DL with Remux",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "TvR"
   },
   {
     "name": "UHD Bluray (Missing Groups)",
@@ -8674,6 +8859,17 @@
       }
     ],
     "_id": "VVC"
+  },
+  {
+    "name": "ViSUM",
+    "pattern": "(?<=^|[\\s.-])ViSUM\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "WEB-DL"
+    ],
+    "tests": [],
+    "_id": "ViSUM"
   },
   {
     "name": "VietHD",
@@ -9907,6 +10103,17 @@
     ],
     "tests": [],
     "_id": "tarunk9c"
+  },
+  {
+    "name": "x0r",
+    "pattern": "(?<=^|[\\s.-])x0r\\b",
+    "description": "",
+    "tags": [
+      "Release Group",
+      "Bluray"
+    ],
+    "tests": [],
+    "_id": "x0r"
   },
   {
     "name": "x264",

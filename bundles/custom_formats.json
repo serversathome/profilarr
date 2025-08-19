@@ -28,6 +28,13 @@
         "pattern": "(?<=^|[\\s.-])BHDStudio\\b",
         "required": false,
         "type": "release_group"
+      },
+      {
+        "name": "hallowed",
+        "type": "release_group",
+        "required": false,
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])hallowed\\b"
       }
     ],
     "tests": [
@@ -135,315 +142,13 @@
     "_id": "1080p Balanced Tier 1"
   },
   {
-    "name": "1080p Balanced Tier 2",
-    "description": "Matches release groups who fall under 1080p Balanced Tier 2",
-    "tags": [
-      "Release Group Tier",
-      "1080p",
-      "Balanced"
-    ],
-    "conditions": [
-      {
-        "name": "1080p",
-        "negate": false,
-        "required": true,
-        "resolution": "1080p",
-        "type": "resolution"
-      },
-      {
-        "name": "Bluray",
-        "negate": false,
-        "required": true,
-        "source": "bluray",
-        "type": "source"
-      },
-      {
-        "name": "hallowed",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])hallowed\\b",
-        "required": false,
-        "type": "release_group"
-      }
-    ],
-    "tests": [
-      {
-        "conditionResults": [
-          {
-            "matches": true,
-            "name": "hallowed",
-            "negate": false,
-            "pattern": "hallowed",
-            "required": false,
-            "type": "release_group"
-          },
-          {
-            "matches": false,
-            "name": "BHDStudio",
-            "negate": false,
-            "pattern": "BHDStudio",
-            "required": false,
-            "type": "release_group"
-          }
-        ],
-        "expected": true,
-        "id": 1,
-        "input": "Contact.1997.BluRay.1080p.DDP.5.1.x264-hallowed",
-        "lastRun": "2025-01-13T02:53:37.357699",
-        "passes": true
-      },
-      {
-        "conditionResults": [
-          {
-            "matches": true,
-            "name": "hallowed",
-            "negate": false,
-            "pattern": "hallowed",
-            "required": false,
-            "type": "release_group"
-          },
-          {
-            "matches": false,
-            "name": "BHDStudio",
-            "negate": false,
-            "pattern": "BHDStudio",
-            "required": false,
-            "type": "release_group"
-          }
-        ],
-        "expected": true,
-        "id": 2,
-        "input": "Gladiator.2000.Extended.Cut.UHD.BluRay.2160p.DDP.7.1.DV.HDR.x265-hallowed",
-        "lastRun": "2025-01-13T02:53:37.357699",
-        "passes": true
-      },
-      {
-        "conditionResults": [
-          {
-            "matches": false,
-            "name": "hallowed",
-            "negate": false,
-            "pattern": "hallowed",
-            "required": false,
-            "type": "release_group"
-          },
-          {
-            "matches": true,
-            "name": "BHDStudio",
-            "negate": false,
-            "pattern": "BHDStudio",
-            "required": false,
-            "type": "release_group"
-          }
-        ],
-        "expected": true,
-        "id": 3,
-        "input": "Yi Yi 2000 BluRay 720p DD 2 0 x264-BHDStudio",
-        "lastRun": "2025-01-13T02:53:37.357699",
-        "passes": true
-      },
-      {
-        "conditionResults": [
-          {
-            "matches": false,
-            "name": "hallowed",
-            "negate": false,
-            "pattern": "hallowed",
-            "required": false,
-            "type": "release_group"
-          },
-          {
-            "matches": true,
-            "name": "BHDStudio",
-            "negate": false,
-            "pattern": "BHDStudio",
-            "required": false,
-            "type": "release_group"
-          }
-        ],
-        "expected": true,
-        "id": 4,
-        "input": "Winnie the Pooh - Blood and Honey (2023) 2160p UHD BluRay x265 DV HDR DD 5.1 English-BHDStudio",
-        "lastRun": "2025-01-13T02:53:37.357699",
-        "passes": true
-      }
-    ],
-    "_id": "1080p Balanced Tier 2"
-  },
-  {
-    "name": "1080p Bluray",
-    "description": "Matches 1080p Blurays that are NOT remuxes",
-    "tags": [
-      "Resolution"
-    ],
-    "conditions": [
-      {
-        "name": "1080p",
-        "negate": false,
-        "required": true,
-        "resolution": "1080p",
-        "type": "resolution"
-      },
-      {
-        "name": "Bluray",
-        "negate": false,
-        "required": true,
-        "source": "bluray",
-        "type": "source"
-      }
-    ],
-    "tests": [],
-    "_id": "1080p Bluray"
-  },
-  {
-    "name": "1080p Efficient Bluray Tier 0 (Radarr)",
+    "name": "1080p Bluray HEVC Tier 0",
     "description": "Matches release groups who fall under 1080p Efficient Bluray Tier 0",
     "tags": [
       "Release Group Tier",
       "1080p",
-      "Efficient",
-      "Movie"
-    ],
-    "conditions": [
-      {
-        "name": "1080p",
-        "negate": false,
-        "required": true,
-        "resolution": "1080p",
-        "type": "resolution"
-      },
-      {
-        "name": "Bluray",
-        "negate": false,
-        "required": true,
-        "source": "bluray",
-        "type": "source"
-      },
-      {
-        "name": "x265",
-        "negate": false,
-        "pattern": "^(?!.*(?i:remux))(?=.*([xh]\\s?(\\.?265)\\b|HEVC|\\bDS4K\\b)).*$",
-        "required": true,
-        "type": "release_title"
-      },
-      {
-        "name": "HONE",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])HONE\\b",
-        "required": true,
-        "type": "release_group"
-      }
-    ],
-    "tests": [
-      {
-        "conditionResults": [
-          {
-            "matches": true,
-            "name": "hallowed",
-            "negate": false,
-            "pattern": "hallowed",
-            "required": false,
-            "type": "release_group"
-          },
-          {
-            "matches": false,
-            "name": "BHDStudio",
-            "negate": false,
-            "pattern": "BHDStudio",
-            "required": false,
-            "type": "release_group"
-          }
-        ],
-        "expected": true,
-        "id": 1,
-        "input": "Contact.1997.BluRay.1080p.DDP.5.1.x264-hallowed",
-        "lastRun": "2025-01-13T02:53:37.357699",
-        "passes": true
-      },
-      {
-        "conditionResults": [
-          {
-            "matches": true,
-            "name": "hallowed",
-            "negate": false,
-            "pattern": "hallowed",
-            "required": false,
-            "type": "release_group"
-          },
-          {
-            "matches": false,
-            "name": "BHDStudio",
-            "negate": false,
-            "pattern": "BHDStudio",
-            "required": false,
-            "type": "release_group"
-          }
-        ],
-        "expected": true,
-        "id": 2,
-        "input": "Gladiator.2000.Extended.Cut.UHD.BluRay.2160p.DDP.7.1.DV.HDR.x265-hallowed",
-        "lastRun": "2025-01-13T02:53:37.357699",
-        "passes": true
-      },
-      {
-        "conditionResults": [
-          {
-            "matches": false,
-            "name": "hallowed",
-            "negate": false,
-            "pattern": "hallowed",
-            "required": false,
-            "type": "release_group"
-          },
-          {
-            "matches": true,
-            "name": "BHDStudio",
-            "negate": false,
-            "pattern": "BHDStudio",
-            "required": false,
-            "type": "release_group"
-          }
-        ],
-        "expected": true,
-        "id": 3,
-        "input": "Yi Yi 2000 BluRay 720p DD 2 0 x264-BHDStudio",
-        "lastRun": "2025-01-13T02:53:37.357699",
-        "passes": true
-      },
-      {
-        "conditionResults": [
-          {
-            "matches": false,
-            "name": "hallowed",
-            "negate": false,
-            "pattern": "hallowed",
-            "required": false,
-            "type": "release_group"
-          },
-          {
-            "matches": true,
-            "name": "BHDStudio",
-            "negate": false,
-            "pattern": "BHDStudio",
-            "required": false,
-            "type": "release_group"
-          }
-        ],
-        "expected": true,
-        "id": 4,
-        "input": "Winnie the Pooh - Blood and Honey (2023) 2160p UHD BluRay x265 DV HDR DD 5.1 English-BHDStudio",
-        "lastRun": "2025-01-13T02:53:37.357699",
-        "passes": true
-      }
-    ],
-    "_id": "1080p Efficient Bluray Tier 0 (Radarr)"
-  },
-  {
-    "name": "1080p Efficient Bluray Tier 0 (Sonarr)",
-    "description": "Matches release groups who fall under 1080p Efficient Bluray Tier 0",
-    "tags": [
-      "Release Group Tier",
-      "1080p",
-      "Efficient",
+      "HEVC",
+      "Movie",
       "TV"
     ],
     "conditions": [
@@ -578,7 +283,32 @@
         "passes": true
       }
     ],
-    "_id": "1080p Efficient Bluray Tier 0 (Sonarr)"
+    "_id": "1080p Bluray HEVC Tier 0"
+  },
+  {
+    "name": "1080p Bluray",
+    "description": "Matches 1080p Blurays that are NOT remuxes",
+    "tags": [
+      "Source"
+    ],
+    "conditions": [
+      {
+        "name": "1080p",
+        "negate": false,
+        "required": true,
+        "resolution": "1080p",
+        "type": "resolution"
+      },
+      {
+        "name": "Bluray",
+        "negate": false,
+        "required": true,
+        "source": "bluray",
+        "type": "source"
+      }
+    ],
+    "tests": [],
+    "_id": "1080p Bluray"
   },
   {
     "name": "1080p Efficient Bluray Tier 1 (Radarr)",
@@ -926,6 +656,13 @@
         "type": "release_title"
       },
       {
+        "name": "DarQ",
+        "type": "release_group",
+        "required": false,
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])DarQ\\b"
+      },
+      {
         "name": "SQS",
         "negate": false,
         "pattern": "(?<=^|[\\s.-])SQS\\b",
@@ -1067,6 +804,13 @@
         "pattern": "^(?!.*(?i:remux))(?=.*([xh]\\s?(\\.?265)\\b|HEVC|\\bDS4K\\b)).*$",
         "required": true,
         "type": "release_title"
+      },
+      {
+        "name": "DarQ",
+        "type": "release_group",
+        "required": false,
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])DarQ\\b"
       },
       {
         "name": "dkore",
@@ -2172,6 +1916,170 @@
     "_id": "1080p Efficient Bluray Tier 5 (Sonarr)"
   },
   {
+    "name": "1080p Efficient Bluray Tier 6 (Sonarr)",
+    "description": "Matches release groups who fall under 1080p Efficient Bluray Tier 6",
+    "tags": [
+      "Release Group Tier",
+      "1080p",
+      "Efficient",
+      "TV"
+    ],
+    "conditions": [
+      {
+        "name": "1080p",
+        "negate": false,
+        "required": true,
+        "resolution": "1080p",
+        "type": "resolution"
+      },
+      {
+        "name": "Bluray",
+        "negate": false,
+        "required": true,
+        "source": "bluray",
+        "type": "source"
+      },
+      {
+        "name": "x265",
+        "negate": false,
+        "pattern": "^(?!.*(?i:remux))(?=.*([xh]\\s?(\\.?265)\\b|HEVC|\\bDS4K\\b)).*$",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "iVy",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])iVy\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "KONTRAST",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])KONTRAST\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "PHOCiS",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])PHOCiS\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "YAWNiX",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])YAWNiX\\b",
+        "required": false,
+        "type": "release_group"
+      }
+    ],
+    "tests": [
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "hallowed",
+            "negate": false,
+            "pattern": "hallowed",
+            "required": false,
+            "type": "release_group"
+          },
+          {
+            "matches": false,
+            "name": "BHDStudio",
+            "negate": false,
+            "pattern": "BHDStudio",
+            "required": false,
+            "type": "release_group"
+          }
+        ],
+        "expected": true,
+        "id": 1,
+        "input": "Contact.1997.BluRay.1080p.DDP.5.1.x264-hallowed",
+        "lastRun": "2025-01-13T02:53:37.357699",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "hallowed",
+            "negate": false,
+            "pattern": "hallowed",
+            "required": false,
+            "type": "release_group"
+          },
+          {
+            "matches": false,
+            "name": "BHDStudio",
+            "negate": false,
+            "pattern": "BHDStudio",
+            "required": false,
+            "type": "release_group"
+          }
+        ],
+        "expected": true,
+        "id": 2,
+        "input": "Gladiator.2000.Extended.Cut.UHD.BluRay.2160p.DDP.7.1.DV.HDR.x265-hallowed",
+        "lastRun": "2025-01-13T02:53:37.357699",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": false,
+            "name": "hallowed",
+            "negate": false,
+            "pattern": "hallowed",
+            "required": false,
+            "type": "release_group"
+          },
+          {
+            "matches": true,
+            "name": "BHDStudio",
+            "negate": false,
+            "pattern": "BHDStudio",
+            "required": false,
+            "type": "release_group"
+          }
+        ],
+        "expected": true,
+        "id": 3,
+        "input": "Yi Yi 2000 BluRay 720p DD 2 0 x264-BHDStudio",
+        "lastRun": "2025-01-13T02:53:37.357699",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": false,
+            "name": "hallowed",
+            "negate": false,
+            "pattern": "hallowed",
+            "required": false,
+            "type": "release_group"
+          },
+          {
+            "matches": true,
+            "name": "BHDStudio",
+            "negate": false,
+            "pattern": "BHDStudio",
+            "required": false,
+            "type": "release_group"
+          }
+        ],
+        "expected": true,
+        "id": 4,
+        "input": "Winnie the Pooh - Blood and Honey (2023) 2160p UHD BluRay x265 DV HDR DD 5.1 English-BHDStudio",
+        "lastRun": "2025-01-13T02:53:37.357699",
+        "passes": true
+      }
+    ],
+    "_id": "1080p Efficient Bluray Tier 6 (Sonarr)"
+  },
+  {
     "name": "1080p Efficient WEB Tier 1 (Radarr)",
     "description": "Matches release groups who fall under 1080p Efficient WEB Tier 1",
     "tags": [
@@ -2524,6 +2432,13 @@
         "type": "source"
       },
       {
+        "name": "DarQ",
+        "type": "release_group",
+        "required": false,
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])DarQ\\b"
+      },
+      {
         "name": "dkore",
         "negate": false,
         "pattern": "(?<=^|[\\s.-])dkore\\b",
@@ -2688,6 +2603,13 @@
         "type": "source"
       },
       {
+        "name": "DarQ",
+        "type": "release_group",
+        "required": false,
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])DarQ\\b"
+      },
+      {
         "name": "edge2020",
         "negate": false,
         "pattern": "(?<=^|[\\s.-])edge2020\\b",
@@ -2696,10 +2618,10 @@
       },
       {
         "name": "LSt",
-        "type": "release_group",
-        "required": false,
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])LSt\\b"
+        "pattern": "(?<=^|[\\s.-])LSt\\b",
+        "required": false,
+        "type": "release_group"
       },
       {
         "name": "ToNaTo",
@@ -3513,27 +3435,6 @@
         "required": false,
         "source": "webrip",
         "type": "source"
-      },
-      {
-        "name": "iVy",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])iVy\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "PHOCiS",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])PHOCiS\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "YAWNiX",
-        "type": "release_group",
-        "required": false,
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])YAWNiX\\b"
       }
     ],
     "tests": [
@@ -3686,6 +3587,13 @@
         "type": "release_group"
       },
       {
+        "name": "KONTRAST",
+        "type": "release_group",
+        "required": false,
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])KONTRAST\\b"
+      },
+      {
         "name": "PHOCiS",
         "negate": false,
         "pattern": "(?<=^|[\\s.-])PHOCiS\\b",
@@ -3803,227 +3711,6 @@
       }
     ],
     "_id": "1080p Efficient WEB Tier 5 (Sonarr)"
-  },
-  {
-    "name": "1080p Efficient WEB-DL Tier 1",
-    "description": "Matches 1080p WEB-DLs.",
-    "tags": [
-      "Release Group Tier",
-      "1080p",
-      "Efficient"
-    ],
-    "conditions": [
-      {
-        "name": "1080p",
-        "negate": false,
-        "required": true,
-        "resolution": "1080p",
-        "type": "resolution"
-      },
-      {
-        "name": "WEB-DL",
-        "negate": false,
-        "required": true,
-        "source": "web_dl",
-        "type": "source"
-      },
-      {
-        "name": "h265",
-        "negate": false,
-        "pattern": "[xh][ ._-]?265|\\bHEVC(\\b|\\d)",
-        "required": true,
-        "type": "release_title"
-      },
-      {
-        "name": "BYNDR",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])BYNDR\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "CMRG",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])CM(a)?R(io)?G\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "FLUX",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])FLUX\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "HHWEB",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])HHWEB\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "HONE",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])HONE\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "Kitsune",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])Kitsune\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "NTb",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])NTb\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "MZABI",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])MZABI\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "playWEB",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])playWEB\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "SMURF",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])SMURF\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "TEPES",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])TEPES\\b",
-        "required": false,
-        "type": "release_group"
-      }
-    ],
-    "tests": [],
-    "_id": "1080p Efficient WEB-DL Tier 1"
-  },
-  {
-    "name": "1080p Efficient WEB-DL Tier 2",
-    "description": "Matches 1080p WEB-DLs.",
-    "tags": [
-      "Release Group Tier",
-      "1080p",
-      "Efficient"
-    ],
-    "conditions": [
-      {
-        "name": "1080p",
-        "negate": false,
-        "required": true,
-        "resolution": "1080p",
-        "type": "resolution"
-      },
-      {
-        "name": "WEB-DL",
-        "negate": false,
-        "required": true,
-        "source": "web_dl",
-        "type": "source"
-      },
-      {
-        "name": "h265",
-        "negate": false,
-        "pattern": "[xh][ ._-]?265|\\bHEVC(\\b|\\d)",
-        "required": true,
-        "type": "release_title"
-      },
-      {
-        "name": "ARCADE",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])ARCADE\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "DarQ",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])DarQ\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "SiGMA",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])SiGMA\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "Yoyo",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])Yoyo\\b",
-        "required": false,
-        "type": "release_group"
-      }
-    ],
-    "tests": [],
-    "_id": "1080p Efficient WEB-DL Tier 2"
-  },
-  {
-    "name": "1080p Efficient WEB-DL Tier 3",
-    "description": "Matches 1080p WEB-DLs.",
-    "tags": [
-      "Release Group Tier",
-      "1080p",
-      "Efficient"
-    ],
-    "conditions": [
-      {
-        "name": "1080p",
-        "negate": false,
-        "required": true,
-        "resolution": "1080p",
-        "type": "resolution"
-      },
-      {
-        "name": "WEB-DL",
-        "negate": false,
-        "required": true,
-        "source": "web_dl",
-        "type": "source"
-      },
-      {
-        "name": "h265",
-        "negate": false,
-        "pattern": "[xh][ ._-]?265|\\bHEVC(\\b|\\d)",
-        "required": true,
-        "type": "release_title"
-      },
-      {
-        "name": "GRiMM",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])GRiMM\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "OnlyWeb",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])OnlyWeb\\b",
-        "required": false,
-        "type": "release_group"
-      }
-    ],
-    "tests": [],
-    "_id": "1080p Efficient WEB-DL Tier 3"
   },
   {
     "name": "1080p Golden Popcorn",
@@ -4699,7 +4386,7 @@
     "name": "1080p Remux",
     "description": "Matches 1080p Remux",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -4724,7 +4411,7 @@
     "name": "1080p WEB-DL (h264)",
     "description": "Matches 1080p WEB-DLs.",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -4753,10 +4440,217 @@
     "_id": "1080p WEB-DL (h264)"
   },
   {
+    "name": "1080p WEB-DL HEVC Tier 1",
+    "description": "Matches 1080p WEB-DLs.",
+    "tags": [
+      "Release Group Tier",
+      "1080p",
+      "HEVC"
+    ],
+    "conditions": [
+      {
+        "name": "1080p",
+        "negate": false,
+        "required": true,
+        "resolution": "1080p",
+        "type": "resolution"
+      },
+      {
+        "name": "WEB-DL",
+        "negate": false,
+        "required": true,
+        "source": "web_dl",
+        "type": "source"
+      },
+      {
+        "name": "h265",
+        "negate": false,
+        "pattern": "[xh][ ._-]?265|\\bHEVC(\\b|\\d)",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "BYNDR",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])BYNDR\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "CMRG",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])CM(a)?R(io)?G\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "FLUX",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])FLUX\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "HHWEB",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])HHWEB\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "HONE",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])HONE\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "Kitsune",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])Kitsune\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "NTb",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])NTb\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "MZABI",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])MZABI\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "playWEB",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])playWEB\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "SMURF",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])SMURF\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "TEPES",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])TEPES\\b",
+        "required": false,
+        "type": "release_group"
+      }
+    ],
+    "tests": [],
+    "_id": "1080p WEB-DL HEVC Tier 1"
+  },
+  {
+    "name": "1080p WEB-DL HEVC Tier 2",
+    "description": "Matches 1080p WEB-DLs.",
+    "tags": [
+      "Release Group Tier",
+      "1080p",
+      "HEVC"
+    ],
+    "conditions": [
+      {
+        "name": "1080p",
+        "negate": false,
+        "required": true,
+        "resolution": "1080p",
+        "type": "resolution"
+      },
+      {
+        "name": "WEB-DL",
+        "negate": false,
+        "required": true,
+        "source": "web_dl",
+        "type": "source"
+      },
+      {
+        "name": "h265",
+        "negate": false,
+        "pattern": "[xh][ ._-]?265|\\bHEVC(\\b|\\d)",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "ARCADE",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])ARCADE\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "Yoyo",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])Yoyo\\b",
+        "required": false,
+        "type": "release_group"
+      }
+    ],
+    "tests": [],
+    "_id": "1080p WEB-DL HEVC Tier 2"
+  },
+  {
+    "name": "1080p WEB-DL HEVC Tier 3",
+    "description": "Matches 1080p WEB-DLs.",
+    "tags": [
+      "Release Group Tier",
+      "1080p",
+      "HEVC"
+    ],
+    "conditions": [
+      {
+        "name": "1080p",
+        "negate": false,
+        "required": true,
+        "resolution": "1080p",
+        "type": "resolution"
+      },
+      {
+        "name": "WEB-DL",
+        "negate": false,
+        "required": true,
+        "source": "web_dl",
+        "type": "source"
+      },
+      {
+        "name": "h265",
+        "negate": false,
+        "pattern": "[xh][ ._-]?265|\\bHEVC(\\b|\\d)",
+        "required": true,
+        "type": "release_title"
+      },
+      {
+        "name": "GRiMM",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])GRiMM\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "OnlyWeb",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])OnlyWeb\\b",
+        "required": false,
+        "type": "release_group"
+      }
+    ],
+    "tests": [],
+    "_id": "1080p WEB-DL HEVC Tier 3"
+  },
+  {
     "name": "1080p WEB-DL",
     "description": "Matches 1080p WEB-DLs.",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -4781,7 +4675,7 @@
     "name": "1080p WEBRip",
     "description": "Matches 1080p WEBRips.",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -5102,7 +4996,7 @@
     "name": "2160p Bluray",
     "description": "Matches 2160p Blurays that are NOT remuxes",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -5168,13 +5062,6 @@
         "type": "release_group"
       },
       {
-        "name": "PTer",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])PTer\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
         "name": "SA89",
         "negate": false,
         "pattern": "(?<=^|[\\s.-])SA89\\b",
@@ -5228,6 +5115,13 @@
         "pattern": "(?<=^|[\\s.-])MainFrame\\b",
         "required": false,
         "type": "release_group"
+      },
+      {
+        "name": "PTer",
+        "type": "release_group",
+        "required": false,
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])PTer\\b"
       }
     ],
     "tests": [],
@@ -5869,7 +5763,7 @@
     "name": "2160p Remux",
     "description": "Matches 2160p Remux",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -5894,7 +5788,7 @@
     "name": "2160p WEB-DL",
     "description": "Matches 2160p WEB-DLs.",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -5919,7 +5813,7 @@
     "name": "2160p WEBRip",
     "description": "Matches 2160p WEBRips.",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -6004,7 +5898,7 @@
     "name": "480p WEB-DL",
     "description": "Matches 480p WEB-DLs.",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -6029,7 +5923,7 @@
     "name": "480p WEBRip",
     "description": "Matches 480p WEBRips.",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -6110,10 +6004,152 @@
     "_id": "576p"
   },
   {
+    "name": "720p Balanced Tier 1",
+    "description": "Matches release groups who fall under 720p Balanced Tier 1",
+    "tags": [
+      "Release Group Tier",
+      "720p",
+      "Balanced"
+    ],
+    "conditions": [
+      {
+        "name": "720p",
+        "negate": false,
+        "required": true,
+        "resolution": "720p",
+        "type": "resolution"
+      },
+      {
+        "name": "Bluray",
+        "negate": false,
+        "required": true,
+        "source": "bluray",
+        "type": "source"
+      },
+      {
+        "name": "BHDStudio",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])BHDStudio\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "hallowed",
+        "type": "release_group",
+        "required": false,
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])hallowed\\b"
+      }
+    ],
+    "tests": [
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "hallowed",
+            "negate": false,
+            "pattern": "hallowed",
+            "required": false,
+            "type": "release_group"
+          },
+          {
+            "matches": false,
+            "name": "BHDStudio",
+            "negate": false,
+            "pattern": "BHDStudio",
+            "required": false,
+            "type": "release_group"
+          }
+        ],
+        "expected": true,
+        "id": 1,
+        "input": "Contact.1997.BluRay.1080p.DDP.5.1.x264-hallowed",
+        "lastRun": "2025-01-13T02:53:37.357699",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": true,
+            "name": "hallowed",
+            "negate": false,
+            "pattern": "hallowed",
+            "required": false,
+            "type": "release_group"
+          },
+          {
+            "matches": false,
+            "name": "BHDStudio",
+            "negate": false,
+            "pattern": "BHDStudio",
+            "required": false,
+            "type": "release_group"
+          }
+        ],
+        "expected": true,
+        "id": 2,
+        "input": "Gladiator.2000.Extended.Cut.UHD.BluRay.2160p.DDP.7.1.DV.HDR.x265-hallowed",
+        "lastRun": "2025-01-13T02:53:37.357699",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": false,
+            "name": "hallowed",
+            "negate": false,
+            "pattern": "hallowed",
+            "required": false,
+            "type": "release_group"
+          },
+          {
+            "matches": true,
+            "name": "BHDStudio",
+            "negate": false,
+            "pattern": "BHDStudio",
+            "required": false,
+            "type": "release_group"
+          }
+        ],
+        "expected": true,
+        "id": 3,
+        "input": "Yi Yi 2000 BluRay 720p DD 2 0 x264-BHDStudio",
+        "lastRun": "2025-01-13T02:53:37.357699",
+        "passes": true
+      },
+      {
+        "conditionResults": [
+          {
+            "matches": false,
+            "name": "hallowed",
+            "negate": false,
+            "pattern": "hallowed",
+            "required": false,
+            "type": "release_group"
+          },
+          {
+            "matches": true,
+            "name": "BHDStudio",
+            "negate": false,
+            "pattern": "BHDStudio",
+            "required": false,
+            "type": "release_group"
+          }
+        ],
+        "expected": true,
+        "id": 4,
+        "input": "Winnie the Pooh - Blood and Honey (2023) 2160p UHD BluRay x265 DV HDR DD 5.1 English-BHDStudio",
+        "lastRun": "2025-01-13T02:53:37.357699",
+        "passes": true
+      }
+    ],
+    "_id": "720p Balanced Tier 1"
+  },
+  {
     "name": "720p Bluray",
     "description": "Matches 720p Blurays that are NOT remuxes",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -6570,7 +6606,7 @@
     "name": "720p WEB-DL",
     "description": "Matches 720p WEB-DLs.",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -6595,7 +6631,7 @@
     "name": "720p WEBRip",
     "description": "Matches 720p WEBRips.",
     "tags": [
-      "Resolution"
+      "Source"
     ],
     "conditions": [
       {
@@ -7377,9 +7413,16 @@
       {
         "name": "BCORE Regex",
         "negate": false,
-        "pattern": "\\b(BCORE)\\b",
-        "required": true,
+        "pattern": "\\b(BCORE|CORE)\\b(?=[ ._-]web[ ._-]?(dl|rip)\\b)",
+        "required": false,
         "type": "release_title"
+      },
+      {
+        "name": "BCORE Rename Regex",
+        "type": "release_title",
+        "required": false,
+        "negate": false,
+        "pattern": "\\[(BCORE)\\b|\\b(BCORE)\\]"
       },
       {
         "name": "WEB-DL",
@@ -7390,10 +7433,10 @@
       },
       {
         "name": "WEBRip",
-        "type": "source",
-        "required": false,
         "negate": false,
-        "source": "webrip"
+        "required": false,
+        "source": "webrip",
+        "type": "source"
       }
     ],
     "tests": [],
@@ -7553,11 +7596,18 @@
         "type": "release_group"
       },
       {
-        "name": "MgB",
-        "type": "release_group",
-        "required": false,
+        "name": "MeGusta",
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])MgB\\b"
+        "pattern": "(?<=^|[\\s.-])MeGusta\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "MgB",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])MgB\\b",
+        "required": false,
+        "type": "release_group"
       },
       {
         "name": "NAHOM",
@@ -7591,6 +7641,20 @@
         "name": "PiRaTeS",
         "negate": false,
         "pattern": "(?<=^|[\\s.-])PiRaTeS\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "PSA",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])PSA\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "RARGB",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])RARGB\\b",
         "required": false,
         "type": "release_group"
       },
@@ -7644,6 +7708,13 @@
         "type": "release_group"
       },
       {
+        "name": "TvR",
+        "type": "release_group",
+        "required": false,
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])TvR\\b"
+      },
+      {
         "name": "VECTOR",
         "negate": false,
         "pattern": "(?<=^|[\\s.-])VECTOR\\b",
@@ -7661,6 +7732,13 @@
         "name": "WiKi",
         "negate": false,
         "pattern": "(?<=^|[\\s.-])WiKi\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "x0r",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])x0r\\b",
         "required": false,
         "type": "release_group"
       },
@@ -7710,13 +7788,6 @@
         "pattern": "(?<=^|[\\s.-])LEGi0N\\b",
         "required": false,
         "type": "release_group"
-      },
-      {
-        "name": "RARGB",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])RARGB\\b",
-        "required": false,
-        "type": "release_group"
       }
     ],
     "tests": [],
@@ -7732,10 +7803,10 @@
     "conditions": [
       {
         "name": "2160p",
-        "type": "resolution",
-        "required": true,
         "negate": false,
-        "resolution": "2160p"
+        "required": true,
+        "resolution": "2160p",
+        "type": "resolution"
       },
       {
         "name": "WEB-DL",
@@ -7750,13 +7821,6 @@
         "pattern": "^(?!.*(?i:remux))(?=.*([x]\\s?(\\.?265)\\b|HEVC|\\bDS4K\\b)).*$",
         "required": true,
         "type": "release_title"
-      },
-      {
-        "name": "ABBIE",
-        "negate": true,
-        "pattern": "(?<=^|[\\s.-])ABBIE\\b",
-        "required": true,
-        "type": "release_group"
       },
       {
         "name": "AjA",
@@ -8188,6 +8252,529 @@
       }
     ],
     "_id": "Banned WEB-DL (x265)"
+  },
+  {
+    "name": "Banned WEBRip (Efficient)",
+    "description": "Matches WEBRip releases that are not from a quality tier",
+    "tags": [
+      "Banned",
+      "Release Group"
+    ],
+    "conditions": [
+      {
+        "name": "WEBRip",
+        "negate": false,
+        "required": true,
+        "source": "webrip",
+        "type": "source"
+      },
+      {
+        "name": "Not 1080p",
+        "negate": true,
+        "required": true,
+        "resolution": "1080p",
+        "type": "resolution"
+      },
+      {
+        "name": "AJP69",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])AJP69\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "BMF",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])BMF\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "BV",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])BV\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "c0kE",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])c0kE\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "Chotab",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])Chotab\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "CJ",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])CJ\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "CRiSC",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])CRiSC\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "CRX",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])CRX\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "CtrlHD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])CtrlHD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "Dariush",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])Dariush\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "de[42]",
+        "negate": true,
+        "pattern": "de[42]",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "decibeL",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])decibeL\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "DON",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])DON\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "D-Z0N3",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])D-Z0N3\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "E1",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])E1\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "EbP",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])EbP\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "EDPH",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])EDPH\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "E.N.D",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])E.N.D\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "ESiR",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])ESiR\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "EXCiSION",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])EXCiSION\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "FilmHD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])FilmHD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "FoRM",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])FoRM\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "FraMeSToR",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])FraMeSToR\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "FTW-HD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])FTW-HD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "GALAXY",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])GALAXY\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "Geek",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])Geek\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "GS88",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])GS88\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "HANDJOB",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])HANDJOB\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "hdalx",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])hdalx\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "HDMaNiAcS",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])HDMaNiAcS\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "HiDt",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])HiDt\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "HiFi",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])HiFi\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "HiP",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])HiP\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "IDE",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])IDE\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "iFT",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])iFT\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "iON",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])iON\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "KASHMiR",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])KASHMiR\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "LEGi0N",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])LEGi0N\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "LiNG",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])LiNG\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "LolHD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])LolHD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "LoRD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])LoRD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "luvBB",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])luvBB\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "MTeam",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])MTeam\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "NCmt",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])NCmt\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "nmd",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])nmd\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "NTb",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])NTb\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "NyHD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])NyHD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "ORiGEN",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])ORiGEN\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "P0W4HD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])P0W4HD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "Penumbra",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])Penumbra\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "playHD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])playHD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "Positive",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])Positive\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "PTer",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])PTer\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "rightSIZE",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])rightSIZE\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "rttr",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])rttr\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "SA89",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])SA89\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "SaNcTi",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])SaNcTi\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "SbR",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])SbR\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "SiMPLE",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])SiMPLE\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "SOP",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])SOP\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "TayTo",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])TayTo\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "TBB",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])TBB\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "TDD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])TDD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "VietHD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])VietHD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "VLAD",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])VLAD\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "W4NK3R",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])W4NK3R\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "WMING",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])WMING\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "xander",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])xander\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "ZIMBO",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])ZIMBO\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "ZQ",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])ZQ\\b",
+        "required": true,
+        "type": "release_group"
+      },
+      {
+        "name": "ZoroSenpai",
+        "negate": true,
+        "pattern": "(?<=^|[\\s.-])ZoroSenpai\\b",
+        "required": true,
+        "type": "release_group"
+      }
+    ],
+    "tests": [],
+    "_id": "Banned WEBRip (Efficient)"
   },
   {
     "name": "Banned WEBRip",
@@ -9366,7 +9953,7 @@
       {
         "name": "DTS-HD HRA",
         "negate": false,
-        "pattern": "dts[-. ]?(hd[. ]?)?(hra?|hi\\b",
+        "pattern": "dts[-. ]?(hd[. ]?)?(hra?|hi\\b)",
         "required": true,
         "type": "release_title"
       },
@@ -11355,17 +11942,17 @@
   },
   {
     "name": "Full Disc (Quality Match)",
-    "description": "Matches full discs using a quality modifier",
+    "description": "Matches Full Discs using a Radarr Quality Match",
     "tags": [
       "Storage"
     ],
     "conditions": [
       {
         "name": "BRDISK",
-        "type": "quality_modifier",
-        "required": true,
         "negate": false,
-        "qualityModifier": "brdisk"
+        "qualityModifier": "brdisk",
+        "required": true,
+        "type": "quality_modifier"
       }
     ],
     "tests": [],
@@ -13213,7 +13800,7 @@
       {
         "name": "ROKU Regex",
         "negate": false,
-        "pattern": "(?<=\\b[12]\\d{3}\\b).*\\b(ROKU)\\b",
+        "pattern": "\\b(ROKU)\\b",
         "required": true,
         "type": "release_title"
       },
@@ -13262,10 +13849,46 @@
     "_id": "ROKU"
   },
   {
+    "name": "Remux (Quality Match)",
+    "description": "Matches Remux as a codec, not a source. Either h265 or h264.",
+    "tags": [
+      "Storage"
+    ],
+    "conditions": [
+      {
+        "name": "Remux",
+        "negate": false,
+        "qualityModifier": "remux",
+        "required": true,
+        "type": "quality_modifier"
+      }
+    ],
+    "tests": [],
+    "_id": "Remux (Quality Match)"
+  },
+  {
+    "name": "Remux (Source)",
+    "description": "Matches Remux using a Sonarr Source",
+    "tags": [
+      "Storage"
+    ],
+    "conditions": [
+      {
+        "name": "Remux",
+        "negate": false,
+        "required": true,
+        "source": "bluray_raw",
+        "type": "source"
+      }
+    ],
+    "tests": [],
+    "_id": "Remux (Source)"
+  },
+  {
     "name": "Remux Tier 1",
     "description": "Matches release groups who fall under Remux Tier 1",
     "tags": [
-      "Release Groups",
+      "Release Group Tier",
       "Remux"
     ],
     "conditions": [
@@ -13292,10 +13915,10 @@
       },
       {
         "name": "BiZKiT",
-        "type": "release_group",
-        "required": false,
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])BiZKiT\\b"
+        "pattern": "(?<=^|[\\s.-])BiZKiT\\b",
+        "required": false,
+        "type": "release_group"
       },
       {
         "name": "BLURANiUM",
@@ -13326,7 +13949,7 @@
     "name": "Remux Tier 2",
     "description": "Matches release groups who fall under Remux Tier 2",
     "tags": [
-      "Release Groups",
+      "Release Group Tier",
       "Remux"
     ],
     "conditions": [
@@ -13394,7 +14017,7 @@
     "name": "Remux Tier 3",
     "description": "Matches release groups who fall under Remux Tier 3",
     "tags": [
-      "Release Groups",
+      "Release Group Tier",
       "Remux"
     ],
     "conditions": [
@@ -13442,10 +14065,10 @@
       },
       {
         "name": "SiCFoI",
-        "type": "release_group",
-        "required": false,
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])SiCFoI\\b"
+        "pattern": "(?<=^|[\\s.-])SiCFoI\\b",
+        "required": false,
+        "type": "release_group"
       },
       {
         "name": "TEPES",
@@ -13462,7 +14085,7 @@
     "name": "Remux Tier 4",
     "description": "Matches release groups who fall under Remux Tier 4",
     "tags": [
-      "Release Groups",
+      "Release Group Tier",
       "Remux"
     ],
     "conditions": [
@@ -13524,10 +14147,10 @@
       },
       {
         "name": "ZoroSenpai",
-        "type": "release_group",
-        "required": false,
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])ZoroSenpai\\b"
+        "pattern": "(?<=^|[\\s.-])ZoroSenpai\\b",
+        "required": false,
+        "type": "release_group"
       }
     ],
     "tests": [],
@@ -13537,7 +14160,7 @@
     "name": "Remux",
     "description": "Matches Remux as a codec, not a source. Either h265 or h264.",
     "tags": [
-      "Codec"
+      "Storage"
     ],
     "conditions": [
       {
@@ -14664,6 +15287,25 @@
     "_id": "Special Edition"
   },
   {
+    "name": "TV Extras",
+    "description": "Matches the 'Extras' Regex Pattern",
+    "tags": [
+      "Banned",
+      "Enhancement"
+    ],
+    "conditions": [
+      {
+        "name": "TV Extras",
+        "negate": false,
+        "pattern": "(?<=\\bS\\d+\\b).*\\b(Extras|Bonus|Extended[ ._-]Clip)\\b",
+        "required": true,
+        "type": "release_title"
+      }
+    ],
+    "tests": [],
+    "_id": "TV Extras"
+  },
+  {
     "name": "TVING",
     "description": "Matches 'TVING' WEB-DLs. Negates any encodes.",
     "tags": [
@@ -15356,7 +15998,7 @@
     "name": "WEB-DL Tier 1",
     "description": "Matches release groups who fall under WEB-DL Tier 1",
     "tags": [
-      "Release Groups",
+      "Release Group Tier",
       "WEB-DL"
     ],
     "conditions": [
@@ -15389,7 +16031,7 @@
     "name": "WEB-DL Tier 2",
     "description": "Matches release groups who fall under WEB-DL Tier 2",
     "tags": [
-      "Release Groups",
+      "Release Group Tier",
       "WEB-DL"
     ],
     "conditions": [
@@ -15402,10 +16044,10 @@
       },
       {
         "name": "BYNDR",
-        "type": "release_group",
-        "required": false,
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])BYNDR\\b"
+        "pattern": "(?<=^|[\\s.-])BYNDR\\b",
+        "required": false,
+        "type": "release_group"
       },
       {
         "name": "CMRG",
@@ -15457,7 +16099,7 @@
     "name": "WEB-DL Tier 3",
     "description": "Matches release groups who fall under WEB-DL Tier 3",
     "tags": [
-      "Release Groups",
+      "Release Group Tier",
       "WEB-DL"
     ],
     "conditions": [
@@ -15469,23 +16111,9 @@
         "type": "source"
       },
       {
-        "name": "ABBIE",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])ABBIE\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
         "name": "AJP69",
         "negate": false,
         "pattern": "(?<=^|[\\s.-])AJP69\\b",
-        "required": false,
-        "type": "release_group"
-      },
-      {
-        "name": "APEX",
-        "negate": false,
-        "pattern": "(?<=^|[\\s.-])APEX\\b",
         "required": false,
         "type": "release_group"
       },
@@ -15497,9 +16125,23 @@
         "type": "release_group"
       },
       {
-        "name": "BTN",
+        "name": "BTW",
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])BTN\\b",
+        "pattern": "(?<=^|[\\s.-])BTW\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "CasStudio",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])CasStudio\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "Cinefeel",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])Cinefeel\\b",
         "required": false,
         "type": "release_group"
       },
@@ -15511,9 +16153,30 @@
         "type": "release_group"
       },
       {
+        "name": "CtrlHD",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])CtrlHD\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
         "name": "KiNGS",
         "negate": false,
         "pattern": "(?<=^|[\\s.-])KiNGS\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "LAZY",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])LAZY\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "monkee",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])monkee\\b",
         "required": false,
         "type": "release_group"
       },
@@ -15546,16 +16209,23 @@
         "type": "release_group"
       },
       {
-        "name": "SbR",
+        "name": "RAWR",
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])SbR\\b",
+        "pattern": "(?<=^|[\\s.-])RAWR\\b",
         "required": false,
         "type": "release_group"
       },
       {
-        "name": "SiC",
+        "name": "SA89",
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])SiC\\b",
+        "pattern": "(?<=^|[\\s.-])SA89\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "SbR",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])SbR\\b",
         "required": false,
         "type": "release_group"
       },
@@ -15574,9 +16244,16 @@
         "type": "release_group"
       },
       {
-        "name": "XEBEC",
+        "name": "TVSmash",
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])XEBEC\\b",
+        "pattern": "(?<=^|[\\s.-])TVSmash\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "ZoroSenpai",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])ZoroSenpai\\b",
         "required": false,
         "type": "release_group"
       }
@@ -15588,7 +16265,7 @@
     "name": "WEB-DL Tier 4",
     "description": "Matches release groups who fall under WEB-DL Tier 4",
     "tags": [
-      "Release Groups",
+      "Release Group Tier",
       "WEB-DL"
     ],
     "conditions": [
@@ -15600,22 +16277,139 @@
         "type": "source"
       },
       {
-        "name": "Cinefeel",
+        "name": "APEX",
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])Cinefeel\\b",
+        "pattern": "(?<=^|[\\s.-])APEX\\b",
         "required": false,
         "type": "release_group"
       },
       {
-        "name": "LAZY",
+        "name": "KHN",
         "negate": false,
-        "pattern": "(?<=^|[\\s.-])LAZY\\b",
+        "pattern": "(?<=^|[\\s.-])KHN\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "NPMS",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])NPMS\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "RTN",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])RTN\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "SiC",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])SiC\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "SPiRiT",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])SPiRiT\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "ViSUM",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])ViSUM\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "WELP",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])WELP\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "XEBEC",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])XEBEC\\b",
         "required": false,
         "type": "release_group"
       }
     ],
     "tests": [],
     "_id": "WEB-DL Tier 4"
+  },
+  {
+    "name": "WEB-DL Tier 5",
+    "description": "Matches release groups who fall under WEB-DL Tier 5",
+    "tags": [
+      "Release Group Tier",
+      "WEB-DL"
+    ],
+    "conditions": [
+      {
+        "name": "WEB-DL",
+        "negate": false,
+        "required": true,
+        "source": "web_dl",
+        "type": "source"
+      },
+      {
+        "name": "CRUD",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])CRUD\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "dB",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])dB\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "GNOME",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])GNOME\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "NINJACENTRAL",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])NINJACENTRAL\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "PHOENiX",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])PHOENiX\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "ROCCaT",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])ROCCaT\\b",
+        "required": false,
+        "type": "release_group"
+      },
+      {
+        "name": "SiGMA",
+        "negate": false,
+        "pattern": "(?<=^|[\\s.-])SiGMA\\b",
+        "required": false,
+        "type": "release_group"
+      }
+    ],
+    "tests": [],
+    "_id": "WEB-DL Tier 5"
   },
   {
     "name": "WEBRip",
@@ -15924,7 +16718,7 @@
       {
         "name": "ROKU Regex",
         "negate": true,
-        "pattern": "(?<=\\b[12]\\d{3}\\b).*\\b(ROKU)\\b",
+        "pattern": "\\b(ROKU)\\b",
         "required": true,
         "type": "release_title"
       },
