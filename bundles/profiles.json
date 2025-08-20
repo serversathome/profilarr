@@ -1,7 +1,7 @@
 [
   {
-    "name": "1080p Balanced+",
-    "description": "1080p Balanced targets consistent & immutable 1080p **WEB-DLs** with fallback to transparent x264 encodes, prioritised using the **Golden Popcorn Performance Index**.\n\n- Special considerations are given to **Balanced** groups who prioritize **streaming optimisation** over quality, falling somewhere around a tier 2 WEB-DL. This includes groups like **BHDStudio** and **hallowed**.\n- If no 1080p release can be found, the profile will fall back to SD releases - DVD remuxes  / encodes. \n\n- Balanced+ adds another layer on top that includes H265 WEB-DLs from isolated groups as well as HONE Blurays.",
+    "name": "1080p Balanced Plus",
+    "description": "1080p Balanced targets consistent & immutable 1080p **WEB-DLs** with fallback to transparent x264 encodes, prioritised using the **Golden Popcorn Performance Index**.\n\n- Special considerations are given to **Balanced** groups who prioritize **streaming optimisation** over quality, falling somewhere around a tier 2 WEB-DL. This includes groups like **BHDStudio** and **hallowed**.\n- If no 1080p release can be found, the profile will fall back to SD releases - DVD remuxes  / encodes. \n\n- Balanced+ adds another layer on top that includes H265 WEB-DLs from isolated groups as well as HONE Blurays.\n\n- Usenet Indexers have limited amounts of 1080p H265. Results may be limited for Usenet Users.",
     "tags": [
       "1080p",
       "Balanced Focused",
@@ -416,7 +416,7 @@
       "description": "Balanced Capable releases. Typically WEB-DL would be the overwhelming majority of releases, but there are occasional streaming optimised encodes that should be preferred."
     },
     "language": "must_original",
-    "_id": "1080p Balanced+"
+    "_id": "1080p Balanced Plus"
   },
   {
     "name": "1080p Balanced",
