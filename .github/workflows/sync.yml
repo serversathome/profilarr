@@ -3,7 +3,7 @@ name: Sync Profilarr Database
 on:
   schedule:
     - cron: '0 * * * *' # every hour at minute 0
-  workflow_dispatch: # manual trigger
+  workflow_dispatch:
 
 jobs:
   sync:
@@ -24,14 +24,13 @@ jobs:
 
       - name: Merge upstream
         run: |
+          echo "Merging changes from upstream..."
           git merge upstream/main --allow-unrelated-histories -m "Sync from Dictionarry-Hub/database" || echo "No changes from upstream"
 
       - name: Pull selective files from sweatyeggs
         run: |
-          # Quality profile
+          echo "Pulling selective files from sweatyeggs69..."
           git checkout sweatyeggs/stable -- profiles/Anime\ 1080p.yml
-
-          # Custom formats
           git checkout sweatyeggs/stable -- custom_formats/Anime\ Dual\ Audio.yml
           git checkout sweatyeggs/stable -- custom_formats/Anime\ LQ.yml
           git checkout sweatyeggs/stable -- custom_formats/Anime\ Raws.yml
@@ -50,8 +49,6 @@ jobs:
           git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 5.yml
           git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 6.yml
           git checkout sweatyeggs/stable -- custom_formats/Uncensored.yml
-
-          # Regex patterns
           git checkout sweatyeggs/stable -- regex_patterns/Anime\ LQ.yml
           git checkout sweatyeggs/stable -- regex_patterns/Anime\ Raws.yml
           git checkout sweatyeggs/stable -- regex_patterns/Anime\ Single\ Language.yml
@@ -71,10 +68,36 @@ jobs:
           git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 6.yml
           git checkout sweatyeggs/stable -- regex_patterns/Uncensored.yml
 
-      - name: Commit and push
+      - name: Commit and push if there are changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add .
-          git commit -m "Sync upstream + sweatyeggs69 custom files" || echo "No changes to commit"
-          git push origin main
+
+          if ! git diff --quiet; then
+            echo "===== FILES CHANGED SUMMARY ====="
+
+            # Upstream changes
+            echo ""
+            echo "Upstream Added Files:"
+            git diff --diff-filter=A --name-only HEAD^ HEAD | grep -v '^profiles\|^custom_formats\|^regex_patterns' || echo "None"
+
+            echo ""
+            echo "Upstream Modified Files:"
+            git diff --diff-filter=M --name-only HEAD^ HEAD | grep -v '^profiles\|^custom_formats\|^regex_patterns' || echo "None"
+
+            # Sweatyeggs changes
+            echo ""
+            echo "Sweatyeggs Added Files:"
+            git status --short | awk '$1=="A"{print $2}' | grep -E '^profiles/|^custom_formats/|^regex_patterns/' || echo "None"
+
+            echo ""
+            echo "Sweatyeggs Modified Files:"
+            git status --short | awk '$1=="M"{print $2}' | grep -E '^profiles/|^custom_formats/|^regex_patterns/' || echo "None"
+
+            echo ""
+            git add .
+            git commit -m "Sync upstream + sweatyeggs69 custom files"
+            git push origin main
+          else
+            echo "No changes to commit"
+          fi
