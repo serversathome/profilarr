@@ -1,0 +1,80 @@
+name: Sync Profilarr Database
+
+on:
+  schedule:
+    - cron: '0 * * * *' # every hour at minute 0
+  workflow_dispatch: # manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Add upstream remotes
+        run: |
+          git remote add upstream https://github.com/Dictionarry-Hub/database.git
+          git remote add sweatyeggs https://github.com/sweatyeggs69/profilarr.git
+          git fetch upstream
+          git fetch sweatyeggs
+
+      - name: Merge upstream
+        run: |
+          git merge upstream/main --allow-unrelated-histories -m "Sync from Dictionarry-Hub/database" || echo "No changes from upstream"
+
+      - name: Pull selective files from sweatyeggs
+        run: |
+          # Quality profile
+          git checkout sweatyeggs/stable -- profiles/Anime\ 1080p.yml
+
+          # Custom formats
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ Dual\ Audio.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ LQ.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ Raws.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 1.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 2.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 3.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 4.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 5.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 6.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 7.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 8.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 1.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 2.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 3.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 4.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 5.yml
+          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 6.yml
+          git checkout sweatyeggs/stable -- custom_formats/Uncensored.yml
+
+          # Regex patterns
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ LQ.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Raws.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Single\ Language.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 1.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 2.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 3.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 4.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 5.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 6.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 7.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 8.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 1.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 2.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 3.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 4.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 5.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 6.yml
+          git checkout sweatyeggs/stable -- regex_patterns/Uncensored.yml
+
+      - name: Commit and push
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Sync upstream + sweatyeggs69 custom files" || echo "No changes to commit"
+          git push origin main
