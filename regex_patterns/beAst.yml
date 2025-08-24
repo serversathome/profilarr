@@ -1,0 +1,7 @@
+'description': ''
+'name': 'beAst'
+'pattern': '(?<=^|[\s.-])beAst\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

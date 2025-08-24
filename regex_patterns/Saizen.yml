@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Saizen'
+'pattern': '(?<=^|[\s.-])Saizen\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

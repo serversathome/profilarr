@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Iznjie Biznjie'
+'pattern': '(?<=^|[\s.-])Iznjie Biznjie\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

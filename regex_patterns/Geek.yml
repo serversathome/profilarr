@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Geek'
+'pattern': '(?<=^|[\s.-])Geek\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

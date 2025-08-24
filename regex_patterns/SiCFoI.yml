@@ -1,0 +1,7 @@
+'description': ''
+'name': 'SiCFoI'
+'pattern': '(?<=^|[\s.-])SiCFoI\b'
+'tags':
+- 'Release Group'
+- 'Remux'
+'tests': []

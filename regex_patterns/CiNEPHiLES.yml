@@ -1,0 +1,7 @@
+'description': ''
+'name': 'CiNEPHiLES'
+'pattern': '(?<=^|[\s.-])CiNEPHiLES\b'
+'tags':
+- 'Release Group'
+- 'Remux'
+'tests': []

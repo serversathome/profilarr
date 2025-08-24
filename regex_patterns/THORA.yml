@@ -1,0 +1,7 @@
+'description': ''
+'name': 'THORA'
+'pattern': '(?<=^|[\s.-])THORA\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Mysteria'
+'pattern': '(?<=^|[\s.-])Mysteria\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

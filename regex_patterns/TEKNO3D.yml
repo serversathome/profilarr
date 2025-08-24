@@ -1,0 +1,7 @@
+'description': 'Banned for Fake DV/HDR Layer'
+'name': 'TEKNO3D'
+'pattern': '(?<=^|[\s.-])TEKNO3D\b'
+'tags':
+- 'Release Group'
+- 'Banned'
+'tests': []

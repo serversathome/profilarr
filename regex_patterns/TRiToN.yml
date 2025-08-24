@@ -1,0 +1,7 @@
+'description': ''
+'name': 'TRiToN'
+'pattern': '(?<=^|[\s.-])TRiToN\b'
+'tags':
+- 'Release Group'
+- 'Remux'
+'tests': []

@@ -1,0 +1,7 @@
+'description': ''
+'name': 'EA'
+'pattern': '(?<=^|[\s.-])EA\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

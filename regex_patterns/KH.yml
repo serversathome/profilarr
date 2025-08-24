@@ -1,0 +1,7 @@
+'description': ''
+'name': 'KH'
+'pattern': '(?<=^|[\s.-])KH\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

@@ -1,0 +1,8 @@
+'description': ''
+'name': 'NCmt'
+'pattern': '(?<=^|[\s.-])NCmt\b'
+'tags':
+- 'Release Group'
+- 'Remux'
+- 'Bluray'
+'tests': []

@@ -1,0 +1,7 @@
+'description': 'TRaSH Guides Anime Tier 01 (Top SeaDex Muxers)'
+'name': 'Anime Tier 1'
+'pattern': '(?<=^|[\s.\-\[])(Aergia|Arg0|Legion|LYS1TH3A|OZR|sam|SCY|smol|SoM|Vanilla|Vodes|ZeroBuild)\b'
+'tags':
+- 'Anime'
+- 'Release Group'
+'tests': []

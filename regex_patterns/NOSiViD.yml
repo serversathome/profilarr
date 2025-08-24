@@ -1,0 +1,7 @@
+'description': ''
+'name': 'NOSiViD'
+'pattern': '(?<=^|[\s.-])NOSiViD\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

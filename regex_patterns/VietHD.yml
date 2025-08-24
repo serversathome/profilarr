@@ -1,0 +1,7 @@
+'description': ''
+'name': 'VietHD'
+'pattern': '(?<=^|[\s.-])VietHD\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

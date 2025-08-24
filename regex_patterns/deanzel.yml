@@ -1,0 +1,7 @@
+'description': ''
+'name': 'deanzel'
+'pattern': '(?<=^|[\s.-])deanzel\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Raizel'
+'pattern': '(?<=^|[\s.-])Raizel\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

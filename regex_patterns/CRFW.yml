@@ -1,0 +1,7 @@
+'description': ''
+'name': 'CRFW'
+'pattern': '(?<=^|[\s.-])CRFW\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

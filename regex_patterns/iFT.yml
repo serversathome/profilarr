@@ -1,0 +1,7 @@
+'description': ''
+'name': 'iFT'
+'pattern': '(?<=^|[\s.-])iFT\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

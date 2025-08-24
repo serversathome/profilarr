@@ -1,0 +1,7 @@
+'description': ''
+'name': 'kuchikirukia'
+'pattern': '(?<=^|[\s.-])kuchikirukia\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

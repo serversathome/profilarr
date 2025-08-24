@@ -1,0 +1,7 @@
+'description': 'Banned For AI Upscale'
+'name': 'ShieldBearer'
+'pattern': '(?<=^|[\s.-])ShieldBearer\b'
+'tags':
+- 'Release Group'
+- 'Banned'
+'tests': []

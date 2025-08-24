@@ -1,0 +1,7 @@
+'description': ''
+'name': 'TnP'
+'pattern': '(?<=^|[\s.-])TnP\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

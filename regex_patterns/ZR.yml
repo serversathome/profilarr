@@ -1,0 +1,7 @@
+'description': ''
+'name': 'ZR'
+'pattern': '(?<=^|[\s.-])ZR\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

@@ -1,0 +1,7 @@
+'description': ''
+'name': 'PmP'
+'pattern': '(?<=^|[\s.-])PmP\b'
+'tags':
+- 'Release Group'
+- 'Remux'
+'tests': []

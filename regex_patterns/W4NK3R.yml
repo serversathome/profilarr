@@ -1,0 +1,7 @@
+'description': ''
+'name': 'W4NK3R'
+'pattern': '(?<=^|[\s.-])W4NK3R\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

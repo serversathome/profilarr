@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Kitsune'
+'pattern': '(?<=^|[\s.-])Kitsune\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

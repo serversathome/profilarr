@@ -1,0 +1,13 @@
+'conditions':
+- 'name': 'Anime LQ'
+  'negate': false
+  'pattern': 'Anime LQ'
+  'required': true
+  'type': 'release_title'
+'description': ''
+'name': 'Anime LQ'
+'tags':
+- 'Anime'
+- 'Banned'
+- 'Group Tier'
+'tests': []

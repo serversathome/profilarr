@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Dariush'
+'pattern': '(?<=^|[\s.-])Dariush\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

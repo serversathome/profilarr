@@ -1,0 +1,7 @@
+'description': ''
+'name': 'TDD'
+'pattern': '(?<=^|[\s.-])TDD\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

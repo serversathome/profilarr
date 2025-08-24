@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Yuki'
+'pattern': '(?<=^|[\s.-])Yuki\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

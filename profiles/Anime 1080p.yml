@@ -1,0 +1,54 @@
+'custom_formats': []
+'custom_formats_radarr': []
+'custom_formats_sonarr':
+- 'name': 'Anime Tier 1'
+  'score': 2500
+- 'name': 'Anime Tier 2'
+  'score': 2400
+- 'name': 'WEB-DL Tier 1'
+  'score': 1100
+- 'name': 'WEB-DL Tier 2'
+  'score': 1000
+- 'name': 'WEB-DL Tier 3'
+  'score': 900
+- 'name': 'WEB-DL Tier 4'
+  'score': 800
+- 'name': '1080p'
+  'score': 102
+- 'name': 'Anime Dual Audio'
+  'score': 101
+- 'name': 'Uncensored'
+  'score': 101
+- 'name': '2160p'
+  'score': 50
+- 'name': '720p'
+  'score': 25
+- 'name': 'Anime LQ'
+  'score': -10000
+- 'name': 'Anime Raws'
+  'score': -10000
+- 'name': 'AV1'
+  'score': -10000
+'description': "Based on the TRaSH Guides Anime Profile, focusing on media that has\n\
+  \  Dual Audio.\n\n  - This profile will grab between a SDTV - 1080p Bluray file.\n\
+  \n  - You will be preferring Dual Audio media (ie including English along with original\n\
+  \  language).\n\n  - If you prefer only the **original language**, change the \"\
+  Dual Audio\" score from\n  101 to 0"
+'language': 'original'
+'minCustomFormatScore': 0
+'minScoreIncrement': 1
+'name': 'Anime 1080p'
+'qualities':
+- 'id': 10
+  'name': 'Bluray-1080p'
+'tags':
+- 'Anime'
+- 'Sonarr'
+- '1080p'
+- 'TRaSH'
+'upgradeUntilScore': 10000
+'upgrade_until':
+  'description': '1080p Blu-ray video encoded with lossy compression'
+  'id': 10
+  'name': 'Bluray-1080p'
+'upgradesAllowed': true

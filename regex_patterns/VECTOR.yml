@@ -1,0 +1,7 @@
+'description': 'Banned for Fake DV/HDR Layer.'
+'name': 'VECTOR'
+'pattern': '(?<=^|[\s.-])VECTOR\b'
+'tags':
+- 'Release Group'
+- 'Banned'
+'tests': []

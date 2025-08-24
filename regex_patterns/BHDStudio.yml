@@ -1,0 +1,7 @@
+'description': ''
+'name': 'BHDStudio'
+'pattern': '(?<=^|[\s.-])BHDStudio\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

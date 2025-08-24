@@ -1,0 +1,7 @@
+'description': ''
+'name': 'MTBB'
+'pattern': '(?<=^|[\s.-])MTBB\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

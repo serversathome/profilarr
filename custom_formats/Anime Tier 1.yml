@@ -1,0 +1,27 @@
+'conditions':
+- 'name': 'Bluray'
+  'negate': false
+  'required': false
+  'source': 'bluray'
+  'type': 'source'
+- 'name': 'Bluray Remux'
+  'negate': false
+  'required': false
+  'source': 'bluray_raw'
+  'type': 'source'
+- 'name': 'DVD'
+  'negate': false
+  'required': false
+  'source': 'dvd'
+  'type': 'source'
+- 'name': 'Anime Tier 1'
+  'negate': false
+  'pattern': 'Anime Tier 1'
+  'required': true
+  'type': 'release_title'
+'description': ''
+'name': 'Anime Tier 1'
+'tags':
+- 'Anime'
+- 'Group Tier'
+'tests': []

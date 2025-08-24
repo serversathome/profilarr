@@ -1,0 +1,7 @@
+'description': ''
+'name': '3L'
+'pattern': '(?<=^|[\s.-])3L\b'
+'tags':
+- 'Release Group'
+- 'Remux'
+'tests': []

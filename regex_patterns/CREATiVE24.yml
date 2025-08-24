@@ -1,0 +1,7 @@
+'description': 'Banned for Bloated Garbage'
+'name': 'CREATiVE24'
+'pattern': '(?<=^|[\s.-])CREATiVE24\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

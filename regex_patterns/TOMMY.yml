@@ -1,0 +1,7 @@
+'description': 'Matches "TOMMY" when preceded by whitespace, a hyphen or dot'
+'name': 'TOMMY'
+'pattern': '(?<=^|[\s.-])TOMMY\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

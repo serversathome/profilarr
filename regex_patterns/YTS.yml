@@ -1,0 +1,7 @@
+'description': 'Matches "YTS" when preceded by whitespace, a hyphen or dot'
+'name': 'YTS'
+'pattern': '(?<=^|[\s.-])YTS(.(MX|LT|AG))?\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

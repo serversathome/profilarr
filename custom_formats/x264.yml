@@ -1,0 +1,16 @@
+'conditions':
+- 'name': 'x264'
+  'negate': false
+  'pattern': 'x264'
+  'required': true
+  'type': 'release_title'
+- 'name': 'Not WEB-DL'
+  'negate': true
+  'required': false
+  'source': 'web_dl'
+  'type': 'source'
+'description': 'Matches ''x264'' regex pattern.'
+'name': 'x264'
+'tags':
+- 'Codec'
+'tests': []

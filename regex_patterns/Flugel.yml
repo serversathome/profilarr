@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Flugel'
+'pattern': '(?<=^|[\s.-])Flugel\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

@@ -1,0 +1,7 @@
+'description': ''
+'name': 'AJP69'
+'pattern': '(?<=^|[\s.-])AJP69\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

@@ -1,0 +1,7 @@
+'description': ''
+'name': 'FFF'
+'pattern': '(?<=^|[\s.-])FFF\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

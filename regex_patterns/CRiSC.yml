@@ -1,0 +1,7 @@
+'description': ''
+'name': 'CRiSC'
+'pattern': '(?<=^|[\s.-])CRiSC\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

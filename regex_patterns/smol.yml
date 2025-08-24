@@ -1,0 +1,7 @@
+'description': ''
+'name': 'smol'
+'pattern': '(?<=^|[\s.-])smol\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

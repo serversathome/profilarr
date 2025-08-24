@@ -1,0 +1,7 @@
+'description': ''
+'name': 'playWEB'
+'pattern': '(?<=^|[\s.-])playWEB\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

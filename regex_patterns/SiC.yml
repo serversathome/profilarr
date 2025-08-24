@@ -1,0 +1,7 @@
+'description': ''
+'name': 'SiC'
+'pattern': '(?<=^|[\s.-])SiC\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

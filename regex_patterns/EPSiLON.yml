@@ -1,0 +1,7 @@
+'description': ''
+'name': 'EPSiLON'
+'pattern': '(?<=^|[\s.-])EPSiLON\b'
+'tags':
+- 'Release Group'
+- 'Remux'
+'tests': []

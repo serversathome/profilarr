@@ -1,0 +1,7 @@
+'description': ''
+'name': 'LazyRemux'
+'pattern': '(?<=^|[\s.-])LazyRemux\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

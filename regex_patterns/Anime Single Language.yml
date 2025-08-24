@@ -1,0 +1,6 @@
+'description': ''
+'name': 'Anime Single Language'
+'pattern': '\[(JA|ZH|KO)\]'
+'tags':
+- 'Anime'
+'tests': []

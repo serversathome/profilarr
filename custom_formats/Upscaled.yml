@@ -1,0 +1,12 @@
+'conditions':
+- 'name': 'Upscaled'
+  'negate': false
+  'pattern': 'Upscaled'
+  'required': true
+  'type': 'release_title'
+'description': 'Matches the ''Upscaled'' regex pattern'
+'name': 'Upscaled'
+'tags':
+- 'Banned'
+- 'Enhancement'
+'tests': []

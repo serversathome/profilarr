@@ -1,0 +1,7 @@
+'description': ''
+'name': 'dB'
+'pattern': '(?<=^|[\s.-])dB\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

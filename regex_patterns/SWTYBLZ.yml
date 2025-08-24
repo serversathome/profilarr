@@ -1,0 +1,7 @@
+'description': ''
+'name': 'SWTYBLZ'
+'pattern': '(?<=^|[\s.-])SWTYBLZ\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

@@ -1,0 +1,7 @@
+'description': ''
+'name': 'ANE'
+'pattern': '(?<=^|[\s.-])ANE\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

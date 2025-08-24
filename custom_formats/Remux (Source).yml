@@ -1,0 +1,11 @@
+'conditions':
+- 'name': 'Remux'
+  'negate': false
+  'required': true
+  'source': 'bluray_raw'
+  'type': 'source'
+'description': 'Matches Remux using a Sonarr Source'
+'name': 'Remux (Source)'
+'tags':
+- 'Storage'
+'tests': []

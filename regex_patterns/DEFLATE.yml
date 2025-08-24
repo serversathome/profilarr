@@ -1,0 +1,7 @@
+'description': ''
+'name': 'DEFLATE'
+'pattern': '(?<=^|[\s.-])DEFLATE\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

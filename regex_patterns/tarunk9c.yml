@@ -1,0 +1,7 @@
+'description': 'Banned for Fake DV/HDR Layer'
+'name': 'tarunk9c'
+'pattern': '(?<=^|[\s.-])tarunk9c\b'
+'tags':
+- 'Release Group'
+- 'Banned'
+'tests': []

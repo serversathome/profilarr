@@ -1,0 +1,7 @@
+'description': ''
+'name': 'KiNGS'
+'pattern': '(?<=^|[\s.-])KiNGS\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

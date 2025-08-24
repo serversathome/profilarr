@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Vodes'
+'pattern': '(?<=^|[\s.-])Vodes\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

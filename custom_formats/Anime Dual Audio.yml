@@ -1,0 +1,34 @@
+'conditions':
+- 'name': 'Dual Audio'
+  'negate': false
+  'pattern': 'Dual Audio'
+  'required': true
+  'type': 'release_title'
+- 'exceptLanguage': false
+  'language': 'japanese'
+  'name': 'Japanese'
+  'negate': false
+  'required': false
+  'type': 'language'
+- 'exceptLanguage': false
+  'language': 'chinese'
+  'name': 'Chinese'
+  'negate': false
+  'required': false
+  'type': 'language'
+- 'exceptLanguage': false
+  'language': 'korean'
+  'name': 'Korean'
+  'negate': false
+  'required': false
+  'type': 'language'
+- 'name': 'Not Single Language Only'
+  'negate': true
+  'pattern': 'Anime Single Language'
+  'required': true
+  'type': 'release_title'
+'description': ''
+'name': 'Anime Dual Audio'
+'tags':
+- 'Anime'
+'tests': []

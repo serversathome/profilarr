@@ -1,0 +1,7 @@
+'description': ''
+'name': 'TayTo'
+'pattern': '(?<=^|[\s.-])TayTo\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

@@ -1,0 +1,7 @@
+'description': ''
+'name': 'HDS'
+'pattern': '(?<=^|[\s.-])HDS\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

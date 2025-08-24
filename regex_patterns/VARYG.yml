@@ -1,0 +1,7 @@
+'description': ''
+'name': 'VARYG'
+'pattern': '(?<=^|[\s.-])VARYG\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

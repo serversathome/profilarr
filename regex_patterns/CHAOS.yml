@@ -1,0 +1,7 @@
+'description': ''
+'name': 'CHAOS'
+'pattern': '(?<=^|[\s.-])CHAOS\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

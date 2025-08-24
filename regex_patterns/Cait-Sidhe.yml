@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Cait-Sidhe'
+'pattern': '(?<=^|[\s.-])Cait-Sidhe\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

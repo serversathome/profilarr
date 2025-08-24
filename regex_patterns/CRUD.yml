@@ -1,0 +1,7 @@
+'description': ''
+'name': 'CRUD'
+'pattern': '(?<=^|[\s.-])CRUD\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

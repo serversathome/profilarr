@@ -1,0 +1,7 @@
+'description': ''
+'name': 'BLUTONiUM'
+'pattern': '(?<=^|[\s.-])BLUTONiUM\b'
+'tags':
+- 'Release Group'
+- 'WEB-DL'
+'tests': []

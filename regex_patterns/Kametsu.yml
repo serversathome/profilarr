@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Kametsu'
+'pattern': '(?<=^|[\s.-])Kametsu\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

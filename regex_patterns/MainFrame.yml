@@ -1,0 +1,7 @@
+'description': ''
+'name': 'MainFrame'
+'pattern': '(?<=^|[\s.-])MainFrame\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

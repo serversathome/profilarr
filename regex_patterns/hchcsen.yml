@@ -1,0 +1,7 @@
+'description': ''
+'name': 'hchcsen'
+'pattern': '(?<=^|[\s.-])hchcsen\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

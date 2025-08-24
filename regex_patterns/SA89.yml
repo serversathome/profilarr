@@ -1,0 +1,7 @@
+'description': ''
+'name': 'SA89'
+'pattern': '(?<=^|[\s.-])SA89\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

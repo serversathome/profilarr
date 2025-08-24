@@ -1,0 +1,7 @@
+'description': ''
+'name': 'E.N.D'
+'pattern': '(?<=^|[\s.-])E.N.D\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

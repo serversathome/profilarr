@@ -1,0 +1,7 @@
+'description': ''
+'name': 'decibeL'
+'pattern': '(?<=^|[\s.-])decibeL\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

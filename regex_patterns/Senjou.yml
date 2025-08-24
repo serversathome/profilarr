@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Senjou'
+'pattern': '(?<=^|[\s.-])Senjou\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

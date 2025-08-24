@@ -1,0 +1,7 @@
+'description': ''
+'name': 'WATCHABLE'
+'pattern': '(?<=^|[\s.-])WATCHABLE\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

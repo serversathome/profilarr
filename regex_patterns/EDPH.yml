@@ -1,0 +1,7 @@
+'description': ''
+'name': 'EDPH'
+'pattern': '(?<=^|[\s.-])EDPH\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

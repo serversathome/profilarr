@@ -1,0 +1,7 @@
+'description': ''
+'name': 'LAZARUS'
+'pattern': '(?<=^|[\s.-])LAZARUS\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

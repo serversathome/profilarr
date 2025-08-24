@@ -1,0 +1,7 @@
+'description': ''
+'name': 'playHD'
+'pattern': '(?<=^|[\s.-])playHD\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

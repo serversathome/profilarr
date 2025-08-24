@@ -1,0 +1,7 @@
+'description': ''
+'name': 'NAN0'
+'pattern': '(?<=^|[\s.-])NAN0\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

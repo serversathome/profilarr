@@ -1,0 +1,7 @@
+'description': ''
+'name': 'SCY'
+'pattern': '(?<=^|[\s.-])SCY\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

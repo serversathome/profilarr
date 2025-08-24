@@ -1,0 +1,7 @@
+'description': ''
+'name': 'SumVision'
+'pattern': '(?<=^|[\s.-])SumVision\b'
+'tags':
+- 'Release Group'
+- 'Remux'
+'tests': []

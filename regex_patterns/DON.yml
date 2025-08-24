@@ -1,0 +1,7 @@
+'description': ''
+'name': 'DON'
+'pattern': '(?<=^|[\s.-])DON\b'
+'tags':
+- 'Release Group'
+- 'Bluray'
+'tests': []

@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Asakura'
+'pattern': '(?<=^|[\s.-])Asakura\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

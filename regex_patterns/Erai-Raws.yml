@@ -1,0 +1,7 @@
+'description': ''
+'name': 'Erai-Raws'
+'pattern': '(?<=^|[\s.-])Erai-Raws\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

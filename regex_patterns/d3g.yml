@@ -1,0 +1,7 @@
+'description': 'Banned for LQ and various Encode Issues.'
+'name': 'd3g'
+'pattern': '(?<=^|[\s.-])d3g\b'
+'tags':
+- 'Release Group'
+- 'Banned'
+'tests': []

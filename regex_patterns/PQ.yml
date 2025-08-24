@@ -1,0 +1,8 @@
+'description': 'This regex matches a `PQ` generalisation. This is a basic HDR Format.'
+'name': 'PQ'
+'pattern': '\b(PQ|PQ10)\b'
+'tags':
+- 'Enhancement'
+- 'Colour Grade'
+- 'HDR'
+'tests': []

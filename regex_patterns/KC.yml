@@ -1,0 +1,7 @@
+'description': 'Banned for AI Upscales'
+'name': 'KC'
+'pattern': '(?<=^|[\s.-])KC\b'
+'tags':
+- 'Release Group'
+- 'Banned'
+'tests': []

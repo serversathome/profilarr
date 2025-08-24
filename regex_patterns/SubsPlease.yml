@@ -1,0 +1,7 @@
+'description': ''
+'name': 'SubsPlease'
+'pattern': '(?<=^|[\s.-])SubsPlease\b'
+'tags':
+- 'Release Group'
+- 'Anime'
+'tests': []

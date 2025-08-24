@@ -1,0 +1,7 @@
+'description': ''
+'name': 'BLURANiUM'
+'pattern': '(?<=^|[\s.-])BLURANiUM\b'
+'tags':
+- 'Release Group'
+- 'Remux'
+'tests': []
