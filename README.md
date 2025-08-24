@@ -6,4 +6,4 @@ My issue with getting a pre-existing anime quality profile from someone else is 
 
 ## What I Built
 
-This repo is an up-to-date Dictionarry repo (auto-pull enabled) with the addition of the [anime profile](https://github.com/sweatyeggs69/profilarr/blob/stable/profiles/Anime%201080p.yml) built by [Sweaty Eggs](https://github.com/sweatyeggs69/profilarr).
+This repo is an up-to-date Dictionarry repo (auto-pull enabled) with the addition of the [anime profile](https://github.com/sweatyeggs69/profilarr/blob/stable/profiles/Anime%201080p.yml) built by [Sweaty Eggs](https://github.com/sweatyeggs69/profilarr). What you are getting here is a **100% unaltered** Dictionarry repo with the addition of a single amime quality profile.
