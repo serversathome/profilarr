@@ -1,0 +1,7 @@
+name: Anime Tier 5
+pattern: (?<=^|[\s.\-\[])(BluDragon|D4C|PMR|Raizel|REVO|SRLS|TTGA|VULCAN)\b
+description: TRaSH Guides Anime Tier 05
+tags:
+- Anime
+- Release Group
+tests: []

@@ -1,27 +1,22 @@
-name: Anime Tier 2
+name: Anime WEB Tier 1
 description: ''
 tags:
 - Anime
 - Group Tier
 conditions:
-- name: Bluray
+- name: WEB-DL
   type: source
   required: false
   negate: false
-  source: bluray
-- name: Bluray Remux
+  source: web_dl
+- name: WEBRip
   type: source
   required: false
   negate: false
-  source: bluray_raw
-- name: DVD
-  type: source
-  required: false
+  source: webrip
+- name: Anime WEB Tier 1
   negate: false
-  source: dvd
-- name: Anime Tier 2
-  negate: false
-  pattern: Anime Tier 2
+  pattern: Anime WEB Tier 1
   required: true
   type: release_title
 tests: []

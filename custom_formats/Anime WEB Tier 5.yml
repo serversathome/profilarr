@@ -1,0 +1,22 @@
+name: Anime WEB Tier 5
+description: ''
+tags:
+- Anime
+- Group Tier
+conditions:
+- name: WEB-DL
+  negate: false
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: Anime WEB Tier 5
+  negate: false
+  pattern: Anime WEB Tier 5
+  required: true
+  type: release_title
+tests: []

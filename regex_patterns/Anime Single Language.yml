@@ -1,6 +1,6 @@
-'description': ''
-'name': 'Anime Single Language'
-'pattern': '\[(JA|ZH|KO)\]'
-'tags':
-- 'Anime'
-'tests': []
+name: Anime Single Language
+pattern: \[(JA|ZH|KO)\]
+description: ''
+tags:
+- Anime
+tests: []

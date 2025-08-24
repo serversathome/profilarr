@@ -1,16 +1,16 @@
-'description': ''
-'name': 'Uncensored'
-'pattern': '(?<=^|[^\w])(?:Uncut|Unrated|Uncensored|AT[-_. ]?X)(?=[^\w]|$)'
-'tags':
-- 'Edition'
-'tests':
-- 'expected': true
-  'id': 1
-  'input': 'South.Park.S19E06.Uncensored.1080p.WEB-DL.AAC2.0.H.264-NTb'
-  'lastRun': '2025-08-24T08:00:14.506734'
-  'matchSpan':
-    'end': 28
-    'start': 18
-  'matchedContent': 'Uncensored'
-  'matchedGroups': []
-  'passes': true
+name: Uncensored
+pattern: (?<=^|[^\w])(?:Uncut|Unrated|Uncensored|AT[-_. ]?X)(?=[^\w]|$)
+description: ''
+tags:
+- Edition
+tests:
+- expected: true
+  id: 1
+  input: South.Park.S19E06.Uncensored.1080p.WEB-DL.AAC2.0.H.264-NTb
+  lastRun: '2025-07-06T19:49:28.058701'
+  matchSpan:
+    end: 28
+    start: 18
+  matchedContent: Uncensored
+  matchedGroups: []
+  passes: true

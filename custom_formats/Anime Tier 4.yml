@@ -1,4 +1,4 @@
-name: Anime Tier 2
+name: Anime Tier 4
 description: ''
 tags:
 - Anime
@@ -19,9 +19,9 @@ conditions:
   required: false
   negate: false
   source: dvd
-- name: Anime Tier 2
+- name: Anime Tier 4
   negate: false
-  pattern: Anime Tier 2
+  pattern: Anime Tier 4
   required: true
   type: release_title
 tests: []

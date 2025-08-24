@@ -1,9 +1,7 @@
-'description': ''
-'name': 'Anime Raws'
-'pattern': '(?<=^|[\s.\-\[])(AsukaRaws|Beatrice-Raws|Daddy-Raws|Fumi-Raws|IrizaRaws|Kawaiika-Raws|km|Koi-Raws|Lilith-Raws|LowPower-Raws|Moozzi2|NanakoRaws|NC-Raws|neko-raws|New-raws|Ohys-Raws|Pandoratv-Raws|Raws-Maji|ReinForce|Scryous-Raws|Seicher-Raws|Shiniori-Raws)\b
-
-  '
-'tags':
-- 'Anime'
-- 'Banned'
-'tests': []
+name: Anime Raws
+pattern: (?<=^|[\s.\-\[])(AsukaRaws|Beatrice-Raws|Daddy-Raws|Fumi-Raws|IrizaRaws|Kawaiika-Raws|km|Koi-Raws|Lilith-Raws|LowPower-Raws|Moozzi2|NanakoRaws|NC-Raws|neko-raws|New-raws|Ohys-Raws|Pandoratv-Raws|Raws-Maji|ReinForce|Scryous-Raws|Seicher-Raws|Shiniori-Raws)\b
+description: ''
+tags:
+- Anime
+- Banned
+tests: []

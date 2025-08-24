@@ -1,11 +1,11 @@
-'conditions':
-- 'name': 'Uncensored'
-  'negate': false
-  'pattern': 'Uncensored'
-  'required': true
-  'type': 'release_title'
-'description': ''
-'name': 'Uncensored'
-'tags':
-- 'Edition'
-'tests': []
+name: Uncensored
+description: ''
+tags:
+- Edition
+conditions:
+- name: Uncensored
+  negate: false
+  pattern: Uncensored
+  required: true
+  type: release_title
+tests: []

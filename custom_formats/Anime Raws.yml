@@ -1,10 +1,10 @@
-'conditions':
-- 'name': 'Anime Raws'
-  'negate': false
-  'pattern': 'Anime Raws'
-  'required': true
-  'type': 'release_title'
-'description': ''
-'name': 'Anime Raws'
-'tags': []
-'tests': []
+name: Anime Raws
+description: ''
+tags: []
+conditions:
+- name: Anime Raws
+  type: release_title
+  required: true
+  negate: false
+  pattern: Anime Raws
+tests: []
