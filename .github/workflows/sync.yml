@@ -2,7 +2,7 @@ name: Sync Profilarr Database
 
 on:
   schedule:
-    - cron: '0 * * * *' # every hour at minute 0
+    - cron: '0 * * * *' # every hour
   workflow_dispatch:
 
 jobs:
@@ -22,61 +22,47 @@ jobs:
           git fetch upstream
           git fetch sweatyeggs
 
-      - name: Merge upstream
+      - name: Merge upstream stable
         run: |
-          echo "Merging changes from upstream..."
-          git merge upstream/main --allow-unrelated-histories -m "Sync from Dictionarry-Hub/database" || echo "No changes from upstream"
+          echo "Merging changes from upstream/stable..."
+          git merge upstream/stable --allow-unrelated-histories -m "Sync from Dictionarry-Hub/database" || echo "No changes from upstream"
 
       - name: Pull selective files from sweatyeggs
         run: |
+          set -x
           echo "Pulling selective files from sweatyeggs69..."
-          git checkout sweatyeggs/stable -- profiles/Anime\ 1080p.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ Dual\ Audio.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ LQ.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ Raws.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 1.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 2.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 3.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 4.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 5.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 6.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 7.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ Tier\ 8.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 1.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 2.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 3.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 4.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 5.yml
-          git checkout sweatyeggs/stable -- custom_formats/Anime\ WEB\ Tier\ 6.yml
-          git checkout sweatyeggs/stable -- custom_formats/Uncensored.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ LQ.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Raws.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Single\ Language.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 1.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 2.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 3.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 4.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 5.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 6.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 7.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ Tier\ 8.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 1.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 2.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 3.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 4.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 5.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Anime\ WEB\ Tier\ 6.yml
-          git checkout sweatyeggs/stable -- regex_patterns/Uncensored.yml
+          # Quality profile
+          git checkout sweatyeggs/stable -- profiles/Anime\ 1080p.yml && echo "Pulled profiles/Anime 1080p.yml" || echo "Missing profiles/Anime 1080p.yml"
 
-      - name: Commit and push if there are changes
+          # Custom formats
+          for f in "Anime Dual Audio.yml" "Anime LQ.yml" "Anime Raws.yml" \
+                   "Anime Tier 1.yml" "Anime Tier 2.yml" "Anime Tier 3.yml" "Anime Tier 4.yml" \
+                   "Anime Tier 5.yml" "Anime Tier 6.yml" "Anime Tier 7.yml" "Anime Tier 8.yml" \
+                   "Anime WEB Tier 1.yml" "Anime WEB Tier 2.yml" "Anime WEB Tier 3.yml" \
+                   "Anime WEB Tier 4.yml" "Anime WEB Tier 5.yml" "Anime WEB Tier 6.yml" \
+                   "Uncensored.yml"; do
+              git checkout sweatyeggs/stable -- custom_formats/"$f" && echo "Pulled custom_formats/$f" || echo "Missing custom_formats/$f"
+          done
+
+          # Regex patterns
+          for f in "Anime LQ.yml" "Anime Raws.yml" "Anime Single Language.yml" \
+                   "Anime Tier 1.yml" "Anime Tier 2.yml" "Anime Tier 3.yml" "Anime Tier 4.yml" \
+                   "Anime Tier 5.yml" "Anime Tier 6.yml" "Anime Tier 7.yml" "Anime Tier 8.yml" \
+                   "Anime WEB Tier 1.yml" "Anime WEB Tier 2.yml" "Anime WEB Tier 3.yml" \
+                   "Anime WEB Tier 4.yml" "Anime WEB Tier 5.yml" "Anime WEB Tier 6.yml" \
+                   "Uncensored.yml"; do
+              git checkout sweatyeggs/stable -- regex_patterns/"$f" && echo "Pulled regex_patterns/$f" || echo "Missing regex_patterns/$f"
+          done
+
+      - name: Commit and push changes
         run: |
+          set -x
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
 
           if ! git diff --quiet; then
             echo "===== FILES CHANGED SUMMARY ====="
 
-            # Upstream changes
             echo ""
             echo "Upstream Added Files:"
             git diff --diff-filter=A --name-only HEAD^ HEAD | grep -v '^profiles\|^custom_formats\|^regex_patterns' || echo "None"
@@ -85,7 +71,6 @@ jobs:
             echo "Upstream Modified Files:"
             git diff --diff-filter=M --name-only HEAD^ HEAD | grep -v '^profiles\|^custom_formats\|^regex_patterns' || echo "None"
 
-            # Sweatyeggs changes
             echo ""
             echo "Sweatyeggs Added Files:"
             git status --short | awk '$1=="A"{print $2}' | grep -E '^profiles/|^custom_formats/|^regex_patterns/' || echo "None"
