@@ -1,0 +1,7 @@
+name: FUNI
+pattern: \\b(FUNi(mation)?)\\b
+description: ''
+tags:
+- Anime
+- Streaming Service
+tests: []

@@ -1,0 +1,7 @@
+name: VRV
+pattern: \\b(VRV)\\b
+description: ''
+tags:
+- Anime
+- Streaming Service
+tests: []

@@ -1,0 +1,22 @@
+name: CR
+description: ''
+tags:
+- Anime
+- Streaming Service
+conditions:
+- name: WEB-DL
+  negate: false
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: Crunchyroll
+  negate: false
+  pattern: CR
+  required: false
+  type: release_title
+tests: []
