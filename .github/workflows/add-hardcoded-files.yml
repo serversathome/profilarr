@@ -1,4 +1,4 @@
-name: Add Hardcoded Files
+name: Add Selected Hardcoded Files
 
 on:
   workflow_dispatch: # run manually the first time
@@ -15,32 +15,22 @@ jobs:
           git remote add upstream https://github.com/sweatyeggs69/profilarr.git || true
           git fetch upstream stable
 
-      - name: Pull hardcoded custom_formats
+      - name: Pull selected custom_formats
         run: |
           for f in \
-            "Anime Dual Audio.yml" "Anime LQ.yml" "Anime Raws.yml" \
-            "Anime Tier 1.yml" "Anime Tier 2.yml" "Anime Tier 3.yml" \
-            "Anime Tier 4.yml" "Anime Tier 5.yml" "Anime Tier 6.yml" \
-            "Anime Tier 7.yml" "Anime Tier 8.yml" \
-            "Anime WEB Tier 1.yml" "Anime WEB Tier 2.yml" "Anime WEB Tier 3.yml" \
-            "Anime WEB Tier 4.yml" "Anime WEB Tier 5.yml" "Anime WEB Tier 6.yml" \
-            "Uncensored.yml"
+            "CR.yml" "WEB-DL.yml" "VRV.yml" "FUNI.yml" "ABEMA.yml" \
+            "ADN.yml" "B-Global.yml" "Bilibili.yml" "HIDIVE.yml"
           do
-            git checkout upstream/stable -- "custom_formats/$f"
+            git checkout upstream/stable -- "custom_formats/$f" || echo "missing $f"
           done
 
-      - name: Pull hardcoded regex_patterns
+      - name: Pull selected regex_patterns
         run: |
           for f in \
-            "Anime LQ.yml" "Anime Raws.yml" "Anime Single Language.yml" \
-            "Anime Tier 1.yml" "Anime Tier 2.yml" "Anime Tier 3.yml" \
-            "Anime Tier 4.yml" "Anime Tier 5.yml" "Anime Tier 6.yml" \
-            "Anime Tier 7.yml" "Anime Tier 8.yml" \
-            "Anime WEB Tier 1.yml" "Anime WEB Tier 2.yml" "Anime WEB Tier 3.yml" \
-            "Anime WEB Tier 4.yml" "Anime WEB Tier 5.yml" "Anime WEB Tier 6.yml" \
-            "Uncensored.yml"
+            "CR.yml" "VRV.yml" "FUNI.yml" "ABEMA.yml" \
+            "ADN.yml" "B-Global.yml" "Bilibili.yml" "HIDIVE.yml"
           do
-            git checkout upstream/stable -- "regex_patterns/$f"
+            git checkout upstream/stable -- "regex_patterns/$f" || echo "missing $f"
           done
 
       - name: Commit changes
@@ -48,5 +38,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add custom_formats/ regex_patterns/
-          git commit -m "Add missing hardcoded custom_formats and regex_patterns files" || echo "No changes to commit"
+          git commit -m "Add selected hardcoded custom_formats and regex_patterns files" || echo "No changes to commit"
           git push
