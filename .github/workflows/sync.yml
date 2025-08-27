@@ -1,5 +1,9 @@
 name: Sync Profilarr Database
 
+permissions:
+  contents: write
+  workflows: write
+
 on:
   schedule:
     - cron: '0 0 * * *' # every day at midnight UTC
