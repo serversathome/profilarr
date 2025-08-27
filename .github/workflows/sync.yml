@@ -29,11 +29,34 @@ jobs:
           git config --global user.email "actions@github.com"
 
           git checkout main
-
-          # Reset all files except workflows to match upstream/stable
           git checkout upstream/stable -- . ':(exclude).github/workflows/'
 
-          # Commit any changes
+      - name: Show changed files and diffs
+        run: |
+          if ! git diff --quiet; then
+            echo "===== FILES CHANGED ====="
+
+            echo ""
+            echo "Added files:"
+            git diff --diff-filter=A --name-only || echo "None"
+
+            echo ""
+            echo "Modified files:"
+            git diff --diff-filter=M --name-only || echo "None"
+
+            echo ""
+            echo "Deleted files:"
+            git diff --diff-filter=D --name-only || echo "None"
+
+            echo ""
+            echo "===== DETAILED CHANGES ====="
+            git --no-pager diff
+          else
+            echo "No changes detected"
+          fi
+
+      - name: Commit and push changes
+        run: |
           if ! git diff --quiet; then
             git add .
             git commit -m "Sync Dictionarry-Hub/database (excluding workflows)"
