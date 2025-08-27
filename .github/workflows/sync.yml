@@ -2,7 +2,7 @@ name: Sync Profilarr Database
 
 on:
   schedule:
-    - cron: '0 * * * *' # every hour
+    - cron: '0 0 * * *' # every day at midnight UTC
   workflow_dispatch:
 
 jobs:
@@ -15,74 +15,19 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Add upstream remotes
+      - name: Add upstream remote
         run: |
           git remote add upstream https://github.com/Dictionarry-Hub/database.git
-          git remote add sweatyeggs https://github.com/sweatyeggs69/profilarr.git
           git fetch upstream
-          git fetch sweatyeggs
 
-      - name: Merge upstream stable
+      - name: Fast-forward main to upstream/stable
         run: |
-          echo "Merging changes from upstream/stable..."
-          git merge upstream/stable --allow-unrelated-histories -m "Sync from Dictionarry-Hub/database" || echo "No changes from upstream"
-
-      - name: Pull selective files from sweatyeggs
-        run: |
-          set -x
-          echo "Pulling selective files from sweatyeggs69..."
-          # Quality profile
-          git checkout sweatyeggs/stable -- profiles/Anime\ 1080p.yml && echo "Pulled profiles/Anime 1080p.yml" || echo "Missing profiles/Anime 1080p.yml"
-
-          # Custom formats
-          for f in "Anime Dual Audio.yml" "Anime LQ.yml" "Anime Raws.yml" \
-                   "Anime Tier 1.yml" "Anime Tier 2.yml" "Anime Tier 3.yml" "Anime Tier 4.yml" \
-                   "Anime Tier 5.yml" "Anime Tier 6.yml" "Anime Tier 7.yml" "Anime Tier 8.yml" \
-                   "Anime WEB Tier 1.yml" "Anime WEB Tier 2.yml" "Anime WEB Tier 3.yml" \
-                   "Anime WEB Tier 4.yml" "Anime WEB Tier 5.yml" "Anime WEB Tier 6.yml" \
-                   "Uncensored.yml"; do
-              git checkout sweatyeggs/stable -- custom_formats/"$f" && echo "Pulled custom_formats/$f" || echo "Missing custom_formats/$f"
-          done
-
-          # Regex patterns
-          for f in "Anime LQ.yml" "Anime Raws.yml" "Anime Single Language.yml" \
-                   "Anime Tier 1.yml" "Anime Tier 2.yml" "Anime Tier 3.yml" "Anime Tier 4.yml" \
-                   "Anime Tier 5.yml" "Anime Tier 6.yml" "Anime Tier 7.yml" "Anime Tier 8.yml" \
-                   "Anime WEB Tier 1.yml" "Anime WEB Tier 2.yml" "Anime WEB Tier 3.yml" \
-                   "Anime WEB Tier 4.yml" "Anime WEB Tier 5.yml" "Anime WEB Tier 6.yml" \
-                   "Uncensored.yml"; do
-              git checkout sweatyeggs/stable -- regex_patterns/"$f" && echo "Pulled regex_patterns/$f" || echo "Missing regex_patterns/$f"
-          done
-
-      - name: Commit and push changes
-        run: |
-          set -x
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
 
-          if ! git diff --quiet; then
-            echo "===== FILES CHANGED SUMMARY ====="
+          # Reset main branch to match upstream/stable
+          git checkout main
+          git reset --hard upstream/stable
 
-            echo ""
-            echo "Upstream Added Files:"
-            git diff --diff-filter=A --name-only HEAD^ HEAD | grep -v '^profiles\|^custom_formats\|^regex_patterns' || echo "None"
-
-            echo ""
-            echo "Upstream Modified Files:"
-            git diff --diff-filter=M --name-only HEAD^ HEAD | grep -v '^profiles\|^custom_formats\|^regex_patterns' || echo "None"
-
-            echo ""
-            echo "Sweatyeggs Added Files:"
-            git status --short | awk '$1=="A"{print $2}' | grep -E '^profiles/|^custom_formats/|^regex_patterns/' || echo "None"
-
-            echo ""
-            echo "Sweatyeggs Modified Files:"
-            git status --short | awk '$1=="M"{print $2}' | grep -E '^profiles/|^custom_formats/|^regex_patterns/' || echo "None"
-
-            echo ""
-            git add .
-            git commit -m "Sync upstream + sweatyeggs69 custom files"
-            git push origin main
-          else
-            echo "No changes to commit"
-          fi
+          # Push changes to origin
+          git push origin main --force
