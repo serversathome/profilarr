@@ -1,7 +1,7 @@
-name: Add Selected Hardcoded Files
+name: Add All Files from media_management
 
 on:
-  workflow_dispatch: # run manually the first time
+  workflow_dispatch: # run manually
 
 jobs:
   add-files:
@@ -10,33 +10,22 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Add sweatyeggs as upstream
+      - name: Add upstream repository
         run: |
-          git remote add upstream https://github.com/sweatyeggs69/profilarr.git || true
+          git remote add upstream https://github.com/Dictionarry-Hub/database.git || true
           git fetch upstream stable
 
-      - name: Pull selected custom_formats
+      - name: Pull all files from media_management
         run: |
-          for f in \
-            "CR.yml" "WEB-DL.yml" "VRV.yml" "FUNI.yml" "ABEMA.yml" \
-            "ADN.yml" "B-Global.yml" "Bilibili.yml" "HIDIVE.yml"
-          do
-            git checkout upstream/stable -- "custom_formats/$f" || echo "missing $f"
-          done
-
-      - name: Pull selected regex_patterns
-        run: |
-          for f in \
-            "CR.yml" "VRV.yml" "FUNI.yml" "ABEMA.yml" \
-            "ADN.yml" "B-Global.yml" "Bilibili.yml" "HIDIVE.yml"
-          do
-            git checkout upstream/stable -- "regex_patterns/$f" || echo "missing $f"
-          done
+          # Ensure directory exists
+          mkdir -p media_management
+          # Checkout all files from upstream/stable
+          git checkout upstream/stable -- media_management/
 
       - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add custom_formats/ regex_patterns/
-          git commit -m "Add selected hardcoded custom_formats and regex_patterns files" || echo "No changes to commit"
+          git add media_management/
+          git commit -m "Add all files from media_management directory" || echo "No changes to commit"
           git push
