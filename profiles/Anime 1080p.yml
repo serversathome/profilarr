@@ -7,8 +7,8 @@ description: 'Based on the TRaSH Guides Anime Profile, focusing on media that ha
   - You will be preferring Dual Audio media (ie including English along with original
   language).
 
-  - If you prefer only the **original language**, change the "Dual Audio" score from
-  101 to 0'
+  - If you prefer only the **original language**, change the language to original
+  on this profile.'
 tags:
 - Anime
 - Sonarr
@@ -144,4 +144,4 @@ upgrade_until:
   id: 10
   name: Bluray-1080p
   description: 1080p Blu-ray video encoded with lossy compression
-language: original
+language: english
