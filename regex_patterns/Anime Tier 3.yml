@@ -1,5 +1,5 @@
 name: Anime Tier 3
-pattern: (?<=^|[\s.\-\[])(AC|ASC|AssMix|Ayashii|B00BA|CBT|CRUCiBLE|CTR|CyC|Dekinai|EXP|Flugel|Galator|GSK\_kun|Holomux|IK|Kaizoku|Kametsu|KH|kuchikirukia|LazyRemux|MK|Mysteria|NAN0|Netaro|Pn8|Pookie|Quetzal|Rasetsu|Senjou|ShowY|WBDP|WSE|Yoghurt|YURI|ZOIO|ZR)\b
+pattern: (^|[\s.\-\[])(AC|ASC|AssMix|Ayashii|B00BA|CBT|CRUCiBLE|CTR|CyC|Dekinai|EXP|Flugel|Galator|GSK_kun|Holomux|IK|Kaizoku|Kametsu|KH|kuchikirukia|LazyRemux|MK|Mysteria|NAN0|Netaro|Pn8|Pookie|Quetzal|Rasetsu|Senjou|ShowY|WBDP|WSE|Yoghurt|YURI|ZOIO|ZR)\b
 description: TRaSH Guides Anime Tier 03 (SeaDex Muxers)
 tags:
 - Anime
