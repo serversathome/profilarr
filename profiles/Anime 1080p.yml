@@ -18,9 +18,7 @@ upgradesAllowed: true
 minCustomFormatScore: 0
 upgradeUntilScore: 10000
 minScoreIncrement: 1
-custom_formats: []
-custom_formats_radarr: []
-custom_formats_sonarr:
+custom_formats:
 - name: Anime Tier 1
   score: 2500
 - name: Anime Tier 2
