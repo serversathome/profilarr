@@ -7,13 +7,15 @@ jobs:
   dry_run_custom_formats:
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies
+      - name: Install dependencies and yq
         run: |
           sudo apt-get update && sudo apt-get install -y curl git wget
-          # Install Mike Farah yq (Go version)
+          # Install Mike Farah yq (Go version) to $HOME/bin
+          mkdir -p $HOME/bin
           YQ_VERSION=v4.45.1
-          wget https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64 -O /usr/bin/yq
-          sudo chmod +x /usr/bin/yq
+          wget https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64 -O $HOME/bin/yq
+          chmod +x $HOME/bin/yq
+          export PATH=$HOME/bin:$PATH
           yq --version
 
       - name: Download latest anime 1080p.yml
