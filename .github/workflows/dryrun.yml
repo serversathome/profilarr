@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout your repo
+      - name: Checkout target repo
         uses: actions/checkout@v4
         with:
           repository: serversathome/profilarr
@@ -22,26 +22,33 @@ jobs:
           ref: stable
           path: upstream
 
-      - name: Install yq
-        run: sudo apt-get install -y yq
-
-      - name: Copy Anime profile
+      - name: Install yq & dos2unix
         run: |
-          mkdir -p target/profiles
-          cp "upstream/profiles/Anime 1080p.yml" "target/profiles/"
+          sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq
+          sudo chmod +x /usr/bin/yq
+          sudo apt-get update && sudo apt-get install -y dos2unix
+
+      - name: Ensure target directory exists
+        run: mkdir -p target/profiles target/custom_formats target/regex_patterns
+
+      - name: Sync Anime 1080p profile
+        run: |
+          # Force overwrite
+          cp upstream/profiles/Anime\ 1080p.yml target/profiles/
+          # Normalize line endings to avoid git diff issues
+          dos2unix target/profiles/Anime\ 1080p.yml
           echo "Synced: profiles/Anime 1080p.yml" >> $GITHUB_STEP_SUMMARY
 
-      - name: Copy dependent custom_formats
+      - name: Sync dependent custom_formats
         id: copy_formats
         run: |
-          mkdir -p target/custom_formats
           deps=""
-          for cf_name in $(yq e '.custom_formats[].name' upstream/profiles/"Anime 1080p.yml"); do
+          for cf_name in $(yq e '.custom_formats[].name // empty' upstream/profiles/"Anime 1080p.yml"); do
             match=$(grep -rl "name: ${cf_name}" upstream/custom_formats || true)
             if [ -n "$match" ]; then
               fname=$(basename "$match")
-              echo "Syncing custom_formats/$fname"
               cp "$match" "target/custom_formats/$fname"
+              dos2unix "target/custom_formats/$fname"
               echo "Synced: custom_formats/$fname" >> $GITHUB_STEP_SUMMARY
               deps="$deps target/custom_formats/$fname"
             else
@@ -50,14 +57,13 @@ jobs:
           done
           echo "custom_formats=$deps" >> $GITHUB_OUTPUT
 
-      - name: Copy dependent regex_patterns
+      - name: Sync dependent regex_patterns
         run: |
-          mkdir -p target/regex_patterns
           for cf in ${{ steps.copy_formats.outputs.custom_formats }}; do
-            for rp_name in $(yq e '.conditions[].name' "$cf" | sort -u); do
+            for rp_name in $(yq e '.conditions[].name // empty' "$cf" | sort -u); do
               if [ -f "upstream/regex_patterns/${rp_name}.yml" ]; then
-                echo "Syncing regex_patterns/${rp_name}.yml"
                 cp "upstream/regex_patterns/${rp_name}.yml" "target/regex_patterns/${rp_name}.yml"
+                dos2unix "target/regex_patterns/${rp_name}.yml"
                 echo "Synced: regex_patterns/${rp_name}.yml" >> $GITHUB_STEP_SUMMARY
               else
                 echo "⚠️ Regex pattern ${rp_name}.yml not found upstream" | tee -a $GITHUB_STEP_SUMMARY
@@ -65,13 +71,10 @@ jobs:
             done
           done
 
-      - name: Show what would change (dry run)
+      - name: Show complete diff (dry run)
         run: |
-          cd target
-          git add profiles/Anime\ 1080p.yml custom_formats/ regex_patterns/
+          echo "## Diff of Anime 1080p.yml"
+          diff -u target/profiles/Anime\ 1080p.yml upstream/profiles/Anime\ 1080p.yml || true >> $GITHUB_STEP_SUMMARY
 
-          echo "## Changed or Added Files" >> $GITHUB_STEP_SUMMARY
-          git status --short >> $GITHUB_STEP_SUMMARY
-
-          echo "## Diff of Changes" >> $GITHUB_STEP_SUMMARY
-          git diff --cached >> $GITHUB_STEP_SUMMARY
+          echo "## Changed or Added Files"
+          git -C target status --short >> $GITHUB_STEP_SUMMARY
