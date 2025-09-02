@@ -1,0 +1,63 @@
+name: Sync Anime Profile (Dry Run)
+
+on:
+  workflow_dispatch:       # Manual trigger only
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout your repo
+        uses: actions/checkout@v4
+        with:
+          repository: serversathome/profilarr
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: target
+
+      - name: Checkout upstream repo
+        uses: actions/checkout@v4
+        with:
+          repository: sweatyeggs69/profilarr
+          ref: stable
+          path: upstream
+
+      - name: Copy Anime profile
+        run: |
+          mkdir -p target/profiles
+          cp "upstream/profiles/Anime 1080p.yml" "target/profiles/"
+          echo "Synced: profiles/Anime 1080p.yml" >> $GITHUB_STEP_SUMMARY
+
+      - name: Copy dependent custom_formats
+        id: copy_formats
+        run: |
+          mkdir -p target/custom_formats
+          deps=""
+          grep -oE 'custom_formats/[^: ]+' upstream/profiles/"Anime 1080p.yml" | sort -u | while read cf; do
+            echo "Syncing $cf"
+            cp "upstream/$cf.yml" "target/$cf.yml"
+            echo "Synced: $cf.yml" >> $GITHUB_STEP_SUMMARY
+            deps="$deps target/$cf.yml"
+          done
+          echo "custom_formats=$deps" >> $GITHUB_OUTPUT
+
+      - name: Copy dependent regex_patterns
+        run: |
+          mkdir -p target/regex_patterns
+          for cf in ${{ steps.copy_formats.outputs.custom_formats }}; do
+            grep -A 5 "conditions:" "$cf" | grep "name:" | awk '{print $2}' | sort -u | while read rp; do
+              if [ -f "upstream/regex_patterns/$rp.yml" ]; then
+                echo "Syncing regex_patterns/$rp"
+                cp "upstream/regex_patterns/$rp.yml" "target/regex_patterns/$rp.yml"
+                echo "Synced: regex_patterns/$rp.yml" >> $GITHUB_STEP_SUMMARY
+              else
+                echo "⚠️ Regex pattern $rp.yml not found upstream" | tee -a $GITHUB_STEP_SUMMARY
+              fi
+            done
+          done
+
+      - name: Show what would change (dry run)
+        run: |
+          cd target
+          git add profiles/Anime\ 1080p.yml custom_formats/ regex_patterns/
+          git diff --cached >> $GITHUB_STEP_SUMMARY
