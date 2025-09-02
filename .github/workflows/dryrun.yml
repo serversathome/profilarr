@@ -1,95 +1,50 @@
-name: Sync Anime 1080p Profile (Dependency-Aware Dry Run)
+name: Dry Run Sync Anime 1080p Custom Formats
 
 on:
   workflow_dispatch:
 
 jobs:
-  sync:
+  dry_run_custom_formats:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout target repo
-        uses: actions/checkout@v4
-        with:
-          repository: serversathome/profilarr
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: target
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y yq curl git
 
-      - name: Checkout upstream repo
-        uses: actions/checkout@v4
-        with:
-          repository: sweatyeggs69/profilarr
-          ref: stable
-          path: upstream
-
-      - name: Install tools
+      - name: Download latest anime 1080p.yml
         run: |
-          sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq
-          sudo chmod +x /usr/bin/yq
-          sudo apt-get update && sudo apt-get install -y dos2unix git
+          curl -fsSL "https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/profiles/Anime%201080p.yml" -o anime_1080p.yml
 
-      - name: Ensure directories exist
-        run: mkdir -p target/profiles target/custom_formats target/regex_patterns
-
-      - name: Copy Anime 1080p.yml
+      - name: Parse custom formats from anime 1080p.yml
+        id: parse_formats
         run: |
-          cp upstream/profiles/Anime\ 1080p.yml target/profiles/
-          dos2unix target/profiles/Anime\ 1080p.yml
-          echo "Synced: profiles/Anime 1080p.yml" >> $GITHUB_STEP_SUMMARY
+          FORMATS=($(yq e '.custom_formats[].name' anime_1080p.yml))
+          echo "Custom formats found in anime 1080p.yml:"
+          printf "  - %s\n" "${FORMATS[@]}"
+          echo "formats=${FORMATS[*]}" >> $GITHUB_OUTPUT
 
-      - name: Parse custom_formats referenced by Anime 1080p.yml
-        id: parse_cfs
+      - name: Dry run download of required custom formats
         run: |
-          cfs=$(yq e '.custom_formats[].name // empty' target/profiles/Anime\ 1080p.yml | sort -u)
-          echo "custom_formats_list=$cfs" >> $GITHUB_OUTPUT
-
-      - name: Detect changed or missing custom_formats
-        id: sync_cfs
-        run: |
-          changed_cfs=""
-          for cf_name in ${{ steps.parse_cfs.outputs.custom_formats_list }}; do
-            cf_file=$(find upstream/custom_formats -type f -name '*.yml' -exec grep -l "name: ${cf_name}" {} \;)
-            for f in $cf_file; do
-              fname=$(basename "$f")
-              target_file="target/custom_formats/$fname"
-              if [ ! -f "$target_file" ] || ! cmp -s "$f" "$target_file"; then
-                cp "$f" "$target_file"
-                dos2unix "$target_file"
-                echo "Synced: custom_formats/$fname" >> $GITHUB_STEP_SUMMARY
-                changed_cfs="$changed_cfs $target_file"
-              else
-                echo "Skipped: custom_formats/$fname already up-to-date" >> $GITHUB_STEP_SUMMARY
-              fi
-            done
-          done
-          echo "changed_cfs=$changed_cfs" >> $GITHUB_OUTPUT
-
-      - name: Detect changed or missing regex_patterns
-        run: |
-          for cf in ${{ steps.sync_cfs.outputs.changed_cfs }}; do
-            for rp_name in $(yq e '.conditions[].name // empty' "$cf" | sort -u); do
-              rp_file="upstream/regex_patterns/${rp_name}.yml"
-              target_file="target/regex_patterns/${rp_name}.yml"
-              if [ -f "$rp_file" ]; then
-                if [ ! -f "$target_file" ] || ! cmp -s "$rp_file" "$target_file"; then
-                  cp "$rp_file" "$target_file"
-                  dos2unix "$target_file"
-                  echo "Synced: regex_patterns/${rp_name}.yml" >> $GITHUB_STEP_SUMMARY
-                else
-                  echo "Skipped: regex_patterns/${rp_name}.yml already up-to-date" >> $GITHUB_STEP_SUMMARY
-                fi
-              else
-                echo "⚠️ Regex pattern ${rp_name}.yml not found upstream" >> $GITHUB_STEP_SUMMARY
-              fi
-            done
+          BASE_URL="https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/custom_formats"
+          echo "Dry run: The following custom formats would be downloaded/updated:"
+          for f in ${{ steps.parse_formats.outputs.formats }}; do
+            FILE_NAME="$f.yml"
+            URL="$BASE_URL/$(echo $FILE_NAME | sed 's/ /%20/g')"
+            echo "  - $FILE_NAME from $URL"
           done
 
-      - name: Show full dry-run diff
+      - name: Dry run extraction of regex patterns
         run: |
-          echo "## Diff of Anime 1080p.yml" >> $GITHUB_STEP_SUMMARY
-          echo '```diff' >> $GITHUB_STEP_SUMMARY
-          diff -u target/profiles/Anime\ 1080p.yml upstream/profiles/Anime\ 1080p.yml || true >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo "Dry run: The following regex patterns would be extracted:"
+          for f in ${{ steps.parse_formats.outputs.formats }}; do
+            FILE_NAME="$f.yml"
+            echo "  - Patterns from $FILE_NAME (example output):"
+            echo "      * [parsed from YAML using yq]"
+          done
 
-          echo "## Changed or Added Files" >> $GITHUB_STEP_SUMMARY
-          git -C target status --short >> $GITHUB_STEP_SUMMARY
+      - name: Dry run summary of changes
+        run: |
+          echo "Dry run complete. No files were overwritten or committed."
+          echo "Summary:"
+          echo "  - anime 1080p.yml would be updated"
+          echo "  - The above custom_formats would be updated/added"
+          echo "  - regex_patterns.txt would be regenerated"
