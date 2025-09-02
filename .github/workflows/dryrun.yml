@@ -22,6 +22,9 @@ jobs:
           ref: stable
           path: upstream
 
+      - name: Install yq
+        run: sudo apt-get install -y yq
+
       - name: Copy Anime profile
         run: |
           mkdir -p target/profiles
@@ -33,11 +36,17 @@ jobs:
         run: |
           mkdir -p target/custom_formats
           deps=""
-          grep -oE 'custom_formats/[^: ]+' upstream/profiles/"Anime 1080p.yml" | sort -u | while read cf; do
-            echo "Syncing $cf"
-            cp "upstream/$cf.yml" "target/$cf.yml"
-            echo "Synced: $cf.yml" >> $GITHUB_STEP_SUMMARY
-            deps="$deps target/$cf.yml"
+          for cf_name in $(yq e '.custom_formats[].name' upstream/profiles/"Anime 1080p.yml"); do
+            match=$(grep -rl "name: ${cf_name}" upstream/custom_formats || true)
+            if [ -n "$match" ]; then
+              fname=$(basename "$match")
+              echo "Syncing custom_formats/$fname"
+              cp "$match" "target/custom_formats/$fname"
+              echo "Synced: custom_formats/$fname" >> $GITHUB_STEP_SUMMARY
+              deps="$deps target/custom_formats/$fname"
+            else
+              echo "⚠️ No matching custom_format found for '${cf_name}'" | tee -a $GITHUB_STEP_SUMMARY
+            fi
           done
           echo "custom_formats=$deps" >> $GITHUB_OUTPUT
 
@@ -45,14 +54,13 @@ jobs:
         run: |
           mkdir -p target/regex_patterns
           for cf in ${{ steps.copy_formats.outputs.custom_formats }}; do
-            # Look for - name fields under conditions
-            grep -A 5 "conditions:" "$cf" | grep "name:" | awk '{print $2}' | sort -u | while read rp; do
-              if [ -f "upstream/regex_patterns/$rp.yml" ]; then
-                echo "Syncing regex_patterns/$rp"
-                cp "upstream/regex_patterns/$rp.yml" "target/regex_patterns/$rp.yml"
-                echo "Synced: regex_patterns/$rp.yml" >> $GITHUB_STEP_SUMMARY
+            for rp_name in $(yq e '.conditions[].name' "$cf" | sort -u); do
+              if [ -f "upstream/regex_patterns/${rp_name}.yml" ]; then
+                echo "Syncing regex_patterns/${rp_name}.yml"
+                cp "upstream/regex_patterns/${rp_name}.yml" "target/regex_patterns/${rp_name}.yml"
+                echo "Synced: regex_patterns/${rp_name}.yml" >> $GITHUB_STEP_SUMMARY
               else
-                echo "⚠️ Regex pattern $rp.yml not found upstream" | tee -a $GITHUB_STEP_SUMMARY
+                echo "⚠️ Regex pattern ${rp_name}.yml not found upstream" | tee -a $GITHUB_STEP_SUMMARY
               fi
             done
           done
