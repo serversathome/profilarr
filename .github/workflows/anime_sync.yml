@@ -25,21 +25,11 @@ jobs:
         mkdir -p profiles
         curl -fsSL "https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/profiles/Anime%201080p.yml" -o profiles/Anime\ 1080p.yml
 
-    - name: Parse custom formats from Anime 1080p.yml
-      id: parse_formats
-      run: |
-        CUSTOM_FORMATS=$(yq e '.custom_formats[]' profiles/Anime\ 1080p.yml)
-        echo "Custom formats referenced in Anime 1080p.yml:"
-        echo "$CUSTOM_FORMATS"
-        # Save to output for next steps
-        echo "formats<<EOF" >> $GITHUB_OUTPUT
-        echo "$CUSTOM_FORMATS" >> $GITHUB_OUTPUT
-        echo "EOF" >> $GITHUB_OUTPUT
-
     - name: Download custom formats
       run: |
         mkdir -p custom_formats
-        for FORMAT in ${{ steps.parse_formats.outputs.formats }}; do
+        CUSTOM_FORMATS=$(yq e -o=j '.custom_formats[].name' profiles/Anime\ 1080p.yml | jq -r '.')
+        for FORMAT in $CUSTOM_FORMATS; do
           SAFE_FORMAT=$(echo "$FORMAT" | sed 's/ /%20/g')
           echo "Downloading custom format $FORMAT"
           curl -fsSL "https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/custom_formats/$SAFE_FORMAT.yml" -o "custom_formats/$FORMAT.yml" || echo "Warning: $FORMAT.yml not found"
