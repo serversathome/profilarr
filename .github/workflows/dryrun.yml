@@ -1,7 +1,7 @@
 name: Sync Anime Profile (Dry Run)
 
 on:
-  workflow_dispatch:       # Manual trigger only
+  workflow_dispatch:  # Manual trigger only
 
 jobs:
   sync:
@@ -22,20 +22,18 @@ jobs:
           ref: stable
           path: upstream
 
-      - name: Install yq & dos2unix
+      - name: Install yq v4 & dos2unix
         run: |
           sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq
           sudo chmod +x /usr/bin/yq
           sudo apt-get update && sudo apt-get install -y dos2unix
 
-      - name: Ensure target directory exists
+      - name: Ensure directories exist
         run: mkdir -p target/profiles target/custom_formats target/regex_patterns
 
       - name: Sync Anime 1080p profile
         run: |
-          # Force overwrite
           cp upstream/profiles/Anime\ 1080p.yml target/profiles/
-          # Normalize line endings to avoid git diff issues
           dos2unix target/profiles/Anime\ 1080p.yml
           echo "Synced: profiles/Anime 1080p.yml" >> $GITHUB_STEP_SUMMARY
 
@@ -73,8 +71,20 @@ jobs:
 
       - name: Show complete diff (dry run)
         run: |
-          echo "## Diff of Anime 1080p.yml"
+          echo "## Diff of Anime 1080p.yml" >> $GITHUB_STEP_SUMMARY
+          echo '```diff' >> $GITHUB_STEP_SUMMARY
           diff -u target/profiles/Anime\ 1080p.yml upstream/profiles/Anime\ 1080p.yml || true >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
 
-          echo "## Changed or Added Files"
+          echo "## Synced custom_formats" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          ls target/custom_formats/ >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+          echo "## Synced regex_patterns" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          ls target/regex_patterns/ >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+          echo "## Changed or Added Files" >> $GITHUB_STEP_SUMMARY
           git -C target status --short >> $GITHUB_STEP_SUMMARY
