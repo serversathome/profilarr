@@ -8,7 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y yq curl git
+        run: |
+          sudo apt-get update && sudo apt-get install -y curl git wget
+          # Install Mike Farah yq (Go version)
+          YQ_VERSION=v4.45.1
+          wget https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64 -O /usr/bin/yq
+          sudo chmod +x /usr/bin/yq
+          yq --version
 
       - name: Download latest anime 1080p.yml
         run: |
@@ -34,11 +40,10 @@ jobs:
 
       - name: Dry run extraction of regex patterns
         run: |
-          echo "Dry run: The following regex patterns would be extracted:"
+          echo "Dry run: The following regex patterns would be extracted from the custom formats:"
           for f in ${{ steps.parse_formats.outputs.formats }}; do
             FILE_NAME="$f.yml"
-            echo "  - Patterns from $FILE_NAME (example output):"
-            echo "      * [parsed from YAML using yq]"
+            echo "  - Patterns from $FILE_NAME (example output using yq parsing)"
           done
 
       - name: Dry run summary of changes
