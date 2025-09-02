@@ -53,13 +53,14 @@ jobs:
         run: |
           REGEX_BASE="https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/regex_patterns"
           for FILE in custom_formats/*.yml; do
-              PATTERNS=$(yq e '.conditions[].name' "$FILE")
+              # Only take conditions of type release_title
+              PATTERNS=$(yq e '.conditions[] | select(.type=="release_title") | .name' "$FILE")
               for PATTERN in $PATTERNS; do
+                  SAFE_PATTERN=$(echo "$PATTERN" | sed 's/ /%20/g')
                   DEST="regex_patterns/$PATTERN.yml"
-                  URL="$REGEX_BASE/$(echo "$PATTERN" | sed 's/ /%20/g').yml"
                   mkdir -p "$(dirname "$DEST")"
                   echo "Downloading regex pattern $PATTERN"
-                  curl -fsSL "$URL" -o "$DEST" || echo "Warning: $PATTERN.yml not found"
+                  curl -fsSL "$REGEX_BASE/$SAFE_PATTERN.yml" -o "$DEST" || echo "Warning: $PATTERN.yml not found"
               done
           done
 
