@@ -25,27 +25,32 @@ jobs:
       - name: Parse custom formats from anime 1080p.yml
         id: parse_formats
         run: |
-          FORMATS=($(yq e '.custom_formats[].name' anime_1080p.yml))
           echo "Custom formats found in anime 1080p.yml:"
-          printf "  - %s\n" "${FORMATS[@]}"
-          echo "formats=${FORMATS[*]}" >> $GITHUB_OUTPUT
+          # Use line-by-line parsing to preserve spaces
+          FORMATS=$(yq e '.custom_formats[].name' anime_1080p.yml)
+          echo "$FORMATS" | while read -r FORMAT; do
+              echo "  - $FORMAT"
+          done
+          # Output all formats as a single string for workflow outputs
+          FORMATS_OUTPUT=$(echo "$FORMATS" | paste -sd "," -)
+          echo "formats=$FORMATS_OUTPUT" >> $GITHUB_OUTPUT
 
       - name: Dry run download of required custom formats
         run: |
           BASE_URL="https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/custom_formats"
           echo "Dry run: The following custom formats would be downloaded/updated:"
-          for f in ${{ steps.parse_formats.outputs.formats }}; do
-            FILE_NAME="$f.yml"
-            URL="$BASE_URL/$(echo $FILE_NAME | sed 's/ /%20/g')"
-            echo "  - $FILE_NAME from $URL"
+          echo "${{ steps.parse_formats.outputs.formats }}" | tr ',' '\n' | while read -r FORMAT; do
+              FILE_NAME="$FORMAT.yml"
+              URL="$BASE_URL/$(echo "$FILE_NAME" | sed 's/ /%20/g')"
+              echo "  - $FILE_NAME from $URL"
           done
 
       - name: Dry run extraction of regex patterns
         run: |
           echo "Dry run: The following regex patterns would be extracted from the custom formats:"
-          for f in ${{ steps.parse_formats.outputs.formats }}; do
-            FILE_NAME="$f.yml"
-            echo "  - Patterns from $FILE_NAME (example output using yq parsing)"
+          echo "${{ steps.parse_formats.outputs.formats }}" | tr ',' '\n' | while read -r FORMAT; do
+              FILE_NAME="$FORMAT.yml"
+              echo "  - Patterns from $FILE_NAME (example output using yq parsing)"
           done
 
       - name: Dry run summary of changes
