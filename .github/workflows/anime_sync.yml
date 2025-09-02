@@ -50,16 +50,19 @@ jobs:
               curl -fsSL "$URL" -o "custom_formats/$FILE_NAME" || echo "Warning: $FILE_NAME not found"
           done
 
-      - name: Download regex patterns referenced in custom formats
+      - name: Download required regex patterns
         run: |
           mkdir -p regex_patterns
-          # Extract unique regex names from the downloaded custom formats
-          mapfile -t REGEX_PATTERNS < <(for FILE in custom_formats/*.yml; do
-              yq e '.conditions[].name' "$FILE"
-          done | sort -u)
-          
-          # Download each regex pattern individually
           BASE_URL="https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/regex_patterns"
+
+          # Extract only condition names that have a "pattern" field
+          mapfile -t REGEX_PATTERNS < <(
+            for FILE in custom_formats/*.yml; do
+              yq e '.conditions[] | select(has("pattern")) | .name' "$FILE"
+            done | sort -u
+          )
+
+          # Download each regex pattern
           for PATTERN in "${REGEX_PATTERNS[@]}"; do
               SAFE_PATTERN=$(echo "$PATTERN" | sed 's/ /%20/g')
               echo "Downloading regex pattern $PATTERN"
