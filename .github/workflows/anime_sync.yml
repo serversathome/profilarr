@@ -1,77 +1,72 @@
-name: Sync Anime 1080p Custom Formats & Regex Patterns
+name: Sync Anime 1080p
 
 on:
   schedule:
-    # Daily at 3am UTC
-    - cron: "0 3 * * *"
+    - cron: '0 3 * * *'  # daily at 03:00 UTC
   workflow_dispatch:
 
 jobs:
-  sync_anime:
+  sync:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Install dependencies
         run: |
-          sudo apt-get update && sudo apt-get install -y curl git wget
-          mkdir -p $HOME/bin
-          YQ_VERSION=v4.45.1
-          wget https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64 -O $HOME/bin/yq
-          chmod +x $HOME/bin/yq
-          export PATH=$HOME/bin:$PATH
-          yq --version
-
-      - name: Ensure directories exist
-        run: |
-          mkdir -p profiles custom_formats regex_patterns
+          sudo apt-get update
+          sudo apt-get install -y curl git wget jq
 
       - name: Download latest Anime 1080p.yml
         run: |
-          UPSTREAM_URL="https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/profiles/Anime%201080p.yml"
-          curl -fsSL "$UPSTREAM_URL" -o "profiles/Anime 1080p.yml"
+          mkdir -p profiles
+          curl -fsSL https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/profiles/Anime%201080p.yml -o profiles/Anime\ 1080p.yml
 
-      - name: Parse custom formats from Anime 1080p.yml
-        id: parse_formats
+      - name: Parse custom formats
         run: |
-          FORMATS=$(yq e '.custom_formats[].name' profiles/Anime\ 1080p.yml)
-          FORMATS_OUTPUT=$(echo "$FORMATS" | paste -sd "," -)
-          echo "formats=$FORMATS_OUTPUT" >> $GITHUB_OUTPUT
+          CUSTOM_FORMATS=$(yq e -o=j '.custom_formats[].name' profiles/Anime\ 1080p.yml)
+          echo "Custom formats referenced in Anime 1080p.yml:"
+          echo "$CUSTOM_FORMATS" | jq -r '.[]'
+          echo "$CUSTOM_FORMATS" > custom_formats_list.json
 
       - name: Download custom formats
         run: |
-          BASE_URL="https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/custom_formats"
-          echo "${{ steps.parse_formats.outputs.formats }}" | tr ',' '\n' | while read -r FORMAT; do
-              FILE_NAME="$FORMAT.yml"
-              URL="$BASE_URL/$(echo "$FILE_NAME" | sed 's/ /%20/g')"
-              echo "Downloading custom format $FILE_NAME"
-              curl -fsSL "$URL" -o "custom_formats/$FILE_NAME" || echo "Warning: $FILE_NAME not found"
+          mkdir -p custom_formats
+          jq -r '.[]' custom_formats_list.json | while read -r FORMAT; do
+            SAFE_FORMAT=$(echo "$FORMAT" | sed 's/ /%20/g')
+            DEST="custom_formats/$FORMAT.yml"
+            echo "Downloading custom format: $FORMAT"
+            curl -fsSL "https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/custom_formats/$SAFE_FORMAT.yml" -o "$DEST" || echo "Warning: $FORMAT.yml not found"
           done
 
-      - name: Download regex patterns for custom formats
+      - name: Extract regex patterns from custom formats
         run: |
-          REGEX_BASE="https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/regex_patterns"
+          mkdir -p regex_patterns
+          > regex_patterns.txt
           for FILE in custom_formats/*.yml; do
-              # Only take conditions of type release_title
-              PATTERNS=$(yq e '.conditions[] | select(.type=="release_title") | .name' "$FILE")
-              for PATTERN in $PATTERNS; do
-                  SAFE_PATTERN=$(echo "$PATTERN" | sed 's/ /%20/g')
-                  DEST="regex_patterns/$PATTERN.yml"
-                  mkdir -p "$(dirname "$DEST")"
-                  echo "Downloading regex pattern $PATTERN"
-                  curl -fsSL "$REGEX_BASE/$SAFE_PATTERN.yml" -o "$DEST" || echo "Warning: $PATTERN.yml not found"
+              yq e -o=j '.conditions[] | select(.type=="release_title") | .name' "$FILE" | while read -r PATTERN; do
+                  PATTERN=$(echo "$PATTERN" | sed 's/^"\(.*\)"$/\1/')
+                  echo "$PATTERN" >> regex_patterns.txt
               done
           done
+          sort -u regex_patterns.txt -o regex_patterns.txt
+          echo "Regex patterns found:"
+          cat regex_patterns.txt
 
-      - name: Commit and push changes
+      - name: Download regex patterns
         run: |
-          git add profiles/Anime\ 1080p.yml custom_formats/*.yml regex_patterns/*.yml
-          if ! git diff --cached --quiet; then
-              git config user.name "github-actions[bot]"
-              git config user.email "github-actions[bot]@users.noreply.github.com"
-              git commit -m "Sync Anime 1080p.yml, custom_formats, and regex_patterns"
-              git push
-          else
-              echo "No changes to commit"
-          fi
+          while read -r PATTERN; do
+            SAFE_PATTERN=$(echo "$PATTERN" | sed 's/ /%20/g')
+            DEST="regex_patterns/$PATTERN.yml"
+            echo "Downloading regex pattern $PATTERN"
+            curl -fsSL "https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/regex_patterns/$SAFE_PATTERN.yml" -o "$DEST" || echo "Warning: $PATTERN.yml not found"
+          done < regex_patterns.txt
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add profiles/Anime\ 1080p.yml custom_formats/ regex_patterns/
+          git diff-index --quiet HEAD || git commit -m "Sync Anime 1080p.yml, custom_formats, and regex_patterns"
+          git push
