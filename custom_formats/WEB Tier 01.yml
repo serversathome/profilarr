@@ -1,0 +1,17 @@
+name: WEB Tier 01
+description: Matches release groups who fall under WEB-DL Tier 1
+tags:
+- Release Groups
+- WEB-DL
+conditions:
+- name: WEB-DL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: TRaSH WEB Tier 01
+  negate: false
+  pattern: TRaSH WEB Tier 01
+  required: false
+  type: release_group
+tests: []

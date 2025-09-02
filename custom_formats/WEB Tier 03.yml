@@ -1,0 +1,17 @@
+name: WEB Tier 03
+description: ''
+tags:
+- Release Groups
+- WEB-DL
+conditions:
+- name: WEB-DL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: TRaSH WEB Tier 02
+  negate: false
+  pattern: TRaSH WEB Tier 03
+  required: false
+  type: release_group
+tests: []
