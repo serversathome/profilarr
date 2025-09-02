@@ -45,6 +45,7 @@ jobs:
         run: |
           mkdir -p target/regex_patterns
           for cf in ${{ steps.copy_formats.outputs.custom_formats }}; do
+            # Look for - name fields under conditions
             grep -A 5 "conditions:" "$cf" | grep "name:" | awk '{print $2}' | sort -u | while read rp; do
               if [ -f "upstream/regex_patterns/$rp.yml" ]; then
                 echo "Syncing regex_patterns/$rp"
@@ -60,4 +61,9 @@ jobs:
         run: |
           cd target
           git add profiles/Anime\ 1080p.yml custom_formats/ regex_patterns/
+
+          echo "## Changed or Added Files" >> $GITHUB_STEP_SUMMARY
+          git status --short >> $GITHUB_STEP_SUMMARY
+
+          echo "## Diff of Changes" >> $GITHUB_STEP_SUMMARY
           git diff --cached >> $GITHUB_STEP_SUMMARY
