@@ -1,56 +1,49 @@
-name: Sync Anime 1080p and Custom Formats
+name: Sync Anime Profiles and Regex
 
 on:
   schedule:
-    - cron: '0 4 * * *' # Runs daily at 04:00 UTC
+    - cron: '0 2 * * *'  # Runs daily at 02:00 UTC
   workflow_dispatch:
 
 jobs:
-  sync_anime:
+  sync:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y curl wget git
-        sudo wget -O /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
-        sudo chmod +x /usr/local/bin/yq
+      - name: Install yq
+        run: sudo snap install yq
 
-    - name: Download latest Anime 1080p.yml
-      run: |
-        mkdir -p profiles
-        curl -fsSL "https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/profiles/Anime%201080p.yml" -o profiles/Anime\ 1080p.yml
+      - name: Create directories
+        run: |
+          mkdir -p custom_formats
+          mkdir -p regex_patterns
+          mkdir -p profiles
 
-    - name: Download custom formats
-      run: |
-        mkdir -p custom_formats
-        CUSTOM_FORMATS=$(yq e -o=j '.custom_formats[].name' profiles/Anime\ 1080p.yml | jq -r '.')
-        for FORMAT in $CUSTOM_FORMATS; do
-          SAFE_FORMAT=$(echo "$FORMAT" | sed 's/ /%20/g')
-          echo "Downloading custom format $FORMAT"
-          curl -fsSL "https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/custom_formats/$SAFE_FORMAT.yml" -o "custom_formats/$FORMAT.yml" || echo "Warning: $FORMAT.yml not found"
-        done
+      # --- Sync Anime 1080p.yml ---
+      - name: Mirror Anime 1080p.yml
+        run: |
+          echo "Downloading Anime 1080p.yml"
+          curl -fsSL "https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/profiles/Anime%201080p.yml" -o "profiles/Anime 1080p.yml"
 
-    - name: Extract regex patterns
-      run: |
-        mkdir -p regex_patterns
-        > regex_patterns/regex_patterns.txt
-        for FILE in custom_formats/*.yml; do
-          yq e '.conditions[].name' "$FILE" >> regex_patterns/regex_patterns_raw.txt
-        done
-        sort -u regex_patterns/regex_patterns_raw.txt > regex_patterns/regex_patterns.txt
-        rm -f regex_patterns/regex_patterns_raw.txt
-        echo "Extracted regex patterns:"
-        cat regex_patterns/regex_patterns.txt
+      # --- Sync custom formats referenced in Anime 1080p.yml ---
+      - name: Download custom formats
+        run: |
+          mapfile -t CUSTOM_FORMATS < <(yq e '.custom_formats[].name' profiles/Anime\ 1080p.yml)
+          for FORMAT in "${CUSTOM_FORMATS[@]}"; do
+            SAFE_FORMAT=$(echo "$FORMAT" | sed 's/ /%20/g')
+            echo "Downloading custom format $FORMAT"
+            curl -fsSL "https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/custom_formats/$SAFE_FORMAT.yml" -o "custom_formats/$FORMAT.yml" || echo "Warning: $FORMAT.yml not found"
+          done
 
-    - name: Commit and push updates
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add profiles/Anime\ 1080p.yml custom_formats/ regex_patterns/
-        git commit -m "Sync Anime 1080p.yml, custom_formats, and regex_patterns" || echo "No changes to commit"
-        git push
+      # --- Sync regex patterns referenced in Anime 1080p.yml ---
+      - name: Download regex patterns
+        run: |
+          mkdir -p regex_patterns
+          mapfile -t REGEX_PATTERNS < <(yq e '.regex[].name' profiles/Anime\ 1080p.yml)
+          for PATTERN in "${REGEX_PATTERNS[@]}"; do
+            SAFE_PATTERN=$(echo "$PATTERN" | sed 's/ /%20/g')
+            echo "Downloading regex pattern $PATTERN"
+            curl -fsSL "https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/regex_patterns/$SAFE_PATTERN.yml" -o "regex_patterns/$PATTERN.yml" || echo "Warning: $PATTERN.yml not found"
+          done
