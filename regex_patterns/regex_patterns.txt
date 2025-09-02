@@ -1,0 +1,459 @@
+1080p
+2160p
+360p
+3D
+3L
+480p
+4K4U
+4KDVS
+540p
+576p
+7.1 Surround
+720p
+AAAUHD
+AAC
+ABEMA
+ADE
+ADN
+AJP69
+AMZN Regex
+AOC
+APEX
+APTV Regex
+ARCADE
+AROMA
+ATV Regex
+ATVP Regex
+AV1
+AViATOR
+Absinth
+AjA
+Anime LQ
+Anime Raws
+Anime Tier 1
+Anime Tier 2
+Anime Tier 3
+Anime Tier 4
+Anime Tier 6
+Anime Tier 7
+Anime Tier 8
+Anime WEB Tier 1
+Anime WEB Tier 2
+Anime WEB Tier 3
+Anime WEB Tier 4
+Anime WEB Tier 5
+Anime WEB Tier 6
+Atmos
+Atmos (BTN Standard)
+B&W
+B-Global
+BCORE Regex
+BCORE Rename Regex
+BEN THE MEN
+BHDStudio
+BLUEBIRD
+BLURANiUM
+BLUTONIUM
+BLUTONiUM
+BMF
+BOLS
+BOREDOR
+BRDISK
+BSTD
+BTM
+BTN
+BTW
+BV
+BYNDR
+BeiTai
+Better Theatricals
+BeyondHD
+BiTOR
+BiZKiT
+Bilibili
+Bluray
+Bluray Remux
+BlzT
+CHAOS
+CHD
+CJ
+CLASSiCALHD
+CMCT
+CMRG
+CREATiVE24
+CRFW
+CRUD
+CRX
+CRiSC
+CRiT Regex
+CasStudio
+Chinese
+Chivaman
+Chotab
+CiNEPHiLES
+Cinefeel
+Crunchyroll
+CtrlHD
+D-Z0N3
+D-ZON3
+DEFLATE
+DEPTH
+DNSP Regex
+DON
+DS4K
+DSNP Regex
+DTS
+DTS-ES
+DTS-HD HRA
+DTS-HD MA
+DTS-X
+DVD
+DarQ
+Dariush
+DepraveD
+Dolby Digital
+Dolby Digital +
+Dolby Vision
+Dolby Vision (Without Fallback)
+Dual Audio
+Dual Audio Regex
+E.N.D
+E1
+EA
+EDPH
+EMERALD
+EPSiLON
+ESiR
+EVO
+EXCiSION
+EbP
+Extras
+FGT
+FLAC
+FLAME
+FLUX
+FRDS
+FTW-HD
+FUNI
+FilmHD
+Flights
+FoRM
+FraMeSToR
+Free100
+Free25
+Free50
+Free75
+Full Disc
+GALAXY
+GNOME
+GNOMiSSiON
+GRiMM
+GS88
+GUHZER
+Geek
+Golden Popcorn
+Groups
+HANDJOB
+HD77
+HDChina
+HDMaNiAcS
+HDR
+HDR10
+HDR10+
+HDR10+ or DoVi
+HDS
+HDmux
+HHWEB
+HIDIVE
+HLG
+HMAX Regex
+HMAX Rename Regex
+HONE
+HQMUX
+HTSR Regex
+HULU Regex
+HUNTJR
+Hares
+HiDt
+HiFi
+HiP
+HypStu
+IAMABLE
+IDE
+IMAX
+IMAX Enhanced
+IQIYI Regex
+Includes English
+Japanese
+JustWatch
+KAN3D2M
+KASHMiR
+KC
+KCW Regex
+KHN
+KNiVES
+KONTRAST
+KRaLiMaRKo
+KiNGS
+Kitsune
+Korean
+LAMA
+LAZARUS
+LAZY
+LEGi0N
+LM
+LSt
+LiNG
+LittleBakas
+LoRD
+LolHD
+Lucifer
+MA Regex
+MAX Regex
+MAX Rename Regex
+MNHD
+MTeam
+MZABI
+MainFrame
+MeGusta
+MgB
+MiMiC
+NAHOM
+NAN0
+NCmt
+NF Regex
+NINJACENTRAL
+NOSiViD
+NOW Regex
+NOW Rename Regex
+NPMS
+NTG
+NTb
+Netflix
+NhaNc3
+NoGroup
+Not 1080p
+Not 2160p
+Not 720p
+Not AAC
+Not Atmos
+Not Atmos (BTN)
+Not Colour
+Not DTS
+Not DTS-ES
+Not DTS-HD
+Not DTS-HD HRA ES
+Not DTS-X
+Not DVD
+Not Dolby Digital
+Not Dolby Digital +
+Not Dolby Vision
+Not English
+Not Extended Clip
+Not FLAC
+Not HDR
+Not HDR10
+Not HDR10+
+Not HLG
+Not IMAX
+Not IMAX Enhanced
+Not OPUS Release Group
+Not Open Matte
+Not PCM
+Not PQ
+Not Remux
+Not SDR
+Not Sing Along
+Not Single Language Only
+Not Theatrical Edition
+Not Theatrical Preferred
+Not TrueHD
+Not TrueHD Missing Groups
+Not UHD Bluray
+Not WEB-DL
+Not WEBRip
+Not x264
+Not x265
+NyHD
+OEPlus
+ORiGEN
+OnlyWeb
+Opus
+P0W4HD
+PCM
+PCOK Regex
+PCOK Rename Regex
+PHOCiS
+PHOENiX
+PMTP Regex
+PP
+PQ
+PSA
+PTH
+PTP
+PTer
+Penumbra
+PiRaTeS
+PmP
+Positive
+PussyFoot
+QOQ
+QxR
+R1GY3B
+RARGB
+RAWR
+REBORN
+ROCCaT
+ROKU Regex
+RTN
+Ralphy
+ReQuEsT
+ReaLHD
+Release Group (Missing)
+Release Groups
+Remux
+Repack1
+Repack2
+Repack3
+SA89
+SARTRE
+SHD
+SHO Regex
+SHO Rename Regex
+SMAHAWUG
+SMURF
+SOP
+SPECTACLE
+SPHD
+SPiRiT
+SQS
+STAN Regex
+STAN Rename Regex
+STRiKES
+STUTTERSHIT
+SURCODE
+SWAGGERUHD
+SWTYBLZ
+SaNcTi
+SasukeducK
+SbR
+Season Pack
+ShieldBearer
+SiC
+SiCFoI
+SiGMA
+SiMPLE
+Sing Along
+SoLaR
+Special Edition
+TAoE
+TBB
+TDD
+TEKNO3D
+TEPES
+TERMiNAL
+THREESOME
+TOMBCRUISE
+TOMMY
+TRaSH WEB Tier 01
+TRaSH WEB Tier 02
+TRiToN
+TV Extras
+TVING Regex
+TVSmash
+TayTo
+Telly
+TimeDistortion
+TnP
+ToNaTo
+Tron
+TrueHD
+TrueHD Missing Groups
+TvR
+UHD Bluray
+UHDCLUBREMUX
+ULTRAHDCLUB
+Uncensored
+Upscaled
+VALiS
+VD0N
+VECTOR
+VIKI Regex
+VIU Regex
+VLAD
+VP9
+VRV
+VVC
+ViSUM
+VietHD
+VisionXpert
+VoX
+Vyndros
+W4NK3R
+WATCHABLE
+WAVVE Regex
+WEB-DL
+WEBRip
+WELP
+WMING
+WeTV Regex
+Whiterhino
+WiKi
+WiLDCAT
+XEBEC
+Xvid
+YAWNiX
+YELLO
+YIFY
+YTS
+Year in Brackets
+Yoyo
+ZIMBO
+ZQ
+ZoroSenpai
+b0mbardiers
+beAst
+bluespots
+c0kE
+cXcY
+d3g
+dB
+de[42]
+decibeL
+dkore
+edge2020
+h264
+h265
+hallowed
+hdalx
+honeyvera
+iCandy
+iFT
+iNVANDRAREN
+iON
+iPT Internals
+iT Regex
+iT Rename Regex
+iTunes Regex
+iVy
+jennaortegaUHD
+k00kie
+luvBB
+micius
+monkee
+nmd
+playBD
+playHD
+playWEB
+rightSIZE
+rttr
+tarunk9c
+v0
+v1
+v2
+v3
+v4
+x0r
+x264
+x265
+xander
