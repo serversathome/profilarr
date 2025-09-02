@@ -10,7 +10,7 @@ This repo is an up-to-date Dictionarry repo (auto-pull enabled) with the additio
 
 ## How it Works
 
-This repo is constructed using a GitHub workflow. The workflow checks to see if there are any changes to the Dictionarry repo and pulls them here. It also checks the anime profile from Sweaty Eggs (and its dependencies) and pulls **only those changes** here while leaving the rest of his repo alone. So basically every hour, this is a fully updated Dictionarry repo with a fully updated anime profile.
+This repo is constructed using a GitHub workflow. The workflow checks to see if there are any changes to the Dictionarry repo and pulls them here. It also checks the anime profile from Sweaty Eggs (and its dependencies) and pulls **only those changes** here while leaving the rest of his repo alone. So basically every day, this is a fully updated Dictionarry repo with a fully updated anime profile.
 
 ## Help?
 
