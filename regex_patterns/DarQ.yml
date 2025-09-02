@@ -1,7 +1,7 @@
-'description': ''
-'name': 'DarQ'
-'pattern': '(?<=^|[\s.-])DarQ\b'
-'tags':
-- 'Release Group'
-- 'HEVC'
-'tests': []
+name: DarQ
+pattern: (?<=^|[\s.-])DarQ\b
+description: ''
+tags:
+- Release Group
+- HEVC
+tests: []

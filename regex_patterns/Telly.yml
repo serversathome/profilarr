@@ -1,7 +1,7 @@
-'description': 'Banned for Retagging'
-'name': 'Telly'
-'pattern': '(?<=^|[\s.-])Telly\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: Telly
+pattern: (?<=^|[\s.-])Telly\b
+description: Banned for Retagging
+tags:
+- Release Group
+- Banned
+tests: []

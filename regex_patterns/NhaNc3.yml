@@ -1,7 +1,7 @@
-'description': 'Banned for Low Mixed Quality Releases'
-'name': 'NhaNc3'
-'pattern': '(?<=^|[\s.-])NhaNc3\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: NhaNc3
+pattern: (?<=^|[\s.-])NhaNc3\b
+description: Banned for Low Mixed Quality Releases
+tags:
+- Release Group
+- Bluray
+tests: []

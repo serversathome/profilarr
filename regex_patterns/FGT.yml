@@ -1,7 +1,7 @@
-'description': 'Banned for Retagging'
-'name': 'FGT'
-'pattern': '(?<=^|[\s.-])FGT\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: FGT
+pattern: (?<=^|[\s.-])FGT\b
+description: Banned for Retagging
+tags:
+- Release Group
+- Banned
+tests: []

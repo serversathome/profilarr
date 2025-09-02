@@ -1,7 +1,7 @@
-'description': 'Banned for Fake DV/HDR Layer'
-'name': 'SasukeducK'
-'pattern': '(?<=^|[\s.-])SasukeducK\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: SasukeducK
+pattern: (?<=^|[\s.-])SasukeducK\b
+description: Banned for Fake DV/HDR Layer
+tags:
+- Release Group
+- Banned
+tests: []

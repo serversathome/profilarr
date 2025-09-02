@@ -1,7 +1,7 @@
-'description': 'Banned for Retagging'
-'name': 'SHD'
-'pattern': '(?<=^|[\s.-])SHD\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: SHD
+pattern: (?<=^|[\s.-])SHD\b
+description: Banned for Retagging
+tags:
+- Release Group
+- WEB-DL
+tests: []

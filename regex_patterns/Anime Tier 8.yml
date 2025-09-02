@@ -1,6 +1,6 @@
 name: Anime Tier 8
-pattern: "(?<=^|[\\s.\\-\\[])(AkihitoSubs|Arukoru|EDGE|EMBER|GHOST|Judas|naiyas|Nep_Blanc|Prof|Shir\u03C3\
-  |YURASAKA)\\b"
+pattern: "(?i)(?:^|[^A-Za-z0-9])(?:AkihitoSubs|Arukoru|EDGE|EMBER|GHOST|Judas|naiyas|Nep_Blanc|Prof|Shir\u03C3\
+  |YURASAKA)(?:[^A-Za-z0-9]|$)"
 description: TRaSH Guides Anime Tier 08 (Mini Encodes)
 tags:
 - Anime

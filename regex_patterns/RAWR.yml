@@ -1,7 +1,7 @@
-'description': ''
-'name': 'RAWR'
-'pattern': '(?<=^|[\s.-])RAWR\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: RAWR
+pattern: (?<=^|[\s.-])RAWR\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

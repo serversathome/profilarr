@@ -1,7 +1,7 @@
-'description': ''
-'name': 'SPiRiT'
-'pattern': '(?<=^|[\s.-])SPiRiT\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: SPiRiT
+pattern: (?<=^|[\s.-])SPiRiT\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

@@ -1,7 +1,7 @@
-'description': ''
-'name': 'LM'
-'pattern': '(?<=^|[\s.-])LM\b'
-'tags':
-- 'Release Group'
-- 'Remux'
-'tests': []
+name: LM
+pattern: (?<=^|[\s.-])LM\b
+description: ''
+tags:
+- Release Group
+- Remux
+tests: []

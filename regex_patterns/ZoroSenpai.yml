@@ -1,7 +1,7 @@
-'description': ''
-'name': 'ZoroSenpai'
-'pattern': '(?<=^|[\s.-])ZoroSenpai\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: ZoroSenpai
+pattern: (?<=^|[\s.-])ZoroSenpai\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

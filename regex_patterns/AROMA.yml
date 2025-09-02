@@ -1,7 +1,7 @@
-'description': 'Banned for Retagging'
-'name': 'AROMA'
-'pattern': '(?<=^|[\s.-])AROMA\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: AROMA
+pattern: (?<=^|[\s.-])AROMA\b
+description: Banned for Retagging
+tags:
+- Release Group
+- Banned
+tests: []

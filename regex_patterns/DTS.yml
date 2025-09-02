@@ -1,6 +1,8 @@
-'description': ''
-'name': 'DTS'
-'pattern': '\bDTS(\b|\d)'
-'tags':
-- 'Audio'
-'tests': []
+name: DTS
+pattern: \bDTS(\b|\d)
+description: ''
+tags:
+- Audio
+- Codec
+- TRaSH
+tests: []

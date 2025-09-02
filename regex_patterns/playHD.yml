@@ -1,7 +1,7 @@
-'description': ''
-'name': 'playHD'
-'pattern': '(?<=^|[\s.-])playHD\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: playHD
+pattern: (?<=^|[\s.-])playHD\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

@@ -1,7 +1,7 @@
-'description': ''
-'name': 'KHN'
-'pattern': '(?<=^|[\s.-])KHN\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: KHN
+pattern: (?<=^|[\s.-])KHN\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

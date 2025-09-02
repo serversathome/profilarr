@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Geek'
-'pattern': '(?<=^|[\s.-])Geek\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: Geek
+pattern: (?<=^|[\s.-])Geek\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

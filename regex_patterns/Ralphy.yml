@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Ralphy'
-'pattern': '(?<=^|[\s.-])Ralphy\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: Ralphy
+pattern: (?<=^|[\s.-])Ralphy\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

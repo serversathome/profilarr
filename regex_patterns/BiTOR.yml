@@ -1,7 +1,7 @@
-'description': 'Banned for Fake DV/HDR Layer'
-'name': 'BiTOR'
-'pattern': '(?<=^|[\s.-])BiTOR\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: BiTOR
+pattern: (?<=^|[\s.-])BiTOR\b
+description: Banned for Fake DV/HDR Layer
+tags:
+- Release Group
+- Banned
+tests: []

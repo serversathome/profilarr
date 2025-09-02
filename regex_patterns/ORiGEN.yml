@@ -1,7 +1,7 @@
-'description': ''
-'name': 'ORiGEN'
-'pattern': '(?<=^|[\s.-])ORiGEN\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: ORiGEN
+pattern: (?<=^|[\s.-])ORiGEN\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

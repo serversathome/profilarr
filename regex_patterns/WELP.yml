@@ -1,7 +1,7 @@
-'description': ''
-'name': 'WELP'
-'pattern': '(?<=^|[\s.-])WELP\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: WELP
+pattern: (?<=^|[\s.-])WELP\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

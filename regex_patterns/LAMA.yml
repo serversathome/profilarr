@@ -1,7 +1,7 @@
-'description': 'Banned for Retagging'
-'name': 'LAMA'
-'pattern': '(?<=^|[\s.-])LAMA\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: LAMA
+pattern: (?<=^|[\s.-])LAMA\b
+description: Banned for Retagging
+tags:
+- Release Group
+- Banned
+tests: []

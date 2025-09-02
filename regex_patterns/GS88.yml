@@ -1,7 +1,7 @@
-'description': ''
-'name': 'GS88'
-'pattern': '(?<=^|[\s.-])GS88\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: GS88
+pattern: (?<=^|[\s.-])GS88\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

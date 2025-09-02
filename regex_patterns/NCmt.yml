@@ -1,8 +1,8 @@
-'description': ''
-'name': 'NCmt'
-'pattern': '(?<=^|[\s.-])NCmt\b'
-'tags':
-- 'Release Group'
-- 'Remux'
-- 'Bluray'
-'tests': []
+name: NCmt
+pattern: (?<=^|[\s.-])NCmt\b
+description: ''
+tags:
+- Release Group
+- Remux
+- Bluray
+tests: []

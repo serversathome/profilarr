@@ -1,7 +1,7 @@
-'description': ''
-'name': 'CMCT'
-'pattern': '(?<=^|[\s.-])CMCT\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: CMCT
+pattern: (?<=^|[\s.-])CMCT\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

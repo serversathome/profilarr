@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Hares'
-'pattern': '(?<=^|[\s.-])Hares\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: Hares
+pattern: (?<=^|[\s.-])Hares\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

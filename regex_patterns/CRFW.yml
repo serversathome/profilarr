@@ -1,7 +1,7 @@
-'description': ''
-'name': 'CRFW'
-'pattern': '(?<=^|[\s.-])CRFW\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: CRFW
+pattern: (?<=^|[\s.-])CRFW\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

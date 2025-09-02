@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Vyndros'
-'pattern': '(?<=^|[\s.-])Vyndros\b'
-'tags':
-- 'Release Group'
-- 'HEVC'
-'tests': []
+name: Vyndros
+pattern: (?<=^|[\s.-])Vyndros\b
+description: ''
+tags:
+- Release Group
+- HEVC
+tests: []

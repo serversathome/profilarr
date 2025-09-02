@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Dariush'
-'pattern': '(?<=^|[\s.-])Dariush\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: Dariush
+pattern: (?<=^|[\s.-])Dariush\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

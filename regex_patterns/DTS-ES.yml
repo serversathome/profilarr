@@ -1,6 +1,8 @@
-'description': ''
-'name': 'DTS-ES'
-'pattern': 'dts[-. ]?es\b'
-'tags':
-- 'Audio'
-'tests': []
+name: DTS-ES
+pattern: dts.?es
+description: ''
+tags:
+- Audio
+- Codec
+- TRaSH
+tests: []

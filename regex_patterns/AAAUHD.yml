@@ -1,7 +1,7 @@
-'description': ''
-'name': 'AAAUHD'
-'pattern': '(?<=^|[\s.-])AAAUHD\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: AAAUHD
+pattern: (?<=^|[\s.-])AAAUHD\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

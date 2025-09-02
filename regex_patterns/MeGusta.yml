@@ -1,7 +1,7 @@
-'description': ''
-'name': 'MeGusta'
-'pattern': '(?<=^|[\s.-])MeGusta\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: MeGusta
+pattern: (?<=^|[\s.-])MeGusta\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

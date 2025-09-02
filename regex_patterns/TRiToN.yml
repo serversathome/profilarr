@@ -1,7 +1,7 @@
-'description': ''
-'name': 'TRiToN'
-'pattern': '(?<=^|[\s.-])TRiToN\b'
-'tags':
-- 'Release Group'
-- 'Remux'
-'tests': []
+name: TRiToN
+pattern: (?<=^|[\s.-])TRiToN\b
+description: ''
+tags:
+- Release Group
+- Remux
+tests: []

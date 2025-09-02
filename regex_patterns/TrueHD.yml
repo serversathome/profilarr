@@ -1,7 +1,8 @@
-'description': ''
-'name': 'TrueHD'
-'pattern': 'True[ .-]?HD[ .-]?'
-'tags':
-- 'Audio'
-- 'Lossless'
-'tests': []
+name: TrueHD
+pattern: True[ .-]?HD
+description: ''
+tags:
+- Audio
+- Codec
+- TRaSH
+tests: []

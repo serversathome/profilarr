@@ -1,7 +1,7 @@
-'description': ''
-'name': 'TayTo'
-'pattern': '(?<=^|[\s.-])TayTo\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: TayTo
+pattern: (?<=^|[\s.-])TayTo\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

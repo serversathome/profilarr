@@ -1,7 +1,7 @@
-'description': ''
-'name': 'BeiTai'
-'pattern': '(?<=^|[\s.-])BeiTai\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: BeiTai
+pattern: (?<=^|[\s.-])BeiTai\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

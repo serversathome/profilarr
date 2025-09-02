@@ -1,7 +1,7 @@
-'description': ''
-'name': 'ESiR'
-'pattern': '(?<=^|[\s.-])ESiR\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: ESiR
+pattern: (?<=^|[\s.-])ESiR\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

@@ -1,7 +1,7 @@
-'description': ''
-'name': 'BlzT'
-'pattern': '(?<=^|[\s.-])BlzT\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: BlzT
+pattern: (?<=^|[\s.-])BlzT\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

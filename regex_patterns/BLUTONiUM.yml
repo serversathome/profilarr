@@ -1,7 +1,7 @@
-'description': ''
-'name': 'BLUTONiUM'
-'pattern': '(?<=^|[\s.-])BLUTONiUM\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: BLUTONiUM
+pattern: (?<=^|[\s.-])BLUTONiUM\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

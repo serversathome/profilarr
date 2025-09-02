@@ -1,7 +1,7 @@
-'description': ''
-'name': 'NyHD'
-'pattern': '(?<=^|[\s.-])NyHD\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: NyHD
+pattern: (?<=^|[\s.-])NyHD\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

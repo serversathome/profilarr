@@ -1,7 +1,7 @@
-'description': ''
-'name': 'LoRD'
-'pattern': '(?<=^|[\s.-])LoRD\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: LoRD
+pattern: (?<=^|[\s.-])LoRD\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

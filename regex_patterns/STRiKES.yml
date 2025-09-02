@@ -1,7 +1,7 @@
-'description': ''
-'name': 'STRiKES'
-'pattern': '(?<=^|[\s.-])STRiKES\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: STRiKES
+pattern: (?<=^|[\s.-])STRiKES\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

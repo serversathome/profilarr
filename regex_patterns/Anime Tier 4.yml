@@ -1,6 +1,6 @@
 name: Anime Tier 4
-pattern: (?<=^|[\s.\-\[])(9volt|AOmundson|Asakura|ASO|Bolshevik|Bulldog|Cait-Sidhe|Chihiro|Chimera|CoalGirls|Commie|D3|Davinci|deanzel|Doki|Dragon-Releases|Foxtrot|GHS|HaiveMind|hchcsen|Iznjie
-  Biznjie|Kaleido|karios|kBaraka|kmplx|Koitern|Koten_Gars|Kulot|Lia|MCLR|mottoj|NH|NTRM|Orphan|RMX|SallySubs|Scriptum|ShadyCrab|SNSbu|SOLA|THORA|Tsundere|UWU|xPearse)\b
+pattern: (?i)(?:^|[^A-Za-z0-9])(?:9volt|AOmundson|Asakura|ASO|Bolshevik|Bulldog|Cait-Sidhe|Chihiro|Chimera|CoalGirls|Commie|D3|Davinci|deanzel|Doki|Dragon-Releases|Foxtrot|GHS|HaiveMind|hchcsen|Iznjie
+  Biznjie|Kaleido|karios|kBaraka|kmplx|Koitern|Koten_Gars|Kulot|Lia|MCLR|mottoj|NH|NTRM|Orphan|RMX|SallySubs|Scriptum|ShadyCrab|SNSbu|SOLA|THORA|Tsundere|UWU|xPearse)(?:[^A-Za-z0-9]|$)
 description: TRaSH Guides Anime Tier 04 (SeaDex Muxers)
 tags:
 - Anime

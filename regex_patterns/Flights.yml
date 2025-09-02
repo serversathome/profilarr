@@ -1,7 +1,7 @@
-'description': 'Banned for Fake DV/HDR Layer'
-'name': 'Flights'
-'pattern': '(?<=^|[\s.-])Flights\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: Flights
+pattern: \b(Flights)\b
+description: Banned for Fake DV/HDR Layer
+tags:
+- Release Group
+- TRaSH
+tests: []

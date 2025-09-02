@@ -1,7 +1,8 @@
-'description': ''
-'name': '7.1 Surround'
-'pattern': '7\.1'
-'tags':
-- 'Audio'
-- 'Channel'
-'tests': []
+name: 7.1 Surround
+pattern: '[^0-9][7-8][ .][0-1]\b'
+description: ''
+tags:
+- Audio
+- Channel
+- TRaSH
+tests: []

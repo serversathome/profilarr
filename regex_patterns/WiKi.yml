@@ -1,7 +1,7 @@
-'description': 'Banned for Upscale'
-'name': 'WiKi'
-'pattern': '(?<=^|[\s.-])WiKi\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: WiKi
+pattern: (?<=^|[\s.-])WiKi\b
+description: Banned for Upscale
+tags:
+- Release Group
+- Bluray
+tests: []

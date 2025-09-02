@@ -1,7 +1,7 @@
-'description': ''
-'name': 'CiNEPHiLES'
-'pattern': '(?<=^|[\s.-])CiNEPHiLES\b'
-'tags':
-- 'Release Group'
-- 'Remux'
-'tests': []
+name: CiNEPHiLES
+pattern: (?<=^|[\s.-])CiNEPHiLES\b
+description: ''
+tags:
+- Release Group
+- Remux
+tests: []

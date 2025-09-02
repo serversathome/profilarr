@@ -1,7 +1,7 @@
-'description': ''
-'name': 'iON'
-'pattern': '(?<=^|[\s.-])iON\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: iON
+pattern: (?<=^|[\s.-])iON\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

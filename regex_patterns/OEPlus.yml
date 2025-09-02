@@ -1,7 +1,7 @@
-'description': 'Banned for Automated Encodes'
-'name': 'OEPlus'
-'pattern': '(?<=^|[\s.-])OEPlus\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: OEPlus
+pattern: (?<=^|[\s.-])OEPlus\b
+description: Banned for Automated Encodes
+tags:
+- Release Group
+- Banned
+tests: []

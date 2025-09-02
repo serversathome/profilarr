@@ -1,7 +1,7 @@
-'description': ''
-'name': 'YAWNiX'
-'pattern': '(?<=^|[\s.-])YAWNiX\b'
-'tags':
-- 'Release Group'
-- 'HEVC'
-'tests': []
+name: YAWNiX
+pattern: (?<=^|[\s.-])YAWNiX\b
+description: ''
+tags:
+- Release Group
+- HEVC
+tests: []

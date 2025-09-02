@@ -1,7 +1,7 @@
-'description': ''
-'name': 'ADE'
-'pattern': '(?<=^|[\s.-])ADE\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: ADE
+pattern: (?<=^|[\s.-])ADE\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

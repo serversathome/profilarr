@@ -1,7 +1,7 @@
-'description': ''
-'name': 'SMAHAWUG'
-'pattern': '(?<=^|[\s.-])SMAHAWUG\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: SMAHAWUG
+pattern: (?<=^|[\s.-])SMAHAWUG\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

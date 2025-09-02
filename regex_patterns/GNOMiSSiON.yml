@@ -1,7 +1,7 @@
-'description': ''
-'name': 'GNOMiSSiON'
-'pattern': '(?<=^|[\s.-])GNOMiSSiON\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: GNOMiSSiON
+pattern: (?<=^|[\s.-])GNOMiSSiON\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

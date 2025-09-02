@@ -1,7 +1,7 @@
-'description': ''
-'name': 'MainFrame'
-'pattern': '(?<=^|[\s.-])MainFrame\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: MainFrame
+pattern: (?<=^|[\s.-])MainFrame\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

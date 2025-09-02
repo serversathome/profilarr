@@ -1,7 +1,7 @@
-'description': 'Matches "LAZY" when preceded by whitespace, a hyphen or dot'
-'name': 'LAZY'
-'pattern': '(?<=^|[\s.-])LAZY\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: LAZY
+pattern: (?<=^|[\s.-])LAZY\b
+description: Matches "LAZY" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- WEB-DL
+tests: []

@@ -1,7 +1,7 @@
-'description': ''
-'name': 'LSt'
-'pattern': '(?<=^|[\s.-])LSt\b'
-'tags':
-- 'Release Group'
-- 'HEVC'
-'tests': []
+name: LSt
+pattern: (?<=^|[\s.-])LSt\b
+description: ''
+tags:
+- Release Group
+- HEVC
+tests: []

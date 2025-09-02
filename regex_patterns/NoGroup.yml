@@ -1,7 +1,7 @@
-'description': ''
-'name': 'NoGroup'
-'pattern': '(?<=^|[\s.-])NoGr(ou)?p\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: NoGroup
+pattern: NoGr(ou)?p
+description: ''
+tags:
+- Release Group
+- Banned
+tests: []

@@ -1,5 +1,5 @@
 name: Anime Tier 7
-pattern: (?<=^|[\s.\-\[])(A-L|ANiHLS|CBM|DHD|DragsterPS|HAiKU|Hark0N|iAHD|inid4c|KS|KiyoshiStar|MCR|NPC|RedBlade|RH|SEV|STRiFE|TENEIGHTY|WaLMaRT)\b
+pattern: (?i)(?:^|[^A-Za-z0-9])(?:A-L|ANiHLS|CBM|DHD|DragsterPS|HAiKU|Hark0N|iAHD|inid4c|KS|KiyoshiStar|MCR|NPC|RedBlade|RH|SEV|STRiFE|TENEIGHTY|WaLMaRT)(?:[^A-Za-z0-9]|$)
 description: TRaSH Guides Anime Tier 07 (P2P/Scene)
 tags:
 - Anime

@@ -1,8 +1,8 @@
-'description': ''
-'name': 'HANDJOB'
-'pattern': '(?<=^|[\s.-])HANDJOB\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-- 'DVD'
-'tests': []
+name: HANDJOB
+pattern: (?<=^|[\s.-])HANDJOB\b
+description: ''
+tags:
+- Release Group
+- Bluray
+- DVD
+tests: []

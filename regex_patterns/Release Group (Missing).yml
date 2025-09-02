@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Release Group (Missing)'
-'pattern': '.'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: Release Group (Missing)
+pattern: .
+description: ''
+tags:
+- Release Group
+- Banned
+tests: []

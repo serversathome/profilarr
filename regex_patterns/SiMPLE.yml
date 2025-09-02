@@ -1,7 +1,7 @@
-'description': ''
-'name': 'SiMPLE'
-'pattern': '(?<=^|[\s.-])SiMPLE\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: SiMPLE
+pattern: (?<=^|[\s.-])SiMPLE\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

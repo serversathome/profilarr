@@ -1,7 +1,7 @@
-'description': ''
-'name': 'hdalx'
-'pattern': '(?<=^|[\s.-])hdalx\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: hdalx
+pattern: (?<=^|[\s.-])hdalx\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

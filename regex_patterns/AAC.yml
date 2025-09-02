@@ -1,6 +1,8 @@
-'description': ''
-'name': 'AAC'
-'pattern': '\bAAC(\b|\d)'
-'tags':
-- 'Audio'
-'tests': []
+name: AAC
+pattern: \bAAC(\b|\d)
+description: ''
+tags:
+- Audio
+- Codec
+- TRaSH
+tests: []

@@ -1,7 +1,7 @@
-'description': ''
-'name': 'W4NK3R'
-'pattern': '(?<=^|[\s.-])W4NK3R\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: W4NK3R
+pattern: (?<=^|[\s.-])W4NK3R\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

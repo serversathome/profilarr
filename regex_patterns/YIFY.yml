@@ -1,7 +1,7 @@
-'description': 'Matches "YIFY" when preceded by whitespace, a hyphen or dot'
-'name': 'YIFY'
-'pattern': '(?<=^|[\s.-])YIFY\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: YIFY
+pattern: (?<=^|[\s.-])YIFY\b
+description: Matches "YIFY" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- Bluray
+tests: []

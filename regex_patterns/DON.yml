@@ -1,7 +1,7 @@
-'description': ''
-'name': 'DON'
-'pattern': '(?<=^|[\s.-])DON\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: DON
+pattern: (?<=^|[\s.-])DON\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

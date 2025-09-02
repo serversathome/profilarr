@@ -1,5 +1,5 @@
 name: Anime Tier 2
-pattern: (?<=^|[\s.\-\[])(0x539|Alt|ARC|Arid|aro|Baws|BKC|Brrrrrrr|Chotab|Crow|CsS|CUNNY|Cunnysseur|D-Z0N3|Dae|Datte13|DemiHuman|Drag|FLFL|hydes|iKaos|JySzE|LostYears|Lulu|Matsya|MC|McBalls|Metal|Moxie|MTBB|Not-Vodes|Noyr|NSDAB|Okay-Subs|pog42|pyroneko|RAI|Reza|Shimatta|Smoke|Spirale|Thighs|UDF|Yuki)\b
+pattern: (?i)(?:^|[^A-Za-z0-9])(?:0x539|Alt|ARC|Arid|aro|Baws|BKC|Brrrrrrr|Chotab|Crow|CsS|CUNNY|Cunnysseur|D-Z0N3|Dae|Datte13|DemiHuman|Drag|FLFL|hydes|iKaos|JySzE|LostYears|Lulu|Matsya|MC|McBalls|Metal|Moxie|MTBB|Not-Vodes|Noyr|NSDAB|Okay-Subs|pog42|pyroneko|RAI|Reza|Shimatta|Smoke|Spirale|Thighs|UDF|Yuki)(?:[^A-Za-z0-9]|$)
 description: TRaSH Guides Anime Tier 02 (SeaDex Muxers)
 tags:
 - Anime

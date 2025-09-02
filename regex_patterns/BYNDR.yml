@@ -1,7 +1,7 @@
-'description': ''
-'name': 'BYNDR'
-'pattern': '(?<=^|[\s.-])BYNDR\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: BYNDR
+pattern: (?<=^|[\s.-])BYNDR\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

@@ -1,7 +1,7 @@
-'description': 'Banned for Retagging'
-'name': 'BOLS'
-'pattern': '(?<=^|[\s.-])BOLS\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: BOLS
+pattern: (?<=^|[\s.-])BOLS\b
+description: Banned for Retagging
+tags:
+- Release Group
+- Banned
+tests: []

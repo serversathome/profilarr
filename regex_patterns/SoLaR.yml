@@ -1,7 +1,7 @@
-'description': ''
-'name': 'SoLaR'
-'pattern': '(?<=^|[\s.-])SoLaR\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: SoLaR
+pattern: (?<=^|[\s.-])SoLaR\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

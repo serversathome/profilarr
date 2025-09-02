@@ -1,7 +1,7 @@
-'description': ''
-'name': 'PP'
-'pattern': '(?<=^|[\s.-])PP\b'
-'tags':
-- 'Release Group'
-- 'Remux'
-'tests': []
+name: PP
+pattern: (?<=^|[\s.-])PP\b
+description: ''
+tags:
+- Release Group
+- Remux
+tests: []

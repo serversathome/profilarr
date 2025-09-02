@@ -1,7 +1,7 @@
-'description': ''
-'name': 'CHD'
-'pattern': '(?<=^|[\s.-])CHD\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: CHD
+pattern: (?<=^|[\s.-])CHD\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

@@ -1,6 +1,8 @@
-'description': ''
-'name': 'DTS-HD HRA'
-'pattern': 'dts[-. ]?(hd[. ]?)?(hra?|hi\b)'
-'tags':
-- 'Audio'
-'tests': []
+name: DTS-HD HRA
+pattern: dts[-. ]?(es|(hd[. ]?)?(hr|hi))
+description: ''
+tags:
+- Audio
+- Codec
+- TRaSH
+tests: []

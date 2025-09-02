@@ -1,7 +1,7 @@
-'description': 'Matches "GNOME" when preceded by whitespace, a hyphen or dot'
-'name': 'GNOME'
-'pattern': '(?<=^|[\s.-])GNOME\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: GNOME
+pattern: (?<=^|[\s.-])GNOME\b
+description: Matches "GNOME" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- WEB-DL
+tests: []

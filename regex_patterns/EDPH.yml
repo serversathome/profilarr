@@ -1,7 +1,7 @@
-'description': ''
-'name': 'EDPH'
-'pattern': '(?<=^|[\s.-])EDPH\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: EDPH
+pattern: (?<=^|[\s.-])EDPH\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

@@ -1,6 +1,6 @@
-'description': 'Matches "PHOENiX" when preceded by whitespace, a hyphen or dot'
-'name': 'PHOENiX'
-'pattern': '(?<=^|[\s.-])PHOENiX\b'
-'tags':
-- 'Release Group'
-'tests': []
+name: PHOENiX
+pattern: (?<=^|[\s.-])PHOENiX\b
+description: Matches "PHOENiX" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+tests: []

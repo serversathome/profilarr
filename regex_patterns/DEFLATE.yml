@@ -1,7 +1,7 @@
-'description': ''
-'name': 'DEFLATE'
-'pattern': '(?<=^|[\s.-])DEFLATE\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: DEFLATE
+pattern: (?<=^|[\s.-])DEFLATE\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []

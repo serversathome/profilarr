@@ -1,7 +1,7 @@
-'description': ''
-'name': 'cXcY'
-'pattern': '(?<=^|[\s.-])cXcY\b'
-'tags':
-- 'Release Group'
-- 'Bluray'
-'tests': []
+name: cXcY
+pattern: (?<=^|[\s.-])cXcY\b
+description: ''
+tags:
+- Release Group
+- Bluray
+tests: []
