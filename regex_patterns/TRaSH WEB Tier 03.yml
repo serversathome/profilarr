@@ -1,0 +1,7 @@
+name: TRaSH WEB Tier 03
+pattern: ^(GNOMiSSiON|NINJACENTRAL|NPMS|QOQ|ROCCaT|SiGMA|SLiGNOME|SwAgLaNdEr)$
+description: ''
+tags:
+- TRaSH
+- Release Group Tier
+tests: []
