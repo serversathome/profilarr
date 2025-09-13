@@ -161,6 +161,8 @@ custom_formats:
   score: -999999
 - name: x265 (Efficient)
   score: -999999
+- name: Xvid
+  score: -999999
 custom_formats_radarr:
 - name: 1080p Bluray HEVC Tier 1
   score: 220000
