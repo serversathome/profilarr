@@ -1,5 +1,5 @@
 name: DTS
-pattern: \bDTS(\b|\d)
+pattern: DTS[ .]?[1-9]
 description: ''
 tags:
 - Audio

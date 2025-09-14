@@ -1,0 +1,7 @@
+name: Dictionarry WEB Tier 01
+pattern: ^(FLUX|NTb)$
+description: ''
+tags:
+- Release Group Tier
+- Dictionarry
+tests: []

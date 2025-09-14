@@ -1,5 +1,5 @@
 name: DTS-HD MA
-pattern: (?i)\bDTS[-_. ]?HD[-_. ]?MA\b
+pattern: \b(dts[-_. ]?(ma|hd([-_. ]?ma)?|xll))(\b|\d)
 description: ''
 tags:
 - Audio

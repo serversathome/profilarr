@@ -1,0 +1,7 @@
+name: Dictionarry WEB Tier 02
+pattern: ^(BYNDR|CMRG|HHWEB|HONE|Kitsune|playWEB|TEPES)$
+description: ''
+tags:
+- Release Group Tier
+- Dictionarry
+tests: []

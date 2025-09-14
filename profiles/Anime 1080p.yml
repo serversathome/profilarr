@@ -98,7 +98,11 @@ custom_formats:
 - name: AV1
   score: -10000
 custom_formats_radarr: []
-custom_formats_sonarr: []
+custom_formats_sonarr:
+- name: WEB Tier 04
+  score: 850
+- name: WEB Tier 05
+  score: 800
 qualities:
 - id: 10
   name: Bluray-1080p
