@@ -139,6 +139,8 @@ custom_formats:
   score: -999999
 - name: Banned Groups (Title)
   score: -999999
+- name: Banned Scene
+  score: -999999
 - name: Banned WEBRip (Efficient)
   score: -999999
 - name: Dolby Vision (Without Fallback)
@@ -158,6 +160,8 @@ custom_formats:
 - name: VVC
   score: -999999
 - name: x265 (Efficient)
+  score: -999999
+- name: Xvid
   score: -999999
 custom_formats_radarr:
 - name: 1080p Bluray HEVC Tier 1
