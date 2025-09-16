@@ -1,4 +1,4 @@
-name: Sync with upstream
+name: Dictionarry Sync
 
 on:
   schedule:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # we need full history for merging
+          fetch-depth: 0 # full history so merge works
 
       - name: Configure Git
         run: |
@@ -25,10 +25,13 @@ jobs:
           git remote add upstream https://github.com/Dictionarry-Hub/database.git
           git fetch upstream
 
-      - name: Merge upstream into main
+      - name: Merge upstream stable into main
         run: |
           git checkout main
-          git merge upstream/main --no-edit || true
+          git merge upstream/stable --no-edit || {
+            echo "Merge failed due to conflicts. Please resolve manually.";
+            exit 1;
+          }
 
       - name: Push changes
         run: |
