@@ -1,9 +1,9 @@
-name: Dictionarry Sync
+name: Auto Sync with upstream
 
 on:
   schedule:
-    - cron: "0 2 * * *" # runs daily at 2am UTC
-  workflow_dispatch: # allow manual trigger
+    - cron: "0 2 * * *" # daily at 2 AM UTC
+  workflow_dispatch:
 
 jobs:
   sync:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # full history so merge works
+          fetch-depth: 0
 
       - name: Configure Git
         run: |
@@ -23,16 +23,11 @@ jobs:
       - name: Add upstream remote
         run: |
           git remote add upstream https://github.com/Dictionarry-Hub/database.git
-          git fetch upstream
+          git fetch upstream stable
 
-      - name: Merge upstream stable into main
+      - name: Merge upstream/stable into main
         run: |
           git checkout main
-          git merge upstream/stable --no-edit || {
-            echo "Merge failed due to conflicts. Please resolve manually.";
-            exit 1;
-          }
-
-      - name: Push changes
-        run: |
+          # Always prefer upstream changes on conflict
+          git merge upstream/stable -X theirs --no-edit || true
           git push origin main
