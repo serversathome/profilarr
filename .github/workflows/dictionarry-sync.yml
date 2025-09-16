@@ -28,6 +28,5 @@ jobs:
       - name: Merge upstream/stable into main
         run: |
           git checkout main
-          # Always prefer upstream changes on conflict
-          git merge upstream/stable -X theirs --no-edit || true
+          git merge upstream/stable --allow-unrelated-histories -X theirs --no-edit || true
           git push origin main
