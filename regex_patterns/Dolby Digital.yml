@@ -1,10 +1,8 @@
 name: Dolby Digital
-pattern: \bDD[^a-z+]|(?<!e-)\b(ac-?3)\b
+pattern: \bDD[^a-z+]|(?<!e)ac3
 description: ''
 tags:
 - Audio
-- Codec
-- TRaSH
 tests:
 - expected: true
   id: 1

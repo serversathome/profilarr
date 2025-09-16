@@ -1,7 +1,7 @@
-'description': ''
-'name': 'CoalGirls'
-'pattern': '(?<=^|[\s.-])CoalGirls\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: CoalGirls
+pattern: (?<=^|[\s.-])CoalGirls\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

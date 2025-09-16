@@ -1,6 +1,7 @@
 name: HONE
-pattern: ^(HONE)$
+pattern: (?<=^|[\s.-])HONE\b
 description: ''
 tags:
 - Release Group
+- WEB-DL
 tests: []

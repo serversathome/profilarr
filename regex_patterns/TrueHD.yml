@@ -1,8 +1,7 @@
 name: TrueHD
-pattern: True[ .-]?HD
+pattern: True[ .-]?HD[ .-]?
 description: ''
 tags:
 - Audio
-- Codec
-- TRaSH
+- Lossless
 tests: []

@@ -1,5 +1,5 @@
 name: SWTYBLZ
-pattern: \b(SWTYBLZ)\b
+pattern: (?<=^|[\s.-])SWTYBLZ\b
 description: ''
 tags:
 - Release Group

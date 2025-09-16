@@ -1,6 +1,6 @@
-'description': ''
-'name': 'MALUS'
-'pattern': '(?<=^|[\s.-])MALUS\b'
-'tags':
-- 'Release Group'
-'tests': []
+name: MALUS
+pattern: (?<=^|[\s.-])MALUS\b
+description: ''
+tags:
+- Release Group
+tests: []

@@ -1,7 +1,7 @@
-'description': ''
-'name': 'LazyRemux'
-'pattern': '(?<=^|[\s.-])LazyRemux\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: LazyRemux
+pattern: (?<=^|[\s.-])LazyRemux\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

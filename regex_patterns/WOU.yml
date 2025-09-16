@@ -1,7 +1,7 @@
-'description': ''
-'name': 'WOU'
-'pattern': '(?<=^|[\s.-])WOU\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: WOU
+pattern: (?<=^|[\s.-])WOU\b
+description: ''
+tags:
+- Release Group
+- Banned
+tests: []

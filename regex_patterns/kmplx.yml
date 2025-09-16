@@ -1,7 +1,7 @@
-'description': ''
-'name': 'kmplx'
-'pattern': '(?<=^|[\s.-])kmplx\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: kmplx
+pattern: (?<=^|[\s.-])kmplx\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

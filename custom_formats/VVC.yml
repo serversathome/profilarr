@@ -1,12 +1,12 @@
-'conditions':
-- 'name': 'VVC'
-  'negate': false
-  'pattern': 'VVC'
-  'required': true
-  'type': 'release_title'
-'description': 'Matches the ''VVC'' Regex Pattern'
-'name': 'VVC'
-'tags':
-- 'Codec'
-- 'Bleeding Edge'
-'tests': []
+name: VVC
+description: Matches the 'VVC' Regex Pattern
+tags:
+- Codec
+- Bleeding Edge
+conditions:
+- name: VVC
+  negate: false
+  pattern: VVC
+  required: true
+  type: release_title
+tests: []

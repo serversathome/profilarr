@@ -1,7 +1,7 @@
-'description': ''
-'name': 'deanzel'
-'pattern': '(?<=^|[\s.-])deanzel\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: deanzel
+pattern: (?<=^|[\s.-])deanzel\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

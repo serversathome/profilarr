@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Commie'
-'pattern': '(?<=^|[\s.-])Commie\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Commie
+pattern: (?<=^|[\s.-])Commie\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

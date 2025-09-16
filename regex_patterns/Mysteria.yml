@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Mysteria'
-'pattern': '(?<=^|[\s.-])Mysteria\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Mysteria
+pattern: (?<=^|[\s.-])Mysteria\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

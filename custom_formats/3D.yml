@@ -1,12 +1,12 @@
-'conditions':
-- 'name': '3D'
-  'negate': false
-  'pattern': '3D'
-  'required': true
-  'type': 'release_title'
-'description': 'Matches the ''3D'' Regex Pattern'
-'name': '3D'
-'tags':
-- 'Banned'
-- 'Enhancement'
-'tests': []
+name: 3D
+description: Matches the '3D' Regex Pattern
+tags:
+- Banned
+- Enhancement
+conditions:
+- name: 3D
+  negate: false
+  pattern: 3D
+  required: true
+  type: release_title
+tests: []

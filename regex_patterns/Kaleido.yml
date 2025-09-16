@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Kaleido'
-'pattern': '(?<=^|[\s.-])Kaleido\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Kaleido
+pattern: (?<=^|[\s.-])Kaleido\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

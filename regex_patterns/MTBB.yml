@@ -1,7 +1,7 @@
-'description': ''
-'name': 'MTBB'
-'pattern': '(?<=^|[\s.-])MTBB\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: MTBB
+pattern: (?<=^|[\s.-])MTBB\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

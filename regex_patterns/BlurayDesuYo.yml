@@ -1,7 +1,7 @@
-'description': ''
-'name': 'BlurayDesuYo'
-'pattern': '(?<=^|[\s.-])BlurayDesuYo\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: BlurayDesuYo
+pattern: (?<=^|[\s.-])BlurayDesuYo\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

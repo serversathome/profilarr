@@ -1,7 +1,7 @@
-'description': ''
-'name': '9volt'
-'pattern': '(?<=^|[\s.-])9volt\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: 9volt
+pattern: (?<=^|[\s.-])9volt\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

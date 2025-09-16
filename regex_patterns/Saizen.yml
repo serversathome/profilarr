@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Saizen'
-'pattern': '(?<=^|[\s.-])Saizen\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Saizen
+pattern: (?<=^|[\s.-])Saizen\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

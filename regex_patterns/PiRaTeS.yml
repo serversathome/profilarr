@@ -1,7 +1,7 @@
-'description': 'Banned for Mislabeling WEB-DLs as WEBRips'
-'name': 'PiRaTeS'
-'pattern': '(?<=^|[\s.-])PiRaTeS\b'
-'tags':
-- 'Release Group'
-- 'Banned'
-'tests': []
+name: PiRaTeS
+pattern: (?<=^|[\s.-])PiRaTeS\b
+description: Banned for Mislabeling WEB-DLs as WEBRips
+tags:
+- Release Group
+- Banned
+tests: []

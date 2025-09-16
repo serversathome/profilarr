@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Netaro'
-'pattern': '(?<=^|[\s.-])Netaro\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Netaro
+pattern: (?<=^|[\s.-])Netaro\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

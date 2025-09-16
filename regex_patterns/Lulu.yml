@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Lulu'
-'pattern': '(?<=^|[\s.-])Lulu\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Lulu
+pattern: (?<=^|[\s.-])Lulu\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

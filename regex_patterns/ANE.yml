@@ -1,7 +1,7 @@
-'description': ''
-'name': 'ANE'
-'pattern': '(?<=^|[\s.-])ANE\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: ANE
+pattern: (?<=^|[\s.-])ANE\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

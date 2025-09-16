@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Bunny-Apocalypse'
-'pattern': '(?<=^|[\s.-])Bunny-Apocalypse\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Bunny-Apocalypse
+pattern: (?<=^|[\s.-])Bunny-Apocalypse\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

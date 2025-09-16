@@ -1,22 +1,22 @@
-'conditions':
-- 'name': 'CRiT Regex'
-  'negate': false
-  'pattern': 'Criterion Channel'
-  'required': true
-  'type': 'release_title'
-- 'name': 'WEB-DL'
-  'negate': false
-  'required': false
-  'source': 'web_dl'
-  'type': 'source'
-- 'name': 'WEBRip'
-  'negate': false
-  'required': false
-  'source': 'webrip'
-  'type': 'source'
-'description': 'Matches ''Criterion Channel'' WEB-DLs. Negates any encodes.'
-'name': 'CRIT'
-'tags':
-- 'Streaming Service'
-- 'WEB-DL'
-'tests': []
+name: CRIT
+description: Matches 'Criterion Channel' WEB-DLs. Negates any encodes.
+tags:
+- Streaming Service
+- WEB-DL
+conditions:
+- name: CRiT Regex
+  negate: false
+  pattern: Criterion Channel
+  required: true
+  type: release_title
+- name: WEB-DL
+  negate: false
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  type: source
+  required: false
+  negate: false
+  source: webrip
+tests: []

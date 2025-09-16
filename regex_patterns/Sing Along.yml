@@ -5,7 +5,6 @@ description: 'Matches "Sing Along" releases when `Sing Along` is preceded by a y
   - Ensures that `Sing Along` is not matched in the movie title'
 tags:
 - Edition
-- TRaSH
 tests:
 - expected: true
   id: 1

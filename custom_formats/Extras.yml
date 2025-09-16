@@ -1,12 +1,12 @@
-'conditions':
-- 'name': 'Extras'
-  'negate': false
-  'pattern': 'Extras'
-  'required': true
-  'type': 'release_title'
-'description': 'Matches the ''Extras'' Regex Pattern'
-'name': 'Extras'
-'tags':
-- 'Banned'
-- 'Enhancement'
-'tests': []
+name: Extras
+description: Matches the 'Extras' Regex Pattern
+tags:
+- Banned
+- Enhancement
+conditions:
+- name: Extras
+  negate: false
+  pattern: Extras
+  required: true
+  type: release_title
+tests: []

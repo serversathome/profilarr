@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Quetzal'
-'pattern': '(?<=^|[\s.-])Quetzal\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Quetzal
+pattern: (?<=^|[\s.-])Quetzal\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

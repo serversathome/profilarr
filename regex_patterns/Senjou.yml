@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Senjou'
-'pattern': '(?<=^|[\s.-])Senjou\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Senjou
+pattern: (?<=^|[\s.-])Senjou\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

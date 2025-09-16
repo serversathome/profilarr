@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Arid'
-'pattern': '(?<=^|[\s.-])Arid\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Arid
+pattern: (?<=^|[\s.-])Arid\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

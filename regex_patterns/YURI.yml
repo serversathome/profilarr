@@ -1,7 +1,7 @@
-'description': ''
-'name': 'YURI'
-'pattern': '(?<=^|[\s.-])YURI\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: YURI
+pattern: (?<=^|[\s.-])YURI\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

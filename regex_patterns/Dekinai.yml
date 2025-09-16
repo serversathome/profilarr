@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Dekinai'
-'pattern': '(?<=^|[\s.-])Dekinai\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Dekinai
+pattern: (?<=^|[\s.-])Dekinai\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

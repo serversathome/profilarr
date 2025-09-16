@@ -1,11 +1,11 @@
-'conditions':
-- 'name': 'BRDISK'
-  'negate': false
-  'qualityModifier': 'brdisk'
-  'required': true
-  'type': 'quality_modifier'
-'description': 'Matches Full Discs using a Radarr Quality Match'
-'name': 'Full Disc (Quality Match)'
-'tags':
-- 'Storage'
-'tests': []
+name: Full Disc (Quality Match)
+description: Matches Full Discs using a Radarr Quality Match
+tags:
+- Storage
+conditions:
+- name: BRDISK
+  negate: false
+  qualityModifier: brdisk
+  required: true
+  type: quality_modifier
+tests: []

@@ -1,16 +1,16 @@
-'conditions':
-- 'name': 'x265'
-  'negate': false
-  'pattern': 'x265'
-  'required': true
-  'type': 'release_title'
-- 'name': 'Not 2160p'
-  'negate': true
-  'required': true
-  'resolution': '2160p'
-  'type': 'resolution'
-'description': 'Matches ''x265'' regex pattern.'
-'name': 'x265'
-'tags':
-- 'Codec'
-'tests': []
+name: x265
+description: Matches 'x265' regex pattern.
+tags:
+- Codec
+conditions:
+- name: x265
+  negate: false
+  pattern: x265
+  required: true
+  type: release_title
+- name: Not 2160p
+  type: resolution
+  required: true
+  negate: true
+  resolution: 2160p
+tests: []

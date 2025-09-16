@@ -1,11 +1,26 @@
-'conditions':
-- 'name': 'Xvid'
-  'negate': false
-  'pattern': 'Xvid'
-  'required': true
-  'type': 'release_title'
-'description': 'Matches ''Xvid'' regex pattern.'
-'name': 'Xvid'
-'tags':
-- 'Codec'
-'tests': []
+name: Xvid
+description: Matches Xvid Regex
+tags:
+- Codec
+conditions:
+- name: Xvid
+  negate: false
+  pattern: Xvid
+  required: true
+  type: release_title
+- name: 2160p
+  negate: false
+  required: false
+  resolution: 2160p
+  type: resolution
+- name: 1080p
+  negate: false
+  required: false
+  resolution: 1080p
+  type: resolution
+- name: 720p
+  negate: false
+  required: false
+  resolution: 720p
+  type: resolution
+tests: []

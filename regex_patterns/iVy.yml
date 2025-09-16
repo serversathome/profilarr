@@ -3,5 +3,5 @@ pattern: (?<=^|[\s.-])iVy\b
 description: ''
 tags:
 - Release Group
-- Banned
+- WEB-DL
 tests: []

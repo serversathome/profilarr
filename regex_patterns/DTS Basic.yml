@@ -1,6 +1,6 @@
-'description': ''
-'name': 'DTS Basic'
-'pattern': 'DTS[ .]?[1-9]'
-'tags':
-- 'Audio'
-'tests': []
+name: DTS Basic
+pattern: DTS[ .]?[1-9]
+description: ''
+tags:
+- Audio
+tests: []

@@ -1,7 +1,7 @@
-'description': ''
-'name': 'sam'
-'pattern': '(?<=^|[\s.-])sam\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: sam
+pattern: (?<=^|[\s.-])sam\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

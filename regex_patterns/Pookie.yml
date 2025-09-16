@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Pookie'
-'pattern': '(?<=^|[\s.-])Pookie\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Pookie
+pattern: (?<=^|[\s.-])Pookie\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

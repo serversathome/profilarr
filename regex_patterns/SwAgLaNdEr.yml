@@ -1,7 +1,7 @@
-'description': ''
-'name': 'SwAgLaNdEr'
-'pattern': '(?<=^|[\s.-])SwAgLaNdEr\b'
-'tags':
-- 'Release Group'
-- 'WEB-DL'
-'tests': []
+name: SwAgLaNdEr
+pattern: (?<=^|[\s.-])SwAgLaNdEr\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []

@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Final8'
-'pattern': '(?<=^|[\s.-])Final8\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Final8
+pattern: (?<=^|[\s.-])Final8\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

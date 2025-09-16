@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Rasetsu'
-'pattern': '(?<=^|[\s.-])Rasetsu\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Rasetsu
+pattern: (?<=^|[\s.-])Rasetsu\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

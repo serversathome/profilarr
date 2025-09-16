@@ -1,7 +1,7 @@
-'description': ''
-'name': 'pog42'
-'pattern': '(?<=^|[\s.-])pog42\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: pog42
+pattern: (?<=^|[\s.-])pog42\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

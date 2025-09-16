@@ -1,8 +1,6 @@
 name: DTS
-pattern: DTS[ .]?[1-9]
+pattern: \bDTS(\b|\d)
 description: ''
 tags:
 - Audio
-- Codec
-- TRaSH
 tests: []

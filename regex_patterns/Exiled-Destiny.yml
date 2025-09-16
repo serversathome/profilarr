@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Exiled-Destiny'
-'pattern': '(?<=^|[\s.-])Exiled-Destiny\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Exiled-Destiny
+pattern: (?<=^|[\s.-])Exiled-Destiny\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

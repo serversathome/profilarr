@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Zurako'
-'pattern': '(?<=^|[\s.-])Zurako\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Zurako
+pattern: (?<=^|[\s.-])Zurako\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

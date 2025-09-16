@@ -1,37 +1,37 @@
-'conditions':
-- 'name': 'HDR'
-  'negate': false
-  'pattern': 'HDR'
-  'required': true
-  'type': 'release_title'
-- 'name': 'Not SDR'
-  'negate': true
-  'pattern': 'SDR'
-  'required': true
-  'type': 'release_title'
-- 'name': 'Not PQ'
-  'negate': true
-  'pattern': 'PQ'
-  'required': true
-  'type': 'release_title'
-- 'name': 'Not HLG'
-  'negate': true
-  'pattern': 'HLG'
-  'required': true
-  'type': 'release_title'
-- 'name': 'Not HDR10'
-  'negate': true
-  'pattern': 'HDR10'
-  'required': true
-  'type': 'release_title'
-- 'name': 'Not HDR10+'
-  'negate': true
-  'pattern': 'HDR10+'
-  'required': true
-  'type': 'release_title'
-'description': 'Matches the ''HDR'' Regex Pattern'
-'name': 'HDR'
-'tags':
-- 'Colour Grade'
-- 'HDR'
-'tests': []
+name: HDR
+description: Matches the 'HDR' Regex Pattern
+tags:
+- Colour Grade
+- HDR
+conditions:
+- name: HDR
+  negate: false
+  pattern: HDR
+  required: true
+  type: release_title
+- name: Not SDR
+  type: release_title
+  required: true
+  negate: true
+  pattern: SDR
+- name: Not PQ
+  type: release_title
+  required: true
+  negate: true
+  pattern: PQ
+- name: Not HLG
+  type: release_title
+  required: true
+  negate: true
+  pattern: HLG
+- name: Not HDR10
+  negate: true
+  pattern: HDR10
+  required: true
+  type: release_title
+- name: Not HDR10+
+  negate: true
+  pattern: HDR10+
+  required: true
+  type: release_title
+tests: []

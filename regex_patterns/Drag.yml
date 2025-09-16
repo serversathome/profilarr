@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Drag'
-'pattern': '(?<=^|[\s.-])Drag\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Drag
+pattern: (?<=^|[\s.-])Drag\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

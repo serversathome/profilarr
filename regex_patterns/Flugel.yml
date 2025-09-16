@@ -1,7 +1,7 @@
-'description': ''
-'name': 'Flugel'
-'pattern': '(?<=^|[\s.-])Flugel\b'
-'tags':
-- 'Release Group'
-- 'Anime'
-'tests': []
+name: Flugel
+pattern: (?<=^|[\s.-])Flugel\b
+description: ''
+tags:
+- Release Group
+- Anime
+tests: []

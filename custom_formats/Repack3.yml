@@ -1,11 +1,6 @@
-'conditions':
-- 'name': 'Repack3'
-  'negate': false
-  'pattern': 'Repack3'
-  'required': true
-  'type': 'release_title'
-'description': 'Release groups use specific terms to indicate when they''re fixing
-  issues in releases:
+name: Repack3
+description: 'Release groups use specific terms to indicate when they''re fixing issues
+  in releases:
 
   In Scene releases, groups can only occupy one release slot, which leads to two different
   terms:
@@ -23,8 +18,13 @@
 
 
   This custom format will catch level 3 fixes'
-'name': 'Repack3'
-'tags':
-- 'Flag'
-- 'Repack'
-'tests': []
+tags:
+- Flag
+- Repack
+conditions:
+- name: Repack3
+  negate: false
+  pattern: Repack3
+  required: true
+  type: release_title
+tests: []

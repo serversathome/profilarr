@@ -3,6 +3,4 @@ pattern: \bFLAC(\b|\d)
 description: ''
 tags:
 - Audio
-- Codec
-- TRaSH
 tests: []
