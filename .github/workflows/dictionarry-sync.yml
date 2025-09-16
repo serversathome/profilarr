@@ -2,17 +2,18 @@ name: Auto Sync with upstream
 
 on:
   schedule:
-    - cron: "0 2 * * *" # daily at 2 AM UTC
+    - cron: "0 2 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
-  workflows: write
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-
+    permissions:
+      workflows: write   # <-- add it here
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
