@@ -12,7 +12,6 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
-      workflows: write   # <-- add it here
       contents: write
     steps:
       - name: Checkout repository
