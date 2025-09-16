@@ -1,0 +1,35 @@
+name: Sync with upstream
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # runs daily at 2am UTC
+  workflow_dispatch: # allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # we need full history for merging
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/Dictionarry-Hub/database.git
+          git fetch upstream
+
+      - name: Merge upstream into main
+        run: |
+          git checkout main
+          git merge upstream/main --no-edit || true
+
+      - name: Push changes
+        run: |
+          git push origin main
