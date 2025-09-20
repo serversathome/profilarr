@@ -216,6 +216,11 @@ conditions:
   pattern: SOP
   required: false
   type: release_group
+- name: SPHD
+  type: release_group
+  required: false
+  negate: false
+  pattern: SPHD
 - name: TBB
   negate: false
   pattern: TBB
