@@ -26,6 +26,11 @@ conditions:
   pattern: AJP69
   required: false
   type: release_group
+- name: ATELiER
+  type: release_group
+  required: false
+  negate: false
+  pattern: ATELiER
 - name: BV
   negate: false
   pattern: BV
@@ -217,10 +222,10 @@ conditions:
   required: false
   type: release_group
 - name: SPHD
-  type: release_group
-  required: false
   negate: false
   pattern: SPHD
+  required: false
+  type: release_group
 - name: TBB
   negate: false
   pattern: TBB
