@@ -1,4 +1,4 @@
-name: Sync Anime 1080p Custom Formats
+name: Anime Sync
 
 on:
   schedule:
