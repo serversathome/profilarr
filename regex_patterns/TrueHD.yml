@@ -3,5 +3,5 @@ pattern: True[ .-]?HD[ .-]?
 description: ''
 tags:
 - Audio
-- Lossless
+- Codec
 tests: []

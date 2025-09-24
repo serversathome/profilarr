@@ -1,7 +1,7 @@
 name: BLASPHEMY
-pattern: (?<=^|[\s.-])BLASPHEMY\b
+pattern: ^(BLASPHEMY)$
 description: ''
 tags:
 - Release Group
-- WEB-DL
+- Banned
 tests: []

@@ -1,11 +1,9 @@
 name: HDR10+
-pattern: \bHDR10.?(\+|P(lus)?\b)
-description: This regex matches `HDR10` when followed by either a plus sign `+`, `P`,
-  or `Plus`
+pattern: \b(HDR10(?=[+]|P(lus)?))
+description: ''
 tags:
-- Enhancement
-- Colour Grade
 - HDR
+- TRaSH
 tests:
 - expected: false
   id: 1

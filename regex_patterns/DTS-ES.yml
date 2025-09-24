@@ -3,4 +3,5 @@ pattern: dts[-. ]?es\b
 description: ''
 tags:
 - Audio
+- Codec
 tests: []

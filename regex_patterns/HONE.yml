@@ -3,5 +3,4 @@ pattern: (?<=^|[\s.-])HONE\b
 description: ''
 tags:
 - Release Group
-- WEB-DL
 tests: []

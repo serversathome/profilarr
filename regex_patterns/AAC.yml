@@ -3,4 +3,5 @@ pattern: \bAAC(\b|\d)
 description: ''
 tags:
 - Audio
+- Codec
 tests: []

@@ -1,9 +1,10 @@
 name: AV1
-pattern: \b(AV1)\b
+pattern: \bAV1\b
 description: AV1, or AOMedia Video 1, is a video coding format that compresses video
   files and streams while maintaining high quality.
 tags:
 - Codec
+- TRaSH
 tests:
 - expected: true
   id: 1

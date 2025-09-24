@@ -3,6 +3,7 @@ pattern: (?<!^|{)\b(extended|uncut|directors|special|unrated|uncensored|cut|vers
 description: 'Matches any type of non theatrical edition. '
 tags:
 - Edition
+- TRaSH
 tests:
 - expected: true
   id: 1

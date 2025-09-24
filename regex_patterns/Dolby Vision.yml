@@ -1,19 +1,14 @@
 name: Dolby Vision
-pattern: \b(dv(?![ .](HLG|SDR))|dovi|dolby[ .]?vision)\b
-description: Dolby Vision is a high dynamic range (HDR) video format that uses dynamic
-  metadata to deliver enhanced brightness, contrast, and color on a scene-by-scene
-  or frame-by-frame basis, providing superior picture quality. This pattern excludes
-  matches where Dolby Vision is associated with SDR (Standard Dynamic Range) or HLG
-  (Hybrid Log-Gamma), ensuring it focuses on Dolby Vision-specific terms.
+pattern: \b(dv|dovi|dolby[ .]?v(ision)?)\b
+description: ''
 tags:
-- Enhancement
-- Colour Grade
 - HDR
+- Dolby Vision
 tests:
 - expected: true
   id: 1
   input: MovieName.2023.4K.DV.HDR.mkv
-  lastRun: '2025-06-18T11:54:00.452053'
+  lastRun: '2025-08-28T13:17:27.149616'
   matchSpan:
     end: 20
     start: 18
@@ -25,7 +20,7 @@ tests:
 - expected: true
   id: 2
   input: MovieName.2023.4K.Dovi.HDR10+.mkv
-  lastRun: '2025-06-18T11:54:00.452053'
+  lastRun: '2025-08-28T13:17:27.149616'
   matchSpan:
     end: 22
     start: 18
@@ -37,31 +32,31 @@ tests:
 - expected: true
   id: 3
   input: MovieName.2023.4K.Dolby.Vision.HDR.mkv
-  lastRun: '2025-06-18T11:54:00.452053'
+  lastRun: '2025-08-28T13:17:27.149616'
   matchSpan:
     end: 30
     start: 18
   matchedContent: Dolby.Vision
   matchedGroups:
   - Dolby.Vision
-  - null
+  - ision
   passes: true
 - expected: true
   id: 4
   input: MovieName.2023.4K.DolbyVision.HDR10+.mkv
-  lastRun: '2025-06-18T11:54:00.452053'
+  lastRun: '2025-08-28T13:17:27.149616'
   matchSpan:
     end: 29
     start: 18
   matchedContent: DolbyVision
   matchedGroups:
   - DolbyVision
-  - null
+  - ision
   passes: true
 - expected: true
   id: 5
   input: MovieName.1080p.DV.mkv
-  lastRun: '2025-06-18T11:54:00.452053'
+  lastRun: '2025-08-28T13:17:27.149616'
   matchSpan:
     end: 18
     start: 16
@@ -73,48 +68,56 @@ tests:
 - expected: true
   id: 6
   input: MovieName.4K.Dolby Vision.IMAX.mkv
-  lastRun: '2025-06-18T11:54:00.452053'
+  lastRun: '2025-08-28T13:17:27.149616'
   matchSpan:
     end: 25
     start: 13
   matchedContent: Dolby Vision
   matchedGroups:
   - Dolby Vision
-  - null
+  - ision
   passes: true
 - expected: false
   id: 7
   input: MovieName.2023.4K.DV.HLG.mkv
-  lastRun: '2025-06-18T11:54:00.452053'
-  matchSpan: null
-  matchedContent: null
-  matchedGroups: []
-  passes: true
+  lastRun: '2025-08-28T13:17:27.149616'
+  matchSpan:
+    end: 20
+    start: 18
+  matchedContent: DV
+  matchedGroups:
+  - DV
+  - null
+  passes: false
 - expected: false
   id: 8
   input: MovieName.2023.4K.DV.SDR.mkv
-  lastRun: '2025-06-18T11:54:00.452053'
-  matchSpan: null
-  matchedContent: null
-  matchedGroups: []
-  passes: true
+  lastRun: '2025-08-28T13:17:27.149616'
+  matchSpan:
+    end: 20
+    start: 18
+  matchedContent: DV
+  matchedGroups:
+  - DV
+  - null
+  passes: false
 - expected: true
   id: 9
   input: MovieName.4K.DV.SDR.Dovi.mkv
-  lastRun: '2025-06-18T11:54:00.452053'
+  lastRun: '2025-08-28T13:17:27.149616'
   matchSpan:
-    end: 24
-    start: 20
-  matchedContent: Dovi
+    end: 15
+    start: 13
+  matchedContent: DV
   matchedGroups:
-  - Dovi
+  - DV
   - null
   passes: true
 - expected: true
   id: 10
   input: Killers of the Flower Moon (2023) {tmdb-466420} [iT][WEBDL-2160p][DV HDR10Plus][EAC3
     Atmos 5.1][h265]-FLUX.mkv
-  lastRun: '2025-06-18T11:54:00.452053'
+  lastRun: '2025-08-28T13:17:27.149616'
   matchSpan:
     end: 68
     start: 66
