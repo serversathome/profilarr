@@ -9,6 +9,11 @@ conditions:
   required: true
   source: webrip
   type: source
+- name: ATELiER
+  negate: true
+  pattern: ATELiER
+  required: true
+  type: release_group
 - name: AJP69
   negate: true
   pattern: AJP69
@@ -194,6 +199,11 @@ conditions:
   pattern: KASHMiR
   required: true
   type: release_group
+- name: Kitsune
+  negate: true
+  pattern: Kitsune
+  required: true
+  type: release_group
 - name: LEGi0N
   negate: true
   pattern: LEGi0N
@@ -274,6 +284,11 @@ conditions:
   pattern: PTer
   required: true
   type: release_group
+- name: REBORN
+  negate: true
+  pattern: REBORN
+  required: true
+  type: release_group
 - name: rightSIZE
   negate: true
   pattern: rightSIZE
@@ -304,11 +319,21 @@ conditions:
   pattern: SiMPLE
   required: true
   type: release_group
+- name: SoLaR
+  negate: true
+  pattern: SoLaR
+  required: true
+  type: release_group
 - name: SOP
   negate: true
   pattern: SOP
   required: true
   type: release_group
+- name: SPHD
+  type: release_group
+  required: true
+  negate: true
+  pattern: SPHD
 - name: TayTo
   negate: true
   pattern: TayTo
