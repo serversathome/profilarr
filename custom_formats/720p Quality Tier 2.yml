@@ -12,10 +12,10 @@ conditions:
   resolution: 720p
   type: resolution
 - name: Bluray
-  type: source
-  required: false
   negate: false
+  required: false
   source: bluray
+  type: source
 - name: WEBRip
   negate: false
   required: false
@@ -61,6 +61,11 @@ conditions:
   pattern: VietHD
   required: false
   type: release_group
+- name: ZoroSenpai
+  type: release_group
+  required: false
+  negate: false
+  pattern: ZoroSenpai
 - name: ZQ
   negate: false
   pattern: ZQ
