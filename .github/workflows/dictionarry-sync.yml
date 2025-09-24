@@ -1,5 +1,4 @@
-name: Auto Sync with upstream
-
+name: Dictionarry Sync
 on:
   schedule:
     - cron: "0 2 * * *"
