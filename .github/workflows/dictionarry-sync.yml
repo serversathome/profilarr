@@ -1,0 +1,45 @@
+name: Auto Sync with upstream
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/Dictionarry-Hub/database.git
+          git fetch upstream stable
+
+      - name: Merge upstream/stable into main
+        run: |
+          git checkout main
+          git merge upstream/stable --allow-unrelated-histories -X theirs --no-edit || true
+          # Restore your own workflow files after merge
+          git checkout HEAD -- .github/workflows
+
+      - name: Commit merge (if needed)
+        run: |
+          git add -A
+          git commit -m "Sync with upstream (preserve workflows)" || true
+
+      - name: Push changes
+        run: git push origin main
