@@ -17,10 +17,10 @@ conditions:
   required: true
   type: release_title
 - name: Bluray
-  type: source
-  required: false
   negate: false
+  required: false
   source: bluray
+  type: source
 - name: WEBRip
   negate: false
   required: false
