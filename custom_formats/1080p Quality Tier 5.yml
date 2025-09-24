@@ -121,6 +121,11 @@ conditions:
   pattern: hdalx
   required: false
   type: release_group
+- name: HDC
+  type: release_group
+  required: false
+  negate: false
+  pattern: HDC
 - name: iON
   negate: false
   pattern: iON
@@ -202,10 +207,10 @@ conditions:
   required: false
   type: release_group
 - name: REBORN
-  type: release_group
-  required: false
   negate: false
   pattern: REBORN
+  required: false
+  type: release_group
 - name: rightSIZE
   negate: false
   pattern: rightSIZE
@@ -232,10 +237,10 @@ conditions:
   required: false
   type: release_group
 - name: SoLaR
-  type: release_group
-  required: false
   negate: false
   pattern: SoLaR
+  required: false
+  type: release_group
 - name: SOP
   negate: false
   pattern: SOP

@@ -164,6 +164,11 @@ conditions:
   pattern: hdalx
   required: true
   type: release_group
+- name: HDC
+  type: release_group
+  required: true
+  negate: true
+  pattern: HDC
 - name: HDMaNiAcS
   negate: true
   pattern: HDMaNiAcS
@@ -335,10 +340,10 @@ conditions:
   required: true
   type: release_group
 - name: SPHD
-  type: release_group
-  required: true
   negate: true
   pattern: SPHD
+  required: true
+  type: release_group
 - name: TayTo
   negate: true
   pattern: TayTo
