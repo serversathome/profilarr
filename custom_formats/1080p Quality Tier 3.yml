@@ -56,21 +56,11 @@ conditions:
   pattern: iFT
   required: false
   type: release_group
-- name: REBORN
-  negate: false
-  pattern: REBORN
-  required: false
-  type: release_group
 - name: SA89
   negate: false
   pattern: SA89
   required: false
   type: release_group
-- name: SoLaR
-  type: release_group
-  required: false
-  negate: false
-  pattern: SoLaR
 - name: WMING
   negate: false
   pattern: WMING
