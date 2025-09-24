@@ -12,14 +12,19 @@ conditions:
   resolution: 1080p
   type: resolution
 - name: Not Remux
-  type: release_title
-  required: true
   negate: true
   pattern: Remux
-- name: Not WEB-DL
-  negate: true
   required: true
-  source: web_dl
+  type: release_title
+- name: Bluray
+  type: source
+  required: false
+  negate: false
+  source: bluray
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
   type: source
 - name: c0kE
   negate: false
