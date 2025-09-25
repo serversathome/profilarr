@@ -261,6 +261,11 @@ conditions:
   pattern: TDD
   required: false
   type: release_group
+- name: TnP
+  type: release_group
+  required: false
+  negate: false
+  pattern: TnP
 - name: VLAD
   negate: false
   pattern: VLAD
@@ -272,10 +277,10 @@ conditions:
   required: false
   type: release_group
 - name: WiKi
-  type: release_group
-  required: false
   negate: false
   pattern: WiKi
+  required: false
+  type: release_group
 - name: xander
   negate: false
   pattern: xander

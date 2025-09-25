@@ -354,6 +354,11 @@ conditions:
   pattern: TDD
   required: true
   type: release_group
+- name: TnP
+  type: release_group
+  required: true
+  negate: true
+  pattern: TnP
 - name: VietHD
   negate: true
   pattern: VietHD
@@ -370,10 +375,10 @@ conditions:
   required: true
   type: release_group
 - name: WiKi
-  type: release_group
-  required: true
   negate: true
   pattern: WiKi
+  required: true
+  type: release_group
 - name: WMING
   negate: true
   pattern: WMING
