@@ -160,10 +160,10 @@ conditions:
   required: true
   type: release_group
 - name: HDC
-  type: release_group
-  required: true
   negate: true
   pattern: HDC
+  required: true
+  type: release_group
 - name: HDMaNiAcS
   negate: true
   pattern: HDMaNiAcS
@@ -369,6 +369,11 @@ conditions:
   pattern: W4NK3R
   required: true
   type: release_group
+- name: WiKi
+  type: release_group
+  required: true
+  negate: true
+  pattern: WiKi
 - name: WMING
   negate: true
   pattern: WMING

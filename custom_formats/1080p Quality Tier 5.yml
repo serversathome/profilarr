@@ -122,10 +122,10 @@ conditions:
   required: false
   type: release_group
 - name: HDC
-  type: release_group
-  required: false
   negate: false
   pattern: HDC
+  required: false
+  type: release_group
 - name: iON
   negate: false
   pattern: iON
@@ -271,6 +271,11 @@ conditions:
   pattern: W4NK3R
   required: false
   type: release_group
+- name: WiKi
+  type: release_group
+  required: false
+  negate: false
+  pattern: WiKi
 - name: xander
   negate: false
   pattern: xander
