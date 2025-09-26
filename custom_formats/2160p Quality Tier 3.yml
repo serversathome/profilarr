@@ -16,18 +16,13 @@ conditions:
   source: bluray
   type: source
 - name: BV
-  type: release_group
-  required: false
   negate: false
   pattern: BV
+  required: false
+  type: release_group
 - name: Chotab
   negate: false
   pattern: Chotab
-  required: false
-  type: release_group
-- name: Kitsune
-  negate: false
-  pattern: Kitsune
   required: false
   type: release_group
 - name: REBORN
