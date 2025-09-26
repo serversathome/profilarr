@@ -261,11 +261,16 @@ conditions:
   pattern: TDD
   required: false
   type: release_group
-- name: TnP
+- name: TeamSyndicate
   type: release_group
   required: false
   negate: false
+  pattern: TeamSyndicate
+- name: TnP
+  negate: false
   pattern: TnP
+  required: false
+  type: release_group
 - name: VLAD
   negate: false
   pattern: VLAD
