@@ -21,10 +21,15 @@ conditions:
   required: false
   type: release_group
 - name: DEPTH
+  negate: false
+  pattern: DEPTH
+  required: false
+  type: release_group
+- name: HiDt
   type: release_group
   required: false
   negate: false
-  pattern: DEPTH
+  pattern: HiDt
 - name: iFT
   negate: false
   pattern: iFT
