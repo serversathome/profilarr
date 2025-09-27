@@ -1,0 +1,17 @@
+name: Banned UHD Bluray
+description: Matches UHD Bluray releases that are not from a quality tier
+tags:
+- Banned
+- Release Group
+conditions:
+- name: UHD Bluray
+  type: release_title
+  required: true
+  negate: false
+  pattern: UHD Bluray
+- name: Release Groups
+  negate: true
+  pattern: UHD Bluray Release Groups
+  required: true
+  type: release_group
+tests: []
