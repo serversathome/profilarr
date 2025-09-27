@@ -132,8 +132,6 @@ custom_formats:
   score: -999999
 - name: Banned Remux
   score: -999999
-- name: Banned Scene
-  score: -999999
 - name: Dolby Vision
   score: -999999
 - name: Dolby Vision (Without Fallback)
