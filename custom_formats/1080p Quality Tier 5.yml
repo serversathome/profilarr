@@ -121,6 +121,11 @@ conditions:
   pattern: hdalx
   required: false
   type: release_group
+- name: HQMUX
+  type: release_group
+  required: false
+  negate: false
+  pattern: HQMUX
 - name: HDC
   negate: false
   pattern: HDC
@@ -262,10 +267,10 @@ conditions:
   required: false
   type: release_group
 - name: TeamSyndicate
-  type: release_group
-  required: false
   negate: false
   pattern: TeamSyndicate
+  required: false
+  type: release_group
 - name: TnP
   negate: false
   pattern: TnP
