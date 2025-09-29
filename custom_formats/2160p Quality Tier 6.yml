@@ -175,11 +175,6 @@ conditions:
   pattern: TOMBCRUISE
   required: false
   type: release_group
-- name: Tron
-  negate: false
-  pattern: Tron
-  required: false
-  type: release_group
 - name: ULTRAHDCLUB
   negate: false
   pattern: ULTRAHDCLUB
