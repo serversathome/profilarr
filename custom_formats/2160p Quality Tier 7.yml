@@ -60,11 +60,6 @@ conditions:
   pattern: PTH
   required: false
   type: release_group
-- name: THREESOME
-  negate: false
-  pattern: THREESOME
-  required: false
-  type: release_group
 - name: UHDCLUBREMUX
   negate: false
   pattern: UHDCLUBREMUX
