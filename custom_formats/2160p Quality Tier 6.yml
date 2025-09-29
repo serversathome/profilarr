@@ -120,11 +120,6 @@ conditions:
   pattern: KAN3D2M
   required: false
   type: release_group
-- name: KNiVES
-  negate: false
-  pattern: KNiVES
-  required: false
-  type: release_group
 - name: LAZARUS
   negate: false
   pattern: LAZARUS
