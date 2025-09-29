@@ -145,11 +145,6 @@ conditions:
   pattern: ReQuEsT
   required: false
   type: release_group
-- name: SMAHAWUG
-  negate: false
-  pattern: SMAHAWUG
-  required: false
-  type: release_group
 - name: SPECTACLE
   negate: false
   pattern: SPECTACLE
