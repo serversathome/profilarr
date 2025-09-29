@@ -50,11 +50,6 @@ conditions:
   pattern: Hares
   required: false
   type: release_group
-- name: LittleBakas
-  negate: false
-  pattern: LittleBakas
-  required: false
-  type: release_group
 - name: Lucifer
   negate: false
   pattern: Lucifer
