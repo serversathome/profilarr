@@ -55,11 +55,6 @@ conditions:
   pattern: Lucifer
   required: false
   type: release_group
-- name: micius
-  negate: false
-  pattern: micius
-  required: false
-  type: release_group
 - name: PTH
   negate: false
   pattern: PTH
