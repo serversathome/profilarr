@@ -35,6 +35,11 @@ conditions:
   pattern: SoLaR
   required: false
   type: release_group
+- name: TnP
+  type: release_group
+  required: false
+  negate: false
+  pattern: TnP
 - name: W4NK3R
   negate: false
   pattern: W4NK3R
