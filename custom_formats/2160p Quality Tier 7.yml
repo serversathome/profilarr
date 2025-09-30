@@ -20,11 +20,6 @@ conditions:
   pattern: BeiTai
   required: false
   type: release_group
-- name: CHAOS
-  negate: false
-  pattern: CHAOS
-  required: false
-  type: release_group
 - name: dkore
   negate: false
   pattern: dkore
