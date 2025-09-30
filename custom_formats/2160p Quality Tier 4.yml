@@ -15,16 +15,6 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: b0mbardiers
-  negate: false
-  pattern: b0mbardiers
-  required: false
-  type: release_group
-- name: DEPTH
-  negate: false
-  pattern: DEPTH
-  required: false
-  type: release_group
 - name: HiDt
   negate: false
   pattern: HiDt
@@ -36,10 +26,10 @@ conditions:
   required: false
   type: release_group
 - name: Kitsune
-  type: release_group
-  required: false
   negate: false
   pattern: Kitsune
+  required: false
+  type: release_group
 - name: NCmt
   negate: false
   pattern: NCmt

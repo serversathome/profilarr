@@ -20,6 +20,11 @@ conditions:
   pattern: 4KDVS
   required: false
   type: release_group
+- name: b0mbardiers
+  type: release_group
+  required: false
+  negate: false
+  pattern: b0mbardiers
 - name: BlzT
   negate: false
   pattern: BlzT
@@ -35,6 +40,11 @@ conditions:
   pattern: DEFLATE
   required: false
   type: release_group
+- name: DEPTH
+  type: release_group
+  required: false
+  negate: false
+  pattern: DEPTH
 - name: JustWatch
   negate: false
   pattern: JustWatch
