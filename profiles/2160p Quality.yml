@@ -39,8 +39,6 @@ custom_formats:
   score: 280000
 - name: 2160p Quality Tier 6
   score: 261000
-- name: 2160p Quality Tier 7
-  score: 260000
 - name: UHD Bluray
   score: 240000
 - name: UHD Bluray (Missing)

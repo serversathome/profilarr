@@ -30,6 +30,11 @@ conditions:
   pattern: beAst
   required: false
   type: release_group
+- name: BeiTai
+  type: release_group
+  required: false
+  negate: false
+  pattern: BeiTai
 - name: CHD
   negate: false
   pattern: CHD
@@ -40,11 +45,21 @@ conditions:
   pattern: CMCT
   required: false
   type: release_group
+- name: dkore
+  type: release_group
+  required: false
+  negate: false
+  pattern: dkore
 - name: EMERALD
   negate: false
   pattern: EMERALD
   required: false
   type: release_group
+- name: FLAME
+  type: release_group
+  required: false
+  negate: false
+  pattern: FLAME
 - name: GUHZER
   negate: false
   pattern: GUHZER
