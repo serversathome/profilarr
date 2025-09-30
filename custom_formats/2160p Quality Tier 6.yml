@@ -70,11 +70,6 @@ conditions:
   pattern: IAMABLE
   required: false
   type: release_group
-- name: iCandy
-  negate: false
-  pattern: iCandy
-  required: false
-  type: release_group
 - name: iNVANDRAREN
   negate: false
   pattern: iNVANDRAREN
