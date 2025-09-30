@@ -120,11 +120,6 @@ conditions:
   pattern: ULTRAHDCLUB
   required: false
   type: release_group
-- name: VALiS
-  negate: false
-  pattern: VALiS
-  required: false
-  type: release_group
 - name: Whiterhino
   negate: false
   pattern: WhiteRhino
