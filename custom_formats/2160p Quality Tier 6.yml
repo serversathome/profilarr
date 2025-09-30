@@ -50,11 +50,6 @@ conditions:
   pattern: GUHZER
   required: false
   type: release_group
-- name: HD77
-  negate: false
-  pattern: HD77
-  required: false
-  type: release_group
 - name: HDChina
   negate: false
   pattern: HDChina
