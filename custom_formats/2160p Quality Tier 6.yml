@@ -115,11 +115,6 @@ conditions:
   pattern: TERMiNAL
   required: false
   type: release_group
-- name: TOMBCRUISE
-  negate: false
-  pattern: TOMBCRUISE
-  required: false
-  type: release_group
 - name: ULTRAHDCLUB
   negate: false
   pattern: ULTRAHDCLUB
