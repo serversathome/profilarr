@@ -25,11 +25,6 @@ conditions:
   pattern: b0mbardiers
   required: false
   type: release_group
-- name: BlzT
-  negate: false
-  pattern: BlzT
-  required: false
-  type: release_group
 - name: DEFLATE
   negate: false
   pattern: DEFLATE
