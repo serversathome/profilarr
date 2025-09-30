@@ -5,10 +5,15 @@ tags:
 - Release Group
 conditions:
 - name: UHD Bluray
-  type: release_title
-  required: true
   negate: false
   pattern: UHD Bluray
+  required: true
+  type: release_title
+- name: Not 2160p
+  type: resolution
+  required: true
+  negate: true
+  resolution: 2160p
 - name: Release Groups
   negate: true
   pattern: UHD Bluray Release Groups
