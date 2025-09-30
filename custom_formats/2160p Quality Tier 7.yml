@@ -20,11 +20,6 @@ conditions:
   pattern: BeiTai
   required: false
   type: release_group
-- name: BLUEBIRD
-  negate: false
-  pattern: BLUEBIRD
-  required: false
-  type: release_group
 - name: BOREDOR
   negate: false
   pattern: BOREDOR
