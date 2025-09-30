@@ -15,11 +15,6 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: Absinth
-  negate: false
-  pattern: Absinth
-  required: false
-  type: release_group
 - name: ADE
   negate: false
   pattern: ADE
