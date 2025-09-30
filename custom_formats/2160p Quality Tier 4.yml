@@ -26,10 +26,15 @@ conditions:
   required: false
   type: release_group
 - name: EDPH
+  negate: false
+  pattern: EDPH
+  required: false
+  type: release_group
+- name: ESiR
   type: release_group
   required: false
   negate: false
-  pattern: EDPH
+  pattern: ESiR
 - name: HiDt
   negate: false
   pattern: HiDt

@@ -45,11 +45,6 @@ conditions:
   pattern: EMERALD
   required: false
   type: release_group
-- name: ESiR
-  negate: false
-  pattern: ESiR
-  required: false
-  type: release_group
 - name: GUHZER
   negate: false
   pattern: GUHZER
