@@ -60,11 +60,6 @@ conditions:
   pattern: HDmux
   required: false
   type: release_group
-- name: HUNTJR
-  negate: false
-  pattern: HUNTJR
-  required: false
-  type: release_group
 - name: HypStu
   negate: false
   pattern: HypStu
