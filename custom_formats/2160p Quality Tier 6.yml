@@ -105,11 +105,6 @@ conditions:
   pattern: STRiKES
   required: false
   type: release_group
-- name: SWAGGERUHD
-  negate: false
-  pattern: SWAGGERUHD
-  required: false
-  type: release_group
 - name: SWTYBLZ
   negate: false
   pattern: SWTYBLZ
