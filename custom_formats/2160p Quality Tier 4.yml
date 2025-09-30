@@ -16,15 +16,20 @@ conditions:
   source: bluray
   type: source
 - name: BlzT
-  type: release_group
-  required: false
   negate: false
   pattern: BlzT
+  required: false
+  type: release_group
 - name: BSTD
   negate: false
   pattern: BSTD
   required: false
   type: release_group
+- name: EDPH
+  type: release_group
+  required: false
+  negate: false
+  pattern: EDPH
 - name: HiDt
   negate: false
   pattern: HiDt

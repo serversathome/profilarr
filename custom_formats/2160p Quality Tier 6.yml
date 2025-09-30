@@ -40,11 +40,6 @@ conditions:
   pattern: CMCT
   required: false
   type: release_group
-- name: EDPH
-  negate: false
-  pattern: EDPH
-  required: false
-  type: release_group
 - name: EMERALD
   negate: false
   pattern: EMERALD
