@@ -15,6 +15,11 @@ conditions:
   required: true
   source: bluray
   type: source
+- name: Not Remux
+  type: release_title
+  required: true
+  negate: true
+  pattern: Remux
 - name: BV
   negate: false
   pattern: BV
@@ -36,10 +41,10 @@ conditions:
   required: false
   type: release_group
 - name: TnP
-  type: release_group
-  required: false
   negate: false
   pattern: TnP
+  required: false
+  type: release_group
 - name: W4NK3R
   negate: false
   pattern: W4NK3R

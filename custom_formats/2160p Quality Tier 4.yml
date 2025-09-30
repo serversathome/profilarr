@@ -15,6 +15,11 @@ conditions:
   required: true
   source: bluray
   type: source
+- name: Not Remux
+  type: release_title
+  required: true
+  negate: true
+  pattern: Remux
 - name: BlzT
   negate: false
   pattern: BlzT
@@ -31,10 +36,10 @@ conditions:
   required: false
   type: release_group
 - name: ESiR
-  type: release_group
-  required: false
   negate: false
   pattern: ESiR
+  required: false
+  type: release_group
 - name: HiDt
   negate: false
   pattern: HiDt

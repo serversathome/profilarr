@@ -15,6 +15,11 @@ conditions:
   required: true
   source: bluray
   type: source
+- name: Not Remux
+  type: release_title
+  required: true
+  negate: true
+  pattern: Remux
 - name: ADE
   negate: false
   pattern: ADE
@@ -31,10 +36,10 @@ conditions:
   required: false
   type: release_group
 - name: BeiTai
-  type: release_group
-  required: false
   negate: false
   pattern: BeiTai
+  required: false
+  type: release_group
 - name: CHD
   negate: false
   pattern: CHD
@@ -46,20 +51,20 @@ conditions:
   required: false
   type: release_group
 - name: dkore
-  type: release_group
-  required: false
   negate: false
   pattern: dkore
+  required: false
+  type: release_group
 - name: EMERALD
   negate: false
   pattern: EMERALD
   required: false
   type: release_group
 - name: FLAME
-  type: release_group
-  required: false
   negate: false
   pattern: FLAME
+  required: false
+  type: release_group
 - name: GUHZER
   negate: false
   pattern: GUHZER
