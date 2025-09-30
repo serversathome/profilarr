@@ -15,11 +15,6 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: AAAUHD
-  negate: false
-  pattern: AAAUHD
-  required: false
-  type: release_group
 - name: Absinth
   negate: false
   pattern: Absinth
