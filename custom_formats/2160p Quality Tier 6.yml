@@ -100,11 +100,6 @@ conditions:
   pattern: ReQuEsT
   required: false
   type: release_group
-- name: SPECTACLE
-  negate: false
-  pattern: SPECTACLE
-  required: false
-  type: release_group
 - name: STRiKES
   negate: false
   pattern: STRiKES
