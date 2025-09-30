@@ -16,10 +16,10 @@ conditions:
   source: bluray
   type: source
 - name: Not Remux
-  type: release_title
-  required: true
   negate: true
   pattern: Remux
+  required: true
+  type: release_title
 - name: 4KDVS
   negate: false
   pattern: 4KDVS
@@ -55,4 +55,9 @@ conditions:
   pattern: WATCHABLE
   required: false
   type: release_group
+- name: WiKi
+  type: release_group
+  required: false
+  negate: false
+  pattern: WiKi
 tests: []
