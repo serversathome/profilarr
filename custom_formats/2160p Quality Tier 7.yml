@@ -30,11 +30,6 @@ conditions:
   pattern: FLAME
   required: false
   type: release_group
-- name: Hares
-  negate: false
-  pattern: Hares
-  required: false
-  type: release_group
 - name: Lucifer
   negate: false
   pattern: Lucifer
