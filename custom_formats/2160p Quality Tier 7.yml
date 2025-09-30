@@ -30,9 +30,4 @@ conditions:
   pattern: FLAME
   required: false
   type: release_group
-- name: PTH
-  negate: false
-  pattern: PTH
-  required: false
-  type: release_group
 tests: []
