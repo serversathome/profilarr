@@ -21,18 +21,13 @@ conditions:
   required: false
   type: release_group
 - name: b0mbardiers
-  type: release_group
-  required: false
   negate: false
   pattern: b0mbardiers
+  required: false
+  type: release_group
 - name: BlzT
   negate: false
   pattern: BlzT
-  required: false
-  type: release_group
-- name: BSTD
-  negate: false
-  pattern: BSTD
   required: false
   type: release_group
 - name: DEFLATE
@@ -41,10 +36,10 @@ conditions:
   required: false
   type: release_group
 - name: DEPTH
-  type: release_group
-  required: false
   negate: false
   pattern: DEPTH
+  required: false
+  type: release_group
 - name: JustWatch
   negate: false
   pattern: JustWatch
