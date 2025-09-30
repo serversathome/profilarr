@@ -1,5 +1,5 @@
 name: Dictionarry WEB Tier 02
-pattern: (?<=^|[\s.-])(BYNDR|CMRG|HHWEB|HONE|Kitsune|playWEB|RDNYB|TEPES)\b
+pattern: (?<=^|[\s.-])(BYNDR|CMRG|HHWEB|HONE|Kitsune|playWEB|TEPES)\b
 description: ''
 tags:
 - Release Group Tier
