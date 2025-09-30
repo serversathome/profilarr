@@ -70,11 +70,6 @@ conditions:
   pattern: IAMABLE
   required: false
   type: release_group
-- name: k00kie
-  negate: false
-  pattern: k00kie
-  required: false
-  type: release_group
 - name: KAN3D2M
   negate: false
   pattern: KAN3D2M
