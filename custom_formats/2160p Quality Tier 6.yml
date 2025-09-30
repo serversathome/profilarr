@@ -70,11 +70,6 @@ conditions:
   pattern: IAMABLE
   required: false
   type: release_group
-- name: iNVANDRAREN
-  negate: false
-  pattern: iNVANDRAREN
-  required: false
-  type: release_group
 - name: k00kie
   negate: false
   pattern: k00kie
