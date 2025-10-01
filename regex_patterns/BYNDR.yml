@@ -1,5 +1,5 @@
 name: BYNDR
-pattern: (?<=^|[\s.-])BYNDR\b
+pattern: (?<=^|[\s.-])(BYNDR|RDNYB)\b
 description: ''
 tags:
 - Release Group
