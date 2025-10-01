@@ -4,17 +4,17 @@ tags:
 - Anime
 conditions:
 - name: WEB-DL
-  type: source
-  required: false
   negate: false
+  required: false
   source: web_dl
-- name: WEB
   type: source
-  required: false
+- name: WEB
   negate: false
+  required: false
   source: television
+  type: source
 - name: Subsplease
-  type: release_group
+  type: release_title
   required: false
   negate: false
   pattern: SubsPlease
