@@ -1,0 +1,21 @@
+name: Anime WEB-DL Tier 1
+description: ''
+tags:
+- Anime
+conditions:
+- name: WEB-DL
+  type: source
+  required: false
+  negate: false
+  source: web_dl
+- name: WEB
+  type: source
+  required: false
+  negate: false
+  source: television
+- name: Subsplease
+  type: release_group
+  required: false
+  negate: false
+  pattern: SubsPlease
+tests: []
