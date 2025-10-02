@@ -1,5 +1,5 @@
 name: Anime Bluray Tier 5
-description: ''
+description: Do not use Testing Purposes Only
 tags:
 - Anime
 conditions:
@@ -49,8 +49,8 @@ conditions:
   required: false
   type: release_group
 - name: Zurako
-  type: release_group
-  required: false
   negate: false
   pattern: Zurako
+  required: false
+  type: release_group
 tests: []

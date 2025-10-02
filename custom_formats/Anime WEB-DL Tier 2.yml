@@ -1,5 +1,5 @@
 name: Anime WEB-DL Tier 2
-description: ''
+description: Do not use Testing Purposes Only
 tags:
 - Anime
 conditions:
@@ -19,18 +19,18 @@ conditions:
   required: false
   type: release_title
 - name: HorribleSubs
-  type: release_title
-  required: false
   negate: false
   pattern: HorribleSubs
-- name: Subsplus+
-  type: release_title
   required: false
+  type: release_title
+- name: Subsplus+
   negate: false
   pattern: SubsPlus+
-- name: VARYG
-  type: release_title
   required: false
+  type: release_title
+- name: VARYG
   negate: false
   pattern: VARYG
+  required: false
+  type: release_title
 tests: []

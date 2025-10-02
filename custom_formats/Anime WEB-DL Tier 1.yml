@@ -1,5 +1,5 @@
 name: Anime WEB-DL Tier 1
-description: ''
+description: Do not use Testing Purposes Only
 tags:
 - Anime
 conditions:
@@ -14,8 +14,8 @@ conditions:
   source: television
   type: source
 - name: Subsplease
-  type: release_title
-  required: false
   negate: false
   pattern: SubsPlease
+  required: false
+  type: release_title
 tests: []

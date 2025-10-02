@@ -1,5 +1,5 @@
 name: Anime Bluray Tier 4
-description: ''
+description: Do not use Testing Purposes Only
 tags:
 - Anime
 conditions:
@@ -109,8 +109,8 @@ conditions:
   required: false
   type: release_group
 - name: Tsundere
-  type: release_group
-  required: false
   negate: false
   pattern: Tsundere
+  required: false
+  type: release_group
 tests: []
