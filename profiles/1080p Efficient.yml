@@ -173,6 +173,8 @@ custom_formats_radarr:
   score: 183000
 - name: 1080p Efficient Movie Bluray Tier 2
   score: 182000
+- name: Vialle Bluray
+  score: 182000
 - name: 1080p Efficient Movie Bluray Tier 3
   score: 181000
 - name: 1080p Efficient Movie Bluray Tier 4
@@ -235,6 +237,8 @@ custom_formats_sonarr:
 - name: QxR WEB
   score: 169000
 - name: 1080p Efficient TV WEB Tier 2
+  score: 168000
+- name: Vialle WEB
   score: 168000
 - name: 1080p Efficient TV WEB Tier 3
   score: 167000
