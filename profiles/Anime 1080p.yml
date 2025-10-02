@@ -7,6 +7,9 @@ description: 'Based on the TRaSH Guides Anime Profile, focusing on media that ha
   - You will be preferring Dual Audio media (ie including English along with original
   language).
 
+  - If you''d prefer to always grab Dual Audio releases, change the Dual Audio format
+  score from 101 to 500
+
   - If you prefer only the **original language**, change the language to original
   on this profile.'
 tags:
@@ -22,33 +25,37 @@ custom_formats: []
 custom_formats_radarr: []
 custom_formats_sonarr:
 - name: Anime Tier 1
-  score: 1800
-- name: Anime Tier 2
-  score: 1700
-- name: Anime Tier 3
-  score: 1600
-- name: Anime Tier 4
-  score: 1500
-- name: Anime Tier 5
-  score: 1400
-- name: Anime WEB Tier 1
-  score: 1300
-- name: Anime WEB Tier 2
   score: 1200
-- name: WEB Tier 01
+- name: Anime Tier 2
   score: 1100
-- name: WEB Tier 02
+- name: Anime Tier 3
   score: 1000
-- name: WEB Tier 03
+- name: Anime Tier 4
   score: 900
-- name: WEB Tier 04
+- name: Remux Tier 01 - Sonarr
+  score: 900
+- name: Remux Tier 02 - Sonarr
+  score: 850
+- name: Anime Tier 5
   score: 800
-- name: WEB Tier 05
+- name: Anime WEB Tier 1
   score: 700
+- name: Anime WEB Tier 2
+  score: 600
+- name: WEB Tier 01
+  score: 500
+- name: WEB Tier 02
+  score: 400
+- name: WEB Tier 03
+  score: 300
+- name: WEB Tier 04
+  score: 200
 - name: Anime Dual Audio
   score: 101
 - name: Uncensored
   score: 101
+- name: WEB Tier 05
+  score: 100
 - name: CR
   score: 7
 - name: DSNP
@@ -90,8 +97,14 @@ custom_formats_sonarr:
 - name: AV1
   score: -10000
 qualities:
-- id: 10
-  name: Bluray-1080p
+- id: -5
+  name: Bluray/REMUX 1080p
+  description: ''
+  qualities:
+  - id: 8
+    name: Remux-1080p
+  - id: 10
+    name: Bluray-1080p
 - id: -2
   name: WEB 1080p
   description: ''
@@ -129,7 +142,6 @@ qualities:
 - id: 24
   name: SDTV
 upgrade_until:
-  id: 10
-  name: Bluray-1080p
-  description: 1080p Blu-ray video encoded with lossy compression
+  id: -5
+  name: Bluray/REMUX 1080p
 language: original
