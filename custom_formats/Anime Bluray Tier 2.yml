@@ -49,8 +49,13 @@ conditions:
   required: false
   type: release_group
 - name: YURI
+  negate: false
+  pattern: YURI
+  required: false
+  type: release_group
+- name: ZR
   type: release_group
   required: false
   negate: false
-  pattern: YURI
+  pattern: ZR
 tests: []
