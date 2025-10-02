@@ -19,10 +19,10 @@ conditions:
   required: false
   type: release_group
 - name: MTBB
-  type: release_group
-  required: false
   negate: false
   pattern: MTBB
+  required: false
+  type: release_group
 - name: OZR
   negate: false
   pattern: OZR
@@ -48,9 +48,4 @@ conditions:
   pattern: Vodes
   required: false
   type: release_group
-- name: YURI
-  type: release_group
-  required: false
-  negate: false
-  pattern: YURI
 tests: []
