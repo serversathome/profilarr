@@ -25,44 +25,56 @@ custom_formats: []
 custom_formats_radarr: []
 custom_formats_sonarr:
 - name: Anime Tier 1
-  score: 1200
+  score: 1400
 - name: Anime Tier 2
-  score: 1100
+  score: 1300
 - name: Anime Tier 3
-  score: 1000
+  score: 1200
 - name: Anime Tier 4
-  score: 900
+  score: 1100
 - name: Remux Tier 01 - Sonarr
-  score: 900
-- name: Remux Tier 02 - Sonarr
-  score: 850
+  score: 1050
 - name: Anime Tier 5
+  score: 1000
+- name: Remux Tier 02 - Sonarr
+  score: 1000
+- name: Anime Tier 6
+  score: 900
+- name: Anime Tier 7
   score: 800
-- name: Anime WEB Tier 1
+- name: Anime Tier 8
   score: 700
-- name: Anime WEB Tier 2
+- name: Anime WEB Tier 1
   score: 600
-- name: WEB Tier 01
+- name: Anime WEB Tier 2
   score: 500
-- name: WEB Tier 02
+- name: Anime WEB Tier 3
   score: 400
-- name: WEB Tier 03
+- name: WEB Tier 01
+  score: 350
+- name: Anime WEB Tier 4
   score: 300
+- name: WEB Tier 02
+  score: 300
+- name: WEB Tier 03
+  score: 250
+- name: WEB Tier 05
+  score: 250
+- name: Anime WEB Tier 5
+  score: 200
 - name: WEB Tier 04
   score: 200
 - name: Anime Dual Audio
   score: 101
 - name: Uncensored
   score: 101
-- name: WEB Tier 05
+- name: Anime WEB Tier 6
   score: 100
 - name: CR
   score: 7
 - name: DSNP
   score: 6
 - name: NF
-  score: 5
-- name: WEB-DL
   score: 5
 - name: AMZN
   score: 4
