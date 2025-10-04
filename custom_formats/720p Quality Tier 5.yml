@@ -17,10 +17,15 @@ conditions:
   source: bluray
   type: source
 - name: WEBRip
+  negate: false
+  required: false
+  source: webrip
   type: source
+- name: c0kE
+  type: release_group
   required: false
   negate: false
-  source: webrip
+  pattern: c0kE
 - name: Chotab
   negate: false
   pattern: Chotab
