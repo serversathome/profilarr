@@ -97,10 +97,10 @@ conditions:
   required: false
   type: release_group
 - name: LoRD
-  type: release_group
-  required: false
   negate: false
   pattern: LoRD
+  required: false
+  type: release_group
 - name: MTeam
   negate: false
   pattern: MTeam
@@ -126,6 +126,11 @@ conditions:
   pattern: playHD
   required: false
   type: release_group
+- name: rttr
+  type: release_group
+  required: false
+  negate: false
+  pattern: rttr
 - name: SA89
   negate: false
   pattern: SA89
