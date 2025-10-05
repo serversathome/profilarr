@@ -62,10 +62,15 @@ conditions:
   required: false
   type: release_group
 - name: GS88
+  negate: false
+  pattern: GS88
+  required: false
+  type: release_group
+- name: HANDJOB
   type: release_group
   required: false
   negate: false
-  pattern: GS88
+  pattern: HANDJOB
 - name: HDMaNiAcS
   negate: false
   pattern: HDMaNiAcS
