@@ -27,10 +27,10 @@ conditions:
   required: false
   type: release_group
 - name: BV
-  type: release_group
-  required: false
   negate: false
   pattern: BV
+  required: false
+  type: release_group
 - name: Chotab
   negate: false
   pattern: Chotab
@@ -56,6 +56,11 @@ conditions:
   pattern: ESiR
   required: false
   type: release_group
+- name: FraMeSToR
+  type: release_group
+  required: false
+  negate: false
+  pattern: FraMeSToR
 - name: HDMaNiAcS
   negate: false
   pattern: HDMaNiAcS
