@@ -26,6 +26,11 @@ conditions:
   pattern: Chotab
   required: false
   type: release_group
+- name: de[42]
+  type: release_group
+  required: false
+  negate: false
+  pattern: de[42]
 - name: EDPH
   negate: false
   pattern: EDPH
@@ -97,8 +102,8 @@ conditions:
   required: false
   type: release_group
 - name: WMING
-  type: release_group
-  required: false
   negate: false
   pattern: WMING
+  required: false
+  type: release_group
 tests: []
