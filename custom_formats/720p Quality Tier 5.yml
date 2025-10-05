@@ -47,10 +47,10 @@ conditions:
   required: false
   type: release_group
 - name: HiP
-  type: release_group
-  required: false
   negate: false
   pattern: HiP
+  required: false
+  type: release_group
 - name: iFT
   negate: false
   pattern: iFT
@@ -96,4 +96,9 @@ conditions:
   pattern: SaNcTi
   required: false
   type: release_group
+- name: WMING
+  type: release_group
+  required: false
+  negate: false
+  pattern: WMING
 tests: []
