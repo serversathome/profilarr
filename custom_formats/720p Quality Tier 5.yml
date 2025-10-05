@@ -142,10 +142,15 @@ conditions:
   required: false
   type: release_group
 - name: SoLaR
+  negate: false
+  pattern: SoLaR
+  required: false
+  type: release_group
+- name: SPHD
   type: release_group
   required: false
   negate: false
-  pattern: SoLaR
+  pattern: SPHD
 - name: WMING
   negate: false
   pattern: WMING
