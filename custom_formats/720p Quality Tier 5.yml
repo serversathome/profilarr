@@ -21,16 +21,21 @@ conditions:
   required: false
   source: webrip
   type: source
+- name: ATELiER
+  type: release_group
+  required: false
+  negate: false
+  pattern: ATELiER
 - name: Chotab
   negate: false
   pattern: Chotab
   required: false
   type: release_group
 - name: de[42]
-  type: release_group
-  required: false
   negate: false
   pattern: de[42]
+  required: false
+  type: release_group
 - name: EDPH
   negate: false
   pattern: EDPH
