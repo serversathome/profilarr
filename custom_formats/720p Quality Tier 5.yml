@@ -162,13 +162,18 @@ conditions:
   required: false
   type: release_group
 - name: WiKi
-  type: release_group
-  required: false
   negate: false
   pattern: WiKi
+  required: false
+  type: release_group
 - name: WMING
   negate: false
   pattern: WMING
   required: false
   type: release_group
+- name: ZIMBO
+  type: release_group
+  required: false
+  negate: false
+  pattern: ZIMBO
 tests: []
