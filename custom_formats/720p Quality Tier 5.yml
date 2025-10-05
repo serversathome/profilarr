@@ -22,10 +22,15 @@ conditions:
   source: webrip
   type: source
 - name: ATELiER
+  negate: false
+  pattern: ATELiER
+  required: false
+  type: release_group
+- name: BV
   type: release_group
   required: false
   negate: false
-  pattern: ATELiER
+  pattern: BV
 - name: Chotab
   negate: false
   pattern: Chotab
