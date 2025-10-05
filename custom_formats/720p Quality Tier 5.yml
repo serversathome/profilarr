@@ -46,6 +46,11 @@ conditions:
   pattern: HDMaNiAcS
   required: false
   type: release_group
+- name: HiP
+  type: release_group
+  required: false
+  negate: false
+  pattern: HiP
 - name: iFT
   negate: false
   pattern: iFT
