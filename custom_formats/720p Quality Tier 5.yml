@@ -152,10 +152,15 @@ conditions:
   required: false
   type: release_group
 - name: TnP
+  negate: false
+  pattern: TnP
+  required: false
+  type: release_group
+- name: W4NK3R
   type: release_group
   required: false
   negate: false
-  pattern: TnP
+  pattern: W4NK3R
 - name: WMING
   negate: false
   pattern: WMING
