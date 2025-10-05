@@ -127,10 +127,10 @@ conditions:
   required: false
   type: release_group
 - name: rttr
-  type: release_group
-  required: false
   negate: false
   pattern: rttr
+  required: false
+  type: release_group
 - name: SA89
   negate: false
   pattern: SA89
@@ -141,6 +141,11 @@ conditions:
   pattern: SaNcTi
   required: false
   type: release_group
+- name: SoLaR
+  type: release_group
+  required: false
+  negate: false
+  pattern: SoLaR
 - name: WMING
   negate: false
   pattern: WMING
