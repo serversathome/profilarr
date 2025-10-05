@@ -57,10 +57,15 @@ conditions:
   required: false
   type: release_group
 - name: FraMeSToR
+  negate: false
+  pattern: FraMeSToR
+  required: false
+  type: release_group
+- name: GS88
   type: release_group
   required: false
   negate: false
-  pattern: FraMeSToR
+  pattern: GS88
 - name: HDMaNiAcS
   negate: false
   pattern: HDMaNiAcS
