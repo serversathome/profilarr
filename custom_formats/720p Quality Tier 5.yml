@@ -67,10 +67,10 @@ conditions:
   required: false
   type: release_group
 - name: HANDJOB
-  type: release_group
-  required: false
   negate: false
   pattern: HANDJOB
+  required: false
+  type: release_group
 - name: HDMaNiAcS
   negate: false
   pattern: HDMaNiAcS
@@ -91,6 +91,11 @@ conditions:
   pattern: KASHMiR
   required: false
   type: release_group
+- name: LiNG
+  type: release_group
+  required: false
+  negate: false
+  pattern: LiNG
 - name: MTeam
   negate: false
   pattern: MTeam
