@@ -17,10 +17,10 @@ conditions:
   source: bluray
   type: source
 - name: WEBRip
-  type: source
-  required: false
   negate: false
+  required: false
   source: webrip
+  type: source
 - name: BMF
   negate: false
   pattern: BMF
@@ -46,6 +46,11 @@ conditions:
   pattern: Positive
   required: false
   type: release_group
+- name: rightSIZE
+  type: release_group
+  required: false
+  negate: false
+  pattern: rightSIZE
 - name: TBB
   negate: false
   pattern: TBB
