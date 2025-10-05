@@ -21,6 +21,11 @@ conditions:
   required: false
   source: webrip
   type: source
+- name: c0kE
+  type: release_group
+  required: false
+  negate: false
+  pattern: c0kE
 - name: CRiSC
   negate: false
   pattern: CRiSC
@@ -62,10 +67,10 @@ conditions:
   required: false
   type: release_group
 - name: ZoroSenpai
-  type: release_group
-  required: false
   negate: false
   pattern: ZoroSenpai
+  required: false
+  type: release_group
 - name: ZQ
   negate: false
   pattern: ZQ
