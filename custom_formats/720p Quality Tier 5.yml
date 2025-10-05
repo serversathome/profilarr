@@ -147,10 +147,15 @@ conditions:
   required: false
   type: release_group
 - name: SPHD
+  negate: false
+  pattern: SPHD
+  required: false
+  type: release_group
+- name: TnP
   type: release_group
   required: false
   negate: false
-  pattern: SPHD
+  pattern: TnP
 - name: WMING
   negate: false
   pattern: WMING
