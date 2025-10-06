@@ -1,5 +1,5 @@
 name: Upscaled
-pattern: (?<=\b[12]\d{3}\b).*\b(UPS|Up(s(caled?|UHD)|(Rez)))\b
+pattern: (?<=\b\d{3,4}p\b).*\b(AI[ ._-]?Enhanced|UPS(UHD)?|Upscaled?([ ._-]?UHD)?|UpRez)\b
 description: ''
 tags:
 - Enhancement
