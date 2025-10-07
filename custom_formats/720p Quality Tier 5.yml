@@ -126,6 +126,11 @@ conditions:
   pattern: playHD
   required: false
   type: release_group
+- name: RO
+  type: release_group
+  required: false
+  negate: false
+  pattern: RO
 - name: rttr
   negate: false
   pattern: rttr
@@ -172,8 +177,8 @@ conditions:
   required: false
   type: release_group
 - name: ZIMBO
-  type: release_group
-  required: false
   negate: false
   pattern: ZIMBO
+  required: false
+  type: release_group
 tests: []

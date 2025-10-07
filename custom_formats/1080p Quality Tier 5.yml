@@ -122,10 +122,10 @@ conditions:
   required: false
   type: release_group
 - name: HQMUX
-  type: release_group
-  required: false
   negate: false
   pattern: HQMUX
+  required: false
+  type: release_group
 - name: HDC
   negate: false
   pattern: HDC
@@ -221,6 +221,11 @@ conditions:
   pattern: rightSIZE
   required: false
   type: release_group
+- name: RO
+  type: release_group
+  required: false
+  negate: false
+  pattern: RO
 - name: rttr
   negate: false
   pattern: rttr
