@@ -126,11 +126,16 @@ conditions:
   pattern: playHD
   required: false
   type: release_group
-- name: RO
+- name: RiCO
   type: release_group
   required: false
   negate: false
+  pattern: RiCO
+- name: RO
+  negate: false
   pattern: RO
+  required: false
+  type: release_group
 - name: rttr
   negate: false
   pattern: rttr
