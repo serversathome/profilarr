@@ -17,15 +17,20 @@ conditions:
   source: bluray
   type: source
 - name: WEBRip
-  type: source
-  required: false
   negate: false
+  required: false
   source: webrip
+  type: source
 - name: Dariush
   negate: false
   pattern: Dariush
   required: false
   type: release_group
+- name: decibeL
+  type: release_group
+  required: false
+  negate: false
+  pattern: decibeL
 - name: D-ZON3
   negate: false
   pattern: D-Z0N3
