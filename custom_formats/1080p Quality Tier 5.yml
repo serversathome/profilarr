@@ -217,10 +217,10 @@ conditions:
   required: false
   type: release_group
 - name: RiCO
-  type: release_group
-  required: false
   negate: false
   pattern: RiCO
+  required: false
+  type: release_group
 - name: rightSIZE
   negate: false
   pattern: rightSIZE
@@ -301,6 +301,11 @@ conditions:
   pattern: WiKi
   required: false
   type: release_group
+- name: WiLF
+  type: release_group
+  required: false
+  negate: false
+  pattern: WiLF
 - name: xander
   negate: false
   pattern: xander
