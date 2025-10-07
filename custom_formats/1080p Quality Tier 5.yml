@@ -51,6 +51,11 @@ conditions:
   pattern: CJ
   required: false
   type: release_group
+- name: coffee
+  type: release_group
+  required: false
+  negate: false
+  pattern: coffee
 - name: CRX
   negate: false
   pattern: CRX
@@ -302,10 +307,10 @@ conditions:
   required: false
   type: release_group
 - name: WiLF
-  type: release_group
-  required: false
   negate: false
   pattern: WiLF
+  required: false
+  type: release_group
 - name: xander
   negate: false
   pattern: xander
