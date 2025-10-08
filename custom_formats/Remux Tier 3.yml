@@ -14,6 +14,11 @@ conditions:
   required: true
   source: dvd
   type: source
+- name: ATELiER
+  type: release_group
+  required: false
+  negate: false
+  pattern: ATELiER
 - name: decibeL
   negate: false
   pattern: decibeL
