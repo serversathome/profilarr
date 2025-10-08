@@ -11,6 +11,11 @@ conditions:
   required: true
   resolution: 720p
   type: resolution
+- name: Not Remux
+  type: release_title
+  required: true
+  negate: true
+  pattern: Remux
 - name: Bluray
   negate: false
   required: false
@@ -177,10 +182,10 @@ conditions:
   required: false
   type: release_group
 - name: WiLF
-  type: release_group
-  required: false
   negate: false
   pattern: WiLF
+  required: false
+  type: release_group
 - name: WMING
   negate: false
   pattern: WMING

@@ -11,6 +11,11 @@ conditions:
   required: true
   resolution: 720p
   type: resolution
+- name: Not Remux
+  type: release_title
+  required: true
+  negate: true
+  pattern: Remux
 - name: Bluray
   negate: false
   required: false
@@ -22,10 +27,10 @@ conditions:
   source: webrip
   type: source
 - name: c0kE
-  type: release_group
-  required: false
   negate: false
   pattern: c0kE
+  required: false
+  type: release_group
 - name: CRiSC
   negate: false
   pattern: CRiSC
