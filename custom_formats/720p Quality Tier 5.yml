@@ -12,10 +12,10 @@ conditions:
   resolution: 720p
   type: resolution
 - name: Not Remux
-  type: release_title
-  required: true
   negate: true
   pattern: Remux
+  required: true
+  type: release_title
 - name: Bluray
   negate: false
   required: false
@@ -106,11 +106,6 @@ conditions:
   pattern: LoRD
   required: false
   type: release_group
-- name: MTeam
-  negate: false
-  pattern: MTeam
-  required: false
-  type: release_group
 - name: nmd
   negate: false
   pattern: nmd
@@ -174,11 +169,6 @@ conditions:
 - name: W4NK3R
   negate: false
   pattern: W4NK3R
-  required: false
-  type: release_group
-- name: WiKi
-  negate: false
-  pattern: WiKi
   required: false
   type: release_group
 - name: WiLF
