@@ -61,14 +61,19 @@ conditions:
   pattern: MTeam
   required: false
   type: release_group
+- name: P0W4HD
+  type: release_group
+  required: false
+  negate: false
+  pattern: P0W4HD
 - name: WiKi
   negate: false
   pattern: WiKi
   required: false
   type: release_group
 - name: xander
-  type: release_group
-  required: false
   negate: false
   pattern: xander
+  required: false
+  type: release_group
 tests: []
