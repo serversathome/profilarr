@@ -62,18 +62,13 @@ conditions:
   required: false
   type: release_group
 - name: P0W4HD
-  type: release_group
-  required: false
   negate: false
   pattern: P0W4HD
+  required: false
+  type: release_group
 - name: WiKi
   negate: false
   pattern: WiKi
-  required: false
-  type: release_group
-- name: xander
-  negate: false
-  pattern: xander
   required: false
   type: release_group
 tests: []

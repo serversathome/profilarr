@@ -266,6 +266,11 @@ conditions:
   pattern: WiLF
   required: false
   type: release_group
+- name: xander
+  type: release_group
+  required: false
+  negate: false
+  pattern: xander
 - name: ZIMBO
   negate: false
   pattern: ZIMBO
