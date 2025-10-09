@@ -141,6 +141,11 @@ conditions:
   pattern: luvBB
   required: false
   type: release_group
+- name: NiBuRu
+  type: release_group
+  required: false
+  negate: false
+  pattern: NiBuRu
 - name: nmd
   negate: false
   pattern: nmd
@@ -267,10 +272,10 @@ conditions:
   required: false
   type: release_group
 - name: xander
-  type: release_group
-  required: false
   negate: false
   pattern: xander
+  required: false
+  type: release_group
 - name: ZIMBO
   negate: false
   pattern: ZIMBO
