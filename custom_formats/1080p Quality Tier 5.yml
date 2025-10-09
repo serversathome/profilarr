@@ -52,10 +52,10 @@ conditions:
   required: false
   type: release_group
 - name: coffee
-  type: release_group
-  required: false
   negate: false
   pattern: coffee
+  required: false
+  type: release_group
 - name: CRX
   negate: false
   pattern: CRX
@@ -91,19 +91,9 @@ conditions:
   pattern: EXCiSION
   required: false
   type: release_group
-- name: FilmHD
-  negate: false
-  pattern: FilmHD
-  required: false
-  type: release_group
 - name: FraMeSToR
   negate: false
   pattern: FraMeSToR
-  required: false
-  type: release_group
-- name: FTW-HD
-  negate: false
-  pattern: FTW-HD
   required: false
   type: release_group
 - name: GALAXY
@@ -116,11 +106,6 @@ conditions:
   pattern: GS88
   required: false
   type: release_group
-- name: HANDJOB
-  negate: false
-  pattern: HANDJOB
-  required: false
-  type: release_group
 - name: hdalx
   negate: false
   pattern: hdalx
@@ -131,16 +116,6 @@ conditions:
   pattern: HQMUX
   required: false
   type: release_group
-- name: HDC
-  negate: false
-  pattern: HDC
-  required: false
-  type: release_group
-- name: iON
-  negate: false
-  pattern: iON
-  required: false
-  type: release_group
 - name: KASHMiR
   negate: false
   pattern: KASHMiR
@@ -149,11 +124,6 @@ conditions:
 - name: Kitsune
   negate: false
   pattern: Kitsune
-  required: false
-  type: release_group
-- name: LEGi0N
-  negate: false
-  pattern: LEGi0N
   required: false
   type: release_group
 - name: LiNG
@@ -169,11 +139,6 @@ conditions:
 - name: luvBB
   negate: false
   pattern: luvBB
-  required: false
-  type: release_group
-- name: MTeam
-  negate: false
-  pattern: MTeam
   required: false
   type: release_group
 - name: nmd
@@ -301,19 +266,9 @@ conditions:
   pattern: W4NK3R
   required: false
   type: release_group
-- name: WiKi
-  negate: false
-  pattern: WiKi
-  required: false
-  type: release_group
 - name: WiLF
   negate: false
   pattern: WiLF
-  required: false
-  type: release_group
-- name: xander
-  negate: false
-  pattern: xander
   required: false
   type: release_group
 - name: ZIMBO

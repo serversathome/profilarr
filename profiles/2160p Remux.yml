@@ -56,14 +56,16 @@ custom_formats:
 - name: 720p WEB-DL
   score: 100000
 - name: 1080p Quality Tier 1
-  score: 84000
+  score: 85000
 - name: 1080p Quality Tier 2
-  score: 83000
+  score: 84000
 - name: 1080p Quality Tier 3
-  score: 82000
+  score: 83000
 - name: 1080p Quality Tier 4
-  score: 81000
+  score: 82000
 - name: 1080p Quality Tier 5
+  score: 81000
+- name: 1080p Quality Tier 6
   score: 80000
 - name: 720p Bluray
   score: 80000

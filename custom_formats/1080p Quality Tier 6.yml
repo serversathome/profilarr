@@ -1,0 +1,74 @@
+name: 1080p Quality Tier 6
+description: Matches release groups who fall under 1080p GPPi Tier 6
+tags:
+- GPPi
+- Release Group Tier
+- 1080p
+- Quality
+conditions:
+- name: 1080p
+  negate: false
+  required: true
+  resolution: 1080p
+  type: resolution
+- name: Not Remux
+  negate: true
+  pattern: Remux
+  required: true
+  type: release_title
+- name: Bluray
+  negate: false
+  required: false
+  source: bluray
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: FilmHD
+  negate: false
+  pattern: FilmHD
+  required: false
+  type: release_group
+- name: FTW-HD
+  negate: false
+  pattern: FTW-HD
+  required: false
+  type: release_group
+- name: HANDJOB
+  negate: false
+  pattern: HANDJOB
+  required: false
+  type: release_group
+- name: HDC
+  negate: false
+  pattern: HDC
+  required: false
+  type: release_group
+- name: iON
+  negate: false
+  pattern: iON
+  required: false
+  type: release_group
+- name: LEGi0N
+  negate: false
+  pattern: LEGi0N
+  required: false
+  type: release_group
+- name: MTeam
+  negate: false
+  pattern: MTeam
+  required: false
+  type: release_group
+- name: WiKi
+  negate: false
+  pattern: WiKi
+  required: false
+  type: release_group
+- name: xander
+  type: release_group
+  required: false
+  negate: false
+  pattern: xander
+tests: []
