@@ -32,10 +32,10 @@ conditions:
   required: false
   type: release_group
 - name: EuReKA
-  type: release_group
-  required: false
   negate: false
   pattern: EuReKA
+  required: false
+  type: release_group
 - name: FilmHD
   negate: false
   pattern: FilmHD
@@ -106,4 +106,9 @@ conditions:
   pattern: WiKi
   required: false
   type: release_group
+- name: WiLDCAT
+  type: release_group
+  required: false
+  negate: false
+  pattern: WiLDCAT
 tests: []
