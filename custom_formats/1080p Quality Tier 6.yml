@@ -101,14 +101,19 @@ conditions:
   pattern: Slappy
   required: false
   type: release_group
+- name: ThD
+  type: release_group
+  required: false
+  negate: false
+  pattern: ThD
 - name: WiKi
   negate: false
   pattern: WiKi
   required: false
   type: release_group
 - name: WiLDCAT
-  type: release_group
-  required: false
   negate: false
   pattern: WiLDCAT
+  required: false
+  type: release_group
 tests: []

@@ -62,13 +62,18 @@ conditions:
   required: false
   type: release_group
 - name: Skazhutin
-  type: release_group
-  required: false
   negate: false
   pattern: Skazhutin
+  required: false
+  type: release_group
 - name: TDD
   negate: false
   pattern: TDD
   required: false
   type: release_group
+- name: ThD
+  type: release_group
+  required: false
+  negate: false
+  pattern: ThD
 tests: []
