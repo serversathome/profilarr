@@ -31,11 +31,16 @@ conditions:
   pattern: HANDJOB
   required: false
   type: release_group
-- name: KnG
+- name: Ivandro
   type: release_group
   required: false
   negate: false
+  pattern: Ivandro
+- name: KnG
+  negate: false
   pattern: KnG
+  required: false
+  type: release_group
 - name: LEGi0N
   negate: false
   pattern: LEGi0N
