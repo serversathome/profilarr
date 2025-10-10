@@ -142,10 +142,10 @@ conditions:
   required: false
   type: release_group
 - name: NiBuRu
-  type: release_group
-  required: false
   negate: false
   pattern: NiBuRu
+  required: false
+  type: release_group
 - name: nmd
   negate: false
   pattern: nmd
@@ -221,6 +221,11 @@ conditions:
   pattern: SiMPLE
   required: false
   type: release_group
+- name: Skazhutin
+  type: release_group
+  required: false
+  negate: false
+  pattern: Skazhutin
 - name: SoLaR
   negate: false
   pattern: SoLaR
