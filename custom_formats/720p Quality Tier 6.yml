@@ -32,15 +32,20 @@ conditions:
   required: false
   type: release_group
 - name: LEGi0N
-  type: release_group
-  required: false
   negate: false
   pattern: LEGi0N
+  required: false
+  type: release_group
 - name: MTeam
   negate: false
   pattern: MTeam
   required: false
   type: release_group
+- name: PTP
+  type: release_group
+  required: false
+  negate: false
+  pattern: PTP
 - name: WiKi
   negate: false
   pattern: WiKi

@@ -66,6 +66,11 @@ conditions:
   pattern: P0W4HD
   required: false
   type: release_group
+- name: PTP
+  type: release_group
+  required: false
+  negate: false
+  pattern: PTP
 - name: WiKi
   negate: false
   pattern: WiKi
