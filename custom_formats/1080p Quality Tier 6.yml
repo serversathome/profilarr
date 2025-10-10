@@ -27,10 +27,10 @@ conditions:
   source: webrip
   type: source
 - name: EA
-  type: release_group
-  required: false
   negate: false
   pattern: EA
+  required: false
+  type: release_group
 - name: FilmHD
   negate: false
   pattern: FilmHD
@@ -76,6 +76,11 @@ conditions:
   pattern: MTeam
   required: false
   type: release_group
+- name: NiP
+  type: release_group
+  required: false
+  negate: false
+  pattern: NiP
 - name: P0W4HD
   negate: false
   pattern: P0W4HD
@@ -87,10 +92,10 @@ conditions:
   required: false
   type: release_group
 - name: Slappy
-  type: release_group
-  required: false
   negate: false
   pattern: Slappy
+  required: false
+  type: release_group
 - name: WiKi
   negate: false
   pattern: WiKi
