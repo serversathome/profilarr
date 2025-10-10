@@ -32,10 +32,10 @@ conditions:
   required: false
   type: release_group
 - name: EuReKA
-  type: release_group
-  required: false
   negate: false
   pattern: EuReKA
+  required: false
+  type: release_group
 - name: HANDJOB
   negate: false
   pattern: HANDJOB
@@ -56,6 +56,11 @@ conditions:
   pattern: LEGi0N
   required: false
   type: release_group
+- name: MaG
+  type: release_group
+  required: false
+  negate: false
+  pattern: MaG
 - name: MTeam
   negate: false
   pattern: MTeam

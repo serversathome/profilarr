@@ -76,6 +76,11 @@ conditions:
   pattern: LEGi0N
   required: false
   type: release_group
+- name: MaG
+  type: release_group
+  required: false
+  negate: false
+  pattern: MaG
 - name: MTeam
   negate: false
   pattern: MTeam
@@ -102,10 +107,10 @@ conditions:
   required: false
   type: release_group
 - name: ThD
-  type: release_group
-  required: false
   negate: false
   pattern: ThD
+  required: false
+  type: release_group
 - name: WiKi
   negate: false
   pattern: WiKi
