@@ -36,6 +36,11 @@ conditions:
   pattern: ATELiER
   required: false
   type: release_group
+- name: BSTD
+  type: release_group
+  required: false
+  negate: false
+  pattern: BSTD
 - name: BV
   negate: false
   pattern: BV
