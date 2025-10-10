@@ -26,16 +26,21 @@ conditions:
   required: false
   source: webrip
   type: source
+- name: EA
+  type: release_group
+  required: false
+  negate: false
+  pattern: EA
 - name: HANDJOB
   negate: false
   pattern: HANDJOB
   required: false
   type: release_group
 - name: Ivandro
-  type: release_group
-  required: false
   negate: false
   pattern: Ivandro
+  required: false
+  type: release_group
 - name: KnG
   negate: false
   pattern: KnG
@@ -56,6 +61,11 @@ conditions:
   pattern: PTP
   required: false
   type: release_group
+- name: Slappy
+  type: release_group
+  required: false
+  negate: false
+  pattern: Slappy
 - name: WiKi
   negate: false
   pattern: WiKi
