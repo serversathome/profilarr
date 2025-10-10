@@ -31,6 +31,11 @@ conditions:
   pattern: EA
   required: false
   type: release_group
+- name: EuReKA
+  type: release_group
+  required: false
+  negate: false
+  pattern: EuReKA
 - name: HANDJOB
   negate: false
   pattern: HANDJOB
@@ -57,10 +62,10 @@ conditions:
   required: false
   type: release_group
 - name: NiP
-  type: release_group
-  required: false
   negate: false
   pattern: NiP
+  required: false
+  type: release_group
 - name: PTP
   negate: false
   pattern: PTP
