@@ -77,10 +77,10 @@ conditions:
   required: false
   type: release_group
 - name: MaG
-  type: release_group
-  required: false
   negate: false
   pattern: MaG
+  required: false
+  type: release_group
 - name: MTeam
   negate: false
   pattern: MTeam
@@ -101,6 +101,11 @@ conditions:
   pattern: PTP
   required: false
   type: release_group
+- name: ROCiNANTE
+  type: release_group
+  required: false
+  negate: false
+  pattern: ROCiNANTE
 - name: Slappy
   negate: false
   pattern: Slappy
