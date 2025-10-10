@@ -56,11 +56,16 @@ conditions:
   pattern: LEGi0N
   required: false
   type: release_group
-- name: MaG
+- name: Lulz
   type: release_group
   required: false
   negate: false
+  pattern: Lulz
+- name: MaG
+  negate: false
   pattern: MaG
+  required: false
+  type: release_group
 - name: MTeam
   negate: false
   pattern: MTeam

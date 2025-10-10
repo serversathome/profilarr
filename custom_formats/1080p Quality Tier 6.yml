@@ -36,16 +36,6 @@ conditions:
   pattern: EuReKA
   required: false
   type: release_group
-- name: FilmHD
-  negate: false
-  pattern: FilmHD
-  required: false
-  type: release_group
-- name: FTW-HD
-  negate: false
-  pattern: FTW-HD
-  required: false
-  type: release_group
 - name: HANDJOB
   negate: false
   pattern: HANDJOB
@@ -76,6 +66,11 @@ conditions:
   pattern: LEGi0N
   required: false
   type: release_group
+- name: Lulz
+  negate: false
+  pattern: Lulz
+  required: false
+  type: release_group
 - name: MaG
   negate: false
   pattern: MaG
@@ -102,10 +97,10 @@ conditions:
   required: false
   type: release_group
 - name: ROCiNANTE
-  type: release_group
-  required: false
   negate: false
   pattern: ROCiNANTE
+  required: false
+  type: release_group
 - name: Slappy
   negate: false
   pattern: Slappy
