@@ -139,7 +139,7 @@ custom_formats:
 - name: STAN
   score: 0
 - name: Foreign Release Groups
-  score: -1000
+  score: -900
 - name: AV1
   score: -999999
 - name: B&W

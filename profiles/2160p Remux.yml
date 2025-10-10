@@ -192,7 +192,7 @@ custom_formats:
 - name: STAN
   score: 0
 - name: Foreign Release Groups
-  score: -1000
+  score: -900
 - name: x265 (Bluray)
   score: -220000
 - name: AV1
