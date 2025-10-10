@@ -51,6 +51,11 @@ conditions:
   pattern: iON
   required: false
   type: release_group
+- name: KnG
+  type: release_group
+  required: false
+  negate: false
+  pattern: KnG
 - name: LEGi0N
   negate: false
   pattern: LEGi0N
@@ -67,10 +72,10 @@ conditions:
   required: false
   type: release_group
 - name: PTP
-  type: release_group
-  required: false
   negate: false
   pattern: PTP
+  required: false
+  type: release_group
 - name: WiKi
   negate: false
   pattern: WiKi
