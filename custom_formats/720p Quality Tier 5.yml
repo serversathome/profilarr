@@ -151,11 +151,6 @@ conditions:
   pattern: SaNcTi
   required: false
   type: release_group
-- name: Skazhutin
-  type: release_group
-  required: false
-  negate: false
-  pattern: Skazhutin
 - name: SoLaR
   negate: false
   pattern: SoLaR
