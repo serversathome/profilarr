@@ -15,10 +15,10 @@ conditions:
   source: dvd
   type: source
 - name: '126811'
-  type: release_group
-  required: false
   negate: false
   pattern: '126811'
+  required: false
+  type: release_group
 - name: BTN
   negate: false
   pattern: BTN
@@ -47,11 +47,6 @@ conditions:
 - name: TRiToN
   negate: false
   pattern: TRiToN
-  required: false
-  type: release_group
-- name: ZoroSenpai
-  negate: false
-  pattern: ZoroSenpai
   required: false
   type: release_group
 tests: []
