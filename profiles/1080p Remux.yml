@@ -161,6 +161,8 @@ custom_formats:
   score: 0
 - name: BCORE
   score: 0
+- name: CRAV
+  score: 0
 - name: HTSR
   score: 0
 - name: HULU
