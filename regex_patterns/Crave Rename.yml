@@ -1,5 +1,5 @@
-name: Crave
-pattern: \b(CRAV(E)?)\b[ ._-]web[ ._-]?(dl|rip)?\b
+name: Crave Rename
+pattern: \[(CRAV)\b|\b(CRAV)\]
 description: Crave (originally CraveTV) is a Canadian subscription video on demand
   service. The service competes directly with other subscription-based over-the-top
   streaming services operating in Canada, primarily against American-based services.

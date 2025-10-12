@@ -7,7 +7,12 @@ conditions:
 - name: CRAV Regex
   negate: false
   pattern: Crave
-  required: true
+  required: false
+  type: release_title
+- name: CRAV Rename Regex
+  negate: false
+  pattern: Crave Rename
+  required: false
   type: release_title
 - name: WEB-DL
   negate: false
