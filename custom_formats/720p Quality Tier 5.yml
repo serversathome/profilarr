@@ -141,11 +141,6 @@ conditions:
   pattern: SaNcTi
   required: false
   type: release_group
-- name: SoLaR
-  negate: false
-  pattern: SoLaR
-  required: false
-  type: release_group
 - name: SPHD
   negate: false
   pattern: SPHD

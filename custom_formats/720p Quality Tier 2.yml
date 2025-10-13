@@ -57,15 +57,20 @@ conditions:
   required: false
   type: release_group
 - name: REBORN
-  type: release_group
-  required: false
   negate: false
   pattern: REBORN
+  required: false
+  type: release_group
 - name: SbR
   negate: false
   pattern: SbR
   required: false
   type: release_group
+- name: SoLaR
+  type: release_group
+  required: false
+  negate: false
+  pattern: SoLaR
 - name: TayTo
   negate: false
   pattern: TayTo
