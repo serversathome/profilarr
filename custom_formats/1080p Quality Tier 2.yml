@@ -17,10 +17,10 @@ conditions:
   required: true
   type: release_title
 - name: Bluray
-  type: source
-  required: false
   negate: false
+  required: false
   source: bluray
+  type: source
 - name: WEBRip
   negate: false
   required: false
@@ -54,11 +54,6 @@ conditions:
 - name: VietHD
   negate: false
   pattern: VietHD
-  required: false
-  type: release_group
-- name: ZoroSenpai
-  negate: false
-  pattern: ZoroSenpai
   required: false
   type: release_group
 - name: ZQ

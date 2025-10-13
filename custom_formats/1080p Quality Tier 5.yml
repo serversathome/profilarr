@@ -37,10 +37,10 @@ conditions:
   required: false
   type: release_group
 - name: BSTD
-  type: release_group
-  required: false
   negate: false
   pattern: BSTD
+  required: false
+  type: release_group
 - name: BV
   negate: false
   pattern: BV
@@ -249,11 +249,6 @@ conditions:
 - name: TDD
   negate: false
   pattern: TDD
-  required: false
-  type: release_group
-- name: TeamSyndicate
-  negate: false
-  pattern: TeamSyndicate
   required: false
   type: release_group
 - name: TnP
