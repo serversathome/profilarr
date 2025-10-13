@@ -71,14 +71,19 @@ conditions:
   pattern: Dariush
   required: false
   type: release_group
-- name: E.N.D
-  negate: false
-  pattern: E.N.D
-  required: false
-  type: release_group
 - name: E1
   negate: false
   pattern: E1
+  required: false
+  type: release_group
+- name: EA
+  type: release_group
+  required: false
+  negate: false
+  pattern: EA
+- name: E.N.D
+  negate: false
+  pattern: E.N.D
   required: false
   type: release_group
 - name: EDPH

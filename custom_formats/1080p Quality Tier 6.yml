@@ -26,11 +26,6 @@ conditions:
   required: false
   source: webrip
   type: source
-- name: EA
-  negate: false
-  pattern: EA
-  required: false
-  type: release_group
 - name: EuReKA
   negate: false
   pattern: EuReKA

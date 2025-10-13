@@ -26,11 +26,6 @@ conditions:
   required: false
   source: webrip
   type: source
-- name: EA
-  negate: false
-  pattern: EA
-  required: false
-  type: release_group
 - name: EuReKA
   negate: false
   pattern: EuReKA
@@ -57,10 +52,10 @@ conditions:
   required: false
   type: release_group
 - name: Lulz
-  type: release_group
-  required: false
   negate: false
   pattern: Lulz
+  required: false
+  type: release_group
 - name: MaG
   negate: false
   pattern: MaG

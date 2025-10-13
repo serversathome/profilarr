@@ -46,6 +46,11 @@ conditions:
   pattern: de[42]
   required: false
   type: release_group
+- name: EA
+  type: release_group
+  required: false
+  negate: false
+  pattern: EA
 - name: EDPH
   negate: false
   pattern: EDPH
