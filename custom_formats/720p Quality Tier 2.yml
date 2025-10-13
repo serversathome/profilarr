@@ -56,6 +56,11 @@ conditions:
   pattern: IDE
   required: false
   type: release_group
+- name: REBORN
+  type: release_group
+  required: false
+  negate: false
+  pattern: REBORN
 - name: SbR
   negate: false
   pattern: SbR

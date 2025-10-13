@@ -186,11 +186,6 @@ conditions:
   pattern: PTer
   required: false
   type: release_group
-- name: REBORN
-  negate: false
-  pattern: REBORN
-  required: false
-  type: release_group
 - name: RiCO
   negate: false
   pattern: RiCO

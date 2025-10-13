@@ -46,6 +46,16 @@ conditions:
   pattern: HiFi
   required: false
   type: release_group
+- name: REBORN
+  type: release_group
+  required: false
+  negate: false
+  pattern: REBORN
+- name: SA89
+  type: release_group
+  required: false
+  negate: false
+  pattern: SA89
 - name: TayTo
   negate: false
   pattern: TayTo

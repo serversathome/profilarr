@@ -136,11 +136,6 @@ conditions:
   pattern: rttr
   required: false
   type: release_group
-- name: SA89
-  negate: false
-  pattern: SA89
-  required: false
-  type: release_group
 - name: SaNcTi
   negate: false
   pattern: SaNcTi
