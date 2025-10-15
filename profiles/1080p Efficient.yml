@@ -199,8 +199,6 @@ custom_formats_radarr:
   score: 40000
 - name: MA
   score: 4000
-- name: SD Golden Popcorn
-  score: 4000
 - name: AMZN
   score: 3000
 - name: Better Theatricals

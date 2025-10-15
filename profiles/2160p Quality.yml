@@ -226,8 +226,6 @@ custom_formats_radarr:
   score: 4000
 - name: iT
   score: 4000
-- name: SD Golden Popcorn
-  score: 4000
 - name: Amazon Enhancement
   score: 2000
 - name: HMAX
