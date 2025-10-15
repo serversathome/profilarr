@@ -1,15 +1,15 @@
-name: 720p Quality Tier 2
-description: Matches release groups who fall under 720p Quality Tier 2
+name: 1080p Quality Tier 6
+description: Matches release groups who fall under 1080p GPPi Tier 6
 tags:
 - GPPi
 - Release Group Tier
-- 720p
+- 1080p
 - Quality
 conditions:
-- name: 720p
+- name: 1080p
   negate: false
   required: true
-  resolution: 720p
+  resolution: 1080p
   type: resolution
 - name: Not Remux
   negate: true
@@ -26,64 +26,94 @@ conditions:
   required: false
   source: webrip
   type: source
-- name: c0kE
+- name: EuReKA
   negate: false
-  pattern: c0kE
+  pattern: EuReKA
   required: false
   type: release_group
-- name: CRiSC
+- name: HANDJOB
   negate: false
-  pattern: CRiSC
+  pattern: HANDJOB
   required: false
   type: release_group
-- name: CtrlHD
+- name: HDC
   negate: false
-  pattern: CtrlHD
+  pattern: HDC
   required: false
   type: release_group
-- name: HiDt
+- name: iON
   negate: false
-  pattern: HiDt
+  pattern: iON
   required: false
   type: release_group
-- name: HiFi
+- name: Ivandro
   negate: false
-  pattern: HiFi
+  pattern: Ivandro
   required: false
   type: release_group
-- name: IDE
+- name: KnG
   negate: false
-  pattern: IDE
+  pattern: KnG
   required: false
   type: release_group
-- name: REBORN
+- name: LEGi0N
   negate: false
-  pattern: REBORN
+  pattern: LEGi0N
   required: false
   type: release_group
-- name: SbR
+- name: Lulz
   negate: false
-  pattern: SbR
+  pattern: Lulz
   required: false
   type: release_group
-- name: SoLaR
-  type: release_group
-  required: false
+- name: MaG
   negate: false
-  pattern: SoLaR
-- name: TayTo
-  negate: false
-  pattern: TayTo
+  pattern: MaG
   required: false
   type: release_group
-- name: VietHD
+- name: MTeam
   negate: false
-  pattern: VietHD
+  pattern: MTeam
   required: false
   type: release_group
-- name: ZQ
+- name: NiP
   negate: false
-  pattern: ZQ
+  pattern: NiP
+  required: false
+  type: release_group
+- name: P0W4HD
+  negate: false
+  pattern: P0W4HD
+  required: false
+  type: release_group
+- name: PTP
+  negate: false
+  pattern: PTP
+  required: false
+  type: release_group
+- name: ROCiNANTE
+  negate: false
+  pattern: ROCiNANTE
+  required: false
+  type: release_group
+- name: Slappy
+  negate: false
+  pattern: Slappy
+  required: false
+  type: release_group
+- name: ThD
+  negate: false
+  pattern: ThD
+  required: false
+  type: release_group
+- name: WiKi
+  negate: false
+  pattern: WiKi
+  required: false
+  type: release_group
+- name: WiLDCAT
+  negate: false
+  pattern: WiLDCAT
   required: false
   type: release_group
 tests: []

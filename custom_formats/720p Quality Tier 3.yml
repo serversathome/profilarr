@@ -11,6 +11,11 @@ conditions:
   required: true
   resolution: 720p
   type: resolution
+- name: Not Remux
+  type: release_title
+  required: true
+  negate: true
+  pattern: Remux
 - name: Bluray
   negate: false
   required: false
@@ -47,10 +52,10 @@ conditions:
   required: false
   type: release_group
 - name: rightSIZE
-  type: release_group
-  required: false
   negate: false
   pattern: rightSIZE
+  required: false
+  type: release_group
 - name: TBB
   negate: false
   pattern: TBB

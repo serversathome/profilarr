@@ -28,14 +28,16 @@ custom_formats:
 - name: 720p WEB-DL
   score: 100000
 - name: 1080p Quality Tier 1
-  score: 84000
+  score: 85000
 - name: 1080p Quality Tier 2
-  score: 83000
+  score: 84000
 - name: 1080p Quality Tier 3
-  score: 82000
+  score: 83000
 - name: 1080p Quality Tier 4
-  score: 81000
+  score: 82000
 - name: 1080p Quality Tier 5
+  score: 81000
+- name: 1080p Quality Tier 6
   score: 80000
 - name: 720p Bluray
   score: 80000
@@ -46,14 +48,16 @@ custom_formats:
 - name: 480p WEB-DL
   score: 60000
 - name: 720p Quality Tier 1
-  score: 44000
+  score: 45000
 - name: 720p Quality Tier 2
-  score: 43000
+  score: 44000
 - name: 720p Quality Tier 3
-  score: 42000
+  score: 43000
 - name: 720p Quality Tier 4
-  score: 41000
+  score: 42000
 - name: 720p Quality Tier 5
+  score: 41000
+- name: 720p Quality Tier 6
   score: 40000
 - name: 720p Balanced Tier 1
   score: 20000
@@ -129,6 +133,8 @@ custom_formats:
   score: 0
 - name: BCORE
   score: 0
+- name: CRAV
+  score: 0
 - name: HTSR
   score: 0
 - name: HULU
@@ -145,11 +151,11 @@ custom_formats:
   score: 0
 - name: STAN
   score: 0
+- name: Foreign Release Groups
+  score: -900
 - name: x265 (Bluray)
   score: -220000
 - name: AV1
-  score: -999999
-- name: B&W
   score: -999999
 - name: Banned Groups
   score: -999999
@@ -191,6 +197,8 @@ custom_formats_radarr:
 - name: Special Edition
   score: 1000
 - name: 3D
+  score: -999999
+- name: B&W
   score: -999999
 - name: Extras
   score: -999999
