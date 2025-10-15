@@ -169,7 +169,7 @@ custom_formats:
   score: -999999
 custom_formats_radarr:
 - name: 720p Golden Popcorn
-  score: 6000
+  score: 40000
 - name: MA
   score: 4000
 - name: SD Golden Popcorn

@@ -180,8 +180,10 @@ custom_formats:
 - name: Xvid
   score: -999999
 custom_formats_radarr:
+- name: 1080p Golden Popcorn
+  score: 80000
 - name: 720p Golden Popcorn
-  score: 6000
+  score: 40000
 - name: MA
   score: 6000
 - name: ATVP
