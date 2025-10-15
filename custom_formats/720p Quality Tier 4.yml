@@ -11,6 +11,11 @@ conditions:
   required: true
   resolution: 720p
   type: resolution
+- name: Not Remux
+  negate: true
+  pattern: Remux
+  required: true
+  type: release_title
 - name: Bluray
   negate: false
   required: false
@@ -27,10 +32,10 @@ conditions:
   required: false
   type: release_group
 - name: decibeL
-  type: release_group
-  required: false
   negate: false
   pattern: decibeL
+  required: false
+  type: release_group
 - name: D-ZON3
   negate: false
   pattern: D-Z0N3
@@ -56,9 +61,19 @@ conditions:
   pattern: PTer
   required: false
   type: release_group
+- name: Skazhutin
+  negate: false
+  pattern: Skazhutin
+  required: false
+  type: release_group
 - name: TDD
   negate: false
   pattern: TDD
   required: false
   type: release_group
+- name: ThD
+  type: release_group
+  required: false
+  negate: false
+  pattern: ThD
 tests: []

@@ -11,6 +11,11 @@ conditions:
   required: true
   resolution: 720p
   type: resolution
+- name: Not Remux
+  negate: true
+  pattern: Remux
+  required: true
+  type: release_title
 - name: Bluray
   negate: false
   required: false
@@ -41,6 +46,11 @@ conditions:
   pattern: de[42]
   required: false
   type: release_group
+- name: EA
+  type: release_group
+  required: false
+  negate: false
+  pattern: EA
 - name: EDPH
   negate: false
   pattern: EDPH
@@ -64,11 +74,6 @@ conditions:
 - name: GS88
   negate: false
   pattern: GS88
-  required: false
-  type: release_group
-- name: HANDJOB
-  negate: false
-  pattern: HANDJOB
   required: false
   type: release_group
 - name: HDMaNiAcS
@@ -101,11 +106,6 @@ conditions:
   pattern: LoRD
   required: false
   type: release_group
-- name: MTeam
-  negate: false
-  pattern: MTeam
-  required: false
-  type: release_group
 - name: nmd
   negate: false
   pattern: nmd
@@ -126,24 +126,24 @@ conditions:
   pattern: playHD
   required: false
   type: release_group
+- name: RiCO
+  negate: false
+  pattern: RiCO
+  required: false
+  type: release_group
+- name: RO
+  negate: false
+  pattern: RO
+  required: false
+  type: release_group
 - name: rttr
   negate: false
   pattern: rttr
   required: false
   type: release_group
-- name: SA89
-  negate: false
-  pattern: SA89
-  required: false
-  type: release_group
 - name: SaNcTi
   negate: false
   pattern: SaNcTi
-  required: false
-  type: release_group
-- name: SoLaR
-  negate: false
-  pattern: SoLaR
   required: false
   type: release_group
 - name: SPHD
@@ -161,9 +161,9 @@ conditions:
   pattern: W4NK3R
   required: false
   type: release_group
-- name: WiKi
+- name: WiLF
   negate: false
-  pattern: WiKi
+  pattern: WiLF
   required: false
   type: release_group
 - name: WMING
@@ -172,8 +172,8 @@ conditions:
   required: false
   type: release_group
 - name: ZIMBO
-  type: release_group
-  required: false
   negate: false
   pattern: ZIMBO
+  required: false
+  type: release_group
 tests: []

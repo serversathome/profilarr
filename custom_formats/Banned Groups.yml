@@ -200,10 +200,10 @@ conditions:
   required: false
   type: release_group
 - name: VD0N
-  type: release_group
-  required: false
   negate: false
   pattern: VD0N
+  required: false
+  type: release_group
 - name: VECTOR
   negate: false
   pattern: VECTOR
