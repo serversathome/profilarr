@@ -4,9 +4,9 @@ tags:
 - Audio
 - Dolby
 conditions:
-- name: Atmos
+- name: Dolby Atmos
   negate: false
-  pattern: Atmos
+  pattern: Dolby Atmos
   required: true
   type: release_title
 - name: Not TrueHD
