@@ -7,13 +7,8 @@ conditions:
 - name: Atmos
   negate: false
   pattern: Atmos
-  required: false
+  required: true
   type: release_title
-- name: Atmos (BTN Standard)
-  type: release_title
-  required: false
-  negate: false
-  pattern: BTN Atmos
 - name: Not TrueHD
   negate: true
   pattern: TrueHD
