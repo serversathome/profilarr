@@ -224,8 +224,6 @@ custom_formats_sonarr:
   score: 184000
 - name: QxR Bluray
   score: 184000
-- name: TAoE Bluray
-  score: 184000
 - name: 1080p Efficient TV Bluray Tier 2
   score: 183000
 - name: 1080p Efficient TV Bluray Tier 3
