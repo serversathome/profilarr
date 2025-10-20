@@ -168,11 +168,7 @@ custom_formats:
 - name: Xvid
   score: -999999
 custom_formats_radarr:
-- name: 720p Golden Popcorn
-  score: 6000
 - name: MA
-  score: 4000
-- name: SD Golden Popcorn
   score: 4000
 - name: Better Theatricals
   score: 1000
