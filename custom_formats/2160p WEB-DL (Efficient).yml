@@ -1,0 +1,41 @@
+name: 2160p WEB-DL (Efficient)
+description: Matches 2160p WEB-DLs.
+tags:
+- Source
+conditions:
+- name: 2160p
+  negate: false
+  required: true
+  resolution: 2160p
+  type: resolution
+- name: WEB-DL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: Not QxR
+  type: release_group
+  required: false
+  negate: true
+  pattern: QxR
+- name: Not QxR Title
+  type: release_title
+  required: false
+  negate: true
+  pattern: QxR (Title)
+- name: Not TAoE
+  type: release_group
+  required: false
+  negate: true
+  pattern: TAoE
+- name: Not TAoE Title
+  type: release_title
+  required: false
+  negate: true
+  pattern: TAoE (Title)
+- name: Not Vyndros
+  type: release_group
+  required: false
+  negate: true
+  pattern: Vyndros
+tests: []

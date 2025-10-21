@@ -24,7 +24,7 @@ custom_formats:
   score: 244000
 - name: 2160p Balanced Tier 2
   score: 240000
-- name: 2160p WEB-DL
+- name: 2160p WEB-DL (Efficient)
   score: 240000
 - name: 1080p Bluray HEVC Tier 1
   score: 220000
