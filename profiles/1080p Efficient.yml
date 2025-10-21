@@ -195,11 +195,7 @@ custom_formats_radarr:
   score: 161000
 - name: 1080p Efficient Movie WEB Tier 4
   score: 160000
-- name: 720p Golden Popcorn
-  score: 6000
 - name: MA
-  score: 4000
-- name: SD Golden Popcorn
   score: 4000
 - name: AMZN
   score: 3000
@@ -227,8 +223,6 @@ custom_formats_sonarr:
 - name: 1080p Efficient TV Bluray Tier 1
   score: 184000
 - name: QxR Bluray
-  score: 184000
-- name: TAoE Bluray
   score: 184000
 - name: 1080p Efficient TV Bluray Tier 2
   score: 183000
