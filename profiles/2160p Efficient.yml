@@ -236,6 +236,10 @@ custom_formats_radarr:
 custom_formats_sonarr:
 - name: 2160p Efficient TV WEB Tier 1
   score: 261000
+- name: QxR WEBs
+  score: 261000
+- name: TAoE WEBs
+  score: 261000
 - name: 1080p Efficient+ TV Bluray Tier 1
   score: 184000
 - name: 1080p Efficient+ TV Bluray Tier 2

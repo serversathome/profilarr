@@ -27,10 +27,10 @@ conditions:
   required: false
   type: release_group
 - name: TAoE
-  type: release_group
-  required: false
   negate: false
   pattern: TAoE
+  required: false
+  type: release_group
 tests:
 - conditionResults:
   - matches: true

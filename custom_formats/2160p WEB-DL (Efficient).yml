@@ -14,28 +14,28 @@ conditions:
   source: web_dl
   type: source
 - name: Not QxR
-  type: release_group
-  required: false
   negate: true
   pattern: QxR
+  required: true
+  type: release_group
 - name: Not QxR Title
-  type: release_title
-  required: false
   negate: true
   pattern: QxR (Title)
+  required: true
+  type: release_title
 - name: Not TAoE
-  type: release_group
-  required: false
   negate: true
   pattern: TAoE
+  required: true
+  type: release_group
 - name: Not TAoE Title
-  type: release_title
-  required: false
   negate: true
   pattern: TAoE (Title)
+  required: true
+  type: release_title
 - name: Not Vyndros
-  type: release_group
-  required: false
   negate: true
   pattern: Vyndros
+  required: true
+  type: release_group
 tests: []
