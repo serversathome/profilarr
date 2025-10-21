@@ -234,6 +234,12 @@ custom_formats_radarr:
 - name: Upscale
   score: -999999
 custom_formats_sonarr:
+- name: 2160p Efficient TV Bluray Tier 1
+  score: 281000
+- name: QxR Blurays
+  score: 281000
+- name: TAoE Blurays
+  score: 281000
 - name: 2160p Efficient TV WEB Tier 1
   score: 261000
 - name: QxR WEBs
