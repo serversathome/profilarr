@@ -311,6 +311,8 @@ qualities:
     name: Bluray-2160p
   - id: 5
     name: WEBDL-2160p
+  - id: 6
+    name: WEBRip-2160p
 - id: -1
   name: Efficient Capable
   description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
