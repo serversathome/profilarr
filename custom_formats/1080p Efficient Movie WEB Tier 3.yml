@@ -1,31 +1,31 @@
-name: 1080p Efficient+ TV Bluray Tier 4
-description: Matches release groups who fall under 1080p Efficient Bluray Tier 4
+name: 1080p Efficient Movie WEB Tier 3
+description: Matches release groups who fall under 1080p Efficient WEB Tier 3
 tags:
 - Release Group Tier
 - 1080p
 - Efficient
-- TV
+- Movie
 conditions:
 - name: 1080p
   negate: false
   required: true
   resolution: 1080p
   type: resolution
-- name: Bluray
-  negate: false
-  required: true
-  source: bluray
-  type: source
 - name: x265
   negate: false
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: cXcY
+- name: WEB-DL
   negate: false
-  pattern: cXcY
   required: false
-  type: release_group
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
 - name: edge2020
   negate: false
   pattern: edge2020
@@ -36,24 +36,14 @@ conditions:
   pattern: R1GY3B
   required: false
   type: release_group
-- name: Ralphy
-  negate: false
-  pattern: Ralphy
-  required: false
-  type: release_group
-- name: TimeDistortion
-  negate: false
-  pattern: TimeDistortion
-  required: false
-  type: release_group
 - name: ToNaTo
   negate: false
   pattern: ToNaTo
   required: false
   type: release_group
-- name: YELLO
+- name: Vyndros
   negate: false
-  pattern: YELLO
+  pattern: Vyndros
   required: false
   type: release_group
 tests:

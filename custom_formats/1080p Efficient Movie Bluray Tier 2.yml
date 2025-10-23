@@ -1,10 +1,10 @@
-name: 1080p Efficient+ TV Bluray Tier 7
-description: Matches release groups who fall under 1080p Efficient Bluray Tier 7
+name: 1080p Efficient Movie Bluray Tier 2
+description: Matches release groups who fall under 1080p Efficient Bluray Tier 2
 tags:
 - Release Group Tier
 - 1080p
 - Efficient
-- TV
+- Movie
 conditions:
 - name: 1080p
   negate: false
@@ -21,19 +21,14 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: iVy
+- name: DarQ
   negate: false
-  pattern: iVy
+  pattern: DarQ
   required: false
   type: release_group
-- name: PHOCiS
+- name: SQS
   negate: false
-  pattern: PHOCiS
-  required: false
-  type: release_group
-- name: YAWNiX
-  negate: false
-  pattern: YAWNiX
+  pattern: SQS
   required: false
   type: release_group
 tests:
