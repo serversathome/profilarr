@@ -171,8 +171,6 @@ custom_formats_radarr:
   score: 183000
 - name: QxR Bluray
   score: 183000
-- name: TAoE Bluray
-  score: 183000
 - name: 1080p Efficient Movie Bluray Tier 2
   score: 182000
 - name: Vialle Bluray
