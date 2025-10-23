@@ -1,9 +1,9 @@
-name: 1080p Efficient TV Bluray Tier 4
-description: Matches release groups who fall under 1080p Efficient Bluray Tier 4
+name: 1080p Compact TV Bluray Tier 2
+description: Matches release groups who fall under 1080p Compact Bluray Tier 2
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
+- Compact
 - TV
 conditions:
 - name: 1080p
@@ -21,39 +21,24 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: cXcY
+- name: DarQ
   negate: false
-  pattern: cXcY
+  pattern: DarQ
   required: false
   type: release_group
-- name: edge2020
+- name: dkore
   negate: false
-  pattern: edge2020
+  pattern: dkore
   required: false
   type: release_group
-- name: R1GY3B
+- name: GRiMM
   negate: false
-  pattern: R1GY3B
+  pattern: GRiMM
   required: false
   type: release_group
-- name: Ralphy
+- name: MNHD
   negate: false
-  pattern: Ralphy
-  required: false
-  type: release_group
-- name: TimeDistortion
-  negate: false
-  pattern: TimeDistortion
-  required: false
-  type: release_group
-- name: ToNaTo
-  negate: false
-  pattern: ToNaTo
-  required: false
-  type: release_group
-- name: YELLO
-  negate: false
-  pattern: YELLO
+  pattern: MNHD
   required: false
   type: release_group
 tests:

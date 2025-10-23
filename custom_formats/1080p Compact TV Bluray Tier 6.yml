@@ -1,10 +1,10 @@
-name: 1080p Efficient Movie Bluray Tier 1
-description: Matches release groups who fall under 1080p Efficient Bluray Tier 1
+name: 1080p Compact TV Bluray Tier 6
+description: Matches release groups who fall under 1080p Compact Bluray Tier 6
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
-- Movie
+- Compact
+- TV
 conditions:
 - name: 1080p
   negate: false
@@ -21,9 +21,9 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: QxR
+- name: KONTRAST
   negate: false
-  pattern: QxR
+  pattern: KONTRAST
   required: false
   type: release_group
 tests:

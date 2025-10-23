@@ -1,5 +1,5 @@
-name: 1080p Efficient
-description: '1080p Efficient seeks to target a balance of size and quality with x265
+name: 1080p Compact
+description: '1080p Compact seeks to target a balance of size and quality with x265
   Bluray and WEB encodes
 
 
@@ -266,7 +266,7 @@ custom_formats_sonarr:
   score: -999999
 qualities:
 - id: -1
-  name: Efficient Capable
+  name: Compact Capable
   description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
     majority of releases, but there are occasional streaming optimised encodes that
     should be preferred.
@@ -301,7 +301,7 @@ qualities:
     name: DVD
 upgrade_until:
   id: -1
-  name: Efficient Capable
+  name: Compact Capable
   description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
     majority of releases, but there are occasional streaming optimised encodes that
     should be preferred.

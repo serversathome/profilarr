@@ -1,10 +1,10 @@
-name: 1080p Efficient Movie WEB Tier 3
-description: Matches release groups who fall under 1080p Efficient WEB Tier 3
+name: 1080p Compact TV WEB Tier 3
+description: Matches release groups who fall under 1080p Compact WEB Tier 3
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
-- Movie
+- Compact
+- TV
 conditions:
 - name: 1080p
   negate: false
@@ -31,19 +31,24 @@ conditions:
   pattern: edge2020
   required: false
   type: release_group
-- name: R1GY3B
+- name: Grimm
   negate: false
-  pattern: R1GY3B
+  pattern: GRiMM
   required: false
   type: release_group
-- name: ToNaTo
+- name: OnlyWeb
   negate: false
-  pattern: ToNaTo
+  pattern: OnlyWeb
   required: false
   type: release_group
-- name: Vyndros
+- name: TAoE
   negate: false
-  pattern: Vyndros
+  pattern: TAoE
+  required: false
+  type: release_group
+- name: YELLO
+  negate: false
+  pattern: YELLO
   required: false
   type: release_group
 tests:

@@ -1,10 +1,10 @@
-name: 1080p Efficient TV WEB Tier 2
-description: Matches release groups who fall under 1080p Efficient WEB Tier 2
+name: 1080p Compact Movie WEB Tier 2
+description: Matches release groups who fall under 1080p Compact WEB Tier 2
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
-- TV
+- Compact
+- Movie
 conditions:
 - name: 1080p
   negate: false
@@ -26,29 +26,14 @@ conditions:
   required: false
   source: webrip
   type: source
-- name: ARCADE
-  negate: false
-  pattern: ARCADE
-  required: false
-  type: release_group
 - name: DarQ
   negate: false
   pattern: DarQ
   required: false
   type: release_group
-- name: LSt
+- name: dkore
   negate: false
-  pattern: LSt
-  required: false
-  type: release_group
-- name: ToNaTo
-  negate: false
-  pattern: ToNaTo
-  required: false
-  type: release_group
-- name: Vialle
-  negate: false
-  pattern: Vialle
+  pattern: dkore
   required: false
   type: release_group
 tests:

@@ -1,9 +1,9 @@
-name: 1080p Efficient TV Bluray Tier 7
-description: Matches release groups who fall under 1080p Efficient Bluray Tier 7
+name: 1080p Compact TV Bluray Tier 3
+description: Matches release groups who fall under 1080p Compact Bluray Tier 3
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
+- Compact
 - TV
 conditions:
 - name: 1080p
@@ -21,19 +21,9 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: iVy
+- name: LSt
   negate: false
-  pattern: iVy
-  required: false
-  type: release_group
-- name: PHOCiS
-  negate: false
-  pattern: PHOCiS
-  required: false
-  type: release_group
-- name: YAWNiX
-  negate: false
-  pattern: YAWNiX
+  pattern: LSt
   required: false
   type: release_group
 tests:
