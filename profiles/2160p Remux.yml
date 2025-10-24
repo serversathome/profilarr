@@ -286,23 +286,23 @@ custom_formats_sonarr:
 - name: Upscaled
   score: -999999
 qualities:
-- id: 3
-  name: Remux-2160p
 - id: -4
-  name: 2160p Quality
+  name: 2160p Remux
   description: ''
   qualities:
+  - id: 3
+    name: Remux-2160p
   - id: 4
     name: Bluray-2160p
   - id: 5
     name: WEBDL-2160p
-- id: 8
-  name: Remux-1080p
 - id: -1
-  name: 1080p Quality
+  name: 1080p Remux
   description: All capable of being indistinguishable from source. WEB-DL included
     to not allow unknown encode to trump known WEB-DL.
   qualities:
+  - id: 8
+    name: Remux-1080p
   - id: 10
     name: Bluray-1080p
   - id: 9
@@ -332,7 +332,6 @@ qualities:
   - id: 22
     name: DVD
 upgrade_until:
-  id: 3
-  name: Remux-2160p
-  description: 4K Ultra HD Blu-ray disc content remuxed into a playable file format
+  id: -4
+  name: 2160p Remux
 language: must_original

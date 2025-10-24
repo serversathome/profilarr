@@ -240,13 +240,13 @@ custom_formats_sonarr:
 - name: Upscaled
   score: -999999
 qualities:
-- id: 8
-  name: Remux-1080p
 - id: -1
-  name: 1080p Quality
+  name: 1080p Remux
   description: All capable of being indistinguishable from source. WEB-DL included
     to not allow unknown encode to trump known WEB-DL.
   qualities:
+  - id: 8
+    name: Remux-1080p
   - id: 10
     name: Bluray-1080p
   - id: 9
@@ -276,7 +276,8 @@ qualities:
   - id: 22
     name: DVD
 upgrade_until:
-  id: 8
-  name: Remux-1080p
-  description: 1080p Blu-ray disc content remuxed into a playable file format
+  id: -1
+  name: 1080p Quality
+  description: All capable of being indistinguishable from source. WEB-DL included
+    to not allow unknown encode to trump known WEB-DL.
 language: must_original
