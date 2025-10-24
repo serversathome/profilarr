@@ -10,8 +10,8 @@ description: '2160p Remux utilizes **Audio / Video Formats** to prioritise high 
   - 2160p Remux > 2160p Bluray > 2160p WEB-DL > 1080p Remux > 1080p HDR Bluray > 1080p
   Bluray > 1080p WEB-DL > 720p Bluray > 720p WEB-DL > 480p WEB-DL > DVD'
 tags:
-- 1080p
-- Remux
+- 2160p
+- Remux Focused
 - HDR
 - Lossless Audio
 - h265
