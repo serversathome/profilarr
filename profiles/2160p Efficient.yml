@@ -304,7 +304,7 @@ custom_formats_sonarr:
   score: -999999
 qualities:
 - id: -4
-  name: Balanced Capable
+  name: 2160p Efficient
   description: ''
   qualities:
   - id: 4
@@ -314,7 +314,7 @@ qualities:
   - id: 6
     name: WEBRip-2160p
 - id: -1
-  name: Efficient Capable
+  name: 1080p Efficient
   description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
     majority of releases, but there are occasional streaming optimised encodes that
     should be preferred.
@@ -326,7 +326,7 @@ qualities:
   - id: 11
     name: WEBRip-1080p
 - id: -2
-  name: 720p Fallback
+  name: 720p Quality
   description: Fallback to 720p when 1080p cannot be found.
   qualities:
   - id: 13
@@ -336,7 +336,7 @@ qualities:
   - id: 15
     name: WEBRip-720p
 - id: -3
-  name: SD Fallback
+  name: 480p Quality
   description: Standard Definition Fallbacks
   qualities:
   - id: 18
@@ -349,5 +349,5 @@ qualities:
     name: DVD
 upgrade_until:
   id: -4
-  name: Balanced Capable
+  name: 2160p Efficient
 language: must_original

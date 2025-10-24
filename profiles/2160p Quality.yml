@@ -275,7 +275,7 @@ custom_formats_sonarr:
   score: -999999
 qualities:
 - id: -1
-  name: 2160p Transparent
+  name: 2160p Quality
   description: Indistinguishable from source
   qualities:
   - id: 4
@@ -283,7 +283,7 @@ qualities:
   - id: 5
     name: WEBDL-2160p
 - id: -2
-  name: 1080p Transparent
+  name: 1080p Quality HDR
   description: Indistinguishable from source
   qualities:
   - id: 10
@@ -293,7 +293,7 @@ qualities:
   - id: 11
     name: WEBRip-1080p
 - id: -3
-  name: 720p Fallback
+  name: 720p Quality
   description: Fallback to 720p when 1080p cannot be found.
   qualities:
   - id: 13
@@ -303,7 +303,7 @@ qualities:
   - id: 15
     name: WEBRip-720p
 - id: -4
-  name: SD Fallback
+  name: 480p Quality
   description: Standard Definition Fallbacks
   qualities:
   - id: 18
@@ -316,6 +316,6 @@ qualities:
     name: DVD
 upgrade_until:
   id: -1
-  name: 2160p Transparent
+  name: 2160p Quality
   description: Indistinguishable from source
 language: must_original
