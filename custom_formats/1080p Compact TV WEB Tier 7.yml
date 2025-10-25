@@ -1,9 +1,9 @@
-name: 1080p Efficient+ TV WEB Tier 5
-description: Matches release groups who fall under 1080p Efficient WEB Tier 5
+name: 1080p Compact TV WEB Tier 7
+description: Matches release groups who fall under 1080p Compact WEB Tier 7
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
+- Compact
 - TV
 conditions:
 - name: 1080p
@@ -26,9 +26,14 @@ conditions:
   required: false
   source: webrip
   type: source
-- name: KONTRAST
+- name: Megusta
   negate: false
-  pattern: KONTRAST
+  pattern: MeGusta
+  required: false
+  type: release_group
+- name: PSA
+  negate: false
+  pattern: PSA
   required: false
   type: release_group
 tests:

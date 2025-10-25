@@ -1,9 +1,9 @@
-name: 1080p Efficient TV Bluray Tier 2
-description: Matches release groups who fall under 1080p Efficient Bluray Tier 2
+name: 1080p Compact TV WEB Tier 2
+description: Matches release groups who fall under 1080p Compact WEB Tier 2
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
+- Compact
 - TV
 conditions:
 - name: 1080p
@@ -11,34 +11,39 @@ conditions:
   required: true
   resolution: 1080p
   type: resolution
-- name: Bluray
-  negate: false
-  required: true
-  source: bluray
-  type: source
 - name: x265
   negate: false
   pattern: x265 (Efficient)
   required: true
   type: release_title
+- name: WEB-DL
+  negate: false
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: ARCADE
+  negate: false
+  pattern: ARCADE
+  required: false
+  type: release_group
 - name: DarQ
   negate: false
   pattern: DarQ
   required: false
   type: release_group
-- name: dkore
+- name: LSt
   negate: false
-  pattern: dkore
+  pattern: LSt
   required: false
   type: release_group
-- name: GRiMM
+- name: ToNaTo
   negate: false
-  pattern: GRiMM
-  required: false
-  type: release_group
-- name: MNHD
-  negate: false
-  pattern: MNHD
+  pattern: ToNaTo
   required: false
   type: release_group
 - name: Vialle
