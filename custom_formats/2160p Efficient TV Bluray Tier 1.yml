@@ -1,49 +1,34 @@
-name: 1080p Efficient+ TV Bluray Tier 2
-description: Matches release groups who fall under 1080p Efficient Bluray Tier 2
+name: 2160p Efficient TV Bluray Tier 1
+description: Matches release groups who fall under 2160p Efficient Bluray Tier 1
 tags:
 - Release Group Tier
-- 1080p
+- 2160p
 - Efficient
 - TV
 conditions:
-- name: 1080p
+- name: 2160p
   negate: false
   required: true
-  resolution: 1080p
+  resolution: 2160p
   type: resolution
 - name: Bluray
   negate: false
   required: true
   source: bluray
   type: source
-- name: x265
+- name: QxR
   negate: false
-  pattern: x265 (Efficient)
-  required: true
-  type: release_title
-- name: DarQ
-  negate: false
-  pattern: DarQ
+  pattern: QxR
   required: false
   type: release_group
-- name: dkore
+- name: TAoE
   negate: false
-  pattern: dkore
+  pattern: TAoE
   required: false
   type: release_group
-- name: GRiMM
+- name: Vyndros
   negate: false
-  pattern: GRiMM
-  required: false
-  type: release_group
-- name: MNHD
-  negate: false
-  pattern: MNHD
-  required: false
-  type: release_group
-- name: Vialle
-  negate: false
-  pattern: Vialle
+  pattern: Vyndros
   required: false
   type: release_group
 tests:

@@ -10,8 +10,8 @@ description: '2160p Remux utilizes **Audio / Video Formats** to prioritise high 
   - 2160p Remux > 2160p Bluray > 2160p WEB-DL > 1080p Remux > 1080p HDR Bluray > 1080p
   Bluray > 1080p WEB-DL > 720p Bluray > 720p WEB-DL > 480p WEB-DL > DVD'
 tags:
-- 1080p
-- Remux
+- 2160p
+- Remux Focused
 - HDR
 - Lossless Audio
 - h265
@@ -286,23 +286,23 @@ custom_formats_sonarr:
 - name: Upscaled
   score: -999999
 qualities:
-- id: 3
-  name: Remux-2160p
 - id: -4
-  name: 2160p Transparent
+  name: 2160p Remux
   description: ''
   qualities:
+  - id: 3
+    name: Remux-2160p
   - id: 4
     name: Bluray-2160p
   - id: 5
     name: WEBDL-2160p
-- id: 8
-  name: Remux-1080p
 - id: -1
-  name: 1080p Transparent
+  name: 1080p Remux
   description: All capable of being indistinguishable from source. WEB-DL included
     to not allow unknown encode to trump known WEB-DL.
   qualities:
+  - id: 8
+    name: Remux-1080p
   - id: 10
     name: Bluray-1080p
   - id: 9
@@ -310,7 +310,7 @@ qualities:
   - id: 11
     name: WEBRip-1080p
 - id: -2
-  name: 720p Transparent
+  name: 720p Quality
   description: Fallback to 720p when 1080p cannot be found.
   qualities:
   - id: 13
@@ -320,7 +320,7 @@ qualities:
   - id: 15
     name: WEBRip-720p
 - id: -3
-  name: SD Fallback
+  name: 480p Quality
   description: Standard Definition Fallbacks
   qualities:
   - id: 18
@@ -332,7 +332,6 @@ qualities:
   - id: 22
     name: DVD
 upgrade_until:
-  id: 3
-  name: Remux-2160p
-  description: 4K Ultra HD Blu-ray disc content remuxed into a playable file format
+  id: -4
+  name: 2160p Remux
 language: must_original

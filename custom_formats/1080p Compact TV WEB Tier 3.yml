@@ -1,9 +1,9 @@
-name: 1080p Efficient+ TV Bluray Tier 7
-description: Matches release groups who fall under 1080p Efficient Bluray Tier 7
+name: 1080p Compact TV WEB Tier 3
+description: Matches release groups who fall under 1080p Compact WEB Tier 3
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
+- Compact
 - TV
 conditions:
 - name: 1080p
@@ -11,29 +11,44 @@ conditions:
   required: true
   resolution: 1080p
   type: resolution
-- name: Bluray
-  negate: false
-  required: true
-  source: bluray
-  type: source
 - name: x265
   negate: false
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: iVy
+- name: WEB-DL
   negate: false
-  pattern: iVy
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: edge2020
+  negate: false
+  pattern: edge2020
   required: false
   type: release_group
-- name: PHOCiS
+- name: Grimm
   negate: false
-  pattern: PHOCiS
+  pattern: GRiMM
   required: false
   type: release_group
-- name: YAWNiX
+- name: OnlyWeb
   negate: false
-  pattern: YAWNiX
+  pattern: OnlyWeb
+  required: false
+  type: release_group
+- name: TAoE
+  negate: false
+  pattern: TAoE
+  required: false
+  type: release_group
+- name: YELLO
+  negate: false
+  pattern: YELLO
   required: false
   type: release_group
 tests:

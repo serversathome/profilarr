@@ -11,7 +11,7 @@ description: '1080p Remux+ utilizes **Audio Formats** to prioritise high quality
   WEB-DL > 480p WEB-DL > DVD'
 tags:
 - 1080p
-- Remux
+- Remux Focused
 - Lossless Audio
 - h264
 - x264
@@ -240,13 +240,13 @@ custom_formats_sonarr:
 - name: Upscaled
   score: -999999
 qualities:
-- id: 8
-  name: Remux-1080p
 - id: -1
-  name: Transparent Capable
+  name: 1080p Remux
   description: All capable of being indistinguishable from source. WEB-DL included
     to not allow unknown encode to trump known WEB-DL.
   qualities:
+  - id: 8
+    name: Remux-1080p
   - id: 10
     name: Bluray-1080p
   - id: 9
@@ -254,7 +254,7 @@ qualities:
   - id: 11
     name: WEBRip-1080p
 - id: -2
-  name: 720p Fallback
+  name: 720p Quality
   description: Fallback to 720p when 1080p cannot be found.
   qualities:
   - id: 13
@@ -264,7 +264,7 @@ qualities:
   - id: 15
     name: WEBRip-720p
 - id: -3
-  name: SD Fallback
+  name: 480p Quality
   description: Standard Definition Fallbacks
   qualities:
   - id: 18
@@ -276,7 +276,8 @@ qualities:
   - id: 22
     name: DVD
 upgrade_until:
-  id: 8
-  name: Remux-1080p
-  description: 1080p Blu-ray disc content remuxed into a playable file format
+  id: -1
+  name: 1080p Quality
+  description: All capable of being indistinguishable from source. WEB-DL included
+    to not allow unknown encode to trump known WEB-DL.
 language: must_original

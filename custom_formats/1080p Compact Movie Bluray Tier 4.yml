@@ -1,49 +1,59 @@
-name: 1080p Efficient+ TV WEB Tier 6
-description: Matches release groups who fall under 1080p Efficient WEB Tier 6
+name: 1080p Compact Movie Bluray Tier 4
+description: Matches release groups who fall under 1080p Compact Bluray Tier 4
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
-- TV
+- Compact
+- Movie
 conditions:
 - name: 1080p
   negate: false
   required: true
   resolution: 1080p
   type: resolution
+- name: Bluray
+  negate: false
+  required: true
+  source: bluray
+  type: source
 - name: x265
   negate: false
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: WEB-DL
+- name: Chivaman
   negate: false
-  required: false
-  source: web_dl
-  type: source
-- name: WEBRip
-  negate: false
-  required: false
-  source: webrip
-  type: source
-- name: HODL
-  negate: false
-  pattern: HODL
+  pattern: Chivaman
   required: false
   type: release_group
-- name: iVy
+- name: edge2020
   negate: false
-  pattern: iVy
+  pattern: edge2020
   required: false
   type: release_group
-- name: PHOCiS
+- name: R1GY3B
   negate: false
-  pattern: PHOCiS
+  pattern: R1GY3B
   required: false
   type: release_group
-- name: YAWNiX
+- name: Ralphy
   negate: false
-  pattern: YAWNiX
+  pattern: Ralphy
+  required: false
+  type: release_group
+- name: ToNaTo
+  negate: false
+  pattern: ToNaTo
+  required: false
+  type: release_group
+- name: Vyndros
+  negate: false
+  pattern: Vyndros
+  required: false
+  type: release_group
+- name: YELLO
+  negate: false
+  pattern: YELLO
   required: false
   type: release_group
 tests:

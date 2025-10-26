@@ -1,9 +1,9 @@
-name: 1080p Efficient+ Movie WEB Tier 2
-description: Matches release groups who fall under 1080p Efficient WEB Tier 2
+name: 1080p Compact Movie Bluray Tier 2
+description: Matches release groups who fall under 1080p Compact Bluray Tier 2
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
+- Compact
 - Movie
 conditions:
 - name: 1080p
@@ -11,29 +11,24 @@ conditions:
   required: true
   resolution: 1080p
   type: resolution
+- name: Bluray
+  negate: false
+  required: true
+  source: bluray
+  type: source
 - name: x265
   negate: false
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: WEB-DL
-  negate: false
-  required: false
-  source: web_dl
-  type: source
-- name: WEBRip
-  negate: false
-  required: false
-  source: webrip
-  type: source
 - name: DarQ
   negate: false
   pattern: DarQ
   required: false
   type: release_group
-- name: dkore
+- name: honeyvera
   negate: false
-  pattern: dkore
+  pattern: Honeyvera
   required: false
   type: release_group
 - name: LSt
@@ -41,9 +36,19 @@ conditions:
   pattern: LSt
   required: false
   type: release_group
-- name: TimeDistortion
+- name: MNHD
   negate: false
-  pattern: TimeDistortion
+  pattern: MNHD
+  required: false
+  type: release_group
+- name: SARTRE
+  negate: false
+  pattern: SARTRE
+  required: false
+  type: release_group
+- name: Vialle
+  negate: false
+  pattern: Vialle
   required: false
   type: release_group
 tests:
