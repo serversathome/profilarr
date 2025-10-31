@@ -5,18 +5,18 @@ tags:
 - Group Tier
 conditions:
 - name: WEB-DL
-  type: source
-  required: false
   negate: false
+  required: false
   source: web_dl
-- name: WEBRip
   type: source
+- name: WEBRip
+  negate: false
   required: false
-  negate: false
   source: webrip
-- name: Anime WEB Tier 1
+  type: source
+- name: TRaSH Anime WEB Tier 1
   negate: false
-  pattern: Anime WEB Tier 1
+  pattern: TRaSH Anime WEB Tier 1
   required: true
   type: release_title
 tests: []

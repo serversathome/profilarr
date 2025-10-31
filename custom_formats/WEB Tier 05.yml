@@ -1,8 +1,8 @@
-name: Anime WEB Tier 4
+name: WEB Tier 05
 description: ''
 tags:
-- Anime
-- Group Tier
+- Release Groups
+- WEB-DL
 conditions:
 - name: WEB-DL
   negate: false
@@ -14,9 +14,9 @@ conditions:
   required: false
   source: webrip
   type: source
-- name: TRaSH Anime WEB Tier 4
+- name: Dictionarry WEB Tier 05
   negate: false
-  pattern: TRaSH Anime WEB Tier 4
-  required: true
-  type: release_title
+  pattern: Dictionarry WEB Tier 05
+  required: false
+  type: release_group
 tests: []

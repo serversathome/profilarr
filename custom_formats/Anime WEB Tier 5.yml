@@ -14,9 +14,9 @@ conditions:
   required: false
   source: webrip
   type: source
-- name: Anime WEB Tier 5
+- name: TRaSH Anime WEB Tier 5
   negate: false
-  pattern: Anime WEB Tier 5
+  pattern: TRaSH Anime WEB Tier 5
   required: true
   type: release_title
 tests: []

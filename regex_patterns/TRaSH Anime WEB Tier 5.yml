@@ -1,0 +1,7 @@
+name: TRaSH Anime WEB Tier 5
+pattern: (?i)(?:^|[^A-Za-z0-9])(?:9volt|GJM|Kaleido|Kantai|SobsPlease|Some-Stuffs)(?:[^A-Za-z0-9]|$)
+description: TRaSH Guides Anime Web Tier 05 (FanSubs)
+tags:
+- Anime
+- Release Group
+tests: []

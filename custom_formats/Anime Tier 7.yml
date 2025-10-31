@@ -5,35 +5,23 @@ tags:
 - Group Tier
 conditions:
 - name: Bluray
-  type: source
-  required: false
   negate: false
+  required: false
   source: bluray
+  type: source
 - name: Bluray Remux
-  type: source
-  required: false
   negate: false
+  required: false
   source: bluray_raw
-- name: DVD
   type: source
+- name: DVD
+  negate: false
   required: false
-  negate: false
   source: dvd
-- name: Anime Tier 7
+  type: source
+- name: TRaSH Anime Bluray Tier 7
   negate: false
-  pattern: Anime Tier 7
+  pattern: TRaSH Anime Bluray Tier 7
   required: true
-  type: release_title
-tests:
-- conditionResults:
-  - matches: true
-    name: Anime Tier 7
-    negate: false
-    pattern: Anime Tier 7
-    required: true
-    type: release_title
-  expected: true
-  id: 1
-  input: Attack.on.Titan.S01E25.1080p.Blu-ray.10-bit.Dual-Audio.TrueHD.x265-IAHD
-  lastRun: '2025-07-15T17:26:01.108168'
-  passes: true
+  type: release_group
+tests: []

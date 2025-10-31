@@ -5,23 +5,23 @@ tags:
 - Group Tier
 conditions:
 - name: Bluray
-  type: source
-  required: false
   negate: false
+  required: false
   source: bluray
+  type: source
 - name: Bluray Remux
-  type: source
-  required: false
   negate: false
+  required: false
   source: bluray_raw
-- name: DVD
   type: source
+- name: DVD
+  negate: false
   required: false
-  negate: false
   source: dvd
-- name: Anime Tier 4
+  type: source
+- name: TRaSH Anime Bluray Tier 4
   negate: false
-  pattern: Anime Tier 4
+  pattern: TRaSH Anime Bluray Tier 4
   required: true
-  type: release_title
+  type: release_group
 tests: []

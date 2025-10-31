@@ -6,9 +6,14 @@ tags:
 conditions:
 - name: WEB-DL
   negate: false
-  required: true
+  required: false
   source: web_dl
   type: source
+- name: WEBRip
+  type: source
+  required: false
+  negate: false
+  source: webrip
 - name: Dictionarry WEB Tier 02
   negate: false
   pattern: Dictionarry WEB Tier 02
