@@ -29,7 +29,7 @@ jobs:
 
       - name: Download latest Anime 1080p.yml from upstream
         run: |
-          UPSTREAM_URL="https://raw.githubusercontent.com/sweatyeggs69/profilarr/stable/profiles/Anime%201080p.yml"
+          UPSTREAM_URL="https://raw.githubusercontent.com/Dumpstarr/Dumpstarr/refs/heads/stable/profiles/Anime%201080p.yml"
           curl -fsSL "$UPSTREAM_URL" -o profiles/Anime\ 1080p.yml
 
       - name: Parse custom formats from Anime 1080p.yml
