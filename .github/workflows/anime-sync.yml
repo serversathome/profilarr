@@ -41,7 +41,7 @@ jobs:
 
       - name: Download required custom formats
         run: |
-          BASE_URL="https://raw.githubusercontent.com/Dumpstarr/Dumpstarr/refs/heads/stable/custom_formats"
+          BASE_URL="https://raw.githubusercontent.com/Dumpstarr/Dumpstarr/stable/custom_formats"
           echo "${{ steps.parse_formats.outputs.formats }}" | tr ',' '\n' | while read -r FORMAT; do
               FILE_NAME="$FORMAT.yml"
               # Use %20 only in URL for spaces
@@ -53,7 +53,7 @@ jobs:
       - name: Download required regex patterns
         run: |
           mkdir -p regex_patterns
-          BASE_URL="https://raw.githubusercontent.com/Dumpstarr/Dumpstarr/refs/heads/stable/regex_patterns"
+          BASE_URL="https://raw.githubusercontent.com/Dumpstarr/Dumpstarr/stable/regex_patterns"
 
           # Extract only condition names that have a "pattern" field
           mapfile -t REGEX_PATTERNS < <(
