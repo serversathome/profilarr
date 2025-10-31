@@ -29,15 +29,26 @@ jobs:
 
       - name: Download latest Anime 1080p.yml from upstream
         run: |
-          UPSTREAM_URL="https://raw.githubusercontent.com/Dumpstarr/Dumpstarr/refs/heads/stable/profiles/Anime%201080p.yml"
+          UPSTREAM_URL="https://raw.githubusercontent.com/Dumpstarr/Dumpstarr/stable/profiles/Anime%201080p.yml"
           curl -fsSL "$UPSTREAM_URL" -o profiles/Anime\ 1080p.yml
 
       - name: Parse custom formats from Anime 1080p.yml
         id: parse_formats
         run: |
-          FORMATS=$(yq e '.custom_formats[].name' profiles/Anime\ 1080p.yml)
+          # Try different keys depending on file structure
+          FORMATS=$(yq e '.custom_formats[].name' profiles/Anime\ 1080p.yml 2>/dev/null || true)
+          if [ -z "$FORMATS" ] || [ "$FORMATS" = "null" ]; then
+              FORMATS=$(yq e '.custom_formats_sonarr[].name' profiles/Anime\ 1080p.yml 2>/dev/null || true)
+          fi
+          if [ -z "$FORMATS" ] || [ "$FORMATS" = "null" ]; then
+              FORMATS=$(yq e '.custom_formats_radarr[].name' profiles/Anime\ 1080p.yml 2>/dev/null || true)
+          fi
+
+          echo "Detected formats:"
+          echo "$FORMATS"
           FORMATS_OUTPUT=$(echo "$FORMATS" | paste -sd "," -)
           echo "formats=$FORMATS_OUTPUT" >> $GITHUB_OUTPUT
+
 
       - name: Download required custom formats
         run: |
