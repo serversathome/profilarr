@@ -22,13 +22,13 @@ upgradeUntilScore: 400000
 minScoreIncrement: 1
 custom_formats:
 - name: 2160p Quality Tier 1
-  score: 284000
+  score: 285000
 - name: 2160p Quality Tier 2
-  score: 283000
+  score: 284000
 - name: 2160p Quality Tier 3
-  score: 282000
+  score: 283000
 - name: 2160p Quality Tier 4
-  score: 281000
+  score: 282000
 - name: 2160p Quality Tier 5
   score: 280000
 - name: 2160p Balanced Tier 1
