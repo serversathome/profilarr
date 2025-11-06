@@ -179,8 +179,6 @@ custom_formats:
   score: 0
 - name: STAN
   score: 0
-- name: Foreign Release Groups
-  score: -900
 - name: x265 (Bluray)
   score: -220000
 - name: AV1
@@ -277,7 +275,7 @@ qualities:
     name: DVD
 upgrade_until:
   id: -1
-  name: 1080p Quality
+  name: 1080p Remux
   description: All capable of being indistinguishable from source. WEB-DL included
     to not allow unknown encode to trump known WEB-DL.
 language: must_original
