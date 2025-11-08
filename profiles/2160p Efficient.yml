@@ -88,16 +88,18 @@ custom_formats:
   score: 1000
 - name: PQ
   score: 1000
-- name: DTS-HD HRA
+- name: FLAC
   score: 800
-- name: Opus
-  score: 800
-- name: Dolby Digital +
-  score: 600
 - name: Dolby Atmos
+  score: 600
+- name: DTS-HD HRA
+  score: 600
+- name: Opus
+  score: 600
+- name: Dolby Digital +
   score: 400
 - name: DTS-ES
-  score: 400
+  score: 300
 - name: Dolby Digital
   score: 200
 - name: DTS
