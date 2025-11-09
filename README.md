@@ -16,7 +16,7 @@ My issue with getting a pre-existing anime quality profile from someone else is 
 
 
 
-This repo is an up-to-date Dictionarry repo (auto-pull enabled) with the addition of the [anime profile](https://github.com/Dumpstarr/Dumpstarr/blob/stable/profiles/Anime%201080p.yml) built by [Sweaty Eggs](https://github.com/Dumpstarr/Dumpstarr). What you are getting here is a **100% unaltered** Dictionarry repo with the addition of a single amime quality profile.
+This repo is an up-to-date Dictionarry repo (auto-pull enabled) with the addition of the [anime profile](https://github.com/Dumpstarr/Dumpstarr/blob/stable/profiles/Anime%201080p.yml) built by [Dumpstarr](https://github.com/Dumpstarr/Dumpstarr). What you are getting here is a **100% unaltered** Dictionarry repo with the addition of a single amime quality profile.
 
 
 
@@ -28,7 +28,7 @@ This repo is an up-to-date Dictionarry repo (auto-pull enabled) with the additio
 
 
 
-This repo is constructed using a GitHub workflow. The workflow checks to see if there are any changes to the Dictionarry repo and pulls them here. It also checks the anime profile from Sweaty Eggs (and its dependencies) and pulls **only those changes** here while leaving the rest of his repo alone. So basically every day this is a fully updated Dictionarry repo with a fully updated anime profile.
+This repo is constructed using a GitHub workflow. The workflow checks to see if there are any changes to the Dictionarry repo and pulls them here. It also checks the anime profile from Dumpstarr (and its dependencies) and pulls **only those changes** here while leaving the rest of his repo alone. So basically every day this is a fully updated Dictionarry repo with a fully updated anime profile.
 
 
 
