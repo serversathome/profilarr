@@ -104,7 +104,7 @@ custom_formats:
 - name: HDR10+
   score: 2000
 - name: DTS-X
-  score: 1800
+  score: 1600
 - name: DTS-HD MA
   score: 1200
 - name: TrueHD
@@ -131,22 +131,24 @@ custom_formats:
   score: 800
 - name: PCM
   score: 800
-- name: Atmos
-  score: 600
-- name: Atmos (Missing)
-  score: 600
 - name: DTS-HD HRA
-  score: 600
+  score: 700
 - name: Opus
-  score: 600
+  score: 700
 - name: Dolby Digital +
-  score: 400
+  score: 600
 - name: DTS-ES
-  score: 300
+  score: 500
+- name: Atmos
+  score: 400
+- name: Atmos (Missing)
+  score: 400
 - name: Dolby Digital
-  score: 200
+  score: 400
 - name: DTS
-  score: 100
+  score: 300
+- name: AAC
+  score: 200
 - name: Remux Tier 1
   score: 100
 - name: WEB-DL Tier 1
@@ -171,8 +173,6 @@ custom_formats:
   score: 7
 - name: Repack1
   score: 6
-- name: AAC
-  score: 0
 - name: BCORE
   score: 0
 - name: CRAV
