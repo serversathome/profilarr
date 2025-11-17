@@ -248,9 +248,9 @@ custom_formats_sonarr:
   score: 261000
 - name: 1080p Efficient TV Bluray Tier 1
   score: 184000
-- name: 1080p Efficient TV Bluray Tier 2
-  score: 183000
 - name: Vialle Bluray
+  score: 184000
+- name: 1080p Efficient TV Bluray Tier 2
   score: 183000
 - name: 1080p Efficient TV Bluray Tier 3
   score: 182000
