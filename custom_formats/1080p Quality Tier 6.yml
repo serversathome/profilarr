@@ -32,10 +32,10 @@ conditions:
   required: false
   type: release_group
 - name: GALVANiZE
-  type: release_group
-  required: false
   negate: false
   pattern: GALVANiZE
+  required: false
+  type: release_group
 - name: HANDJOB
   negate: false
   pattern: HANDJOB
@@ -56,6 +56,11 @@ conditions:
   pattern: Ivandro
   required: false
   type: release_group
+- name: j3rico
+  type: release_group
+  required: false
+  negate: false
+  pattern: j3rico
 - name: KnG
   negate: false
   pattern: KnG
