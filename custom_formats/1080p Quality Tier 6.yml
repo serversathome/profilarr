@@ -31,6 +31,11 @@ conditions:
   pattern: EuReKA
   required: false
   type: release_group
+- name: GALVANiZE
+  type: release_group
+  required: false
+  negate: false
+  pattern: GALVANiZE
 - name: HANDJOB
   negate: false
   pattern: HANDJOB
