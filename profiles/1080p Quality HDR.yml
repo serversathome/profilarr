@@ -17,8 +17,6 @@ minScoreIncrement: 1
 custom_formats:
 - name: UHD Bluray
   score: 240000
-- name: UHD Bluray (Missing)
-  score: 240000
 - name: 1080p WEB-DL
   score: 200000
 - name: 1080p Bluray
