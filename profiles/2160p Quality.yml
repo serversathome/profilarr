@@ -93,10 +93,6 @@ custom_formats:
   score: 10000
 - name: Dolby Vision
   score: 3000
-- name: HMAX
-  score: 3000
-- name: MAX
-  score: 3000
 - name: AMZN
   score: 2000
 - name: HDR10+
@@ -217,7 +213,7 @@ custom_formats:
   score: -999999
 custom_formats_radarr:
 - name: 2160p Balanced Tier 1
-  score: 263000
+  score: 262000
 - name: MA
   score: 6000
 - name: ATVP
@@ -227,6 +223,10 @@ custom_formats_radarr:
 - name: iT
   score: 4000
 - name: Amazon Enhancement
+  score: 2000
+- name: HMAX
+  score: 2000
+- name: MAX
   score: 2000
 - name: Better Theatricals
   score: 1000
@@ -256,6 +256,10 @@ custom_formats_sonarr:
 - name: ATVP
   score: 3000
 - name: DSNP
+  score: 3000
+- name: HMAX
+  score: 3000
+- name: MAX
   score: 3000
 - name: Amazon Enhancement
   score: 1000
