@@ -1,5 +1,5 @@
 name: HIDIVE
-pattern: \\b(HIDI(VE)?)\\b
+pattern: \b(HIDI(VE)?)\b
 description: ''
 tags:
 - Anime

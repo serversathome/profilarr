@@ -1,5 +1,5 @@
 name: ADN
-pattern: \\b(ADN)\\b
+pattern: \b(ADN)\b
 description: ''
 tags:
 - Anime

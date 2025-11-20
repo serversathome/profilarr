@@ -1,5 +1,5 @@
 name: Bilibili
-pattern: \\b(Bili(bili)?)\\b
+pattern: \b(Bili(bili)?)\b
 description: ''
 tags:
 - Anime

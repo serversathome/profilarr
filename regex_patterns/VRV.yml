@@ -1,5 +1,5 @@
 name: VRV
-pattern: \\b(VRV)\\b
+pattern: \b(VRV)\b
 description: ''
 tags:
 - Anime

@@ -1,5 +1,5 @@
 name: ABEMA
-pattern: \\b(ABEMA[ ._-]?(TV)?)\\b
+pattern: \b(ABEMA[ ._-]?(TV)?)\b
 description: ''
 tags:
 - Anime
