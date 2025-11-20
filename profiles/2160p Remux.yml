@@ -33,8 +33,6 @@ custom_formats:
   score: 301000
 - name: 2160p Quality Tier 5
   score: 300000
-- name: 2160p Balanced Tier 1
-  score: 284000
 - name: 2160p Balanced Tier 2
   score: 280000
 - name: 2160p WEB-DL
@@ -228,6 +226,8 @@ custom_formats:
 - name: Xvid
   score: -999999
 custom_formats_radarr:
+- name: 2160p Balanced Tier 1
+  score: 282000
 - name: MA
   score: 6000
 - name: ATVP
@@ -263,6 +263,8 @@ custom_formats_radarr:
 - name: Upscale
   score: -999999
 custom_formats_sonarr:
+- name: 2160p Balanced Tier 1
+  score: 284000
 - name: ATVP
   score: 3000
 - name: DSNP
