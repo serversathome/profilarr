@@ -81,6 +81,14 @@ custom_formats:
   score: 2000
 - name: HDR10+
   score: 2000
+- name: DTS-X
+  score: 1600
+- name: DTS-HD MA
+  score: 1200
+- name: TrueHD
+  score: 1200
+- name: TrueHD (Missing)
+  score: 1200
 - name: ATV
   score: 1000
 - name: HDR
@@ -97,6 +105,8 @@ custom_formats:
   score: 1000
 - name: FLAC
   score: 800
+- name: PCM
+  score: 800
 - name: DTS-HD HRA
   score: 700
 - name: Opus
@@ -105,7 +115,9 @@ custom_formats:
   score: 600
 - name: DTS-ES
   score: 500
-- name: Dolby Atmos
+- name: Atmos
+  score: 400
+- name: Atmos (Missing)
   score: 400
 - name: Dolby Digital
   score: 400
