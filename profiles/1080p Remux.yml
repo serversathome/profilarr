@@ -236,6 +236,20 @@ custom_formats_sonarr:
 - name: Upscaled
   score: -999999
 qualities:
+- id: -3
+  name: 480p Quality
+  description: Standard Definition Fallbacks
+  qualities:
+  - id: 17
+    name: Bluray-576p
+  - id: 18
+    name: Bluray-480p
+  - id: 19
+    name: WEBDL-480p
+  - id: 20
+    name: WEBRip-480p
+  - id: 22
+    name: DVD
 - id: -1
   name: 1080p Remux
   description: All capable of being indistinguishable from source. WEB-DL included
@@ -259,18 +273,6 @@ qualities:
     name: WEBDL-720p
   - id: 15
     name: WEBRip-720p
-- id: -3
-  name: 480p Quality
-  description: Standard Definition Fallbacks
-  qualities:
-  - id: 18
-    name: Bluray-480p
-  - id: 19
-    name: WEBDL-480p
-  - id: 20
-    name: WEBRip-480p
-  - id: 22
-    name: DVD
 upgrade_until:
   id: -1
   name: 1080p Remux

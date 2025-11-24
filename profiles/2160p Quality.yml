@@ -306,6 +306,8 @@ qualities:
   name: 480p Quality
   description: Standard Definition Fallbacks
   qualities:
+  - id: 17
+    name: Bluray-576p
   - id: 18
     name: Bluray-480p
   - id: 19
