@@ -36,10 +36,10 @@ custom_formats:
   score: 280000
 - name: 1080p WEB-DL (h264)
   score: 280000
-- name: 720p Bluray
-  score: 240000
 - name: 720p WEB-DL
   score: 240000
+- name: 720p Bluray
+  score: 180000
 - name: 720p WEBRip
   score: 180000
 - name: 576p Bluray
