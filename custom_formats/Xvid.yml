@@ -10,12 +10,12 @@ conditions:
   type: release_title
 - name: Not DVD
   negate: true
-  required: false
+  required: true
   source: dvd
   type: source
 - name: Not HDTV
-  type: source
-  required: false
   negate: true
+  required: true
   source: television
+  type: source
 tests: []
