@@ -21,6 +21,11 @@ conditions:
   required: true
   source: bluray
   type: source
+- name: SoLaR
+  type: release_group
+  required: false
+  negate: false
+  pattern: SoLaR
 - name: ZoroSenpai
   negate: false
   pattern: ZoroSenpai
