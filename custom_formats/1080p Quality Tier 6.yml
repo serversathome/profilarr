@@ -27,10 +27,10 @@ conditions:
   source: webrip
   type: source
 - name: BRUTE
-  type: release_group
-  required: false
   negate: false
   pattern: BRUTE
+  required: false
+  type: release_group
 - name: EuReKA
   negate: false
   pattern: EuReKA
@@ -41,6 +41,11 @@ conditions:
   pattern: GALVANiZE
   required: false
   type: release_group
+- name: HaB
+  type: release_group
+  required: false
+  negate: false
+  pattern: HaB
 - name: HANDJOB
   negate: false
   pattern: HANDJOB

@@ -93,6 +93,14 @@ custom_formats:
   score: 41000
 - name: 576p Quality Tier 4
   score: 40000
+- name: 480p Quality Tier 1
+  score: 23000
+- name: 480p Quality Tier 2
+  score: 22000
+- name: 480p Quality Tier 3
+  score: 21000
+- name: 480p Quality Tier 4
+  score: 20000
 - name: DVD
   score: 20000
 - name: DVD Remux

@@ -1,15 +1,15 @@
-name: 576p Quality Tier 2
-description: Matches release groups who fall under 576p Quality Tier 2
+name: 480p Quality Tier 3
+description: Matches release groups who fall under 480p Quality Tier 3
 tags:
 - GPPi
 - Release Group Tier
-- 576p
+- 480p
 - Quality
 conditions:
-- name: 576p
+- name: 480p
   negate: false
   required: true
-  resolution: 576p
+  resolution: 480p
   type: resolution
 - name: Not Remux
   negate: true
@@ -21,34 +21,34 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: BV
+- name: EDPH
   negate: false
-  pattern: BV
+  pattern: EDPH
   required: false
   type: release_group
-- name: c0kE
+- name: GS88
   negate: false
-  pattern: c0kE
+  pattern: GS88
   required: false
   type: release_group
-- name: Dariush
+- name: KnG
   negate: false
-  pattern: Dariush
+  pattern: KnG
   required: false
   type: release_group
-- name: HaB
-  type: release_group
-  required: false
+- name: playSD
   negate: false
-  pattern: HaB
-- name: TBB
-  negate: false
-  pattern: TBB
+  pattern: playSD
   required: false
   type: release_group
-- name: ZQ
+- name: PTer
   negate: false
-  pattern: ZQ
+  pattern: PTer
+  required: false
+  type: release_group
+- name: rttr
+  negate: false
+  pattern: rttr
   required: false
   type: release_group
 tests: []
