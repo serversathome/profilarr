@@ -18,73 +18,77 @@ tags:
 - x265
 upgradesAllowed: true
 minCustomFormatScore: 20000
-upgradeUntilScore: 400000
+upgradeUntilScore: 600000
 minScoreIncrement: 1
 custom_formats:
 - name: 2160p Remux
-  score: 320000
+  score: 500000
 - name: 2160p Quality Tier 1
-  score: 304000
+  score: 485000
 - name: 2160p Quality Tier 2
-  score: 303000
+  score: 484000
 - name: 2160p Quality Tier 3
-  score: 302000
+  score: 483000
 - name: 2160p Quality Tier 4
-  score: 301000
+  score: 482000
 - name: 2160p Quality Tier 5
-  score: 300000
+  score: 480000
 - name: 2160p Balanced Tier 2
-  score: 280000
+  score: 460000
 - name: 2160p WEB-DL
+  score: 460000
+- name: 1080p Remux
+  score: 440000
+- name: UHD Bluray
+  score: 420000
+- name: 1080p WEB-DL
+  score: 380000
+- name: 1080p Bluray
+  score: 280000
+- name: 1080p WEBRip
   score: 280000
 - name: 2160p Quality Tier 6
   score: 279000
-- name: 1080p Remux
-  score: 260000
-- name: UHD Bluray
-  score: 240000
-- name: 1080p WEB-DL
-  score: 200000
-- name: 1080p Bluray
-  score: 140000
-- name: 1080p WEBRip
-  score: 140000
 - name: 720p WEB-DL
-  score: 100000
-- name: 1080p Quality Tier 1
-  score: 85000
-- name: 1080p Quality Tier 2
-  score: 84000
-- name: 1080p Quality Tier 3
-  score: 83000
-- name: 1080p Quality Tier 4
-  score: 82000
-- name: 1080p Quality Tier 5
-  score: 81000
-- name: 1080p Quality Tier 6
-  score: 80000
+  score: 240000
 - name: 720p Bluray
-  score: 80000
+  score: 180000
 - name: 720p WEBRip
-  score: 80000
+  score: 180000
+- name: 1080p Quality Tier 1
+  score: 125000
+- name: 1080p Quality Tier 2
+  score: 124000
+- name: 1080p Quality Tier 3
+  score: 123000
+- name: 1080p Quality Tier 4
+  score: 122000
+- name: 1080p Quality Tier 5
+  score: 121000
+- name: 1080p Quality Tier 6
+  score: 120000
+- name: 576p Bluray
+  score: 120000
 - name: 1080p Balanced Tier 1
-  score: 60000
+  score: 100000
+- name: 720p Quality Tier 1
+  score: 85000
+- name: 720p Quality Tier 2
+  score: 84000
+- name: 720p Quality Tier 3
+  score: 83000
+- name: 720p Quality Tier 4
+  score: 82000
+- name: 720p Quality Tier 5
+  score: 81000
+- name: 480p Bluray
+  score: 80000
+- name: 720p Quality Tier 6
+  score: 80000
 - name: 480p WEB-DL
   score: 60000
-- name: 720p Quality Tier 1
-  score: 45000
-- name: 720p Quality Tier 2
-  score: 44000
-- name: 720p Quality Tier 3
-  score: 43000
-- name: 720p Quality Tier 4
-  score: 42000
-- name: 720p Quality Tier 5
-  score: 41000
-- name: 720p Quality Tier 6
-  score: 40000
 - name: 720p Balanced Tier 1
-  score: 20000
+  score: 60000
 - name: DVD
   score: 20000
 - name: DVD Remux
@@ -190,7 +194,7 @@ custom_formats:
 - name: STAN
   score: 0
 - name: x265 (Bluray)
-  score: -220000
+  score: -400000
 - name: AV1
   score: -999999
 - name: Banned Groups
@@ -225,7 +229,7 @@ custom_formats:
   score: -999999
 custom_formats_radarr:
 - name: 2160p Balanced Tier 1
-  score: 282000
+  score: 462000
 - name: MA
   score: 6000
 - name: ATVP
@@ -262,7 +266,7 @@ custom_formats_radarr:
   score: -999999
 custom_formats_sonarr:
 - name: 2160p Balanced Tier 1
-  score: 284000
+  score: 464000
 - name: ATVP
   score: 3000
 - name: DSNP
