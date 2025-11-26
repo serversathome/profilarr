@@ -1,6 +1,6 @@
 name: SDR
-description: Ban 2160p Releases without Dolby Vision or HDR Formats. Remux and Movies
-  Anywhere are excluded due to the high bitrate.
+description: Ban 2160p WEB-DL Releases without Dolby Vision or HDR Formats. Movies
+  Anywhere is excluded due to the high bitrate.
 tags: []
 conditions:
 - name: 2160p
@@ -9,10 +9,10 @@ conditions:
   resolution: 2160p
   type: resolution
 - name: WEB-DL
-  type: source
-  required: true
   negate: false
+  required: true
   source: web_dl
+  type: source
 - name: DV HDR
   negate: true
   pattern: Basic HDR Formats
@@ -21,11 +21,6 @@ conditions:
 - name: Movies Anywhere
   negate: true
   pattern: Movies Anywhere
-  required: true
-  type: release_title
-- name: Remux
-  negate: true
-  pattern: Remux
   required: true
   type: release_title
 tests: []
