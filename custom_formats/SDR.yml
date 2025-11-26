@@ -8,6 +8,11 @@ conditions:
   required: true
   resolution: 2160p
   type: resolution
+- name: WEB-DL
+  type: source
+  required: true
+  negate: false
+  source: web_dl
 - name: DV HDR
   negate: true
   pattern: Basic HDR Formats
