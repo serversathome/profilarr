@@ -252,13 +252,13 @@ custom_formats_sonarr:
   score: 309000
 - name: QxR WEB
   score: 309000
+- name: TAoE WEB
+  score: 309000
+- name: Vialle WEB
+  score: 309000
 - name: 1080p Compact TV WEB Tier 2
   score: 308000
-- name: Vialle WEB
-  score: 308000
 - name: 1080p Compact TV WEB Tier 3
-  score: 307000
-- name: TAoE WEB
   score: 307000
 - name: 1080p Compact TV WEB Tier 4
   score: 306000
