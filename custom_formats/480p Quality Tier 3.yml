@@ -1,47 +1,54 @@
-name: Remux Tier 4
-description: Matches release groups who fall under Remux Tier 4
+name: 480p Quality Tier 3
+description: Matches release groups who fall under 480p Quality Tier 3
 tags:
+- GPPi
 - Release Group Tier
-- Remux
+- 480p
+- Quality
 conditions:
-- name: Remux
+- name: 480p
   negate: false
+  required: true
+  resolution: 480p
+  type: resolution
+- name: Not Remux
+  negate: true
   pattern: Remux
   required: true
   type: release_title
-- name: Not DVD
-  negate: true
+- name: Bluray
+  negate: false
   required: true
-  source: dvd
+  source: bluray
   type: source
-- name: BTN
+- name: EDPH
   negate: false
-  pattern: BTN
+  pattern: EDPH
   required: false
   type: release_group
-- name: iFT
+- name: GS88
   negate: false
-  pattern: iFT
+  pattern: GS88
   required: false
   type: release_group
-- name: KRaLiMaRKo
+- name: KnG
   negate: false
-  pattern: KRaLiMaRKo
+  pattern: KnG
   required: false
   type: release_group
-- name: playBD
+- name: playSD
   negate: false
-  pattern: playBD
+  pattern: playSD
   required: false
   type: release_group
-- name: PTP
+- name: PTer
   negate: false
-  pattern: PTP
+  pattern: PTer
   required: false
   type: release_group
-- name: TRiToN
+- name: rttr
   negate: false
-  pattern: TRiToN
+  pattern: rttr
   required: false
   type: release_group
 tests: []
