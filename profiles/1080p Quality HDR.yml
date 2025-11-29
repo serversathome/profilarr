@@ -159,6 +159,8 @@ custom_formats:
   score: 0
 - name: HULU
   score: 0
+- name: MUBI
+  score: 0
 - name: NOW
   score: 0
 - name: PCOK
