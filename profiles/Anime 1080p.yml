@@ -21,9 +21,7 @@ upgradesAllowed: true
 minCustomFormatScore: 0
 upgradeUntilScore: 10000
 minScoreIncrement: 1
-custom_formats: []
-custom_formats_radarr: []
-custom_formats_sonarr:
+custom_formats:
 - name: Anime Tier 1
   score: 1400
 - name: Anime Tier 2
@@ -66,10 +64,14 @@ custom_formats_sonarr:
   score: 200
 - name: Anime Dual Audio
   score: 101
+- name: Multi-Audio
+  score: 101
 - name: Uncensored
   score: 101
 - name: Anime WEB Tier 6
   score: 100
+- name: Multi-Subs
+  score: 10
 - name: CR
   score: 7
 - name: DSNP
@@ -110,6 +112,8 @@ custom_formats_sonarr:
   score: -10000
 - name: AV1
   score: -10000
+custom_formats_radarr: []
+custom_formats_sonarr: []
 qualities:
 - id: -5
   name: Bluray/REMUX 1080p
