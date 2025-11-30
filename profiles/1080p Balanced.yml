@@ -22,6 +22,8 @@ upgradeUntilScore: 600000
 minScoreIncrement: 1
 custom_formats:
 - name: 1080p Balanced Tier 1
+  score: 281000
+- name: 1080p Balanced Tier 2
   score: 280000
 - name: 1080p WEB-DL
   score: 280000
