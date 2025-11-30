@@ -268,6 +268,8 @@ custom_formats_radarr:
   score: 1000
 - name: Special Edition
   score: 1000
+- name: Movies Anywhere Enhancement
+  score: -2000
 - name: iTunes Enhancement
   score: -3000
 - name: 3D
