@@ -209,6 +209,8 @@ custom_formats_radarr:
   score: 303000
 - name: TAoE WEB
   score: 303000
+- name: Weasley WEB
+  score: 303000
 - name: 1080p Compact Movie WEB Tier 2
   score: 302000
 - name: 1080p Compact Movie WEB Tier 3
@@ -259,6 +261,8 @@ custom_formats_sonarr:
 - name: TAoE WEB
   score: 309000
 - name: Vialle WEB
+  score: 309000
+- name: Weasley WEB
   score: 309000
 - name: 1080p Compact TV WEB Tier 2
   score: 308000
