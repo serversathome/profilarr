@@ -76,21 +76,17 @@ custom_formats:
   score: 11000
 - name: SD Quality Tier 2
   score: 10000
-- name: DSNP
-  score: 4000
-- name: ATVP
-  score: 3000
 - name: Dolby Vision
   score: 3000
-- name: HMAX
+- name: DSNP
   score: 3000
-- name: MAX
-  score: 3000
+- name: ATVP
+  score: 2000
 - name: HDR10+
   score: 2000
-- name: iT
+- name: HMAX
   score: 2000
-- name: NF
+- name: MAX
   score: 2000
 - name: DS4K
   score: 1000
@@ -100,13 +96,11 @@ custom_formats:
   score: 1000
 - name: HLG
   score: 1000
-- name: PCOK
+- name: iT
   score: 1000
-- name: PMTP
+- name: NF
   score: 1000
 - name: PQ
-  score: 1000
-- name: STAN
   score: 1000
 - name: FLAC
   score: 800
@@ -154,9 +148,15 @@ custom_formats:
   score: 0
 - name: NOW
   score: 0
+- name: PCOK
+  score: 0
+- name: PMTP
+  score: 0
 - name: ROKU
   score: 0
 - name: SHO
+  score: 0
+- name: STAN
   score: 0
 - name: AV1
   score: -999999
@@ -218,9 +218,9 @@ custom_formats_radarr:
 - name: 1080p Compact Movie WEB Tier 4
   score: 300000
 - name: MA
-  score: 5000
-- name: AMZN
   score: 4000
+- name: AMZN
+  score: 3000
 - name: Better Theatricals
   score: 1000
 - name: Special Edition
