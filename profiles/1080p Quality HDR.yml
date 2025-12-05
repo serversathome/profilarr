@@ -90,21 +90,23 @@ custom_formats:
 - name: SD Quality Tier 2
   score: 10000
 - name: AMZN
-  score: 3000
+  score: 4000
+- name: DSNP
+  score: 4000
 - name: ATVP
   score: 3000
 - name: Dolby Vision
   score: 3000
-- name: DSNP
+- name: HMAX
+  score: 3000
+- name: MAX
   score: 3000
 - name: HDR10+
   score: 2000
-- name: HMAX
+- name: iT
   score: 2000
-- name: MAX
+- name: NF
   score: 2000
-- name: ATV
-  score: 1000
 - name: HDR
   score: 1000
 - name: HDR (Missing)
@@ -113,11 +115,13 @@ custom_formats:
   score: 1000
 - name: HLG
   score: 1000
-- name: iT
+- name: PCOK
   score: 1000
-- name: NF
+- name: PMTP
   score: 1000
 - name: PQ
+  score: 1000
+- name: STAN
   score: 1000
 - name: FLAC
   score: 800
@@ -153,9 +157,9 @@ custom_formats:
   score: 7
 - name: Repack1
   score: 6
-- name: BCORE
-  score: 0
 - name: CRAV
+  score: 0
+- name: CRIT
   score: 0
 - name: HTSR
   score: 0
@@ -165,15 +169,9 @@ custom_formats:
   score: 0
 - name: NOW
   score: 0
-- name: PCOK
-  score: 0
-- name: PMTP
-  score: 0
 - name: ROKU
   score: 0
 - name: SHO
-  score: 0
-- name: STAN
   score: 0
 - name: x265 (Bluray)
   score: -400000
@@ -186,6 +184,8 @@ custom_formats:
 - name: Banned UHD Bluray
   score: -999999
 - name: Banned WEBRip
+  score: -999999
+- name: BCORE
   score: -999999
 - name: Dolby Vision (Without Fallback)
   score: -999999
@@ -205,10 +205,8 @@ custom_formats:
   score: -999999
 custom_formats_radarr:
 - name: MA
-  score: 4000
+  score: 5000
 - name: Better Theatricals
-  score: 1000
-- name: CRIT
   score: 1000
 - name: Special Edition
   score: 1000

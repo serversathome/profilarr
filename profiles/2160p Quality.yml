@@ -125,8 +125,6 @@ custom_formats:
   score: 1200
 - name: TrueHD (Missing)
   score: 1200
-- name: ATV
-  score: 1000
 - name: HDR
   score: 1000
 - name: HDR (Missing)

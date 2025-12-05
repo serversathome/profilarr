@@ -94,8 +94,6 @@ custom_formats:
   score: 2000
 - name: HDR10+
   score: 2000
-- name: ATV
-  score: 1000
 - name: DS4K
   score: 1000
 - name: HDR
