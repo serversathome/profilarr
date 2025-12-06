@@ -131,6 +131,8 @@ custom_formats:
   score: 1200
 - name: TrueHD (Missing)
   score: 1200
+- name: Amazon Enhancement
+  score: 1000
 - name: HDR
   score: 1000
 - name: HDR (Missing)
@@ -258,8 +260,6 @@ custom_formats_radarr:
   score: 4000
 - name: iT
   score: 4000
-- name: Amazon Enhancement
-  score: 2000
 - name: HMAX
   score: 2000
 - name: MAX
@@ -268,6 +268,8 @@ custom_formats_radarr:
   score: 1000
 - name: Special Edition
   score: 1000
+- name: Disney+ Enhancement
+  score: -1000
 - name: Movies Anywhere Enhancement
   score: -2000
 - name: iTunes Enhancement
@@ -293,8 +295,6 @@ custom_formats_sonarr:
   score: 3000
 - name: MAX
   score: 3000
-- name: Amazon Enhancement
-  score: 1000
 - name: iT
   score: 1000
 - name: Season Pack
