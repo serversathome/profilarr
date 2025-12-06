@@ -119,6 +119,8 @@ custom_formats:
   score: 3000
 - name: AMZN
   score: 2000
+- name: ATVP
+  score: 2000
 - name: HDR10+
   score: 2000
 - name: DTS-X
@@ -193,6 +195,8 @@ custom_formats:
   score: 0
 - name: CRAV
   score: 0
+- name: CRIT
+  score: 0
 - name: HTSR
   score: 0
 - name: HULU
@@ -250,8 +254,6 @@ custom_formats_radarr:
   score: 462000
 - name: MA
   score: 6000
-- name: ATVP
-  score: 4000
 - name: DSNP
   score: 4000
 - name: iT
@@ -263,8 +265,6 @@ custom_formats_radarr:
 - name: MAX
   score: 2000
 - name: Better Theatricals
-  score: 1000
-- name: CRIT
   score: 1000
 - name: Special Edition
   score: 1000
@@ -287,8 +287,6 @@ custom_formats_radarr:
 custom_formats_sonarr:
 - name: 2160p Balanced Tier 1
   score: 464000
-- name: ATVP
-  score: 3000
 - name: DSNP
   score: 3000
 - name: HMAX
