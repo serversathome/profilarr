@@ -49,6 +49,11 @@ conditions:
   pattern: CtrlHD
   required: false
   type: release_group
+- name: HHWEB
+  type: release_group
+  required: false
+  negate: false
+  pattern: HHWEB
 - name: KHN
   negate: false
   pattern: KHN
