@@ -28,6 +28,8 @@ custom_formats:
 - name: TAoE Bluray
   score: 324000
 - name: 1080p Balanced Tier 1
+  score: 281000
+- name: 1080p Balanced Tier 2
   score: 280000
 - name: 1080p WEB-DL (h264)
   score: 280000
@@ -83,20 +85,18 @@ custom_formats:
   score: 10000
 - name: AMZN
   score: 3000
-- name: ATVP
-  score: 3000
 - name: Dolby Vision
   score: 3000
 - name: DSNP
   score: 3000
+- name: ATVP
+  score: 2000
 - name: HDR10+
   score: 2000
 - name: HMAX
   score: 2000
 - name: MAX
   score: 2000
-- name: ATV
-  score: 1000
 - name: DS4K
   score: 1000
 - name: HDR
@@ -145,13 +145,15 @@ custom_formats:
   score: 7
 - name: Repack1
   score: 6
-- name: BCORE
-  score: 0
 - name: CRAV
+  score: 0
+- name: CRIT
   score: 0
 - name: HTSR
   score: 0
 - name: HULU
+  score: 0
+- name: MUBI
   score: 0
 - name: NOW
   score: 0
@@ -172,6 +174,8 @@ custom_formats:
 - name: Banned Groups (Title)
   score: -999999
 - name: Banned WEBRip (Efficient)
+  score: -999999
+- name: BCORE
   score: -999999
 - name: Dolby Vision (Without Fallback)
   score: -999999
@@ -210,6 +214,8 @@ custom_formats_radarr:
   score: 303000
 - name: TAoE WEB
   score: 303000
+- name: Weasley WEB
+  score: 303000
 - name: 1080p Efficient Movie WEB Tier 2
   score: 302000
 - name: 1080p Efficient Movie WEB Tier 3
@@ -219,8 +225,6 @@ custom_formats_radarr:
 - name: MA
   score: 4000
 - name: Better Theatricals
-  score: 1000
-- name: CRIT
   score: 1000
 - name: Special Edition
   score: 1000
@@ -258,6 +262,8 @@ custom_formats_sonarr:
 - name: TAoE WEB
   score: 307000
 - name: Vialle WEB
+  score: 307000
+- name: Weasley WEB
   score: 307000
 - name: 1080p Efficient TV WEB Tier 2
   score: 306000

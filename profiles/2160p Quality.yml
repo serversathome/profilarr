@@ -66,6 +66,8 @@ custom_formats:
 - name: 576p Bluray
   score: 120000
 - name: 1080p Balanced Tier 1
+  score: 101000
+- name: 1080p Balanced Tier 2
   score: 100000
 - name: 720p Quality Tier 1
   score: 85000
@@ -113,6 +115,8 @@ custom_formats:
   score: 3000
 - name: AMZN
   score: 2000
+- name: ATVP
+  score: 2000
 - name: HDR10+
   score: 2000
 - name: DTS-X
@@ -123,7 +127,7 @@ custom_formats:
   score: 1200
 - name: TrueHD (Missing)
   score: 1200
-- name: ATV
+- name: Amazon Enhancement
   score: 1000
 - name: HDR
   score: 1000
@@ -181,9 +185,13 @@ custom_formats:
   score: 0
 - name: CRAV
   score: 0
+- name: CRIT
+  score: 0
 - name: HTSR
   score: 0
 - name: HULU
+  score: 0
+- name: MUBI
   score: 0
 - name: NOW
   score: 0
@@ -234,24 +242,22 @@ custom_formats_radarr:
   score: 442000
 - name: MA
   score: 6000
-- name: ATVP
-  score: 4000
 - name: DSNP
   score: 4000
 - name: iT
   score: 4000
-- name: Amazon Enhancement
-  score: 2000
 - name: HMAX
   score: 2000
 - name: MAX
   score: 2000
 - name: Better Theatricals
   score: 1000
-- name: CRIT
-  score: 1000
 - name: Special Edition
   score: 1000
+- name: Disney+ Enhancement
+  score: -1000
+- name: Movies Anywhere Enhancement
+  score: -2000
 - name: iTunes Enhancement
   score: -3000
 - name: 3D
@@ -271,16 +277,12 @@ custom_formats_radarr:
 custom_formats_sonarr:
 - name: 2160p Balanced Tier 1
   score: 444000
-- name: ATVP
-  score: 3000
 - name: DSNP
   score: 3000
 - name: HMAX
   score: 3000
 - name: MAX
   score: 3000
-- name: Amazon Enhancement
-  score: 1000
 - name: iT
   score: 1000
 - name: Season Pack
