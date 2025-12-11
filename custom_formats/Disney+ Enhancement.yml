@@ -1,4 +1,4 @@
-name: Amazon Enhancement
+name: Disney+ Enhancement
 description: ''
 tags:
 - Enhancement
@@ -8,9 +8,9 @@ conditions:
   required: true
   resolution: 2160p
   type: resolution
-- name: AMZN
+- name: DSNP
   negate: false
-  pattern: Amazon Prime
+  pattern: Disney+
   required: true
   type: release_title
 tests: []

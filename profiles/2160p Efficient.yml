@@ -33,6 +33,8 @@ custom_formats:
 - name: TAoE Bluray
   score: 324000
 - name: 1080p Balanced Tier 1
+  score: 281000
+- name: 1080p Balanced Tier 2
   score: 280000
 - name: 1080p WEB-DL (h264)
   score: 280000
@@ -90,9 +92,11 @@ custom_formats:
   score: 3000
 - name: AMZN
   score: 2000
+- name: ATVP
+  score: 2000
 - name: HDR10+
   score: 2000
-- name: ATV
+- name: Amazon Enhancement
   score: 1000
 - name: DS4K
   score: 1000
@@ -144,9 +148,13 @@ custom_formats:
   score: 0
 - name: CRAV
   score: 0
+- name: CRIT
+  score: 0
 - name: HTSR
   score: 0
 - name: HULU
+  score: 0
+- name: MUBI
   score: 0
 - name: NOW
   score: 0
@@ -209,6 +217,8 @@ custom_formats_radarr:
   score: 303000
 - name: TAoE WEB
   score: 303000
+- name: Weasley WEB
+  score: 303000
 - name: 1080p Efficient Movie WEB Tier 2
   score: 302000
 - name: 1080p Efficient Movie WEB Tier 3
@@ -217,24 +227,22 @@ custom_formats_radarr:
   score: 300000
 - name: MA
   score: 6000
-- name: ATVP
-  score: 4000
 - name: DSNP
   score: 4000
 - name: iT
   score: 4000
-- name: Amazon Enhancement
-  score: 2000
 - name: HMAX
   score: 2000
 - name: MAX
   score: 2000
 - name: Better Theatricals
   score: 1000
-- name: CRIT
-  score: 1000
 - name: Special Edition
   score: 1000
+- name: Disney+ Enhancement
+  score: -1000
+- name: Movies Anywhere Enhancement
+  score: -2000
 - name: iTunes Enhancement
   score: -3000
 - name: 3D
@@ -286,6 +294,8 @@ custom_formats_sonarr:
   score: 307000
 - name: Vialle WEB
   score: 307000
+- name: Weasley WEB
+  score: 307000
 - name: 1080p Efficient TV WEB Tier 2
   score: 306000
 - name: 1080p Efficient TV WEB Tier 3
@@ -300,16 +310,12 @@ custom_formats_sonarr:
   score: 301000
 - name: 1080p Efficient TV WEB Tier 6
   score: 300000
-- name: ATVP
-  score: 3000
 - name: DSNP
   score: 3000
 - name: HMAX
   score: 3000
 - name: MAX
   score: 3000
-- name: Amazon Enhancement
-  score: 1000
 - name: iT
   score: 1000
 - name: Season Pack

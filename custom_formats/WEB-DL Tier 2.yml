@@ -19,11 +19,6 @@ conditions:
   pattern: CMRG
   required: false
   type: release_group
-- name: HHWEB
-  negate: false
-  pattern: HHWEB
-  required: false
-  type: release_group
 - name: HONE
   negate: false
   pattern: HONE
@@ -44,9 +39,4 @@ conditions:
   pattern: TEPES
   required: false
   type: release_group
-- name: TheFarm
-  type: release_group
-  required: false
-  negate: false
-  pattern: TheFarm
 tests: []

@@ -1,4 +1,4 @@
-name: Amazon Enhancement
+name: Movies Anywhere Enhancement
 description: ''
 tags:
 - Enhancement
@@ -8,9 +8,9 @@ conditions:
   required: true
   resolution: 2160p
   type: resolution
-- name: AMZN
+- name: MA
   negate: false
-  pattern: Amazon Prime
+  pattern: Movies Anywhere
   required: true
   type: release_title
 tests: []

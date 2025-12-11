@@ -1,5 +1,5 @@
-name: 1080p Balanced Tier 1
-description: Matches release groups who fall under 1080p Balanced Tier 1
+name: 1080p Balanced Tier 2
+description: Matches release groups who fall under 1080p Balanced Tier 2
 tags:
 - Release Group Tier
 - 1080p
@@ -15,9 +15,9 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: hallowed
+- name: BHDStudio
   negate: false
-  pattern: hallowed
+  pattern: BHDStudio
   required: false
   type: release_group
 tests:
