@@ -5,13 +5,12 @@ description: 'Based on the TRaSH Guides Anime Profile, focusing on media that ha
   - This profile will grab between a SDTV - 1080p Bluray file.
 
   - You will be preferring Dual Audio media (ie including English along with original
-  language).
+  language). If you''d prefer to **only** have the original language (Japanese), remove
+  the Dual Audio format and set you language settings in this profile to Advanced
+  - Must Include - Japanese.
 
   - If you''d prefer to always grab Dual Audio releases, change the Dual Audio format
-  score from 101 to 500
-
-  - If you prefer only the **original language**, change the language to original
-  on this profile.'
+  score from 101 to 500'
 tags:
 - Anime
 - Sonarr
@@ -21,7 +20,29 @@ upgradesAllowed: true
 minCustomFormatScore: 0
 upgradeUntilScore: 10000
 minScoreIncrement: 1
-custom_formats:
+custom_formats: []
+custom_formats_radarr: []
+custom_formats_sonarr:
+- name: Anime Tier 1
+  score: 1400
+- name: Anime Tier 2
+  score: 1300
+- name: Anime Tier 3
+  score: 1200
+- name: Anime Tier 4
+  score: 1100
+- name: Remux Tier 01 - Sonarr
+  score: 1050
+- name: Anime Tier 5
+  score: 1000
+- name: Remux Tier 02 - Sonarr
+  score: 1000
+- name: Anime Tier 6
+  score: 900
+- name: Anime Tier 7
+  score: 800
+- name: Anime Tier 8
+  score: 700
 - name: Anime WEB Tier 1
   score: 600
 - name: Anime WEB Tier 2
@@ -42,6 +63,8 @@ custom_formats:
   score: 200
 - name: WEB Tier 04
   score: 200
+- name: Anime Baseline Groups
+  score: 150
 - name: Anime Dual Audio
   score: 101
 - name: Multi-Audio
@@ -50,6 +73,14 @@ custom_formats:
   score: 101
 - name: Anime WEB Tier 6
   score: 100
+- name: Dolby Digital +
+  score: 50
+- name: Dolby Digital
+  score: 25
+- name: DTS
+  score: 25
+- name: AAC
+  score: 10
 - name: CR
   score: 7
 - name: DSNP
@@ -90,28 +121,6 @@ custom_formats:
   score: -10000
 - name: AV1
   score: -10000
-custom_formats_radarr: []
-custom_formats_sonarr:
-- name: Anime Tier 1
-  score: 1400
-- name: Anime Tier 2
-  score: 1300
-- name: Anime Tier 3
-  score: 1200
-- name: Anime Tier 4
-  score: 1100
-- name: Remux Tier 01 - Sonarr
-  score: 1050
-- name: Anime Tier 5
-  score: 1000
-- name: Remux Tier 02 - Sonarr
-  score: 1000
-- name: Anime Tier 6
-  score: 900
-- name: Anime Tier 7
-  score: 800
-- name: Anime Tier 8
-  score: 700
 qualities:
 - id: -5
   name: Bluray/REMUX 1080p

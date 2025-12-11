@@ -1,7 +1,6 @@
 name: Weasley
-pattern: \b(Weasley)\b
+pattern: (?<=^|[\s.-])Weasley\b$
 description: ''
 tags:
 - Release Group
-- WEB-DL
 tests: []
