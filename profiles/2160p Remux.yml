@@ -252,6 +252,8 @@ custom_formats:
 custom_formats_radarr:
 - name: 2160p Balanced Tier 1
   score: 462000
+- name: 2160p Balanced Tier 2
+  score: 461000
 - name: 2160p Balanced Tier 3
   score: 460000
 - name: MA
