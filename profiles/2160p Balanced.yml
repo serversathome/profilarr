@@ -15,8 +15,6 @@ minCustomFormatScore: 20000
 upgradeUntilScore: 600000
 minScoreIncrement: 1
 custom_formats:
-- name: 2160p Balanced Tier 2
-  score: 440000
 - name: 2160p WEB-DL
   score: 440000
 - name: UHD Bluray
@@ -218,6 +216,8 @@ custom_formats:
 custom_formats_radarr:
 - name: 2160p Balanced Tier 1
   score: 442000
+- name: 2160p Balanced Tier 2
+  score: 440000
 - name: MA
   score: 6000
 - name: DSNP

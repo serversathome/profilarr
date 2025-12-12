@@ -31,8 +31,6 @@ custom_formats:
   score: 462000
 - name: 2160p Quality Tier 5
   score: 460000
-- name: 2160p Balanced Tier 2
-  score: 440000
 - name: 2160p WEB-DL
   score: 440000
 - name: 2160p Quality Tier 6
@@ -240,6 +238,8 @@ custom_formats:
 custom_formats_radarr:
 - name: 2160p Balanced Tier 1
   score: 442000
+- name: 2160p Balanced Tier 2
+  score: 440000
 - name: MA
   score: 6000
 - name: DSNP
