@@ -38,8 +38,6 @@ custom_formats:
   score: 80000
 - name: 480p WEB-DL
   score: 60000
-- name: 720p Balanced Tier 1
-  score: 60000
 - name: 576p Quality Tier 1
   score: 43000
 - name: 576p Quality Tier 2
@@ -171,6 +169,8 @@ custom_formats:
 - name: Xvid
   score: -999999
 custom_formats_radarr:
+- name: 720p Balanced Tier 1
+  score: 60000
 - name: MA
   score: 4000
 - name: Better Theatricals

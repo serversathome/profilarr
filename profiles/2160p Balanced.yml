@@ -45,10 +45,6 @@ custom_formats:
   score: 120000
 - name: 576p Bluray
   score: 120000
-- name: 1080p Balanced Tier 1
-  score: 101000
-- name: 1080p Balanced Tier 2
-  score: 100000
 - name: 720p Quality Tier 1
   score: 85000
 - name: 720p Quality Tier 2
@@ -64,8 +60,6 @@ custom_formats:
 - name: 720p Quality Tier 6
   score: 80000
 - name: 480p WEB-DL
-  score: 60000
-- name: 720p Balanced Tier 1
   score: 60000
 - name: 576p Quality Tier 1
   score: 43000
@@ -220,6 +214,12 @@ custom_formats_radarr:
   score: 441000
 - name: 2160p Balanced Tier 3
   score: 440000
+- name: 1080p Balanced Tier 1
+  score: 101000
+- name: 1080p Balanced Tier 2
+  score: 100000
+- name: 720p Balanced Tier 1
+  score: 60000
 - name: MA
   score: 6000
 - name: DSNP

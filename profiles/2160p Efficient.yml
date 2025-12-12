@@ -30,10 +30,6 @@ custom_formats:
   score: 324000
 - name: TAoE Bluray
   score: 324000
-- name: 1080p Balanced Tier 1
-  score: 281000
-- name: 1080p Balanced Tier 2
-  score: 280000
 - name: 1080p WEB-DL (h264)
   score: 280000
 - name: 720p WEB-DL
@@ -59,8 +55,6 @@ custom_formats:
 - name: 720p Quality Tier 6
   score: 80000
 - name: 480p WEB-DL
-  score: 60000
-- name: 720p Balanced Tier 1
   score: 60000
 - name: 576p Quality Tier 1
   score: 43000
@@ -227,6 +221,12 @@ custom_formats_radarr:
   score: 301000
 - name: 1080p Efficient Movie WEB Tier 4
   score: 300000
+- name: 1080p Balanced Tier 1
+  score: 281000
+- name: 1080p Balanced Tier 2
+  score: 280000
+- name: 720p Balanced Tier 1
+  score: 60000
 - name: MA
   score: 6000
 - name: DSNP
