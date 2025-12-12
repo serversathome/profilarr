@@ -197,7 +197,7 @@ custom_formats:
 custom_formats_radarr:
 - name: 2160p Balanced Tier 1
   score: 382000
-- name: 2160p Balanced Tier 2
+- name: 2160p Balanced Tier 3
   score: 380000
 - name: 1080p Efficient Movie Bluray Tier 1
   score: 324000

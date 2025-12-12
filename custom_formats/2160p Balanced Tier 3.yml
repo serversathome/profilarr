@@ -1,5 +1,5 @@
-name: 2160p Balanced Tier 2
-description: Matches release groups who fall under 2160p Balanced Tier 2
+name: 2160p Balanced Tier 3
+description: Matches release groups who fall under 2160p Balanced Tier 3
 tags:
 - Release Group Tier
 - 2160p
@@ -15,9 +15,14 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: dkore
+- name: BHDStudio
   negate: false
-  pattern: dkore
+  pattern: BHDStudio
+  required: false
+  type: release_group
+- name: hallowed
+  negate: false
+  pattern: hallowed
   required: false
   type: release_group
 tests:
