@@ -149,6 +149,8 @@ custom_formats:
   score: 0
 - name: CRIT
   score: 0
+- name: DRPO
+  score: 0
 - name: HTSR
   score: 0
 - name: HULU
