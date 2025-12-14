@@ -41,6 +41,11 @@ conditions:
   pattern: dkore
   required: false
   type: release_group
+- name: noxxus
+  type: release_group
+  required: false
+  negate: false
+  pattern: noxxus
 - name: Ralphy
   negate: false
   pattern: Ralphy
