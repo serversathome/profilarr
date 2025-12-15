@@ -205,8 +205,6 @@ custom_formats:
   score: -999999
 - name: Banned Groups
   score: -999999
-- name: Banned Groups (Title)
-  score: -999999
 - name: Banned Remux
   score: -999999
 - name: Banned UHD Bluray

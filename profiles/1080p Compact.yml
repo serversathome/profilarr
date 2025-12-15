@@ -162,8 +162,6 @@ custom_formats:
   score: -999999
 - name: Banned Groups (Efficient)
   score: -999999
-- name: Banned Groups (Title)
-  score: -999999
 - name: Banned WEBRip (Efficient)
   score: -999999
 - name: BCORE
