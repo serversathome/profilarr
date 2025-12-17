@@ -1,5 +1,5 @@
 name: BEN THE MEN
-pattern: \b(BEN[ ._-]THE[ ._-]MEN)\b
+pattern: (?<=^|[\s.-])(BEN[ ._-]THE[ ._-]MEN|BEN|BTM)\b
 description: ''
 tags:
 - Release Group
