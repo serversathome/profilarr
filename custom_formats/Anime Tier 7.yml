@@ -9,11 +9,6 @@ conditions:
   required: false
   source: bluray
   type: source
-- name: Bluray Remux
-  negate: false
-  required: false
-  source: bluray_raw
-  type: source
 - name: DVD
   negate: false
   required: false

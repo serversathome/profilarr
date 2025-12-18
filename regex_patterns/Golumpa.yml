@@ -1,0 +1,6 @@
+name: Golumpa
+pattern: \b(Golumpa)\b
+description: ''
+tags:
+- Anime
+tests: []
