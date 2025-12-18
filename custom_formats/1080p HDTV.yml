@@ -1,0 +1,16 @@
+name: 1080p HDTV
+description: Matches 1080p HDTV.
+tags:
+- Source
+conditions:
+- name: 1080p
+  negate: false
+  required: true
+  resolution: 1080p
+  type: resolution
+- name: HDTV
+  negate: false
+  required: true
+  source: television
+  type: source
+tests: []

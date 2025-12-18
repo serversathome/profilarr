@@ -1,0 +1,26 @@
+name: 720p HDTV Tier 1
+description: Matches 720p HDTV.
+tags:
+- Release Group Tier
+conditions:
+- name: 720p
+  negate: false
+  required: true
+  resolution: 720p
+  type: resolution
+- name: HDTV
+  negate: false
+  required: true
+  source: television
+  type: source
+- name: NTb
+  negate: false
+  pattern: NTb
+  required: false
+  type: release_group
+- name: CtrlHD
+  negate: false
+  pattern: CtrlHD
+  required: false
+  type: release_group
+tests: []

@@ -11,7 +11,7 @@ tags:
 - h264
 upgradesAllowed: true
 minCustomFormatScore: 20000
-upgradeUntilScore: 600000
+upgradeUntilScore: 888888
 minScoreIncrement: 1
 custom_formats:
 - name: 1080p WEB-DL

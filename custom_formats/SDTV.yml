@@ -1,0 +1,11 @@
+name: SDTV
+description: Matches SDTV.
+tags:
+- Source
+conditions:
+- name: SDTV
+  negate: false
+  required: true
+  source: television
+  type: source
+tests: []
