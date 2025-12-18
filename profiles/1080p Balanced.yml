@@ -21,10 +21,6 @@ minCustomFormatScore: 20000
 upgradeUntilScore: 600000
 minScoreIncrement: 1
 custom_formats:
-- name: 1080p Balanced Tier 1
-  score: 281000
-- name: 1080p Balanced Tier 2
-  score: 280000
 - name: 1080p WEB-DL
   score: 280000
 - name: 720p WEB-DL
@@ -50,8 +46,6 @@ custom_formats:
 - name: 720p Quality Tier 6
   score: 80000
 - name: 480p WEB-DL
-  score: 60000
-- name: 720p Balanced Tier 1
   score: 60000
 - name: 576p Quality Tier 1
   score: 43000
@@ -129,15 +123,21 @@ custom_formats:
   score: 0
 - name: CRIT
   score: 0
+- name: DRPO
+  score: 0
 - name: HTSR
   score: 0
 - name: HULU
+  score: 0
+- name: iP
   score: 0
 - name: MUBI
   score: 0
 - name: NOW
   score: 0
 - name: PCOK
+  score: 0
+- name: PLAY
   score: 0
 - name: PMTP
   score: 0
@@ -150,8 +150,6 @@ custom_formats:
 - name: AV1
   score: -999999
 - name: Banned Groups
-  score: -999999
-- name: Banned Groups (Title)
   score: -999999
 - name: Banned WEBRip
   score: -999999
@@ -184,6 +182,12 @@ custom_formats:
 - name: Xvid
   score: -999999
 custom_formats_radarr:
+- name: 1080p Balanced Tier 1
+  score: 281000
+- name: 1080p Balanced Tier 2
+  score: 280000
+- name: 720p Balanced Tier 1
+  score: 60000
 - name: MA
   score: 4000
 - name: Better Theatricals
