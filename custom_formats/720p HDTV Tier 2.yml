@@ -1,4 +1,4 @@
-name: 720p HDTV Tier 1
+name: 720p HDTV Tier 2
 description: Matches 720p HDTV.
 tags:
 - Release Group Tier
@@ -13,34 +13,29 @@ conditions:
   required: true
   source: television
   type: source
-- name: BMF
+- name: BTN
   type: release_group
   required: false
   negate: false
-  pattern: BMF
-- name: CtrlHD
+  pattern: BTN
+- name: DARKFLiX
   negate: false
-  pattern: CtrlHD
+  pattern: DARKFLiX
   required: false
   type: release_group
-- name: DON
+- name: ViETNAM
   negate: false
-  pattern: DON
+  pattern: ViETNAM
   required: false
   type: release_group
-- name: EbP
+- name: CBFM
   negate: false
-  pattern: EbP
+  pattern: CBFM
   required: false
   type: release_group
-- name: EDPH
+- name: PLUTONiUM
   negate: false
-  pattern: EDPH
-  required: false
-  type: release_group
-- name: NTb
-  negate: false
-  pattern: NTb
+  pattern: PLUTONiUM
   required: false
   type: release_group
 tests: []

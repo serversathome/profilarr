@@ -219,6 +219,8 @@ custom_formats_radarr:
   score: 643000
 - name: TAoE WEB
   score: 643000
+- name: Weasley WEB
+  score: 643000
 - name: 1080p Compact Movie WEB Tier 2
   score: 642000
 - name: 1080p Compact Movie WEB Tier 3
@@ -233,8 +235,6 @@ custom_formats_radarr:
   score: 620000
 - name: 1080p WEB-DL (h264)
   score: 620000
-- name: Weasley WEB
-  score: 303000
 - name: MA
   score: 4000
 - name: AMZN

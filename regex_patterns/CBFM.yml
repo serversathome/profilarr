@@ -1,0 +1,7 @@
+name: CBFM
+pattern: (?<=^|[\s.-])CBFM\b
+description: ''
+tags:
+- Release Group
+- HDTV
+tests: []

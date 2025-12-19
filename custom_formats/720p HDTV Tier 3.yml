@@ -1,5 +1,5 @@
-name: 1080p HDTV Tier 1
-description: Matches 1080p HDTV.
+name: 720p HDTV Tier 3
+description: Matches 720p HDTV.
 tags:
 - Release Group Tier
 conditions:
@@ -13,19 +13,9 @@ conditions:
   required: true
   source: television
   type: source
-- name: CtrlHD
+- name: HANDJOB
   negate: false
-  pattern: CtrlHD
-  required: false
-  type: release_group
-- name: EDPH
-  type: release_group
-  required: false
-  negate: false
-  pattern: EDPH
-- name: NTb
-  negate: false
-  pattern: NTb
+  pattern: HANDJOB
   required: false
   type: release_group
 tests: []
