@@ -234,6 +234,14 @@ custom_formats_radarr:
 custom_formats_sonarr:
 - name: 1080p Compact TV WEB Tier 1
   score: 647000
+- name: QxR WEB
+  score: 647000
+- name: TAoE WEB
+  score: 647000
+- name: Vialle WEB
+  score: 647000
+- name: Weasley WEB
+  score: 647000
 - name: 1080p Compact TV WEB Tier 2
   score: 646000
 - name: 1080p Compact TV WEB Tier 3
@@ -248,16 +256,6 @@ custom_formats_sonarr:
   score: 641000
 - name: 1080p Compact TV WEB Tier 6
   score: 640000
-- name: QxR Bluray
-  score: 324000
-- name: QxR WEB
-  score: 309000
-- name: TAoE WEB
-  score: 309000
-- name: Vialle WEB
-  score: 309000
-- name: Weasley WEB
-  score: 309000
 - name: Season Pack
   score: 10
 - name: AMZN
