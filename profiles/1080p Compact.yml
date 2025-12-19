@@ -232,23 +232,21 @@ custom_formats_radarr:
 - name: Upscale
   score: -999999
 custom_formats_sonarr:
-- name: 1080p Compact TV Bluray Tier 1
-  score: 661000
-- name: 1080p Compact TV Bluray Tier 2
-  score: 647000
 - name: 1080p Compact TV WEB Tier 1
-  score: 646000
+  score: 647000
 - name: 1080p Compact TV WEB Tier 2
-  score: 645000
+  score: 646000
 - name: 1080p Compact TV WEB Tier 3
-  score: 644000
+  score: 645000
 - name: 1080p Compact TV WEB Tier 4
+  score: 644000
+- name: 1080p Compact TV Bluray Tier 1
   score: 643000
-- name: 1080p Compact TV WEB Tier 5
+- name: 1080p Compact TV Bluray Tier 2
   score: 642000
-- name: 1080p Compact TV WEB Tier 6
+- name: 1080p Compact TV WEB Tier 5
   score: 641000
-- name: 1080p Compact TV WEB Tier 7
+- name: 1080p Compact TV WEB Tier 6
   score: 640000
 - name: QxR Bluray
   score: 324000

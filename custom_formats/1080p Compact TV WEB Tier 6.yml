@@ -26,24 +26,14 @@ conditions:
   required: false
   source: webrip
   type: source
-- name: HODL
+- name: Megusta
   negate: false
-  pattern: HODL
+  pattern: MeGusta
   required: false
   type: release_group
-- name: iVy
+- name: PSA
   negate: false
-  pattern: iVy
-  required: false
-  type: release_group
-- name: PHOCiS
-  negate: false
-  pattern: PHOCiS
-  required: false
-  type: release_group
-- name: YAWNiX
-  negate: false
-  pattern: YAWNiX
+  pattern: PSA
   required: false
   type: release_group
 tests:
