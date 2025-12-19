@@ -1,14 +1,6 @@
 name: 1080p Compact
-description: 'Do not Use. Soon I will be turning the Compact profile into the "junk"
-  profile whereby restricting the sizes it takes considerably. Ideally targeting Movies
-  at under 6gb and TV Shows at less then 1gb per ep. Adding in HDTV and SDTV for better
-  compatibility with older movies and TV shows. If you are currently using the Compact
-  profile I highly suggest switching over to the Efficient profile as they are very
-  similar you shouldn''t notice much difference.
-
-
-  Once this profile is ready to use again this message will change and revert back
-  to the profile description.'
+description: Testing Phase. Sizes on the TV Side were significantly reduced. HDTV
+  / SDTV added as fallbacks.
 tags:
 - 1080p
 - Compact Focused
