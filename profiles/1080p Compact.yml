@@ -1,14 +1,14 @@
 name: 1080p Compact
-description: '1080p Compact seeks to target a balance of size and quality with x265
-  Bluray and WEB encodes
+description: 'Do not Use. Soon I will be turning the Compact profile into the "junk"
+  profile whereby restricting the sizes it takes considerably. Ideally targeting Movies
+  at under 6gb and TV Shows at less then 1gb per ep. Adding in HDTV and SDTV for better
+  compatibility with older movies and TV shows. If you are currently using the Compact
+  profile I highly suggest switching over to the Efficient profile as they are very
+  similar you shouldn''t notice much difference.
 
 
-  - 1080p Bluray and WEB x265
-
-  - Fallbacks in Place for Proper Quality Progression
-
-  - 1080p Bluray HEVC > 1080p WEB HEVC > 1080p WEB-DL > 720p Bluray > 720p WEB-DL
-  > 480p WEB-DL > DVD'
+  Once this profile is ready to use again this message will change and revert back
+  to the profile description.'
 tags:
 - 1080p
 - Compact Focused
