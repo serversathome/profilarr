@@ -47,12 +47,18 @@ custom_formats:
 - name: 720p Balanced Tier 1
   score: 120000
 - name: 1080p HDTV Tier 1
+  score: 102000
+- name: 1080p HDTV Tier 2
+  score: 101000
+- name: 1080p HDTV Tier 3
   score: 100000
 - name: 480p Bluray
   score: 100000
+- name: 720p HDTV Tier 2
+  score: 81000
 - name: 480p WEB-DL
   score: 80000
-- name: 720p HDTV Tier 1
+- name: 720p HDTV Tier 3
   score: 80000
 - name: 576p Quality Tier 1
   score: 63000
@@ -235,6 +241,8 @@ custom_formats_radarr:
   score: 620000
 - name: 1080p WEB-DL (h264)
   score: 620000
+- name: 720p HDTV Tier 1
+  score: 82000
 - name: MA
   score: 4000
 - name: AMZN
@@ -280,6 +288,8 @@ custom_formats_sonarr:
   score: 641000
 - name: 1080p Compact TV WEB Tier 6
   score: 640000
+- name: 720p HDTV Tier 1
+  score: 80000
 - name: Season Pack
   score: 10
 - name: AMZN
