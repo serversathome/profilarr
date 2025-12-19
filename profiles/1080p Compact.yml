@@ -195,14 +195,16 @@ custom_formats:
 - name: Xvid
   score: -999999
 custom_formats_radarr:
+- name: 1080p Bluray HEVC Tier 1
+  score: 680000
+- name: 1080p WEB-DL HEVC Tier 1
+  score: 660000
 - name: 1080p Balanced Tier 1
   score: 621000
 - name: 1080p Balanced Tier 2
   score: 620000
 - name: 1080p WEB-DL (h264)
   score: 620000
-- name: QxR Bluray
-  score: 323000
 - name: Vialle Bluray
   score: 322000
 - name: QxR WEB
