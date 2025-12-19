@@ -1,14 +1,15 @@
 name: 2160p Efficient
 description: '2160p Efficient targets consistent & immutable 2160p **WEB-DLs w/ Lossy
-  Audio**. Specialized Fallback to 1080p Efficient+
+  Audio**. Specialized Fallback to 1080p Efficient
 
 
-  - 1080p Bluray and WEB x265
+  - HEVC Bluray Encodes
 
-  - Fallbacks in Place for Proper Quality Progression
+  - Average Movie Sizes ~ 15 to 30gb per Movie
 
-  - 2160p WEB-DL > 1080p Bluray HEVC > 1080p WEB HEVC > 1080p WEB-DL > 720p Bluray
-  > 720p WEB-DL > 480p WEB-DL > DVD'
+  - Average TV Sizes ~ 4 to 12gb per Episode
+
+  - Quality Ranking ~ 6/10'
 tags:
 - 2160p
 - Efficient Focused

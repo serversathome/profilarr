@@ -1,13 +1,14 @@
 name: 1080p Efficient
-description: '1080p Efficient seeks to target high quality x265 Bluray and WEB encodes
+description: '1080p Efficient seeks to target high quality x265 Bluray and WEB Encodes
 
 
-  - 1080p Bluray and WEB x265
+  - HEVC Bluray Encodes
 
-  - Fallbacks in Place for Proper Quality Progression
+  - Average Movie Sizes ~ 6 to 12gb per Movie
 
-  - 1080p Bluray HEVC > 1080p WEB HEVC > 1080p WEB-DL > 720p Bluray > 720p WEB-DL
-  > 480p WEB-DL > DVD'
+  - Average TV Sizes ~ 2 to 3gb per Episode
+
+  - Quality Ranking ~ 6/10'
 tags:
 - 1080p
 - Efficient Focused
