@@ -21,11 +21,6 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: Megusta
-  negate: false
-  pattern: MeGusta
-  required: false
-  type: release_group
 - name: PSA
   negate: false
   pattern: PSA
