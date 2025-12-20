@@ -312,8 +312,6 @@ custom_formats_sonarr:
 - name: 1080p Efficient TV Bluray Tier 6
   score: 302000
 - name: 1080p Efficient TV WEB Tier 5
-  score: 301000
-- name: 1080p Efficient TV WEB Tier 6
   score: 300000
 - name: DSNP
   score: 3000

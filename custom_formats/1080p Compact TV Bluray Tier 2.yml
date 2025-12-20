@@ -3,7 +3,7 @@ description: Matches release groups who fall under 11080p Compact TV Bluray Tier
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
+- Compact
 - TV
 conditions:
 - name: 1080p

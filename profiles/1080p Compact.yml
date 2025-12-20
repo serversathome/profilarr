@@ -258,8 +258,6 @@ custom_formats_radarr:
 - name: Upscale
   score: -999999
 custom_formats_sonarr:
-- name: 1080p Compact TV WEB Tier 1
-  score: 665000
 - name: QxR WEB
   score: 665000
 - name: TAoE WEB
@@ -268,15 +266,15 @@ custom_formats_sonarr:
   score: 665000
 - name: Weasley WEB
   score: 665000
-- name: 1080p Compact TV WEB Tier 2
+- name: 1080p Compact TV WEB Tier 1
   score: 664000
-- name: 1080p Compact TV WEB Tier 3
+- name: 1080p Compact TV WEB Tier 2
   score: 663000
-- name: 1080p Compact TV WEB Tier 4
+- name: 1080p Compact TV WEB Tier 3
   score: 662000
-- name: 1080p Compact TV WEB Tier 5
+- name: 1080p Compact TV WEB Tier 4
   score: 661000
-- name: 1080p Compact TV WEB Tier 6
+- name: 1080p Compact TV WEB Tier 5
   score: 660000
 - name: 1080p Compact TV Bluray Tier 1
   score: 645000
