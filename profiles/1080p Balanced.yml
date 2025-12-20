@@ -1,6 +1,6 @@
 name: 1080p Balanced
 description: '1080p Balanced targets consistent & immutable 1080p **WEB-DLs** using
-  external factors like Streaming Source and Audio Formats
+  the Streaming Source and Audio Formats to determine the level of Transparency.
 
 
   - Average Movie Sizes ~ 4 to 8gb per Movie

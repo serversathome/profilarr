@@ -1,6 +1,6 @@
 name: 1080p Remux
-description: '1080p Remux+ utilizes **Audio Formats** to prioritise high quality lossless
-  HD Blurays as well as Transparent Bluray Encodes.
+description: '1080p Remux utilizes **Audio Formats** to prioritise high quality Lossless
+  HD Blurays with a fallback to Transparent Bluray Encodes.
 
 
   - Average Movie Sizes ~ 20 to 30gb per Movie
