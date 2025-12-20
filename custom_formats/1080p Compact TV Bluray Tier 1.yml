@@ -1,9 +1,9 @@
 name: 1080p Compact TV Bluray Tier 1
-description: Matches release groups who fall under 1080p Compact Bluray Tier 1
+description: Matches release groups who fall under 1080p Compact TV Bluray Tier 1
 tags:
 - Release Group Tier
 - 1080p
-- Compact
+- Efficient
 - TV
 conditions:
 - name: 1080p

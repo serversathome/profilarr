@@ -269,28 +269,42 @@ custom_formats_radarr:
   score: -999999
 custom_formats_sonarr:
 - name: 1080p Compact TV WEB Tier 1
-  score: 647000
+  score: 665000
 - name: QxR WEB
-  score: 647000
+  score: 665000
 - name: TAoE WEB
-  score: 647000
+  score: 665000
 - name: Vialle WEB
-  score: 647000
+  score: 665000
 - name: Weasley WEB
-  score: 647000
+  score: 665000
 - name: 1080p Compact TV WEB Tier 2
-  score: 646000
+  score: 664000
 - name: 1080p Compact TV WEB Tier 3
-  score: 645000
+  score: 663000
 - name: 1080p Compact TV WEB Tier 4
-  score: 644000
-- name: 1080p Compact TV Bluray Tier 1
-  score: 643000
-- name: 1080p Compact TV Bluray Tier 2
-  score: 642000
+  score: 662000
 - name: 1080p Compact TV WEB Tier 5
-  score: 641000
+  score: 661000
 - name: 1080p Compact TV WEB Tier 6
+  score: 660000
+- name: 1080p Compact TV Bluray Tier 1
+  score: 645000
+- name: 1080p Compact TV Bluray Tier 2
+  score: 644000
+- name: 1080p Compact TV Bluray Tier 3
+  score: 643000
+- name: 1080p Compact TV Bluray Tier 4
+  score: 642000
+- name: 1080p Compact TV Bluray Tier 5
+  score: 641000
+- name: 1080p Compact TV Bluray Tier 6
+  score: 640000
+- name: QxR Bluray
+  score: 640000
+- name: TAoE Bluray
+  score: 640000
+- name: Vialle Bluray
   score: 640000
 - name: 720p HDTV Tier 1
   score: 80000

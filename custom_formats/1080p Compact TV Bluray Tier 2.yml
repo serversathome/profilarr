@@ -1,9 +1,9 @@
 name: 1080p Compact TV Bluray Tier 2
-description: Matches release groups who fall under 1080p Compact Bluray Tier 2
+description: Matches release groups who fall under 11080p Compact TV Bluray Tier 2
 tags:
 - Release Group Tier
 - 1080p
-- Compact
+- Efficient
 - TV
 conditions:
 - name: 1080p
@@ -21,9 +21,9 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: PSA
+- name: Vyndros
   negate: false
-  pattern: PSA
+  pattern: Vyndros
   required: false
   type: release_group
 tests:

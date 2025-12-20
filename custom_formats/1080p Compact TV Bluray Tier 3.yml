@@ -1,5 +1,5 @@
-name: 1080p Compact TV WEB Tier 6
-description: Matches release groups who fall under 1080p Compact TV WEB Tier 6
+name: 1080p Compact TV Bluray Tier 3
+description: Matches release groups who fall under 1080p Compact TV Bluray Tier 3
 tags:
 - Release Group Tier
 - 1080p
@@ -11,39 +11,54 @@ conditions:
   required: true
   resolution: 1080p
   type: resolution
+- name: Bluray
+  negate: false
+  required: true
+  source: bluray
+  type: source
 - name: x265
   negate: false
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: WEB-DL
+- name: bluegreeen
   negate: false
-  required: false
-  source: web_dl
-  type: source
-- name: WEBRip
-  negate: false
-  required: false
-  source: webrip
-  type: source
-- name: HODL
-  negate: false
-  pattern: HODL
+  pattern: bluegreeen
   required: false
   type: release_group
-- name: iVy
+- name: cXcY
   negate: false
-  pattern: iVy
+  pattern: cXcY
   required: false
   type: release_group
-- name: PHOCiS
+- name: edge2020
   negate: false
-  pattern: PHOCiS
+  pattern: edge2020
   required: false
   type: release_group
-- name: YAWNiX
+- name: R1GY3B
   negate: false
-  pattern: YAWNiX
+  pattern: R1GY3B
+  required: false
+  type: release_group
+- name: Ralphy
+  negate: false
+  pattern: Ralphy
+  required: false
+  type: release_group
+- name: TimeDistortion
+  negate: false
+  pattern: TimeDistortion
+  required: false
+  type: release_group
+- name: ToNaTo
+  negate: false
+  pattern: ToNaTo
+  required: false
+  type: release_group
+- name: YELLO
+  negate: false
+  pattern: YELLO
   required: false
   type: release_group
 tests:
