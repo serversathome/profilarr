@@ -1,18 +1,8 @@
 name: 1080p Compact
-description: '1080p Efficient seeks to target medium quality x265 Bluray and WEB Encodes
-
-
-  - HEVC Encodes
-
-  - Average Movie Sizes ~ 6 to 12gb per Movie
-
-  - Average TV Sizes ~ 1 to 2gb per Episode
-
-  - Quality Ranking ~ 5/10
-
-
-  Testing Phase. Sizes on the TV Side were significantly reduced. HDTV / SDTV added
-  as fallbacks.'
+description: "1080p Compact seeks to target low to medium quality x265 Bluray and\
+  \ WEB Encodes. \n\n- HEVC Encodes\n- Average Movie Sizes ~ 6 to 12gb per Movie\n\
+  - Average TV Sizes ~ 1 to 2gb per Episode\n- Quality Ranking ~ 2/10\n\nTesting Phase.\
+  \ Sizes on the TV Side were significantly reduced. HDTV / SDTV added as fallbacks."
 tags:
 - 1080p
 - Compact Focused
