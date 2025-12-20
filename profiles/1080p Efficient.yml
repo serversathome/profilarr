@@ -260,15 +260,15 @@ custom_formats_sonarr:
   score: 321000
 - name: 1080p Efficient TV Bluray Tier 5
   score: 320000
-- name: QxR WEB
-  score: 307000
-- name: TAoE WEB
-  score: 307000
-- name: Vialle WEB
-  score: 307000
-- name: Weasley WEB
-  score: 307000
 - name: 1080p Efficient TV WEB Tier 1
+  score: 306000
+- name: QxR WEB
+  score: 306000
+- name: TAoE WEB
+  score: 306000
+- name: Vialle WEB
+  score: 306000
+- name: Weasley WEB
   score: 306000
 - name: 1080p Efficient TV WEB Tier 2
   score: 305000
