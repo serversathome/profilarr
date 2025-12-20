@@ -1,9 +1,5 @@
 name: 1080p Compact
-description: 'Testing Phase. Sizes on the TV Side were significantly reduced. HDTV
-  / SDTV added as fallbacks.
-
-
-  1080p Efficient seeks to target medium quality x265 Bluray and WEB Encodes
+description: '1080p Efficient seeks to target medium quality x265 Bluray and WEB Encodes
 
 
   - HEVC Encodes
@@ -12,7 +8,11 @@ description: 'Testing Phase. Sizes on the TV Side were significantly reduced. HD
 
   - Average TV Sizes ~ 1 to 2gb per Episode
 
-  - Quality Ranking ~ 5/10'
+  - Quality Ranking ~ 5/10
+
+
+  Testing Phase. Sizes on the TV Side were significantly reduced. HDTV / SDTV added
+  as fallbacks.'
 tags:
 - 1080p
 - Compact Focused
