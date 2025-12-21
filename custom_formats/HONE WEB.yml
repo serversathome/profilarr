@@ -12,6 +12,11 @@ conditions:
   required: true
   source: web_dl
   type: source
+- name: x265
+  type: release_title
+  required: true
+  negate: false
+  pattern: x265 (Efficient)
 - name: HONE
   negate: false
   pattern: HONE
