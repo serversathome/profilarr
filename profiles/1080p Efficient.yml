@@ -24,10 +24,6 @@ custom_formats:
   score: 360000
 - name: 1080p WEB-DL HEVC Tier 1
   score: 340000
-- name: QxR Bluray
-  score: 324000
-- name: TAoE Bluray
-  score: 324000
 - name: 1080p WEB-DL (h264)
   score: 280000
 - name: 720p WEB-DL
@@ -196,16 +192,18 @@ custom_formats:
   score: -999999
 custom_formats_radarr:
 - name: 1080p Efficient Movie Bluray Tier 1
-  score: 324000
-- name: 1080p Efficient Movie Bluray Tier 2
   score: 323000
-- name: 1080p Efficient Movie Bluray Tier 3
+- name: QxR Bluray
+  score: 323000
+- name: TAoE Bluray
+  score: 323000
+- name: 1080p Efficient Movie Bluray Tier 2
   score: 322000
 - name: Vialle Bluray
   score: 322000
-- name: 1080p Efficient Movie Bluray Tier 4
+- name: 1080p Efficient Movie Bluray Tier 3
   score: 321000
-- name: 1080p Efficient Movie Bluray Tier 5
+- name: 1080p Efficient Movie Bluray Tier 4
   score: 320000
 - name: 1080p Efficient Movie WEB Tier 1
   score: 303000
@@ -249,6 +247,10 @@ custom_formats_radarr:
   score: -999999
 custom_formats_sonarr:
 - name: 1080p Efficient TV Bluray Tier 1
+  score: 324000
+- name: QxR Bluray
+  score: 324000
+- name: TAoE Bluray
   score: 324000
 - name: Vialle Bluray
   score: 324000

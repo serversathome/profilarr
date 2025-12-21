@@ -195,23 +195,23 @@ custom_formats:
 - name: Xvid
   score: -999999
 custom_formats_radarr:
-- name: 1080p Bluray HEVC Tier 1
+- name: 1080p Compact Movie Bluray Tier 1
+  score: 703000
+- name: 1080p Compact Movie Bluray Tier 2
+  score: 702000
+- name: 1080p Compact Movie Bluray Tier 3
+  score: 701000
+- name: Vialle Bluray
+  score: 701000
+- name: 1080p Compact Movie Bluray Tier 4
+  score: 700000
+- name: QxR Bluray
+  score: 700000
+- name: TAoE Bluray
   score: 700000
 - name: 1080p WEB-DL HEVC Tier 1
   score: 680000
-- name: 1080p Compact Movie Bluray Tier 1
-  score: 663000
-- name: QxR Bluray
-  score: 663000
-- name: TAoE Bluray
-  score: 663000
-- name: 1080p Compact Movie Bluray Tier 2
-  score: 662000
-- name: Vialle Bluray
-  score: 662000
-- name: 1080p Compact Movie Bluray Tier 3
-  score: 661000
-- name: 1080p Compact Movie Bluray Tier 4
+- name: 1080p Bluray HEVC Tier 1
   score: 660000
 - name: 1080p Compact Movie WEB Tier 1
   score: 643000
@@ -226,8 +226,6 @@ custom_formats_radarr:
 - name: 1080p Compact Movie WEB Tier 3
   score: 641000
 - name: 1080p Compact Movie WEB Tier 4
-  score: 640000
-- name: Vialle WEB
   score: 640000
 - name: 1080p Balanced Tier 1
   score: 621000

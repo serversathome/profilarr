@@ -41,6 +41,11 @@ conditions:
   pattern: LSt
   required: false
   type: release_group
+- name: SQS
+  type: release_group
+  required: false
+  negate: false
+  pattern: SQS
 - name: TimeDistortion
   negate: false
   pattern: TimeDistortion

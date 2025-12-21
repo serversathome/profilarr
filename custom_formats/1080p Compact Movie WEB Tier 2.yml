@@ -1,5 +1,5 @@
 name: 1080p Compact Movie WEB Tier 2
-description: Matches release groups who fall under 1080p Compact WEB Tier 2
+description: Matches release groups who fall under 1080p Compact Movie WEB Tier 2
 tags:
 - Release Group Tier
 - 1080p
@@ -34,6 +34,21 @@ conditions:
 - name: dkore
   negate: false
   pattern: dkore
+  required: false
+  type: release_group
+- name: LSt
+  negate: false
+  pattern: LSt
+  required: false
+  type: release_group
+- name: SQS
+  negate: false
+  pattern: SQS
+  required: false
+  type: release_group
+- name: TimeDistortion
+  negate: false
+  pattern: TimeDistortion
   required: false
   type: release_group
 tests:
