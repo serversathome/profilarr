@@ -211,6 +211,8 @@ custom_formats_radarr:
   score: 700000
 - name: 1080p WEB-DL HEVC Tier 1
   score: 680000
+- name: HONE WEB
+  score: 680000
 - name: 1080p Bluray HEVC Tier 1
   score: 660000
 - name: HONE Bluray
