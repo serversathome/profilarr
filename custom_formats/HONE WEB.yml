@@ -1,0 +1,25 @@
+name: HONE WEB
+description: ''
+tags: []
+conditions:
+- name: 1080p
+  negate: false
+  required: true
+  resolution: 1080p
+  type: resolution
+- name: WEB-DL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: HONE
+  negate: false
+  pattern: HONE
+  required: true
+  type: release_title
+- name: Release Group
+  negate: true
+  pattern: HONE
+  required: true
+  type: release_group
+tests: []

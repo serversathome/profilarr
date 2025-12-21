@@ -25,6 +25,8 @@ custom_formats:
   score: 380000
 - name: 1080p Bluray HEVC Tier 1
   score: 360000
+- name: HONE Bluray
+  score: 360000
 - name: 1080p WEB-DL HEVC Tier 1
   score: 340000
 - name: 1080p WEB-DL (h264)
