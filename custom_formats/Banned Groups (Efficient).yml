@@ -114,11 +114,6 @@ conditions:
   pattern: NhaNc3
   required: false
   type: release_group
-- name: NoGroup
-  negate: false
-  pattern: NoGroup
-  required: false
-  type: release_group
 - name: OEPlus
   negate: false
   pattern: OEPlus
@@ -175,10 +170,10 @@ conditions:
   required: false
   type: release_group
 - name: UnKn0wn
-  type: release_group
-  required: false
   negate: false
   pattern: UnKn0wn
+  required: false
+  type: release_group
 - name: VD0N
   negate: false
   pattern: VD0N

@@ -1,0 +1,7 @@
+name: DARKFLiX
+pattern: (?<=^|[\s.-])DARKFLiX\b
+description: ''
+tags:
+- Release Group
+- HDTV
+tests: []

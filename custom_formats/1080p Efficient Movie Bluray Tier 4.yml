@@ -21,19 +21,49 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: dkore
+- name: bluegreeen
   negate: false
-  pattern: dkore
+  pattern: bluegreeen
   required: false
   type: release_group
-- name: GRiMM
+- name: Chivaman
   negate: false
-  pattern: GRiMM
+  pattern: Chivaman
   required: false
   type: release_group
-- name: TimeDistortion
+- name: edge2020
   negate: false
-  pattern: TimeDistortion
+  pattern: edge2020
+  required: false
+  type: release_group
+- name: noxxus
+  negate: false
+  pattern: noxxus
+  required: false
+  type: release_group
+- name: R1GY3B
+  negate: false
+  pattern: R1GY3B
+  required: false
+  type: release_group
+- name: Ralphy
+  negate: false
+  pattern: Ralphy
+  required: false
+  type: release_group
+- name: ToNaTo
+  negate: false
+  pattern: ToNaTo
+  required: false
+  type: release_group
+- name: Vyndros
+  negate: false
+  pattern: Vyndros
+  required: false
+  type: release_group
+- name: YELLO
+  negate: false
+  pattern: YELLO
   required: false
   type: release_group
 tests:

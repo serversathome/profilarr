@@ -1,0 +1,31 @@
+name: SDTV Tier 1
+description: Matches SDTV.
+tags:
+- Release Group Tier
+conditions:
+- name: SDTV
+  negate: false
+  required: true
+  source: television
+  type: source
+- name: Not 1080p
+  type: resolution
+  required: true
+  negate: true
+  resolution: 1080p
+- name: Not 720p
+  type: resolution
+  required: true
+  negate: true
+  resolution: 720p
+- name: NTb
+  negate: false
+  pattern: NTb
+  required: false
+  type: release_group
+- name: CtrlHD
+  negate: false
+  pattern: CtrlHD
+  required: false
+  type: release_group
+tests: []

@@ -1,5 +1,5 @@
 name: 1080p Compact TV Bluray Tier 6
-description: Matches release groups who fall under 1080p Compact Bluray Tier 6
+description: Matches release groups who fall under 1080p Compact TV Bluray Tier 6
 tags:
 - Release Group Tier
 - 1080p
@@ -21,9 +21,24 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: KONTRAST
+- name: NAN0
   negate: false
-  pattern: KONTRAST
+  pattern: NAN0
+  required: false
+  type: release_group
+- name: QxR
+  negate: false
+  pattern: QxR
+  required: false
+  type: release_group
+- name: TAoE
+  negate: false
+  pattern: TAoE
+  required: false
+  type: release_group
+- name: Vialle
+  negate: false
+  pattern: Vialle
   required: false
   type: release_group
 tests:

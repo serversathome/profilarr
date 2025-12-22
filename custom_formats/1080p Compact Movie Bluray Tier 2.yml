@@ -1,5 +1,6 @@
 name: 1080p Compact Movie Bluray Tier 2
-description: Matches release groups who fall under 1080p Compact Bluray Tier 2
+description: Matches release groups who fall under 1080p Compact Movie Bluray Tier
+  2
 tags:
 - Release Group Tier
 - 1080p
@@ -21,34 +22,19 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: DarQ
+- name: dkore
   negate: false
-  pattern: DarQ
+  pattern: dkore
   required: false
   type: release_group
-- name: honeyvera
+- name: GRiMM
   negate: false
-  pattern: Honeyvera
+  pattern: GRiMM
   required: false
   type: release_group
-- name: LSt
+- name: TimeDistortion
   negate: false
-  pattern: LSt
-  required: false
-  type: release_group
-- name: MNHD
-  negate: false
-  pattern: MNHD
-  required: false
-  type: release_group
-- name: SARTRE
-  negate: false
-  pattern: SARTRE
-  required: false
-  type: release_group
-- name: Vialle
-  negate: false
-  pattern: Vialle
+  pattern: TimeDistortion
   required: false
   type: release_group
 tests:

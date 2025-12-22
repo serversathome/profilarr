@@ -16,6 +16,11 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
+- name: Not HONE
+  negate: true
+  pattern: HONE
+  required: true
+  type: release_title
 - name: WEB-DL
   negate: false
   required: false
@@ -39,6 +44,11 @@ conditions:
 - name: LSt
   negate: false
   pattern: LSt
+  required: false
+  type: release_group
+- name: SQS
+  negate: false
+  pattern: SQS
   required: false
   type: release_group
 - name: TimeDistortion

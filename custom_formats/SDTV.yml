@@ -1,0 +1,21 @@
+name: SDTV
+description: Matches SDTV.
+tags:
+- Source
+conditions:
+- name: SDTV
+  negate: false
+  required: true
+  source: television
+  type: source
+- name: Not 1080p
+  type: resolution
+  required: true
+  negate: true
+  resolution: 1080p
+- name: Not 720p
+  type: resolution
+  required: true
+  negate: true
+  resolution: 720p
+tests: []

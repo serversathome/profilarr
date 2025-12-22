@@ -1,5 +1,5 @@
 name: 1080p Compact TV Bluray Tier 5
-description: Matches release groups who fall under 1080p Compact Bluray Tier 5
+description: Matches release groups who fall under 1080p Compact TV Bluray Tier 5
 tags:
 - Release Group Tier
 - 1080p
@@ -21,9 +21,29 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: Vyndros
+- name: Not HONE
+  type: release_title
+  required: true
+  negate: true
+  pattern: HONE
+- name: DarQ
   negate: false
-  pattern: Vyndros
+  pattern: DarQ
+  required: false
+  type: release_group
+- name: dkore
+  negate: false
+  pattern: dkore
+  required: false
+  type: release_group
+- name: GRiMM
+  negate: false
+  pattern: GRiMM
+  required: false
+  type: release_group
+- name: MNHD
+  negate: false
+  pattern: MNHD
   required: false
   type: release_group
 tests:

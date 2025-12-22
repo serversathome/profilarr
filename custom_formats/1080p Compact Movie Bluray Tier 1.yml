@@ -1,5 +1,6 @@
 name: 1080p Compact Movie Bluray Tier 1
-description: Matches release groups who fall under 1080p Efficient Bluray Tier 1
+description: Matches release groups who fall under 1080p Compact Movie Bluray Tier
+  1
 tags:
 - Release Group Tier
 - 1080p
@@ -21,9 +22,49 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: QxR
+- name: bluegreeen
   negate: false
-  pattern: QxR
+  pattern: bluegreeen
+  required: false
+  type: release_group
+- name: Chivaman
+  negate: false
+  pattern: Chivaman
+  required: false
+  type: release_group
+- name: edge2020
+  negate: false
+  pattern: edge2020
+  required: false
+  type: release_group
+- name: noxxus
+  negate: false
+  pattern: noxxus
+  required: false
+  type: release_group
+- name: R1GY3B
+  negate: false
+  pattern: R1GY3B
+  required: false
+  type: release_group
+- name: Ralphy
+  negate: false
+  pattern: Ralphy
+  required: false
+  type: release_group
+- name: ToNaTo
+  negate: false
+  pattern: ToNaTo
+  required: false
+  type: release_group
+- name: Vyndros
+  negate: false
+  pattern: Vyndros
+  required: false
+  type: release_group
+- name: YELLO
+  negate: false
+  pattern: YELLO
   required: false
   type: release_group
 tests:

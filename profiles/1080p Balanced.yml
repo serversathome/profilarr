@@ -1,15 +1,15 @@
 name: 1080p Balanced
 description: '1080p Balanced targets consistent & immutable 1080p **WEB-DLs** using
-  external factors like Streaming Source and Audio Formats
+  the Streaming Source and Audio Formats to determine the level of Transparency.
 
 
-  - 1080p WEB-DL
+  - Average Movie Sizes ~ 4 to 8gb per Movie
 
-  - Stream Optimized Encodes
+  - Movie Quality Ranking ~ 6/10
 
-  - Fallbacks in Place for Proper Quality Progression
+  - Average TV Sizes ~ 2 to 4gb per Episode
 
-  - 1080p WEB-DL > 720p Bluray > 720p WEB-DL > 480p WEB-DL > DVD'
+  - TV Quality Ranking ~ 7/10'
 tags:
 - 1080p
 - Balanced Focused
@@ -18,7 +18,7 @@ tags:
 - h264
 upgradesAllowed: true
 minCustomFormatScore: 20000
-upgradeUntilScore: 600000
+upgradeUntilScore: 888888
 minScoreIncrement: 1
 custom_formats:
 - name: 1080p WEB-DL
