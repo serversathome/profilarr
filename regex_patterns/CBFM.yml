@@ -1,7 +1,7 @@
-name: DarQ
-pattern: (?<=^|[\s.-])DarQ\b
+name: CBFM
+pattern: (?<=^|[\s.-])CBFM\b
 description: ''
 tags:
 - Release Group
-- HEVC
+- HDTV
 tests: []

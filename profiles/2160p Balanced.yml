@@ -1,8 +1,7 @@
 name: 2160p Balanced
 description: "2160p Balanced targets consistent & immutable 2160p **WEB-DLs w/ Lossy\
-  \ Audio**. \n\n- 2160p WEB-DL\n- Fallbacks in Place for Proper Quality Progression\n\
-  - 2160p WEB-DL > 1080p Bluray > 1080p WEB-DL > 720p Bluray > 720p WEB-DL > 480p\
-  \ WEB-DL > DVD"
+  \ Audio**. \n\n- Average Movie Sizes ~ 15 to 30gb per Movie\n- Movie Quality Ranking\
+  \ ~ 8/10\n- Average TV Sizes ~ 5 to 15gb per Episode\n- TV Quality Ranking ~ 8/10"
 tags:
 - 2160p
 - Balanced Focused
@@ -12,7 +11,7 @@ tags:
 - h265
 upgradesAllowed: true
 minCustomFormatScore: 20000
-upgradeUntilScore: 600000
+upgradeUntilScore: 888888
 minScoreIncrement: 1
 custom_formats:
 - name: 2160p WEB-DL

@@ -1,5 +1,5 @@
 name: 1080p Compact TV WEB Tier 1
-description: Matches release groups who fall under 1080p Efficient WEB Tier 1
+description: Matches release groups who fall under 1080p Compact WEB Tier 1
 tags:
 - Release Group Tier
 - 1080p
@@ -32,15 +32,15 @@ conditions:
   required: false
   type: release_group
 - name: TAoE
-  type: release_group
-  required: false
   negate: false
   pattern: TAoE
-- name: Vialle
-  type: release_group
   required: false
+  type: release_group
+- name: Vialle
   negate: false
   pattern: Vialle
+  required: false
+  type: release_group
 tests:
 - conditionResults:
   - matches: true

@@ -1,0 +1,21 @@
+name: 720p HDTV Tier 3
+description: Matches 720p HDTV.
+tags:
+- Release Group Tier
+conditions:
+- name: 1080p
+  negate: false
+  required: true
+  resolution: 1080p
+  type: resolution
+- name: HDTV
+  negate: false
+  required: true
+  source: television
+  type: source
+- name: HANDJOB
+  negate: false
+  pattern: HANDJOB
+  required: false
+  type: release_group
+tests: []

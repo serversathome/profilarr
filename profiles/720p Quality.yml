@@ -1,8 +1,8 @@
 name: 720p Quality
 description: "720p Quality utilizes the [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/gppi)\
-  \ to target **transparent** x264 720p encodes. \n\n- 720p Blurays\n- Fallbacks in\
-  \ Place for Proper Quality Progression\n- 720p Bluray > 720p WEB-DL > 480p WEB-DL\
-  \ > DVD"
+  \ to target **Transparent** x264 720p Encodes. \n\n- Average Movie Sizes ~ 4 to\
+  \ 8gb per Movie\n- Movie Quality Ranking ~ 5/10\n- Average TV Sizes ~ 2 to 4gb per\
+  \ Episode\n- TV Quality Ranking ~ 5/10"
 tags:
 - 720p
 - Quality Focused
@@ -11,7 +11,7 @@ tags:
 - h264
 upgradesAllowed: true
 minCustomFormatScore: 20000
-upgradeUntilScore: 600000
+upgradeUntilScore: 888888
 minScoreIncrement: 1
 custom_formats:
 - name: 720p WEB-DL

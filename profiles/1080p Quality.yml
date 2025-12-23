@@ -1,8 +1,8 @@
 name: 1080p Quality
 description: "1080p Quality utilizes the [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/gppi)\
-  \ to target **transparent** x264 1080p encodes. \n\n- 1080p Blurays\n- Fallbacks\
-  \ in Place for Proper Quality Progression\n- 1080p Bluray > 1080p WEB-DL > 720p\
-  \ Bluray > 720p WEB-DL > 480p WEB-DL > DVD"
+  \ to target **Transparent** x264 1080p Encodes. \n\n- Average Movie Sizes ~ 10 to\
+  \ 15gb per Movie\n- Movie Quality Ranking ~ 8/10\n- Average TV Sizes ~ 4 to 8gb\
+  \ per Episode\n- TV Quality Ranking ~ 8/10"
 tags:
 - 1080p
 - Quality Focused
@@ -11,7 +11,7 @@ tags:
 - h264
 upgradesAllowed: true
 minCustomFormatScore: 20000
-upgradeUntilScore: 600000
+upgradeUntilScore: 888888
 minScoreIncrement: 1
 custom_formats:
 - name: 1080p WEB-DL

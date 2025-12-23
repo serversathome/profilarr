@@ -1,14 +1,15 @@
 name: 2160p Efficient
 description: '2160p Efficient targets consistent & immutable 2160p **WEB-DLs w/ Lossy
-  Audio**. Specialized Fallback to 1080p Efficient+
+  Audio**. Specialized Fallback to 1080p Efficient
 
 
-  - 1080p Bluray and WEB x265
+  - Average Movie Sizes ~ 15 to 30gb per Movie
 
-  - Fallbacks in Place for Proper Quality Progression
+  - Movie Quality Ranking ~ 6/10
 
-  - 2160p WEB-DL > 1080p Bluray HEVC > 1080p WEB HEVC > 1080p WEB-DL > 720p Bluray
-  > 720p WEB-DL > 480p WEB-DL > DVD'
+  - Average TV Sizes ~ 4 to 12gb per Episode
+
+  - TV Ranking ~ 6/10'
 tags:
 - 2160p
 - Efficient Focused
@@ -17,19 +18,19 @@ tags:
 - x265
 upgradesAllowed: true
 minCustomFormatScore: 20000
-upgradeUntilScore: 600000
+upgradeUntilScore: 888888
 minScoreIncrement: 1
 custom_formats:
 - name: 2160p WEB-DL (Efficient)
   score: 380000
 - name: 1080p Bluray HEVC Tier 1
   score: 360000
+- name: HONE Bluray
+  score: 360000
 - name: 1080p WEB-DL HEVC Tier 1
   score: 340000
-- name: QxR Bluray
-  score: 324000
-- name: TAoE Bluray
-  score: 324000
+- name: HONE WEB
+  score: 340000
 - name: 1080p WEB-DL (h264)
   score: 280000
 - name: 720p WEB-DL
@@ -200,16 +201,18 @@ custom_formats_radarr:
 - name: 2160p Balanced Tier 3
   score: 380000
 - name: 1080p Efficient Movie Bluray Tier 1
-  score: 324000
-- name: 1080p Efficient Movie Bluray Tier 2
   score: 323000
-- name: 1080p Efficient Movie Bluray Tier 3
+- name: QxR Bluray
+  score: 323000
+- name: TAoE Bluray
+  score: 323000
+- name: 1080p Efficient Movie Bluray Tier 2
   score: 322000
 - name: Vialle Bluray
   score: 322000
-- name: 1080p Efficient Movie Bluray Tier 4
+- name: 1080p Efficient Movie Bluray Tier 3
   score: 321000
-- name: 1080p Efficient Movie Bluray Tier 5
+- name: 1080p Efficient Movie Bluray Tier 4
   score: 320000
 - name: 1080p Efficient Movie WEB Tier 1
   score: 303000
@@ -282,6 +285,10 @@ custom_formats_sonarr:
   score: 384000
 - name: 1080p Efficient TV Bluray Tier 1
   score: 324000
+- name: QxR Bluray
+  score: 324000
+- name: TAoE Bluray
+  score: 324000
 - name: Vialle Bluray
   score: 324000
 - name: 1080p Efficient TV Bluray Tier 2
@@ -293,28 +300,24 @@ custom_formats_sonarr:
 - name: 1080p Efficient TV Bluray Tier 5
   score: 320000
 - name: 1080p Efficient TV WEB Tier 1
-  score: 307000
-- name: QxR WEB
-  score: 307000
-- name: TAoE WEB
-  score: 307000
-- name: Vialle WEB
-  score: 307000
-- name: Weasley WEB
-  score: 307000
-- name: 1080p Efficient TV WEB Tier 2
-  score: 306000
-- name: 1080p Efficient TV WEB Tier 3
   score: 305000
-- name: 1080p Efficient TV WEB Tier 4
+- name: QxR WEB
+  score: 305000
+- name: TAoE WEB
+  score: 305000
+- name: Vialle WEB
+  score: 305000
+- name: Weasley WEB
+  score: 305000
+- name: 1080p Efficient TV WEB Tier 2
   score: 304000
-- name: 1080p Efficient TV Bluray Tier 6
+- name: 1080p Efficient TV WEB Tier 3
   score: 303000
-- name: 1080p Efficient TV Bluray Tier 7
+- name: 1080p Efficient TV WEB Tier 4
   score: 302000
-- name: 1080p Efficient TV WEB Tier 5
+- name: 1080p Efficient TV Bluray Tier 6
   score: 301000
-- name: 1080p Efficient TV WEB Tier 6
+- name: 1080p Efficient TV WEB Tier 5
   score: 300000
 - name: DSNP
   score: 3000

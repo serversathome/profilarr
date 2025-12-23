@@ -1,5 +1,5 @@
 name: 1080p Compact TV WEB Tier 5
-description: Matches release groups who fall under 1080p Compact WEB Tier 5
+description: Matches release groups who fall under 1080p Compact TV WEB Tier 5
 tags:
 - Release Group Tier
 - 1080p
@@ -26,9 +26,29 @@ conditions:
   required: false
   source: webrip
   type: source
+- name: HODL
+  negate: false
+  pattern: HODL
+  required: false
+  type: release_group
+- name: iVy
+  negate: false
+  pattern: iVy
+  required: false
+  type: release_group
 - name: KONTRAST
   negate: false
   pattern: KONTRAST
+  required: false
+  type: release_group
+- name: PHOCiS
+  negate: false
+  pattern: PHOCiS
+  required: false
+  type: release_group
+- name: YAWNiX
+  negate: false
+  pattern: YAWNiX
   required: false
   type: release_group
 tests:

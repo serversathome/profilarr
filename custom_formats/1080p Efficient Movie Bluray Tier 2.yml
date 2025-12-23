@@ -21,9 +21,39 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: SQS
+- name: Not HONE
+  type: release_title
+  required: true
+  negate: true
+  pattern: HONE
+- name: DarQ
   negate: false
-  pattern: SQS
+  pattern: DarQ
+  required: false
+  type: release_group
+- name: honeyvera
+  negate: false
+  pattern: Honeyvera
+  required: false
+  type: release_group
+- name: LSt
+  negate: false
+  pattern: LSt
+  required: false
+  type: release_group
+- name: MNHD
+  negate: false
+  pattern: MNHD
+  required: false
+  type: release_group
+- name: SARTRE
+  negate: false
+  pattern: SARTRE
+  required: false
+  type: release_group
+- name: Vialle
+  negate: false
+  pattern: Vialle
   required: false
   type: release_group
 tests:

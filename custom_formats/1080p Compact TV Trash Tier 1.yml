@@ -1,5 +1,5 @@
-name: 1080p Compact TV WEB Tier 6
-description: Matches release groups who fall under 1080p Compact WEB Tier 6
+name: 1080p Compact TV Trash Tier 1
+description: Matches release groups who fall under 1080p Compact TV Trash Tier 1
 tags:
 - Release Group Tier
 - 1080p
@@ -16,34 +16,19 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: WEB-DL
+- name: Bluray
   negate: false
-  required: false
-  source: web_dl
+  required: true
+  source: bluray
   type: source
-- name: WEBRip
+- name: Megusta
   negate: false
-  required: false
-  source: webrip
-  type: source
-- name: HODL
-  negate: false
-  pattern: HODL
+  pattern: MeGusta
   required: false
   type: release_group
-- name: iVy
+- name: PSA
   negate: false
-  pattern: iVy
-  required: false
-  type: release_group
-- name: PHOCiS
-  negate: false
-  pattern: PHOCiS
-  required: false
-  type: release_group
-- name: YAWNiX
-  negate: false
-  pattern: YAWNiX
+  pattern: PSA
   required: false
   type: release_group
 tests:

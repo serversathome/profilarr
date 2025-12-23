@@ -1,5 +1,5 @@
 name: 1080p Compact TV Bluray Tier 3
-description: Matches release groups who fall under 1080p Compact Bluray Tier 3
+description: Matches release groups who fall under 1080p Compact TV Bluray Tier 3
 tags:
 - Release Group Tier
 - 1080p
@@ -21,9 +21,44 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: LSt
+- name: bluegreeen
   negate: false
-  pattern: LSt
+  pattern: bluegreeen
+  required: false
+  type: release_group
+- name: cXcY
+  negate: false
+  pattern: cXcY
+  required: false
+  type: release_group
+- name: edge2020
+  negate: false
+  pattern: edge2020
+  required: false
+  type: release_group
+- name: R1GY3B
+  negate: false
+  pattern: R1GY3B
+  required: false
+  type: release_group
+- name: Ralphy
+  negate: false
+  pattern: Ralphy
+  required: false
+  type: release_group
+- name: TimeDistortion
+  negate: false
+  pattern: TimeDistortion
+  required: false
+  type: release_group
+- name: ToNaTo
+  negate: false
+  pattern: ToNaTo
+  required: false
+  type: release_group
+- name: YELLO
+  negate: false
+  pattern: YELLO
   required: false
   type: release_group
 tests:

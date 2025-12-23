@@ -1,0 +1,41 @@
+name: 1080p HDTV Tier 2
+description: Matches 1080p HDTV.
+tags:
+- Release Group Tier
+conditions:
+- name: 1080p
+  negate: false
+  required: true
+  resolution: 1080p
+  type: resolution
+- name: HDTV
+  negate: false
+  required: true
+  source: television
+  type: source
+- name: BTN
+  type: release_group
+  required: false
+  negate: false
+  pattern: BTN
+- name: DARKFLiX
+  negate: false
+  pattern: DARKFLiX
+  required: false
+  type: release_group
+- name: ViETNAM
+  negate: false
+  pattern: ViETNAM
+  required: false
+  type: release_group
+- name: CBFM
+  negate: false
+  pattern: CBFM
+  required: false
+  type: release_group
+- name: PLUTONiUM
+  negate: false
+  pattern: PLUTONiUM
+  required: false
+  type: release_group
+tests: []

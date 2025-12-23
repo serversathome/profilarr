@@ -1,69 +1,39 @@
-name: 1080p Efficient Movie Bluray Tier 5
-description: Matches release groups who fall under 1080p Efficient Bluray Tier 4
+name: 1080p Compact TV Trash Tier 2
+description: Matches release groups who fall under 1080p Compact TV Trash Tier 2
 tags:
 - Release Group Tier
 - 1080p
-- Efficient
-- Movie
+- Compact
+- TV
 conditions:
 - name: 1080p
   negate: false
   required: true
   resolution: 1080p
   type: resolution
-- name: Bluray
-  negate: false
-  required: true
-  source: bluray
-  type: source
 - name: x265
   negate: false
   pattern: x265 (Efficient)
   required: true
   type: release_title
-- name: bluegreeen
+- name: WEB-DL
   negate: false
-  pattern: bluegreeen
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: Megusta
+  negate: false
+  pattern: MeGusta
   required: false
   type: release_group
-- name: Chivaman
+- name: PSA
   negate: false
-  pattern: Chivaman
-  required: false
-  type: release_group
-- name: edge2020
-  negate: false
-  pattern: edge2020
-  required: false
-  type: release_group
-- name: noxxus
-  type: release_group
-  required: false
-  negate: false
-  pattern: noxxus
-- name: R1GY3B
-  negate: false
-  pattern: R1GY3B
-  required: false
-  type: release_group
-- name: Ralphy
-  negate: false
-  pattern: Ralphy
-  required: false
-  type: release_group
-- name: ToNaTo
-  negate: false
-  pattern: ToNaTo
-  required: false
-  type: release_group
-- name: Vyndros
-  negate: false
-  pattern: Vyndros
-  required: false
-  type: release_group
-- name: YELLO
-  negate: false
-  pattern: YELLO
+  pattern: PSA
   required: false
   type: release_group
 tests:
