@@ -17,9 +17,8 @@
 
 The [Official Dictionarry Database](https://github.com/Dictionarry-Hub/database) serves two main purposes:
 
-1. Powers our [Documentation](https://dictionarry.dev)
-2. Acts as a
-   [Profilarr Compliant Database](https://dictionarry.dev/profilarr-setup/linking?section=database-spotlight)
+- Powers our [Documentation](https://dictionarry.dev)
+- Acts as a [Profilarr Compliant Database](https://dictionarry.dev/profilarr-setup/linking?section=database-spotlight)
 
 ## Branches
 
@@ -38,6 +37,6 @@ May include experimental patterns and profiles that require further testing.
 
 ## Support
 We Recommend Joining the Dictionarry Discord for any support issues you may have
-1. [Discord](https://discord.com/invite/Y9TYP6jeYZ)
-2. [Database Issues](https://github.com/Dictionarry-Hub/database/issues)
-3. [Profilarr Issues](https://github.com/Dictionarry-Hub/profilarr/issues)
+- [Discord](https://discord.com/invite/Y9TYP6jeYZ)
+- [Database Issues](https://github.com/Dictionarry-Hub/database/issues)
+- [Profilarr Issues](https://github.com/Dictionarry-Hub/profilarr/issues)
