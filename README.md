@@ -21,7 +21,7 @@ The [Official Dictionarry Database](https://github.com/Dictionarry-Hub/database)
 2. Acts as a
    [Profilarr Compliant Database](https://dictionarry.dev/profilarr-setup/linking?section=database-spotlight)
 
-## Brances
+## Branches
 
 Stable
 
