@@ -20,17 +20,6 @@ The [Official Dictionarry Database](https://github.com/Dictionarry-Hub/database)
 - Powers our [Documentation](https://dictionarry.dev)
 - Acts as a [Profilarr Compliant Database](https://dictionarry.dev/profilarr-setup/linking?section=database-spotlight)
 
-## Branches
-
-Stable
-
-Contains tested database entries ready for production use.
-
-Dev
-
-Contains the latest updates and additions that are pending formal verification.
-May include experimental patterns and profiles that require further testing.
-
 ## Profiles
 
 - [Dictionarry Profiles](https://dictionarry.dev/quality-profile)
