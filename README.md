@@ -32,11 +32,11 @@ Dev
 Contains the latest updates and additions that are pending formal verification.
 May include experimental patterns and profiles that require further testing.
 
-### Profiles
+## Profiles
 
 [Dictionarry Profiles](https://dictionarry.dev/quality-profile)
 
-#### Support
+## Support
 We Recommend Joining the Dictionarry Discord for any support issues you may have
 1. [Discord](https://discord.com/invite/Y9TYP6jeYZ)
 2. [Database Issues](https://github.com/Dictionarry-Hub/database/issues)
