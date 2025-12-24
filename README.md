@@ -33,7 +33,7 @@ May include experimental patterns and profiles that require further testing.
 
 ## Profiles
 
-[Dictionarry Profiles](https://dictionarry.dev/quality-profile)
+- [Dictionarry Profiles](https://dictionarry.dev/quality-profile)
 
 ## Support
 We Recommend Joining the Dictionarry Discord for any support issues you may have
