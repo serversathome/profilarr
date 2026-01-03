@@ -63,6 +63,8 @@ custom_formats:
   score: 101
 - name: Multi-Audio
   score: 101
+- name: Multi-Sub
+  score: 101
 - name: Uncensored
   score: 101
 - name: Anime WEB Tier 6
