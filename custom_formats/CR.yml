@@ -1,12 +1,12 @@
 name: CR
-description: Matches 'Crunchyroll' WEB-DLs. Negates any encodes.
+description: ''
 tags:
+- Anime
 - Streaming Service
-- WEB-DL
 conditions:
-- name: CR Regex
+- name: Crunchyroll
   negate: false
-  pattern: Crunchyroll
+  pattern: CR
   required: true
   type: release_title
 - name: WEB-DL
@@ -19,41 +19,9 @@ conditions:
   required: false
   source: webrip
   type: source
-tests:
-- conditionResults:
-  - matches: true
-    name: AMZN Regex
-    negate: false
-    pattern: Amazon Prime
-    required: true
-    type: release_title
-  - matches: true
-    name: x265
-    negate: true
-    pattern: x265
-    required: false
-    type: release_title
-  expected: false
-  id: 1
-  input: The Bad Guys (2022) (1080p AMZN Webrip x265 10bit EAC3 5 1 - ArcX)[TAoE]
-  lastRun: '2025-01-14T09:45:16.007149'
-  passes: true
-- conditionResults:
-  - matches: true
-    name: AMZN Regex
-    negate: false
-    pattern: Amazon Prime
-    required: true
-    type: release_title
-  - matches: true
-    name: x265
-    negate: true
-    pattern: x265
-    required: false
-    type: release_title
-  expected: false
-  id: 2
-  input: Top Gun Maverick (2022) IMAX (1080p AMZN WEB-DL x265 SDR DDP Atmos 5.1 English
-    - Goki TAoE)
-  lastRun: '2025-01-14T09:45:16.007149'
-  passes: true
+- name: WEB
+  type: source
+  required: false
+  negate: false
+  source: television
+tests: []
