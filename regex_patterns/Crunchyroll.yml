@@ -1,0 +1,12 @@
+name: Crunchyroll
+pattern: \b(C(runchy)?[ .-]?R(oll)?)\b
+description: "Crunchyroll is a popular streaming service focused on anime, manga,\
+  \ and Asian entertainment. It offers a large library of animated series and films,\
+  \ including both classic titles and new simulcasts straight from Japan, often with\
+  \ subtitles soon after they air. Users can watch on demand across devices, and there\u2019\
+  s both a free, ad-supported tier and paid premium subscriptions with ad-free viewing\
+  \ and early access to episodes."
+tags:
+- Streaming Service
+- WEB-DL
+tests: []

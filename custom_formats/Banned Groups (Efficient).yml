@@ -69,6 +69,11 @@ conditions:
   pattern: DRX
   required: false
   type: release_group
+- name: E
+  type: release_group
+  required: false
+  negate: false
+  pattern: E
 - name: FGT
   negate: false
   pattern: FGT
