@@ -26,6 +26,11 @@ conditions:
   required: false
   source: webrip
   type: source
+- name: ASD87
+  type: release_group
+  required: false
+  negate: false
+  pattern: ASD87
 - name: BRUTE
   negate: false
   pattern: BRUTE
@@ -112,10 +117,10 @@ conditions:
   required: false
   type: release_group
 - name: PuTao
-  type: release_group
-  required: false
   negate: false
   pattern: PuTao
+  required: false
+  type: release_group
 - name: ROCiNANTE
   negate: false
   pattern: ROCiNANTE
