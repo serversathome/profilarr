@@ -126,11 +126,6 @@ conditions:
   pattern: LiNG
   required: false
   type: release_group
-- name: LoRD
-  negate: false
-  pattern: LoRD
-  required: false
-  type: release_group
 - name: luvBB
   negate: false
   pattern: luvBB

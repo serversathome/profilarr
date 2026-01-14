@@ -42,15 +42,15 @@ conditions:
   required: false
   type: release_group
 - name: D-Z0N3
-  type: release_group
-  required: false
   negate: false
   pattern: D-Z0N3
-- name: EbP
-  type: release_group
   required: false
+  type: release_group
+- name: EbP
   negate: false
   pattern: EbP
+  required: false
+  type: release_group
 - name: Geek
   negate: false
   pattern: Geek
@@ -61,6 +61,11 @@ conditions:
   pattern: HiFi
   required: false
   type: release_group
+- name: LoRD
+  type: release_group
+  required: false
+  negate: false
+  pattern: LoRD
 - name: TayTo
   negate: false
   pattern: TayTo
