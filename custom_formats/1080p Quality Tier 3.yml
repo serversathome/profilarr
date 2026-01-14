@@ -26,6 +26,11 @@ conditions:
   required: false
   source: webrip
   type: source
+- name: ATELiER
+  type: release_group
+  required: false
+  negate: false
+  pattern: ATELiER
 - name: CRiSC
   negate: false
   pattern: CRiSC
@@ -56,6 +61,11 @@ conditions:
   pattern: iFT
   required: false
   type: release_group
+- name: SbR
+  type: release_group
+  required: false
+  negate: false
+  pattern: SbR
 - name: WMING
   negate: false
   pattern: WMING

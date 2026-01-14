@@ -31,11 +31,6 @@ conditions:
   pattern: AJP69
   required: false
   type: release_group
-- name: ATELiER
-  negate: false
-  pattern: ATELiER
-  required: false
-  type: release_group
 - name: BSTD
   negate: false
   pattern: BSTD
@@ -209,11 +204,6 @@ conditions:
 - name: SaNcTi
   negate: false
   pattern: SaNcTi
-  required: false
-  type: release_group
-- name: SbR
-  negate: false
-  pattern: SbR
   required: false
   type: release_group
 - name: SiMPLE
