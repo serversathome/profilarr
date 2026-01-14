@@ -41,6 +41,16 @@ conditions:
   pattern: CtrlHD
   required: false
   type: release_group
+- name: D-Z0N3
+  type: release_group
+  required: false
+  negate: false
+  pattern: D-Z0N3
+- name: EbP
+  type: release_group
+  required: false
+  negate: false
+  pattern: EbP
 - name: Geek
   negate: false
   pattern: Geek

@@ -31,36 +31,26 @@ conditions:
   pattern: DON
   required: false
   type: release_group
-- name: D-Z0N3
-  negate: false
-  pattern: D-Z0N3
-  required: false
-  type: release_group
-- name: EbP
-  negate: false
-  pattern: EbP
-  required: false
-  type: release_group
 - name: TeamSyndicate
   negate: false
   pattern: TeamSyndicate
   required: false
   type: release_group
 - name: REBORN
-  type: release_group
-  required: false
   negate: false
   pattern: REBORN
-- name: SA89
-  type: release_group
   required: false
+  type: release_group
+- name: SA89
   negate: false
   pattern: SA89
-- name: SoLaR
-  type: release_group
   required: false
+  type: release_group
+- name: SoLaR
   negate: false
   pattern: SoLaR
+  required: false
+  type: release_group
 - name: ZoroSenpai
   negate: false
   pattern: ZoroSenpai
