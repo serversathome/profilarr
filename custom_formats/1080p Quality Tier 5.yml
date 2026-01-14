@@ -36,11 +36,6 @@ conditions:
   pattern: BSTD
   required: false
   type: release_group
-- name: BV
-  negate: false
-  pattern: BV
-  required: false
-  type: release_group
 - name: Chotab
   negate: false
   pattern: Chotab

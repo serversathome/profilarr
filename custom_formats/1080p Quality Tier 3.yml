@@ -27,10 +27,15 @@ conditions:
   source: webrip
   type: source
 - name: ATELiER
+  negate: false
+  pattern: ATELiER
+  required: false
+  type: release_group
+- name: BV
   type: release_group
   required: false
   negate: false
-  pattern: ATELiER
+  pattern: BV
 - name: CRiSC
   negate: false
   pattern: CRiSC
@@ -62,10 +67,10 @@ conditions:
   required: false
   type: release_group
 - name: SbR
-  type: release_group
-  required: false
   negate: false
   pattern: SbR
+  required: false
+  type: release_group
 - name: WMING
   negate: false
   pattern: WMING
