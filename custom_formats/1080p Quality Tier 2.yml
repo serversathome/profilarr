@@ -32,10 +32,10 @@ conditions:
   required: false
   type: release_group
 - name: coffee
-  type: release_group
-  required: false
   negate: false
   pattern: coffee
+  required: false
+  type: release_group
 - name: CtrlHD
   negate: false
   pattern: CtrlHD
@@ -49,21 +49,6 @@ conditions:
 - name: HiFi
   negate: false
   pattern: HiFi
-  required: false
-  type: release_group
-- name: REBORN
-  negate: false
-  pattern: REBORN
-  required: false
-  type: release_group
-- name: SA89
-  negate: false
-  pattern: SA89
-  required: false
-  type: release_group
-- name: SoLaR
-  negate: false
-  pattern: SoLaR
   required: false
   type: release_group
 - name: TayTo
