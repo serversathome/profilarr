@@ -1,5 +1,5 @@
 name: TRaSH Anime Bluray Tier 5
-pattern: (?i)(?:^|[^A-Za-z0-9])(?:BluDragon|D4C|PMR|Raizel|REVO|SRLS|TTGA|VULCAN)(?:[^A-Za-z0-9]|$)
+pattern: (?i)(?:^\[|(?<=-)|(?<=\[))(?:BluDragon|Raizel|VULCAN|REVO|SRLS|TTGA|D4C|PMR)(?:\]|\b|$)
 description: TRaSH Guides Anime Tier 05
 tags:
 - Anime

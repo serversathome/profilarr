@@ -1,5 +1,5 @@
 name: TRaSH Anime WEB Tier 1
-pattern: (?i)(?:^|[^A-Za-z0-9])(?:Arg0|Arid|Baws|LostYears|LYS1TH3A|McBalls|sam|SCY|Setsugen|smol|SoM|Vodes|Z4ST1N|ZeroBuild)(?:[^A-Za-z0-9]|$)
+pattern: (?i)(?:^\[|(?<=-)|(?<=\[))(?:LYS1TH3A|LostYears|Setsugen|ZeroBuild|McBalls|Z4ST1N|Arg0|Arid|Baws|smol|Vodes|sam|SCY|SoM)(?:\]|\b|$)
 description: TRaSH Guides Anime Web Tier 01 (Muxers)
 tags:
 - Anime

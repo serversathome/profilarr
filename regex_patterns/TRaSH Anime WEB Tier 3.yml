@@ -1,5 +1,5 @@
 name: TRaSH Anime WEB Tier 3
-pattern: (?i)(?:^|[^A-Za-z0-9])(?:SubsPlease|SubsPlus+|ZR)(?:[^A-Za-z0-9]|$)
+pattern: (?i)(?:^\[|(?<=-)|(?<=\[))(?:SubsPlease|SubsPlus\+|ZR)(?:\]|\b|$)
 description: TRaSH Guides Anime Web Tier 03 (Official Subs)
 tags:
 - Anime

@@ -1,5 +1,5 @@
 name: Dumpstarr Anime Baseline Groups
-pattern: (?i)(?:^|[^A-Za-z0-9])(?:ANK-Raws|CBM|DmonHiro|H-Enc|HQR|IrizaRaws|jsum|Kagura|km|Koten_Gars|kuchikirukia|Lowpower-Raws|moscowgolem|mottoj|NanoAlchemist|philosophy-raws|SCY|Seicher|sergey_krs|SOFCJ-Raws|Snow-Raws|UCCUSS|UQW|Urotsuki|VCB-Studio|YURASUKA|Yurasyk/Chyrka|Zagzad)(?:[^A-Za-z0-9]|$)
+pattern: (?i)(?:^\[|(?<=-)|(?<=\[))(?:philosophy-raws|NanoAlchemist|moscowgolem|kuchikirukia|Lowpower-Raws|SOFCJ-Raws|VCB-Studio|Yurasyk\/Chyrka|Koten_Gars|IrizaRaws|YURASUKA|sergey_krs|DmonHiro|Snow-Raws|ANK-Raws|Urotsuki|Seicher|Kagura|mottoj|UCCUSS|Zagzad|H-Enc|jsum|CBM|HQR|SCY|UQW|km)(?:\]|\b|$)
 description: https://thewiki.moe/tutorials/comparison/#choosing-sources-anime
 tags:
 - Anime

@@ -1,5 +1,5 @@
 name: TRaSH Anime WEB Tier 4
-pattern: (?i)(?:^|[^A-Za-z0-9])(?:BlueLobster|Erai-Raws|GST|HorribleRips|HorribleSubs|KAN3D2M|KiyoshiStar|Lia|NanDesuKa|URANIME|VARYG|ZigZag)(?:[^A-Za-z0-9]|$)
+pattern: (?i)(?:^\[|(?<=-)|(?<=\[))(?:HorribleSubs|HorribleRips|KiyoshiStar|BlueLobster|NanDesuKa|Erai-Raws|KAN3D2M|URANIME|ZigZag|VARYG|GST|Lia)(?:\]|\b|$)
 description: TRaSH Guides Anime Web Tier 04 (Official Subs)
 tags:
 - Anime
