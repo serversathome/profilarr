@@ -26,6 +26,11 @@ conditions:
   required: false
   source: webrip
   type: source
+- name: coffee
+  type: release_group
+  required: false
+  negate: false
+  pattern: coffee
 - name: DON
   negate: false
   pattern: DON

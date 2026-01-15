@@ -31,11 +31,6 @@ conditions:
   pattern: c0kE
   required: false
   type: release_group
-- name: coffee
-  negate: false
-  pattern: coffee
-  required: false
-  type: release_group
 - name: CtrlHD
   negate: false
   pattern: CtrlHD
@@ -62,10 +57,10 @@ conditions:
   required: false
   type: release_group
 - name: LoRD
-  type: release_group
-  required: false
   negate: false
   pattern: LoRD
+  required: false
+  type: release_group
 - name: TayTo
   negate: false
   pattern: TayTo
