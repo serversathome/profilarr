@@ -31,6 +31,11 @@ conditions:
   pattern: AJP69
   required: false
   type: release_group
+- name: ATELiER
+  type: release_group
+  required: false
+  negate: false
+  pattern: ATELiER
 - name: BSTD
   negate: false
   pattern: BSTD

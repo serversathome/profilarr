@@ -26,16 +26,11 @@ conditions:
   required: false
   source: webrip
   type: source
-- name: ATELiER
-  negate: false
-  pattern: ATELiER
-  required: false
-  type: release_group
 - name: BV
-  type: release_group
-  required: false
   negate: false
   pattern: BV
+  required: false
+  type: release_group
 - name: CRiSC
   negate: false
   pattern: CRiSC
