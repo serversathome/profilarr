@@ -1,3 +1,6 @@
+# Automatically reopens closed issues when someone leaves a new comment.
+# Useful for Utterances — lets users continue discussions on resolved topics.
+
 name: Reopen on comment
 
 on:
