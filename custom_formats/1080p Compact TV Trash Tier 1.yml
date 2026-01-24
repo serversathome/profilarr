@@ -21,11 +21,6 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: Megusta
-  negate: false
-  pattern: MeGusta
-  required: false
-  type: release_group
 - name: PSA
   negate: false
   pattern: PSA
