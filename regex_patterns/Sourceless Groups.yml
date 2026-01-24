@@ -1,5 +1,5 @@
 name: Sourceless Groups
-pattern: (?<=^|[\s.-])(Megusta)\b
+pattern: (?<=^|[\s.-])(ELiTE|Megusta)\b
 description: ''
 tags:
 - Release Group

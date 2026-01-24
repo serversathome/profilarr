@@ -17,10 +17,10 @@ conditions:
   required: true
   type: release_title
 - name: HDTV
-  type: source
-  required: false
   negate: false
+  required: false
   source: television
+  type: source
 - name: WEB-DL
   negate: false
   required: false
@@ -31,6 +31,11 @@ conditions:
   required: false
   source: webrip
   type: source
+- name: ELiTE
+  type: release_group
+  required: false
+  negate: false
+  pattern: ELiTE
 - name: Megusta
   negate: false
   pattern: MeGusta
