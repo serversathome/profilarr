@@ -157,6 +157,8 @@ custom_formats:
   score: 0
 - name: STAN
   score: 0
+- name: ASL
+  score: -999999
 - name: AV1
   score: -999999
 - name: Banned Groups (Efficient)

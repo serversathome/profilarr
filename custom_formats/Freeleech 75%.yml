@@ -1,0 +1,12 @@
+name: Freeleech 75%
+description: 75% Freeleech Indexer Flag
+tags:
+- Flag
+- Freeleech
+conditions:
+- flag: freeleech_75
+  name: 75% Freeleech
+  negate: false
+  required: true
+  type: indexer_flag
+tests: []

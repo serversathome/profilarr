@@ -31,19 +31,24 @@ conditions:
   pattern: DON
   required: false
   type: release_group
-- name: EbP
+- name: REBORN
+  type: release_group
+  required: false
   negate: false
-  pattern: EbP
-  required: false
+  pattern: REBORN
+- name: SoLaR
   type: release_group
+  required: false
+  negate: false
+  pattern: SoLaR
 - name: TeamSyndicate
-  type: release_group
-  required: false
   negate: false
   pattern: TeamSyndicate
-- name: ZoroSenpai
-  type: release_group
   required: false
+  type: release_group
+- name: ZoroSenpai
   negate: false
   pattern: ZoroSenpai
+  required: false
+  type: release_group
 tests: []

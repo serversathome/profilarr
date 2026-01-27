@@ -1,0 +1,6 @@
+name: Sourceless Groups
+pattern: (?<=^|[\s.-])(ELiTE|Megusta)\b
+description: ''
+tags:
+- Release Group
+tests: []

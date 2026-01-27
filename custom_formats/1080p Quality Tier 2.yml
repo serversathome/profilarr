@@ -31,14 +31,19 @@ conditions:
   pattern: c0kE
   required: false
   type: release_group
-- name: coffee
-  type: release_group
-  required: false
-  negate: false
-  pattern: coffee
 - name: CtrlHD
   negate: false
   pattern: CtrlHD
+  required: false
+  type: release_group
+- name: D-Z0N3
+  negate: false
+  pattern: D-Z0N3
+  required: false
+  type: release_group
+- name: EbP
+  negate: false
+  pattern: EbP
   required: false
   type: release_group
 - name: Geek
@@ -51,19 +56,9 @@ conditions:
   pattern: HiFi
   required: false
   type: release_group
-- name: REBORN
+- name: LoRD
   negate: false
-  pattern: REBORN
-  required: false
-  type: release_group
-- name: SA89
-  negate: false
-  pattern: SA89
-  required: false
-  type: release_group
-- name: SoLaR
-  negate: false
-  pattern: SoLaR
+  pattern: LoRD
   required: false
   type: release_group
 - name: TayTo
