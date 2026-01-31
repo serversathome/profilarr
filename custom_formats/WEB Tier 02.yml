@@ -1,5 +1,5 @@
 name: WEB Tier 02
-description: Matches release groups who fall under WEB-DL Tier 1
+description: ''
 tags:
 - Release Groups
 - WEB-DL
@@ -10,10 +10,10 @@ conditions:
   source: web_dl
   type: source
 - name: WEBRip
-  type: source
-  required: false
   negate: false
+  required: false
   source: webrip
+  type: source
 - name: Dictionarry WEB Tier 02
   negate: false
   pattern: Dictionarry WEB Tier 02

@@ -26,7 +26,7 @@ conditions:
   pattern: Dolby Digital +
 - name: Not DTS-HD
   negate: true
-  pattern: DTS-HD MA
+  pattern: DTS-HD
   required: true
   type: release_title
 - name: Not DTS-HD HRA ES
