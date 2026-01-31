@@ -13,4 +13,9 @@ conditions:
   required: true
   source: television
   type: source
+- name: Sourceless Groups
+  type: release_group
+  required: true
+  negate: true
+  pattern: Sourceless Groups
 tests: []

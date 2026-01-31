@@ -41,15 +41,20 @@ conditions:
   required: false
   type: release_group
 - name: j3rico
-  type: release_group
-  required: false
   negate: false
   pattern: j3rico
+  required: false
+  type: release_group
 - name: JustWatch
   negate: false
   pattern: JustWatch
   required: false
   type: release_group
+- name: ORBiT
+  type: release_group
+  required: false
+  negate: false
+  pattern: ORBiT
 - name: SURCODE
   negate: false
   pattern: SURCODE

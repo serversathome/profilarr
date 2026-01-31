@@ -1,0 +1,10 @@
+name: ASL
+description: ''
+tags: []
+conditions:
+- name: ASL
+  negate: false
+  pattern: ASL
+  required: true
+  type: release_title
+tests: []

@@ -26,6 +26,11 @@ conditions:
   required: false
   source: webrip
   type: source
+- name: BV
+  negate: false
+  pattern: BV
+  required: false
+  type: release_group
 - name: CRiSC
   negate: false
   pattern: CRiSC
@@ -54,6 +59,11 @@ conditions:
 - name: iFT
   negate: false
   pattern: iFT
+  required: false
+  type: release_group
+- name: SbR
+  negate: false
+  pattern: SbR
   required: false
   type: release_group
 - name: WMING

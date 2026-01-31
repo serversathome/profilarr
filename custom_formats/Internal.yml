@@ -1,0 +1,10 @@
+name: Internal
+description: Internal Indexer Flag
+tags: []
+conditions:
+- name: Internal
+  type: indexer_flag
+  required: true
+  negate: false
+  flag: internal
+tests: []

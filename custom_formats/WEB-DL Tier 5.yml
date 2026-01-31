@@ -34,11 +34,6 @@ conditions:
   pattern: ROCCaT
   required: false
   type: release_group
-- name: SiGLA
-  type: release_group
-  required: false
-  negate: false
-  pattern: SiGLA
 - name: SiGMA
   negate: false
   pattern: SiGMA

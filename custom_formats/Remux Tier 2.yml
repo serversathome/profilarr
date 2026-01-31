@@ -30,10 +30,10 @@ conditions:
   required: false
   type: release_group
 - name: PiRAMiDHEAD
-  type: release_group
-  required: false
   negate: false
   pattern: PiRAMiDHEAD
+  required: false
+  type: release_group
 - name: PmP
   negate: false
   pattern: PmP
@@ -42,6 +42,11 @@ conditions:
 - name: PP
   negate: false
   pattern: PP
+  required: false
+  type: release_group
+- name: ZoroSenpai
+  negate: false
+  pattern: ZoroSenpai
   required: false
   type: release_group
 - name: ZQ

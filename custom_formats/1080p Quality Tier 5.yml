@@ -32,18 +32,13 @@ conditions:
   required: false
   type: release_group
 - name: ATELiER
+  type: release_group
+  required: false
   negate: false
   pattern: ATELiER
-  required: false
-  type: release_group
 - name: BSTD
   negate: false
   pattern: BSTD
-  required: false
-  type: release_group
-- name: BV
-  negate: false
-  pattern: BV
   required: false
   type: release_group
 - name: Chotab
@@ -136,11 +131,6 @@ conditions:
   pattern: LiNG
   required: false
   type: release_group
-- name: LoRD
-  negate: false
-  pattern: LoRD
-  required: false
-  type: release_group
 - name: luvBB
   negate: false
   pattern: luvBB
@@ -209,11 +199,6 @@ conditions:
 - name: SaNcTi
   negate: false
   pattern: SaNcTi
-  required: false
-  type: release_group
-- name: SbR
-  negate: false
-  pattern: SbR
   required: false
   type: release_group
 - name: SiMPLE
