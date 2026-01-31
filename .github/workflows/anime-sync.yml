@@ -5,6 +5,8 @@ on:
     # Runs every day at 3am UTC
     - cron: "0 3 * * *"
   workflow_dispatch:
+permissions:                                                                                                     
+  contents: write       
 
 jobs:
   sync_custom_formats:
