@@ -4,16 +4,16 @@ tags:
 - Anime
 - Group Tier
 conditions:
-- name: WEB-DL
-  negate: false
+- name: Not Bluray
+  negate: true
   required: false
-  source: web_dl
+  source: bluray
   type: source
-- name: WEBRip
-  negate: false
+- name: Not DVD
+  type: source
   required: false
-  source: webrip
-  type: source
+  negate: true
+  source: dvd
 - name: TRaSH Anime WEB Tier 1
   negate: false
   pattern: TRaSH Anime WEB Tier 1
