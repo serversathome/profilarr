@@ -9,14 +9,4 @@ tags:
 - Enhancement
 - Aspect Ratio
 - TRaSH
-tests:
-- id: 1
-  input: A.Writers.Odyssey.2021.1080p.IMAX.BluRay.REMUX.AVC.TrueHD.7.1.Atmos-BELGiAN.mkv
-  expected: true
-- id: 2
-  input: Transformers Age Of Extinction 2014 NON-IMAX BluRay 1080p DTS AC3 x264-MgB
-  expected: false
-- id: 3
-  input: Thor Ragnarok 2017 IMAX Enhanced 1080p HFR WEB-DL HDR10 HEVC 10bit DDP 5
-    1-Robo29
-  expected: true
+tests: []

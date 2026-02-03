@@ -1,5 +1,5 @@
 name: TRaSH Anime Bluray Tier 7
-pattern: (?i)(?:^\[|(?<=-)|(?<=\[))(?:KiyoshiStar|TENEIGHTY|DragsterPS|RedBlade|WaLMaRT|ANiHLS|Hark0N|inid4c|STRiFE|HAiKU|iAHD|CBM|DHD|MCR|NPC|SEV|A-L|KS|RH)(?:\]|\b|$)
+pattern: (?i)(?:^\[|(?<=-)|(?<=\[))(?:A-L|ANiHLS|CBM|DHD|DragsterPS|HAiKU|Hark0N|iAHD|inid4c|KiyoshiStar|KS|MCR|NPC|RedBlade|RH|SEV|STRiFE|TENEIGHTY|WaLMaRT)(?:\]|\b|$)
 description: TRaSH Guides Anime Tier 07 (P2P/Scene)
 tags:
 - Anime

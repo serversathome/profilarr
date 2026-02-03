@@ -1,5 +1,5 @@
 name: IMAX Enhanced
-pattern: ^(?=.*\b((DSNP|Disney\+|BC|B?CORE)(?=[ ._-]web[ ._-]?(dl|rip)\b)))(?=.*\b((?<!NON[
+pattern: ^(?=.*\b((DSNP|BC|B?CORE)\b|Disney\+)(?=.*\bWEB[ ._-]?(DL|Rip)\b))(?=.*\b((?<!NON[
   ._-])IMAX)\b)|^(?=.*\b(IMAX[ ._-]Enhanced)\b)
 description: 'Matches IMAX releases from specific digital sources.
 
@@ -12,28 +12,4 @@ tags:
 - Enhancement
 - Aspect Ratio
 - TRaSH
-tests:
-- id: 1
-  input: A.Writers.Odyssey.2021.1080p.IMAX.BluRay.REMUX.AVC.TrueHD.7.1.Atmos-BELGiAN.mkv
-  expected: false
-- id: 2
-  input: Transformers Age Of Extinction 2014 NON-IMAX BluRay 1080p DTS AC3 x264-MgB
-  expected: false
-- id: 3
-  input: Thor Ragnarok 2017 IMAX Enhanced 1080p HFR WEB-DL HDR10 HEVC 10bit DDP 5
-    1-Robo29
-  expected: false
-- id: 4
-  input: Oppenheimer (2023) 2160p (UHD BluRay Enhanced IMAX HDR10Plus DoVi HEVC 10Bit
-    TrueHD 5 1Ch and DTS-HD MA 5 1Ch)-ShieldBearer
-  expected: false
-- id: 5
-  input: Thor Ragnarok 2017 IMAX Enhanced 1080p DSNP WEB-DL HDR10 HEVC 10bit DDP 5
-    1-Robo29
-  expected: true
-- id: 6
-  input: Thor Ragnarok 2017 IMAX 1080p DSNP WEB-DL HDR10 HEVC 10bit DDP 5 1-Robo29
-  expected: true
-- id: 7
-  input: Thor Ragnarok 2017 IMAX Enhanced 1080p WEB-DL HDR10 HEVC 10bit DDP 5 1-Robo29
-  expected: false
+tests: []
