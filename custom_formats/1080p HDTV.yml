@@ -13,9 +13,9 @@ conditions:
   required: true
   source: television
   type: source
-- name: Sourceless Groups
-  type: release_group
+- name: HDTV Regex
+  negate: false
+  pattern: HDTV
   required: true
-  negate: true
-  pattern: Sourceless Groups
+  type: release_title
 tests: []
