@@ -19,4 +19,9 @@ conditions:
   pattern: Dictionarry WEB Tier 02
   required: false
   type: release_group
+- name: Dumpstarr WEB Tier 02
+  type: release_group
+  required: false
+  negate: false
+  pattern: Dumpstarr WEB Tier 02
 tests: []

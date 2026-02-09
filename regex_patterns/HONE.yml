@@ -1,5 +1,5 @@
 name: HONE
-pattern: (?<=^|[\s.-])HONE\b$
+pattern: (?<=^|[\s.-])(DiscoD|HONE|Yogi)\b
 description: ''
 tags:
 - Release Group

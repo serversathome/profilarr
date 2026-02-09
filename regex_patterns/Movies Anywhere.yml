@@ -1,5 +1,5 @@
 name: Movies Anywhere
-pattern: (?<!dts[ .-]?hd[ .-]?)\bma\b(?=.*\bweb[ ._-]?(dl|rip)\b)
+pattern: (?<!dts[ .-]?hd[ .-]?)\b(ma|ykw)\b(?=.*\bweb[ ._-]?(dl|rip)\b)
 description: Movies Anywhere (MA) is a cloud-based digital rights locker and over-the-top
   streaming platform that allows users to stream and download purchased films, including
   digital copies redeemed from codes found in home video releases as well as digital
