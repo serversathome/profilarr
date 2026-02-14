@@ -1,5 +1,5 @@
-name: RARGB
-pattern: (?<=^|[\s.-])RARGB\b
+name: RARBG
+pattern: (?<=^|[\s.-])RARBG\b
 description: Banned for Low Quality
 tags:
 - Release Group

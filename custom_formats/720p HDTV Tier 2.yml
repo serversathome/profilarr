@@ -13,11 +13,16 @@ conditions:
   required: true
   source: television
   type: source
+- name: HDTV Regex
+  type: release_title
+  required: true
+  negate: false
+  pattern: HDTV
 - name: BTN
-  type: release_group
-  required: false
   negate: false
   pattern: BTN
+  required: false
+  type: release_group
 - name: DARKFLiX
   negate: false
   pattern: DARKFLiX
