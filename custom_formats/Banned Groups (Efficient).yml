@@ -70,10 +70,10 @@ conditions:
   required: false
   type: release_group
 - name: E
-  type: release_group
-  required: false
   negate: false
   pattern: E
+  required: false
+  type: release_group
 - name: FGT
   negate: false
   pattern: FGT
@@ -129,9 +129,9 @@ conditions:
   pattern: PiRaTeS
   required: false
   type: release_group
-- name: RARGB
+- name: RARBG
   negate: false
-  pattern: RARGB
+  pattern: RARBG
   required: false
   type: release_group
 - name: SasukeducK

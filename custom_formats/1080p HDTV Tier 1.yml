@@ -13,16 +13,21 @@ conditions:
   required: true
   source: television
   type: source
+- name: HDTV Regex
+  type: release_title
+  required: true
+  negate: false
+  pattern: HDTV
 - name: CtrlHD
   negate: false
   pattern: CtrlHD
   required: false
   type: release_group
 - name: EDPH
-  type: release_group
-  required: false
   negate: false
   pattern: EDPH
+  required: false
+  type: release_group
 - name: NTb
   negate: false
   pattern: NTb

@@ -13,6 +13,11 @@ conditions:
   required: true
   source: television
   type: source
+- name: HDTV Regex
+  type: release_title
+  required: true
+  negate: false
+  pattern: HDTV
 - name: HANDJOB
   negate: false
   pattern: HANDJOB
