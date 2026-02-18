@@ -1,10 +1,11 @@
 name: ASL
-description: ''
-tags: []
+description: Targets releases with ASL (American Sign Language) overlays.
+tags:
+- Banned
 conditions:
 - name: ASL
-  negate: false
-  pattern: ASL
-  required: true
   type: release_title
+  required: true
+  negate: false
+  pattern: American Sign Language
 tests: []

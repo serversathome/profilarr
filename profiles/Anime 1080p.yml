@@ -113,6 +113,8 @@ custom_formats:
   score: -10000
 - name: Anime Raws
   score: -10000
+- name: ASL
+  score: -10000
 - name: AV1
   score: -10000
 - name: Dubs Only
