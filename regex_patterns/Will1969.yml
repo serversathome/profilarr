@@ -1,0 +1,7 @@
+name: Will1969
+pattern: \b(Will1869)\b
+description: ''
+tags:
+- Banned
+- Release Group
+tests: []

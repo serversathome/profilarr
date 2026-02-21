@@ -1,0 +1,7 @@
+name: READ NOTE
+pattern: \b(READ(\s|\.)+NOTE)\b
+description: ''
+tags:
+- Banned
+- Release Group
+tests: []

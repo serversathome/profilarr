@@ -1,0 +1,7 @@
+name: TeeWee
+pattern: \b(TeeWee)\b
+description: ''
+tags:
+- Banned
+- Release Group
+tests: []
