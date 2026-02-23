@@ -15,8 +15,8 @@ conditions:
   source: dvd
   type: source
 - name: TRaSH Anime Bluray Tier 8
+  type: release_title
+  required: true
   negate: false
   pattern: TRaSH Anime Bluray Tier 8
-  required: true
-  type: release_group
 tests: []
