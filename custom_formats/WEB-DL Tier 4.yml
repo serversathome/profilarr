@@ -14,6 +14,11 @@ conditions:
   pattern: APEX
   required: false
   type: release_group
+- name: BLOOM
+  type: release_group
+  required: false
+  negate: false
+  pattern: BLOOM
 - name: BTN
   negate: false
   pattern: BTN
