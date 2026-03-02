@@ -57,6 +57,8 @@ custom_formats:
   score: 1000
 - name: Anime Tier 8
   score: 900
+- name: Anime Tier 2
+  score: 800
 - name: Anime Baseline Groups
   score: 300
 - name: Anime Dual Audio
@@ -125,16 +127,12 @@ custom_formats:
   score: -10000
 - name: VOSTFR
   score: -10000
-custom_formats_radarr:
-- name: Anime Tier 2
-  score: 0
+custom_formats_radarr: []
 custom_formats_sonarr:
 - name: Remux Tier 01 - Sonarr
   score: 1050
 - name: Remux Tier 02 - Sonarr
   score: 1000
-- name: Anime Tier 2
-  score: 800
 qualities:
 - id: -2
   name: WEB 1080p
