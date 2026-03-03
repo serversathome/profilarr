@@ -1,0 +1,7 @@
+name: ZR (1)
+pattern: \b(ZR)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

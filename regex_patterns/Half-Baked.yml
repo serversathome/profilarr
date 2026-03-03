@@ -1,0 +1,7 @@
+name: Half-Baked
+pattern: \b(Half-Baked)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

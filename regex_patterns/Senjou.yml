@@ -1,7 +1,7 @@
 name: Senjou
-pattern: (?<=^|[\s.-])Senjou\b
+pattern: \[Senjou\]|-Senjou\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

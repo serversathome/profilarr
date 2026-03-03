@@ -1,0 +1,7 @@
+name: Kaleido-subs
+pattern: \b(Kaleido-subs)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

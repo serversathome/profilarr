@@ -1,0 +1,7 @@
+name: cappybara
+pattern: \[cappybara\]|-cappybara\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

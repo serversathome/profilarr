@@ -1,0 +1,7 @@
+name: orz
+pattern: \b(orz)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

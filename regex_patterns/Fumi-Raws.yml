@@ -1,0 +1,7 @@
+name: Fumi-Raws
+pattern: Fumi[ ._-]?(Raws)
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

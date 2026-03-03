@@ -1,0 +1,7 @@
+name: Ohys-Raws
+pattern: Ohys[ ._-]?(Raws)
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

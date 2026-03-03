@@ -1,0 +1,7 @@
+name: YURASUKA
+pattern: \[YURASUKA\]|-YURASUKA\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

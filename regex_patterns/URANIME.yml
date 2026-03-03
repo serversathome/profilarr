@@ -1,0 +1,7 @@
+name: URANIME
+pattern: \b(URANIME)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

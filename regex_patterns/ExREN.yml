@@ -1,0 +1,7 @@
+name: ExREN
+pattern: \b(ExREN)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

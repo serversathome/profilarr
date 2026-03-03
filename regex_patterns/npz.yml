@@ -1,0 +1,7 @@
+name: npz
+pattern: \b(npz)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

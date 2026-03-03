@@ -1,7 +1,7 @@
 name: Koten_Gars
-pattern: (?<=^|[\s.-])Koten_Gars\b
+pattern: \b(Koten[ ._-]Gars)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

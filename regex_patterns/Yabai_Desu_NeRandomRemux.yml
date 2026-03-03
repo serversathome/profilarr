@@ -1,0 +1,7 @@
+name: Yabai_Desu_NeRandomRemux
+pattern: \b(Yabai_Desu_NeRandomRemux)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

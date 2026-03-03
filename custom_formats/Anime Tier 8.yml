@@ -14,9 +14,54 @@ conditions:
   required: false
   source: dvd
   type: source
-- name: TRaSH Anime Bluray Tier 8
-  type: release_title
-  required: true
+- name: AkihitoSubs
   negate: false
-  pattern: TRaSH Anime Bluray Tier 8
+  required: false
+  type: release_title
+  pattern: AkihitoSubs
+- name: Arukoru
+  negate: false
+  required: false
+  type: release_title
+  pattern: Arukoru
+- name: EDGE
+  negate: false
+  required: false
+  type: release_title
+  pattern: EDGE
+- name: EMBER
+  negate: false
+  required: false
+  type: release_title
+  pattern: EMBER
+- name: GHOST
+  negate: false
+  required: false
+  type: release_title
+  pattern: GHOST
+- name: Judas
+  negate: false
+  required: false
+  type: release_title
+  pattern: Judas
+- name: naiyas
+  negate: false
+  required: false
+  type: release_title
+  pattern: naiyas
+- name: Nep_Blanc
+  negate: false
+  required: false
+  type: release_title
+  pattern: Nep_Blanc
+- name: Prof
+  negate: false
+  required: false
+  type: release_title
+  pattern: Prof
+- name: Shirσ
+  negate: false
+  required: false
+  type: release_title
+  pattern: Shirσ
 tests: []

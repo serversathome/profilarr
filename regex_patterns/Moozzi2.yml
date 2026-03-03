@@ -1,0 +1,7 @@
+name: Moozzi2
+pattern: \b(Moozzi2)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

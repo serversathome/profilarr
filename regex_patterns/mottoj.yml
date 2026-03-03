@@ -1,7 +1,7 @@
 name: mottoj
-pattern: (?<=^|[\s.-])mottoj\b
+pattern: \b(mottoj)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

@@ -1,0 +1,7 @@
+name: Hitoku
+pattern: \[Hitoku\]|-Hitoku\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

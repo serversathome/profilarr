@@ -1,7 +1,7 @@
 name: ZR
-pattern: (?<=^|[\s.-])ZR\b
+pattern: \b(ZR)\b|-ZR-
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

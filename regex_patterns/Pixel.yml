@@ -1,0 +1,7 @@
+name: Pixel
+pattern: \[Pixel\]|-Pixel\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

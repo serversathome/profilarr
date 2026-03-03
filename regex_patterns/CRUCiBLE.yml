@@ -1,0 +1,7 @@
+name: CRUCiBLE
+pattern: \[CRUCiBLE\]|-CRUCiBLE\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

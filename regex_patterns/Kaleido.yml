@@ -1,7 +1,7 @@
 name: Kaleido
-pattern: (?<=^|[\s.-])Kaleido\b
+pattern: \b(Kaleido)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

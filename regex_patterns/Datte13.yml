@@ -1,0 +1,7 @@
+name: Datte13
+pattern: \b(Datte13)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

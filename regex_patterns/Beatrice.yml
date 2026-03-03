@@ -1,0 +1,7 @@
+name: Beatrice
+pattern: \[Beatrice\]|-Beatrice(?!-raws)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

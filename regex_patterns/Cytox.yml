@@ -1,0 +1,7 @@
+name: Cytox
+pattern: \b(Cytox)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

@@ -1,7 +1,7 @@
 name: FFF
-pattern: (?<=^|[\s.-])FFF\b
+pattern: \b(FFF)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

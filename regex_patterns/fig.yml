@@ -1,0 +1,7 @@
+name: fig
+pattern: \[fig\]|-fig\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

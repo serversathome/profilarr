@@ -1,0 +1,7 @@
+name: GERMini
+pattern: \b(GERMini)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

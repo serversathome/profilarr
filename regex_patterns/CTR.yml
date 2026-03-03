@@ -1,7 +1,7 @@
 name: CTR
-pattern: (?<=^|[\s.-])CTR\b
+pattern: \b(CTR)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

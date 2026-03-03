@@ -1,0 +1,7 @@
+name: Salieri
+pattern: \b(Salieri)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

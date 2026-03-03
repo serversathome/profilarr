@@ -1,7 +1,7 @@
 name: Almighty
-pattern: (?<=^|[\s.-])Almighty\b
+pattern: \[Almighty\]|-Almighty\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

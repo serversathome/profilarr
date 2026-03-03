@@ -1,7 +1,7 @@
 name: LazyRemux
-pattern: (?<=^|[\s.-])LazyRemux\b
+pattern: \b(LazyRemux)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

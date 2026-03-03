@@ -1,0 +1,7 @@
+name: ASW
+pattern: \b(ASW)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

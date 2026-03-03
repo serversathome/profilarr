@@ -1,0 +1,7 @@
+name: Lilith-Raws
+pattern: Lilith[ ._-]?(Raws)
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

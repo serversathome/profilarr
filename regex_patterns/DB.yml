@@ -1,0 +1,7 @@
+name: DB
+pattern: \[DB\]
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

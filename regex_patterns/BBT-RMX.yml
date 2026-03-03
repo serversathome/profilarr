@@ -1,0 +1,7 @@
+name: BBT-RMX
+pattern: \b(BBT-RMX)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

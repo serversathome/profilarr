@@ -1,0 +1,7 @@
+name: Mites
+pattern: \b(Mites)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

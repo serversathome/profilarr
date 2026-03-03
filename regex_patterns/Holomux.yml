@@ -1,7 +1,7 @@
 name: Holomux
-pattern: (?<=^|[\s.-])Holomux\b
+pattern: \b(Holomux)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

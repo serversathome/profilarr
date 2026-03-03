@@ -1,7 +1,7 @@
 name: Iznjie Biznjie
-pattern: (?<=^|[\s.-])Iznjie Biznjie\b
+pattern: \b(Iznjie[ .-]Biznjie)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

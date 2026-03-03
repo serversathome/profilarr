@@ -1,7 +1,7 @@
 name: Cait-Sidhe
-pattern: (?<=^|[\s.-])Cait-Sidhe\b
+pattern: \b(Cait-Sidhe)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

@@ -1,7 +1,7 @@
 name: IK
-pattern: (?<=^|[\s.-])IK\b
+pattern: \b(IK)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

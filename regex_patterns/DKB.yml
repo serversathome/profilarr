@@ -1,0 +1,7 @@
+name: DKB
+pattern: \b(DKB)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

@@ -1,0 +1,7 @@
+name: Not-Vodes
+pattern: \[Not-Vodes\]|-Not-Vodes\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

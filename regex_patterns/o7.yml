@@ -1,0 +1,7 @@
+name: o7
+pattern: \b(o7)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

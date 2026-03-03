@@ -1,0 +1,7 @@
+name: Meakes
+pattern: \b(Meakes)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

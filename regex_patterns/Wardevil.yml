@@ -1,0 +1,7 @@
+name: Wardevil
+pattern: \[Wardevil\]|-Wardevil\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

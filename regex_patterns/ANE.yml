@@ -1,7 +1,7 @@
 name: ANE
-pattern: (?<=^|[\s.-])ANE\b
+pattern: \[ANE\]|-ANE$
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

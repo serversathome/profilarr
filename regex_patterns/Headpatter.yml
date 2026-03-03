@@ -1,7 +1,7 @@
 name: Headpatter
-pattern: (?<=^|[\s.-])Headpatter\b
+pattern: \[Headpatter\]|-Headpatter\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

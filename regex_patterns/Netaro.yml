@@ -1,7 +1,7 @@
 name: Netaro
-pattern: (?<=^|[\s.-])Netaro\b
+pattern: \b(Netaro)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

@@ -1,7 +1,7 @@
 name: WBDP
-pattern: (?<=^|[\s.-])WBDP\b
+pattern: \b(WBDP)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

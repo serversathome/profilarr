@@ -1,7 +1,7 @@
 name: Erai-Raws
-pattern: (?<=^|[\s.-])Erai-Raws\b
+pattern: \b(Erai-raws)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

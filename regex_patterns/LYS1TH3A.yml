@@ -1,7 +1,7 @@
 name: LYS1TH3A
-pattern: (?<=^|[\s.-])LYS1TH3A\b
+pattern: \b(LYS1TH3A)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

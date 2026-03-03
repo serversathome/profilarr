@@ -1,0 +1,7 @@
+name: HorribleRips
+pattern: \b(HorribleRips)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

@@ -1,7 +1,7 @@
 name: Dekinai
-pattern: (?<=^|[\s.-])Dekinai\b
+pattern: \[Dekinai\]|-Dekinai\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

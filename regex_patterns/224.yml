@@ -1,0 +1,7 @@
+name: '224'
+pattern: \[224\]|-224\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

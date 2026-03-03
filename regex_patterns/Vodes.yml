@@ -1,7 +1,7 @@
 name: Vodes
-pattern: (?<=^|[\s.-])Vodes\b
+pattern: \[Vodes\]|(?<!Not)-Vodes\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

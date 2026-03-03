@@ -1,0 +1,7 @@
+name: UQW
+pattern: \b(UQW)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

@@ -1,0 +1,7 @@
+name: iKaos
+pattern: \b(iKaos)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

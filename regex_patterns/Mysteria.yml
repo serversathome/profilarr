@@ -1,7 +1,7 @@
 name: Mysteria
-pattern: (?<=^|[\s.-])Mysteria\b
+pattern: \[Mysteria\]|-Mysteria\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

@@ -1,0 +1,7 @@
+name: uba
+pattern: \[uba\]|-uba\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

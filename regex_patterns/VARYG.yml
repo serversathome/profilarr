@@ -1,7 +1,7 @@
 name: VARYG
-pattern: (?<=^|[\s.-])VARYG\b
+pattern: \b(VARYG)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

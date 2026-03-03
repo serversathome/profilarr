@@ -1,7 +1,7 @@
 name: DARKFLiX
-pattern: (?<=^|[\s.-])DARKFLiX\b
+pattern: \b(DARKFLiX)\b
 description: ''
 tags:
-- Release Group
-- HDTV
+- Radarr
+- Sonarr
 tests: []

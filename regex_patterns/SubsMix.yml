@@ -1,0 +1,7 @@
+name: SubsMix
+pattern: \b(SubsMix)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

@@ -1,0 +1,7 @@
+name: Lia
+pattern: \[Lia\]|-Lia\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

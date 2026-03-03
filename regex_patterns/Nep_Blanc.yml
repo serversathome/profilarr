@@ -1,0 +1,7 @@
+name: Nep_Blanc
+pattern: \b(Nep[ ._-]Blanc)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

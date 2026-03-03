@@ -1,0 +1,7 @@
+name: SEV
+pattern: \b(SEV)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

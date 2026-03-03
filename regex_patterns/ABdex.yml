@@ -1,0 +1,7 @@
+name: ABdex
+pattern: \b(ABdex)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

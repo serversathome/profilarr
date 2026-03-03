@@ -14,9 +14,49 @@ conditions:
   required: false
   source: dvd
   type: source
-- name: TRaSH Anime Bluray Tier 1
+- name: DemiHuman
   type: release_title
-  required: true
+  required: false
   negate: false
-  pattern: TRaSH Anime Bluray Tier 1
+  pattern: DemiHuman
+- name: FLE
+  type: release_title
+  required: false
+  negate: false
+  pattern: FLE
+- name: Flugel
+  type: release_title
+  required: false
+  negate: false
+  pattern: Flugel
+- name: LYS1TH3A
+  type: release_title
+  required: false
+  negate: false
+  pattern: LYS1TH3A
+- name: Moxie
+  type: release_title
+  required: false
+  negate: false
+  pattern: Moxie
+- name: NAN0
+  type: release_title
+  required: false
+  negate: false
+  pattern: NAN0
+- name: sam
+  type: release_title
+  required: false
+  negate: false
+  pattern: sam
+- name: SoM
+  type: release_title
+  required: false
+  negate: false
+  pattern: SoM
+- name: ZR
+  type: release_title
+  required: false
+  negate: false
+  pattern: ZR
 tests: []

@@ -10,13 +10,78 @@ conditions:
   source: bluray
   type: source
 - name: Not DVD
-  type: source
-  required: false
   negate: true
+  required: false
   source: dvd
-- name: TRaSH Anime WEB Tier 1
+  type: source
+- name: Arg0
   negate: false
-  pattern: TRaSH Anime WEB Tier 1
-  required: true
+  pattern: Arg0
+  required: false
+  type: release_title
+- name: Arid
+  negate: false
+  pattern: Arid
+  required: false
+  type: release_title
+- name: Baws
+  negate: false
+  pattern: Baws
+  required: false
+  type: release_title
+- name: FLE
+  negate: false
+  pattern: FLE
+  required: false
+  type: release_title
+- name: LostYears
+  negate: false
+  pattern: LostYears
+  required: false
+  type: release_title
+- name: LYS1TH3A
+  negate: false
+  pattern: LYS1TH3A
+  required: false
+  type: release_title
+- name: sam
+  negate: false
+  pattern: sam
+  required: false
+  type: release_title
+- name: SCY
+  negate: false
+  pattern: SCY
+  required: false
+  type: release_title
+- name: Setsugen
+  negate: false
+  pattern: Setsugen
+  required: false
+  type: release_title
+- name: smol
+  negate: false
+  pattern: smol
+  required: false
+  type: release_title
+- name: SoM
+  negate: false
+  pattern: SoM
+  required: false
+  type: release_title
+- name: Vodes
+  negate: false
+  pattern: Vodes
+  required: false
+  type: release_title
+- name: Z4ST1N
+  negate: false
+  pattern: Z4ST1N
+  required: false
+  type: release_title
+- name: ZeroBuild
+  negate: false
+  pattern: ZeroBuild
+  required: false
   type: release_title
 tests: []

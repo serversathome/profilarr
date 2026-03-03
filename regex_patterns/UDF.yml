@@ -1,7 +1,7 @@
 name: UDF
-pattern: (?<=^|[\s.-])UDF\b
+pattern: \b(UDF)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

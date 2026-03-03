@@ -1,0 +1,7 @@
+name: BiRJU
+pattern: \b(BiRJU)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

@@ -1,0 +1,7 @@
+name: Vanilla
+pattern: \[Vanilla\]|-Vanilla\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

@@ -1,7 +1,7 @@
 name: SCY
-pattern: (?<=^|[\s.-])SCY\b
+pattern: \b(SCY)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

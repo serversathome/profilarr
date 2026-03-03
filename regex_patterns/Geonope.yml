@@ -1,0 +1,7 @@
+name: Geonope
+pattern: \b(Geonope)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

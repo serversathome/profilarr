@@ -1,0 +1,7 @@
+name: CUNNY
+pattern: \b(CUNNY)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

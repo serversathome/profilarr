@@ -1,0 +1,7 @@
+name: Vivid
+pattern: \[Vivid\]|-Vivid\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

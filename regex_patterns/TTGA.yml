@@ -1,7 +1,7 @@
 name: TTGA
-pattern: (?<=^|[\s.-])TTGA\b
+pattern: \b(TTGA)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []

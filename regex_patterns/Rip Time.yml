@@ -1,0 +1,7 @@
+name: Rip Time
+pattern: \b(Rip[ .-]?Time)\b
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []
