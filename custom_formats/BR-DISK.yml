@@ -1,0 +1,12 @@
+name: BR-DISK
+description: ''
+tags:
+- TRaSH
+- Banned
+conditions:
+- name: BR-DISK
+  type: release_title
+  required: false
+  negate: false
+  pattern: BR-DISK
+tests: []
