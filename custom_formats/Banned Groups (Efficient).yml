@@ -29,6 +29,11 @@ conditions:
   pattern: BiTOR
   required: false
   type: release_group
+- name: BLASPHEMY
+  type: release_group
+  required: false
+  negate: false
+  pattern: BLASPHEMY
 - name: BOLS
   negate: false
   pattern: BOLS
