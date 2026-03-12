@@ -1,7 +1,7 @@
-name: playWEB
-pattern: (?<=^|[\s.-])playWEB\b
+name: PlayWeb
+pattern: \b(PlayWeb)\b
 description: ''
 tags:
-- Release Group
-- WEB-DL
+- Radarr
+- Sonarr
 tests: []

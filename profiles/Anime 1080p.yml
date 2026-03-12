@@ -107,8 +107,6 @@ custom_formats:
   score: -10000
 - name: AV1
   score: -10000
-- name: BR-DISK
-  score: -10000
 - name: Dubs Only
   score: -10000
 - name: VOSTFR

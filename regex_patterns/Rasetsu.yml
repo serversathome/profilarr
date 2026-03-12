@@ -1,7 +1,7 @@
-name: Rasetsu
-pattern: (?<=^|[\s.-])Rasetsu\b
+name: RASETSU
+pattern: \b(RASETSU)\b
 description: ''
 tags:
-- Release Group
-- Anime
+- Radarr
+- Sonarr
 tests: []
