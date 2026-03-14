@@ -21,34 +21,38 @@ minCustomFormatScore: 0
 upgradeUntilScore: 10000
 minScoreIncrement: 1
 custom_formats:
-- name: Anime WEB Tier 1
-  score: 2000
-- name: Anime WEB Tier 2
-  score: 1900
-- name: Anime WEB Tier 3
-  score: 1800
-- name: Anime WEB Tier 4
-  score: 1700
-- name: Anime WEB Tier 5
-  score: 1600
 - name: Anime Tier 1
-  score: 1500
-- name: Anime WEB Tier 6
-  score: 1500
-- name: Anime Tier 2
   score: 1400
-- name: Anime Tier 3
+- name: Anime Tier 2
   score: 1300
-- name: Anime Tier 4
+- name: Anime Tier 3
   score: 1200
-- name: Anime Tier 5
+- name: Anime Tier 4
   score: 1100
-- name: Anime Tier 6
+- name: Anime Tier 5
   score: 1000
-- name: Anime Tier 7
+- name: Anime Tier 6
   score: 900
-- name: Anime Tier 8
+- name: Anime Tier 7
   score: 800
+- name: Anime Tier 8
+  score: 700
+- name: Anime WEB Tier 1
+  score: 600
+- name: Anime WEB Tier 2
+  score: 500
+- name: Anime WEB Tier 3
+  score: 400
+- name: TRaSH WEB Tier 01
+  score: 350
+- name: Anime WEB Tier 4
+  score: 300
+- name: Anime WEB Tier 5
+  score: 200
+- name: TRaSH WEB Tier 02
+  score: 150
+- name: TRaSH WEB Tier 03
+  score: 150
 - name: Anime Dual Audio
   score: 101
 - name: Multi-Audio
@@ -57,45 +61,31 @@ custom_formats:
   score: 101
 - name: Uncensored
   score: 101
-- name: Dolby Digital +
-  score: 50
-- name: Dolby Digital
-  score: 25
-- name: DTS
-  score: 25
-- name: AAC
-  score: 10
+- name: Anime WEB Tier 6
+  score: 100
 - name: CR
-  score: 7
-- name: DSNP
   score: 6
-- name: NF
+- name: DSNP
   score: 5
-- name: AMZN
+- name: NF
   score: 4
 - name: v4
   score: 4
-- name: VRV
-  score: 4
-- name: FUNI
+- name: AMZN
   score: 3
 - name: v3
   score: 3
-- name: ABEMA
-  score: 2
-- name: ADN
+- name: VRV
+  score: 3
+- name: FUNI
   score: 2
 - name: v2
   score: 2
-- name: B-Global
+- name: ABEMA
   score: 1
-- name: Bilibili
-  score: 1
-- name: HIDIVE
+- name: ADN
   score: 1
 - name: v1
-  score: 1
-- name: YK
   score: 1
 - name: v0
   score: -51

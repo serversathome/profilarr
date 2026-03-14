@@ -1,0 +1,21 @@
+name: TRaSH WEB Tier 01
+description: ''
+tags:
+- TRaSH
+conditions:
+- name: WEB-DL
+  type: source
+  required: false
+  negate: false
+  source: web_dl
+- name: WEBRip
+  type: source
+  required: false
+  negate: false
+  source: webrip
+- name: TRaSH WEB Tier 01
+  type: release_group
+  required: false
+  negate: false
+  pattern: TRaSH WEB Tier 01
+tests: []

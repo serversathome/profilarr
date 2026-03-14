@@ -1,5 +1,5 @@
 name: TRaSH WEB Tier 02
-pattern: ^(BYNDR|dB|Flights|MiU|monkee|MZABI|PHOENiX|playWEB|RAWR|SbR|SMURF|TOMMY|XEBEC)$
+pattern: ^(dB|Flights|MiU|monkee|MZABI|PHOENiX|playWEB|RDNYB|SbR|SMURF|TOMMY|XEBEC)$
 description: ''
 tags:
 - TRaSH

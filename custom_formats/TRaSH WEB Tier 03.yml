@@ -1,0 +1,21 @@
+name: TRaSH WEB Tier 03
+description: ''
+tags:
+- TRaSH
+conditions:
+- name: WEB-DL
+  negate: false
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: TRaSH WEB Tier 03
+  negate: false
+  pattern: TRaSH WEB Tier 03
+  required: false
+  type: release_group
+tests: []
