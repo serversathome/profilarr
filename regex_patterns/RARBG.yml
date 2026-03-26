@@ -1,8 +1,5 @@
 name: RARBG
-pattern: (?<=^|[\s.-])RARBG\b
+pattern: ^(RARBG)$
 description: Banned for Low Quality
-tags:
-- Release Group
-- Remux
-- Bluray
+tags: []
 tests: []
