@@ -1,11 +1,11 @@
 name: Apple TV+
-pattern: \b(ATVP|ATV|APTV|Apple TV\+)\s*\b
+pattern: \b(atvp|aptv|Apple TV\+)\b
 description: Apple TV+ is an American subscription OTT streaming service owned and
   operated by Apple Inc. Launched on November 1, 2019, it offers a selection of original
   production film and television series called Apple Originals.
 tags:
 - Streaming Service
-- WEB-DL
+- TRaSH
 tests:
 - id: 1
   input: Palmer.1080p.APTV.WEB-DL.DDP5.1.Atmos.H.264-EVO.mkv

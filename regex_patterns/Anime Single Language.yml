@@ -3,4 +3,5 @@ pattern: \[(JA|ZH|KO)\]
 description: ''
 tags:
 - Anime
+- TRaSH
 tests: []

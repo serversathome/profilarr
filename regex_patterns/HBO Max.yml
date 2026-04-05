@@ -6,7 +6,7 @@ description: HBO Max is an American subscription video-on-demand streaming servi
   Turner Classic Movies. In mid-to-late 2023, HBO Max underwent a rebranding to "Max".
 tags:
 - Streaming Service
-- WEB-DL
+- Dictionarry
 tests:
 - id: 1
   input: The Many Saints of Newark 2021 1080p HBOMAX WEBRiP x264 WAV-CREATiVE24

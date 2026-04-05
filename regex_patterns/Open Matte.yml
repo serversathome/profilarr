@@ -1,10 +1,11 @@
 name: Open Matte
-pattern: \b(open.?matte)\b
+pattern: \b(Open[ ._-]?Matte)\b
 description: Matches releases with restored widescreen aspect ratio labelled as`Open
   Matte`
 tags:
 - Aspect Ratio
 - Enhancement
+- TRaSH
 tests:
 - expected: true
   id: 1

@@ -1,5 +1,5 @@
 name: Disney+
-pattern: \b(dsnp|dsny(p)?|disney\+)\s*\b
+pattern: \b(dsnp|dsny|disney|Disney\+)\b
 description: Disney+ is an American subscription video on-demand over-the-top streaming
   media service that primarily distributes films and television shows produced by
   Walt Disney Studios and Disney Television Studios, with dedicated content hubs for
