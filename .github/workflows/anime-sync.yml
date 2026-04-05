@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install dependencies and yq
         run: |
           sudo apt-get update && sudo apt-get install -y curl git wget
@@ -57,10 +57,10 @@ jobs:
         run: |
           mkdir -p regex_patterns
           BASE_URL="https://raw.githubusercontent.com/DumpstarrFire/Database/stable/regex_patterns"
-          # Extract only condition names that have a "pattern" field
+          # Extract pattern field values which match upstream filenames
           mapfile -t REGEX_PATTERNS < <(
             for FILE in custom_formats/*.yml; do
-              yq e '.conditions[] | select(has("pattern")) | .name' "$FILE"
+              yq e '.conditions[] | select(has("pattern")) | .pattern' "$FILE"
             done | sort -u
           )
           # Download each regex pattern
