@@ -1,5 +1,5 @@
 name: ASL
-pattern: \b(ASL)\b
+pattern: \b(ASL|BSL|Audio[ ._-]Description)\b
 description: ''
 tags:
 - Enhancements
