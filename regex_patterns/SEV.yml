@@ -1,7 +1,7 @@
 name: SEV
-pattern: (?<=^|[\s.-])(SEV|D0ct0rLew|Kira)\b
+pattern: \b(SEV|D0ct0rLew|Kira)\b
 description: ''
 tags:
-- Release Group
-- HEVC
+- Radarr
+- Sonarr
 tests: []
