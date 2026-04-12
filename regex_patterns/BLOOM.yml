@@ -1,0 +1,7 @@
+name: BLOOM
+pattern: (?<=^|[\s.-])BLOOM\b
+description: ''
+tags:
+- Release Group
+- WEB-DL
+tests: []
