@@ -1,0 +1,5 @@
+name: German DL
+pattern: \b(GERMAN[ ._-][DM]L)\b
+description: ''
+tags: []
+tests: []
