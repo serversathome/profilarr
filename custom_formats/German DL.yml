@@ -1,0 +1,11 @@
+name: German DL
+description: ''
+tags:
+- Language
+conditions:
+- name: German DL
+  type: release_title
+  required: true
+  negate: false
+  pattern: German DL
+tests: []

@@ -234,6 +234,8 @@ custom_formats:
   score: -999999
 - name: Full Disc
   score: -999999
+- name: German DL
+  score: -999999
 - name: h265
   score: -999999
 - name: VP9
