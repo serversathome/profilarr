@@ -19,9 +19,4 @@ conditions:
   required: false
   source: webrip
   type: source
-- name: WEB
-  type: source
-  required: false
-  negate: false
-  source: television
 tests: []
