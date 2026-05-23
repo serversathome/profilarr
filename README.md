@@ -1,3 +1,7 @@
+ [!CAUTION]
+> **This repository is deprecated and will be deleted before July 1, 2026.** Please migrate away from this repo before that date.
+
+
 <p align="center">
   <a href="https://dictionarry.dev">
     <img src="https://img.shields.io/badge/Website-dictionarry.dev-blue" alt="Website">
