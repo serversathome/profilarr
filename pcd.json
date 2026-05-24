@@ -1,0 +1,46 @@
+{
+  "name": "Servers@Home Combined Database",
+  "version": "2.0.0",
+  "description": "Merged Dictionarry + Dumpstarr database for Profilarr v2. Conflicting entities are namespaced with [Dumpstarr] suffix so both sources' profiles score releases as their authors intended.",
+  "arr_types": [
+    "radarr",
+    "sonarr"
+  ],
+  "dependencies": {
+    "https://github.com/Dictionarry-Hub/schema": "1.1.0"
+  },
+  "authors": [
+    {
+      "name": "serversathome"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/serversathome/profilarr",
+  "links": {
+    "homepage": "https://serversatho.me",
+    "issues": "https://github.com/serversathome/profilarr/issues"
+  },
+  "profilarr": {
+    "minimum_version": "2.0.0"
+  },
+  "tags": [
+    "dictionarry",
+    "dumpstarr",
+    "combined"
+  ],
+  "upstream": {
+    "dictionarry": {
+      "repo": "https://github.com/Dictionarry-Hub/database",
+      "branch": "v2",
+      "sha": "6dfa0cb6"
+    },
+    "dumpstarr": {
+      "repo": "https://github.com/Dumpstarr/Database",
+      "branch": "stable",
+      "sha": "197429f8"
+    },
+    "synced_at": "2026-05-24 08:11 UTC",
+    "namespaced_custom_formats": 56,
+    "namespaced_regular_expressions": 113
+  }
+}
