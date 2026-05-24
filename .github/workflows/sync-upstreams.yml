@@ -41,13 +41,15 @@ jobs:
         run: |
           set -euo pipefail
           for d in custom_formats profiles regex_patterns media_management templates scripts; do
-            [ -d "$d" ] && rm -rf "$d"
+            if [ -d "$d" ]; then
+              rm -rf "$d"
+            fi
           done
 
       - name: Clean up source clones
         run: |
+          set -euo pipefail
           rm -rf _sources
-          # Make sure _sources isn't tracked even if it sneaks in
           echo "_sources/" > .gitignore.tmp
           if [ -f .gitignore ]; then
             grep -v '^_sources/$' .gitignore >> .gitignore.tmp || true
