@@ -7,7 +7,10 @@ In Profilarr, add this URL as a database and leave the branch field blank:
 https://github.com/serversathome/profilarr
 ## What's inside
 20 quality profiles, 410 custom formats, 924 regex patterns, plus tags, qualities, and languages.
+
 **Dictionarry profiles (11):** 720p Quality, 1080p Balanced, 1080p Compact, 1080p Efficient, 1080p Quality, 1080p Quality HDR, 1080p Remux, 2160p Balanced, 2160p Efficient, 2160p Quality, 2160p Remux.
+
+
 **Dumpstarr profiles (9):** LQ 1080p, Anime 1080p, BETA - Anime 1080p, Movies 1080p, Movies 1080p HQ, Movies 2160p, Movies 2160p HQ, TV 1080p, TV 2160p.
 ## Conflicts
 When both sources define an entity with the same name but different content, Dumpstarr's gets renamed with a `[Dumpstarr]` suffix (e.g. `3D` and `3D [Dumpstarr]` coexist). All of Dumpstarr's internal references update in lockstep, so both sources' profiles score releases exactly as their authors intended.
