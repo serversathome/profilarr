@@ -1,7 +1,0 @@
-name: 5.1 Surround
-pattern: \D5\.1\D
-description: ''
-tags:
-- Audio
-- Channel
-tests: []

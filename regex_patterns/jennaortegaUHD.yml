@@ -1,7 +1,0 @@
-name: jennaortegaUHD
-pattern: (?<=^|[\s.-])jennaortega(UHD)?\b
-description: Banned for Fake DV/HDR Layer
-tags:
-- Release Group
-- Banned
-tests: []

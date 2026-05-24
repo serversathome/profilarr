@@ -1,7 +1,0 @@
-name: HaB
-pattern: (?<=^|[\s.-])HaB\b
-description: ''
-tags:
-- Release Group
-- Bluray
-tests: []

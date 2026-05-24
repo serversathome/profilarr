@@ -1,7 +1,0 @@
-name: playSD
-pattern: (?<=^|[\s.-])playSD\b
-description: ''
-tags:
-- Release Group
-- Bluray
-tests: []

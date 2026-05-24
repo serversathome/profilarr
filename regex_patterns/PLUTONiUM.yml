@@ -1,7 +1,0 @@
-name: PLUTONiUM
-pattern: (?<=^|[\s.-])PLUTONiUM\b
-description: ''
-tags:
-- Release Group
-- HDTV
-tests: []

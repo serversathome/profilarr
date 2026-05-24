@@ -1,7 +1,0 @@
-name: RO
-pattern: (?<=^|[\s.-])RO\b
-description: ''
-tags:
-- Release Group
-- Bluray
-tests: []

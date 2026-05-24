@@ -1,7 +1,0 @@
-name: KnG
-pattern: (?<=^|[\s.-])KnG\b
-description: ''
-tags:
-- Release Group
-- Bluray
-tests: []

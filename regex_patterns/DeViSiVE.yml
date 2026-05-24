@@ -1,7 +1,0 @@
-name: DeViSiVE
-pattern: (?<=^|[\s.-])DeViSiVE\b
-description: Ban for Mislabeled WEBRip
-tags:
-- Release Group
-- WEB-DL
-tests: []

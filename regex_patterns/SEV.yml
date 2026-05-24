@@ -1,7 +1,0 @@
-name: SEV
-pattern: \b(SEV|D0ct0rLew|Kira)\b
-description: ''
-tags:
-- Radarr
-- Sonarr
-tests: []
