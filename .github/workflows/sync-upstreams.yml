@@ -1,13 +1,7 @@
 name: Sync from upstreams
 
-# Rebuild the merged PCD v2 snapshot nightly from:
-#   - Dictionarry-Hub/database @ v2
-#   - Dumpstarr/Database        @ stable
-# Both feed through Dictionarry-Hub/schema as the base.
-
 on:
   schedule:
-    # 05:00 UTC daily (~midnight US Eastern). GitHub may delay scheduled runs.
     - cron: '0 5 * * *'
   workflow_dispatch:
 
@@ -36,79 +30,52 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _sources
-          git clone --depth 1                       https://github.com/Dictionarry-Hub/schema.git   _sources/schema
-          git clone --depth 1 --branch v2           https://github.com/Dictionarry-Hub/database.git _sources/dictionarry
-          git clone --depth 1 --branch stable       https://github.com/Dumpstarr/Database.git      _sources/dumpstarr
+          git clone --depth 1                 https://github.com/Dictionarry-Hub/schema.git   _sources/schema
+          git clone --depth 1 --branch v2     https://github.com/Dictionarry-Hub/database.git _sources/dictionarry
+          git clone --depth 1 --branch stable https://github.com/Dumpstarr/Database.git      _sources/dumpstarr
 
       - name: Build merged snapshot
         run: python3 .github/scripts/build_merged.py
 
       - name: Drop legacy v1 directories (if present)
         run: |
-          # The repo used to hold a v1 file-tree (custom_formats/, profiles/, ...).
-          # v2 lives entirely in ops/ + pcd.json, so the v1 layout is removed.
           set -euo pipefail
           for d in custom_formats profiles regex_patterns media_management templates scripts; do
-            if [ -d "$d" ]; then
-              git rm -rf "$d" 2>/dev/null || rm -rf "$d"
-            fi
+            [ -d "$d" ] && rm -rf "$d"
           done
 
       - name: Clean up source clones
-        run: rm -rf _sources
+        run: |
+          rm -rf _sources
+          # Make sure _sources isn't tracked even if it sneaks in
+          echo "_sources/" > .gitignore.tmp
+          if [ -f .gitignore ]; then
+            grep -v '^_sources/$' .gitignore >> .gitignore.tmp || true
+          fi
+          mv .gitignore.tmp .gitignore
 
-      - name: Detect & commit changes
-        id: changes
+      - name: Show working tree state (debug)
+        run: |
+          echo "=== git status ==="
+          git status
+          echo ""
+          echo "=== ls -la ==="
+          ls -la
+          echo ""
+          echo "=== ls ops/ ==="
+          ls -la ops/ 2>/dev/null || echo "(no ops/ dir)"
+
+      - name: Commit & push
         run: |
           set -euo pipefail
-          git add -A pcd.json ops/ \
-            custom_formats profiles regex_patterns media_management templates scripts \
-            2>/dev/null || true
-          # If a legacy dir was removed, also stage that deletion
-          git add -u
-
-          if git diff --cached --quiet; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No changes."
-            exit 0
-          fi
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-
-          # Extract SHAs from the freshly-written manifest for the commit body
-          DICT_SHA=$(python3 -c "import json; print(json.load(open('pcd.json'))['upstream']['dictionarry']['sha'])")
-          DUMP_SHA=$(python3 -c "import json; print(json.load(open('pcd.json'))['upstream']['dumpstarr']['sha'])")
-
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(sync): Dictionarry ${DICT_SHA} + Dumpstarr ${DUMP_SHA}" \
-                     -m "Sources:
-          - Dictionarry-Hub/database@v2      ${DICT_SHA}
-          - Dumpstarr/Database@stable        ${DUMP_SHA}"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          DICT_SHA=$(python3 -c "import json; print(json.load(open('pcd.json'))['upstream']['dictionarry']['sha'])")
+          DUMP_SHA=$(python3 -c "import json; print(json.load(open('pcd.json'))['upstream']['dumpstarr']['sha'])")
+          git commit -m "chore(sync): Dictionarry ${DICT_SHA} + Dumpstarr ${DUMP_SHA}"
           git push
-
-      - name: Summary
-        if: always()
-        run: |
-          {
-            echo "## Sync run"
-            echo ""
-            if [ -f pcd.json ]; then
-              python3 <<'PY' >> "$GITHUB_STEP_SUMMARY"
-          import json
-          m = json.load(open('pcd.json'))
-          u = m.get('upstream', {})
-          print(f"**Synced at:** {u.get('synced_at','?')}")
-          print()
-          print("| Source | Ref | SHA |")
-          print("|---|---|---|")
-          print(f"| Dictionarry-Hub/database | v2     | `{u.get('dictionarry',{}).get('sha','?')}` |")
-          print(f"| Dumpstarr/Database       | stable | `{u.get('dumpstarr',{}).get('sha','?')}` |")
-          PY
-            fi
-            echo ""
-            if [ "${{ steps.changes.outputs.changed }}" = "true" ]; then
-              echo "**Status:** changes committed"
-            else
-              echo "**Status:** no upstream changes"
-            fi
-          } >> "$GITHUB_STEP_SUMMARY"
