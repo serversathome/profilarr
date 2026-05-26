@@ -15,7 +15,7 @@ When both sources define an entity with the same name but different content, Dum
 Identical entities collapse to one entry — no needless duplication.
 ## How it syncs
 GitHub Actions runs nightly at 05:00 UTC. It replays each upstream's SQL migration chain to build their final state, computes the conflict rename map, and emits a fresh merged snapshot at `ops/0.merged-snapshot.sql`.
-Manual run: Actions tab, Sync from upstreams, Run workflow.
+
 ## Caveats
 Each sync overwrites `0.merged-snapshot.sql` in place. If updates stop showing up in Profilarr, re-link the database.
 `[Dumpstarr]` shows up as plain text in your arr's UI. Change `NAMESPACE_SUFFIX` in `build_merged.py` if you want a different marker.
