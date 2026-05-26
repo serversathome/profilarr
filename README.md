@@ -1,10 +1,8 @@
-
-# serversathome/profilarr
 Merged Profilarr v2 database combining Dictionarry and Dumpstarr into one repo, so I can use profiles from both against a single Radarr/Sonarr instance.
 Sources: Dictionarry-Hub/database (v2 branch) and Dumpstarr/Database (stable branch).
 ## Use it
 In Profilarr, add this URL as a database and leave the branch field blank:
-https://github.com/serversathome/profilarr
+`https://github.com/serversathome/profilarr`
 ## What's inside
 20 quality profiles, 410 custom formats, 924 regex patterns, plus tags, qualities, and languages.
 
