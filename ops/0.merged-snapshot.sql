@@ -1,9 +1,9 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-05-30 07:58 UTC
+-- Generated: 2026-05-31 08:22 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (7902caa5)
+--   Dictionarry-Hub/database  @ v2     (91b0ded2)
 --   Dumpstarr/Database        @ stable (5e7371af)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
@@ -178,7 +178,7 @@ INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-480p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-720p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WORKPRINT');
 
--- regular_expressions: 515 rows
+-- regular_expressions: 517 rows
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('126811', '(?<=^|[\s.-])126811\b', NULL, 'Matches the release group `126811` only if it is:
 
 - Preceded by the start of the string (`^`), a whitespace character (`\s`), a period (`.`), or a hyphen (`-`).
@@ -741,6 +741,8 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('British Sign Language', '\b(BSL)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MADSKY', '(?<=^|[\s.-])MADSKY\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('pmHD', '(?<=^|[\s.-])pmHD\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MAMA', '(?<=^|[\s.-])MAMA\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('NIMA4K', '(?<=^|[\s.-])NIMA4K\b', NULL, NULL);
 
 -- custom_formats: 253 rows
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('1080p Balanced Tier 1', 'Matches release groups who fall under 1080p Balanced Tier 1', 0);
@@ -3852,7 +3854,7 @@ INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name"
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'h264');
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'x264');
 
--- custom_format_conditions: 1706 rows
+-- custom_format_conditions: 1712 rows
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', '1080p', 'resolution', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'Bluray', 'source', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'hallowed', 'release_group', 'all', 0, 0);
@@ -5559,8 +5561,14 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups', 'pmHD', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups (Compact)', 'pmHD', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups (Efficient)', 'pmHD', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups', 'MAMA', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups (Compact)', 'MAMA', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups (Efficient)', 'MAMA', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups', 'NIMA4K', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups (Compact)', 'NIMA4K', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups (Efficient)', 'NIMA4K', 'release_group', 'all', 0, 0);
 
--- condition_patterns: 1280 rows
+-- condition_patterns: 1286 rows
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 1', 'hallowed', 'hallowed');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 2', 'BHDStudio', 'BHDStudio');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Bluray', 'Not Remux', 'Remux');
@@ -6841,6 +6849,12 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups', 'pmHD', 'pmHD');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups (Compact)', 'pmHD', 'pmHD');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups (Efficient)', 'pmHD', 'pmHD');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups', 'MAMA', 'MAMA');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups (Compact)', 'MAMA', 'MAMA');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups (Efficient)', 'MAMA', 'MAMA');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups', 'NIMA4K', 'NIMA4K');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups (Compact)', 'NIMA4K', 'NIMA4K');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups (Efficient)', 'NIMA4K', 'NIMA4K');
 
 -- condition_languages: 4 rows
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Not Original', 'Original', 'Original', 0);
@@ -7860,7 +7874,7 @@ INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VA
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('Amazon Channel Enhancement', 'Enhancement');
 
 
--- regular_expression_tags: 1001 rows
+-- regular_expression_tags: 1005 rows
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D', 'Banned');
@@ -8862,6 +8876,10 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('MADSKY', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('pmHD', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('pmHD', 'Remux');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('MAMA', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('MAMA', 'Remux');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('NIMA4K', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('NIMA4K', 'Remux');
 
 -- test_entities: 12 rows
 INSERT OR IGNORE INTO "test_entities" ("type", "tmdb_id", "title", "year", "poster_path") VALUES ('movie', 19995, 'Avatar', 2009, '/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg');
