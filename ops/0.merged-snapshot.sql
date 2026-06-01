@@ -1,10 +1,10 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-05-31 08:22 UTC
+-- Generated: 2026-06-01 10:31 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
 --   Dictionarry-Hub/database  @ v2     (91b0ded2)
---   Dumpstarr/Database        @ stable (5e7371af)
+--   Dumpstarr/Database        @ stable (49b3f9c8)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
 -- Dictionarry's same-named entity are namespaced with " [Dumpstarr]".
@@ -11289,7 +11289,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UnKn0wn (NoRemux)', '(?<!\b(remux).*?)\b(unkn0wn)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SkyShowTime', '\b(SKST)\b', NULL, 'SkyShowtime is a European joint-venture between Comcast and Paramount Skydance Corporation which combines programming from Peacock and Paramount+ as well as Sky Studios');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Discovery+', '\b((dscp|dcp|disc)\b|dscv\+?)[ ._-]web[ ._-]?(dl|rip)?\b', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH Bad Dual Groups', '^(alfaHD.*|BAT|BlackBit|BNd|C\.A\.A|Cory|CYPHER|EniaHD|EXTREME|FF|FOXX|G4RiS|GUEIRA|LCD|MGE\b.*|MLH|N3G4N|ONLYMOViE|PD|PTHome|RiPER|RK|SiGLA|Tars|TM\b|tokar86a|TURG|TvR|vnlls|WTV|Yatogam1|YusukeFLA|ZigZag|ZNM)$', NULL, 'These release groups do not use the original language of the media as the first audio track. Since ffprobe relies on the first audio track to determine the primary language of the release, incorrect ordering can lead to parsing issues. This may result in failed imports, misidentified files, or even download loops. To ensure proper handling, the original language should always be the first audio track in the release.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH Bad Dual Groups', '^(alfaHD.*|BAT|BlackBit|BNd|C\.A\.A|Cory|CYPHER|EniaHD|EXTREME|FF|FOXX|G4RiS|GUEIRA|LCD|MGE\b.*|MLH|N3G4N|ONLYMOViE|PD|PTHome|RiPER|RK|SiGLA|Tars|TM\b|tokar86a|TURG|TvR|vnlls|WTV|XiQUEXiQUE|Yatogam1|YusukeFLA|ZigZag|ZNM)$', NULL, 'These release groups do not use the original language of the media as the first audio track. Since ffprobe relies on the first audio track to determine the primary language of the release, incorrect ordering can lead to parsing issues. This may result in failed imports, misidentified files, or even download loops. To ensure proper handling, the original language should always be the first audio track in the release.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('EniaHD', '^(EniaHD)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('PBS Kids', '\b(PBSK)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Arthur Banned Groups', '(?i)^arthur[ ._-].*-(DAWN)\b', NULL, NULL);
