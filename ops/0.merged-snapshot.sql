@@ -1,17 +1,17 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-06-03 10:07 UTC
+-- Generated: 2026-06-04 09:02 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (1db16a82)
---   Dumpstarr/Database        @ stable (1543a2a2)
+--   Dictionarry-Hub/database  @ v2     (03ba88ad)
+--   Dumpstarr/Database        @ stable (6ce35f0f)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
 -- Dictionarry's same-named entity are namespaced with " [Dumpstarr]".
 -- Identical entities collapse into a single entry. Both sources' profiles
 -- score releases exactly as their authors designed.
 --   Namespaced custom_formats:      56
---   Namespaced regular_expressions: 113
+--   Namespaced regular_expressions: 114
 -- ============================================================================
 
 PRAGMA foreign_keys = OFF;
@@ -183,10 +183,21 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 
 - Preceded by the start of the string (`^`), a whitespace character (`\s`), a period (`.`), or a hyphen (`-`).
 - Followed by a word boundary (`\b`), ensuring it ends cleanly without being part of a longer word.');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('3D', '(?<=\b[12]\d{3}\b).*\b((Bluray|BD)?3D|SBS|H[- .]?OU|H[- .]?SBS|Half[ .-]?OU|Half[ .-]?SBS)\b', NULL, 'Matches terms related to 3D video formats:
-- `bluray3d` or `bd3d` (optional `bluray` or `bd` followed by `3d`).
-- `sbs` (side-by-side).
-- `half ou` or `half sbs` with space (` `), dot (`.`), or hyphen (`-`) as separators.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('3D', '(?<=\b[12]\d{3}\b).*\b((Bluray|BD)?3D|((H(alf)?|F(ull)?).?)?(O(ver)?.?U(nder)?|S(ide)?[\W_]?B(y)?.?S(ide)?))\b', 'i0Ngyx/2', 'Matches 3D stereoscopic format tags in two branches.
+
+**1. 3D tag** - matches `3D` optionally prefixed with `Bluray` or `BD`.
+
+**2. Stereoscopic packing format** - matches Over-Under and Side-by-Side tags with an optional size prefix.
+
+- The prefix group `(H(alf)?|F(ull)?)` recognises Half/H and Full/F as size indicators. The entire prefix is optional, so bare formats like `SBS` or `OU` match without one. Each optional suffix (`alf`, `ull`, `ver`, `nder`, `ide`, `y`) allows both short and long forms to match from a single pattern, e.g. `O(ver)?.?U(nder)?` matches `OU`, `Over.Under`, and mixed forms like `Over.U` or `O.Under`.
+
+- Word boundaries `\b` at the start and end of the pattern prevent matches against substrings within larger words. For example, `HOURS` contains `OU` but has no word boundary between `O` and the preceding `H` or between `U` and the following `R`, so it does not match. Similarly `HOUSE` contains `HOU` but the trailing `SE` prevents a word boundary after `U`.
+
+- Separators between components use `.?` (any single optional character) except between `S(ide)` and `B(y)` in the Side-by-Side pattern, which uses `[\W_]?` (non-word character or underscore). This is because `.?` would allow an alphabetic character in that position, causing false matches where a letter between S and B forms an unintended word. For example, `SOBS` would match as `S[O]B[]S` with `.?` consuming the O. Using `[\W_]?` restricts that position to only non-alphanumeric separators like dots, hyphens, spaces and underscores.
+
+- Note that because the prefix is fully optional, double separators like `H..OU` or `Half..SBS` will still match. The prefixed path fails because `.?` only allows one separator character, but the engine falls back to matching bare `OU` or `SBS` at the end of the string where valid word boundaries exist.
+
+- A year lookbehind `(?<=\b[12]\d{3}\b)` ensures the pattern only matches after a four-digit year in the filename. This is needed because `3D` appears in actual movie titles (e.g. "Step Up 3D", "Jaws 3D", "Amityville 3D") and should not be matched as a format tag when it comes before the year. The lookbehind applies to the entire pattern rather than just the 3D branch to keep the regex simpler. In practice this has no effect on stereoscopic tags like SBS or OU since they do not appear in movie titles.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('3L', '(?<=^|[\s.-])3L\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('4K4U', '(?<=^|[\s.-])4K4U\b', NULL, 'Banned for Low Quality');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('4KDVS', '(?<=^|[\s.-])4KDVS\b', NULL, NULL);
@@ -7890,7 +7901,6 @@ INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VA
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D', 'Banned');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D', 'Enhancement');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3L', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3L', 'Remux');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('4K4U', 'Release Group');
@@ -8892,6 +8902,7 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('MAMA', 'Remux');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('NIMA4K', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('NIMA4K', 'Remux');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D', 'Edition');
 
 -- test_entities: 12 rows
 INSERT OR IGNORE INTO "test_entities" ("type", "tmdb_id", "title", "year", "poster_path") VALUES ('movie', 19995, 'Avatar', 2009, '/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg');
@@ -10644,7 +10655,7 @@ INSERT OR IGNORE INTO "test_releases" ("entity_type", "entity_tmdb_id", "title",
 INSERT OR IGNORE INTO "test_releases" ("entity_type", "entity_tmdb_id", "title", "size_bytes", "languages", "indexers", "flags") VALUES ('series', 118357, '1883 A Yellowstone Origin Story S01 2160p WEBRip DDP5 1Ch HEVC 10Bit-ShieldBearer', 38047956992, '["Unknown"]', '["TorrentLeech"]', '["freeleech"]');
 
 
--- ===== Layer 2: Dumpstarr (with 169 entities namespaced) =====
+-- ===== Layer 2: Dumpstarr (with 170 entities namespaced) =====
 
 -- tags: 83 rows
 INSERT OR IGNORE INTO "tags" ("name") VALUES ('1080p');
@@ -10831,7 +10842,7 @@ INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WORKPRINT');
 
 -- regular_expressions: 458 rows
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('1XBET', '\b(1XBET)\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('3D', '(?<=\b[12]\d{3}\b).*\b((Bluray|BD)?3D|SBS|H[- .]?OU|H[- .]?SBS|Half[ .-]?OU|Half[ .-]?SBS)\b', NULL, 'Matches terms related to 3D video formats:
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('3D [Dumpstarr]', '(?<=\b[12]\d{3}\b).*\b((Bluray|BD)?3D|SBS|H[- .]?OU|H[- .]?SBS|Half[ .-]?OU|Half[ .-]?SBS)\b', NULL, 'Matches terms related to 3D video formats:
 - `bluray3d` or `bd3d` (optional `bluray` or `bd` followed by `3d`).
 - `sbs` (side-by-side).
 - `half ou` or `half sbs` with space (` `), dot (`.`), or hyphen (`-`) as separators.');
@@ -13145,7 +13156,7 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2.0 Stereo', 'Not 4.0', 'Not 4.0ch');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2.0 Stereo', 'Not High Channel Count', 'Not High Channel Count');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2.0 Stereo', 'Not Mono', 'Not Mono');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('3D [Dumpstarr]', '3D', '3D');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('3D [Dumpstarr]', '3D', '3D [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('3D [Dumpstarr]', 'Bluray 3D', 'Bluray 3D');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('3D [Dumpstarr]', 'BD3D', 'BD3D');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('4K Remaster', 'Remaster', 'Remaster');
@@ -14197,8 +14208,8 @@ INSERT OR IGNORE INTO "custom_format_tests" ("custom_format_name", "title", "typ
 -- regular_expression_tags: 843 rows
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('1XBET', 'Banned');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('1XBET', 'Release Group');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D', 'Banned');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D', 'Enhancement');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D [Dumpstarr]', 'Banned');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D [Dumpstarr]', 'Enhancement');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('4K', 'TRaSH');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('5.1 Surround [Dumpstarr]', 'Audio');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('5.1 Surround [Dumpstarr]', 'Channels');
