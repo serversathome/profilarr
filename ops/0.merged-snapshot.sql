@@ -1,9 +1,9 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-06-11 09:45 UTC
+-- Generated: 2026-06-12 09:13 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (425f2519)
+--   Dictionarry-Hub/database  @ v2     (8f1ef286)
 --   Dumpstarr/Database        @ stable (3a54acf0)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
@@ -3889,7 +3889,7 @@ INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name"
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'h264');
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'x264');
 
--- custom_format_conditions: 1708 rows
+-- custom_format_conditions: 1709 rows
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', '1080p', 'resolution', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'Bluray', 'source', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'hallowed', 'release_group', 'all', 0, 0);
@@ -5598,8 +5598,9 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Language Groups', 'TvR', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'faBR', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2160p Quality Tier 4', 'faBR', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2160p Quality Tier 4', 'Softboat', 'release_group', 'all', 0, 0);
 
--- condition_patterns: 1282 rows
+-- condition_patterns: 1283 rows
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 1', 'hallowed', 'hallowed');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 2', 'BHDStudio', 'BHDStudio');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Bluray', 'Not Remux', 'Remux');
@@ -6882,6 +6883,7 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Language Groups', 'TvR', 'TvR');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'faBR', 'faBR');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2160p Quality Tier 4', 'faBR', 'faBR');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2160p Quality Tier 4', 'Softboat', 'Softboat');
 
 -- condition_languages: 4 rows
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Not Original', 'Original', 'Original', 0);
