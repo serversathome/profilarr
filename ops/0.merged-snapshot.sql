@@ -1,10 +1,10 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-06-13 08:32 UTC
+-- Generated: 2026-06-14 08:50 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
 --   Dictionarry-Hub/database  @ v2     (07651059)
---   Dumpstarr/Database        @ stable (19134fb0)
+--   Dumpstarr/Database        @ stable (ed428960)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
 -- Dictionarry's same-named entity are namespaced with " [Dumpstarr]".
@@ -10860,7 +10860,7 @@ INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-480p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-720p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WORKPRINT');
 
--- regular_expressions: 460 rows
+-- regular_expressions: 462 rows
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('1XBET', '\b(1XBET)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('3D [Dumpstarr]', '(?<=\b[12]\d{3}\b).*\b((Bluray|BD)?3D|SBS|H[- .]?OU|H[- .]?SBS|Half[ .-]?OU|Half[ .-]?SBS)\b', NULL, 'Matches terms related to 3D video formats:
 - `bluray3d` or `bd3d` (optional `bluray` or `bd` followed by `3d`).
@@ -11337,13 +11337,15 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('PBS Kids', '\b(PBSK)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Arthur Banned Groups', '(?i)^arthur[ ._-].*-(DAWN)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Spider-Noir Authentic B&W', '(?i)^spider[ ._-]+noir.*?\bBW\b', NULL, 'Matches the Black and White version of releases for the show "Spider-Noir".');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Dumpstarr LQ (Automation) Groups', '^(VARYG)\b', NULL, 'Release groups that are known to use bad naming conventions which cause issues with imports/automation.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Asenshi-MTBB', '\b(Asenshi-MTBB)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MCR', '\b(MCR)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('WADU', '^(WADU)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('The Office Superfans Banned Groups', '(?i)^the[ ._-]+office[ ._-]+superfan[ ._-]+episodes.*-(CRFW|playWEB)\b', NULL, 'Negates certain groups that cause import/automation issues with The Office (US).');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('POWER', '^(POWER)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Sex and the City Banned Groups', '(?i)^sex[ ._-]+and[ ._-]+the[ ._-]+city.*-(RARBG)\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('FIEND', '^(FIEND)$', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('T3KASHi', '^(T3KASHi)$', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Tsundere-Raws', '\b(Tsundere-Raws)\b', NULL, NULL);
 
 -- custom_formats: 161 rows
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('2.0 Stereo', '', 0);
@@ -11916,7 +11918,7 @@ INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "lang
 INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "language_name", "type") VALUES ('TV 1080p', 'Original', 'must');
 INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "language_name", "type") VALUES ('TV 2160p', 'Original', 'must');
 
--- quality_profile_custom_formats: 468 rows
+-- quality_profile_custom_formats: 474 rows
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('LQ 1080p', '7.1', 'all', 2);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('LQ 1080p', 'Dolby Digital +', 'all', 2);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('LQ 1080p', '5.1', 'all', 1);
@@ -12385,6 +12387,12 @@ INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", 
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('LQ 1080p', 'Dumpstarr LQ Groups (Automation)', 'radarr', -10);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Anime 1080p', 'Dumpstarr LQ Groups (Automation)', 'radarr', -100);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Anime 1080p', 'Dumpstarr LQ Groups (Automation)', 'sonarr', -100);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'Group Missing', 'sonarr', -10000);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'Group Missing', 'sonarr', -10000);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Movies 2160p HQ', 'Group Missing', 'radarr', -10000);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Movies 2160p', 'Group Missing', 'radarr', -10000);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Movies 1080p HQ', 'Group Missing', 'radarr', -10000);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Movies 1080p', 'Group Missing', 'radarr', -10000);
 
 -- quality_profile_tags: 20 rows
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('LQ 1080p', '1080p');
@@ -12408,7 +12416,7 @@ INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name"
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('TV 2160p', '2160p');
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('TV 2160p', 'Sonarr');
 
--- custom_format_conditions: 763 rows
+-- custom_format_conditions: 766 rows
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2.0 Stereo', 'Stereo', 'release_title', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2.0 Stereo', 'Not 3.0ch', 'release_title', 'all', 1, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2.0 Stereo', 'Not 4.0', 'release_title', 'all', 1, 1);
@@ -13172,8 +13180,11 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Dumpstarr LQ Title', 'Dumpstarr LQ Groups Title', 'release_title', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Dumpstarr LQ Groups', 'Dumpstarr LQ Groups', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Bad Source', 'Sex and the City', 'release_title', 'sonarr', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Dumpstarr LQ Groups (Automation)', 'FIEND', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Dumpstarr LQ Groups (Automation)', 'T3KASHi', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Dumpstarr LQ Title (Automation)', 'Tsundere-Raws', 'release_title', 'all', 0, 0);
 
--- condition_patterns: 608 rows
+-- condition_patterns: 611 rows
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2.0 Stereo', 'Stereo', 'Stereo');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2.0 Stereo', 'Not 3.0ch', 'Not 3.0ch');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2.0 Stereo', 'Not 4.0', 'Not 4.0ch');
@@ -13782,6 +13793,9 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Dumpstarr LQ Title', 'Dumpstarr LQ Groups Title', 'Dumpstarr LQ Groups Title');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Dumpstarr LQ Groups', 'Dumpstarr LQ Groups', 'Dumpstarr LQ Groups');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Bad Source', 'Sex and the City', 'Sex and the City Banned Groups');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Dumpstarr LQ Groups (Automation)', 'FIEND', 'FIEND');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Dumpstarr LQ Groups (Automation)', 'T3KASHi', 'T3KASHi');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Dumpstarr LQ Title (Automation)', 'Tsundere-Raws', 'Tsundere-Raws');
 
 -- condition_languages: 3 rows
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Anime Dual Audio', 'Japanese', 'Japanese', 0);
@@ -14229,7 +14243,7 @@ INSERT OR IGNORE INTO "custom_format_tests" ("custom_format_name", "title", "typ
 INSERT OR IGNORE INTO "custom_format_tests" ("custom_format_name", "title", "type", "should_match", "description") VALUES ('Dumpstarr LQ Title', 'Scrubs.S01E09.2026.1080p.DSNP.WEB-DL.DDP5.1.H.264-HDSWEB', 'series', 1, NULL);
 INSERT OR IGNORE INTO "custom_format_tests" ("custom_format_name", "title", "type", "should_match", "description") VALUES ('Dumpstarr LQ Title', 'Scrubs.2026.S01E01.My.Return.1080p.DSNP.WEB-DL.DDP5.1.H.264-FLUX', 'series', 0, NULL);
 
--- regular_expression_tags: 844 rows
+-- regular_expression_tags: 846 rows
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('1XBET', 'Banned');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('1XBET', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D [Dumpstarr]', 'Banned');
@@ -15065,7 +15079,6 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Arthur Banned Groups', 'Banned');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Arthur Banned Groups', 'Custom');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Spider-Noir Authentic B&W', 'Custom');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Dumpstarr LQ (Automation) Groups', 'Banned');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Asenshi-MTBB', 'Anime');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Asenshi-MTBB', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('MCR', 'Anime');
@@ -15074,6 +15087,9 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('WADU', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('The Office Superfans Banned Groups', 'Custom');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Sex and the City Banned Groups', 'Custom');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('FIEND', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('T3KASHi', 'Release Groups');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Tsundere-Raws', 'Release Group');
 
 -- test_entities: 8 rows
 INSERT OR IGNORE INTO "test_entities" ("type", "tmdb_id", "title", "year", "poster_path") VALUES ('movie', 3049, 'Ace Ventura: Pet Detective', 1994, '/pqiRuETmuSybfnVZ7qyeoXhQyN1.jpg');
