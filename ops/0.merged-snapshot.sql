@@ -1,9 +1,9 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-07-02 08:25 UTC
+-- Generated: 2026-07-03 08:28 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (c1f27093)
+--   Dictionarry-Hub/database  @ v2     (c8967662)
 --   Dumpstarr/Database        @ stable (f1c36299)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
@@ -178,7 +178,7 @@ INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-480p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-720p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WORKPRINT');
 
--- regular_expressions: 525 rows
+-- regular_expressions: 528 rows
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('126811', '(?<=^|[\s.-])126811\b', NULL, 'Matches the release group `126811` only if it is:
 
 - Preceded by the start of the string (`^`), a whitespace character (`\s`), a period (`.`), or a hyphen (`-`).
@@ -357,7 +357,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Exiled-Destiny', '(?<=^|[\s.-])Exiled-Destiny\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('EXP', '(?<=^|[\s.-])EXP\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Extended Clip', '\b(extended.?clip)\b', NULL, 'Matches preview releases labelled as `Extended Clip`');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movie Extras', '(?i)(?<=\b[12]\d{3}\b).*(\b|\.)\b(Extras?|Bonus|Extended[ ._-]Clip|Special Feature[s]?)\b', NULL, 'Extras, Special Features, Featurettes, etc');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movie Extras', '(?<=\b[12]\d{3}\b).*(\b|\.)\b(Extras?|Bonus|Extended[ ._-]Clip|Special Feature[s]?)\b', NULL, 'Extras, Special Features, Featurettes, etc');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('FFF', '(?<=^|[\s.-])FFF\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('FGT', '(?<=^|[\s.-])FGT\b', NULL, 'Banned for Retagging');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Final8', '(?<=^|[\s.-])Final8\b', NULL, '');
@@ -762,8 +762,11 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('jff', '(?<=^|[\s.-])jff\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BAT1', '(?<=^|[\s.-])BAT1\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Casius08', '(?<=^|[\s.-])Casius08\b', NULL, 'Banned for Garbage Releases');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('NaNi', '(?<=^|[\s.-])NaNi\b', NULL, 'Banned for DCP Remux. Compatibility Issues');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movie DUBBED', '(?<=\b[12]\d{3}\b).*(\b|\.)\bDUB(BED)?\b', NULL, 'Extras, Special Features, Featurettes, etc');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TV DUBBED', '(?<=\bS\d+(E\d+)?\b).*\bDUB(BED)?\b', NULL, 'Extras, Special Features, Featurettes, etc');
 
--- custom_formats: 256 rows
+-- custom_formats: 257 rows
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('1080p Balanced Tier 1', 'Matches release groups who fall under 1080p Balanced Tier 1', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('1080p Balanced Tier 2', 'Matches release groups who fall under 1080p Balanced Tier 2', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('1080p Bluray', 'Matches 1080p Blurays that are NOT remuxes', 0);
@@ -1065,6 +1068,7 @@ INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_renam
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Banned Language Groups', 'Match Releases that contain a Non Original Audio Default', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('CAM', 'Matches CAM Releases', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Banned Groups (Regular)', 'Matches Banned Release Groups that apply to NON Compact and Efficient Profiles', 0);
+INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('DUBBED', 'Matches the ''DUBBED'' Regex Pattern', 0);
 
 -- delay_profiles: 2 rows
 INSERT OR IGNORE INTO "delay_profiles" ("name", "preferred_protocol", "usenet_delay", "torrent_delay", "bypass_if_highest_quality", "bypass_if_above_custom_format_score", "minimum_custom_format_score") VALUES ('Radarr', 'prefer_torrent', 360, 360, 0, 0, NULL);
@@ -3931,7 +3935,7 @@ INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name"
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'h264');
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'x264');
 
--- custom_format_conditions: 1632 rows
+-- custom_format_conditions: 1635 rows
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', '1080p', 'resolution', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'Bluray', 'source', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'hallowed', 'release_group', 'all', 0, 0);
@@ -5564,8 +5568,11 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups', 'Casius08', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups (Efficient)', 'RARBG', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups (Regular)', 'RARBG', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Banned Groups', 'NaNi', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('DUBBED', 'Movie DUBBED', 'release_title', 'radarr', 0, 1);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('DUBBED', 'TV DUBBED', 'release_title', 'sonarr', 0, 1);
 
--- condition_patterns: 1205 rows
+-- condition_patterns: 1208 rows
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 1', 'hallowed', 'hallowed');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 2', 'BHDStudio', 'BHDStudio');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Bluray', 'Not Remux', 'Remux');
@@ -6771,6 +6778,9 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups', 'Casius08', 'Casius08');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups (Efficient)', 'RARBG', 'RARBG');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups (Regular)', 'RARBG', 'RARBG');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Banned Groups', 'NaNi', 'NaNi');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('DUBBED', 'Movie DUBBED', 'Movie DUBBED');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('DUBBED', 'TV DUBBED', 'TV DUBBED');
 
 -- condition_languages: 4 rows
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Not Original', 'Original', 'Original', 0);
@@ -7213,7 +7223,7 @@ INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('1080p Efficient TV WEB Tier 5', 'HDTV', 'television');
 
 
--- custom_format_tags: 579 rows
+-- custom_format_tags: 581 rows
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('1080p Balanced Tier 1', '1080p');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('1080p Balanced Tier 1', 'Balanced');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('1080p Balanced Tier 1', 'Release Group Tier');
@@ -7793,9 +7803,11 @@ INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VA
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('CAM', 'Banned');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('Banned Groups (Regular)', 'Banned');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('Banned Groups (Regular)', 'Release Group');
+INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('DUBBED', 'Banned');
+INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('DUBBED', 'Enhancement');
 
 
--- regular_expression_tags: 1021 rows
+-- regular_expression_tags: 1025 rows
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D', 'Banned');
@@ -8817,6 +8829,10 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('BAT1', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Casius08', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Casius08', 'WEB-DL');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('NaNi', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('NaNi', 'Remux');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Movie DUBBED', 'Banned');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('TV DUBBED', 'Banned');
 
 -- test_entities: 12 rows
 INSERT OR IGNORE INTO "test_entities" ("type", "tmdb_id", "title", "year", "poster_path") VALUES ('movie', 19995, 'Avatar', 2009, '/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg');
