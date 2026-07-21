@@ -1,10 +1,10 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-07-20 08:18 UTC
+-- Generated: 2026-07-21 07:42 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
 --   Dictionarry-Hub/database  @ v2     (fdd2c990)
---   Dumpstarr/Database        @ stable (7b82754d)
+--   Dumpstarr/Database        @ stable (92c42edb)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
 -- Dictionarry's same-named entity are namespaced with " [Dumpstarr]".
@@ -11482,7 +11482,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('JFF', '^(JFF)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Release Name (Spaces)', '^[A-Za-z0-9]+\s+[A-Za-z0-9]+\s+[A-Za-z0-9]+', NULL, 'Targets releases that use spaces in the release name.');
 
--- custom_formats: 159 rows
+-- custom_formats: 160 rows
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('2.0 Stereo', '', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('3D [Dumpstarr]', 'Matches the ''3D'' Regex Pattern', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('4K Remaster', '', 0);
@@ -11648,6 +11648,7 @@ INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_renam
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('x265 [Dumpstarr]', '', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Season Pack [Dumpstarr]', '', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Bad Season Pack', 'This format targets season packs from specific groups that cause issues at import.', 0);
+INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Not Original Language', '', 0);
 
 -- delay_profiles: 1 rows
 INSERT OR IGNORE INTO "delay_profiles" ("name", "preferred_protocol", "usenet_delay", "torrent_delay", "bypass_if_highest_quality", "bypass_if_above_custom_format_score", "minimum_custom_format_score") VALUES ('Default Delay', 'prefer_usenet', 60, 60, 0, 0, NULL);
@@ -12051,7 +12052,7 @@ INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "lang
 INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "language_name", "type") VALUES ('TV 1080p', 'Original', 'must');
 INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "language_name", "type") VALUES ('TV 2160p', 'Original', 'must');
 
--- quality_profile_custom_formats: 470 rows
+-- quality_profile_custom_formats: 472 rows
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('LQ 1080p', 'Accessibility', 'all', -10000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Anime 1080p', 'Multi-Audio', 'all', 101);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Anime 1080p', 'Multi-Sub', 'all', 101);
@@ -12522,6 +12523,8 @@ INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", 
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('LQ 1080p', 'Season Pack [Dumpstarr]', 'sonarr', 1);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Anime 1080p', 'Season Pack [Dumpstarr]', 'sonarr', 10);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'Bad Season Pack', 'sonarr', -10000);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'Not Original Language', 'sonarr', -10000);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'Not Original Language', 'sonarr', -10000);
 
 -- quality_profile_tags: 20 rows
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('LQ 1080p', '1080p');
@@ -12545,7 +12548,7 @@ INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name"
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('TV 2160p', '2160p');
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('TV 2160p', 'Sonarr');
 
--- custom_format_conditions: 960 rows
+-- custom_format_conditions: 961 rows
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2.0 Stereo', 'Stereo', 'release_title', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2.0 Stereo', 'Not 3.0ch', 'release_title', 'all', 1, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2.0 Stereo', 'Not 4.0', 'release_title', 'all', 1, 1);
@@ -13506,6 +13509,7 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Bad Season Pack', 'Season Pack', 'release_type', 'sonarr', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Bad Season Pack', 'Kitsune', 'release_group', 'sonarr', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Bad Season Pack', 'Release Name (Spaces)', 'release_title', 'sonarr', 0, 1);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Not Original Language', 'Not Original', 'language', 'all', 1, 0);
 
 -- condition_patterns: 802 rows
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2.0 Stereo', 'Stereo', 'Stereo');
@@ -14311,12 +14315,13 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Bad Season Pack', 'Kitsune', 'Kitsune [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Bad Season Pack', 'Release Name (Spaces)', 'Release Name (Spaces)');
 
--- condition_languages: 5 rows
+-- condition_languages: 6 rows
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Anime Dual Audio', 'Japanese', 'Japanese', 0);
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Anime Dual Audio', 'Chinese', 'Chinese', 0);
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Anime Dual Audio', 'Korean', 'Korean', 0);
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Not German or English', 'Not English', 'English', 0);
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Not German or English', 'Not German', 'German', 0);
+INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Not Original Language', 'Not Original', 'Original', 0);
 
 
 
