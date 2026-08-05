@@ -37,9 +37,9 @@
     "dumpstarr": {
       "repo": "https://github.com/Dumpstarr/Database",
       "branch": "stable",
-      "sha": "623c2619"
+      "sha": "649f43ce"
     },
-    "synced_at": "2026-08-04 07:47 UTC",
+    "synced_at": "2026-08-05 07:49 UTC",
     "namespaced_custom_formats": 48,
     "namespaced_regular_expressions": 138
   }
