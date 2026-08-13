@@ -1,3 +1,7 @@
+> [!CAUTION]
+> As of v2.1 of Profilarr you can now combine quality profiles from multiple sources. **That feature makes this repo useless and it will be deprecated and removed over time.** DO NOT USE and if you are linking to this please link to other databases. Thank you.
+
+
 # Profilarr Combined Database
 
 A ready-to-use database for [Profilarr](https://github.com/Dictionarry-Hub/profilarr) that combines two of the best community sources into one place, so you don't have to choose between them.
