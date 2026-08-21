@@ -1,9 +1,9 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-08-20 05:47 UTC
+-- Generated: 2026-08-21 05:48 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (7e3255c7)
+--   Dictionarry-Hub/database  @ v2     (5343fd17)
 --   Dumpstarr/Database        @ stable (ed451ed1)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
@@ -757,7 +757,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('faBR', '(?<=^|[\s.-])faBR\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('tokar86a', '(?<=^|[\s.-])tokar86a\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('KiNGSMAN', '(?<=^|[\s.-])KiNGSMAN\b', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('CAM', '(?<=\b[12]\d{3}\b).*(\b(CAM[ ._-]?(Rip)?|DVD[ ._-]?(SCR(EENER)?)|HD[ ._-]?(CAM|SCR|TC|TS)|SCREENER|TELE(CINE|SYNC)|WORKPRINT)\b)', NULL, 'Matches CAM Releases');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('CAM', '(?<=\b[12]\d{3}\b).*(\b(CAM[ ._-]?(Rip)?|DCP(RIP)?|DVD[ ._-]?(SCR(EENER)?)|HD[ ._-]?(CAM|SCR|TC|TS)|SCREENER|TELE(CINE|SYNC)|WORKPRINT)\b)', NULL, 'Matches CAM Releases');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('rbb', '(?<=^|[\s.-])rbb\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('jff', '(?<=^|[\s.-])jff\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BAT1', '(?<=^|[\s.-])BAT1\b', NULL, NULL);
