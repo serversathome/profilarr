@@ -1,17 +1,17 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-08-23 05:45 UTC
+-- Generated: 2026-08-24 05:53 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (d33771ea)
---   Dumpstarr/Database        @ stable (ed451ed1)
+--   Dictionarry-Hub/database  @ v2     (5d705d36)
+--   Dumpstarr/Database        @ stable (0f1d8e17)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
 -- Dictionarry's same-named entity are namespaced with " [Dumpstarr]".
 -- Identical entities collapse into a single entry. Both sources' profiles
 -- score releases exactly as their authors designed.
---   Namespaced custom_formats:      49
---   Namespaced regular_expressions: 141
+--   Namespaced custom_formats:      51
+--   Namespaced regular_expressions: 150
 -- ============================================================================
 
 PRAGMA foreign_keys = OFF;
@@ -178,7 +178,7 @@ INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-480p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-720p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WORKPRINT');
 
--- regular_expressions: 588 rows
+-- regular_expressions: 592 rows
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('126811', '(?<=^|[\s.-])126811\b', NULL, 'Matches the release group `126811` only if it is:
 
 - Preceded by the start of the string (`^`), a whitespace character (`\s`), a period (`.`), or a hyphen (`-`).
@@ -374,7 +374,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Geek', '(?<=^|[\s.-])Geek\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('GNOME', '(?<=^|[\s.-])GNOME\b', NULL, 'Matches "GNOME" when preceded by whitespace, a hyphen or dot');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Golden Popcorn Negation', '(?<=^|[\s.-])(AJP69|ATELiER|BMF|BSTD|BV|c0kE|Chotab|CJ|coffee|CRiSC|CRX|CtrlHD|Dariush|de[42]|decibel|DON|D-Z0N3|E.N.D|E1|EDPH|EbP|ESiR|EuReKA|EXCiSION|FoRM|FraMeSToR|GALAXY|Geek|GS88|HANDJOB|hdalx|HDC|HDMaNiAcS|HiDt|HiFi|HiP|HQMUX|IDE|iFT|iON|Ivandro|KASHMiR|Kitsune|KnG|LEGi0N|LiNG|LolHD|LoRD|luvBB|MaG|MTeam|NCmt|NiBuRu|NiP|nmd|NTb|NyHD|ORiGEN|P0W4HD|Penumbra|playHD|Positive|PTer|PTP|REBORN|RiCO|rightSIZE|RO|ROCiNANTE|rttr|SA89|SaNcTi|SbR|SiMPLE|Skazhutin|Slappy|SoLaR|SOP|SPHD|TayTo|TBB|TDD|TeamSyndicate|ThD|TnP|VLAD|VietHD|W4NK3R|WiKi|WiLDCAT|WiLF|WMING|xander|ZIMBO|ZoroSenpai|ZQ)\b', NULL, 'Match release groups who should not be categorized as UHD Bluray');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Google TV', '\b(PLAY)\b[ ._-]web[ ._-]?(dl|rip)?\b', NULL, 'Google TV, formerly known as Google Play Movies & TV, is a digital distribution service for movies and television series developed by Google. Launched in 2011 as part of the Google Play product line, the service offers search and discovery of video titles across multiple streaming services, including rental or purchase options, alongside watchlist features for accessing titles from eligible devices and platforms. In September 2020, it was relaunched as Google TV.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Google TV', '\b(PLAY)\b[ ._-]WEB[ ._-]?(DL|RIP)?\b', NULL, 'Google TV, formerly known as Google Play Movies & TV, is a digital distribution service for movies and television series developed by Google. Launched in 2011 as part of the Google Play product line, the service offers search and discovery of video titles across multiple streaming services, including rental or purchase options, alongside watchlist features for accessing titles from eligible devices and platforms. In September 2020, it was relaunched as Google TV.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Google TV Rename', '\[(PLAY)\b|\b(PLAY)\]', NULL, 'Google TV, formerly known as Google Play Movies & TV, is a digital distribution service for movies and television series developed by Google. Launched in 2011 as part of the Google Play product line, the service offers search and discovery of video titles across multiple streaming services, including rental or purchase options, alongside watchlist features for accessing titles from eligible devices and platforms. In September 2020, it was relaunched as Google TV.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('GRiMM', '(?<=^|[\s.-])GRiMM\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('GS88', '(?<=^|[\s.-])GS88\b', NULL, '');
@@ -424,8 +424,8 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 - Checks for WEBs from `Disney+` or `Bravia Core`
 - Ensures "IMAX" appears (with optional "Enhanced" suffix) but not when preceded by "NON"');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('iON', '(?<=^|[\s.-])iON\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('iQIYI', '\b(IQIYI|IQ)\b', NULL, 'iQIYI is a Chinese subscription video on-demand over-the-top streaming service owned by Baidu. Headquartered in Beijing, iQIYI primarily produces and distributes films and television series.');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('iTunes', '\b(it|itunes)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)', NULL, 'iTunes began offering video content in October 2005 with the release of iTunes 6. At launch, the iTunes Store provided popular TV shows from ABC, Disney Channel, and other networks. Users could purchase and view video content, such as episodes of Desperate Housewives, Lost, That''s So Raven, and The Suite Life of Zack & Cody.
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('iQIYI', '\b(iQIY|IQ|iQIYI)\b(?=[ ._-]WEB[ ._-]?(DL|RIP)\b)', NULL, 'iQIYI is a Chinese subscription video on-demand over-the-top streaming service owned by Baidu. Headquartered in Beijing, iQIYI primarily produces and distributes films and television series.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('iTunes', '\b(iT|iTunes)\b(?=[ ._-]WEB[ ._-]?(DL|RIP)\b)', NULL, 'iTunes began offering video content in October 2005 with the release of iTunes 6. At launch, the iTunes Store provided popular TV shows from ABC, Disney Channel, and other networks. Users could purchase and view video content, such as episodes of Desperate Housewives, Lost, That''s So Raven, and The Suite Life of Zack & Cody.
 
 In 2008, Apple introduced "iTunes Digital Copy," a feature on select DVDs and Blu-ray discs that allowed users to obtain a digital copy of the video content in iTunes and associated media players.
 
@@ -475,7 +475,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('LYS1TH3A', '(?<=^|[\s.-])LYS1TH3A\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MaG', '(?<=^|[\s.-])MaG\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MainFrame', '(?<=^|[\s.-])MainFrame\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Max', '\b((?<!hbo[ ._-])max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)', NULL, 'Max, formerly (and in some regions still) known as HBO Max, is an American subscription video on-demand over-the-top streaming service. The platform offers content from the libraries of Warner Bros., Discovery, HBO, CNN, Cartoon Network, Adult Swim, Animal Planet, TBS, TNT, Eurosport, and their related brands.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Max', '\b((?<!HBO[ ._-])MAX)\b(?=[ ._-]WEB[ ._-]?(DL|RIP)\b)', NULL, 'Max, formerly (and in some regions still) known as HBO Max, is an American subscription video on-demand over-the-top streaming service. The platform offers content from the libraries of Warner Bros., Discovery, HBO, CNN, Cartoon Network, Adult Swim, Animal Planet, TBS, TNT, Eurosport, and their related brands.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Max Rename', '\[(MAX)\b|\b(MAX)\]', NULL, 'Max, formerly (and in some regions still) known as HBO Max, is an American subscription video on-demand over-the-top streaming service. The platform offers content from the libraries of Warner Bros., Discovery, HBO, CNN, Cartoon Network, Adult Swim, Animal Planet, TBS, TNT, Eurosport, and their related brands.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MeGusta', '(?<=^|[\s.-])MeGusta\b', NULL, 'Banned for Low Quality. Allowed on HEVC Profiles');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MgB', '(?<=^|[\s.-])MgB\b', NULL, 'Banned for Mislabeled 2160p WEBRips');
@@ -483,7 +483,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MNHD', '(?<=^|[\s.-])MNHD\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('monkee', '(?<=^|[\s.-])monkee\b', NULL, 'Matches "monkee" when preceded by whitespace, a hyphen or dot');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('mottoj', '(?<=^|[\s.-])mottoj\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movies Anywhere', '\b(?<!dts[ .-]?hd[ .-]?)(MA|YKW)\b(?=.*\bweb[ ._-]?(dl|rip)\b)', NULL, 'Movies Anywhere (MA) is a cloud-based digital rights locker and over-the-top streaming platform that allows users to stream and download purchased films, including digital copies redeemed from codes found in home video releases as well as digital purchases from participating services');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movies Anywhere', '\b(?<!DTS[ .-]?HD[ .-]?)(MA|YKW)\b(?=.*\bWEB[ ._-]?(DL|RIP)\b)', NULL, 'Movies Anywhere (MA) is a cloud-based digital rights locker and over-the-top streaming platform that allows users to stream and download purchased films, including digital copies redeemed from codes found in home video releases as well as digital purchases from participating services');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MTBB', '(?<=^|[\s.-])MTBB\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MTeam', '(?<=^|[\s.-])MTeam\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Mubi', '\b(MUBI)\b', NULL, 'Mubi is a British streaming platform, production company and film distributor. Mubi produces and theatrically distributes films by emerging and established filmmakers, which are exclusively available on its platform. The catalogue consists of world cinema films, such as arthouse, documentary and independent films.');
@@ -504,7 +504,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Non Retail HDR Formats', '(?:(?<=^(?!.*\b(HLG|PQ|SDR)(\b|\d)).*?)HDR10(\+|P(lus)?))|\b(dv(?![ .](HLG|SDR))|dovi|dolby[ .]?vision)\b', NULL, 'Matches Dolby Vision OR HDR10+. Needed to match release groups who create custom HDR layers. ');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Non Retail HDR Groups', '(?<=^|[\s.-])VECTOR|BiTOR|DepraveD|SasukeducK|tarunk9c|jennaortegaUHD|VisionXpert|Flights\b', NULL, 'Matches groups that produce non retail HDR.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('NOSiViD', '(?<=^|[\s.-])NOSiViD\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Now', '\b(now)\b[ ._-]web[ ._-]?(dl|rip)?\b', NULL, 'Now (formerly Now TV and often stylised as NOW) is a subscription over-the-top streaming television service launched in the United Kingdom in 2012. It is operated by Sky Group in Europe, and Xfinity in the US; both owned by the American media conglomerate Comcast.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Now', '\b(NOW)\b[ ._-]WEB[ ._-]?(DL|RIP)?\b', NULL, 'Now (formerly Now TV and often stylised as NOW) is a subscription over-the-top streaming television service launched in the United Kingdom in 2012. It is operated by Sky Group in Europe, and Xfinity in the US; both owned by the American media conglomerate Comcast.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Now Rename', '\[(NOW)\b|\b(NOW)\]', NULL, 'Now (formerly Now TV and often stylised as NOW) is a subscription over-the-top streaming television service launched in the United Kingdom in 2012. It is operated by Sky Group in Europe, and Xfinity in the US; both owned by the American media conglomerate Comcast.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('noxxus', '(?<=^|[\s.-])noxxus\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('NPMS', '(?<=^|[\s.-])NPMS\b', NULL, '');
@@ -595,7 +595,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Senjou', '(?<=^|[\s.-])Senjou\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SHD', '(?<=^|[\s.-])SHD\b', NULL, 'Banned for Retagging');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ShieldBearer', '(?<=^|[\s.-])ShieldBearer\b', NULL, 'Banned For AI Upscale');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Showtime', '\b(sho|showtime)\b[ ._-]web[ ._-]?(dl|rip)?\b', NULL, 'Showtime (also known as Paramount+ with Showtime) is an American premium television network and the flagship property of Showtime Networks, a sub-division of the Paramount Media Networks division of Paramount Global. Showtime''s programming includes original television series produced exclusively for the linear network and developed for the co-owned Paramount+ streaming service, theatrically released and independent motion pictures, documentaries, and occasional stand-up comedy specials, made-for-TV movies, and softcore adult programming.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Showtime', '\b(SHO|Showtime)\b[ ._-]WEB[ ._-]?(DL|RIP)?\b', NULL, 'Showtime (also known as Paramount+ with Showtime) is an American premium television network and the flagship property of Showtime Networks, a sub-division of the Paramount Media Networks division of Paramount Global. Showtime''s programming includes original television series produced exclusively for the linear network and developed for the co-owned Paramount+ streaming service, theatrically released and independent motion pictures, documentaries, and occasional stand-up comedy specials, made-for-TV movies, and softcore adult programming.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Showtime Rename', '\[(SHO)\b|\b(SHO)\]', NULL, 'Showtime (also known as Paramount+ with Showtime) is an American premium television network and the flagship property of Showtime Networks, a sub-division of the Paramount Media Networks division of Paramount Global. Showtime''s programming includes original television series produced exclusively for the linear network and developed for the co-owned Paramount+ streaming service, theatrically released and independent motion pictures, documentaries, and occasional stand-up comedy specials, made-for-TV movies, and softcore adult programming.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SiC', '(?<=^|[\s.-])SiC\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SiCFoI', '(?<=^|[\s.-])SiCFoI\b', NULL, '');
@@ -615,7 +615,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SPHD', '(?<=^|[\s.-])SPHD\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SPiRiT', '(?<=^|[\s.-])SPiRiT\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SQS', '(?<=^|[\s.-])SQS\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Stan', '\b(stan)\b[ ._-]web[ ._-]?(dl|rip)?\b', NULL, 'Stan is an Australian over-the-top streaming service. The service offers a broad range of film and television content from both local and foreign productions, particularly from the United States and United Kingdom.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Stan', '\b(STAN)\b[ ._-]WEB[ ._-]?(DL|RIP)?\b', NULL, 'Stan is an Australian over-the-top streaming service. The service offers a broad range of film and television content from both local and foreign productions, particularly from the United States and United Kingdom.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Stan Rename', '\[(STAN)\b|\b(STAN)\]', NULL, 'Stan is an Australian over-the-top streaming service. The service offers a broad range of film and television content from both local and foreign productions, particularly from the United States and United Kingdom.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('STRiKES', '(?<=^|[\s.-])STRiKES\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('STUTTERSHIT', '(?<=^|[\s.-])STUTTERSHIT\b', NULL, 'Banned for Low Quality');
@@ -757,7 +757,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('faBR', '(?<=^|[\s.-])faBR\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('tokar86a', '(?<=^|[\s.-])tokar86a\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('KiNGSMAN', '(?<=^|[\s.-])KiNGSMAN\b', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('CAM', '(?<=\b[12]\d{3}\b).*(\b(CAM[ ._-]?(Rip)?|DCP(RIP)?|DVD[ ._-]?(SCR(EENER)?)|HD[ ._-]?(CAM|SCR|TC|TS)|SCREENER|TELE(CINE|SYNC)|WORKPRINT)\b)', NULL, 'Matches CAM Releases');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('CAM', '(?<=\b[12]\d{3}\b).*(\b((AC3)?(LD|MD)|CAM[ ._-]?(Rip)?|DCP(RIP)?|DVD[ ._-]?(SCR(EENER)?)|HD[ ._-]?(CAM|SCR|TC|TS)|(LINE|MIC)[ ._-]?DUBBED|SCREENER|(TC|TS)(Rip)?|TELE(CINE|SYNC)|WORKPRINT)\b)', NULL, 'Matches CAM Releases');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('rbb', '(?<=^|[\s.-])rbb\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('jff', '(?<=^|[\s.-])jff\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BAT1', '(?<=^|[\s.-])BAT1\b', NULL, NULL);
@@ -825,8 +825,12 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Seal', '(?<=^|[\s.-])Seal\b', NULL, 'Matches "BakedFEL" when preceded by whitespace, a hyphen or dot');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('JM', '(?<=^|[\s.-])JM\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SpaceHD', '(?<=^|[\s.-])SpaceHD\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('HBO', '\b(HBO)(?![ ._-]MAX)\b(?=[ ._-]WEB[ ._-]?(DL|RIP)\b)', NULL, 'Home Box Office (HBO) is an American premium television network and service, which is the flagship property of namesake parent Home Box Office, Inc., a subsidiary of Warner Bros. Discovery. The overall Home Box Office business unit is based at Warner Bros. Discovery''s corporate headquarters inside 30 Hudson Yards in Manhattan. Programming featured on the service consists primarily of theatrically released motion pictures and original television programs as well as made-for-cable movies, documentaries, occasional comedy, and concert specials, and periodic interstitial programs (consisting of short films and making-of documentaries).');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('HBO Rename', '\[(HBO)\b|\b(HBO)\]', NULL, 'Home Box Office (HBO) is an American premium television network and service, which is the flagship property of namesake parent Home Box Office, Inc., a subsidiary of Warner Bros. Discovery. The overall Home Box Office business unit is based at Warner Bros. Discovery''s corporate headquarters inside 30 Hudson Yards in Manhattan. Programming featured on the service consists primarily of theatrically released motion pictures and original television programs as well as made-for-cable movies, documentaries, occasional comedy, and concert specials, and periodic interstitial programs (consisting of short films and making-of documentaries).');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Discovery+', '\b(DSCP)\b', NULL, 'Discovery+ (pronounced "Discovery Plus"; stylized as discovery+) is an American multinational subscription video on-demand over-the-top streaming service owned by Warner Bros. Discovery (WBD).[1] The service focuses on factual programming drawn from the libraries of Discovery''s main channel brands, as well as original series (including spin-offs of programs from Discovery''s television networks), and content from A&E Networks, NBCUniversal, and Discovery+''s corporate sibling CNN.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('GOLIATN', '(?<=^|[\s.-])GOLIATN\b', NULL, NULL);
 
--- custom_formats: 259 rows
+-- custom_formats: 261 rows
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('1080p Balanced Tier 1', 'Matches release groups who fall under 1080p Balanced Tier 1', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('1080p Balanced Tier 2', 'Matches release groups who fall under 1080p Balanced Tier 2', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('1080p Bluray', 'Matches 1080p Blurays that are NOT remuxes', 0);
@@ -1131,6 +1135,8 @@ INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_renam
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('2160p iTunes Enhancement', 'Augments the Streaming Service Score for 1080p Releases and below for 2160p Profiles', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('ATV', 'Matches ''Apple TV'' WEB-DLs', 1);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Netflix Enhancement', 'Augments the Streaming Service Score for 1080p Releases and below for 2160p Profiles', 0);
+INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('HBO', 'Matches ''HBO'' WEB-DLs', 1);
+INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('DSCP', 'Matches ''Discovery+'' WEB-DLs', 1);
 
 -- delay_profiles: 2 rows
 INSERT OR IGNORE INTO "delay_profiles" ("name", "preferred_protocol", "usenet_delay", "torrent_delay", "bypass_if_highest_quality", "bypass_if_above_custom_format_score", "minimum_custom_format_score") VALUES ('Radarr', 'prefer_torrent', 360, 360, 0, 0, NULL);
@@ -1709,7 +1715,7 @@ INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "lang
 INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "language_name", "type") VALUES ('2160p Remux', 'Any', 'simple');
 INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "language_name", "type") VALUES ('720p Quality', 'Any', 'simple');
 
--- quality_profile_custom_formats: 2265 rows
+-- quality_profile_custom_formats: 2309 rows
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Balanced', '720p Quality Tier 1', 'all', 85000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Balanced', '720p Quality Tier 2', 'all', 84000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Balanced', '720p Quality Tier 3', 'all', 83000);
@@ -3975,6 +3981,50 @@ INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", 
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Efficient', 'Netflix Enhancement', 'sonarr', -2000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Quality', 'Netflix Enhancement', 'sonarr', -2000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Remux', 'Netflix Enhancement', 'sonarr', -2000);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Balanced', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Balanced', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Balanced', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Balanced', 'HBO', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Compact', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Compact', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Compact', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Compact', 'HBO', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Efficient', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Efficient', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Efficient', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Efficient', 'HBO', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Quality', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Quality', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Quality', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Quality', 'HBO', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Quality HDR', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Quality HDR', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Quality HDR', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Quality HDR', 'HBO', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Remux', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Remux', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Remux', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('1080p Remux', 'HBO', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Balanced', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Balanced', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Balanced', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Balanced', 'HBO', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Efficient', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Efficient', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Efficient', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Efficient', 'HBO', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Quality', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Quality', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Quality', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Quality', 'HBO', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Remux', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Remux', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Remux', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('2160p Remux', 'HBO', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('720p Quality', 'DSCP', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('720p Quality', 'DSCP', 'sonarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('720p Quality', 'HBO', 'radarr', 0);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('720p Quality', 'HBO', 'sonarr', 0);
 
 -- quality_profile_tags: 60 rows
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('1080p Balanced', '1080p');
@@ -4038,7 +4088,7 @@ INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name"
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'h264');
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'x264');
 
--- custom_format_conditions: 1782 rows
+-- custom_format_conditions: 1799 rows
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', '1080p', 'resolution', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'Bluray', 'source', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'hallowed', 'release_group', 'all', 0, 0);
@@ -5821,8 +5871,25 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'SpaceHD', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'SpaceHD', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'SpaceHD', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO', 'WEB-DL', 'source', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO', 'WEBRip', 'source', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO', 'HBO Regex', 'release_title', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO', 'HBO Rename Regex', 'release_title', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('DSCP', 'WEB-DL', 'source', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('DSCP', 'WEBRip', 'source', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('DSCP', 'DSCP Regex', 'release_title', 'all', 0, 1);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'GOLIATN', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'GOLIATN', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'CRiME', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'HDmonSK', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'iLL', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'OB1', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'POH', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'UxO', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'VD', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'ZiNC', 'release_group', 'all', 0, 0);
 
--- condition_patterns: 1349 rows
+-- condition_patterns: 1362 rows
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 1', 'hallowed', 'hallowed');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 2', 'BHDStudio', 'BHDStudio');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Bluray', 'Not Remux', 'Remux');
@@ -7172,6 +7239,19 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'SpaceHD', 'SpaceHD');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'SpaceHD', 'SpaceHD');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'SpaceHD', 'SpaceHD');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('HBO', 'HBO Regex', 'HBO');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('HBO', 'HBO Rename Regex', 'HBO Rename');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('DSCP', 'DSCP Regex', 'Discovery+');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'GOLIATN', 'GOLIATN');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'GOLIATN', 'GOLIATN');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'CRiME', 'CRiME');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'HDmonSK', 'HDmonSK');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'iLL', 'iLL');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'OB1', 'OB1');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'POH', 'POH');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'UxO', 'UxO');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'VD', 'VD');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'ZiNC', 'ZiNC');
 
 -- condition_languages: 4 rows
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Not Original', 'Original', 'Original', 0);
@@ -7357,7 +7437,7 @@ INSERT OR IGNORE INTO "condition_resolutions" ("custom_format_name", "condition_
 INSERT OR IGNORE INTO "condition_resolutions" ("custom_format_name", "condition_name", "resolution") VALUES ('720p HDTV Tier 3', '720p', '720p');
 
 
--- condition_sources: 260 rows
+-- condition_sources: 264 rows
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('1080p Balanced Tier 1', 'Bluray', 'bluray');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('1080p Balanced Tier 2', 'Bluray', 'bluray');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('1080p Bluray', 'Bluray', 'bluray');
@@ -7618,9 +7698,13 @@ INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('1080p Efficient TV WEB Tier 5', 'HDTV', 'television');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('ATV', 'WEB-DL', 'web_dl');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('ATV', 'WEBRip', 'webrip');
+INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('HBO', 'WEB-DL', 'web_dl');
+INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('HBO', 'WEBRip', 'webrip');
+INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('DSCP', 'WEB-DL', 'web_dl');
+INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('DSCP', 'WEBRip', 'webrip');
 
 
--- custom_format_tags: 584 rows
+-- custom_format_tags: 588 rows
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('1080p Balanced Tier 1', '1080p');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('1080p Balanced Tier 1', 'Balanced');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('1080p Balanced Tier 1', 'Release Group Tier');
@@ -8205,9 +8289,13 @@ INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VA
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('ATV', 'Streaming Service');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('ATV', 'WEB-DL');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('Netflix Enhancement', 'Enhancement');
+INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('HBO', 'Streaming Service');
+INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('HBO', 'WEB-DL');
+INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('DSCP', 'Streaming Service');
+INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('DSCP', 'WEB-DL');
 
 
--- regular_expression_tags: 1145 rows
+-- regular_expression_tags: 1153 rows
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D', 'Banned');
@@ -9353,6 +9441,14 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('JM', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('SpaceHD', 'Bluray');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('SpaceHD', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('HBO', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('HBO', 'WEB-DL');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('HBO Rename', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('HBO Rename', 'WEB-DL');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Discovery+', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Discovery+', 'WEB-DL');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('GOLIATN', 'Bluray');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('GOLIATN', 'Release Group');
 
 -- test_entities: 12 rows
 INSERT OR IGNORE INTO "test_entities" ("type", "tmdb_id", "title", "year", "poster_path") VALUES ('movie', 19995, 'Avatar', 2009, '/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg');
@@ -11105,7 +11201,7 @@ INSERT OR IGNORE INTO "test_releases" ("entity_type", "entity_tmdb_id", "title",
 INSERT OR IGNORE INTO "test_releases" ("entity_type", "entity_tmdb_id", "title", "size_bytes", "languages", "indexers", "flags") VALUES ('series', 118357, '1883 A Yellowstone Origin Story S01 2160p WEBRip DDP5 1Ch HEVC 10Bit-ShieldBearer', 38047956992, '["Unknown"]', '["TorrentLeech"]', '["freeleech"]');
 
 
--- ===== Layer 2: Dumpstarr (with 190 entities namespaced) =====
+-- ===== Layer 2: Dumpstarr (with 201 entities namespaced) =====
 
 -- tags: 83 rows
 INSERT OR IGNORE INTO "tags" ("name") VALUES ('1080p');
@@ -11290,7 +11386,7 @@ INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-480p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-720p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WORKPRINT');
 
--- regular_expressions: 672 rows
+-- regular_expressions: 674 rows
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('1XBET', '\b(1XBET)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('3D [Dumpstarr]', '(?<=\b[12]\d{3}\b).*\b((Bluray|BD)?3D|SBS|H[- .]?OU|H[- .]?SBS|Half[ .-]?OU|Half[ .-]?SBS)\b', NULL, 'Matches terms related to 3D video formats:
 - `bluray3d` or `bd3d` (optional `bluray` or `bd` followed by `3d`).
@@ -11376,7 +11472,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Dumpstarr Baseline Groups', '^(DarQ|DiscoD|PiRaTeS|SuccessfulCrab|Vyndros|Weasley)$', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('DV with HDR Fallback', '^(?=.*\b(dv|dovi|dolby[ .]?v(ision)?)\b)(?!(?=.*\b(WEB[ ._-]?(DL|Rip)?)\b)(?!.*\b(hulu)\b))', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Erai-Raws [Dumpstarr]', '\b(Erai-raws)\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('EVO no WEB-DL', '(?<=\b[12]\d{3}\b.*?)(?<!\b(web[ ._-]?(dl|rip)?).*?)\b(EVO)\b', NULL, '');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('EVO no WEB-DL', '(?<!\bweb[ ._-]?(dl|rip)?\b.*)-(EVO)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Exiled-Destiny [Dumpstarr]', '\b(Exiled-Destiny|E-D)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Extended Clip [Dumpstarr]', '\b(Extended[ ._-]Clip)\b', NULL, 'Matches preview releases labelled as `Extended Clip`');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Extras', '(?i)(?<=\b[12]\d{3}\b).*(\b|\.)\b(Extras?|Bonus|Extended[ ._-]Clip|Special Feature[s]?)\b', NULL, 'Extras, Special Features, Featurettes, etc');
@@ -11418,8 +11514,8 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 - Checks for WEBs from `Disney+` or `Bravia Core`
 - Ensures "IMAX" appears (with optional "Enhanced" suffix) but not when preceded by "NON"');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Internal', '\b(INTERNAL)\b', NULL, 'Those who prefer scene releases may want to boost internals, as they generally have higher settings that may not conform to the ruleset.');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('iQIYI', '\b(IQIYI|IQ)\b', NULL, 'iQIYI is a Chinese subscription video on-demand over-the-top streaming service owned by Baidu. Headquartered in Beijing, iQIYI primarily produces and distributes films and television series.');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('iTunes', '\b(it|itunes)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)', NULL, 'iTunes began offering video content in October 2005 with the release of iTunes 6. At launch, the iTunes Store provided popular TV shows from ABC, Disney Channel, and other networks. Users could purchase and view video content, such as episodes of Desperate Housewives, Lost, That''s So Raven, and The Suite Life of Zack & Cody.
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('iQIYI [Dumpstarr]', '\b(IQIYI|IQ)\b', NULL, 'iQIYI is a Chinese subscription video on-demand over-the-top streaming service owned by Baidu. Headquartered in Beijing, iQIYI primarily produces and distributes films and television series.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('iTunes [Dumpstarr]', '\b(it|itunes)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)', NULL, 'iTunes began offering video content in October 2005 with the release of iTunes 6. At launch, the iTunes Store provided popular TV shows from ABC, Disney Channel, and other networks. Users could purchase and view video content, such as episodes of Desperate Housewives, Lost, That''s So Raven, and The Suite Life of Zack & Cody.
 
 In 2008, Apple introduced "iTunes Digital Copy," a feature on select DVDs and Blu-ray discs that allowed users to obtain a digital copy of the video content in iTunes and associated media players.
 
@@ -11446,7 +11542,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('LazyRemux [Dumpstarr]', '\b(LazyRemux)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Lulu [Dumpstarr]', '\[Lulu\]|-Lulu\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('LYS1TH3A [Dumpstarr]', '\b(LYS1TH3A)\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Max', '\b((?<!hbo[ ._-])max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)', NULL, 'Max, formerly (and in some regions still) known as HBO Max, is an American subscription video on-demand over-the-top streaming service. The platform offers content from the libraries of Warner Bros., Discovery, HBO, CNN, Cartoon Network, Adult Swim, Animal Planet, TBS, TNT, Eurosport, and their related brands.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Max [Dumpstarr]', '\b((?<!hbo[ ._-])max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)', NULL, 'Max, formerly (and in some regions still) known as HBO Max, is an American subscription video on-demand over-the-top streaming service. The platform offers content from the libraries of Warner Bros., Discovery, HBO, CNN, Cartoon Network, Adult Swim, Animal Planet, TBS, TNT, Eurosport, and their related brands.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Max Rename', '\[(MAX)\b|\b(MAX)\]', NULL, 'Max, formerly (and in some regions still) known as HBO Max, is an American subscription video on-demand over-the-top streaming service. The platform offers content from the libraries of Warner Bros., Discovery, HBO, CNN, Cartoon Network, Adult Swim, Animal Planet, TBS, TNT, Eurosport, and their related brands.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('mkv', '.mkv|.mp4', NULL, 'Matches MKV and MP4 containers. Helps to differentiate file names from torrent names.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Monochrome [Dumpstarr]', '(?<=\b[12]\d{3}\b).*\b(Monochrome)\b(?!$)', NULL, '');
@@ -11470,7 +11566,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Not Higher Version Repack Proper', '\b((repack|proper)[23])\b|\bREAL\.(REAL\.)?(PROPER|REPACK)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Not Mono', '[^0-9]1[ .]0\b|\bMono\b|\[PCM \]', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Not Repack Proper 3', '\b((repack|proper)3)\b|\bREAL\.(REAL\.)(PROPER|REPACK)\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Now', '\b(now)\b[ ._-]web[ ._-]?(dl|rip)?\b', NULL, 'Now (formerly Now TV and often stylised as NOW) is a subscription over-the-top streaming television service launched in the United Kingdom in 2012. It is operated by Sky Group in Europe, and Xfinity in the US; both owned by the American media conglomerate Comcast.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Now [Dumpstarr]', '\b(now)\b[ ._-]web[ ._-]?(dl|rip)?\b', NULL, 'Now (formerly Now TV and often stylised as NOW) is a subscription over-the-top streaming television service launched in the United Kingdom in 2012. It is operated by Sky Group in Europe, and Xfinity in the US; both owned by the American media conglomerate Comcast.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Now Rename', '\[(NOW)\b|\b(NOW)\]', NULL, 'Now (formerly Now TV and often stylised as NOW) is a subscription over-the-top streaming television service launched in the United Kingdom in 2012. It is operated by Sky Group in Europe, and Xfinity in the US; both owned by the American media conglomerate Comcast.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('NTb [Dumpstarr]', '^(NTb)$', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Okay-Subs [Dumpstarr]', '\b(Okay-Subs)\b', NULL, '');
@@ -11481,7 +11577,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Parks and Recreation NTb Banned', '(?i)^parks[ ._-]+and[ ._-]+recreation.*?\b(web[ ._-]?(dl|\.dl))\b.*?-ntb.*', NULL, 'This is to match the show Parks and Recreation and the release group NTb. This is built out because the NTb release of Parks and Rec is a mislabeled WEBRip and causes a download loop.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('PCM', '\b(l?)PCM(\b|\d)', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Peacock TV [Dumpstarr]', '\b(pcok|Peacock TV)\b', NULL, 'Peacock is an American over-the-top subscription streaming service owned and operated by Peacock TV, LLC, a subsidiary of NBCUniversal Media Group. The service primarily features series and film content from NBCUniversal studios and other third-party content providers (such as WWE and Hallmark Channel).');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('PiRaTeS no WEB-DL', '(?<=\b[12]\d{3}\b.*?)(?<!\b(web[ ._-]?(dl|rip)?).*?)\b(PiRaTeS)\b', NULL, '');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('PiRaTeS no WEB-DL', '(?<!\bweb[ ._-]?(dl|rip)?\b.*)-(PiRaTeS)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('pog42 [Dumpstarr]', '\b(pog42)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Pookie [Dumpstarr]', '\b(Pookie)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('PQ', '\b(PQ)\b', NULL, '');
@@ -11503,14 +11599,14 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SCY [Dumpstarr]', '\b(SCY)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SDR', '\bSDR\b', NULL, 'Explicitly matches labelled Standard Dynamic Range, i.e. "SDR" ');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Senjou [Dumpstarr]', '\[Senjou\]|-Senjou\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Showtime', '\b(sho|showtime)\b[ ._-]web[ ._-]?(dl|rip)?\b', NULL, 'Showtime (also known as Paramount+ with Showtime) is an American premium television network and the flagship property of Showtime Networks, a sub-division of the Paramount Media Networks division of Paramount Global. Showtime''s programming includes original television series produced exclusively for the linear network and developed for the co-owned Paramount+ streaming service, theatrically released and independent motion pictures, documentaries, and occasional stand-up comedy specials, made-for-TV movies, and softcore adult programming.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Showtime [Dumpstarr]', '\b(sho|showtime)\b[ ._-]web[ ._-]?(dl|rip)?\b', NULL, 'Showtime (also known as Paramount+ with Showtime) is an American premium television network and the flagship property of Showtime Networks, a sub-division of the Paramount Media Networks division of Paramount Global. Showtime''s programming includes original television series produced exclusively for the linear network and developed for the co-owned Paramount+ streaming service, theatrically released and independent motion pictures, documentaries, and occasional stand-up comedy specials, made-for-TV movies, and softcore adult programming.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Showtime Rename', '\[(SHO)\b|\b(SHO)\]', NULL, 'Showtime (also known as Paramount+ with Showtime) is an American premium television network and the flagship property of Showtime Networks, a sub-division of the Paramount Media Networks division of Paramount Global. Showtime''s programming includes original television series produced exclusively for the linear network and developed for the co-owned Paramount+ streaming service, theatrically released and independent motion pictures, documentaries, and occasional stand-up comedy specials, made-for-TV movies, and softcore adult programming.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Shush Cut [Dumpstarr]', '(?<=\b[12]\d{3}\b).*\b(Shush[ ._-]?Cut)\b(?!$)', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Sing Along', '(?<=\b[12]\d{3}\b).*\b(Sing[-_. ]Along)\b', NULL, 'Matches "Sing Along" releases when `Sing Along` is preceded by a year
 - Ensures that `Sing Along` is not matched in the movie title');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('smol [Dumpstarr]', '\[smol\]|-smol\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Special Edition [Dumpstarr]', '(?<!^)\b(extended|uncut|directors|special|unrated|cut|version|(?<!{)edition)(\b|\d)', NULL, 'Matches any type of non theatrical edition. ');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Stan', '\b(stan)\b[ ._-]web[ ._-]?(dl|rip)?\b', NULL, 'Stan is an Australian over-the-top streaming service. The service offers a broad range of film and television content from both local and foreign productions, particularly from the United States and United Kingdom.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Stan [Dumpstarr]', '\b(stan)\b[ ._-]web[ ._-]?(dl|rip)?\b', NULL, 'Stan is an Australian over-the-top streaming service. The service offers a broad range of film and television content from both local and foreign productions, particularly from the United States and United Kingdom.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Stan Rename', '\[(STAN)\b|\b(STAN)\]', NULL, 'Stan is an Australian over-the-top streaming service. The service offers a broad range of film and television content from both local and foreign productions, particularly from the United States and United Kingdom.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Stereo', '(?<=\b[12]\d{3}\b.*?)(?<!repac)[^0-9]2[ .]0\b|\bStereo\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SUBFRENCH', '\b(SUBFR(A|ENCH)?)\b', NULL, '');
@@ -11528,10 +11624,10 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 - Ensures that `Theatrical` comes after the year so that movies with ''Theatrical` in the title are not matched');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('THORA [Dumpstarr]', '\b(THORA)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('torenter69', '\b(torenter69)\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH LQ (Radarr)', '^(24xHD|41RGB|4K4U|AOC|AROMA|aXXo|AZAZE|BARC0DE|BAUCKLEY|BdC|beAst|BTM|C1NEM4|C4K|CDDHD|CHAOS|CHD|CiNE|CLEANUP|COLLECTiVE|CREATiVE24|CrEwSaDe|CTFOH|d3g|DDR|DNL|DRX|E|EPiC|EuReKA|FaNGDiNG0|Feranki1980|FGT|FMD|FRDS|FS|FZHD|GalaxyRG|GHD|GPTHD|HDHUB4U|HDS|HDT|HDTime|HDWinG|iNTENSO|iPlanet|iVy|jennaortega(UHD)?|JFF|KC|KiNGDOM|KIRA|L0SERNIGHT|LAMA|Leffe|Liber8|LiGaS|LUCY|MarkII|MeGusta|Mesc|mHD|mSD|MTeam|MT|MySiLU|NhaNc3|nHD|nikt0|NoGr(ou)?p|nSD|OFT|Pahe(\.(ph|in))?\b|PATOMiEL|PRODJi|PSA|PTNK|RARBG|RBB|RDN|Rifftrax|RU4HD|SANTi|Scene|SHD|ShieldBearer|STUTTERSHIT|SUNSCREEN|SyncUP|TBS|TEKNO3D|Tigole|TIKO|VISIONPLUSHDR(-X|1000)?|WAF|WiKi|x0r|YIFY|YTS(.(MX|LT|AG))?|Zeus)$', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH HD Bluray Tier 01 (Radarr)', '^(BBQ|BMF|c0kE|Chotab|CRiSC|CtrlHD|D-Z0N3|Dariush|decibeL|DON|EbP|EDPH|Geek|LolHD|NCmt|PTer|TayTO|TDD|TnP|VietHD|ZQ|ZoroSenpai)$', NULL, '');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH LQ (Radarr)', '^(24xHD|41RGB|4K4U|AOC|AROMA|aXXo|AZAZE|BARC0DE|BAUCKLEY|BdC|beAst|BTM|C1NEM4|C4K|CDDHD|CHAOS|CHD|CiNE|CLEANUP|COLLECTiVE|CREATiVE24|CrEwSaDe|CTFOH|d3g|DDR|DNL|DRX|E|EPiC|EuReKA|FaNGDiNG0|Feranki1980|FGT|FMD|FRDS|FS|FZHD|GalaxyRG|GHD|GPTHD|HDHUB4U|HDS|HDT|HDTime|HDWinG|iNTENSO|iPlanet|iVy|jennaortega(UHD)?|JFF|KC|KiNGDOM|KIRA|L0SERNIGHT|LAMA|Leffe|Liber8|LiGaS|LUCY|MarkII|MeGusta|Mesc|mHD|mSD|MTeam|MT|MySiLU|NhaNc3|nHD|nikt0|NoGr(ou)?p|nSD|OFT|Pahe(\.(ph|in))?|PATOMiEL|PRODJi|PSA|PTNK|RARBG|RBB|RDN|Rifftrax|RU4HD|SANTi|Scene|SHD|ShieldBearer|STUTTERSHIT|SUNSCREEN|SyncUP|TBS|TEKNO3D|Tigole|TIKO|VISIONPLUSHDR(-X|1000)?|WAF|WiKi|x0r|YIFY|YTS(.(MX|LT|AG))?|Zeus)$', NULL, '');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH HD Bluray Tier 01 (Radarr)', '^(ATELiER|BBQ|BMF|c0kE|Chotab|CRiSC|CtrlHD|D-Z0N3|Dariush|decibeL|DON|EbP|EDPH|Geek|LolHD|NCmt|PTer|TayTO|TDD|TnP|VietHD|ZQ|ZoroSenpai)$', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH HD Bluray Tier 02 (Radarr)', '^(EA|HiDt|HiSD|iFT|NTb|QOQ|SA89|sbR)$', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH HD Bluray Tier 03', '^(ATELiER|BHDStudio|hallowed|HiFi|HONE|LoRD|playHD|SPHD|W4NK3R)$', NULL, '');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH HD Bluray Tier 03', '^(BHDStudio|hallowed|HiFi|HONE|LoRD|playHD|SPHD|W4NK3R)$', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH UHD Bluray Tier 01', '^(CtrlHD|MainFrame|DON|W4NK3R)$', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH UHD Bluray Tier 02', '^(HiDt|HQMUX|RandomBytes)$', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH UHD Bluray Tier 03', '^(BHDStudio|hallowed|HONE|PTer|SPHD|WEBDV)$', NULL, '');
@@ -11738,8 +11834,8 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('HONE [Dumpstarr]', '^(HONE)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Apple TV [Dumpstarr]', '\b(ATV)\b', NULL, 'Apple TV is Apple Inc.''s video on demand service, offering movies and TV shows that are not Apple Originals.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('HBO Max Rename', '\[(HMAX)\b|\b(HMAX)\]', NULL, 'Max, formerly (and in some regions still) known as HBO Max, is an American subscription video on-demand over-the-top streaming service. The platform offers content from the libraries of Warner Bros., Discovery, HBO, CNN, Cartoon Network, Adult Swim, Animal Planet, TBS, TNT, Eurosport, and their related brands.');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('HBO', '\b(hbo)(?![ ._-]max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)', NULL, 'Home Box Office (HBO) is an American pay television network, which is the flagship property of namesake parent-subsidiary Home Box Office, Inc., itself a unit owned by Warner Bros. Discovery. The overall Home Box Office business unit is based at Warner Bros. Programming featured on the network consists primarily of theatrically released motion pictures and original television programs as well as made-for-cable movies, documentaries, occasional comedy, and concert specials, and periodic interstitial programs (consisting of short films and making-of documentaries).');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('HBO Rename', '\[(HBO)\b|\b(HBO)\]', NULL, 'Home Box Office (HBO) is an American pay television network, which is the flagship property of namesake parent-subsidiary Home Box Office, Inc., itself a unit owned by Warner Bros. Discovery. The overall Home Box Office business unit is based at Warner Bros. Programming featured on the network consists primarily of theatrically released motion pictures and original television programs as well as made-for-cable movies, documentaries, occasional comedy, and concert specials, and periodic interstitial programs (consisting of short films and making-of documentaries).');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('HBO [Dumpstarr]', '\b(hbo)(?![ ._-]max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)', NULL, 'Home Box Office (HBO) is an American pay television network, which is the flagship property of namesake parent-subsidiary Home Box Office, Inc., itself a unit owned by Warner Bros. Discovery. The overall Home Box Office business unit is based at Warner Bros. Programming featured on the network consists primarily of theatrically released motion pictures and original television programs as well as made-for-cable movies, documentaries, occasional comedy, and concert specials, and periodic interstitial programs (consisting of short films and making-of documentaries).');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('HBO Rename [Dumpstarr]', '\[(HBO)\b|\b(HBO)\]', NULL, 'Home Box Office (HBO) is an American pay television network, which is the flagship property of namesake parent-subsidiary Home Box Office, Inc., itself a unit owned by Warner Bros. Discovery. The overall Home Box Office business unit is based at Warner Bros. Programming featured on the network consists primarily of theatrically released motion pictures and original television programs as well as made-for-cable movies, documentaries, occasional comedy, and concert specials, and periodic interstitial programs (consisting of short films and making-of documentaries).');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TEMPLATE - Release Group', '^(GROUP)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('One Pace', '\[(One Pace)\]', NULL, 'Specifically banned because of bad naming scheme on the show One Piece');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('The Big Bang Theory Banned Groups', '(?i)^(?:the[ ._-]+)?big[ ._-]+bang[ ._-]+theory[ ._-].*-(CiELOS|playWEB)\b', NULL, 'Matches bad releases fore The Big Bang Theory.');
@@ -11755,8 +11851,8 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Scrubs 2001 Boost', '(?i)\bScrubs\b(?!.*2026)(?=.*(REMUX|INTERNAL))', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UnKn0wn (NoRemux)', '(?<!\b(remux).*?)\b(unkn0wn)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SkyShowTime', '\b(SKST)\b', NULL, 'SkyShowtime is a European joint-venture between Comcast and Paramount Skydance Corporation which combines programming from Peacock and Paramount+ as well as Sky Studios');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Discovery+', '\b((dscp|dcp|disc)\b|dscv\+?)[ ._-]web[ ._-]?(dl|rip)?\b', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH Bad Dual Groups', '^(alfaHD.*|BAT|BiOMA|BlackBit|BNd|C76|C\.A\.A|Cory|CYPHER|EniaHD|EXTREME|FF|FOXX|G4RiS|GUEIRA|LCD|MGE\b.*|MLH|N3G4N|OldT|PD|PTHome|RiPER|RK|SiGLA|Tars|tokar86a|TURG|vnlls|WTV|XiQUEXiQUE|Yatogam1|YusukeFLA|ZigZag|ZNM)$', NULL, 'These release groups do not use the original language of the media as the first audio track. Since ffprobe relies on the first audio track to determine the primary language of the release, incorrect ordering can lead to parsing issues. This may result in failed imports, misidentified files, or even download loops. To ensure proper handling, the original language should always be the first audio track in the release.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Discovery+ [Dumpstarr]', '\b((dscp|dcp|disc)\b|dscv\+?)[ ._-]web[ ._-]?(dl|rip)?\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH Bad Dual Groups (Radarr)', '^(alfaHD.*|BAT|BlackBit|BNd|C\.A\.A|C76|Cory|CYPHER|EniaHD|EXTREME|FF|FOXX|G4RiS|GUEIRA|LCD|MGE.*|MLH|N3G4N|OldT|ONLYMOViE|PD|PTHome|RiPER|RK|SiGLA|Tars|TM|tokar86a|TURG|TvR|vnlls|WTV|XiQUEXiQUE|Yatogam1|YusukeFLA|ZigZag|ZNM)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('EniaHD', '^(EniaHD)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('PBS Kids', '\b(PBSK)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Arthur Banned Groups', '(?i)^arthur[ ._-].*-(DAWN)\b', NULL, NULL);
@@ -11781,7 +11877,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH HD Bluray Tier 01 (Sonarr)', '^(Chotab|CtrlHD|DON|EbP|NTb|PTer)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Adventure Time', '\b(Adventure[ ._-]+Time)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Family Guy S13 Banned Groups', '(?i)^family[ ._-]+guy[ ._-]+s13.*-(CtrlHD)\b', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH LQ (Sonarr)', '^(BRiNK|BTM|CHX|CTFOH|d3g|DepraveD|EVO|Feranki1980|FGT|FMD|GHOSTS|HiQVE|iNTENSO|iVy|JFF|KC|MeGusta|nhanc3|OFT|Pahe(\.(ph|in))?\b|PSA|RBB|SasukeducK|SHD|ShieldBearer|TBS|TG|VIDEOHOLE|worldmkv|XLF|Zero00)$', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH LQ (Sonarr)', '^(BRiNK|BTM|CHX|CTFOH|d3g|DepraveD|EVO|Feranki1980|FGT|FMD|GHOSTS|HiQVE|iNTENSO|iVy|JFF|KC|MeGusta|nhanc3|OFT|Pahe(\.(ph|in))?|PSA|SasukeducK|SHD|ShieldBearer|TBS|TG|VIDEOHOLE|worldmkv|XLF|Zero00)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Low Channel Count', '(?<=\b[12]\d{3}\b.*?)(?<!repac)[^0-9][1-4][ .][0-1]\b|\b(Stereo|Mono)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BlackRose', '\b(BlackRose)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Sylvar', '\b(Sylvar)\b', NULL, NULL);
@@ -11986,8 +12082,10 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Anne of Green Gables Banned Groups', '(?i)^anne[ ._-]+of[ ._-]+green[ ._-]+gables.*-(EGEN)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ACEM', '^(ACEM)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Not Atmos Group (non-5.1)', '^(?!.*[^0-9]5[ .][0-1]\b).*\b(HQMUX|W4NK3R|DON|CtrlHD)\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Fandango', '\b(FAND)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)', NULL, 'Fandango is an American video-on-demand streaming service, originally founded as Vudu in 2004. It was acquired by Walmart in 2010, then sold to Fandango Media in 2020, and has since been rebranded from Vudu to Fandango at Home, and finally to simply Fandango in 2026. It offers over 150,000 movies and TV shows available to rent or buy, including new releases in up to 4K UHD with Dolby Vision HDR, as well as a selection of free ad-supported titles with no subscription required.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH Bad Dual Groups (Sonarr)', '^(alfaHD.*|BAT|BiOMA|BlackBit|BNd|C\.A\.A|C76|Cory|CYPHER|EniaHD|EXTREME|FF|FOXX|G4RiS|GUEIRA|LCD|MLH|N3G4N|OldT|PD|PTHome|RiPER|RK|SiGLA|Tars|tokar86a|TURG|vnlls|WTV|XiQUEXiQUE|Yatogam1|YusukeFLA|ZigZag|ZNM)$', NULL, NULL);
 
--- custom_formats: 144 rows
+-- custom_formats: 145 rows
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('2.0 Stereo', '', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('3D [Dumpstarr]', 'Matches the ''3D'' Regex Pattern', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('4K Remaster', '', 0);
@@ -12052,7 +12150,7 @@ INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_renam
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('GAIA', '', 1);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Group Missing', 'Matches releases where the releases group is not defined.', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('hallowed', '', 0);
-INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('HBO', 'Matches ''HBO Max'' WEB-DLs. Negates any encodes.', 1);
+INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('HBO [Dumpstarr]', 'Matches ''HBO Max'' WEB-DLs. Negates any encodes.', 1);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('HD Streaming Boost', 'Some streaming services have HD releases that are generally better than their UHD counterparts. The HD Streaming Boost custom format increases those streaming services'' scores appropriately for HD releases. Use this in conjunction with the regular streaming service custom formats. ', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('HDR [Dumpstarr]', 'TRaSH HDR Format', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('HDR10+ [Dumpstarr]', 'If desired, add this to your profiles with a score of 100.', 0);
@@ -12128,7 +12226,7 @@ INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_renam
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Dumpstarr LQ Groups', '', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Dumpstarr LQ Title', '', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('SKST [Dumpstarr]', 'SkyShowTime Streaming Service', 1);
-INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('DSCP', 'Discovery+ (pronounced "Discovery Plus"; stylized as discovery+) is an American subscription video on-demand over-the-top streaming service owned by Warner Bros. Discovery (WBD). The service focuses on factual programming drawn from the libraries of Discovery''s main channel brands, as well as original series (including spin-offs of programs from Discovery''s television networks), and other acquired content.', 1);
+INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('DSCP [Dumpstarr]', 'Discovery+ (pronounced "Discovery Plus"; stylized as discovery+) is an American subscription video on-demand over-the-top streaming service owned by Warner Bros. Discovery (WBD). The service focuses on factual programming drawn from the libraries of Discovery''s main channel brands, as well as original series (including spin-offs of programs from Discovery''s television networks), and other acquired content.', 1);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Bad Dual Groups', '', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('PBSK', 'Matches releases from the PBS Kids channel.', 1);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('Not German or English', '', 0);
@@ -12138,6 +12236,7 @@ INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_renam
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('TheFarm', '', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('ProRes', 'Apple ProRes is a high-quality, lossy intra-frame video codec family developed by Apple. It compresses every video frame individually rather than across frames, making it an industry standard for professional video editing, color grading, and broadcasting due to its minimal quality loss during multi-generation editing.', 0);
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('No Audio', 'Negatively scores releases that do not include audio codecs in the release name.', 0);
+INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('FAND', 'Fandango is an American video-on-demand streaming service, originally founded as Vudu in 2004. It was acquired by Walmart in 2010, then sold to Fandango Media in 2020, and has since been rebranded from Vudu to Fandango at Home, and finally to simply Fandango in 2026. It offers over 150,000 movies and TV shows available to rent or buy, including new releases in up to 4K UHD with Dolby Vision HDR, as well as a selection of free ad-supported titles with no subscription required.', 1);
 
 -- delay_profiles: 1 rows
 INSERT OR IGNORE INTO "delay_profiles" ("name", "preferred_protocol", "usenet_delay", "torrent_delay", "bypass_if_highest_quality", "bypass_if_above_custom_format_score", "minimum_custom_format_score") VALUES ('Default Delay', 'prefer_usenet', 60, 60, 0, 0, NULL);
@@ -12541,7 +12640,7 @@ INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "lang
 INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "language_name", "type") VALUES ('TV 2160p', 'Original', 'must');
 INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "language_name", "type") VALUES ('Movies 1080p HQ', 'Original', 'simple');
 
--- quality_profile_custom_formats: 459 rows
+-- quality_profile_custom_formats: 461 rows
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('LQ 1080p', 'Accessibility', 'all', -10000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Anime 1080p', 'Multi-Audio', 'all', 101);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Anime 1080p', 'Multi-Sub', 'all', 101);
@@ -12654,7 +12753,7 @@ INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", 
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'DCU', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'DSNP [Dumpstarr]', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'GAIA', 'sonarr', 75);
-INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'HBO', 'sonarr', 75);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'HBO [Dumpstarr]', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'HD Streaming Boost', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'HMAX [Dumpstarr]', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'HULU [Dumpstarr]', 'sonarr', 75);
@@ -12697,7 +12796,7 @@ INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", 
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'DCU', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'DSNP [Dumpstarr]', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'GAIA', 'sonarr', 75);
-INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'HBO', 'sonarr', 75);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'HBO [Dumpstarr]', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'HD Streaming Boost', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'HMAX [Dumpstarr]', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'HULU [Dumpstarr]', 'sonarr', 75);
@@ -12880,8 +12979,8 @@ INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", 
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'Dumpstarr LQ Title', 'sonarr', -10000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'SKST [Dumpstarr]', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'SKST [Dumpstarr]', 'sonarr', 75);
-INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'DSCP', 'sonarr', 75);
-INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'DSCP', 'sonarr', 75);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'DSCP [Dumpstarr]', 'sonarr', 75);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'DSCP [Dumpstarr]', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Movies 2160p HQ', 'Dolby Digital [Dumpstarr]', 'radarr', 10);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'PBSK', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'PBSK', 'sonarr', 75);
@@ -13001,6 +13100,8 @@ INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", 
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'No Audio', 'sonarr', -10000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'No Audio', 'sonarr', -10000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Movies 2160p', 'No Audio', 'radarr', -10000);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'FAND', 'sonarr', 75);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'FAND', 'sonarr', 75);
 
 -- quality_profile_tags: 20 rows
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('LQ 1080p', '1080p');
@@ -13024,7 +13125,7 @@ INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name"
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('Movies 1080p HQ', 'Radarr');
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('Movies 1080p HQ', '1080p');
 
--- custom_format_conditions: 915 rows
+-- custom_format_conditions: 919 rows
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2.0 Stereo', 'Stereo', 'release_title', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2.0 Stereo', 'Not 3.0ch', 'release_title', 'all', 1, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('2.0 Stereo', 'Not 4.0', 'release_title', 'all', 1, 1);
@@ -13222,8 +13323,8 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('GAIA', 'WERip', 'source', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Group Missing', 'Release Group Missing', 'release_group', 'all', 1, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('hallowed', 'hallowed', 'release_group', 'all', 0, 1);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO', 'WEB-DL', 'source', 'all', 0, 0);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO', 'WEBRip', 'source', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO [Dumpstarr]', 'WEB-DL', 'source', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO [Dumpstarr]', 'WEBRip', 'source', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HD Streaming Boost', 'Disney+', 'release_title', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HD Streaming Boost', 'WEB-DL', 'source', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HD Streaming Boost', 'WEBRip', 'source', 'all', 0, 0);
@@ -13654,8 +13755,8 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('ATV [Dumpstarr]', 'WEBRip', 'source', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('ATV [Dumpstarr]', 'Apple TV', 'release_title', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HMAX [Dumpstarr]', 'HMAX Rename', 'release_title', 'all', 0, 0);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO', 'HBO', 'release_title', 'all', 0, 0);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO', 'HBO Rename', 'release_title', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO [Dumpstarr]', 'HBO', 'release_title', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('HBO [Dumpstarr]', 'HBO Rename', 'release_title', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('WEB Scene', 'DEFLATE', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('WEB Scene', 'INFLATE', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Fake HDR', 'HDR10+', 'release_title', 'all', 0, 0);
@@ -13677,10 +13778,9 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('LQ Release Title', 'HHWEB (No MA)', 'release_title', 'radarr', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Bad Source', 'Family Guy', 'release_title', 'sonarr', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Scrubs 2001 Boost', 'Scrubs 2001 Boost', 'release_title', 'sonarr', 0, 1);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('DSCP', 'Discovery+', 'release_title', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('DSCP [Dumpstarr]', 'Discovery+', 'release_title', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('SKST [Dumpstarr]', 'SkyShowTime', 'release_title', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Accessibility', 'Accessibility', 'release_title', 'all', 0, 1);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Bad Dual Groups', 'Bad Dual Groups', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('PBSK', 'PBS Kids', 'release_title', 'sonarr', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Bad Source', 'Whose Line Is It Anyway (US Version)', 'release_title', 'sonarr', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Bad Source', 'Arthur', 'release_title', 'sonarr', 0, 0);
@@ -13940,8 +14040,13 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('No Audio', 'FLAC', 'release_title', 'all', 1, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('No Audio', 'PCM', 'release_title', 'all', 1, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('TrueHD [Dumpstarr]', 'Not Atmos Group (non-5.1)', 'release_title', 'all', 1, 1);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('FAND', 'WEBRip', 'source', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('FAND', 'Fandango', 'release_title', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('FAND', 'WEB-DL', 'source', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Bad Dual Groups', 'Bad Dual Groups (Radarr)', 'release_group', 'radarr', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Bad Dual Groups', 'Bad Dual Groups (Sonarr)', 'release_group', 'sonarr', 0, 0);
 
--- condition_patterns: 776 rows
+-- condition_patterns: 778 rows
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2.0 Stereo', 'Stereo', 'Stereo');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2.0 Stereo', 'Not 3.0ch', 'Not 3.0ch');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('2.0 Stereo', 'Not 4.0', 'Not 4.0ch');
@@ -14103,7 +14208,7 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('IMAX [Dumpstarr]', 'Not IMAX Enhanced', 'IMAX Enhanced');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('IMAX Enhanced [Dumpstarr]', 'IMAX Enhanced', 'IMAX Enhanced');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Bad Source', 'Parks and Recreation', 'Parks and Recreation NTb Banned');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('iT [Dumpstarr]', 'iT Regex', 'iTunes');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('iT [Dumpstarr]', 'iT Regex', 'iTunes [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('iT [Dumpstarr]', 'iT Rename Regex', 'iTunes Rename');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('MA [Dumpstarr]', 'MA Regex', 'Movies Anywhere [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Missing Subtitles', 'BHDStudio', 'BHDStudio [Dumpstarr]');
@@ -14128,7 +14233,7 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Repack2 [Dumpstarr]', 'Not Repack/Proper 3', 'Not Repack Proper 3');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Repack3 [Dumpstarr]', 'Repack/Proper 3 or REAL.REAL.PROPER/REPACK', 'Repack Proper 3 or REAL.REAL.PROPER REPACK');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('ROKU [Dumpstarr]', 'Roku', 'Roku');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('SHO [Dumpstarr]', 'SHO Regex', 'Showtime');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('SHO [Dumpstarr]', 'SHO Regex', 'Showtime [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('SHO [Dumpstarr]', 'SHO Rename Regex', 'Showtime Rename');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Sing Along [Dumpstarr]', 'Sing Along', 'Sing Along');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Special Edition [Dumpstarr]', 'Special Edition', 'Special Edition [Dumpstarr]');
@@ -14136,7 +14241,7 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Special Edition [Dumpstarr]', 'Not Open Matte', 'Open Matte');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Special Edition [Dumpstarr]', 'Not Theatrical Edition', 'Theatrical Edition [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Special Edition [Dumpstarr]', 'Not Extended Clip', 'Extended Clip [Dumpstarr]');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('STAN [Dumpstarr]', 'STAN Regex', 'Stan');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('STAN [Dumpstarr]', 'STAN Regex', 'Stan [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('STAN [Dumpstarr]', 'STAN Rename Regex', 'Stan Rename');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Surround Sound', '5.1 Surround', '5.1 Surround [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Surround Sound', '7.1 Surround', '7.1 Surround [Dumpstarr]');
@@ -14433,14 +14538,14 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('HONE (Bad Name)', 'HONE Release Title', 'HONE Release Title');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('HONE (Bad Name)', 'Not Hone Group', 'HONE [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Baseline Groups', 'QxR', 'QxR [Dumpstarr]');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('MAX [Dumpstarr]', 'Max', 'Max');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('MAX [Dumpstarr]', 'Max', 'Max [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('MAX [Dumpstarr]', 'Max Rename', 'Max Rename');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('HMAX [Dumpstarr]', 'HMAX', 'HBO Max [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('ATVP [Dumpstarr]', 'Apple TV+', 'Apple TV+ [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('ATV [Dumpstarr]', 'Apple TV', 'Apple TV [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('HMAX [Dumpstarr]', 'HMAX Rename', 'HBO Max Rename');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('HBO', 'HBO', 'HBO');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('HBO', 'HBO Rename', 'HBO Rename');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('HBO [Dumpstarr]', 'HBO', 'HBO [Dumpstarr]');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('HBO [Dumpstarr]', 'HBO Rename', 'HBO Rename [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('WEB Scene', 'DEFLATE', 'DEFLATE [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('WEB Scene', 'INFLATE', 'INFLATE');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Fake HDR', 'HDR10+', 'HDR10+ [Dumpstarr]');
@@ -14460,10 +14565,9 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('LQ Release Title', 'HHWEB (No MA)', 'HHWEB (No MA)');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Bad Source', 'Family Guy', 'Family Guy Banned Groups');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Scrubs 2001 Boost', 'Scrubs 2001 Boost', 'Scrubs 2001 Boost');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('DSCP', 'Discovery+', 'Discovery+');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('DSCP [Dumpstarr]', 'Discovery+', 'Discovery+ [Dumpstarr]');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('SKST [Dumpstarr]', 'SkyShowTime', 'SkyShowTime');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Accessibility', 'Accessibility', 'Accessbility');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Bad Dual Groups', 'Bad Dual Groups', 'TRaSH Bad Dual Groups');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('PBSK', 'PBS Kids', 'PBS Kids');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Bad Source', 'Whose Line Is It Anyway (US Version)', 'Whose Line Not US Version');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Bad Source', 'Arthur', 'Arthur Banned Groups');
@@ -14718,6 +14822,9 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('No Audio', 'FLAC', 'FLAC');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('No Audio', 'PCM', 'PCM');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('TrueHD [Dumpstarr]', 'Not Atmos Group (non-5.1)', 'Not Atmos Group (non-5.1)');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('FAND', 'Fandango', 'Fandango');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Bad Dual Groups', 'Bad Dual Groups (Radarr)', 'TRaSH Bad Dual Groups (Radarr)');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Bad Dual Groups', 'Bad Dual Groups (Sonarr)', 'TRaSH Bad Dual Groups (Sonarr)');
 
 -- condition_languages: 6 rows
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Anime Dual Audio', 'Japanese', 'Japanese', 0);
@@ -14746,7 +14853,7 @@ INSERT OR IGNORE INTO "condition_resolutions" ("custom_format_name", "condition_
 INSERT OR IGNORE INTO "condition_resolutions" ("custom_format_name", "condition_name", "resolution") VALUES ('x265 [Dumpstarr]', 'Not 2160p', '2160p');
 
 
--- condition_sources: 121 rows
+-- condition_sources: 123 rows
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('ABEMA', 'WEB-DL', 'web_dl');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('ABEMA', 'WEBRip', 'webrip');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('ADN', 'WEB-DL', 'web_dl');
@@ -14798,8 +14905,8 @@ INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('FUNI', 'WEBRip', 'webrip');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('GAIA', 'WEB-DL', 'web_dl');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('GAIA', 'WERip', 'webrip');
-INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('HBO', 'WEB-DL', 'web_dl');
-INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('HBO', 'WEBRip', 'webrip');
+INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('HBO [Dumpstarr]', 'WEB-DL', 'web_dl');
+INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('HBO [Dumpstarr]', 'WEBRip', 'webrip');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('HD Streaming Boost', 'WEB-DL', 'web_dl');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('HD Streaming Boost', 'WEBRip', 'webrip');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('HMAX [Dumpstarr]', 'WEB-DL', 'web_dl');
@@ -14868,9 +14975,11 @@ INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('MAX [Dumpstarr]', 'WEB-DL', 'web_dl');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('ATV [Dumpstarr]', 'WEB-DL', 'web_dl');
 INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('ATV [Dumpstarr]', 'WEBRip', 'webrip');
+INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('FAND', 'WEBRip', 'webrip');
+INSERT OR IGNORE INTO "condition_sources" ("custom_format_name", "condition_name", "source") VALUES ('FAND', 'WEB-DL', 'web_dl');
 
 
--- custom_format_tags: 226 rows
+-- custom_format_tags: 227 rows
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('2.0 Stereo', 'Audio');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('2.0 Stereo', 'Channel Count');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('3D [Dumpstarr]', 'Banned');
@@ -14977,7 +15086,7 @@ INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VA
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('GAIA', 'Streaming Service');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('Group Missing', 'Banned');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('hallowed', 'Radarr');
-INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('HBO', 'Streaming Service');
+INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('HBO [Dumpstarr]', 'Streaming Service');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('HD Streaming Boost', 'TRaSH');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('HDR [Dumpstarr]', 'HDR');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('HDR [Dumpstarr]', 'TRaSH');
@@ -15088,7 +15197,7 @@ INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VA
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('ATV [Dumpstarr]', 'WEB-DL');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('WEB Scene', 'TRaSH');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('SKST [Dumpstarr]', 'Streaming Service');
-INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('DSCP', 'Streaming Service');
+INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('DSCP [Dumpstarr]', 'Streaming Service');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('Bad Dual Groups', 'TRaSH');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('Bad Dual Groups', 'Banned');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('PBSK', 'Streaming Service');
@@ -15097,6 +15206,7 @@ INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VA
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('TheFarm', 'Release Group');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('ProRes', 'Codec');
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('No Audio', 'Banned');
+INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('FAND', 'Streaming Service');
 
 -- custom_format_tests: 9 rows
 INSERT OR IGNORE INTO "custom_format_tests" ("custom_format_name", "title", "type", "should_match", "description") VALUES ('Baseline Groups', 'Deadpool.2.2018.2160p.DSNP.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS', 'movie', 1, NULL);
@@ -15109,7 +15219,7 @@ INSERT OR IGNORE INTO "custom_format_tests" ("custom_format_name", "title", "typ
 INSERT OR IGNORE INTO "custom_format_tests" ("custom_format_name", "title", "type", "should_match", "description") VALUES ('Dumpstarr LQ Title', 'Scrubs.S01E09.2026.1080p.DSNP.WEB-DL.DDP5.1.H.264-HDSWEB', 'series', 1, NULL);
 INSERT OR IGNORE INTO "custom_format_tests" ("custom_format_name", "title", "type", "should_match", "description") VALUES ('Dumpstarr LQ Title', 'Scrubs.2026.S01E01.My.Return.1080p.DSNP.WEB-DL.DDP5.1.H.264-FLUX', 'series', 0, NULL);
 
--- regular_expression_tags: 1399 rows
+-- regular_expression_tags: 1402 rows
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('1XBET', 'Banned');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('1XBET', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D [Dumpstarr]', 'Banned');
@@ -15323,10 +15433,10 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('IMAX Enhanced', 'Enhancement');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('IMAX Enhanced', 'TRaSH');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Internal', 'TRaSH');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('iQIYI', 'Streaming Service');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('iQIYI', 'WEB-DL');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('iTunes', 'Streaming Service');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('iTunes', 'WEB-DL');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('iQIYI [Dumpstarr]', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('iQIYI [Dumpstarr]', 'WEB-DL');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('iTunes [Dumpstarr]', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('iTunes [Dumpstarr]', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('iTunes Rename', 'Streaming Service');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('iTunes Rename', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Iznjie Biznjie [Dumpstarr]', 'Anime');
@@ -15357,8 +15467,8 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Lulu [Dumpstarr]', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('LYS1TH3A [Dumpstarr]', 'Anime');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('LYS1TH3A [Dumpstarr]', 'Release Group');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Max', 'Streaming Service');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Max', 'WEB-DL');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Max [Dumpstarr]', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Max [Dumpstarr]', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Max Rename', 'Streaming Service');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Max Rename', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('mkv', 'Container');
@@ -15395,8 +15505,8 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Not Mono', 'Audio');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Not Mono', 'Channels');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Not Repack Proper 3', 'TRaSH');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Now', 'Streaming Service');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Now', 'WEB-DL');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Now [Dumpstarr]', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Now [Dumpstarr]', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Now Rename', 'Streaming Service');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Now Rename', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('NTb [Dumpstarr]', 'Release Group');
@@ -15456,8 +15566,8 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('SDR', 'TRaSH');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Senjou [Dumpstarr]', 'Anime');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Senjou [Dumpstarr]', 'Release Group');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Showtime', 'Streaming Service');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Showtime', 'WEB-DL');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Showtime [Dumpstarr]', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Showtime [Dumpstarr]', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Showtime Rename', 'Streaming Service');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Showtime Rename', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Shush Cut [Dumpstarr]', 'TRaSH');
@@ -15466,8 +15576,8 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('smol [Dumpstarr]', 'Anime');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('smol [Dumpstarr]', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Special Edition [Dumpstarr]', 'Edition');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Stan', 'Streaming Service');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Stan', 'WEB-DL');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Stan [Dumpstarr]', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Stan [Dumpstarr]', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Stan Rename', 'Streaming Service');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Stan Rename', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Stereo', 'Audio');
@@ -15902,8 +16012,8 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Apple TV [Dumpstarr]', 'Streaming Service');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('HBO Max Rename', 'Streaming Service');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('HBO Max Rename', 'WEB-DL');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('HBO', 'Streaming Service');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('HBO Rename', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('HBO [Dumpstarr]', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('HBO Rename [Dumpstarr]', 'Streaming Service');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('TEMPLATE - Release Group', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('One Pace', 'Banned');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('The Big Bang Theory Banned Groups', 'Banned');
@@ -15923,9 +16033,9 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('UnKn0wn (NoRemux)', 'Banned');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('UnKn0wn (NoRemux)', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('SkyShowTime', 'Streaming Service');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Discovery+', 'Streaming Service');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('TRaSH Bad Dual Groups', 'Banned');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('TRaSH Bad Dual Groups', 'TRaSH');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Discovery+ [Dumpstarr]', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('TRaSH Bad Dual Groups (Radarr)', 'Banned');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('TRaSH Bad Dual Groups (Radarr)', 'TRaSH');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('EniaHD', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('PBS Kids', 'Streaming Service');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Arthur Banned Groups', 'Banned');
@@ -16509,6 +16619,9 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Anne of Green Gables Banned Groups', 'Banned');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Anne of Green Gables Banned Groups', 'Custom');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('ACEM', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Fandango', 'Streaming Service');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('TRaSH Bad Dual Groups (Sonarr)', 'Banned');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('TRaSH Bad Dual Groups (Sonarr)', 'TRaSH');
 
 -- test_entities: 10 rows
 INSERT OR IGNORE INTO "test_entities" ("type", "tmdb_id", "title", "year", "poster_path") VALUES ('movie', 3049, 'Ace Ventura: Pet Detective', 1994, '/pqiRuETmuSybfnVZ7qyeoXhQyN1.jpg');
