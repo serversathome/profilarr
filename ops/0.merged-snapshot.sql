@@ -1,9 +1,9 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-08-25 05:48 UTC
+-- Generated: 2026-08-26 05:50 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (bac8e347)
+--   Dictionarry-Hub/database  @ v2     (e6453e8d)
 --   Dumpstarr/Database        @ stable (0f1d8e17)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
@@ -178,7 +178,7 @@ INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-480p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-720p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WORKPRINT');
 
--- regular_expressions: 602 rows
+-- regular_expressions: 608 rows
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('126811', '(?<=^|[\s.-])126811\b', NULL, 'Matches the release group `126811` only if it is:
 
 - Preceded by the start of the string (`^`), a whitespace character (`\s`), a period (`.`), or a hyphen (`-`).
@@ -574,7 +574,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 * `|(re(pack|rip)|proper)3)\b` - or match proper3/repack3/rerip3');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ReQuEsT', '(?<=^|[\s.-])ReQuEsT\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('RiCO', '(?<=^|[\s.-])RiCO\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('rightSIZE', '(?<=^|[\s.-])rightSIZE\b', NULL, '');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('RightSIZE', '(?<=^|[\s.-])RightSIZE\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('RO', '(?<=^|[\s.-])RO\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ROCCaT', '(?<=^|[\s.-])ROCCaT\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ROCiNANTE', '(?<=^|[\s.-])ROCiNANTE\b', NULL, '');
@@ -657,8 +657,8 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UDF', '(?<=^|[\s.-])UDF\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UHD Bluray', '\bUHD[-_.\s]?Blu[-]?Ray\b', NULL, 'Matches "UHD Bluray" or "UHD Blu-Ray" with a hyphen, space, dot or underscore between them');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UHD Bluray (Efficient)', '\b(UHD[-_.\s]?Blu[-]?Ray)|(UHD[-_.\s]?BD?Rip)\b', NULL, 'Matches "UHD Bluray" or "UHD Blu-Ray" with a hyphen, space, dot or underscore between them');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UHD Bluray Release Groups', '(?<=^|[\s.-])(AJP69|ATELiER|BakedFEL|BMF|BRUTE|BSTD|BV|c0kE|CART|Chotab|CJ|coffee|CRiSC|CRX|CtrlHD|Dariush|de[42]|decibel|DON|D-Z0N3|E.N.D|E1|EA|EDPH|EbP|ESiR|EXCiSION|faBR|FoRM|FraMeSToR|GALAXY|Geek|GS88|GZ|hdalx|HDMaNiAcS|HiDt|HiFi|HiP|IDE|iFT|JM|KASHMiR|Kitsune|LiNG|LolHD|LoRD|luvBB|NCmt|NiBuRu|nmd|NTb|NyHD|ORBiT|ORiGEN|Penumbra|playHD|Positive|PTer|PuTao|REBORN|RiCO|rightSIZE|RO|rttr|SA89|SaNcTi|SbR|SiMPLE|Softboat|SoLaR|SOP|SPHD|TayTo|TBB|TDD|TeamSyndicate|TnP|VD|VLAD|VietHD|W4NK3R|WiLF|WMING|xander|ZIMBO|ZoroSenpai|ZQ)\b', NULL, 'Match release groups who should be categorized as UHD Bluray');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UHD WEBRip Release Groups', '(?<=^|[\s.-])(AJP69|ATELiER|BMF|BRUTE|BSTD|BV|c0kE|Chotab|CJ|coffee|CRiSC|CRX|CtrlHD|Dariush|de[42]|decibel|DON|D-Z0N3|E.N.D|E1|EA|EDPH|EbP|ESiR|EXCiSION|FoRM|FraMeSToR|GALAXY|Geek|GS88|hdalx|HDMaNiAcS|HiDt|HiFi|HiP|IDE|iFT|KASHMiR|Kitsune|LiNG|LolHD|LoRD|luvBB|NCmt|NiBuRu|nmd|NyHD|ORiGEN|Penumbra|playHD|Positive|PTer|REBORN|RiCO|rightSIZE|RO|rttr|SA89|SaNcTi|SbR|SiMPLE|SoLaR|SOP|SPHD|TayTo|TBB|TDD|TeamSyndicate|TnP|VD|VLAD|VietHD|W4NK3R|WiLF|WMING|xander|ZIMBO|ZoroSenpai|ZQ)\b', NULL, 'Match release groups who should be categorized as UHD WEBRips');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UHD Bluray Release Groups', '(?<=^|[\s.-])(0BSiDiAN|147|Aio|AJP69|aNDy|ARiN|ASD87|ATELiER|BakedFEL|BAT1|BBW|BMF|BNL|BRUTE|BSTD|BV|Cache|CALiGARi|CART|c0kE|Chotab|CJ|coffee|CONSORTiUM|CRiME|CRiSC|CRX|CtrlHD|D-Z0N3|Dariush|de[42]|decibeL|DiRTY|DON|E.N.D|E1|E76|EA|EBCP|EbP|Eby|EDPH|ENDSkY|ESiR|EXCiSION|eXterminator|faBR|FANDANGO|FoRM|FraMeSToR|FTO|GALAXY|Geek|GL|GR|GrapeHD|GS88|Gyroscope|GZ|H@M|hdalx|HDL|HDMaNiAcS|HDmonSK|HDV|HDv0T|HDxT|HiDt|HiFi|HiP|HQMUX|HR|IDE|iFT|iLL|iLoveHD|IMNEWHERE|J2G|JewelBox|JKP|JM|KASHMiR|Kitsune|Krispy|Kururun|LAZY|LiNG|LolHD|LoRD|luvBB|MCR|MGs|Narkyy|Natuyuki|NCmt|NiBuRu|NiP|nmd|NorTV|NoVA|NTb|NyHD|O2STK|OB1|OmertaHD|ORBiT|ORiGEN|Otaibi|pcroland|Penumbra|PerfectionHD|PiG30N|PiPicK|playHD|POH|Positive|Prestige|PTer|PuTao|RDK123|REBORN|REPTiLE|RiCO|RightSIZE|RO|Rose3Thorn|rttr|SA89|SaL|SaNcTi|SbR|SiMPLE|Skazhutin|Softboat|SoLaR|SOP|SPHD|SuBHD|TayTo|TBB|TDD|TeamSyndicate|ThD|TnP|ToK|UxO|VD|VietHD|ViSUM|VLAD|VorteX|W4NK3R|WiHD|WiLF|WMING|xander|ZIMBO|ZiNC|ZoroSenpai|ZQ)\b', NULL, 'Match release groups who should be categorized as UHD Bluray');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UHD WEBRip Release Groups', '(?<=^|[\s.-])(0BSiDiAN|147|Aio|AJP69|aNDy|ARiN|ASD87|ATELiER|BakedFEL|BAT1|BBW|BMF|BNL|BRUTE|BSTD|BV|Cache|CALiGARi|CART|c0kE|Chotab|CJ|coffee|CONSORTiUM|CRiME|CRiSC|CRX|CtrlHD|D-Z0N3|Dariush|de[42]|decibeL|DiRTY|DON|E.N.D|E1|E76|EA|EBCP|EbP|Eby|EDPH|ENDSkY|ESiR|EXCiSION|eXterminator|faBR|FANDANGO|FoRM|FraMeSToR|FTO|GALAXY|Geek|GL|GR|GrapeHD|GS88|Gyroscope|GZ|H@M|hdalx|HDL|HDMaNiAcS|HDmonSK|HDV|HDv0T|HDxT|HiDt|HiFi|HiP|HQMUX|HR|IDE|iFT|iLL|iLoveHD|IMNEWHERE|J2G|JewelBox|JKP|JM|KASHMiR|Kitsune|Krispy|Kururun|LAZY|LiNG|LolHD|LoRD|luvBB|MCR|MGs|Narkyy|Natuyuki|NCmt|NiBuRu|NiP|nmd|NorTV|NoVA|NyHD|O2STK|OB1|OmertaHD|ORBiT|ORiGEN|Otaibi|pcroland|Penumbra|PerfectionHD|PiG30N|PiPicK|playHD|POH|Positive|Prestige|PTer|PuTao|RDK123|REBORN|REPTiLE|RiCO|RightSIZE|RO|Rose3Thorn|rttr|SA89|SaL|SaNcTi|SbR|SiMPLE|Skazhutin|Softboat|SoLaR|SOP|SPHD|SuBHD|TayTo|TBB|TDD|TeamSyndicate|ThD|TnP|ToK|UxO|VD|VietHD|ViSUM|VLAD|VorteX|W4NK3R|WiHD|WiLF|WMING|xander|ZIMBO|ZiNC|ZoroSenpai|ZQ)\b', NULL, 'Match release groups who should be categorized as UHD WEBRips');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ULTRAHDCLUB', '(?<=^|[\s.-])ULTRAHDCLUB\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UnKn0wn', '(?<=^|[\s.-])UnKn0wn\b', NULL, 'Banned for Low Quality');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Upscale', '(Up[-\.\s]?scale|Re[-\.\s]?Grade|\bAIUS\b|AI[-\.\s]?enhanced)', NULL, 'Matches upscales, regrades, AI Enhancements, etc. ');
@@ -839,6 +839,12 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Kururun', '(?<=^|[\s.-])Kururun\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('147', '(?<=^|[\s.-])147\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ARiN', '(?<=^|[\s.-])ARiN\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('JKP', '(?<=^|[\s.-])JKP\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('PiG30N', '(?<=^|[\s.-])PiG30N\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SaL', '(?<=^|[\s.-])SaL\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Cache', '(?<=^|[\s.-])Cache\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('CALiGARi', '(?<=^|[\s.-])CALiGARi\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Funner', '(?<=^|[\s.-])Funner\b', NULL, NULL);
 
 -- custom_formats: 261 rows
 INSERT OR IGNORE INTO "custom_formats" ("name", "description", "include_in_rename") VALUES ('1080p Balanced Tier 1', 'Matches release groups who fall under 1080p Balanced Tier 1', 0);
@@ -4098,7 +4104,7 @@ INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name"
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'h264');
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'x264');
 
--- custom_format_conditions: 1822 rows
+-- custom_format_conditions: 1840 rows
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', '1080p', 'resolution', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'Bluray', 'source', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'hallowed', 'release_group', 'all', 0, 0);
@@ -4530,7 +4536,6 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'Positive', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'PTer', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'RiCO', 'release_group', 'all', 0, 0);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'rightSIZE', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'RO', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'rttr', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'SaNcTi', 'release_group', 'all', 0, 0);
@@ -4564,7 +4569,6 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'Lulz', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'MaG', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'MTeam', 'release_group', 'all', 0, 0);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'NiP', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'P0W4HD', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'PTP', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'PuTao', 'release_group', 'all', 0, 0);
@@ -4884,7 +4888,6 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'Lulz', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'MaG', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'MTeam', 'release_group', 'all', 0, 0);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'NiP', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'PTP', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'PuTao', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'Slappy', 'release_group', 'all', 0, 0);
@@ -5628,7 +5631,6 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'nmd', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'pcroland', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'playHD', 'release_group', 'all', 0, 0);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'rightSIZE', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'rttr', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'xander', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', '1080p', 'resolution', 'all', 0, 1);
@@ -5649,7 +5651,6 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'Lulz', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'MTeam', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'MaG', 'release_group', 'all', 0, 0);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'NiP', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'Not Remux', 'release_title', 'all', 1, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'ORBiT', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'P0W4HD', 'release_group', 'all', 0, 0);
@@ -5921,8 +5922,31 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'ARiN', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'ARiN', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 5', 'ARiN', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'JKP', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'JKP', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 5', 'JKP', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'PiG30N', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'PiG30N', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'PiG30N', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'SaL', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'SaL', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'SaL', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'NiP', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'NiP', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 5', 'NiP', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'RightSIZE', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'RightSIZE', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'Cache', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'Cache', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 5', 'Cache', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 5', 'CALiGARi', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5', 'CALiGARi', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'CALiGARi', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6', 'Funner', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 6 (Efficient)', 'Funner', 'release_group', 'all', 0, 0);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 6', 'Funner', 'release_group', 'all', 0, 0);
 
--- condition_patterns: 1385 rows
+-- condition_patterns: 1403 rows
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 1', 'hallowed', 'hallowed');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 2', 'BHDStudio', 'BHDStudio');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Bluray', 'Not Remux', 'Remux');
@@ -6221,7 +6245,6 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'Positive', 'Positive');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'PTer', 'PTer');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'RiCO', 'RiCO');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'rightSIZE', 'rightSIZE');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'RO', 'RO');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'rttr', 'rttr');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'SaNcTi', 'SaNcTi');
@@ -6252,7 +6275,6 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'Lulz', 'Lulz');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'MaG', 'MaG');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'MTeam', 'MTeam');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'NiP', 'NiP');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'P0W4HD', 'P0W4HD');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'PTP', 'PTP');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'PuTao', 'PuTao');
@@ -6431,7 +6453,7 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 3', 'LolHD', 'LolHD');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 3', 'NCmt', 'NCmt');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 3', 'Positive', 'Positive');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 3', 'rightSIZE', 'rightSIZE');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 3', 'rightSIZE', 'RightSIZE');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 3', 'TBB', 'TBB');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 4', 'Not Remux', 'Remux');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 4', 'Dariush', 'Dariush');
@@ -6484,7 +6506,6 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'Lulz', 'Lulz');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'MaG', 'MaG');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'MTeam', 'MTeam');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'NiP', 'NiP');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'PTP', 'PTP');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'PuTao', 'PuTao');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'Slappy', 'Slappy');
@@ -7031,7 +7052,6 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'nmd', 'nmd');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'pcroland', 'pcroland');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'playHD', 'playHD');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'rightSIZE', 'rightSIZE');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'rttr', 'rttr');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'xander', 'xander');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'ASD87', 'ASD87');
@@ -7050,7 +7070,6 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'Lulz', 'Lulz');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'MTeam', 'MTeam');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'MaG', 'MaG');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'NiP', 'NiP');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'Not Remux', 'Remux');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'ORBiT', 'ORBiT');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'P0W4HD', 'P0W4HD');
@@ -7308,6 +7327,29 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'ARiN', 'ARiN');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'ARiN', 'ARiN');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 5', 'ARiN', 'ARiN');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'JKP', 'JKP');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'JKP', 'JKP');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 5', 'JKP', 'JKP');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'PiG30N', 'PiG30N');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'PiG30N', 'PiG30N');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'PiG30N', 'PiG30N');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'SaL', 'SaL');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'SaL', 'SaL');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'SaL', 'SaL');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'NiP', 'NiP');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'NiP', 'NiP');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 5', 'NiP', 'NiP');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'RightSIZE', 'RightSIZE');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'RightSIZE', 'RightSIZE');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'Cache', 'Cache');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'Cache', 'Cache');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 5', 'Cache', 'Cache');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 5', 'CALiGARi', 'CALiGARi');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5', 'CALiGARi', 'CALiGARi');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'CALiGARi', 'CALiGARi');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6', 'Funner', 'Funner');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 6 (Efficient)', 'Funner', 'Funner');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 6', 'Funner', 'Funner');
 
 -- condition_languages: 4 rows
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Not Original', 'Original', 'Original', 0);
@@ -8351,7 +8393,7 @@ INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VA
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('DSCP', 'WEB-DL');
 
 
--- regular_expression_tags: 1173 rows
+-- regular_expression_tags: 1185 rows
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D', 'Banned');
@@ -8998,8 +9040,8 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('ReQuEsT', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('RiCO', 'Bluray');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('RiCO', 'Release Group');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('rightSIZE', 'Bluray');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('rightSIZE', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('RightSIZE', 'Bluray');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('RightSIZE', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('RO', 'Bluray');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('RO', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('ROCCaT', 'Release Group');
@@ -9525,6 +9567,18 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('147', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('ARiN', 'Bluray');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('ARiN', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('JKP', 'Bluray');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('JKP', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('PiG30N', 'Bluray');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('PiG30N', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('SaL', 'Bluray');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('SaL', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Cache', 'Bluray');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Cache', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('CALiGARi', 'Bluray');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('CALiGARi', 'Release Group');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Funner', 'Bluray');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Funner', 'Release Group');
 
 -- test_entities: 12 rows
 INSERT OR IGNORE INTO "test_entities" ("type", "tmdb_id", "title", "year", "poster_path") VALUES ('movie', 19995, 'Avatar', 2009, '/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg');
