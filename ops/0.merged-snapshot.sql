@@ -1,9 +1,9 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-08-28 17:27 UTC
+-- Generated: 2026-08-29 11:40 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (7438b27e)
+--   Dictionarry-Hub/database  @ v2     (fcdbc639)
 --   Dumpstarr/Database        @ stable (96ae7394)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
@@ -231,7 +231,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('AROMA', '(?<=^|[\s.-])AROMA\b', NULL, 'Banned for Retagging');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Asakura', '(?<=^|[\s.-])Asakura\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ASD87', '(?<=^|[\s.-])ASD87\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Audio Description', '\b(Audio[ ._-]Description)\b', NULL, '');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Audio Description', '\b(Audio[ ._-]?Description)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ATELiER', '(?<=^|[\s.-])ATELiER\b', NULL, 'Matches "ATELiER" when preceded by whitespace, a hyphen or dot');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Atmos', '\bATMOS|DDPA(\b|\d)', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Atmos (Missing)', '\bATMOS(\b|\d)', NULL, '');
@@ -241,7 +241,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Black & White', '(?<=\b[12]\d{3}\b).*\b((B(lack)?[ ._-]?(out|(and|[n&])?[ ._-]?(W(hite)?|Chrome))))\b(?!$)', NULL, 'Black and White colour grading. This regex matches a 4-digit number (optionally surrounded by parentheses), followed by any amount of text, and then detects references to "black and white" in various formats. It supports `blackwhite` (no spaces), `black and white`, `black-white`, "`black & white`, `black/white`, as well as shorthand `BW` and `B&W`, while excluding invalid variations like `b w`, `b-w`, or `b/w`');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('b0mbardiers', '(?<=^|[\s.-])b0mbardiers\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Basic HDR Formats', '\bHDR(\b|\d)|\b(DV|Dovi|Dolby[ .]?Vision|HLG|PQ(10)?)\b', NULL, 'Matches Dolby Vision OR HDR10. Needed to better match UHD Blurays');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BBC iPlayer', '\b(iP)\b', NULL, 'BBC iPlayer is a video on demand service from the BBC. The service is available over-the-top on a wide range of devices, including mobile phones and tablets, personal computers and smart televisions. iPlayer services delivered to UK-based viewers are free from commercial advertising. ');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BBC iPlayer', '\b(iP(layer)?)(?=[\W_]+WEB[ ._-]?(DL|RIP)\b)', NULL, 'BBC iPlayer is a video on demand service from the BBC. The service is available over-the-top on a wide range of devices, including mobile phones and tablets, personal computers and smart televisions. iPlayer services delivered to UK-based viewers are free from commercial advertising. ');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('beAst', '(?<=^|[\s.-])beAst\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BeiTai', '(?<=^|[\s.-])BeiTai\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Better Theatricals', '^\b(terminator.?2|alien[^s].*?1979|star.wars.*?(4k|19)(77)|.*?\bempire.strikes.back|.*?\breturn.of.the.jedi|apocalypse.now|the.exorcist.*?1973|donnie.darko|amadeus|payback.*?1999|payback.straight.up.*?2006|almost.famous)\b', NULL, 'Matches movies where the `Theatrical` cut is considered the better version. Subjectively chosen, based on Dictionarry''s personal preferences and major opinion. Needed to override the default special edition preference. Matches:
@@ -320,7 +320,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('DepraveD', '(?<=^|[\s.-])DepraveD\b', NULL, 'Banned for Fake DV/HDR Layer');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('DEPTH', '(?<=^|[\s.-])DEPTH\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('DeViSiVE', '(?<=^|[\s.-])DeViSiVE\b', NULL, 'Ban for Mislabeled WEBRip');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Disney+', '\b(dsnp|dsny(p)?|disney\+)\s*\b', NULL, 'Disney+ is an American subscription video on-demand over-the-top streaming media service that primarily distributes films and television shows produced by Walt Disney Studios and Disney Television Studios, with dedicated content hubs for Disney''s flagship brands; Disney, Pixar, Marvel, Star Wars, National Geographic, ESPN, Hulu and Star.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Disney+', '\b(DSNP|DSNY(P)?|Disney\+)\s*\b', NULL, 'Disney+ is an American subscription video on-demand over-the-top streaming media service that primarily distributes films and television shows produced by Walt Disney Studios and Disney Television Studios, with dedicated content hubs for Disney''s flagship brands; Disney, Pixar, Marvel, Star Wars, National Geographic, ESPN, Hulu and Star.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('dkore', '(?<=^|[\s.-])dkore\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Doki', '(?<=^|[\s.-])Doki\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Dolby Digital', '\bDD[^a-z+]|(?<!e-?)\b(ac-?3)\b', NULL, '');
@@ -356,8 +356,8 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('EXCiSION', '(?<=^|[\s.-])EXCiSION\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Exiled-Destiny', '(?<=^|[\s.-])Exiled-Destiny\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('EXP', '(?<=^|[\s.-])EXP\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Extended Clip', '\b(extended.?clip)\b', NULL, 'Matches preview releases labelled as `Extended Clip`');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movie Extras', '(?<=\b[12]\d{3}\b).*(\b|\.)\b(Extra(s)?|Bonus|Deleted[ ._-]Scene(s)?|Extended[ ._-]Clip|Special[ ._-]Feature(s)?)\b', NULL, 'Extras, Special Features, Featurettes, etc');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Extended Clip', '\bExtended[ ._-]?Clip(s)?\b', NULL, 'Matches preview releases labelled as `Extended Clip`');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movie Extras', '(?<=\b[12]\d{3}\b).*(\b|\.)\b(Extra(s)?|Bonus|Deleted[ ._-]?Scene(s)?|Extended[ ._-]?Clip(s)?|Special[ ._-]?Feature(s)?)\b', NULL, 'Extras, Special Features, Featurettes, etc');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('FFF', '(?<=^|[\s.-])FFF\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('FGT', '(?<=^|[\s.-])FGT\b', NULL, 'Banned for Retagging');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Final8', '(?<=^|[\s.-])Final8\b', NULL, '');
