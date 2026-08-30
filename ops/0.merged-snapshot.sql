@@ -1,10 +1,10 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-08-29 11:40 UTC
+-- Generated: 2026-08-30 10:29 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (fcdbc639)
---   Dumpstarr/Database        @ stable (96ae7394)
+--   Dictionarry-Hub/database  @ v2     (04cd2c05)
+--   Dumpstarr/Database        @ stable (cd91b0b3)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
 -- Dictionarry's same-named entity are namespaced with " [Dumpstarr]".
@@ -178,7 +178,7 @@ INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-480p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WEBRip-720p');
 INSERT OR IGNORE INTO "qualities" ("name") VALUES ('WORKPRINT');
 
--- regular_expressions: 601 rows
+-- regular_expressions: 600 rows
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('126811', '(?<=^|[\s.-])126811\b', NULL, 'Matches the release group `126811` only if it is:
 
 - Preceded by the start of the string (`^`), a whitespace character (`\s`), a period (`.`), or a hyphen (`-`).
@@ -208,8 +208,8 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ABM', '(?<=^|[\s.-])ABM\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('AC', '(?<=^|[\s.-])AC\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ADE', '(?<=^|[\s.-])ADE\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movie Upscale', '(?<=\b[12]\d{3}\b).*(\b(AI(US)?[ ._-]?(Enhanced)?|Up[ ._-]?scaled?|Re[ ._-]?Graded?|Topaz[ ._-]?Enhanced)\b)', NULL, 'Matches AI Upscales');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('AI TV Upscale', '(?<=\bS\d+\b).*(\b(AI)\b)', NULL, 'Matches AI Upscales');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movie Upscale', '(?<=\b[12]\d{3}\b).*(\b(AI(US)?[ ._-]?(Enhanced)?|Up[ ._-]?scale(d)?|Re[ ._-]?Grade(d)?|Topaz[ ._-]?Enhanced)\b)', NULL, 'Matches AI Upscales');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TV Upscale', '(?<=\b(?:S\d{1,3}|\d{3,4}p)\b).*(\b(AI(US)?[ ._-]?(Enhanced)?|Up[ ._-]?scale(d)?|Re[ ._-]?Grade(d)?|Topaz[ ._-]?Enhanced)\b)', NULL, 'Matches AI Upscales');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('AJP69', '(?<=^|[\s.-])AJP69\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Almighty', '(?<=^|[\s.-])Almighty\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Amazon Prime', '\bAMZN\b|\bAMAZON[ ._-]WEB[ ._-]?(DL|RIP)?\b', 'K6HrsR/4', 'Matches Amazon Prime Video source tags in both abbreviated (`AMZN`) and full (`AMAZON WEB-DL` / `AMAZON WEBRIP`) forms. Separators between words can be a space, dot, underscore, or hyphen, and the separator between `WEB` and `DL`/`RIP` is optional entirely. Word boundaries are enforced on both patterns to prevent partial matches.
@@ -357,7 +357,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Exiled-Destiny', '(?<=^|[\s.-])Exiled-Destiny\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('EXP', '(?<=^|[\s.-])EXP\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Extended Clip', '\bExtended[ ._-]?Clip(s)?\b', NULL, 'Matches preview releases labelled as `Extended Clip`');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movie Extras', '(?<=\b[12]\d{3}\b).*(\b|\.)\b(Extra(s)?|Bonus|Deleted[ ._-]?Scene(s)?|Extended[ ._-]?Clip(s)?|Special[ ._-]?Feature(s)?)\b', NULL, 'Extras, Special Features, Featurettes, etc');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Movie Extras', '(?<=\b[12]\d{3}\b).*(\b(Extra(s)?|Bonus|Deleted[ ._-]?Scene(s)?|Extended[ ._-]?Clip(s)?|Special[ ._-]?Feature(s)?)\b)', NULL, 'Extras, Special Features, Featurettes, etc');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('FFF', '(?<=^|[\s.-])FFF\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('FGT', '(?<=^|[\s.-])FGT\b', NULL, 'Banned for Retagging');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Final8', '(?<=^|[\s.-])Final8\b', NULL, '');
@@ -637,7 +637,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TrueHD', 'True[ .-]?HD[ .-]?', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Tsundere', '(?<=^|[\s.-])Tsundere\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TTGA', '(?<=^|[\s.-])TTGA\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TV Extras', '(?<=\bS\d+\b).*\b(Extra(s)?|Bonus|Deleted[ ._-]Scene(s)?|Extended[ ._-]Clip)\b', NULL, 'Extras, Special Features, Featurettes, etc');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TV Extras', '(?<=\b(?:S\d{1,3}|\d{3,4}p)\b).*(\b(Extra(s)?|Bonus|Deleted[ ._-]?Scene(s)?|Extended[ ._-]?Clip(s)?|Special[ ._-]?Feature(s)?)\b)', NULL, 'Extras, Special Features, Featurettes, etc');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TVING', '\b(TVING)\b', NULL, 'TVING is a South Korean subscription video on-demand over-the-top streaming service operated by TVING Corporation, a joint venture made of CJ ENM Entertainment Division, Naver and JTBC by its JTBC Studios, now called SLL.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TvR', '(?<=^|[\s.-])TvR\b', NULL, 'Banned for Mislabeling WEB-DL with Remux');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TVSmash', '(?<=^|[\s.-])TVSmash\b', NULL, '');
@@ -648,7 +648,6 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UHD WEBRip Release Groups', '(?<=^|[\s.-])(0BSiDiAN|147|Aio|AJP69|aNDy|ARiN|ASD87|ATELiER|BakedFEL|BAT1|BBW|BMF|BNL|BRUTE|BSTD|BV|Cache|CALiGARi|CART|c0kE|Chotab|CJ|coffee|CONSORTiUM|CRiME|CRiSC|CRX|CtrlHD|D-Z0N3|Dariush|de[42]|decibeL|DiRTY|DON|E.N.D|E1|E76|EA|EBCP|EbP|Eby|EDPH|ENDSkY|ESiR|EXCiSION|eXterminator|faBR|FANDANGO|FoRM|FraMeSToR|FTO|GALAXY|Geek|GL|GR|GrapeHD|GS88|Gyroscope|GZ|H@M|hdalx|HDL|HDMaNiAcS|HDmonSK|HDV|HDv0T|HDxT|HiDt|HiFi|HiP|HQMUX|HR|IDE|iFT|iLL|iLoveHD|IMNEWHERE|J2G|JewelBox|JKP|JM|KASHMiR|Kitsune|Krispy|Kururun|LAZY|LiNG|LolHD|LoRD|luvBB|MCR|MGs|Narkyy|Natuyuki|NCmt|NiBuRu|NiP|nmd|NorTV|NoVA|NyHD|O2STK|OB1|OmertaHD|ORBiT|ORiGEN|Otaibi|pcroland|Penumbra|PerfectionHD|PiG30N|PiPicK|playHD|POH|Positive|Prestige|PTer|PuTao|RDK123|REBORN|REPTiLE|RiCO|RightSIZE|RO|Rose3Thorn|rttr|SA89|SaL|SaNcTi|SbR|ShAnKs|SiMPLE|Skazhutin|Softboat|SoLaR|SOP|SPHD|SuBHD|TayTO|TBB|TDD|TeamSyndicate|ThD|TnP|ToK|UxO|VD|VietHD|ViSUM|VLAD|VorteX|W4NK3R|WESTSiDE|WiHD|WiLF|WMING|xander|ZIMBO|ZiNC|ZoroSenpai|ZQ)\b', NULL, 'Match release groups who should be categorized as UHD WEBRips');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('ULTRAHDCLUB', '(?<=^|[\s.-])ULTRAHDCLUB\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UnKn0wn', '(?<=^|[\s.-])UnKn0wn\b', NULL, 'Banned for Low Quality');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Upscale', '(Up[-\.\s]?scale|Re[-\.\s]?Grade|\bAIUS\b|AI[-\.\s]?enhanced)', NULL, 'Matches upscales, regrades, AI Enhancements, etc. ');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('VARYG', '(?<=^|[\s.-])VARYG\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('VD0N', '(?<=^|[\s.-])VD0N\b', NULL, 'Banned for Low Quality');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('VECTOR', '(?<=^|[\s.-])VECTOR\b', NULL, 'Banned for Fake DV/HDR Layer.');
@@ -4093,7 +4092,7 @@ INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name"
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'h264');
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('720p Quality', 'x264');
 
--- custom_format_conditions: 1840 rows
+-- custom_format_conditions: 1839 rows
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', '1080p', 'resolution', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'Bluray', 'source', 'all', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Balanced Tier 1', 'hallowed', 'release_group', 'all', 0, 0);
@@ -5412,8 +5411,6 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Extras', 'Movie Extras', 'release_title', 'radarr', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Extras', 'TV Extras', 'release_title', 'sonarr', 0, 1);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Not Original', 'Original', 'language', 'all', 1, 1);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Upscale', 'Upscale', 'release_title', 'sonarr', 0, 0);
-INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Upscale', 'AI TV Upscale', 'release_title', 'sonarr', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Remux', 'Remux Quality Match', 'quality_modifier', 'radarr', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Remux', 'Remux Source', 'source', 'sonarr', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('WEB-DL Tier 4', 'BLOOM', 'release_group', 'all', 0, 0);
@@ -5934,8 +5931,9 @@ INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", 
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('1080p Quality Tier 5 (Efficient)', 'WESTSiDE', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('720p Quality Tier 5', 'WESTSiDE', 'release_group', 'all', 0, 0);
 INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Upscale', 'Movie Upscale', 'release_title', 'radarr', 0, 1);
+INSERT OR IGNORE INTO "custom_format_conditions" ("custom_format_name", "name", "type", "arr_type", "negate", "required") VALUES ('Upscale', 'TV Upscale', 'release_title', 'sonarr', 0, 1);
 
--- condition_patterns: 1403 rows
+-- condition_patterns: 1402 rows
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 1', 'hallowed', 'hallowed');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Balanced Tier 2', 'BHDStudio', 'BHDStudio');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Bluray', 'Not Remux', 'Remux');
@@ -6864,8 +6862,6 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('YK', 'YK Regex', 'Youku');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Extras', 'Movie Extras', 'Movie Extras');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Extras', 'TV Extras', 'TV Extras');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Upscale', 'Upscale', 'Upscale');
-INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Upscale', 'AI TV Upscale', 'AI TV Upscale');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('WEB-DL Tier 4', 'BLOOM', 'BLOOM');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p HDTV Tier 1', 'HDTV Regex', 'HDTV');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p HDTV Tier 2', 'HDTV Regex', 'HDTV');
@@ -7339,6 +7335,7 @@ INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_nam
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('1080p Quality Tier 5 (Efficient)', 'WESTSiDE', 'WESTSiDE');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('720p Quality Tier 5', 'WESTSiDE', 'WESTSiDE');
 INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Upscale', 'Movie Upscale', 'Movie Upscale');
+INSERT OR IGNORE INTO "condition_patterns" ("custom_format_name", "condition_name", "regular_expression_name") VALUES ('Upscale', 'TV Upscale', 'TV Upscale');
 
 -- condition_languages: 4 rows
 INSERT OR IGNORE INTO "condition_languages" ("custom_format_name", "condition_name", "language_name", "except_language") VALUES ('Not Original', 'Original', 'Original', 0);
@@ -8382,7 +8379,7 @@ INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VA
 INSERT OR IGNORE INTO "custom_format_tags" ("custom_format_name", "tag_name") VALUES ('DSCP', 'WEB-DL');
 
 
--- regular_expression_tags: 1170 rows
+-- regular_expression_tags: 1168 rows
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('126811', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('3D', 'Banned');
@@ -8406,8 +8403,8 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('ADE', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Movie Upscale', 'Banned');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Movie Upscale', 'Enhancement');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('AI TV Upscale', 'Banned');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('AI TV Upscale', 'Enhancement');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('TV Upscale', 'Banned');
+INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('TV Upscale', 'Enhancement');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('AJP69', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('AJP69', 'WEB-DL');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Almighty', 'Anime');
@@ -9157,8 +9154,6 @@ INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('ULTRAHDCLUB', 'Bluray');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('ULTRAHDCLUB', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('UnKn0wn', 'Release Group');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Upscale', 'Banned');
-INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('Upscale', 'Enhancement');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('VARYG', 'Anime');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('VARYG', 'Release Group');
 INSERT OR IGNORE INTO "regular_expression_tags" ("regular_expression_name", "tag_name") VALUES ('VD0N', 'Release Group');
@@ -11951,7 +11946,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('The Office (US) Banned Groups', '(?i)^the[ ._-]+office.*2005.*-.*\(?(HONE)\)?$', NULL, 'Negates certain groups that cause import/automation issues with The Office (US).');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('HHWEB (No MA)', '^(?!.*\bMA\b.*\bWEB-?DL\b).*\b(HHWEB)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Family Guy Banned Groups', '(?i)^family[ ._-]+guy.*-(REWARD)\b', NULL, 'Negates certain groups that are in PAL format (25 fps).');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Scrubs 2001 Approved Groups', '(?i)\bScrubs\b(?![.\s(]*2026)(?!.*-(BoOk|BMF|DBTV|DEFiANCE|FoV|GAMEOVER|NTROPiC-FTP|SiNNERS|WELP)(\b|$)).*', NULL, 'Matches any group not in the list one the 2001 version of Scrubs.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Scrubs 2001 Approved Groups', '(?i)\bScrubs\b(?![.\s(]*2026)(?!.*-(BoOk|BMF|CMCTV|DBTV|DEFiANCE|FoV|GAMEOVER|HHWEB|NTROPiC-FTP|PlayWEB|SiNNERS|THESYNDiCATE|TURG|WELP)(\b|$)).*', NULL, 'Matches any group not in the list one the 2001 version of Scrubs.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Scrubs 2001 Boost', '(?i)\bScrubs\b(?!.*2026)(?=.*(REMUX|INTERNAL))', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('UnKn0wn (NoRemux)', '(?<!\b(remux).*?)\b(unkn0wn)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SkyShowTime', '\b(SKST)\b', NULL, 'SkyShowtime is a European joint-venture between Comcast and Paramount Skydance Corporation which combines programming from Peacock and Paramount+ as well as Sky Studios');
@@ -12743,7 +12738,7 @@ INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "lang
 INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "language_name", "type") VALUES ('TV 2160p', 'Original', 'must');
 INSERT OR IGNORE INTO "quality_profile_languages" ("quality_profile_name", "language_name", "type") VALUES ('Movies 1080p HQ', 'Original', 'simple');
 
--- quality_profile_custom_formats: 461 rows
+-- quality_profile_custom_formats: 462 rows
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('LQ 1080p', 'Accessibility', 'all', -10000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Anime 1080p', 'Multi-Audio', 'all', 101);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Anime 1080p', 'Multi-Sub', 'all', 101);
@@ -13205,6 +13200,7 @@ INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", 
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('Movies 2160p', 'No Audio', 'radarr', -10000);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'FAND', 'sonarr', 75);
 INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 2160p', 'FAND', 'sonarr', 75);
+INSERT OR IGNORE INTO "quality_profile_custom_formats" ("quality_profile_name", "custom_format_name", "arr_type", "score") VALUES ('TV 1080p', 'HDR [Dumpstarr]', 'sonarr', 50);
 
 -- quality_profile_tags: 20 rows
 INSERT OR IGNORE INTO "quality_profile_tags" ("quality_profile_name", "tag_name") VALUES ('LQ 1080p', '1080p');
