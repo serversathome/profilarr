@@ -1,10 +1,10 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-09-07 10:20 UTC
+-- Generated: 2026-09-08 09:42 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
 --   Dictionarry-Hub/database  @ v2     (0f809db7)
---   Dumpstarr/Database        @ stable (621aa69b)
+--   Dumpstarr/Database        @ stable (9e117f50)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
 -- Dictionarry's same-named entity are namespaced with " [Dumpstarr]".
@@ -11679,7 +11679,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BiTOR [Dumpstarr]', '^(BiTOR)$', NULL, 'Banned for Fake DV/HDR Layer');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Bluray 3D', '\b(BluRay3D)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BlurayDesuYo [Dumpstarr]', '\b(BlurayDesuYo)\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BR-DISK', '^(?!.*\b((?<!HD[._ -]|HD)DVD|BDRip|720p|MKV|XviD|WMV|d3g|(BD)?REMUX|^(?=.*1080p)(?=.*HEVC)|[xh][-_. ]?26[45]|German.*[DM]L|((?<=\d{4}).*German.*([DM]L)?)(?=.*\b(AVC|HEVC|VC[-_. ]?1|MVC|MPEG[-_. ]?2)\b))\b)(((?=.*\b(Blu[-_. ]?ray|BD|HD[-_. ]?DVD)\b)(?=.*\b(AVC|HEVC|VC[-_. ]?1|MVC|MPEG[-_. ]?2|BDMV|ISO)\b))|^((?=.*\b(((?=.*\b((.*_)?COMPLETE.*|Dis[ck])\b)(?=.*(Blu[-_. ]?ray|HD[-_. ]?DVD)))|3D[-_. ]?BD|BR[-_. ]?DISK|Full[-_. ]?Blu[-_. ]?ray|^((?=.*((BD|UHD)[-_. ]?(25|50|66|100|ISO)))))))).*', NULL, '');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BR-DISK', '^(?!.*\b((?<!HD[._ -]|HD)DVD|BDRip|MKV|XviD|WMV|d3g|(BD)?REMUX|^(?=.*1080p)(?=.*HEVC)|[xh][-_. ]?26[45]|German.*[DM]L|((?<=\d{4}).*German.*([DM]L)?)(?=.*\b(AVC|HEVC|VC[-_. ]?1|MVC|MPEG[-_. ]?2)\b))\b)(((?=.*\b(Blu[-_. ]?ray|BD|HD[-_. ]?DVD)\b)(?=.*\b(AVC|HEVC|VC[-_. ]?1|MVC|MPEG[-_. ]?2|BDMV|ISO)\b))|^((?=.*\b(((?=.*\b((.*_)?COMPLETE.*|Dis[ck])\b)(?=.*(Blu[-_. ]?ray|HD[-_. ]?DVD)))|3D[-_. ]?BD|BR[-_. ]?DISK|Full[-_. ]?Blu[-_. ]?ray|^((?=.*((BD|UHD)[-_. ]?(25|50|66|100|ISO)))))))).*', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Bravia Core [Dumpstarr]', '\b((B)?CORE)\b', NULL, 'Sony Pictures Core (formerly known as Bravia Core) is a video on demand service from Sony for its televisions and smartphones, launched in April 2021. The service offers the streaming of movies at up to 4K resolution provided by Sony Pictures Entertainment. CORE stands for Centre of Real Entertainment.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Bunny-Apocalypse [Dumpstarr]', '\b(Bunny-Apocalypse)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Cait-Sidhe [Dumpstarr]', '\b(Cait-Sidhe)\b', NULL, '');
@@ -11890,7 +11890,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH UHD Bluray Tier 03', '^(BHDStudio|hallowed|HONE|PTer|SPHD|WEBDV)$', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH WEB Tier 01 (Radarr)', '^(ABBIE|AJP69|APEX|PAXA|PEXA|XEPA|BLUTONiUM|BYNDR|CMRG|CRFW|CRUD|FLUX|GNOME|HONE|KiNGS|Kitsune|MADSKY|NOSiViD|NTb|NTG|RAWR|SiC|TEPES|TheFarm|ZoroSenpai)$', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH WEB Tier 02 (Radarr)', '^(dB|Flights|MiU|monkee|MZABI|PHOENiX|playWEB|SbR|SMURF|TOMMY|XEBEC|4KBEC|CEBEX)$', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH WEB Tier 03 (Radarr)', '^(BLOOM|Dooky|GNOMiSSiON|HHWEB|NINJACENTRAL|NPMS|ROCCaT|SiGMA|SLiGNOME|SwAgLaNdEr)$', NULL, '');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH WEB Tier 03 (Radarr)', '^(BLOOM|Dooky|GNOMiSSiON|NINJACENTRAL|NPMS|ROCCaT|SiGMA|SLiGNOME|SwAgLaNdEr)$', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TrueHD', 'True[ .-]?HD[ .-]?', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TrueHD Missing Groups', '\b(CtrlHD|DON|EPSiLON|JustWatch|NoGroup|PmP|TRiToN|W4NK3R)\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Tsundere [Dumpstarr]', '\[Tsundere\]|-Tsundere(?!-)\b', NULL, '');
@@ -12129,7 +12129,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('CREATiVE24 [Dumpstarr]', '\b(CREATiVE24)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH WEB Tier 01 (Sonarr)', '^(ABBiE|AJP69|APEX|PAXA|PEXA|XEPA|CasStudio|CRFW|CtrlHD|FLUX|HONE|KiNGS|Kitsune|MADSKY|monkee|NOSiViD|NTb|NTG|QOQ|RAWR|RTN|SiC|T6D|TOMMY|ViSUM)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH WEB Tier 02 (Sonarr)', '^(3cTWeB|BLUTONiUM|BTW|BYNDR|Chotab|Cinefeel|CiT|CMRG|Coo7|dB|DEEP|END|ETHiCS|FC|Flights|GNOME|iJP|iKA|iT00NZ|JETIX|KHN|KiMCHI|LAZY|MiU|MZABI|NPMS|NYH|orbitron|PHOENiX|playWEB|PSiG|ROCCaT|RTFM|SA89|SbR|SDCC|SIGMA|SMURF|SPiRiT|TEPES|TVSmash|WELP|XEBEC|4KBEC|CEBEX)$', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH WEB Tier 03 (Sonarr)', '^(BLOOM|Dooky|DRACULA|HHWEB|NINJACENTRAL|SLiGNOME|SwAgLaNdEr|T4H|ViSiON)$', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH WEB Tier 03 (Sonarr)', '^(BLOOM|Dooky|DRACULA|NINJACENTRAL|SLiGNOME|SwAgLaNdEr|T4H|ViSiON)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH HD Bluray Tier 02 (Sonarr)', '^(SA89|sbR)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('TRaSH HD Bluray Tier 01 (Sonarr)', '^(Chotab|CtrlHD|DON|EbP|NTb|PTer)$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Adventure Time', '\b(Adventure[ ._-]+Time)\b', NULL, NULL);
@@ -12217,7 +12217,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Cerberus', '\[Cerberus\]|-Cerberus\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Cleo', '\[Cleo\]|-Cleo', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('CuaP', '\b(CuaP)\b', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Daddy Subs', '\[Daddy(Subs)?\]|-Daddy(Subs)?\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Daddy Subs', '\[Daddy(Subs)?\]|-Daddy(Subs)?$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('DARKFLiX [Dumpstarr]', '\b(DARKFLiX)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('DB', '\[DB\]', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('DBArabic', '\b(DBArabic)\b', NULL, NULL);
@@ -12262,7 +12262,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MiniMTBB', '\b(MiniMTBB)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MinisCuba', '\b(MinisCuba)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('MiniTheatre', '\b(MiniTheatre)\b', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Mites', '\b(Mites)\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Mites', '\[Mites\]|-Mites$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Modders Bay', '\b(Modders[ .-]?Bay)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Mr Deadpool', '\b(Mr\.Deadpool)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('NemDiggers', '\b(NemDiggers)\b', NULL, NULL);
@@ -12291,7 +12291,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Reaktor', '\b(Reaktor)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('RightShiftBy2', '\b(RightShiftBy2)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Rip Time', '\b(Rip[ .-]?Time)\b', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SAD', '\[SAD\]|-SAD\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SAD', '\[SAD\]|-SAD$', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Salieri', '\b(Salieri)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Samir755', '\b(Samir755)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SanKyuu', '\b(SanKyuu)\b', NULL, NULL);
