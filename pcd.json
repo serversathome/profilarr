@@ -32,15 +32,15 @@
     "dictionarry": {
       "repo": "https://github.com/Dictionarry-Hub/database",
       "branch": "v2",
-      "sha": "0f809db7"
+      "sha": "07e91294"
     },
     "dumpstarr": {
       "repo": "https://github.com/Dumpstarr/Database",
       "branch": "stable",
-      "sha": "9e117f50"
+      "sha": "e463839b"
     },
-    "synced_at": "2026-09-08 09:42 UTC",
+    "synced_at": "2026-09-09 09:47 UTC",
     "namespaced_custom_formats": 51,
-    "namespaced_regular_expressions": 150
+    "namespaced_regular_expressions": 152
   }
 }
