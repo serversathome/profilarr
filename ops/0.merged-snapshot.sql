@@ -1,10 +1,10 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-10-12 13:11 UTC
+-- Generated: 2026-10-13 12:43 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
 --   Dictionarry-Hub/database  @ v2     (aaa2f064)
---   Dumpstarr/Database        @ stable (b7699775)
+--   Dumpstarr/Database        @ stable (c6f9327f)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
 -- Dictionarry's same-named entity are namespaced with " [Dumpstarr]".
@@ -12444,7 +12444,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('The Comeback 2004 Boston Red Sox', '\b(The[ ._-]+Comeback[ ._-]+2004.*?Part[ ._-]*(?:I|II|III))\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Scrubs 2001', '(?i)\bScrubs\b(?!.*2026)', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SumVision [Dumpstarr]', '^(SumVision)$', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('IMF [Dumpstarr]', '\b(IMF)\b', NULL, 'Interoperable Master Format (IMF) is a container format for the standardized digital delivery and storage of finished audio-visual masters, including movies, episodic content and advertisements.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('IMF [Dumpstarr]', '(\b(IMF)\b(?=.*\b(web[ ._-]?rip))\b)', NULL, 'Interoperable Master Format (IMF) is a container format for the standardized digital delivery and storage of finished audio-visual masters, including movies, episodic content and advertisements.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SiCFoI + CMv4', '^(?=.*\b(CMv4)\b).*\b(SiCFoI)\b', NULL, NULL);
 
 -- custom_formats: 144 rows
