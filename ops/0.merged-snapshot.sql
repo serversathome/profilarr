@@ -1,9 +1,9 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-10-26 11:08 UTC
+-- Generated: 2026-10-27 10:36 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (a1f6ef58)
+--   Dictionarry-Hub/database  @ v2     (d5629f5e)
 --   Dumpstarr/Database        @ stable (d1693be0)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
@@ -697,7 +697,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('HDTV', '\b(HDTV)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('SEV', '(?<=^|[\s.-])(SEV|D0ct0rLew|Kira)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('German DL', '(?=.*\bGERMAN\b)(?=.*\b(?<!WEB-)[DM]L\b).*', NULL, NULL);
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('576p', '\b(576p)\b', NULL, NULL);
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('576p', '\b(540p|576p)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('WEB-DL', '\b(WEB[ ._-]?DL)\b', NULL, NULL);
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('BakedFEL', '(?<=^|[\s.-])BakedFEL\b', NULL, 'Matches "BakedFEL" when preceded by whitespace, a hyphen or dot');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('RandomBytes', '(?<=^|[\s.-])RandomBytes\b', NULL, 'Matches "RandomBytes" when preceded by whitespace, a hyphen or dot');
