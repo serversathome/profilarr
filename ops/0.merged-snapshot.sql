@@ -1,9 +1,9 @@
 -- ============================================================================
 -- Merged Profilarr v2 snapshot
--- Generated: 2026-11-02 13:31 UTC
+-- Generated: 2026-11-03 12:48 UTC
 -- Sources:
 --   Dictionarry-Hub/schema    (e1c2bd73)
---   Dictionarry-Hub/database  @ v2     (b18763f7)
+--   Dictionarry-Hub/database  @ v2     (5637d9ce)
 --   Dumpstarr/Database        @ stable (d1693be0)
 --
 -- Conflict handling: Dumpstarr entities whose content differs from
@@ -358,7 +358,7 @@ INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('FLUX', '(?<=^|[\s.-])FLUX\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('FoRM', '(?<=^|[\s.-])FoRM\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('FraMeSToR', '(?<=^|[\s.-])FraMeSToR\b', NULL, '');
-INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Full Disc', '^(?!.*\b((?<!HD[._ -]|HD)DVD|BDRip|MKV|XviD|WMV|d3g|BDREMUX|REMUX|^(?=.*1080p)(?=.*HEVC)|[xh][-_. ]?26[45]|German.*DL|((?<=\d{4}).*German.*(DL)?)(?=.*\b(AVC|HEVC|VC[-_. ]?1|MVC|MPEG[-_. ]?2)\b))\b)(((?=.*\b(Blu[-_. ]?ray|BD|HD[-_. ]?DVD)\b)(?=.*\b(AVC|HEVC|VC[-_. ]?1|MVC|MPEG[-_. ]?2|BDMV|ISO)\b))|^((?=.*\b(^((?=.*\b((.*_)?COMPLETE.*|Dis[ck])\b)(?=.*(Blu[-_. ]?ray|HD[-_. ]?DVD)))|3D[-_. ]?BD|BR[-_. ]?DISK|Full[-_. ]?Blu[-_. ]?ray|^((?=.*((BD|UHD)[-_. ]?(25|50|66|100|ISO)))))))).*|(?i)(DVD9|DVD5|NTSC|PAL|VOB IFO|VC-1|AVC|MPEG-2|\bCOMPLETE[-.\s]?(?:UHD[-.\s])?BLU[-.\s]?RAY\b|\bCOMPLETE BLU[-]?RAY\b|\bBR-Disk\b)', NULL, 'A Full Disc release refers to a complete copy of a physical media disc, such as a DVD or Blu-ray, preserving all original content including menus, bonus features, and multiple audio or subtitle tracks. Unlike compressed or re-encoded formats, Full Disc files maintain the full structure and quality of the original disc, often stored as ISO files or folders like BDMV for Blu-rays. These releases are ideal for users seeking an authentic, unaltered experience identical to using the physical disc.');
+INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Full Disc', '^(?!.*\b((?<!HD[-_. ]|HD)DVD|BDRip|MKV|XviD|WMV|d3g|(BD)?REMUX|^(?=.*1080p)(?=.*HEVC)|[xh][-_. ]?26[45]|German.*[DM]L|((?<=\d{4}).*German.*([DM]L)?)(?=.*\b(AVC|HEVC|VC[-_. ]?1|MVC|MPEG[-_. ]?2)\b))\b)(((?=.*\b(Blu[-_. ]?ray|BD|HD[-_. ]?DVD)\b)(?=.*\b(AVC|HEVC|VC[-_. ]?1|MVC|MPEG[-_. ]?2|BDMV|ISO)\b))|^((?=.*\b(((?=.*\b((.*_)?COMPLETE.*|Dis[ck])\b)(?=.*(Blu[-_. ]?ray|HD[-_. ]?DVD)))|3D[-_. ]?BD|BR[-_. ]?DISK|Full[-_. ]?Blu[-_. ]?ray|^((?=.*((BD|UHD)[-_. ]?(25|50|66|100|ISO)))))))).*|(AVC|DVD5|DVD9|MPEG[-]?2|NTSC|\bPAL\b|VC[-]?1|VOB[-_. ]?IFO|COMPLETE[-_. ]?(UHD)?[-_. ]?BLU[-_. ]?RAY|BR[-]?DISK)', NULL, 'A Full Disc release refers to a complete copy of a physical media disc, such as a DVD or Blu-ray, preserving all original content including menus, bonus features, and multiple audio or subtitle tracks. Unlike compressed or re-encoded formats, Full Disc files maintain the full structure and quality of the original disc, often stored as ISO files or folders like BDMV for Blu-rays. These releases are ideal for users seeking an authentic, unaltered experience identical to using the physical disc.');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('GALAXY', '(?<=^|[\s.-])GALAXY\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('GALVANiZE', '(?<=^|[\s.-])GALVANiZE\b', NULL, '');
 INSERT OR IGNORE INTO "regular_expressions" ("name", "pattern", "regex101_id", "description") VALUES ('Geek', '(?<=^|[\s.-])Geek\b', NULL, '');
